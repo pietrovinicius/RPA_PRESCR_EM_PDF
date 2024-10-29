@@ -1,5 +1,8 @@
 import tkinter as tk
 
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+
 def interface_grafica():
     janela = tk.Tk()
     janela.maxsize(600,400)
@@ -9,8 +12,10 @@ def interface_grafica():
     janela.mainloop()
 
 if __name__ == "__main__":
-    print("============================== inicio ========================")
+    try:
+        print("\n============================== inicio ========================")
+        print("Criação de janela")
+        interface_grafica()
 
-    print("Criação de janela")
-
-    interface_grafica()
+    except Exception as erro:
+        print(f"================================ Error: \n{erro}")
