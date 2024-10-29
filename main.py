@@ -9,6 +9,8 @@ from selenium.webdriver.common.by import By
 
 import time
 
+import pyautogui
+
 #inicialização de variaveis globais:
 statusThread = False
 
@@ -58,8 +60,26 @@ def login_tasy():
     registrar_log('bt_login')
     print("bt_login.click()")
 
+    driver.implicitly_wait(10)
+    time.sleep(12)
+    #digitar a palavra PEP
+    print('time.sleep(12)')
+
+    print("pyautogui.write('PEP')")
+    pyautogui.write('PEP')
+    time.sleep(8)
+
+    print("bt_procura.send_keys('PEP')")
+    #bt_procura = driver.find_element(By.XPATH, value='//*[@id="app-view"]/tasy-corsisf1/div/w-mainlayout/div/div/w-launcher/div/input')
+    #bt_procura.send_keys('PEP')
+
+    bt_PEP = driver.find_element(By.XPATH, value='//*[@id="app-view"]/tasy-corsisf1/div/w-mainlayout/div/div/w-launcher/div/div/div[1]/w-apps/div/div[1]/ul/li[4]/w-feature-app/a/img')
+    bt_PEP.click()
+
+    driver.implicitly_wait(10)
+
     # pausa dramática:
-    time.sleep(15)
+    time.sleep(8)
 
 
 def interface_grafica():
