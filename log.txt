@@ -73,3 +73,107 @@
 29/10/2024 12:25:08 - Botão Iniciar clicado!
 29/10/2024 12:25:08 - Tarefa inicializada!
 29/10/2024 12:25:13 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+29/10/2024 12:27:44 - ============================== inicio ========================
+29/10/2024 12:27:44 - interface_grafica()
+29/10/2024 12:28:28 - ============================== inicio ========================
+29/10/2024 12:28:28 - interface_grafica()
+29/10/2024 12:28:41 - ============================== inicio ========================
+29/10/2024 12:28:41 - interface_grafica()
+29/10/2024 12:28:49 - ============================== inicio ========================
+29/10/2024 12:28:49 - interface_grafica()
+29/10/2024 12:29:04 - ============================== inicio ========================
+29/10/2024 12:29:04 - interface_grafica()
+29/10/2024 12:29:12 - ============================== inicio ========================
+29/10/2024 12:29:12 - interface_grafica()
+29/10/2024 12:29:18 - ============================== inicio ========================
+29/10/2024 12:29:18 - interface_grafica()
+29/10/2024 12:34:51 - ============================== inicio ========================
+29/10/2024 12:34:51 - interface_grafica()
+29/10/2024 12:34:53 - def iniciar()
+29/10/2024 12:34:53 - Botão Iniciar clicado!
+29/10/2024 12:34:53 - Tarefa inicializada!
+29/10/2024 12:34:58 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+29/10/2024 12:36:02 - ============================== inicio ========================
+29/10/2024 12:36:02 - interface_grafica()
+29/10/2024 12:36:03 - def iniciar()
+29/10/2024 12:36:03 - Botão Iniciar clicado!
+29/10/2024 12:36:03 - Tarefa inicializada!
+29/10/2024 12:36:08 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+29/10/2024 12:37:08 - ============================== inicio ========================
+29/10/2024 12:37:08 - interface_grafica()
+29/10/2024 12:37:09 - def iniciar()
+29/10/2024 12:37:09 - Botão Iniciar clicado!
+29/10/2024 12:37:09 - Tarefa inicializada!
+29/10/2024 12:37:14 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+29/10/2024 12:37:22 - def fechar()
+29/10/2024 14:46:46 - ============================== inicio ========================
+29/10/2024 14:46:46 - interface_grafica()
+29/10/2024 14:46:48 - def iniciar()
+29/10/2024 14:46:48 - Botão Iniciar clicado!
+29/10/2024 14:46:48 - Tarefa inicializada!
+29/10/2024 14:46:54 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+29/10/2024 14:47:06 - def fechar()
+29/10/2024 14:48:55 - ============================== inicio ========================
+29/10/2024 14:48:55 - interface_grafica()
+29/10/2024 14:48:56 - def iniciar()
+29/10/2024 14:48:56 - Botão Iniciar clicado!
+29/10/2024 14:48:56 - Tarefa inicializada!
+29/10/2024 14:49:01 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+29/10/2024 14:49:10 - def fechar()
+29/10/2024 14:49:16 - ============================== inicio ========================
+29/10/2024 14:49:16 - interface_grafica()
+29/10/2024 14:49:17 - def iniciar()
+29/10/2024 14:49:17 - Botão Iniciar clicado!
+29/10/2024 14:49:17 - Tarefa inicializada!
+29/10/2024 14:49:22 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+29/10/2024 14:49:43 - def fechar()
+29/10/2024 14:49:49 - ============================== inicio ========================
+29/10/2024 14:49:49 - interface_grafica()
+29/10/2024 14:49:51 - def iniciar()
+29/10/2024 14:49:51 - Botão Iniciar clicado!
+29/10/2024 14:49:51 - Tarefa inicializada!
+29/10/2024 14:49:56 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+29/10/2024 14:50:03 - def fechar()
+29/10/2024 14:54:49 - ============================== inicio ========================
+29/10/2024 14:54:49 - interface_grafica()
+29/10/2024 14:54:50 - def iniciar()
+29/10/2024 14:54:50 - Botão Iniciar clicado!
+29/10/2024 14:54:50 - Tarefa inicializada!
+29/10/2024 14:54:55 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+29/10/2024 14:55:08 - def fechar()
+29/10/2024 14:55:59 - ============================== inicio ========================
+29/10/2024 14:55:59 - interface_grafica()
+29/10/2024 14:56:01 - def iniciar()
+29/10/2024 14:56:01 - Botão Iniciar clicado!
+29/10/2024 14:56:01 - Tarefa inicializada!
+29/10/2024 14:56:01 - ============================== login no sistema ==============================
+29/10/2024 14:56:06 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+29/10/2024 14:56:14 - def fechar()
+29/10/2024 14:57:38 - ============================== inicio ========================
+29/10/2024 14:57:38 - interface_grafica()
+29/10/2024 14:57:39 - def iniciar()
+29/10/2024 14:57:39 - Botão Iniciar clicado!
+29/10/2024 14:57:39 - Tarefa inicializada!
+29/10/2024 14:57:39 - ============================== login no sistema ==============================
+29/10/2024 14:57:44 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+29/10/2024 14:57:45 - box_usuario
+29/10/2024 14:57:53 - def fechar()
+29/10/2024 14:58:16 - ============================== inicio ========================
+29/10/2024 14:58:16 - interface_grafica()
+29/10/2024 14:58:17 - def iniciar()
+29/10/2024 14:58:17 - Botão Iniciar clicado!
+29/10/2024 14:58:17 - Tarefa inicializada!
+29/10/2024 14:58:17 - ============================== login no sistema ==============================
+29/10/2024 14:58:22 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+29/10/2024 14:58:22 - box_usuario
+29/10/2024 14:59:34 - ============================== inicio ========================
+29/10/2024 14:59:34 - interface_grafica()
+29/10/2024 14:59:36 - def iniciar()
+29/10/2024 14:59:36 - Botão Iniciar clicado!
+29/10/2024 14:59:36 - Tarefa inicializada!
+29/10/2024 14:59:36 - ============================== login no sistema ==============================
+29/10/2024 14:59:41 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+29/10/2024 14:59:41 - box_usuario
+29/10/2024 14:59:41 - box_senha
+29/10/2024 14:59:41 - bt_login
+29/10/2024 15:00:01 - def fechar()

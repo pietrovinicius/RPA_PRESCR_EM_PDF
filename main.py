@@ -7,6 +7,8 @@ from tkinter import messagebox
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
+import time
+
 #inicialização de variaveis globais:
 statusThread = False
 
@@ -24,6 +26,40 @@ def registrar_log(texto):
   # Abre o arquivo em modo de append (adiciona texto ao final)
   with open(caminho_arquivo, 'a') as arquivo:
     arquivo.write(f"{agora_limpo()} - {texto}\n")
+
+
+def login_tasy():
+    # ============================== login no sistema ==============================
+    registrar_log('============================== login no sistema ==============================')
+    print('============================== login no sistema ==============================')
+
+    driver = webdriver.Chrome()
+
+    driver.get("http://aplicacao.hsf.local:7070/#/login")
+    registrar_log('driver.get("http://aplicacao.hsf.local:7070/#/login")')
+    print('driver.get("http://aplicacao.hsf.local:7070/#/login")')
+    title = driver.title
+
+    driver.implicitly_wait(1.5)
+
+    # box de usuario:
+    box_usuario = driver.find_element(By.XPATH, value='//*[@id="loginUsername"]')
+    box_usuario.send_keys('pvplima')
+    registrar_log('box_usuario')
+    print("box_usuario.send_keys('pvplima')")
+
+    box_senha = driver.find_element(By.XPATH, value='//*[@id="loginPassword"]')
+    box_senha.send_keys('hsf@2024')
+    registrar_log('box_senha')
+    print("box_senha.send_keys(********)")
+
+    bt_login = driver.find_element(By.XPATH, value='//*[@id="loginForm"]/input[3]')
+    bt_login.click()
+    registrar_log('bt_login')
+    print("bt_login.click()")
+
+    # pausa dramática:
+    time.sleep(15)
 
 
 def interface_grafica():
@@ -49,19 +85,17 @@ def interface_grafica():
             registrar_log("Tarefa inicializada!")
             print("Tarefa inicializada!")
 
-            #\n============================== execuçao ========================
+            #============================== execuçao ========================
 
-            driver = webdriver.Chrome()
+            login_tasy()
 
-            driver.get("http://aplicacao.hsf.local:7070/#/login")
-            registrar_log('driver.get("http://aplicacao.hsf.local:7070/#/login")')
-            print('driver.get("http://aplicacao.hsf.local:7070/#/login")')
-            title = driver.title
-            driver.implicitly_wait(1.5)
+
+
+
 
     def fechar():
         registrar_log("def fechar()")
-        print("Botão fechar clicado!")
+        print("Botao fechar clicado!")
         janela.destroy()
 
     janela = tk.Tk()
@@ -69,11 +103,11 @@ def interface_grafica():
     janela.geometry('600x400')
     janela.title("RPA PRESCRICOES POR SETOR")
 
-    bt_Iniciar = tk.Button(janela, text="Iniciar",command=lambda: [iniciar()])
-    bt_Iniciar.pack(fill="both", expand=True , padx=100 , pady=5 )
+    bt_Iniciar = tk.Button(janela, width=18, text="Iniciar",command=lambda: [iniciar()])
+    bt_Iniciar.place(x=80 , y=215)
 
-    bt_fechar = tk.Button(janela, text="Fechar", command=lambda: [fechar()])
-    bt_fechar.pack(fill="both", expand=True , padx=100 , pady=5 )
+    bt_fechar = tk.Button(janela, width=18, text="Fechar", command=lambda: [fechar()])
+    bt_fechar.place(x=350 , y=215)
 
     janela.mainloop()
 
