@@ -1,6 +1,8 @@
 import tkinter as tk
 import os
 import datetime
+import threading
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
@@ -22,12 +24,27 @@ def registrar_log(texto):
 
 def interface_grafica():
     registrar_log("interface_grafica()")
+
+    def iniciar():
+        registrar_log("def iniciar()")
+        print("Botão Iniciar clicado!")
+        registrar_log("Botão Iniciar clicado!")
+
+    def fechar():
+        registrar_log("def fechar()")
+        print("Botão fechar clicado!")
+        janela.destroy()
+
     janela = tk.Tk()
     janela.maxsize(600,400)
     janela.geometry('600x400')
     janela.title("RPA PRESCRICOES POR SETOR")
 
-    
+    bt_Iniciar = tk.Button(janela, text="Iniciar",command=lambda: [iniciar()])
+    bt_Iniciar.pack(fill="both", padx=100, pady=150)
+
+    bt_fechar = tk.Button(janela, text="Fechar", command=lambda: [fechar()])
+    bt_fechar.pack()
 
     janela.mainloop()
 
