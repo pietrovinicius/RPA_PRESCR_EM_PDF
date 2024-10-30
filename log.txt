@@ -1828,3 +1828,79 @@ True
 30/10/2024 16:34:57 - =========== FIM ========
 30/10/2024 16:36:02 - def fechar()
 30/10/2024 16:36:04 - janela.destroy()
+30/10/2024 17:24:22 - ============================== inicio ========================
+30/10/2024 17:24:22 - interface_grafica()
+30/10/2024 17:24:24 - def iniciar()
+30/10/2024 17:24:24 - Botao Iniciar clicado!
+30/10/2024 17:24:24 - global statusThread: False
+30/10/2024 17:24:24 - Tarefa inicializada!
+30/10/2024 17:24:24 - ============================== login no sistema ==============================
+30/10/2024 17:24:34 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+30/10/2024 17:24:35 - box_usuario
+30/10/2024 17:24:35 - box_senha
+30/10/2024 17:24:35 - bt_login
+30/10/2024 17:24:39 - bt_utilitarios.click()
+30/10/2024 17:24:41 - bt_impressao_relatorios.click()
+30/10/2024 17:24:43 - box_codigo_rel.send_keys('1790')
+30/10/2024 17:24:45 - pyautogui.press('enter')
+30/10/2024 17:24:47 - bt_visualizar_.click()
+30/10/2024 17:24:59 - click apos o download
+pyautogui.click(1810,165)
+30/10/2024 17:25:10 - Pressionar Item
+pyautogui.press('enter')
+30/10/2024 17:25:14 - click no manter
+pyautogui.click(1751,109)
+30/10/2024 17:25:34 - global statusThread: False
+30/10/2024 17:25:34 - =========== FIM ========
+30/10/2024 17:32:31 - ============================== inicio ========================
+30/10/2024 17:32:31 - delete_all_files_in_directory(C:\Users\pvplima.C19NOT76\Downloads)
+30/10/2024 17:32:31 - interface_grafica()
+30/10/2024 17:32:39 - def iniciar()
+30/10/2024 17:32:39 - Botao Iniciar clicado!
+30/10/2024 17:32:39 - global statusThread: False
+30/10/2024 17:32:39 - Tarefa inicializada!
+30/10/2024 17:32:39 - ============================== login no sistema ==============================
+30/10/2024 17:32:49 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+30/10/2024 17:32:49 - box_usuario
+30/10/2024 17:32:49 - box_senha
+30/10/2024 17:32:49 - bt_login
+30/10/2024 17:32:53 - bt_utilitarios.click()
+30/10/2024 17:32:55 - bt_impressao_relatorios.click()
+30/10/2024 17:32:57 - box_codigo_rel.send_keys('1790')
+30/10/2024 17:33:00 - pyautogui.press('enter')
+30/10/2024 17:33:02 - bt_visualizar_.click()
+30/10/2024 17:33:14 - click apos o download
+pyautogui.click(1810,165)
+30/10/2024 17:33:24 - Pressionar Item
+pyautogui.press('enter')
+30/10/2024 17:33:28 - click no manter
+pyautogui.click(1751,109)
+30/10/2024 17:33:28 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+30/10/2024 17:33:28 - Arquivos:
+['09d0825b-38fc-464b-b5e1-a13e2d803b14.pdf']
+30/10/2024 17:33:28 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\09d0825b-38fc-464b-b5e1-a13e2d803b14.pdf
+30/10/2024 17:33:28 - 423275
+637345
+635085
+621123
+637294
+636098
+630314
+635130
+622711
+633912
+632424
+616885
+635104
+635141
+483921
+630694
+629684
+636800
+636190
+632988
+30/10/2024 17:33:48 - global statusThread: False
+30/10/2024 17:33:48 - =========== FIM ========
+30/10/2024 17:34:05 - def fechar()
+30/10/2024 17:34:06 - janela.destroy()

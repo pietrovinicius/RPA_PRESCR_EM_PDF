@@ -15,6 +15,7 @@ from mouseinfo import mouseInfo
 
 import os
 import pandas as pd
+import PyPDF2
 
 import os
 import glob
@@ -41,6 +42,7 @@ def registrar_log(texto):
     arquivo.write(f"{agora_limpo()} - {texto}\n")
     
 def delete_all_files_in_directory(directory):
+    registrar_log(f"delete_all_files_in_directory({directory})")
     files = glob.glob(os.path.join(directory, '*'))
     for f in files:
         try:
@@ -48,6 +50,52 @@ def delete_all_files_in_directory(directory):
             print(f"Arquivo {f} removido com sucesso.")
         except Exception as e:
             print(f"Não foi possível remover o arquivo {f}. Erro: {e}")
+            
+
+def pdf_para_csv():
+    texto_completo = ""
+    
+    #acessando pasta download:
+    downloads_path = os.path.join(os.path.expanduser("~"), "Downloads")
+    registrar_log(f'Caminho da pasta download: {downloads_path}')
+    
+    #verificando arquivos da pasta download
+    files = [f for f in os.listdir(downloads_path) if f.endswith('.pdf')]
+    registrar_log(f"Arquivos:\n{files}")
+
+    #ultimo arquivo
+    ultimo_arquivo = os.path.join(downloads_path, files[0])
+    registrar_log(f"\n*****Ultimo arquivo: {ultimo_arquivo}")
+    
+    with open(ultimo_arquivo, 'rb') as arquivo_pdf: 
+        leitor_pdf = PyPDF2.PdfReader(arquivo_pdf) 
+        
+        # Ler todas as páginas do PDF 
+        for pagina in range(len(leitor_pdf.pages)): 
+            pagina_atual = leitor_pdf.pages[pagina] 
+            texto = pagina_atual.extract_text() 
+            texto_completo += texto + "\n"
+            #print(texto_completo)
+            
+        linhas = texto_completo.split('\n') 
+        dados = [linha.split() for linha in linhas if linha.strip()] 
+        df = pd.DataFrame(dados) 
+        
+        #exibindo as 5 primeiras linhas:
+        print(df.head(5))
+        
+        #exibindo todas as linhas mas só a primeira coluna:
+        print(df.iloc[:, 0].to_string(index=False))
+        
+        #retirando linhas com NR_ATEND
+        df_filtered = df[df.iloc[:, 0] != 'NR_ATEND']
+        registrar_log(df_filtered.iloc[:20, 0].to_string(index=False))
+    return df_filtered.iloc[:, 0].to_string(index=False)
+
+
+
+
+
 
 def Execucao():
     global statusThread
@@ -118,54 +166,21 @@ def Execucao():
     
     #click apos o download
     pyautogui.click(1810,165)
-    registrar_log("pyautogui.click(1811,167)")
+    registrar_log("click apos o download\npyautogui.click(1810,165)")
     
-    #click no manter:
-    registrar_log("click no manter")
     time.sleep(10)
-    
     
     #Pressionar Item:
     pyautogui.press('enter')
-    registrar_log("pyautogui.press('enter')")
+    registrar_log("Pressionar Item\npyautogui.press('enter')")
     time.sleep(4)
-    
-    pyautogui.click(1751,109)
-    registrar_log("pyautogui.click(1749,145)")
-    
-    
-    
-    """
-    # click no botao exportar xlsx:
-    bt_exportar_xls = driver.find_element(By.XPATH, value='//*[@id="handlebar-956041"]')
-    bt_exportar_xls.click()
-    registrar_log('bt_exportar_xls.click()')
-    time.sleep(2)
-    
-    # click no botao de exportar xls:
-    bt_continuar_export_xls = driver.find_element(By.XPATH, value='//*[@id="ngdialog1"]/div[2]/div[1]/div[2]/div[2]/tasy-wdlgpanel-button/button')
-    bt_continuar_export_xls.click()
-    registrar_log("bt_continuar_export_xls.click()")
-
-    #driver.implicitly_wait(20)
-    #registrar_log("driver.implicitly_wait(20)")
-    time.sleep(20)
-    registrar_log("time.sleep(10)")
-    
-    #click apos o download
-    pyautogui.click(1824,64)
-    registrar_log("pyautogui.click(1824,64)")
     
     #click no manter:
-    registrar_log("click no manter")
-    time.sleep(4)
-    pyautogui.click(1749,145)
-    registrar_log("pyautogui.click(1749,145)")
-    time.sleep(4)
-    """
-    
-    
+    pyautogui.click(1751,109)
+    registrar_log("click no manter\npyautogui.click(1751,109)")
+       
     #TODO: funcao para pegar planilha gerada e montar o data frame:
+    print(f"pdf_para_csv():\n{pdf_para_csv()}")
     
     #caminho_pasta_download = "C:\Users\pvplima.C19NOT76\Downloads"
     
@@ -259,6 +274,10 @@ def interface_grafica():
 if __name__ == "__main__":
     try:
         registrar_log("============================== inicio ========================")
+        
+        pasta_downloads = os.path.join(os.path.expanduser("~"), "Downloads")
+        delete_all_files_in_directory(pasta_downloads)
+        
         interface_grafica()
 
     except Exception as erro:
