@@ -1,0 +1,29 @@
+--30/10/2024
+--@PLima
+
+-- RPA - PRESCR EM PDF - QUERY
+
+SELECT 
+    APV.NR_ATENDIMENTO                                                  AS NR_ATENDIMENTO,
+    substr(obter_nome_pf(APV.CD_PESSOA_FISICA),1,100)                   AS NM_PACIENTE,
+    APV.CD_SETOR_ATENDIMENTO                                            AS CD_SETOR_ATENDIMENTO,
+   SUBSTR(OBTER_DESC_SETOR_ATEND(APV.CD_SETOR_ATENDIMENTO),1,50) ||
+    ' - ' ||
+    REPLACE(OBTER_LEITO_ATUAL_PAC(APV.NR_ATENDIMENTO),'-',' ')          AS DS_SETOR_ATENDIMENTO
+FROM ATENDIMENTO_PACIENTE_V APV
+LEFT JOIN prescr_medica PM ON (  PM.NR_ATENDIMENTO = APV.NR_ATENDIMENTO )
+LEFT JOIN prescr_mat_hor PH ON ( PH.NR_PRESCRICAO = PM.NR_PRESCRICAO)
+
+--=============================================== REGRAS DE NEGOCIO: --===============================================
+WHERE APV.IE_STATUS_ATENDIMENTO = 'E'
+AND APV.DT_ALTA IS NULL
+And	PH.dt_horario between SYSDATE -1 and SYSDATE
+--AND APV.CD_SETOR_ATENDIMENTO = 56
+
+GROUP BY 
+    APV.NR_ATENDIMENTO,
+    APV.CD_SETOR_ATENDIMENTO,
+    APV.CD_PESSOA_FISICA
+ORDER BY 
+    CD_SETOR_ATENDIMENTO, 
+    NM_PACIENTE

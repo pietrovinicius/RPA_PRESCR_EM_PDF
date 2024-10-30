@@ -490,3 +490,81 @@ True
 30/10/2024 08:54:27 - bt_login
 30/10/2024 08:54:51 - def fechar()
 30/10/2024 08:54:52 - janela.destroy()
+30/10/2024 09:41:02 - ============================== inicio ========================
+30/10/2024 09:41:02 - interface_grafica()
+30/10/2024 09:41:53 - ============================== inicio ========================
+30/10/2024 09:41:53 - interface_grafica()
+30/10/2024 09:42:35 - ============================== inicio ========================
+30/10/2024 09:42:35 - interface_grafica()
+30/10/2024 09:42:36 - def iniciar()
+30/10/2024 09:42:36 - Botão Iniciar clicado!
+30/10/2024 09:42:36 - Tarefa inicializada!
+30/10/2024 09:42:36 - ============================== login no sistema ==============================
+30/10/2024 09:42:41 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+30/10/2024 09:42:42 - box_usuario
+30/10/2024 09:42:42 - box_senha
+30/10/2024 09:42:42 - bt_login
+30/10/2024 09:42:46 - bt_utilitarios.click()
+30/10/2024 09:42:48 - bt_impressao_relatorios.click()
+30/10/2024 09:42:50 - box_codigo_rel.send_keys('1789')
+30/10/2024 09:43:05 - def fechar()
+30/10/2024 09:43:07 - janela.destroy()
+30/10/2024 09:47:53 - ============================== inicio ========================
+30/10/2024 09:47:53 - interface_grafica()
+30/10/2024 09:47:55 - def iniciar()
+30/10/2024 09:47:55 - Botao Iniciar clicado!
+30/10/2024 09:47:55 - global statusThread: False
+30/10/2024 09:47:55 - Tarefa inicializada!
+30/10/2024 09:47:55 - ============================== login no sistema ==============================
+30/10/2024 09:47:59 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+30/10/2024 09:48:00 - box_usuario
+30/10/2024 09:48:00 - box_senha
+30/10/2024 09:48:00 - bt_login
+30/10/2024 09:48:04 - bt_utilitarios.click()
+30/10/2024 09:48:06 - bt_impressao_relatorios.click()
+30/10/2024 09:48:08 - box_codigo_rel.send_keys('1789')
+30/10/2024 09:48:10 - bt_exportar_xls.click()
+30/10/2024 09:51:53 - ============================== inicio ========================
+30/10/2024 09:51:53 - interface_grafica()
+30/10/2024 09:51:54 - def iniciar()
+30/10/2024 09:51:54 - Botao Iniciar clicado!
+30/10/2024 09:51:54 - global statusThread: False
+30/10/2024 09:51:54 - Tarefa inicializada!
+30/10/2024 09:51:54 - ============================== login no sistema ==============================
+30/10/2024 09:52:00 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+30/10/2024 09:52:00 - box_usuario
+30/10/2024 09:52:00 - box_senha
+30/10/2024 09:52:00 - bt_login
+30/10/2024 09:52:04 - bt_utilitarios.click()
+30/10/2024 09:52:07 - bt_impressao_relatorios.click()
+30/10/2024 09:52:09 - box_codigo_rel.send_keys('1789')
+30/10/2024 09:52:11 - pyautogui.press('enter')
+30/10/2024 09:52:13 - bt_exportar_xls.click()
+30/10/2024 09:52:15 - bt_continuar_export_xls.click()
+30/10/2024 09:52:47 - def iniciar()
+30/10/2024 09:52:47 - Botao Iniciar clicado!
+30/10/2024 09:52:47 - global statusThread: True
+30/10/2024 09:52:47 - Thread já foi iniciada, statusThread: 
+True
+30/10/2024 09:52:47 - Thread já foi iniciada, statusThread: 
+True
+30/10/2024 09:52:51 - def fechar()
+30/10/2024 09:52:52 - janela.destroy()
+30/10/2024 09:54:10 - ============================== inicio ========================
+30/10/2024 09:54:10 - interface_grafica()
+30/10/2024 09:54:11 - def iniciar()
+30/10/2024 09:54:11 - Botao Iniciar clicado!
+30/10/2024 09:54:11 - global statusThread: False
+30/10/2024 09:54:11 - Tarefa inicializada!
+30/10/2024 09:54:11 - ============================== login no sistema ==============================
+30/10/2024 09:54:16 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+30/10/2024 09:54:16 - box_usuario
+30/10/2024 09:54:17 - box_senha
+30/10/2024 09:54:17 - bt_login
+30/10/2024 09:54:21 - bt_utilitarios.click()
+30/10/2024 09:54:23 - bt_impressao_relatorios.click()
+30/10/2024 09:54:25 - box_codigo_rel.send_keys('1789')
+30/10/2024 09:54:27 - pyautogui.press('enter')
+30/10/2024 09:54:29 - bt_exportar_xls.click()
+30/10/2024 09:54:31 - bt_continuar_export_xls.click()
+30/10/2024 09:54:33 - global statusThread: False
