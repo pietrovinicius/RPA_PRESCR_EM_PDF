@@ -568,3 +568,1263 @@ True
 30/10/2024 09:54:29 - bt_exportar_xls.click()
 30/10/2024 09:54:31 - bt_continuar_export_xls.click()
 30/10/2024 09:54:33 - global statusThread: False
+30/10/2024 11:03:43 - ============================== inicio ========================
+30/10/2024 11:03:43 - interface_grafica()
+30/10/2024 11:03:44 - def iniciar()
+30/10/2024 11:03:44 - Botao Iniciar clicado!
+30/10/2024 11:03:44 - global statusThread: False
+30/10/2024 11:03:44 - Tarefa inicializada!
+30/10/2024 11:03:44 - ============================== login no sistema ==============================
+30/10/2024 11:03:50 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+30/10/2024 11:03:50 - box_usuario
+30/10/2024 11:03:50 - box_senha
+30/10/2024 11:03:50 - bt_login
+30/10/2024 11:03:55 - bt_utilitarios.click()
+30/10/2024 11:03:57 - bt_impressao_relatorios.click()
+30/10/2024 11:03:59 - box_codigo_rel.send_keys('1789')
+30/10/2024 11:04:01 - pyautogui.press('enter')
+30/10/2024 11:04:03 - bt_exportar_xls.click()
+30/10/2024 11:04:05 - bt_continuar_export_xls.click()
+30/10/2024 11:04:07 - global statusThread: False
+30/10/2024 11:04:24 - def iniciar()
+30/10/2024 11:04:24 - Botao Iniciar clicado!
+30/10/2024 11:04:24 - global statusThread: False
+30/10/2024 11:04:24 - Tarefa inicializada!
+30/10/2024 11:04:24 - ============================== login no sistema ==============================
+30/10/2024 11:04:29 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+30/10/2024 11:04:29 - box_usuario
+30/10/2024 11:04:29 - box_senha
+30/10/2024 11:04:29 - bt_login
+30/10/2024 11:04:34 - bt_utilitarios.click()
+30/10/2024 11:04:36 - bt_impressao_relatorios.click()
+30/10/2024 11:04:38 - box_codigo_rel.send_keys('1789')
+30/10/2024 11:04:41 - pyautogui.press('enter')
+30/10/2024 11:04:43 - bt_exportar_xls.click()
+30/10/2024 11:04:45 - bt_continuar_export_xls.click()
+30/10/2024 11:04:47 - global statusThread: False
+30/10/2024 11:05:10 - def fechar()
+30/10/2024 11:05:12 - janela.destroy()
+30/10/2024 11:08:51 - ============================== inicio ========================
+30/10/2024 11:08:51 - interface_grafica()
+30/10/2024 11:08:53 - def iniciar()
+30/10/2024 11:08:53 - Botao Iniciar clicado!
+30/10/2024 11:08:53 - global statusThread: False
+30/10/2024 11:08:53 - Tarefa inicializada!
+30/10/2024 11:08:53 - ============================== login no sistema ==============================
+30/10/2024 11:08:58 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+30/10/2024 11:08:58 - box_usuario
+30/10/2024 11:08:58 - box_senha
+30/10/2024 11:08:58 - bt_login
+30/10/2024 11:09:03 - bt_utilitarios.click()
+30/10/2024 11:09:05 - bt_impressao_relatorios.click()
+30/10/2024 11:09:07 - box_codigo_rel.send_keys('1789')
+30/10/2024 11:09:09 - pyautogui.press('enter')
+30/10/2024 11:09:11 - bt_exportar_xls.click()
+30/10/2024 11:09:13 - bt_continuar_export_xls.click()
+30/10/2024 11:09:33 - global statusThread: False
+30/10/2024 11:09:45 - def fechar()
+30/10/2024 11:09:46 - janela.destroy()
+30/10/2024 11:09:54 - ============================== inicio ========================
+30/10/2024 11:09:54 - interface_grafica()
+30/10/2024 11:09:55 - def iniciar()
+30/10/2024 11:09:55 - Botao Iniciar clicado!
+30/10/2024 11:09:55 - global statusThread: False
+30/10/2024 11:09:55 - Tarefa inicializada!
+30/10/2024 11:09:55 - ============================== login no sistema ==============================
+30/10/2024 11:10:00 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+30/10/2024 11:10:00 - box_usuario
+30/10/2024 11:10:00 - box_senha
+30/10/2024 11:10:00 - bt_login
+30/10/2024 11:10:05 - bt_utilitarios.click()
+30/10/2024 11:10:07 - bt_impressao_relatorios.click()
+30/10/2024 11:10:09 - box_codigo_rel.send_keys('1789')
+30/10/2024 11:10:11 - pyautogui.press('enter')
+30/10/2024 11:10:13 - bt_exportar_xls.click()
+30/10/2024 11:10:15 - bt_continuar_export_xls.click()
+30/10/2024 11:11:17 - ============================== inicio ========================
+30/10/2024 11:11:17 - interface_grafica()
+30/10/2024 11:11:20 - def iniciar()
+30/10/2024 11:11:20 - Botao Iniciar clicado!
+30/10/2024 11:11:20 - global statusThread: False
+30/10/2024 11:11:20 - Tarefa inicializada!
+30/10/2024 11:11:20 - ============================== login no sistema ==============================
+30/10/2024 11:11:25 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+30/10/2024 11:11:25 - box_usuario
+30/10/2024 11:11:25 - box_senha
+30/10/2024 11:11:25 - bt_login
+30/10/2024 11:11:29 - bt_utilitarios.click()
+30/10/2024 11:11:31 - bt_impressao_relatorios.click()
+30/10/2024 11:11:33 - box_codigo_rel.send_keys('1789')
+30/10/2024 11:11:35 - pyautogui.press('enter')
+30/10/2024 11:11:37 - bt_exportar_xls.click()
+30/10/2024 11:11:39 - bt_continuar_export_xls.click()
+30/10/2024 11:16:35 - ============================== inicio ========================
+30/10/2024 11:16:35 - interface_grafica()
+30/10/2024 11:16:37 - def iniciar()
+30/10/2024 11:16:37 - Botao Iniciar clicado!
+30/10/2024 11:16:37 - global statusThread: False
+30/10/2024 11:16:37 - Tarefa inicializada!
+30/10/2024 11:16:37 - ============================== login no sistema ==============================
+30/10/2024 11:16:42 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+30/10/2024 11:16:42 - box_usuario
+30/10/2024 11:16:42 - box_senha
+30/10/2024 11:16:42 - bt_login
+30/10/2024 11:16:46 - bt_utilitarios.click()
+30/10/2024 11:16:48 - bt_impressao_relatorios.click()
+30/10/2024 11:16:50 - box_codigo_rel.send_keys('1789')
+30/10/2024 11:16:52 - pyautogui.press('enter')
+30/10/2024 11:16:54 - bt_exportar_xls.click()
+30/10/2024 11:16:56 - bt_continuar_export_xls.click()
+30/10/2024 11:52:43 - ============================== inicio ========================
+30/10/2024 11:52:43 - interface_grafica()
+30/10/2024 11:52:47 - def iniciar()
+30/10/2024 11:52:47 - Botao Iniciar clicado!
+30/10/2024 11:52:47 - global statusThread: False
+30/10/2024 11:52:47 - Tarefa inicializada!
+30/10/2024 11:52:47 - ============================== login no sistema ==============================
+30/10/2024 11:52:52 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+30/10/2024 11:52:52 - box_usuario
+30/10/2024 11:52:52 - box_senha
+30/10/2024 11:52:53 - bt_login
+30/10/2024 11:52:57 - bt_utilitarios.click()
+30/10/2024 11:52:59 - bt_impressao_relatorios.click()
+30/10/2024 11:53:01 - box_codigo_rel.send_keys('1789')
+30/10/2024 11:53:04 - pyautogui.press('enter')
+30/10/2024 11:53:06 - bt_exportar_xls.click()
+30/10/2024 11:53:08 - bt_continuar_export_xls.click()
+30/10/2024 12:07:33 - ============================== inicio ========================
+30/10/2024 12:07:33 - interface_grafica()
+30/10/2024 12:07:34 - def iniciar()
+30/10/2024 12:07:34 - Botao Iniciar clicado!
+30/10/2024 12:07:34 - global statusThread: False
+30/10/2024 12:07:34 - Tarefa inicializada!
+30/10/2024 12:07:34 - ============================== login no sistema ==============================
+30/10/2024 12:07:45 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+30/10/2024 12:07:45 - box_usuario
+30/10/2024 12:07:45 - box_senha
+30/10/2024 12:07:45 - bt_login
+30/10/2024 12:07:51 - bt_utilitarios.click()
+30/10/2024 12:07:53 - bt_impressao_relatorios.click()
+30/10/2024 12:07:55 - box_codigo_rel.send_keys('1789')
+30/10/2024 12:07:57 - pyautogui.press('enter')
+30/10/2024 12:07:59 - bt_exportar_xls.click()
+30/10/2024 12:08:01 - bt_continuar_export_xls.click()
+30/10/2024 12:10:30 - ============================== inicio ========================
+30/10/2024 12:10:30 - interface_grafica()
+30/10/2024 12:10:31 - def iniciar()
+30/10/2024 12:10:31 - Botao Iniciar clicado!
+30/10/2024 12:10:31 - global statusThread: False
+30/10/2024 12:10:31 - Tarefa inicializada!
+30/10/2024 12:10:31 - ============================== login no sistema ==============================
+30/10/2024 12:10:41 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+30/10/2024 12:10:41 - box_usuario
+30/10/2024 12:10:41 - box_senha
+30/10/2024 12:10:41 - bt_login
+30/10/2024 12:10:45 - bt_utilitarios.click()
+30/10/2024 12:10:47 - bt_impressao_relatorios.click()
+30/10/2024 12:10:50 - box_codigo_rel.send_keys('1789')
+30/10/2024 12:10:52 - pyautogui.press('enter')
+30/10/2024 12:10:54 - bt_exportar_xls.click()
+30/10/2024 12:10:56 - bt_continuar_export_xls.click()
+30/10/2024 12:11:30 - ============================== inicio ========================
+30/10/2024 12:11:30 - interface_grafica()
+30/10/2024 12:11:34 - def iniciar()
+30/10/2024 12:11:34 - Botao Iniciar clicado!
+30/10/2024 12:11:34 - global statusThread: False
+30/10/2024 12:11:34 - Tarefa inicializada!
+30/10/2024 12:11:34 - ============================== login no sistema ==============================
+30/10/2024 12:11:43 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+30/10/2024 12:11:43 - box_usuario
+30/10/2024 12:11:44 - box_senha
+30/10/2024 12:11:44 - bt_login
+30/10/2024 12:11:48 - bt_utilitarios.click()
+30/10/2024 12:11:50 - bt_impressao_relatorios.click()
+30/10/2024 12:11:52 - box_codigo_rel.send_keys('1789')
+30/10/2024 12:11:54 - pyautogui.press('enter')
+30/10/2024 12:11:56 - bt_exportar_xls.click()
+30/10/2024 12:11:58 - bt_continuar_export_xls.click()
+30/10/2024 13:20:31 - ============================== inicio ========================
+30/10/2024 13:20:31 - interface_grafica()
+30/10/2024 13:20:32 - def iniciar()
+30/10/2024 13:20:32 - Botao Iniciar clicado!
+30/10/2024 13:20:32 - global statusThread: False
+30/10/2024 13:20:32 - Tarefa inicializada!
+30/10/2024 13:20:32 - ============================== login no sistema ==============================
+30/10/2024 13:20:43 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+30/10/2024 13:20:43 - box_usuario
+30/10/2024 13:20:43 - box_senha
+30/10/2024 13:20:43 - bt_login
+30/10/2024 13:20:47 - bt_utilitarios.click()
+30/10/2024 13:20:49 - bt_impressao_relatorios.click()
+30/10/2024 13:20:52 - box_codigo_rel.send_keys('1789')
+30/10/2024 13:20:54 - pyautogui.press('enter')
+30/10/2024 13:20:56 - bt_exportar_xls.click()
+30/10/2024 13:20:58 - bt_continuar_export_xls.click()
+30/10/2024 13:21:52 - ============================== inicio ========================
+30/10/2024 13:23:58 - ============================== inicio ========================
+30/10/2024 13:23:58 - interface_grafica()
+30/10/2024 13:24:19 - def iniciar()
+30/10/2024 13:24:19 - Botao Iniciar clicado!
+30/10/2024 13:24:19 - global statusThread: False
+30/10/2024 13:24:19 - Tarefa inicializada!
+30/10/2024 13:24:19 - ============================== login no sistema ==============================
+30/10/2024 13:24:29 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+30/10/2024 13:24:29 - box_usuario
+30/10/2024 13:24:29 - box_senha
+30/10/2024 13:24:29 - bt_login
+30/10/2024 13:24:33 - bt_utilitarios.click()
+30/10/2024 13:24:35 - bt_impressao_relatorios.click()
+30/10/2024 13:24:37 - box_codigo_rel.send_keys('1789')
+30/10/2024 13:24:39 - pyautogui.press('enter')
+30/10/2024 13:24:41 - bt_exportar_xls.click()
+30/10/2024 13:24:43 - bt_continuar_export_xls.click()
+30/10/2024 14:05:42 - ============================== inicio ========================
+30/10/2024 14:05:42 - interface_grafica()
+30/10/2024 14:06:13 - def iniciar()
+30/10/2024 14:06:13 - Botao Iniciar clicado!
+30/10/2024 14:06:13 - global statusThread: False
+30/10/2024 14:06:13 - Tarefa inicializada!
+30/10/2024 14:06:13 - ============================== login no sistema ==============================
+30/10/2024 14:06:23 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+30/10/2024 14:06:24 - box_usuario
+30/10/2024 14:06:24 - box_senha
+30/10/2024 14:06:24 - bt_login
+30/10/2024 14:06:28 - bt_utilitarios.click()
+30/10/2024 14:06:30 - bt_impressao_relatorios.click()
+30/10/2024 14:06:32 - box_codigo_rel.send_keys('1789')
+30/10/2024 14:06:34 - pyautogui.press('enter')
+30/10/2024 14:06:36 - bt_exportar_xls.click()
+30/10/2024 14:06:38 - bt_continuar_export_xls.click()
+30/10/2024 14:10:33 - def fechar()
+30/10/2024 14:10:34 - janela.destroy()
+30/10/2024 14:14:57 - ============================== inicio ========================
+30/10/2024 14:14:57 - interface_grafica()
+30/10/2024 14:14:59 - def iniciar()
+30/10/2024 14:14:59 - Botao Iniciar clicado!
+30/10/2024 14:14:59 - global statusThread: False
+30/10/2024 14:14:59 - Tarefa inicializada!
+30/10/2024 14:14:59 - ============================== login no sistema ==============================
+30/10/2024 14:15:08 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+30/10/2024 14:15:09 - box_usuario
+30/10/2024 14:15:09 - box_senha
+30/10/2024 14:15:09 - bt_login
+30/10/2024 14:15:13 - bt_utilitarios.click()
+30/10/2024 14:15:15 - bt_impressao_relatorios.click()
+30/10/2024 14:15:17 - box_codigo_rel.send_keys('1789')
+30/10/2024 14:15:19 - pyautogui.press('enter')
+30/10/2024 14:15:21 - bt_exportar_xls.click()
+30/10/2024 14:15:23 - bt_continuar_export_xls.click()
+30/10/2024 14:15:25 - pyautogui.click(1749,146)
+30/10/2024 14:17:33 - ============================== inicio ========================
+30/10/2024 14:17:33 - interface_grafica()
+30/10/2024 14:17:37 - def iniciar()
+30/10/2024 14:17:37 - Botao Iniciar clicado!
+30/10/2024 14:17:37 - global statusThread: False
+30/10/2024 14:17:37 - Tarefa inicializada!
+30/10/2024 14:17:37 - ============================== login no sistema ==============================
+30/10/2024 14:17:47 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+30/10/2024 14:17:47 - box_usuario
+30/10/2024 14:17:47 - box_senha
+30/10/2024 14:17:47 - bt_login
+30/10/2024 14:17:52 - bt_utilitarios.click()
+30/10/2024 14:17:54 - bt_impressao_relatorios.click()
+30/10/2024 14:17:56 - box_codigo_rel.send_keys('1789')
+30/10/2024 14:17:58 - pyautogui.press('enter')
+30/10/2024 14:18:00 - bt_exportar_xls.click()
+30/10/2024 14:18:02 - bt_continuar_export_xls.click()
+30/10/2024 14:18:04 - pyautogui.click(1749,109)
+30/10/2024 14:20:11 - ============================== inicio ========================
+30/10/2024 14:20:11 - interface_grafica()
+30/10/2024 14:20:12 - def iniciar()
+30/10/2024 14:20:12 - Botao Iniciar clicado!
+30/10/2024 14:20:12 - global statusThread: False
+30/10/2024 14:20:12 - Tarefa inicializada!
+30/10/2024 14:20:12 - ============================== login no sistema ==============================
+30/10/2024 14:20:22 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+30/10/2024 14:20:22 - box_usuario
+30/10/2024 14:20:22 - box_senha
+30/10/2024 14:20:22 - bt_login
+30/10/2024 14:20:27 - bt_utilitarios.click()
+30/10/2024 14:20:29 - bt_impressao_relatorios.click()
+30/10/2024 14:20:31 - box_codigo_rel.send_keys('1789')
+30/10/2024 14:20:33 - pyautogui.press('enter')
+30/10/2024 14:20:35 - bt_exportar_xls.click()
+30/10/2024 14:20:37 - bt_continuar_export_xls.click()
+30/10/2024 14:20:49 - pyautogui.click(1749,109)
+30/10/2024 14:22:59 - ============================== inicio ========================
+30/10/2024 14:22:59 - interface_grafica()
+30/10/2024 14:23:04 - def iniciar()
+30/10/2024 14:23:04 - Botao Iniciar clicado!
+30/10/2024 14:23:04 - global statusThread: False
+30/10/2024 14:23:04 - Tarefa inicializada!
+30/10/2024 14:23:04 - ============================== login no sistema ==============================
+30/10/2024 14:23:15 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+30/10/2024 14:23:15 - box_usuario
+30/10/2024 14:23:15 - box_senha
+30/10/2024 14:23:15 - bt_login
+30/10/2024 14:23:19 - bt_utilitarios.click()
+30/10/2024 14:23:21 - bt_impressao_relatorios.click()
+30/10/2024 14:23:23 - box_codigo_rel.send_keys('1789')
+30/10/2024 14:23:25 - pyautogui.press('enter')
+30/10/2024 14:23:27 - bt_exportar_xls.click()
+30/10/2024 14:23:29 - bt_continuar_export_xls.click()
+30/10/2024 14:23:29 - driver.implicitly_wait(20)
+30/10/2024 14:23:49 - time.sleep(20)
+30/10/2024 14:23:49 - pyautogui.click(1749,109)
+30/10/2024 14:24:31 - ============================== inicio ========================
+30/10/2024 14:24:31 - interface_grafica()
+30/10/2024 14:24:33 - def iniciar()
+30/10/2024 14:24:33 - Botao Iniciar clicado!
+30/10/2024 14:24:33 - global statusThread: False
+30/10/2024 14:24:33 - Tarefa inicializada!
+30/10/2024 14:24:33 - ============================== login no sistema ==============================
+30/10/2024 14:24:43 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+30/10/2024 14:24:43 - box_usuario
+30/10/2024 14:24:43 - box_senha
+30/10/2024 14:24:43 - bt_login
+30/10/2024 14:24:47 - bt_utilitarios.click()
+30/10/2024 14:24:49 - bt_impressao_relatorios.click()
+30/10/2024 14:24:51 - box_codigo_rel.send_keys('1789')
+30/10/2024 14:24:53 - pyautogui.press('enter')
+30/10/2024 14:24:55 - bt_exportar_xls.click()
+30/10/2024 14:24:57 - bt_continuar_export_xls.click()
+30/10/2024 14:24:57 - driver.implicitly_wait(20)
+30/10/2024 14:24:57 - pyautogui.click(1749,109)
+30/10/2024 14:29:27 - ============================== inicio ========================
+30/10/2024 14:29:27 - interface_grafica()
+30/10/2024 14:29:36 - def iniciar()
+30/10/2024 14:29:36 - Botao Iniciar clicado!
+30/10/2024 14:29:36 - global statusThread: False
+30/10/2024 14:29:36 - Tarefa inicializada!
+30/10/2024 14:29:36 - ============================== login no sistema ==============================
+30/10/2024 14:29:46 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+30/10/2024 14:29:46 - box_usuario
+30/10/2024 14:29:46 - box_senha
+30/10/2024 14:29:46 - bt_login
+30/10/2024 14:29:51 - bt_utilitarios.click()
+30/10/2024 14:29:53 - bt_impressao_relatorios.click()
+30/10/2024 14:29:55 - box_codigo_rel.send_keys('1789')
+30/10/2024 14:29:57 - pyautogui.press('enter')
+30/10/2024 14:29:59 - bt_exportar_xls.click()
+30/10/2024 14:30:01 - bt_continuar_export_xls.click()
+30/10/2024 14:30:07 - time.sleep(6)
+30/10/2024 14:30:07 - pyautogui.click(1749,109)
+30/10/2024 14:32:41 - def fechar()
+30/10/2024 14:32:45 - janela.destroy()
+30/10/2024 14:32:51 - ============================== inicio ========================
+30/10/2024 14:32:51 - interface_grafica()
+30/10/2024 14:32:53 - def iniciar()
+30/10/2024 14:32:53 - Botao Iniciar clicado!
+30/10/2024 14:32:53 - global statusThread: False
+30/10/2024 14:32:53 - Tarefa inicializada!
+30/10/2024 14:32:53 - ============================== login no sistema ==============================
+30/10/2024 14:33:03 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+30/10/2024 14:33:03 - box_usuario
+30/10/2024 14:33:03 - box_senha
+30/10/2024 14:33:03 - bt_login
+30/10/2024 14:33:07 - bt_utilitarios.click()
+30/10/2024 14:33:10 - bt_impressao_relatorios.click()
+30/10/2024 14:40:53 - ============================== inicio ========================
+30/10/2024 14:40:53 - interface_grafica()
+30/10/2024 14:41:10 - def iniciar()
+30/10/2024 14:41:10 - Botao Iniciar clicado!
+30/10/2024 14:41:10 - global statusThread: False
+30/10/2024 14:41:10 - Tarefa inicializada!
+30/10/2024 14:41:10 - ============================== login no sistema ==============================
+30/10/2024 14:41:20 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+30/10/2024 14:41:20 - box_usuario
+30/10/2024 14:41:20 - box_senha
+30/10/2024 14:41:20 - bt_login
+30/10/2024 14:41:25 - bt_utilitarios.click()
+30/10/2024 14:41:27 - bt_impressao_relatorios.click()
+30/10/2024 14:41:29 - box_codigo_rel.send_keys('1789')
+30/10/2024 14:41:31 - pyautogui.press('enter')
+30/10/2024 14:41:33 - bt_exportar_xls.click()
+30/10/2024 14:41:35 - bt_continuar_export_xls.click()
+30/10/2024 14:41:41 - time.sleep(6)
+30/10/2024 14:46:30 - ============================== inicio ========================
+30/10/2024 14:46:30 - interface_grafica()
+30/10/2024 14:46:32 - def iniciar()
+30/10/2024 14:46:32 - Botao Iniciar clicado!
+30/10/2024 14:46:32 - global statusThread: False
+30/10/2024 14:46:32 - Tarefa inicializada!
+30/10/2024 14:46:32 - ============================== login no sistema ==============================
+30/10/2024 14:46:41 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+30/10/2024 14:46:41 - box_usuario
+30/10/2024 14:46:41 - box_senha
+30/10/2024 14:46:41 - bt_login
+30/10/2024 14:46:46 - bt_utilitarios.click()
+30/10/2024 14:46:48 - bt_impressao_relatorios.click()
+30/10/2024 14:46:50 - box_codigo_rel.send_keys('1789')
+30/10/2024 14:46:52 - pyautogui.press('enter')
+30/10/2024 14:46:54 - bt_exportar_xls.click()
+30/10/2024 14:46:56 - bt_continuar_export_xls.click()
+30/10/2024 14:47:06 - time.sleep(10)
+30/10/2024 14:47:06 - pyautogui.click(1824,64)
+30/10/2024 14:47:06 - click no manter
+30/10/2024 14:47:06 - pyautogui.click(1749,145)
+30/10/2024 14:47:55 - ============================== inicio ========================
+30/10/2024 14:47:55 - interface_grafica()
+30/10/2024 14:47:56 - def iniciar()
+30/10/2024 14:47:56 - Botao Iniciar clicado!
+30/10/2024 14:47:56 - global statusThread: False
+30/10/2024 14:47:56 - Tarefa inicializada!
+30/10/2024 14:47:56 - ============================== login no sistema ==============================
+30/10/2024 14:48:06 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+30/10/2024 14:48:06 - box_usuario
+30/10/2024 14:48:06 - box_senha
+30/10/2024 14:48:06 - bt_login
+30/10/2024 14:48:11 - bt_utilitarios.click()
+30/10/2024 14:48:13 - bt_impressao_relatorios.click()
+30/10/2024 14:48:15 - box_codigo_rel.send_keys('1789')
+30/10/2024 14:48:17 - pyautogui.press('enter')
+30/10/2024 14:48:19 - bt_exportar_xls.click()
+30/10/2024 14:48:21 - bt_continuar_export_xls.click()
+30/10/2024 14:48:41 - time.sleep(10)
+30/10/2024 14:48:41 - pyautogui.click(1824,64)
+30/10/2024 14:48:41 - click no manter
+30/10/2024 14:48:45 - pyautogui.click(1749,145)
+30/10/2024 14:58:09 - ============================== inicio ========================
+30/10/2024 14:58:09 - interface_grafica()
+30/10/2024 14:58:14 - def iniciar()
+30/10/2024 14:58:14 - Botao Iniciar clicado!
+30/10/2024 14:58:14 - global statusThread: False
+30/10/2024 14:58:14 - Tarefa inicializada!
+30/10/2024 14:58:14 - ============================== login no sistema ==============================
+30/10/2024 14:58:23 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+30/10/2024 14:58:23 - box_usuario
+30/10/2024 14:58:24 - box_senha
+30/10/2024 14:58:24 - bt_login
+30/10/2024 14:58:28 - bt_utilitarios.click()
+30/10/2024 14:58:30 - bt_impressao_relatorios.click()
+30/10/2024 14:58:32 - box_codigo_rel.send_keys('1789')
+30/10/2024 14:58:34 - pyautogui.press('enter')
+30/10/2024 14:58:36 - bt_exportar_xls.click()
+30/10/2024 14:58:38 - bt_continuar_export_xls.click()
+30/10/2024 14:58:58 - time.sleep(10)
+30/10/2024 14:58:58 - pyautogui.click(1824,64)
+30/10/2024 14:58:58 - click no manter
+30/10/2024 14:59:02 - pyautogui.click(1749,145)
+30/10/2024 14:59:06 - get_latest_xls_from_downloads
+30/10/2024 14:59:06 - /nget_latest_xls_from_downloads/n================================ Error: 
+Excel file format cannot be determined, you must specify an engine manually.
+30/10/2024 14:59:06 - Nenhum arquivo XLS encontrado na pasta de Downloads.
+30/10/2024 14:59:06 - get_latest_xls_from_downloads
+30/10/2024 14:59:06 - /nget_latest_xls_from_downloads/n================================ Error: 
+Excel file format cannot be determined, you must specify an engine manually.
+30/10/2024 14:59:06 - Nenhum arquivo XLS encontrado na pasta de Downloads.
+30/10/2024 14:59:26 - global statusThread: False
+30/10/2024 14:59:26 - =========== FIM ========
+30/10/2024 15:00:45 - def fechar()
+30/10/2024 15:00:46 - janela.destroy()
+30/10/2024 15:00:51 - ============================== inicio ========================
+30/10/2024 15:00:51 - interface_grafica()
+30/10/2024 15:00:54 - def iniciar()
+30/10/2024 15:00:54 - Botao Iniciar clicado!
+30/10/2024 15:00:54 - global statusThread: False
+30/10/2024 15:00:54 - Tarefa inicializada!
+30/10/2024 15:00:54 - get_latest_xls_from_downloads
+30/10/2024 15:00:54 - /nget_latest_xls_from_downloads/n================================ Error: 
+Excel file format cannot be determined, you must specify an engine manually.
+30/10/2024 15:00:54 - Nenhum arquivo XLS encontrado na pasta de Downloads.
+30/10/2024 15:00:54 - get_latest_xls_from_downloads
+30/10/2024 15:00:54 - /nget_latest_xls_from_downloads/n================================ Error: 
+Excel file format cannot be determined, you must specify an engine manually.
+30/10/2024 15:00:54 - Nenhum arquivo XLS encontrado na pasta de Downloads.
+30/10/2024 15:05:06 - ============================== inicio ========================
+30/10/2024 15:05:06 - interface_grafica()
+30/10/2024 15:05:08 - def iniciar()
+30/10/2024 15:05:08 - Botao Iniciar clicado!
+30/10/2024 15:05:08 - global statusThread: False
+30/10/2024 15:05:08 - Tarefa inicializada!
+30/10/2024 15:05:08 - get_latest_xls_from_downloads
+30/10/2024 15:05:08 - 
+get_latest_xls_from_downloads
+================================ Error: 
+Excel file format cannot be determined, you must specify an engine manually.
+30/10/2024 15:05:08 - Nenhum arquivo XLS encontrado na pasta de Downloads.
+30/10/2024 15:05:08 - get_latest_xls_from_downloads
+30/10/2024 15:05:08 - 
+get_latest_xls_from_downloads
+================================ Error: 
+Excel file format cannot be determined, you must specify an engine manually.
+30/10/2024 15:05:08 - Nenhum arquivo XLS encontrado na pasta de Downloads.
+30/10/2024 15:06:33 - ============================== inicio ========================
+30/10/2024 15:06:33 - interface_grafica()
+30/10/2024 15:06:35 - def iniciar()
+30/10/2024 15:06:35 - Botao Iniciar clicado!
+30/10/2024 15:06:35 - global statusThread: False
+30/10/2024 15:06:35 - Tarefa inicializada!
+30/10/2024 15:06:35 - get_latest_xls_from_downloads
+30/10/2024 15:06:35 - 
+get_latest_xls_from_downloads
+================================ Error: 
+Missing optional dependency 'fsspec'.  Use pip or conda to install fsspec.
+30/10/2024 15:06:35 - Nenhum arquivo XLS encontrado na pasta de Downloads.
+30/10/2024 15:06:35 - get_latest_xls_from_downloads
+30/10/2024 15:06:35 - 
+get_latest_xls_from_downloads
+================================ Error: 
+Missing optional dependency 'fsspec'.  Use pip or conda to install fsspec.
+30/10/2024 15:06:35 - Nenhum arquivo XLS encontrado na pasta de Downloads.
+30/10/2024 15:06:47 - def fechar()
+30/10/2024 15:06:48 - janela.destroy()
+30/10/2024 15:06:51 - ============================== inicio ========================
+30/10/2024 15:06:51 - interface_grafica()
+30/10/2024 15:06:53 - def iniciar()
+30/10/2024 15:06:53 - Botao Iniciar clicado!
+30/10/2024 15:06:53 - global statusThread: False
+30/10/2024 15:06:53 - Tarefa inicializada!
+30/10/2024 15:06:53 - get_latest_xls_from_downloads
+30/10/2024 15:06:53 - 
+get_latest_xls_from_downloads
+================================ Error: 
+Excel file format cannot be determined, you must specify an engine manually.
+30/10/2024 15:06:53 - Nenhum arquivo XLS encontrado na pasta de Downloads.
+30/10/2024 15:06:53 - get_latest_xls_from_downloads
+30/10/2024 15:06:53 - 
+get_latest_xls_from_downloads
+================================ Error: 
+Excel file format cannot be determined, you must specify an engine manually.
+30/10/2024 15:06:53 - Nenhum arquivo XLS encontrado na pasta de Downloads.
+30/10/2024 15:13:05 - ============================== inicio ========================
+30/10/2024 15:13:05 - interface_grafica()
+30/10/2024 15:13:07 - def iniciar()
+30/10/2024 15:13:07 - Botao Iniciar clicado!
+30/10/2024 15:13:07 - global statusThread: False
+30/10/2024 15:13:07 - Tarefa inicializada!
+30/10/2024 15:13:07 - get_latest_xls_from_downloads
+30/10/2024 15:13:07 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+30/10/2024 15:13:07 - Files:
+['0BWD37-5118004c-reportCATE-1789-20241030-111643796.xls', '0gqQAB-19cfe733-reportCATE-1789-20241030-112027891.xls', '0NbppA-8990638a-reportC-1765-20241010-093653560.xls', '2f6Hwi-bce6f875-reportCATE-1789-20241030-120748225.xls', '2YxEhO-6450d2cf-reportCATE-1789-20241030-111126780.xls', '310Ahx-515c2911-reportCATE-1789-20241030-112322925.xls', 'b0Whno-5bd3906a-reportCATE-1789-20241030-095418375.xls', 'DQCIvX-88f8fc7e-reportCATE-1789-20241030-020625649.xls', 'e4nb1g-7824b89e-reportCATE-1789-20241030-024808333.xls', 'E5o8mg-65573fe8-reportCATE-885-20241003-085510257.xls', 'esCGkQ-72e1ade6-reportC-1756-20241003-085028243.xls', 'gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls', 'i0Arq0-1518c810-reportCATE-1789-20241030-110900411.xls', 'puPb7C-e3c525b4-reportCATE-1775-20241003-083837570.xls', 'v1zXGE-234b6cbd-reportCATE-1789-20241030-115254970.xls', 'vFEyUr-d16de66c-reportCATE-885-20241003-090548180.xls', 'wDeMku-fbc9957c-reportCATE-1789-20241030-022948345.xls', 'x9BqR0-0eb79b0c-reportCATE-1789-20241030-021749390.xls', 'yXp0FJ-036826b8-reportCATE-1789-20241030-111002589.xls', 'Zsqci0-6e52f4af-reportC-1756-20241003-084709393.xls']
+30/10/2024 15:13:07 - 
+get_latest_xls_from_downloads
+================================ Error: 
+Excel file format cannot be determined, you must specify an engine manually.
+30/10/2024 15:13:07 - Nenhum arquivo XLS encontrado na pasta de Downloads.
+30/10/2024 15:13:07 - get_latest_xls_from_downloads
+30/10/2024 15:13:07 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+30/10/2024 15:13:07 - Files:
+['0BWD37-5118004c-reportCATE-1789-20241030-111643796.xls', '0gqQAB-19cfe733-reportCATE-1789-20241030-112027891.xls', '0NbppA-8990638a-reportC-1765-20241010-093653560.xls', '2f6Hwi-bce6f875-reportCATE-1789-20241030-120748225.xls', '2YxEhO-6450d2cf-reportCATE-1789-20241030-111126780.xls', '310Ahx-515c2911-reportCATE-1789-20241030-112322925.xls', 'b0Whno-5bd3906a-reportCATE-1789-20241030-095418375.xls', 'DQCIvX-88f8fc7e-reportCATE-1789-20241030-020625649.xls', 'e4nb1g-7824b89e-reportCATE-1789-20241030-024808333.xls', 'E5o8mg-65573fe8-reportCATE-885-20241003-085510257.xls', 'esCGkQ-72e1ade6-reportC-1756-20241003-085028243.xls', 'gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls', 'i0Arq0-1518c810-reportCATE-1789-20241030-110900411.xls', 'puPb7C-e3c525b4-reportCATE-1775-20241003-083837570.xls', 'v1zXGE-234b6cbd-reportCATE-1789-20241030-115254970.xls', 'vFEyUr-d16de66c-reportCATE-885-20241003-090548180.xls', 'wDeMku-fbc9957c-reportCATE-1789-20241030-022948345.xls', 'x9BqR0-0eb79b0c-reportCATE-1789-20241030-021749390.xls', 'yXp0FJ-036826b8-reportCATE-1789-20241030-111002589.xls', 'Zsqci0-6e52f4af-reportC-1756-20241003-084709393.xls']
+30/10/2024 15:13:07 - 
+get_latest_xls_from_downloads
+================================ Error: 
+Excel file format cannot be determined, you must specify an engine manually.
+30/10/2024 15:13:07 - Nenhum arquivo XLS encontrado na pasta de Downloads.
+30/10/2024 15:13:55 - def fechar()
+30/10/2024 15:13:56 - janela.destroy()
+30/10/2024 15:13:59 - ============================== inicio ========================
+30/10/2024 15:13:59 - interface_grafica()
+30/10/2024 15:14:01 - def iniciar()
+30/10/2024 15:14:01 - Botao Iniciar clicado!
+30/10/2024 15:14:01 - global statusThread: False
+30/10/2024 15:14:01 - Tarefa inicializada!
+30/10/2024 15:14:01 - get_latest_xls_from_downloads
+30/10/2024 15:14:01 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+30/10/2024 15:14:01 - Files:
+[]
+30/10/2024 15:14:01 - if not files
+30/10/2024 15:14:01 - Nenhum arquivo XLS encontrado na pasta de Downloads.
+30/10/2024 15:14:01 - get_latest_xls_from_downloads
+30/10/2024 15:14:01 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+30/10/2024 15:14:01 - Files:
+[]
+30/10/2024 15:14:01 - if not files
+30/10/2024 15:14:01 - Nenhum arquivo XLS encontrado na pasta de Downloads.
+30/10/2024 15:14:06 - def iniciar()
+30/10/2024 15:14:06 - Botao Iniciar clicado!
+30/10/2024 15:14:06 - global statusThread: True
+30/10/2024 15:14:06 - Thread já foi iniciada, statusThread: 
+True
+30/10/2024 15:14:20 - ============================== inicio ========================
+30/10/2024 15:14:20 - interface_grafica()
+30/10/2024 15:14:22 - def iniciar()
+30/10/2024 15:14:22 - Botao Iniciar clicado!
+30/10/2024 15:14:22 - global statusThread: False
+30/10/2024 15:14:22 - Tarefa inicializada!
+30/10/2024 15:14:22 - get_latest_xls_from_downloads
+30/10/2024 15:14:22 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+30/10/2024 15:14:22 - Files:
+['0BWD37-5118004c-reportCATE-1789-20241030-111643796.xls', '0gqQAB-19cfe733-reportCATE-1789-20241030-112027891.xls', '0NbppA-8990638a-reportC-1765-20241010-093653560.xls', '18a09c2c-d11e-4704-930d-882571bc59b8.pdf', '2f6Hwi-bce6f875-reportCATE-1789-20241030-120748225.xls', '2YxEhO-6450d2cf-reportCATE-1789-20241030-111126780.xls', '310Ahx-515c2911-reportCATE-1789-20241030-112322925.xls', '3b659f71-d084-4c8d-8f00-7e46c242ee59.pdf', '7z2408-x64.exe', 'Ap1.pdf', 'b0Whno-5bd3906a-reportCATE-1789-20241030-095418375.xls', 'BizagiModelerSetup_4.0.0128.exe', 'c4ca78c7-076c-4e13-8ba0-19a28937e153.pdf', 'c7acfeaf-5876-4cfc-ac4b-000ea42314b4.pdf', 'Captura de tela_17-9-2024_104236_aplicacao.hsf.local.jpeg.crdownload', 'capture_241003_084905.png', 'capture_241018_095727.png', 'capture_241018_095741.png', 'capture_241018_095752.png', 'capture_241018_095804.png', 'dc2ec94d-8eaf-466b-9380-94a32ee05889.pdf', 'desktop.ini', 'did5Kp-3b497335-reportCATE-1789-20241030-110432000.xls.crdownload', 'Ditto Clipboard Installer.exe', 'DQCIvX-88f8fc7e-reportCATE-1789-20241030-020625649.xls', 'E09gQF-ae14af35-reportCATE-1789-20241030-095202090.xls.crdownload', 'e4nb1g-7824b89e-reportCATE-1789-20241030-024808333.xls', 'E5o8mg-65573fe8-reportCATE-885-20241003-085510257.xls', 'escala_eif_ii_item.pdf', 'esCGkQ-72e1ade6-reportC-1756-20241003-085028243.xls', 'gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls', 'HSF - PROTOCOLO SEPSE - teste 006 - Infecção sem Disfunção Orgânica.pdf.crdownload', 'HTML5 - FLUXO - SEPSE - Protocolo de Detecção Precoce de Sepse.pdf', 'i0Arq0-1518c810-reportCATE-1789-20241030-110900411.xls', 'Imagem do WhatsApp de 2024-09-26 à(s) 11.44.18_7e7f23ec.jpg', 'Imagem do WhatsApp de 2024-09-26 à(s) 11.44.18_7e7f23ec.png', 'Imagem do WhatsApp de 2024-09-26 à(s) 11.44.18_8f59a916.jpg', 'Imagem do WhatsApp de 2024-09-26 à(s) 12.00.15_4c3c090e.jpg', 'Logo-HSF-Mini.png.crdownload', 'logo_relatorio.png', 'MfKAE9-498dc11f-teste.csv', 'Modelo de POP HSF.docx', 'MovaviScreenRecorderSetupC_Wcq65fk_.exe', 'MSTeamsSetup.exe', 'Não confirmado 137807.crdownload', 'Não confirmado 155509.crdownload', 'Não confirmado 91205.crdownload', 'Não confirmado 976317.crdownload', 'OBS-Studio-30.2.3-Windows-Installer.exe', 'Outlook-34dun3yj.png', 'puPb7C-e3c525b4-reportCATE-1775-20241003-083837570.xls', 'Sem título-5.png.crdownload', 'Sepse', 'Sepse.rar', 'TeamViewerQS.exe', 'Telegram Desktop', 'TEST.csv', 'TEST_2.csv', 'todas as tabelas do banco.csv', 'tsetup-x64.5.5.3.exe', 'Tutorial Office 365 - Center Licenças.mp4', 'Tutorial Office 365 - Center Licenças.pdf', 'v1zXGE-234b6cbd-reportCATE-1789-20241030-115254970.xls', 'vFEyUr-d16de66c-reportCATE-885-20241003-090548180.xls', 'wDeMku-fbc9957c-reportCATE-1789-20241030-022948345.xls', 'x9BqR0-0eb79b0c-reportCATE-1789-20241030-021749390.xls', 'YSSwPz-376a7a7b-teste.csv', 'yXp0FJ-036826b8-reportCATE-1789-20241030-111002589.xls', 'Zsqci0-6e52f4af-reportC-1756-20241003-084709393.xls']
+30/10/2024 15:14:22 - 
+get_latest_xls_from_downloads
+================================ Error: 
+Excel file format cannot be determined, you must specify an engine manually.
+30/10/2024 15:14:22 - Nenhum arquivo XLS encontrado na pasta de Downloads.
+30/10/2024 15:14:22 - get_latest_xls_from_downloads
+30/10/2024 15:14:22 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+30/10/2024 15:14:22 - Files:
+['0BWD37-5118004c-reportCATE-1789-20241030-111643796.xls', '0gqQAB-19cfe733-reportCATE-1789-20241030-112027891.xls', '0NbppA-8990638a-reportC-1765-20241010-093653560.xls', '18a09c2c-d11e-4704-930d-882571bc59b8.pdf', '2f6Hwi-bce6f875-reportCATE-1789-20241030-120748225.xls', '2YxEhO-6450d2cf-reportCATE-1789-20241030-111126780.xls', '310Ahx-515c2911-reportCATE-1789-20241030-112322925.xls', '3b659f71-d084-4c8d-8f00-7e46c242ee59.pdf', '7z2408-x64.exe', 'Ap1.pdf', 'b0Whno-5bd3906a-reportCATE-1789-20241030-095418375.xls', 'BizagiModelerSetup_4.0.0128.exe', 'c4ca78c7-076c-4e13-8ba0-19a28937e153.pdf', 'c7acfeaf-5876-4cfc-ac4b-000ea42314b4.pdf', 'Captura de tela_17-9-2024_104236_aplicacao.hsf.local.jpeg.crdownload', 'capture_241003_084905.png', 'capture_241018_095727.png', 'capture_241018_095741.png', 'capture_241018_095752.png', 'capture_241018_095804.png', 'dc2ec94d-8eaf-466b-9380-94a32ee05889.pdf', 'desktop.ini', 'did5Kp-3b497335-reportCATE-1789-20241030-110432000.xls.crdownload', 'Ditto Clipboard Installer.exe', 'DQCIvX-88f8fc7e-reportCATE-1789-20241030-020625649.xls', 'E09gQF-ae14af35-reportCATE-1789-20241030-095202090.xls.crdownload', 'e4nb1g-7824b89e-reportCATE-1789-20241030-024808333.xls', 'E5o8mg-65573fe8-reportCATE-885-20241003-085510257.xls', 'escala_eif_ii_item.pdf', 'esCGkQ-72e1ade6-reportC-1756-20241003-085028243.xls', 'gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls', 'HSF - PROTOCOLO SEPSE - teste 006 - Infecção sem Disfunção Orgânica.pdf.crdownload', 'HTML5 - FLUXO - SEPSE - Protocolo de Detecção Precoce de Sepse.pdf', 'i0Arq0-1518c810-reportCATE-1789-20241030-110900411.xls', 'Imagem do WhatsApp de 2024-09-26 à(s) 11.44.18_7e7f23ec.jpg', 'Imagem do WhatsApp de 2024-09-26 à(s) 11.44.18_7e7f23ec.png', 'Imagem do WhatsApp de 2024-09-26 à(s) 11.44.18_8f59a916.jpg', 'Imagem do WhatsApp de 2024-09-26 à(s) 12.00.15_4c3c090e.jpg', 'Logo-HSF-Mini.png.crdownload', 'logo_relatorio.png', 'MfKAE9-498dc11f-teste.csv', 'Modelo de POP HSF.docx', 'MovaviScreenRecorderSetupC_Wcq65fk_.exe', 'MSTeamsSetup.exe', 'Não confirmado 137807.crdownload', 'Não confirmado 155509.crdownload', 'Não confirmado 91205.crdownload', 'Não confirmado 976317.crdownload', 'OBS-Studio-30.2.3-Windows-Installer.exe', 'Outlook-34dun3yj.png', 'puPb7C-e3c525b4-reportCATE-1775-20241003-083837570.xls', 'Sem título-5.png.crdownload', 'Sepse', 'Sepse.rar', 'TeamViewerQS.exe', 'Telegram Desktop', 'TEST.csv', 'TEST_2.csv', 'todas as tabelas do banco.csv', 'tsetup-x64.5.5.3.exe', 'Tutorial Office 365 - Center Licenças.mp4', 'Tutorial Office 365 - Center Licenças.pdf', 'v1zXGE-234b6cbd-reportCATE-1789-20241030-115254970.xls', 'vFEyUr-d16de66c-reportCATE-885-20241003-090548180.xls', 'wDeMku-fbc9957c-reportCATE-1789-20241030-022948345.xls', 'x9BqR0-0eb79b0c-reportCATE-1789-20241030-021749390.xls', 'YSSwPz-376a7a7b-teste.csv', 'yXp0FJ-036826b8-reportCATE-1789-20241030-111002589.xls', 'Zsqci0-6e52f4af-reportC-1756-20241003-084709393.xls']
+30/10/2024 15:14:22 - 
+get_latest_xls_from_downloads
+================================ Error: 
+Excel file format cannot be determined, you must specify an engine manually.
+30/10/2024 15:14:22 - Nenhum arquivo XLS encontrado na pasta de Downloads.
+30/10/2024 15:14:43 - def fechar()
+30/10/2024 15:14:45 - janela.destroy()
+30/10/2024 15:18:20 - ============================== inicio ========================
+30/10/2024 15:18:20 - interface_grafica()
+30/10/2024 15:18:22 - def iniciar()
+30/10/2024 15:18:22 - Botao Iniciar clicado!
+30/10/2024 15:18:22 - global statusThread: False
+30/10/2024 15:18:22 - Tarefa inicializada!
+30/10/2024 15:18:22 - get_latest_xls_from_downloads
+30/10/2024 15:18:22 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+30/10/2024 15:18:22 - Files:
+['0BWD37-5118004c-reportCATE-1789-20241030-111643796.xls', '0gqQAB-19cfe733-reportCATE-1789-20241030-112027891.xls', '0NbppA-8990638a-reportC-1765-20241010-093653560.xls', '2f6Hwi-bce6f875-reportCATE-1789-20241030-120748225.xls', '2YxEhO-6450d2cf-reportCATE-1789-20241030-111126780.xls', '310Ahx-515c2911-reportCATE-1789-20241030-112322925.xls', 'b0Whno-5bd3906a-reportCATE-1789-20241030-095418375.xls', 'DQCIvX-88f8fc7e-reportCATE-1789-20241030-020625649.xls', 'e4nb1g-7824b89e-reportCATE-1789-20241030-024808333.xls', 'E5o8mg-65573fe8-reportCATE-885-20241003-085510257.xls', 'esCGkQ-72e1ade6-reportC-1756-20241003-085028243.xls', 'gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls', 'i0Arq0-1518c810-reportCATE-1789-20241030-110900411.xls', 'puPb7C-e3c525b4-reportCATE-1775-20241003-083837570.xls', 'v1zXGE-234b6cbd-reportCATE-1789-20241030-115254970.xls', 'vFEyUr-d16de66c-reportCATE-885-20241003-090548180.xls', 'wDeMku-fbc9957c-reportCATE-1789-20241030-022948345.xls', 'x9BqR0-0eb79b0c-reportCATE-1789-20241030-021749390.xls', 'yXp0FJ-036826b8-reportCATE-1789-20241030-111002589.xls', 'Zsqci0-6e52f4af-reportC-1756-20241003-084709393.xls']
+30/10/2024 15:18:22 - arquivos_downloadarquivos_download:
+['0BWD37-5118004c-reportCATE-1789-20241030-111643796.xls', '0gqQAB-19cfe733-reportCATE-1789-20241030-112027891.xls', '0NbppA-8990638a-reportC-1765-20241010-093653560.xls', '18a09c2c-d11e-4704-930d-882571bc59b8.pdf', '2f6Hwi-bce6f875-reportCATE-1789-20241030-120748225.xls', '2YxEhO-6450d2cf-reportCATE-1789-20241030-111126780.xls', '310Ahx-515c2911-reportCATE-1789-20241030-112322925.xls', '3b659f71-d084-4c8d-8f00-7e46c242ee59.pdf', '7z2408-x64.exe', 'Ap1.pdf', 'b0Whno-5bd3906a-reportCATE-1789-20241030-095418375.xls', 'BizagiModelerSetup_4.0.0128.exe', 'c4ca78c7-076c-4e13-8ba0-19a28937e153.pdf', 'c7acfeaf-5876-4cfc-ac4b-000ea42314b4.pdf', 'Captura de tela_17-9-2024_104236_aplicacao.hsf.local.jpeg.crdownload', 'capture_241003_084905.png', 'capture_241018_095727.png', 'capture_241018_095741.png', 'capture_241018_095752.png', 'capture_241018_095804.png', 'dc2ec94d-8eaf-466b-9380-94a32ee05889.pdf', 'desktop.ini', 'did5Kp-3b497335-reportCATE-1789-20241030-110432000.xls.crdownload', 'Ditto Clipboard Installer.exe', 'DQCIvX-88f8fc7e-reportCATE-1789-20241030-020625649.xls', 'E09gQF-ae14af35-reportCATE-1789-20241030-095202090.xls.crdownload', 'e4nb1g-7824b89e-reportCATE-1789-20241030-024808333.xls', 'E5o8mg-65573fe8-reportCATE-885-20241003-085510257.xls', 'escala_eif_ii_item.pdf', 'esCGkQ-72e1ade6-reportC-1756-20241003-085028243.xls', 'gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls', 'HSF - PROTOCOLO SEPSE - teste 006 - Infecção sem Disfunção Orgânica.pdf.crdownload', 'HTML5 - FLUXO - SEPSE - Protocolo de Detecção Precoce de Sepse.pdf', 'i0Arq0-1518c810-reportCATE-1789-20241030-110900411.xls', 'Imagem do WhatsApp de 2024-09-26 à(s) 11.44.18_7e7f23ec.jpg', 'Imagem do WhatsApp de 2024-09-26 à(s) 11.44.18_7e7f23ec.png', 'Imagem do WhatsApp de 2024-09-26 à(s) 11.44.18_8f59a916.jpg', 'Imagem do WhatsApp de 2024-09-26 à(s) 12.00.15_4c3c090e.jpg', 'Logo-HSF-Mini.png.crdownload', 'logo_relatorio.png', 'MfKAE9-498dc11f-teste.csv', 'Modelo de POP HSF.docx', 'MovaviScreenRecorderSetupC_Wcq65fk_.exe', 'MSTeamsSetup.exe', 'Não confirmado 137807.crdownload', 'Não confirmado 155509.crdownload', 'Não confirmado 91205.crdownload', 'Não confirmado 976317.crdownload', 'OBS-Studio-30.2.3-Windows-Installer.exe', 'Outlook-34dun3yj.png', 'puPb7C-e3c525b4-reportCATE-1775-20241003-083837570.xls', 'Sem título-5.png.crdownload', 'Sepse', 'Sepse.rar', 'TeamViewerQS.exe', 'Telegram Desktop', 'TEST.csv', 'TEST_2.csv', 'todas as tabelas do banco.csv', 'tsetup-x64.5.5.3.exe', 'Tutorial Office 365 - Center Licenças.mp4', 'Tutorial Office 365 - Center Licenças.pdf', 'v1zXGE-234b6cbd-reportCATE-1789-20241030-115254970.xls', 'vFEyUr-d16de66c-reportCATE-885-20241003-090548180.xls', 'wDeMku-fbc9957c-reportCATE-1789-20241030-022948345.xls', 'x9BqR0-0eb79b0c-reportCATE-1789-20241030-021749390.xls', 'YSSwPz-376a7a7b-teste.csv', 'yXp0FJ-036826b8-reportCATE-1789-20241030-111002589.xls', 'Zsqci0-6e52f4af-reportC-1756-20241003-084709393.xls']
+30/10/2024 15:18:22 - Nenhum arquivo XLS encontrado na pasta de Downloads.
+30/10/2024 15:18:22 - get_latest_xls_from_downloads
+30/10/2024 15:18:22 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+30/10/2024 15:18:22 - Files:
+['0BWD37-5118004c-reportCATE-1789-20241030-111643796.xls', '0gqQAB-19cfe733-reportCATE-1789-20241030-112027891.xls', '0NbppA-8990638a-reportC-1765-20241010-093653560.xls', '2f6Hwi-bce6f875-reportCATE-1789-20241030-120748225.xls', '2YxEhO-6450d2cf-reportCATE-1789-20241030-111126780.xls', '310Ahx-515c2911-reportCATE-1789-20241030-112322925.xls', 'b0Whno-5bd3906a-reportCATE-1789-20241030-095418375.xls', 'DQCIvX-88f8fc7e-reportCATE-1789-20241030-020625649.xls', 'e4nb1g-7824b89e-reportCATE-1789-20241030-024808333.xls', 'E5o8mg-65573fe8-reportCATE-885-20241003-085510257.xls', 'esCGkQ-72e1ade6-reportC-1756-20241003-085028243.xls', 'gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls', 'i0Arq0-1518c810-reportCATE-1789-20241030-110900411.xls', 'puPb7C-e3c525b4-reportCATE-1775-20241003-083837570.xls', 'v1zXGE-234b6cbd-reportCATE-1789-20241030-115254970.xls', 'vFEyUr-d16de66c-reportCATE-885-20241003-090548180.xls', 'wDeMku-fbc9957c-reportCATE-1789-20241030-022948345.xls', 'x9BqR0-0eb79b0c-reportCATE-1789-20241030-021749390.xls', 'yXp0FJ-036826b8-reportCATE-1789-20241030-111002589.xls', 'Zsqci0-6e52f4af-reportC-1756-20241003-084709393.xls']
+30/10/2024 15:18:22 - arquivos_downloadarquivos_download:
+['0BWD37-5118004c-reportCATE-1789-20241030-111643796.xls', '0gqQAB-19cfe733-reportCATE-1789-20241030-112027891.xls', '0NbppA-8990638a-reportC-1765-20241010-093653560.xls', '18a09c2c-d11e-4704-930d-882571bc59b8.pdf', '2f6Hwi-bce6f875-reportCATE-1789-20241030-120748225.xls', '2YxEhO-6450d2cf-reportCATE-1789-20241030-111126780.xls', '310Ahx-515c2911-reportCATE-1789-20241030-112322925.xls', '3b659f71-d084-4c8d-8f00-7e46c242ee59.pdf', '7z2408-x64.exe', 'Ap1.pdf', 'b0Whno-5bd3906a-reportCATE-1789-20241030-095418375.xls', 'BizagiModelerSetup_4.0.0128.exe', 'c4ca78c7-076c-4e13-8ba0-19a28937e153.pdf', 'c7acfeaf-5876-4cfc-ac4b-000ea42314b4.pdf', 'Captura de tela_17-9-2024_104236_aplicacao.hsf.local.jpeg.crdownload', 'capture_241003_084905.png', 'capture_241018_095727.png', 'capture_241018_095741.png', 'capture_241018_095752.png', 'capture_241018_095804.png', 'dc2ec94d-8eaf-466b-9380-94a32ee05889.pdf', 'desktop.ini', 'did5Kp-3b497335-reportCATE-1789-20241030-110432000.xls.crdownload', 'Ditto Clipboard Installer.exe', 'DQCIvX-88f8fc7e-reportCATE-1789-20241030-020625649.xls', 'E09gQF-ae14af35-reportCATE-1789-20241030-095202090.xls.crdownload', 'e4nb1g-7824b89e-reportCATE-1789-20241030-024808333.xls', 'E5o8mg-65573fe8-reportCATE-885-20241003-085510257.xls', 'escala_eif_ii_item.pdf', 'esCGkQ-72e1ade6-reportC-1756-20241003-085028243.xls', 'gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls', 'HSF - PROTOCOLO SEPSE - teste 006 - Infecção sem Disfunção Orgânica.pdf.crdownload', 'HTML5 - FLUXO - SEPSE - Protocolo de Detecção Precoce de Sepse.pdf', 'i0Arq0-1518c810-reportCATE-1789-20241030-110900411.xls', 'Imagem do WhatsApp de 2024-09-26 à(s) 11.44.18_7e7f23ec.jpg', 'Imagem do WhatsApp de 2024-09-26 à(s) 11.44.18_7e7f23ec.png', 'Imagem do WhatsApp de 2024-09-26 à(s) 11.44.18_8f59a916.jpg', 'Imagem do WhatsApp de 2024-09-26 à(s) 12.00.15_4c3c090e.jpg', 'Logo-HSF-Mini.png.crdownload', 'logo_relatorio.png', 'MfKAE9-498dc11f-teste.csv', 'Modelo de POP HSF.docx', 'MovaviScreenRecorderSetupC_Wcq65fk_.exe', 'MSTeamsSetup.exe', 'Não confirmado 137807.crdownload', 'Não confirmado 155509.crdownload', 'Não confirmado 91205.crdownload', 'Não confirmado 976317.crdownload', 'OBS-Studio-30.2.3-Windows-Installer.exe', 'Outlook-34dun3yj.png', 'puPb7C-e3c525b4-reportCATE-1775-20241003-083837570.xls', 'Sem título-5.png.crdownload', 'Sepse', 'Sepse.rar', 'TeamViewerQS.exe', 'Telegram Desktop', 'TEST.csv', 'TEST_2.csv', 'todas as tabelas do banco.csv', 'tsetup-x64.5.5.3.exe', 'Tutorial Office 365 - Center Licenças.mp4', 'Tutorial Office 365 - Center Licenças.pdf', 'v1zXGE-234b6cbd-reportCATE-1789-20241030-115254970.xls', 'vFEyUr-d16de66c-reportCATE-885-20241003-090548180.xls', 'wDeMku-fbc9957c-reportCATE-1789-20241030-022948345.xls', 'x9BqR0-0eb79b0c-reportCATE-1789-20241030-021749390.xls', 'YSSwPz-376a7a7b-teste.csv', 'yXp0FJ-036826b8-reportCATE-1789-20241030-111002589.xls', 'Zsqci0-6e52f4af-reportC-1756-20241003-084709393.xls']
+30/10/2024 15:18:22 - Nenhum arquivo XLS encontrado na pasta de Downloads.
+30/10/2024 15:20:03 - def fechar()
+30/10/2024 15:20:05 - janela.destroy()
+30/10/2024 15:24:26 - ============================== inicio ========================
+30/10/2024 15:24:26 - interface_grafica()
+30/10/2024 15:24:28 - def iniciar()
+30/10/2024 15:24:28 - Botao Iniciar clicado!
+30/10/2024 15:24:28 - global statusThread: False
+30/10/2024 15:24:28 - Tarefa inicializada!
+30/10/2024 15:24:28 - delete_path:C:\Users\pvplima.C19NOT76\Downloads
+30/10/2024 15:24:28 - delete_all_files_in_directory(delete_path)
+30/10/2024 15:24:28 - get_latest_xls_from_downloads
+30/10/2024 15:24:28 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+30/10/2024 15:24:28 - Files:
+[]
+30/10/2024 15:24:28 - arquivos_downloadarquivos_download:
+['Ap1.pdf', 'Sepse', 'Telegram Desktop']
+30/10/2024 15:24:28 - Nenhum arquivo XLS encontrado na pasta de Downloads.
+30/10/2024 15:24:28 - delete_path:C:\Users\pvplima.C19NOT76\Downloads
+30/10/2024 15:24:28 - delete_all_files_in_directory(delete_path)
+30/10/2024 15:24:28 - get_latest_xls_from_downloads
+30/10/2024 15:24:28 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+30/10/2024 15:24:28 - Files:
+[]
+30/10/2024 15:24:28 - arquivos_downloadarquivos_download:
+['Ap1.pdf', 'Sepse', 'Telegram Desktop']
+30/10/2024 15:24:28 - Nenhum arquivo XLS encontrado na pasta de Downloads.
+30/10/2024 15:24:34 - def fechar()
+30/10/2024 15:24:36 - janela.destroy()
+30/10/2024 15:25:12 - ============================== inicio ========================
+30/10/2024 15:25:12 - interface_grafica()
+30/10/2024 15:25:13 - def iniciar()
+30/10/2024 15:25:13 - Botao Iniciar clicado!
+30/10/2024 15:25:13 - global statusThread: False
+30/10/2024 15:25:13 - Tarefa inicializada!
+30/10/2024 15:25:13 - delete_path:C:\Users\pvplima.C19NOT76\Downloads
+30/10/2024 15:25:13 - delete_all_files_in_directory(delete_path)
+30/10/2024 15:25:13 - get_latest_xls_from_downloads
+30/10/2024 15:25:13 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+30/10/2024 15:25:13 - Files:
+[]
+30/10/2024 15:25:13 - arquivos_download:
+[]
+30/10/2024 15:25:13 - Nenhum arquivo XLS encontrado na pasta de Downloads.
+30/10/2024 15:25:13 - delete_path:C:\Users\pvplima.C19NOT76\Downloads
+30/10/2024 15:25:13 - delete_all_files_in_directory(delete_path)
+30/10/2024 15:25:13 - get_latest_xls_from_downloads
+30/10/2024 15:25:13 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+30/10/2024 15:25:13 - Files:
+[]
+30/10/2024 15:25:13 - arquivos_download:
+[]
+30/10/2024 15:25:13 - Nenhum arquivo XLS encontrado na pasta de Downloads.
+30/10/2024 15:25:17 - def fechar()
+30/10/2024 15:25:19 - janela.destroy()
+30/10/2024 15:26:09 - ============================== inicio ========================
+30/10/2024 15:26:09 - interface_grafica()
+30/10/2024 15:26:11 - def iniciar()
+30/10/2024 15:26:11 - Botao Iniciar clicado!
+30/10/2024 15:26:11 - global statusThread: False
+30/10/2024 15:26:11 - Tarefa inicializada!
+30/10/2024 15:26:11 - get_latest_xls_from_downloads
+30/10/2024 15:26:11 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+30/10/2024 15:26:11 - Files:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls']
+30/10/2024 15:26:11 - arquivos_download:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls']
+30/10/2024 15:26:11 - Nenhum arquivo XLS encontrado na pasta de Downloads.
+30/10/2024 15:26:11 - get_latest_xls_from_downloads
+30/10/2024 15:26:11 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+30/10/2024 15:26:11 - Files:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls']
+30/10/2024 15:26:11 - arquivos_download:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls']
+30/10/2024 15:26:11 - Nenhum arquivo XLS encontrado na pasta de Downloads.
+30/10/2024 15:27:23 - def fechar()
+30/10/2024 15:27:24 - janela.destroy()
+30/10/2024 15:28:13 - ============================== inicio ========================
+30/10/2024 15:28:13 - interface_grafica()
+30/10/2024 15:28:17 - def iniciar()
+30/10/2024 15:28:17 - Botao Iniciar clicado!
+30/10/2024 15:28:17 - global statusThread: False
+30/10/2024 15:28:17 - Tarefa inicializada!
+30/10/2024 15:28:17 - get_latest_xls_from_downloads
+30/10/2024 15:28:17 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+30/10/2024 15:28:17 - Files:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls']
+30/10/2024 15:28:17 - arquivos_download:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls']
+30/10/2024 15:28:17 - 
+get_latest_xls_from_downloads
+================================ Error: 
+Excel file format cannot be determined, you must specify an engine manually.
+30/10/2024 15:28:17 - Nenhum arquivo XLS encontrado na pasta de Downloads.
+30/10/2024 15:28:17 - get_latest_xls_from_downloads
+30/10/2024 15:28:17 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+30/10/2024 15:28:17 - Files:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls']
+30/10/2024 15:28:17 - arquivos_download:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls']
+30/10/2024 15:28:17 - 
+get_latest_xls_from_downloads
+================================ Error: 
+Excel file format cannot be determined, you must specify an engine manually.
+30/10/2024 15:28:17 - Nenhum arquivo XLS encontrado na pasta de Downloads.
+30/10/2024 15:31:48 - def fechar()
+30/10/2024 15:31:49 - janela.destroy()
+30/10/2024 15:31:53 - ============================== inicio ========================
+30/10/2024 15:31:53 - interface_grafica()
+30/10/2024 15:31:54 - def iniciar()
+30/10/2024 15:31:54 - Botao Iniciar clicado!
+30/10/2024 15:31:54 - global statusThread: False
+30/10/2024 15:31:54 - Tarefa inicializada!
+30/10/2024 15:31:54 - get_latest_xls_from_downloads
+30/10/2024 15:31:54 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+30/10/2024 15:31:54 - Files:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls']
+30/10/2024 15:31:54 - 
+arquivos_download:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls']
+30/10/2024 15:31:54 - 
+get_latest_xls_from_downloads
+================================ Error: 
+Invalid file path or buffer object type: <class 'list'>
+30/10/2024 15:31:54 - Nenhum arquivo XLS encontrado na pasta de Downloads.
+30/10/2024 15:31:54 - get_latest_xls_from_downloads
+30/10/2024 15:31:54 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+30/10/2024 15:31:54 - Files:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls']
+30/10/2024 15:31:54 - 
+arquivos_download:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls']
+30/10/2024 15:31:54 - 
+get_latest_xls_from_downloads
+================================ Error: 
+Invalid file path or buffer object type: <class 'list'>
+30/10/2024 15:31:54 - Nenhum arquivo XLS encontrado na pasta de Downloads.
+30/10/2024 15:32:04 - def iniciar()
+30/10/2024 15:32:04 - Botao Iniciar clicado!
+30/10/2024 15:32:04 - global statusThread: True
+30/10/2024 15:32:04 - Thread já foi iniciada, statusThread: 
+True
+30/10/2024 15:32:08 - def fechar()
+30/10/2024 15:32:09 - janela.destroy()
+30/10/2024 15:32:48 - ============================== inicio ========================
+30/10/2024 15:32:48 - interface_grafica()
+30/10/2024 15:32:50 - def iniciar()
+30/10/2024 15:32:50 - Botao Iniciar clicado!
+30/10/2024 15:32:50 - global statusThread: False
+30/10/2024 15:32:50 - Tarefa inicializada!
+30/10/2024 15:32:50 - get_latest_xls_from_downloads
+30/10/2024 15:32:50 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+30/10/2024 15:32:50 - Files:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls']
+30/10/2024 15:32:50 - 
+arquivos_download:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls']
+30/10/2024 15:32:50 - 
+get_latest_xls_from_downloads
+================================ Error: 
+Excel file format cannot be determined, you must specify an engine manually.
+30/10/2024 15:32:50 - Nenhum arquivo XLS encontrado na pasta de Downloads.
+30/10/2024 15:32:50 - get_latest_xls_from_downloads
+30/10/2024 15:32:50 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+30/10/2024 15:32:50 - Files:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls']
+30/10/2024 15:32:50 - 
+arquivos_download:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls']
+30/10/2024 15:32:50 - 
+get_latest_xls_from_downloads
+================================ Error: 
+Excel file format cannot be determined, you must specify an engine manually.
+30/10/2024 15:32:50 - Nenhum arquivo XLS encontrado na pasta de Downloads.
+30/10/2024 15:33:09 - def fechar()
+30/10/2024 15:33:16 - janela.destroy()
+30/10/2024 15:34:20 - ============================== inicio ========================
+30/10/2024 15:34:20 - interface_grafica()
+30/10/2024 15:34:22 - def iniciar()
+30/10/2024 15:34:22 - Botao Iniciar clicado!
+30/10/2024 15:34:22 - global statusThread: False
+30/10/2024 15:34:22 - Tarefa inicializada!
+30/10/2024 15:34:22 - get_latest_xls_from_downloads
+30/10/2024 15:34:22 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+30/10/2024 15:34:22 - Files:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls']
+30/10/2024 15:34:22 - 
+arquivos_download:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls']
+30/10/2024 15:34:22 - 
+latest_file: C:\Users\pvplima.C19NOT76\Downloads\gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls
+30/10/2024 15:35:00 - def fechar()
+30/10/2024 15:35:01 - janela.destroy()
+30/10/2024 15:35:08 - ============================== inicio ========================
+30/10/2024 15:35:08 - interface_grafica()
+30/10/2024 15:35:10 - def iniciar()
+30/10/2024 15:35:10 - Botao Iniciar clicado!
+30/10/2024 15:35:10 - global statusThread: False
+30/10/2024 15:35:10 - Tarefa inicializada!
+30/10/2024 15:35:10 - get_latest_xls_from_downloads
+30/10/2024 15:35:10 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+30/10/2024 15:35:10 - Files:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls']
+30/10/2024 15:35:10 - 
+arquivos_download:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls']
+30/10/2024 15:35:10 - 
+latest_file: C:\Users\pvplima.C19NOT76\Downloads\gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls
+30/10/2024 15:35:10 - 
+get_latest_xls_from_downloads ================================ Error: 
+Excel file format cannot be determined, you must specify an engine manually.
+30/10/2024 15:35:10 - Nenhum arquivo XLS encontrado na pasta de Downloads.
+30/10/2024 15:35:10 - get_latest_xls_from_downloads
+30/10/2024 15:35:10 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+30/10/2024 15:35:10 - Files:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls']
+30/10/2024 15:35:10 - 
+arquivos_download:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls']
+30/10/2024 15:35:10 - 
+latest_file: C:\Users\pvplima.C19NOT76\Downloads\gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls
+30/10/2024 15:35:10 - 
+get_latest_xls_from_downloads ================================ Error: 
+Excel file format cannot be determined, you must specify an engine manually.
+30/10/2024 15:35:10 - Nenhum arquivo XLS encontrado na pasta de Downloads.
+30/10/2024 15:35:19 - def fechar()
+30/10/2024 15:35:22 - janela.destroy()
+30/10/2024 15:36:13 - ============================== inicio ========================
+30/10/2024 15:36:13 - interface_grafica()
+30/10/2024 15:36:15 - def iniciar()
+30/10/2024 15:36:15 - Botao Iniciar clicado!
+30/10/2024 15:36:15 - global statusThread: False
+30/10/2024 15:36:15 - Tarefa inicializada!
+30/10/2024 15:36:15 - get_latest_xls_from_downloads
+30/10/2024 15:36:15 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+30/10/2024 15:36:15 - Files:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls', 'zzzzzzzzzzzzzzzzzzzzz25511 - Copia.xls']
+30/10/2024 15:36:15 - 
+arquivos_download:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls', 'zzzzzzzzzzzzzzzzzzzzz25511 - Copia.xls']
+30/10/2024 15:36:15 - 
+latest_file: C:\Users\pvplima.C19NOT76\Downloads\gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls
+30/10/2024 15:36:15 - 
+get_latest_xls_from_downloads ================================ Error: 
+Excel file format cannot be determined, you must specify an engine manually.
+30/10/2024 15:36:15 - Nenhum arquivo XLS encontrado na pasta de Downloads.
+30/10/2024 15:36:15 - get_latest_xls_from_downloads
+30/10/2024 15:36:15 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+30/10/2024 15:36:15 - Files:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls', 'zzzzzzzzzzzzzzzzzzzzz25511 - Copia.xls']
+30/10/2024 15:36:15 - 
+arquivos_download:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls', 'zzzzzzzzzzzzzzzzzzzzz25511 - Copia.xls']
+30/10/2024 15:36:15 - 
+latest_file: C:\Users\pvplima.C19NOT76\Downloads\gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls
+30/10/2024 15:36:15 - 
+get_latest_xls_from_downloads ================================ Error: 
+Excel file format cannot be determined, you must specify an engine manually.
+30/10/2024 15:36:15 - Nenhum arquivo XLS encontrado na pasta de Downloads.
+30/10/2024 15:36:27 - def fechar()
+30/10/2024 15:36:29 - janela.destroy()
+30/10/2024 15:38:01 - ============================== inicio ========================
+30/10/2024 15:38:01 - interface_grafica()
+30/10/2024 15:38:03 - def iniciar()
+30/10/2024 15:38:03 - Botao Iniciar clicado!
+30/10/2024 15:38:03 - global statusThread: False
+30/10/2024 15:38:03 - Tarefa inicializada!
+30/10/2024 15:38:03 - get_latest_xls_from_downloads
+30/10/2024 15:38:03 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+30/10/2024 15:38:03 - Files:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls', 'zzzzzzzzzzzzzzzzzzzzz25511 - Copia.xls']
+30/10/2024 15:38:03 - 
+arquivos_download:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls', 'zzzzzzzzzzzzzzzzzzzzz25511 - Copia.xls']
+30/10/2024 15:38:03 - 
+Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls
+30/10/2024 15:38:03 - 
+get_latest_xls_from_downloads ================================ Error: 
+Excel file format cannot be determined, you must specify an engine manually.
+30/10/2024 15:38:03 - Nenhum arquivo XLS encontrado na pasta de Downloads.
+30/10/2024 15:38:03 - get_latest_xls_from_downloads
+30/10/2024 15:38:03 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+30/10/2024 15:38:03 - Files:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls', 'zzzzzzzzzzzzzzzzzzzzz25511 - Copia.xls']
+30/10/2024 15:38:03 - 
+arquivos_download:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls', 'zzzzzzzzzzzzzzzzzzzzz25511 - Copia.xls']
+30/10/2024 15:38:03 - 
+Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls
+30/10/2024 15:38:03 - 
+get_latest_xls_from_downloads ================================ Error: 
+Excel file format cannot be determined, you must specify an engine manually.
+30/10/2024 15:38:03 - Nenhum arquivo XLS encontrado na pasta de Downloads.
+30/10/2024 15:39:54 - def fechar()
+30/10/2024 15:39:55 - janela.destroy()
+30/10/2024 15:39:55 - ============================== inicio ========================
+30/10/2024 15:39:55 - interface_grafica()
+30/10/2024 15:40:01 - def iniciar()
+30/10/2024 15:40:01 - Botao Iniciar clicado!
+30/10/2024 15:40:01 - global statusThread: False
+30/10/2024 15:40:01 - Tarefa inicializada!
+30/10/2024 15:40:01 - get_latest_xls_from_downloads
+30/10/2024 15:40:01 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+30/10/2024 15:40:01 - Files:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls', 'zzzzzzzzzzzzzzzzzzzzz25511 - Copia.xls']
+30/10/2024 15:40:01 - 
+arquivos_download:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls', 'zzzzzzzzzzzzzzzzzzzzz25511 - Copia.xls']
+30/10/2024 15:40:01 - 
+
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls
+30/10/2024 15:40:01 - 
+
+***** Exibindo DF:
+30/10/2024 15:40:01 - 
+get_latest_xls_from_downloads ================================ Error: 
+Excel file format cannot be determined, you must specify an engine manually.
+30/10/2024 15:40:01 - Nenhum arquivo XLS encontrado na pasta de Downloads.
+30/10/2024 15:40:01 - get_latest_xls_from_downloads
+30/10/2024 15:40:01 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+30/10/2024 15:40:01 - Files:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls', 'zzzzzzzzzzzzzzzzzzzzz25511 - Copia.xls']
+30/10/2024 15:40:01 - 
+arquivos_download:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls', 'zzzzzzzzzzzzzzzzzzzzz25511 - Copia.xls']
+30/10/2024 15:40:01 - 
+
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls
+30/10/2024 15:40:01 - 
+
+***** Exibindo DF:
+30/10/2024 15:40:01 - 
+get_latest_xls_from_downloads ================================ Error: 
+Excel file format cannot be determined, you must specify an engine manually.
+30/10/2024 15:40:01 - Nenhum arquivo XLS encontrado na pasta de Downloads.
+30/10/2024 15:40:51 - ============================== inicio ========================
+30/10/2024 15:40:51 - interface_grafica()
+30/10/2024 15:40:53 - def iniciar()
+30/10/2024 15:40:53 - Botao Iniciar clicado!
+30/10/2024 15:40:53 - global statusThread: False
+30/10/2024 15:40:53 - Tarefa inicializada!
+30/10/2024 15:40:53 - get_latest_xls_from_downloads
+30/10/2024 15:40:53 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+30/10/2024 15:40:53 - Files:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls', 'zzzzzzzzzzzzzzzzzzzzz25511 - Copia.xls']
+30/10/2024 15:40:53 - 
+arquivos_download:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls', 'zzzzzzzzzzzzzzzzzzzzz25511 - Copia.xls']
+30/10/2024 15:40:53 - 
+
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls
+30/10/2024 15:40:53 - 
+
+***** Exibindo DF:
+30/10/2024 15:40:53 - 
+get_latest_xls_from_downloads ================================ Error: 
+Excel file format cannot be determined, you must specify an engine manually.
+30/10/2024 15:40:53 - Nenhum arquivo XLS encontrado na pasta de Downloads.
+30/10/2024 15:40:53 - get_latest_xls_from_downloads
+30/10/2024 15:40:53 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+30/10/2024 15:40:53 - Files:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls', 'zzzzzzzzzzzzzzzzzzzzz25511 - Copia.xls']
+30/10/2024 15:40:53 - 
+arquivos_download:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls', 'zzzzzzzzzzzzzzzzzzzzz25511 - Copia.xls']
+30/10/2024 15:40:53 - 
+
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls
+30/10/2024 15:40:53 - 
+
+***** Exibindo DF:
+30/10/2024 15:40:53 - 
+get_latest_xls_from_downloads ================================ Error: 
+Excel file format cannot be determined, you must specify an engine manually.
+30/10/2024 15:40:53 - Nenhum arquivo XLS encontrado na pasta de Downloads.
+30/10/2024 15:44:24 - def fechar()
+30/10/2024 15:44:25 - janela.destroy()
+30/10/2024 15:44:26 - ============================== inicio ========================
+30/10/2024 15:44:26 - interface_grafica()
+30/10/2024 15:44:28 - def iniciar()
+30/10/2024 15:44:28 - Botao Iniciar clicado!
+30/10/2024 15:44:28 - global statusThread: False
+30/10/2024 15:44:28 - Tarefa inicializada!
+30/10/2024 15:44:28 - get_latest_xls_from_downloads
+30/10/2024 15:44:28 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+30/10/2024 15:44:28 - Files:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls', 'zzzzzzzzzzzzzzzzzzzzz25511 - Copia.xls']
+30/10/2024 15:44:28 - 
+arquivos_download:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls', 'zzzzzzzzzzzzzzzzzzzzz25511 - Copia.xls']
+30/10/2024 15:44:28 - 
+
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls
+30/10/2024 15:44:28 - 
+
+***** Exibindo DF:
+30/10/2024 15:44:28 - 
+get_latest_xls_from_downloads ================================ Error: 
+Excel file format cannot be determined, you must specify an engine manually.
+30/10/2024 15:44:28 - Nenhum arquivo XLS encontrado na pasta de Downloads.
+30/10/2024 15:44:28 - get_latest_xls_from_downloads
+30/10/2024 15:44:28 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+30/10/2024 15:44:28 - Files:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls', 'zzzzzzzzzzzzzzzzzzzzz25511 - Copia.xls']
+30/10/2024 15:44:28 - 
+arquivos_download:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls', 'zzzzzzzzzzzzzzzzzzzzz25511 - Copia.xls']
+30/10/2024 15:44:28 - 
+
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls
+30/10/2024 15:44:28 - 
+
+***** Exibindo DF:
+30/10/2024 15:44:28 - 
+get_latest_xls_from_downloads ================================ Error: 
+Excel file format cannot be determined, you must specify an engine manually.
+30/10/2024 15:44:28 - Nenhum arquivo XLS encontrado na pasta de Downloads.
+30/10/2024 15:48:51 - def fechar()
+30/10/2024 15:48:53 - janela.destroy()
+30/10/2024 15:48:55 - ============================== inicio ========================
+30/10/2024 15:48:55 - interface_grafica()
+30/10/2024 15:48:57 - def iniciar()
+30/10/2024 15:48:57 - Botao Iniciar clicado!
+30/10/2024 15:48:57 - global statusThread: False
+30/10/2024 15:48:57 - Tarefa inicializada!
+30/10/2024 15:48:57 - get_latest_xls_from_downloads
+30/10/2024 15:48:57 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+30/10/2024 15:48:57 - Files:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls', 'zzzzzzzzzzzzzzzzzzzzz25511 - Copia.xls']
+30/10/2024 15:48:57 - 
+arquivos_download:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls', 'zzzzzzzzzzzzzzzzzzzzz25511 - Copia.xls']
+30/10/2024 15:48:57 - 
+
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls
+30/10/2024 15:48:57 - 
+
+***** Exibindo DF:
+30/10/2024 15:48:57 - 
+get_latest_xls_from_downloads ================================ Error: 
+Missing optional dependency 'xlrd'. Install xlrd >= 2.0.1 for xls Excel support Use pip or conda to install xlrd.
+30/10/2024 15:48:57 - Nenhum arquivo XLS encontrado na pasta de Downloads.
+30/10/2024 15:48:57 - get_latest_xls_from_downloads
+30/10/2024 15:48:57 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+30/10/2024 15:48:57 - Files:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls', 'zzzzzzzzzzzzzzzzzzzzz25511 - Copia.xls']
+30/10/2024 15:48:57 - 
+arquivos_download:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls', 'zzzzzzzzzzzzzzzzzzzzz25511 - Copia.xls']
+30/10/2024 15:48:57 - 
+
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls
+30/10/2024 15:48:57 - 
+
+***** Exibindo DF:
+30/10/2024 15:48:57 - 
+get_latest_xls_from_downloads ================================ Error: 
+Missing optional dependency 'xlrd'. Install xlrd >= 2.0.1 for xls Excel support Use pip or conda to install xlrd.
+30/10/2024 15:48:57 - Nenhum arquivo XLS encontrado na pasta de Downloads.
+30/10/2024 15:49:05 - def fechar()
+30/10/2024 15:49:07 - janela.destroy()
+30/10/2024 15:49:24 - ============================== inicio ========================
+30/10/2024 15:49:24 - interface_grafica()
+30/10/2024 15:49:26 - def iniciar()
+30/10/2024 15:49:26 - Botao Iniciar clicado!
+30/10/2024 15:49:26 - global statusThread: False
+30/10/2024 15:49:26 - Tarefa inicializada!
+30/10/2024 15:49:26 - get_latest_xls_from_downloads
+30/10/2024 15:49:26 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+30/10/2024 15:49:26 - Files:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls', 'zzzzzzzzzzzzzzzzzzzzz25511 - Copia.xls']
+30/10/2024 15:49:26 - 
+arquivos_download:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls', 'zzzzzzzzzzzzzzzzzzzzz25511 - Copia.xls']
+30/10/2024 15:49:26 - 
+
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls
+30/10/2024 15:49:26 - 
+
+***** Exibindo DF:
+30/10/2024 15:49:26 - 
+get_latest_xls_from_downloads ================================ Error: 
+Unsupported format, or corrupt file: Expected BOF record; found b'N\x00R\x00_\x00A\x00'
+30/10/2024 15:49:26 - Nenhum arquivo XLS encontrado na pasta de Downloads.
+30/10/2024 15:49:26 - get_latest_xls_from_downloads
+30/10/2024 15:49:26 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+30/10/2024 15:49:26 - Files:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls', 'zzzzzzzzzzzzzzzzzzzzz25511 - Copia.xls']
+30/10/2024 15:49:26 - 
+arquivos_download:
+['gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls', 'zzzzzzzzzzzzzzzzzzzzz25511 - Copia.xls']
+30/10/2024 15:49:26 - 
+
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\gC9J0u-abf178cc-reportCATE-1789-20241030-025825511.xls
+30/10/2024 15:49:26 - 
+
+***** Exibindo DF:
+30/10/2024 15:49:26 - 
+get_latest_xls_from_downloads ================================ Error: 
+Unsupported format, or corrupt file: Expected BOF record; found b'N\x00R\x00_\x00A\x00'
+30/10/2024 15:49:26 - Nenhum arquivo XLS encontrado na pasta de Downloads.
+30/10/2024 15:49:39 - def iniciar()
+30/10/2024 15:49:39 - Botao Iniciar clicado!
+30/10/2024 15:49:39 - global statusThread: True
+30/10/2024 15:49:39 - Thread já foi iniciada, statusThread: 
+True
+30/10/2024 15:49:43 - def fechar()
+30/10/2024 15:49:45 - janela.destroy()
+30/10/2024 16:22:41 - ============================== inicio ========================
+30/10/2024 16:22:41 - interface_grafica()
+30/10/2024 16:22:43 - def iniciar()
+30/10/2024 16:22:43 - Botao Iniciar clicado!
+30/10/2024 16:22:43 - global statusThread: False
+30/10/2024 16:22:43 - Tarefa inicializada!
+30/10/2024 16:22:43 - ============================== login no sistema ==============================
+30/10/2024 16:22:54 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+30/10/2024 16:22:54 - box_usuario
+30/10/2024 16:22:55 - box_senha
+30/10/2024 16:22:55 - bt_login
+30/10/2024 16:22:59 - bt_utilitarios.click()
+30/10/2024 16:23:01 - bt_impressao_relatorios.click()
+30/10/2024 16:23:03 - box_codigo_rel.send_keys('1790')
+30/10/2024 16:23:05 - pyautogui.press('enter')
+30/10/2024 16:24:47 - ============================== inicio ========================
+30/10/2024 16:24:47 - interface_grafica()
+30/10/2024 16:24:50 - def iniciar()
+30/10/2024 16:24:50 - Botao Iniciar clicado!
+30/10/2024 16:24:50 - global statusThread: False
+30/10/2024 16:24:50 - Tarefa inicializada!
+30/10/2024 16:24:50 - ============================== login no sistema ==============================
+30/10/2024 16:25:00 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+30/10/2024 16:25:00 - box_usuario
+30/10/2024 16:25:00 - box_senha
+30/10/2024 16:25:00 - bt_login
+30/10/2024 16:25:05 - bt_utilitarios.click()
+30/10/2024 16:25:07 - bt_impressao_relatorios.click()
+30/10/2024 16:25:09 - box_codigo_rel.send_keys('1790')
+30/10/2024 16:25:11 - pyautogui.press('enter')
+30/10/2024 16:26:11 - ============================== inicio ========================
+30/10/2024 16:26:11 - interface_grafica()
+30/10/2024 16:26:12 - def iniciar()
+30/10/2024 16:26:12 - Botao Iniciar clicado!
+30/10/2024 16:26:12 - global statusThread: False
+30/10/2024 16:26:12 - Tarefa inicializada!
+30/10/2024 16:26:12 - ============================== login no sistema ==============================
+30/10/2024 16:26:22 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+30/10/2024 16:26:22 - box_usuario
+30/10/2024 16:26:23 - box_senha
+30/10/2024 16:26:23 - bt_login
+30/10/2024 16:26:27 - bt_utilitarios.click()
+30/10/2024 16:26:29 - bt_impressao_relatorios.click()
+30/10/2024 16:26:31 - box_codigo_rel.send_keys('1790')
+30/10/2024 16:26:33 - pyautogui.press('enter')
+30/10/2024 16:26:35 - bt_visualizar_.click()
+30/10/2024 16:26:57 - global statusThread: False
+30/10/2024 16:26:57 - =========== FIM ========
+30/10/2024 16:27:12 - def fechar()
+30/10/2024 16:27:18 - janela.destroy()
+30/10/2024 16:28:26 - ============================== inicio ========================
+30/10/2024 16:28:26 - interface_grafica()
+30/10/2024 16:28:28 - def iniciar()
+30/10/2024 16:28:28 - Botao Iniciar clicado!
+30/10/2024 16:28:28 - global statusThread: False
+30/10/2024 16:28:28 - Tarefa inicializada!
+30/10/2024 16:28:28 - ============================== login no sistema ==============================
+30/10/2024 16:28:38 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+30/10/2024 16:28:38 - box_usuario
+30/10/2024 16:28:39 - box_senha
+30/10/2024 16:28:39 - bt_login
+30/10/2024 16:28:43 - bt_utilitarios.click()
+30/10/2024 16:28:45 - bt_impressao_relatorios.click()
+30/10/2024 16:28:47 - box_codigo_rel.send_keys('1790')
+30/10/2024 16:28:49 - pyautogui.press('enter')
+30/10/2024 16:28:51 - bt_visualizar_.click()
+30/10/2024 16:28:53 - pyautogui.click(1811,167)
+30/10/2024 16:28:53 - click no manter
+30/10/2024 16:28:57 - pyautogui.click(1749,145)
+30/10/2024 16:29:21 - global statusThread: False
+30/10/2024 16:29:21 - =========== FIM ========
+30/10/2024 16:30:19 - def fechar()
+30/10/2024 16:30:20 - janela.destroy()
+30/10/2024 16:30:21 - ============================== inicio ========================
+30/10/2024 16:30:21 - interface_grafica()
+30/10/2024 16:30:23 - def iniciar()
+30/10/2024 16:30:23 - Botao Iniciar clicado!
+30/10/2024 16:30:23 - global statusThread: False
+30/10/2024 16:30:23 - Tarefa inicializada!
+30/10/2024 16:30:23 - ============================== login no sistema ==============================
+30/10/2024 16:30:33 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+30/10/2024 16:30:33 - box_usuario
+30/10/2024 16:30:33 - box_senha
+30/10/2024 16:30:33 - bt_login
+30/10/2024 16:30:37 - bt_utilitarios.click()
+30/10/2024 16:30:39 - bt_impressao_relatorios.click()
+30/10/2024 16:30:42 - box_codigo_rel.send_keys('1790')
+30/10/2024 16:30:44 - pyautogui.press('enter')
+30/10/2024 16:30:46 - bt_visualizar_.click()
+30/10/2024 16:30:58 - pyautogui.click(1811,167)
+30/10/2024 16:30:58 - click no manter
+30/10/2024 16:31:04 - pyautogui.click(1749,145)
+30/10/2024 16:32:12 - ============================== inicio ========================
+30/10/2024 16:32:12 - interface_grafica()
+30/10/2024 16:32:14 - def iniciar()
+30/10/2024 16:32:14 - Botao Iniciar clicado!
+30/10/2024 16:32:14 - global statusThread: False
+30/10/2024 16:32:14 - Tarefa inicializada!
+30/10/2024 16:32:14 - ============================== login no sistema ==============================
+30/10/2024 16:32:23 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+30/10/2024 16:32:24 - box_usuario
+30/10/2024 16:32:24 - box_senha
+30/10/2024 16:32:24 - bt_login
+30/10/2024 16:32:28 - bt_utilitarios.click()
+30/10/2024 16:32:30 - bt_impressao_relatorios.click()
+30/10/2024 16:32:32 - box_codigo_rel.send_keys('1790')
+30/10/2024 16:32:34 - pyautogui.press('enter')
+30/10/2024 16:32:36 - bt_visualizar_.click()
+30/10/2024 16:32:48 - pyautogui.click(1811,167)
+30/10/2024 16:32:48 - click no manter
+30/10/2024 16:32:58 - pyautogui.click(1749,145)
+30/10/2024 16:32:59 - pyautogui.press('enter')
+30/10/2024 16:33:23 - global statusThread: False
+30/10/2024 16:33:23 - =========== FIM ========
+30/10/2024 16:33:37 - def fechar()
+30/10/2024 16:33:46 - ============================== inicio ========================
+30/10/2024 16:33:46 - interface_grafica()
+30/10/2024 16:33:48 - def iniciar()
+30/10/2024 16:33:48 - Botao Iniciar clicado!
+30/10/2024 16:33:48 - global statusThread: False
+30/10/2024 16:33:48 - Tarefa inicializada!
+30/10/2024 16:33:48 - ============================== login no sistema ==============================
+30/10/2024 16:33:58 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+30/10/2024 16:33:58 - box_usuario
+30/10/2024 16:33:58 - box_senha
+30/10/2024 16:33:58 - bt_login
+30/10/2024 16:34:02 - bt_utilitarios.click()
+30/10/2024 16:34:05 - bt_impressao_relatorios.click()
+30/10/2024 16:34:07 - box_codigo_rel.send_keys('1790')
+30/10/2024 16:34:09 - pyautogui.press('enter')
+30/10/2024 16:34:11 - bt_visualizar_.click()
+30/10/2024 16:34:23 - pyautogui.click(1811,167)
+30/10/2024 16:34:23 - click no manter
+30/10/2024 16:34:33 - pyautogui.press('enter')
+30/10/2024 16:34:37 - pyautogui.click(1749,145)
+30/10/2024 16:34:57 - global statusThread: False
+30/10/2024 16:34:57 - =========== FIM ========
+30/10/2024 16:36:02 - def fechar()
+30/10/2024 16:36:04 - janela.destroy()

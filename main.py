@@ -6,14 +6,23 @@ from tkinter import messagebox
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.options import Options
 
 import time
 import pyautogui
 
+from mouseinfo import mouseInfo
+
+import os
+import pandas as pd
+
+import os
+import glob
+
 
 #inicialização de variaveis globais:
 statusThread = False
-
+df = ""
 
 def agora_limpo():
     agora_limpo = datetime.datetime.now()
@@ -30,13 +39,27 @@ def registrar_log(texto):
   # Abre o arquivo em modo de append (adiciona texto ao final)
   with open(caminho_arquivo, 'a') as arquivo:
     arquivo.write(f"{agora_limpo()} - {texto}\n")
+    
+def delete_all_files_in_directory(directory):
+    files = glob.glob(os.path.join(directory, '*'))
+    for f in files:
+        try:
+            os.remove(f)
+            print(f"Arquivo {f} removido com sucesso.")
+        except Exception as e:
+            print(f"Não foi possível remover o arquivo {f}. Erro: {e}")
 
 def Execucao():
     global statusThread
     # ============================== login no sistema ==============================
     registrar_log('============================== login no sistema ==============================')
 
+    #tela toda:
+
     driver = webdriver.Chrome()
+    options = Options()
+    options.add_argument("--start-maximized")
+    driver = webdriver.Chrome(options=options)
 
     driver.get("http://aplicacao.hsf.local:7070/#/login")
     registrar_log('driver.get("http://aplicacao.hsf.local:7070/#/login")')
@@ -61,22 +84,6 @@ def Execucao():
 
     driver.implicitly_wait(10)
 
-    # TODO: sequencia para inicio de abertura do CPOE para geracao dos pdfs
-    """
-    #digitar a palavra PEP
-    time.sleep(12)
-    pyautogui.write('PEP')
-    time.sleep(8)
-
-    #bt_procura = driver.find_element(By.XPATH, value='//*[@id="app-view"]/tasy-corsisf1/div/w-mainlayout/div/div/w-launcher/div/input')
-    #bt_procura.send_keys('PEP')
-
-    
-    # click no atalho do PEP no tasy:
-    bt_PEP = driver.find_element(By.XPATH, value='//*[@id="app-view"]/tasy-corsisf1/div/w-mainlayout/div/div/w-lPacientesauncher/div/div/div[1]/w-apps/div/div[1]/ul/li[4]/w-feature-app/a/img')
-    bt_PEP.click()
-    """
-
     #TODO: fazer rotina para puxar os numero de atendimento
 
     # click no atalho de utilitários:
@@ -93,32 +100,109 @@ def Execucao():
 
     # click no campo para procurar o relatório 1789:
     box_codigo_rel = driver.find_element(By.XPATH, value='//*[@id="detail_1_container"]/div[1]/div/div[2]/tasy-wtextbox/div/div/input')
-    box_codigo_rel.send_keys('1789')
-    registrar_log("box_codigo_rel.send_keys('1789')")
+    box_codigo_rel.send_keys('1790')
+    registrar_log("box_codigo_rel.send_keys('1790')")
     time.sleep(2)
 
+    #Pressionar Item:
     pyautogui.press('enter')
     registrar_log("pyautogui.press('enter')")
     time.sleep(2)
-
+    
+    
+    # Click no botao visualizar:
+    bt_visualizar_ = driver.find_element(By.XPATH, value='//*[@id="handlebar-455491"]')
+    bt_visualizar_.click()
+    registrar_log("bt_visualizar_.click()")
+    time.sleep(12)
+    
+    #click apos o download
+    pyautogui.click(1810,165)
+    registrar_log("pyautogui.click(1811,167)")
+    
+    #click no manter:
+    registrar_log("click no manter")
+    time.sleep(10)
+    
+    
+    #Pressionar Item:
+    pyautogui.press('enter')
+    registrar_log("pyautogui.press('enter')")
+    time.sleep(4)
+    
+    pyautogui.click(1751,109)
+    registrar_log("pyautogui.click(1749,145)")
+    
+    
+    
+    """
     # click no botao exportar xlsx:
-
     bt_exportar_xls = driver.find_element(By.XPATH, value='//*[@id="handlebar-956041"]')
     bt_exportar_xls.click()
     registrar_log('bt_exportar_xls.click()')
     time.sleep(2)
-
+    
+    # click no botao de exportar xls:
     bt_continuar_export_xls = driver.find_element(By.XPATH, value='//*[@id="ngdialog1"]/div[2]/div[1]/div[2]/div[2]/tasy-wdlgpanel-button/button')
     bt_continuar_export_xls.click()
     registrar_log("bt_continuar_export_xls.click()")
-    time.sleep(2)
 
+    #driver.implicitly_wait(20)
+    #registrar_log("driver.implicitly_wait(20)")
+    time.sleep(20)
+    registrar_log("time.sleep(10)")
+    
+    #click apos o download
+    pyautogui.click(1824,64)
+    registrar_log("pyautogui.click(1824,64)")
+    
+    #click no manter:
+    registrar_log("click no manter")
+    time.sleep(4)
+    pyautogui.click(1749,145)
+    registrar_log("pyautogui.click(1749,145)")
+    time.sleep(4)
+    """
+    
+    
+    #TODO: funcao para pegar planilha gerada e montar o data frame:
+    
+    #caminho_pasta_download = "C:\Users\pvplima.C19NOT76\Downloads"
+    
+    
+    
+    
+    # TODO: sequencia para inicio de abertura do CPOE para geracao dos pdfs
+    """
+    #digitar a palavra PEP
+    time.sleep(12)
+    pyautogui.write('PEP')
+    time.sleep(8)
+
+    #bt_procura = driver.find_element(By.XPATH, value='//*[@id="app-view"]/tasy-corsisf1/div/w-mainlayout/div/div/w-launcher/div/input')
+    #bt_procura.send_keys('PEP')
+
+    
+    # click no atalho do PEP no tasy:
+    bt_PEP = driver.find_element(By.XPATH, value='//*[@id="app-view"]/tasy-corsisf1/div/w-mainlayout/div/div/w-lPacientesauncher/div/div/div[1]/w-apps/div/div[1]/ul/li[4]/w-feature-app/a/img')
+    bt_PEP.click()
+    """
+    
+    
+    
+
+    time.sleep(20)
+
+
+    # FIM:
     statusThread = False
     registrar_log(f"global statusThread: {statusThread}")
+    registrar_log("=========== FIM ========")
 
     # pausa dramática:
     driver.implicitly_wait(60)
     time.sleep(8)
+    driver.quit()
 
 def interface_grafica():
     registrar_log("interface_grafica()")
@@ -142,10 +226,7 @@ def interface_grafica():
             #============================== execuçao ========================
 
             #TODO: inserir a execucao do login do tasy em uma thread:
-
             Execucao()
-
-
 
     def fechar():
         registrar_log("def fechar()")
@@ -172,6 +253,8 @@ def interface_grafica():
     bt_fechar.place(x=350 , y=215)
 
     janela.mainloop()
+
+
 
 if __name__ == "__main__":
     try:
