@@ -1904,3 +1904,1142 @@ pyautogui.click(1751,109)
 30/10/2024 17:33:48 - =========== FIM ========
 30/10/2024 17:34:05 - def fechar()
 30/10/2024 17:34:06 - janela.destroy()
+30/10/2024 17:43:16 - ============================== inicio ========================
+30/10/2024 17:43:16 - delete_all_files_in_directory(C:\Users\pvplima.C19NOT76\Downloads)
+30/10/2024 17:43:16 - interface_grafica()
+30/10/2024 17:43:22 - def iniciar()
+30/10/2024 17:43:22 - Botao Iniciar clicado!
+30/10/2024 17:43:22 - global statusThread: False
+30/10/2024 17:43:22 - ============================== execuçao ========================
+30/10/2024 17:43:22 - Tarefa inicializada!
+statusThread:True
+30/10/2024 17:43:22 - ============================== login no sistema ==============================
+30/10/2024 17:43:32 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+30/10/2024 17:43:32 - box_usuario
+30/10/2024 17:43:32 - box_senha
+30/10/2024 17:43:32 - bt_login
+30/10/2024 17:43:36 - bt_utilitarios.click()
+30/10/2024 17:43:38 - bt_impressao_relatorios.click()
+30/10/2024 17:43:41 - box_codigo_rel.send_keys('1790')
+30/10/2024 17:43:43 - pyautogui.press('enter')
+30/10/2024 17:43:45 - bt_visualizar_.click()
+30/10/2024 17:43:57 - click apos o download
+pyautogui.click(1810,165)
+30/10/2024 17:44:07 - Pressionar Item
+pyautogui.press('enter')
+30/10/2024 17:44:11 - click no manter
+pyautogui.click(1751,109)
+30/10/2024 17:44:11 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+30/10/2024 17:44:11 - Arquivos:
+['d0b6bed7-eece-4ca5-997e-b316fe6fdc38.pdf']
+30/10/2024 17:44:11 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\d0b6bed7-eece-4ca5-997e-b316fe6fdc38.pdf
+30/10/2024 17:44:11 - 423275
+635085
+621123
+637294
+636098
+630314
+635130
+622711
+633912
+632424
+616885
+635104
+635141
+483921
+630694
+629684
+636800
+636190
+632988
+637322
+30/10/2024 17:44:11 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+30/10/2024 17:44:11 - Arquivos:
+['d0b6bed7-eece-4ca5-997e-b316fe6fdc38.pdf']
+30/10/2024 17:44:11 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\d0b6bed7-eece-4ca5-997e-b316fe6fdc38.pdf
+30/10/2024 17:44:11 - 423275
+635085
+621123
+637294
+636098
+630314
+635130
+622711
+633912
+632424
+616885
+635104
+635141
+483921
+630694
+629684
+636800
+636190
+632988
+637322
+30/10/2024 17:44:34 - def fechar()
+30/10/2024 17:44:35 - janela.destroy()
+30/10/2024 17:45:23 - ============================== inicio ========================
+30/10/2024 17:45:23 - delete_all_files_in_directory(C:\Users\pvplima.C19NOT76\Downloads)
+30/10/2024 17:45:23 - interface_grafica()
+30/10/2024 17:45:25 - def iniciar()
+30/10/2024 17:45:25 - Botao Iniciar clicado!
+30/10/2024 17:45:25 - global statusThread: False
+30/10/2024 17:45:25 - ============================== execuçao ========================
+30/10/2024 17:45:25 - Tarefa inicializada!
+statusThread:True
+30/10/2024 17:45:25 - ============================== login no sistema ==============================
+30/10/2024 17:45:35 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+30/10/2024 17:45:35 - box_usuario
+30/10/2024 17:45:35 - box_senha
+30/10/2024 17:45:35 - bt_login
+30/10/2024 17:45:39 - bt_utilitarios.click()
+30/10/2024 17:45:41 - bt_impressao_relatorios.click()
+30/10/2024 17:45:43 - box_codigo_rel.send_keys('1790')
+30/10/2024 17:45:46 - pyautogui.press('enter')
+30/10/2024 17:45:48 - bt_visualizar_.click()
+30/10/2024 17:46:00 - click apos o download
+pyautogui.click(1810,165)
+30/10/2024 17:46:10 - Pressionar Item
+pyautogui.press('enter')
+30/10/2024 17:46:14 - click no manter
+pyautogui.click(1751,109)
+30/10/2024 17:46:14 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+30/10/2024 17:46:14 - Arquivos:
+['21b88b04-16d1-4a22-b65e-d5cac53a45a2.pdf']
+30/10/2024 17:46:14 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\21b88b04-16d1-4a22-b65e-d5cac53a45a2.pdf
+30/10/2024 17:46:14 - 423275
+635085
+621123
+637294
+636098
+630314
+635130
+622711
+633912
+632424
+616885
+635104
+635141
+483921
+630694
+629684
+636800
+636190
+632988
+637322
+30/10/2024 17:46:14 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+30/10/2024 17:46:14 - Arquivos:
+['21b88b04-16d1-4a22-b65e-d5cac53a45a2.pdf']
+30/10/2024 17:46:14 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\21b88b04-16d1-4a22-b65e-d5cac53a45a2.pdf
+30/10/2024 17:46:14 - 423275
+635085
+621123
+637294
+636098
+630314
+635130
+622711
+633912
+632424
+616885
+635104
+635141
+483921
+630694
+629684
+636800
+636190
+632988
+637322
+30/10/2024 17:46:14 - DF:
+423275
+635085
+621123
+637294
+636098
+630314
+635130
+622711
+633912
+632424
+616885
+635104
+635141
+483921
+630694
+629684
+636800
+636190
+632988
+637322
+629269
+636226
+637318
+636136
+636251
+636773
+635053
+636810
+637217
+635077
+636204
+633493
+613880
+634544
+623563
+630831
+618203
+625423
+615276
+636796
+636654
+637787
+637268
+637161
+632426
+636182
+633353
+631343
+634095
+631349
+630700
+636223
+635122
+630675
+636217
+632404
+632999
+626111
+630801
+628132
+630316
+629681
+632977
+637259
+637312
+636212
+630321
+630319
+635143
+635661
+606399
+624058
+632978
+634097
+629794
+636215
+628053
+628740
+630834
+636168
+629270
+636794
+617034
+637391
+637303
+635666
+637326
+633490
+622867
+632390
+634705
+631304
+631891
+635613
+634606
+635124
+625452
+636088
+620420
+630737
+634401
+629618
+634996
+630747
+629031
+637368
+636181
+630840
+637712
+637571
+617585
+635542
+634004
+637370
+629819
+608265
+624550
+428150
+453745
+597012
+635112
+299735
+634515
+  2588
+535192
+416968
+580695
+573894
+561776
+ 11708
+432934
+541993
+  2139
+  2264
+498966
+  2270
+189259
+566548
+637659
+637409
+637617
+637426
+637795
+430001
+637670
+637345
+637323
+637435
+636862
+637352
+637320
+617561
+591483
+637321
+637324
+615943
+614694
+618731
+618176
+608383
+633421
+637301
+30/10/2024 17:46:14 - global statusThread: False
+30/10/2024 17:46:14 - =========== FIM ========
+30/10/2024 17:50:44 - def fechar()
+30/10/2024 17:50:46 - janela.destroy()
+30/10/2024 17:50:49 - ============================== inicio ========================
+30/10/2024 17:50:49 - delete_all_files_in_directory(C:\Users\pvplima.C19NOT76\Downloads)
+30/10/2024 17:50:49 - interface_grafica()
+30/10/2024 17:50:53 - def iniciar()
+30/10/2024 17:50:53 - Botao Iniciar clicado!
+30/10/2024 17:50:53 - global statusThread: False
+30/10/2024 17:50:53 - ============================== execuçao ========================
+30/10/2024 17:50:53 - Tarefa inicializada!
+statusThread:True
+30/10/2024 17:50:53 - ============================== login no sistema ==============================
+30/10/2024 17:51:02 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+30/10/2024 17:51:03 - box_usuario
+30/10/2024 17:51:03 - box_senha
+30/10/2024 17:51:03 - bt_login
+30/10/2024 17:51:07 - bt_utilitarios.click()
+30/10/2024 17:51:09 - bt_impressao_relatorios.click()
+30/10/2024 17:51:11 - box_codigo_rel.send_keys('1790')
+30/10/2024 17:51:13 - pyautogui.press('enter')
+30/10/2024 17:51:15 - bt_visualizar_.click()
+30/10/2024 17:51:27 - click apos o download
+pyautogui.click(1810,165)
+30/10/2024 17:51:37 - Pressionar Item
+pyautogui.press('enter')
+30/10/2024 17:51:41 - click no manter
+pyautogui.click(1751,109)
+30/10/2024 17:51:41 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+30/10/2024 17:51:41 - Arquivos:
+['29a0e761-7d59-4bd0-bcb6-b7d059dd73ad.pdf']
+30/10/2024 17:51:41 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\29a0e761-7d59-4bd0-bcb6-b7d059dd73ad.pdf
+30/10/2024 17:51:42 - 423275
+635085
+621123
+637294
+636098
+30/10/2024 17:51:42 - DF:
+423275
+635085
+621123
+637294
+636098
+630314
+635130
+622711
+633912
+632424
+616885
+635104
+635141
+483921
+630694
+629684
+636800
+636190
+632988
+637322
+629269
+636226
+637318
+636136
+636251
+636773
+635053
+636810
+637217
+635077
+636204
+633493
+613880
+634544
+623563
+630831
+618203
+625423
+615276
+636796
+636654
+637787
+637268
+637161
+632426
+636182
+633353
+631343
+634095
+631349
+630700
+636223
+635122
+630675
+636217
+632404
+632999
+626111
+630801
+628132
+630316
+629681
+632977
+637259
+637312
+636212
+630321
+630319
+635143
+635661
+606399
+624058
+632978
+634097
+629794
+636215
+628053
+628740
+630834
+636168
+629270
+636794
+617034
+637391
+637303
+635666
+637326
+633490
+622867
+632390
+634705
+631304
+631891
+635613
+634606
+635124
+625452
+636088
+620420
+630737
+634401
+629618
+634996
+630747
+629031
+637368
+636181
+630840
+637712
+637571
+617585
+635542
+634004
+637370
+629819
+608265
+624550
+428150
+453745
+597012
+635112
+299735
+634515
+  2588
+535192
+416968
+580695
+573894
+561776
+ 11708
+432934
+541993
+  2139
+  2264
+498966
+  2270
+189259
+566548
+637659
+637409
+637617
+637426
+637795
+430001
+637670
+637345
+637323
+637435
+636862
+637352
+637320
+617561
+591483
+637321
+637324
+615943
+614694
+618731
+618176
+608383
+633421
+637301
+30/10/2024 17:51:42 - global statusThread: False
+30/10/2024 17:51:46 - =========== FIM ========
+30/10/2024 17:51:54 - def fechar()
+30/10/2024 17:51:57 - janela.destroy()
+31/10/2024 08:00:07 - ============================== inicio ========================
+31/10/2024 08:00:07 - delete_all_files_in_directory(C:\Users\pvplima.C19NOT76\Downloads)
+31/10/2024 08:00:07 - interface_grafica()
+31/10/2024 08:00:10 - def iniciar()
+31/10/2024 08:00:10 - Botao Iniciar clicado!
+31/10/2024 08:00:10 - global statusThread: False
+31/10/2024 08:00:10 - ============================== execuçao ========================
+31/10/2024 08:00:10 - Tarefa inicializada!
+statusThread:True
+31/10/2024 08:00:10 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 08:00:10 - Arquivos:
+[]
+31/10/2024 08:01:05 - def fechar()
+31/10/2024 08:01:06 - janela.destroy()
+31/10/2024 08:02:02 - ============================== inicio ========================
+31/10/2024 08:02:02 - interface_grafica()
+31/10/2024 08:02:04 - def iniciar()
+31/10/2024 08:02:04 - Botao Iniciar clicado!
+31/10/2024 08:02:04 - global statusThread: False
+31/10/2024 08:02:04 - ============================== execuçao ========================
+31/10/2024 08:02:04 - Tarefa inicializada!
+statusThread:True
+31/10/2024 08:02:04 - ============================== login no sistema ==============================
+31/10/2024 08:02:14 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+31/10/2024 08:02:14 - box_usuario
+31/10/2024 08:02:15 - box_senha
+31/10/2024 08:02:15 - bt_login
+31/10/2024 08:02:19 - bt_utilitarios.click()
+31/10/2024 08:02:21 - bt_impressao_relatorios.click()
+31/10/2024 08:02:23 - box_codigo_rel.send_keys('1790')
+31/10/2024 08:02:25 - pyautogui.press('enter')
+31/10/2024 08:02:27 - bt_visualizar_.click()
+31/10/2024 08:02:40 - click apos o download
+pyautogui.click(1810,165)
+31/10/2024 08:02:50 - Pressionar Item
+pyautogui.press('enter')
+31/10/2024 08:02:54 - click no manter
+pyautogui.click(1751,109)
+31/10/2024 08:02:54 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 08:02:54 - Arquivos:
+['a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 08:02:54 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a919f425-e3d4-4e55-867c-c5668220342a.pdf
+31/10/2024 08:02:54 - 423275
+635085
+621123
+637294
+636098
+31/10/2024 08:02:54 - global statusThread: False
+31/10/2024 08:02:58 - =========== FIM ========
+31/10/2024 08:03:02 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 08:03:02 - Arquivos:
+['a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 08:03:02 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a919f425-e3d4-4e55-867c-c5668220342a.pdf
+31/10/2024 08:03:02 - 423275
+635085
+621123
+637294
+636098
+31/10/2024 08:03:26 - def iniciar()
+31/10/2024 08:03:26 - Botao Iniciar clicado!
+31/10/2024 08:03:26 - global statusThread: False
+31/10/2024 08:03:26 - ============================== execuçao ========================
+31/10/2024 08:03:26 - Tarefa inicializada!
+statusThread:True
+31/10/2024 08:03:26 - ============================== login no sistema ==============================
+31/10/2024 08:03:35 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+31/10/2024 08:03:36 - box_usuario
+31/10/2024 08:03:36 - box_senha
+31/10/2024 08:03:36 - bt_login
+31/10/2024 08:03:40 - bt_utilitarios.click()
+31/10/2024 08:03:42 - bt_impressao_relatorios.click()
+31/10/2024 08:03:44 - box_codigo_rel.send_keys('1790')
+31/10/2024 08:03:46 - pyautogui.press('enter')
+31/10/2024 08:03:48 - bt_visualizar_.click()
+31/10/2024 08:04:00 - click apos o download
+pyautogui.click(1810,165)
+31/10/2024 08:04:10 - Pressionar Item
+pyautogui.press('enter')
+31/10/2024 08:04:15 - click no manter
+pyautogui.click(1751,109)
+31/10/2024 08:04:15 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 08:04:15 - Arquivos:
+['a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 08:04:15 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a919f425-e3d4-4e55-867c-c5668220342a.pdf
+31/10/2024 08:04:15 - 423275
+635085
+621123
+637294
+636098
+31/10/2024 08:04:15 - global statusThread: False
+31/10/2024 08:04:19 - =========== FIM ========
+31/10/2024 08:04:23 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 08:04:23 - Arquivos:
+['a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 08:04:23 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a919f425-e3d4-4e55-867c-c5668220342a.pdf
+31/10/2024 08:04:23 - 423275
+635085
+621123
+637294
+636098
+31/10/2024 08:04:42 - def fechar()
+31/10/2024 08:04:44 - janela.destroy()
+31/10/2024 08:04:47 - ============================== inicio ========================
+31/10/2024 08:04:47 - interface_grafica()
+31/10/2024 08:04:49 - def iniciar()
+31/10/2024 08:04:49 - Botao Iniciar clicado!
+31/10/2024 08:04:49 - global statusThread: False
+31/10/2024 08:04:49 - ============================== execuçao ========================
+31/10/2024 08:04:49 - Tarefa inicializada!
+statusThread:True
+31/10/2024 08:04:49 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 08:04:49 - Arquivos:
+['a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 08:04:49 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a919f425-e3d4-4e55-867c-c5668220342a.pdf
+31/10/2024 08:04:49 - 423275
+635085
+621123
+637294
+636098
+31/10/2024 08:04:52 - def fechar()
+31/10/2024 08:04:54 - janela.destroy()
+31/10/2024 08:10:05 - ============================== inicio ========================
+31/10/2024 08:10:05 - interface_grafica()
+31/10/2024 08:10:08 - def fechar()
+31/10/2024 08:10:09 - janela.destroy()
+31/10/2024 08:10:14 - ============================== inicio ========================
+31/10/2024 08:10:14 - interface_grafica()
+31/10/2024 08:10:16 - def iniciar()
+31/10/2024 08:10:16 - Botao Iniciar clicado!
+31/10/2024 08:10:16 - global statusThread: False
+31/10/2024 08:10:16 - ============================== execuçao ========================
+31/10/2024 08:10:16 - Tarefa inicializada!
+statusThread:True
+31/10/2024 08:10:16 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 08:10:16 - Arquivos:
+['a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 08:10:16 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a919f425-e3d4-4e55-867c-c5668220342a.pdf
+31/10/2024 08:10:16 - df_filtered.iloc[:5, 0].to_string(index=False):
+423275
+635085
+621123
+637294
+636098
+31/10/2024 08:10:16 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 08:10:16 - Arquivos:
+['a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 08:10:16 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a919f425-e3d4-4e55-867c-c5668220342a.pdf
+31/10/2024 08:10:16 - df_filtered.iloc[:5, 0].to_string(index=False):
+423275
+635085
+621123
+637294
+636098
+31/10/2024 08:11:01 - def fechar()
+31/10/2024 08:11:03 - janela.destroy()
+31/10/2024 08:11:05 - ============================== inicio ========================
+31/10/2024 08:11:05 - interface_grafica()
+31/10/2024 08:11:07 - def iniciar()
+31/10/2024 08:11:07 - Botao Iniciar clicado!
+31/10/2024 08:11:07 - global statusThread: False
+31/10/2024 08:11:07 - ============================== execuçao ========================
+31/10/2024 08:11:07 - Tarefa inicializada!
+statusThread:True
+31/10/2024 08:11:07 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 08:11:07 - Arquivos:
+['a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 08:11:07 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a919f425-e3d4-4e55-867c-c5668220342a.pdf
+31/10/2024 08:11:07 - df_filtered.iloc[:5, 0].to_string(index=False):
+423275
+635085
+621123
+637294
+636098
+31/10/2024 08:11:07 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 08:11:07 - Arquivos:
+['a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 08:11:07 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a919f425-e3d4-4e55-867c-c5668220342a.pdf
+31/10/2024 08:11:07 - df_filtered.iloc[:5, 0].to_string(index=False):
+423275
+635085
+621123
+637294
+636098
+31/10/2024 08:12:30 - def fechar()
+31/10/2024 08:12:32 - janela.destroy()
+31/10/2024 08:14:44 - ============================== inicio ========================
+31/10/2024 08:14:44 - interface_grafica()
+31/10/2024 08:14:45 - def iniciar()
+31/10/2024 08:14:45 - Botao Iniciar clicado!
+31/10/2024 08:15:28 - def fechar()
+31/10/2024 08:15:29 - janela.destroy()
+31/10/2024 08:15:32 - ============================== inicio ========================
+31/10/2024 08:15:32 - interface_grafica()
+31/10/2024 08:15:34 - def iniciar()
+31/10/2024 08:15:34 - Botao Iniciar clicado!
+31/10/2024 08:15:34 - global statusThread: False
+31/10/2024 08:15:34 - ============================== execuçao ========================
+31/10/2024 08:15:34 - Tarefa inicializada!
+statusThread:True
+31/10/2024 08:15:34 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 08:15:34 - Arquivos:
+['a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 08:15:34 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a919f425-e3d4-4e55-867c-c5668220342a.pdf
+31/10/2024 08:15:34 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 08:15:34 - Arquivos:
+['a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 08:15:34 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a919f425-e3d4-4e55-867c-c5668220342a.pdf
+31/10/2024 08:24:37 - def fechar()
+31/10/2024 08:24:39 - janela.destroy()
+31/10/2024 08:25:19 - ============================== inicio ========================
+31/10/2024 08:25:19 - interface_grafica()
+31/10/2024 08:25:21 - def iniciar()
+31/10/2024 08:25:21 - Botao Iniciar clicado!
+31/10/2024 08:25:21 - global statusThread: False
+31/10/2024 08:25:21 - ============================== execuçao ========================
+31/10/2024 08:25:21 - Tarefa inicializada!
+statusThread:True
+31/10/2024 08:25:21 - def pdf_para_csv():
+31/10/2024 08:25:21 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 08:25:21 - Arquivos:
+['a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf', 'a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 08:25:21 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf
+31/10/2024 08:25:21 - def pdf_para_csv():
+31/10/2024 08:25:21 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 08:25:21 - Arquivos:
+['a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf', 'a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 08:25:21 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf
+31/10/2024 08:36:34 - def fechar()
+31/10/2024 08:36:35 - janela.destroy()
+31/10/2024 08:39:32 - ============================== inicio ========================
+31/10/2024 08:39:32 - interface_grafica()
+31/10/2024 08:39:34 - def iniciar()
+31/10/2024 08:39:34 - Botao Iniciar clicado!
+31/10/2024 08:39:34 - global statusThread: False
+31/10/2024 08:39:34 - ============================== execuçao ========================
+31/10/2024 08:39:34 - Tarefa inicializada!
+statusThread:True
+31/10/2024 08:39:34 - def pdf_para_csv():
+31/10/2024 08:39:34 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 08:39:34 - Arquivos:
+['a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf', 'a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 08:39:34 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf
+31/10/2024 08:39:34 - def pdf_para_csv():
+31/10/2024 08:39:34 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 08:39:34 - Arquivos:
+['a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf', 'a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 08:39:34 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf
+31/10/2024 08:40:31 - def fechar()
+31/10/2024 08:40:32 - janela.destroy()
+31/10/2024 08:40:34 - ============================== inicio ========================
+31/10/2024 08:40:34 - interface_grafica()
+31/10/2024 08:40:37 - def iniciar()
+31/10/2024 08:40:37 - Botao Iniciar clicado!
+31/10/2024 08:40:37 - global statusThread: False
+31/10/2024 08:40:37 - ============================== execuçao ========================
+31/10/2024 08:40:37 - Tarefa inicializada!
+statusThread:True
+31/10/2024 08:40:37 - def pdf_para_csv():
+31/10/2024 08:40:37 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 08:40:37 - Arquivos:
+['a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf', 'a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 08:40:37 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf
+31/10/2024 08:40:37 - def pdf_para_csv():
+31/10/2024 08:40:37 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 08:40:37 - Arquivos:
+['a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf', 'a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 08:40:37 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf
+31/10/2024 08:41:00 - def fechar()
+31/10/2024 08:41:01 - janela.destroy()
+31/10/2024 08:43:57 - ============================== inicio ========================
+31/10/2024 08:43:57 - interface_grafica()
+31/10/2024 08:43:58 - def iniciar()
+31/10/2024 08:43:58 - Botao Iniciar clicado!
+31/10/2024 08:43:58 - global statusThread: False
+31/10/2024 08:43:58 - ============================== execuçao ========================
+31/10/2024 08:43:58 - Tarefa inicializada!
+statusThread:True
+31/10/2024 08:43:58 - def pdf_para_csv():
+31/10/2024 08:43:58 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 08:43:58 - Arquivos:
+['a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf', 'a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 08:43:58 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf
+31/10/2024 08:43:58 - def pdf_para_csv():
+31/10/2024 08:43:58 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 08:43:58 - Arquivos:
+['a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf', 'a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 08:43:58 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf
+31/10/2024 08:44:16 - def fechar()
+31/10/2024 08:44:18 - janela.destroy()
+31/10/2024 08:44:21 - ============================== inicio ========================
+31/10/2024 08:44:21 - interface_grafica()
+31/10/2024 08:44:23 - def iniciar()
+31/10/2024 08:44:23 - Botao Iniciar clicado!
+31/10/2024 08:44:23 - global statusThread: False
+31/10/2024 08:44:23 - ============================== execuçao ========================
+31/10/2024 08:44:23 - Tarefa inicializada!
+statusThread:True
+31/10/2024 08:44:23 - def pdf_para_csv():
+31/10/2024 08:44:23 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 08:44:23 - Arquivos:
+['a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf', 'a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 08:44:23 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf
+31/10/2024 08:44:23 - def pdf_para_csv():
+31/10/2024 08:44:23 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 08:44:23 - Arquivos:
+['a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf', 'a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 08:44:23 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf
+31/10/2024 08:44:37 - def fechar()
+31/10/2024 08:44:38 - janela.destroy()
+31/10/2024 08:44:44 - ============================== inicio ========================
+31/10/2024 08:44:44 - interface_grafica()
+31/10/2024 08:44:45 - def iniciar()
+31/10/2024 08:44:45 - Botao Iniciar clicado!
+31/10/2024 08:44:45 - global statusThread: False
+31/10/2024 08:44:45 - ============================== execuçao ========================
+31/10/2024 08:44:45 - Tarefa inicializada!
+statusThread:True
+31/10/2024 08:44:45 - def pdf_para_csv():
+31/10/2024 08:44:45 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 08:44:45 - Arquivos:
+['a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf', 'a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 08:44:45 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf
+31/10/2024 08:44:45 - def pdf_para_csv():
+31/10/2024 08:44:45 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 08:44:45 - Arquivos:
+['a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf', 'a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 08:44:45 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf
+31/10/2024 08:45:07 - def fechar()
+31/10/2024 08:45:08 - janela.destroy()
+31/10/2024 09:22:42 - ============================== inicio ========================
+31/10/2024 09:22:42 - interface_grafica()
+31/10/2024 09:22:44 - def iniciar()
+31/10/2024 09:22:44 - Botao Iniciar clicado!
+31/10/2024 09:22:44 - global statusThread: False
+31/10/2024 09:22:44 - ============================== execuçao ========================
+31/10/2024 09:22:44 - Tarefa inicializada!
+statusThread:True
+31/10/2024 09:22:44 - def pdf_para_csv():
+31/10/2024 09:22:44 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 09:22:44 - Arquivos:
+['a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf', 'a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 09:22:44 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf
+31/10/2024 09:22:44 - def pdf_para_csv():
+31/10/2024 09:22:44 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 09:22:44 - Arquivos:
+['a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf', 'a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 09:22:44 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf
+31/10/2024 09:28:18 - ============================== inicio ========================
+31/10/2024 09:28:18 - interface_grafica()
+31/10/2024 09:28:19 - def iniciar()
+31/10/2024 09:28:19 - Botao Iniciar clicado!
+31/10/2024 09:28:19 - global statusThread: False
+31/10/2024 09:28:19 - ============================== execuçao ========================
+31/10/2024 09:28:19 - Tarefa inicializada!
+statusThread:True
+31/10/2024 09:28:19 - def pdf_para_csv():
+31/10/2024 09:28:19 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 09:28:19 - Arquivos:
+['a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf', 'a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 09:28:19 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf
+31/10/2024 09:28:19 - def pdf_para_csv():
+31/10/2024 09:28:19 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 09:28:19 - Arquivos:
+['a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf', 'a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 09:28:19 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf
+31/10/2024 09:32:24 - ============================== inicio ========================
+31/10/2024 09:32:24 - interface_grafica()
+31/10/2024 09:32:25 - def iniciar()
+31/10/2024 09:32:25 - Botao Iniciar clicado!
+31/10/2024 09:32:25 - global statusThread: False
+31/10/2024 09:32:25 - ============================== execuçao ========================
+31/10/2024 09:32:25 - Tarefa inicializada!
+statusThread:True
+31/10/2024 09:32:25 - def pdf_para_csv():
+31/10/2024 09:32:25 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 09:32:25 - Arquivos:
+['a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf', 'a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 09:32:25 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf
+31/10/2024 09:32:25 - def pdf_para_csv():
+31/10/2024 09:32:25 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 09:32:25 - Arquivos:
+['a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf', 'a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 09:32:25 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf
+31/10/2024 09:33:09 - def fechar()
+31/10/2024 09:33:11 - janela.destroy()
+31/10/2024 09:33:13 - ============================== inicio ========================
+31/10/2024 09:33:13 - interface_grafica()
+31/10/2024 09:33:18 - def iniciar()
+31/10/2024 09:33:18 - Botao Iniciar clicado!
+31/10/2024 09:33:18 - global statusThread: False
+31/10/2024 09:33:18 - ============================== execuçao ========================
+31/10/2024 09:33:18 - Tarefa inicializada!
+statusThread:True
+31/10/2024 09:33:18 - def pdf_para_csv():
+31/10/2024 09:33:18 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 09:33:18 - Arquivos:
+['a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf', 'a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 09:33:18 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf
+31/10/2024 09:33:18 - def pdf_para_csv():
+31/10/2024 09:33:18 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 09:33:18 - Arquivos:
+['a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf', 'a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 09:33:18 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf
+31/10/2024 09:33:49 - def fechar()
+31/10/2024 09:33:50 - janela.destroy()
+31/10/2024 09:34:48 - ============================== inicio ========================
+31/10/2024 09:34:48 - interface_grafica()
+31/10/2024 09:34:48 - def iniciar()
+31/10/2024 09:34:48 - Botao Iniciar clicado!
+31/10/2024 09:34:48 - global statusThread: False
+31/10/2024 09:34:48 - ============================== execuçao ========================
+31/10/2024 09:34:48 - Tarefa inicializada!
+statusThread:True
+31/10/2024 09:34:48 - def pdf_para_csv():
+31/10/2024 09:34:48 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 09:34:48 - Arquivos:
+['a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf', 'a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 09:34:48 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf
+31/10/2024 09:34:49 - def pdf_para_csv():
+31/10/2024 09:34:49 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 09:34:49 - Arquivos:
+['a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf', 'a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 09:34:49 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf
+31/10/2024 09:34:51 - def fechar()
+31/10/2024 09:34:53 - janela.destroy()
+31/10/2024 09:35:25 - ============================== inicio ========================
+31/10/2024 09:35:25 - interface_grafica()
+31/10/2024 09:35:27 - def iniciar()
+31/10/2024 09:35:27 - Botao Iniciar clicado!
+31/10/2024 09:35:27 - global statusThread: False
+31/10/2024 09:35:27 - ============================== execuçao ========================
+31/10/2024 09:35:27 - Tarefa inicializada!
+statusThread:True
+31/10/2024 09:35:27 - def pdf_para_csv():
+31/10/2024 09:35:27 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 09:35:27 - Arquivos:
+['a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf', 'a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 09:35:27 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf
+31/10/2024 09:35:27 - def pdf_para_csv():
+31/10/2024 09:35:27 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 09:35:27 - Arquivos:
+['a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf', 'a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 09:35:27 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf
+31/10/2024 09:35:35 - def fechar()
+31/10/2024 09:35:36 - janela.destroy()
+31/10/2024 09:35:38 - ============================== inicio ========================
+31/10/2024 09:35:38 - interface_grafica()
+31/10/2024 09:35:40 - def iniciar()
+31/10/2024 09:35:40 - Botao Iniciar clicado!
+31/10/2024 09:35:40 - global statusThread: False
+31/10/2024 09:35:40 - ============================== execuçao ========================
+31/10/2024 09:35:40 - Tarefa inicializada!
+statusThread:True
+31/10/2024 09:35:40 - def pdf_para_csv():
+31/10/2024 09:35:40 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 09:35:40 - Arquivos:
+['a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf', 'a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 09:35:40 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf
+31/10/2024 09:35:40 - def pdf_para_csv():
+31/10/2024 09:35:40 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 09:35:40 - Arquivos:
+['a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf', 'a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 09:35:40 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf
+31/10/2024 09:36:37 - ============================== inicio ========================
+31/10/2024 09:36:37 - interface_grafica()
+31/10/2024 09:36:39 - def iniciar()
+31/10/2024 09:36:39 - Botao Iniciar clicado!
+31/10/2024 09:36:39 - global statusThread: False
+31/10/2024 09:36:39 - ============================== execuçao ========================
+31/10/2024 09:36:39 - Tarefa inicializada!
+statusThread:True
+31/10/2024 09:36:39 - def pdf_para_csv():
+31/10/2024 09:36:39 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 09:36:39 - Arquivos:
+['a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf', 'a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 09:36:39 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf
+31/10/2024 09:36:39 - def pdf_para_csv():
+31/10/2024 09:36:39 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 09:36:39 - Arquivos:
+['a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf', 'a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 09:36:39 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf
+31/10/2024 09:36:57 - def fechar()
+31/10/2024 09:36:58 - janela.destroy()
+31/10/2024 09:39:19 - ============================== inicio ========================
+31/10/2024 09:39:19 - interface_grafica()
+31/10/2024 09:39:21 - def iniciar()
+31/10/2024 09:39:21 - Botao Iniciar clicado!
+31/10/2024 09:39:21 - global statusThread: False
+31/10/2024 09:39:21 - ============================== execuçao ========================
+31/10/2024 09:39:21 - Tarefa inicializada!
+statusThread:True
+31/10/2024 09:39:21 - def pdf_para_csv():
+31/10/2024 09:39:21 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 09:39:21 - Arquivos:
+['a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf', 'a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 09:39:21 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf
+31/10/2024 09:39:42 - def fechar()
+31/10/2024 09:39:43 - janela.destroy()
+31/10/2024 09:39:45 - ============================== inicio ========================
+31/10/2024 09:39:45 - interface_grafica()
+31/10/2024 09:39:47 - def iniciar()
+31/10/2024 09:39:47 - Botao Iniciar clicado!
+31/10/2024 09:39:47 - global statusThread: False
+31/10/2024 09:39:47 - ============================== execuçao ========================
+31/10/2024 09:39:47 - Tarefa inicializada!
+statusThread:True
+31/10/2024 09:39:47 - def pdf_para_csv():
+31/10/2024 09:39:47 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 09:39:47 - Arquivos:
+['a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf', 'a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 09:39:47 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf
+31/10/2024 09:39:51 - def fechar()
+31/10/2024 09:39:52 - janela.destroy()
+31/10/2024 09:41:46 - ============================== inicio ========================
+31/10/2024 09:41:46 - interface_grafica()
+31/10/2024 09:41:48 - def iniciar()
+31/10/2024 09:41:48 - Botao Iniciar clicado!
+31/10/2024 09:41:48 - global statusThread: False
+31/10/2024 09:41:48 - ============================== execuçao ========================
+31/10/2024 09:41:48 - Tarefa inicializada!
+statusThread:True
+31/10/2024 09:41:48 - def pdf_para_csv():
+31/10/2024 09:41:48 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 09:41:48 - Arquivos:
+['a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf', 'a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 09:41:48 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf
+31/10/2024 09:42:04 - def fechar()
+31/10/2024 09:42:04 - janela.destroy()
+31/10/2024 09:42:06 - ============================== inicio ========================
+31/10/2024 09:42:06 - interface_grafica()
+31/10/2024 09:42:08 - def iniciar()
+31/10/2024 09:42:08 - Botao Iniciar clicado!
+31/10/2024 09:42:08 - global statusThread: False
+31/10/2024 09:42:08 - ============================== execuçao ========================
+31/10/2024 09:42:08 - Tarefa inicializada!
+statusThread:True
+31/10/2024 09:42:08 - def pdf_para_csv():
+31/10/2024 09:42:08 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 09:42:08 - Arquivos:
+['a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf', 'a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 09:42:08 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf
+31/10/2024 09:43:21 - def fechar()
+31/10/2024 09:43:22 - janela.destroy()
+31/10/2024 09:43:25 - ============================== inicio ========================
+31/10/2024 09:43:25 - interface_grafica()
+31/10/2024 09:43:26 - def iniciar()
+31/10/2024 09:43:26 - Botao Iniciar clicado!
+31/10/2024 09:43:26 - global statusThread: False
+31/10/2024 09:43:26 - ============================== execuçao ========================
+31/10/2024 09:43:26 - Tarefa inicializada!
+statusThread:True
+31/10/2024 09:43:26 - def pdf_para_csv():
+31/10/2024 09:43:26 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 09:43:26 - Arquivos:
+['a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf', 'a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 09:43:26 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf
+31/10/2024 09:43:37 - def fechar()
+31/10/2024 09:43:37 - janela.destroy()
+31/10/2024 09:44:16 - ============================== inicio ========================
+31/10/2024 09:44:16 - interface_grafica()
+31/10/2024 09:44:17 - def iniciar()
+31/10/2024 09:44:17 - Botao Iniciar clicado!
+31/10/2024 09:44:17 - global statusThread: False
+31/10/2024 09:44:17 - ============================== execuçao ========================
+31/10/2024 09:44:17 - Tarefa inicializada!
+statusThread:True
+31/10/2024 09:44:17 - def pdf_para_csv():
+31/10/2024 09:44:17 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 09:44:17 - Arquivos:
+['a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf', 'a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 09:44:17 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf
+31/10/2024 09:44:36 - def fechar()
+31/10/2024 09:44:37 - janela.destroy()

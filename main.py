@@ -22,8 +22,12 @@ import glob
 
 
 #inicialização de variaveis globais:
+diretorio_atual = ""
 statusThread = False
 df = ""
+
+df_filtrado = ""
+
 
 def agora_limpo():
     agora_limpo = datetime.datetime.now()
@@ -32,14 +36,15 @@ def agora_limpo():
     return str(agora_limpo)
 
 def registrar_log(texto):
-  #Função para registrar um texto em um arquivo de log.
-  diretorio_atual = os.getcwd()
-  caminho_arquivo = os.path.join(diretorio_atual, 'log.txt')
-  print(texto)
+    global diretorio_atual
+    #Função para registrar um texto em um arquivo de log.
+    diretorio_atual = os.getcwd()
+    caminho_arquivo = os.path.join(diretorio_atual, 'log.txt')
+    print(texto)
 
-  # Abre o arquivo em modo de append (adiciona texto ao final)
-  with open(caminho_arquivo, 'a') as arquivo:
-    arquivo.write(f"{agora_limpo()} - {texto}\n")
+    # Abre o arquivo em modo de append (adiciona texto ao final)
+    with open(caminho_arquivo, 'a') as arquivo:
+        arquivo.write(f"{agora_limpo()} - {texto}\n")
     
 def delete_all_files_in_directory(directory):
     registrar_log(f"delete_all_files_in_directory({directory})")
@@ -50,10 +55,12 @@ def delete_all_files_in_directory(directory):
             print(f"Arquivo {f} removido com sucesso.")
         except Exception as e:
             print(f"Não foi possível remover o arquivo {f}. Erro: {e}")
-            
 
 def pdf_para_csv():
+    global df_filtrado
     texto_completo = ""
+    
+    registrar_log("def pdf_para_csv():")
     
     #acessando pasta download:
     downloads_path = os.path.join(os.path.expanduser("~"), "Downloads")
@@ -82,23 +89,20 @@ def pdf_para_csv():
         df = pd.DataFrame(dados) 
         
         #exibindo as 5 primeiras linhas:
-        print(df.head(5))
+        #print(df.head(5))
         
         #exibindo todas as linhas mas só a primeira coluna:
-        print(df.iloc[:, 0].to_string(index=False))
+        #print(df.iloc[:, 0].to_string(index=False))
         
         #retirando linhas com NR_ATEND
-        df_filtered = df[df.iloc[:, 0] != 'NR_ATEND']
-        registrar_log(df_filtered.iloc[:20, 0].to_string(index=False))
-    return df_filtered.iloc[:, 0].to_string(index=False)
+        #df_filtered = df[df.iloc[:, 0] != 'NR_ATEND']
+        #registrar_log(f"df_filtered.iloc[:5, 0].to_string(index=False):\n{df_filtered.iloc[:5, 0].to_string(index=False)}")
+        #df_filtrado = df_filtered.iloc[:, 0].to_string(index=False)
+    return df
 
-
-
-
-
-
-def Execucao():
+def Geracao_Pdf_Atendimen():
     global statusThread
+    global df
     # ============================== login no sistema ==============================
     registrar_log('============================== login no sistema ==============================')
 
@@ -146,7 +150,7 @@ def Execucao():
     registrar_log('bt_impressao_relatorios.click()')
     time.sleep(2)
 
-    # click no campo para procurar o relatório 1789:
+    # click no campo para procurar o relatório 1790:
     box_codigo_rel = driver.find_element(By.XPATH, value='//*[@id="detail_1_container"]/div[1]/div/div[2]/tasy-wtextbox/div/div/input')
     box_codigo_rel.send_keys('1790')
     registrar_log("box_codigo_rel.send_keys('1790')")
@@ -156,7 +160,6 @@ def Execucao():
     pyautogui.press('enter')
     registrar_log("pyautogui.press('enter')")
     time.sleep(2)
-    
     
     # Click no botao visualizar:
     bt_visualizar_ = driver.find_element(By.XPATH, value='//*[@id="handlebar-455491"]')
@@ -179,51 +182,30 @@ def Execucao():
     pyautogui.click(1751,109)
     registrar_log("click no manter\npyautogui.click(1751,109)")
        
-    #TODO: funcao para pegar planilha gerada e montar o data frame:
-    print(f"pdf_para_csv():\n{pdf_para_csv()}")
+    #print(f"pdf_para_csv():\n{pdf_para_csv()}")
     
-    #caminho_pasta_download = "C:\Users\pvplima.C19NOT76\Downloads"
+    df = pdf_para_csv()
     
+    #registrar_log(f"\nDF:\n{df}")
     
-    
-    
-    # TODO: sequencia para inicio de abertura do CPOE para geracao dos pdfs
-    """
-    #digitar a palavra PEP
-    time.sleep(12)
-    pyautogui.write('PEP')
-    time.sleep(8)
-
-    #bt_procura = driver.find_element(By.XPATH, value='//*[@id="app-view"]/tasy-corsisf1/div/w-mainlayout/div/div/w-launcher/div/input')
-    #bt_procura.send_keys('PEP')
-
-    
-    # click no atalho do PEP no tasy:
-    bt_PEP = driver.find_element(By.XPATH, value='//*[@id="app-view"]/tasy-corsisf1/div/w-mainlayout/div/div/w-lPacientesauncher/div/div/div[1]/w-apps/div/div[1]/ul/li[4]/w-feature-app/a/img')
-    bt_PEP.click()
-    """
-    
-    
-    
-
-    time.sleep(20)
-
-
     # FIM:
     statusThread = False
     registrar_log(f"global statusThread: {statusThread}")
-    registrar_log("=========== FIM ========")
-
+    
     # pausa dramática:
-    driver.implicitly_wait(60)
-    time.sleep(8)
+    driver.implicitly_wait(2)
+    time.sleep(2)
     driver.quit()
+    
+    registrar_log("=========== FIM ========")
 
 def interface_grafica():
     registrar_log("interface_grafica()")
 
     def iniciar():
         global statusThread
+        global df_filtrado
+        global diretorio_atual
         registrar_log("def iniciar()")
         registrar_log("Botao Iniciar clicado!")
 
@@ -236,12 +218,28 @@ def interface_grafica():
 
         else:
             statusThread = True
-            registrar_log("Tarefa inicializada!")
-
+            registrar_log("============================== execuçao ========================")
+            registrar_log(f"Tarefa inicializada!\nstatusThread:{statusThread}")
+            
             #============================== execuçao ========================
 
             #TODO: inserir a execucao do login do tasy em uma thread:
-            Execucao()
+            #Geracao_Pdf_Atendimen()
+            
+            #pdf_para_csv()
+            df_filtrado = pdf_para_csv()
+            
+            #TODO: Trabalhar o Data Frame
+            #print(f"global df_filtrado:{df_filtrado}")
+                    
+            #filtrando o data frame para retornar apenas os nr de atendimento:
+            #df_filtrado = df_filtrado[[0]].to_string(index=False)
+            print(df_filtrado)
+            
+            # Percorrendo cada linha e coluna e exibindo os dados no console
+            print("\n***********************Exibindo dados linha por linha:")
+            for linha in df_filtrado.iloc[:, 0]:
+                print(f"NR_ATENDIMENTO: {linha}")
 
     def fechar():
         registrar_log("def fechar()")
@@ -275,9 +273,11 @@ if __name__ == "__main__":
     try:
         registrar_log("============================== inicio ========================")
         
+        #deletando todos os arquivos da pasta download
         pasta_downloads = os.path.join(os.path.expanduser("~"), "Downloads")
-        delete_all_files_in_directory(pasta_downloads)
+        #delete_all_files_in_directory(pasta_downloads)
         
+        #iniciando interface grafica
         interface_grafica()
 
     except Exception as erro:
