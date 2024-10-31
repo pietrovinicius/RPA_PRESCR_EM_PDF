@@ -3043,3 +3043,188 @@ statusThread:True
 *****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf
 31/10/2024 09:44:36 - def fechar()
 31/10/2024 09:44:37 - janela.destroy()
+31/10/2024 09:53:35 - ============================== inicio ========================
+31/10/2024 09:53:35 - interface_grafica()
+31/10/2024 09:53:37 - def iniciar()
+31/10/2024 09:53:37 - Botao Iniciar clicado!
+31/10/2024 09:53:37 - global statusThread: False
+31/10/2024 09:53:37 - ============================== execuçao ========================
+31/10/2024 09:53:37 - Tarefa inicializada!
+statusThread:True
+31/10/2024 09:53:57 - def fechar()
+31/10/2024 09:53:57 - janela.destroy()
+31/10/2024 09:53:59 - ============================== inicio ========================
+31/10/2024 09:53:59 - interface_grafica()
+31/10/2024 09:54:01 - def iniciar()
+31/10/2024 09:54:01 - Botao Iniciar clicado!
+31/10/2024 09:54:01 - global statusThread: False
+31/10/2024 09:54:01 - ============================== execuçao ========================
+31/10/2024 09:54:01 - Tarefa inicializada!
+statusThread:True
+31/10/2024 09:54:01 - ============================== Geracao_Pdf_Prescricao ==============================
+31/10/2024 09:54:01 - def pdf_para_csv():
+31/10/2024 09:54:01 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 09:54:01 - Arquivos:
+['a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf', 'a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 09:54:01 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf
+31/10/2024 09:54:01 - df_filtrado:        0        1        2   3   ...        7          8      9     10
+0  423275  LUCIANA  BARBOSA  30  ...  Clinicas       None   None  None
+1  633490   MANUEL   GENTIL  DE  ...    Centro  Cirurgico   None  None
+2  635085   AFONSO    CELSO  56  ...        3º      andar   None  None
+3  621123  ANDREIA  RIBEIRO  DE  ...      U.I.         3º  andar  None
+4  637294  ANDREZA  BARRETO  56  ...        3º      andar   None  None
+
+[5 rows x 11 columns]
+31/10/2024 09:54:34 - def fechar()
+31/10/2024 09:54:36 - janela.destroy()
+31/10/2024 09:55:46 - ============================== inicio ========================
+31/10/2024 09:55:46 - interface_grafica()
+31/10/2024 09:55:47 - def iniciar()
+31/10/2024 09:55:47 - Botao Iniciar clicado!
+31/10/2024 09:55:47 - global statusThread: False
+31/10/2024 09:55:47 - ============================== execuçao ========================
+31/10/2024 09:55:47 - Tarefa inicializada!
+statusThread:True
+31/10/2024 09:55:47 - ============================== Geracao_Pdf_Prescricao ==============================
+31/10/2024 09:55:47 - def pdf_para_csv():
+31/10/2024 09:55:47 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 09:55:47 - Arquivos:
+['a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf', 'a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 09:55:47 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf
+31/10/2024 09:55:47 - df_filtrado:        0        1        2   3   ...        7          8      9     10
+0  423275  LUCIANA  BARBOSA  30  ...  Clinicas       None   None  None
+1  633490   MANUEL   GENTIL  DE  ...    Centro  Cirurgico   None  None
+2  635085   AFONSO    CELSO  56  ...        3º      andar   None  None
+3  621123  ANDREIA  RIBEIRO  DE  ...      U.I.         3º  andar  None
+4  637294  ANDREZA  BARRETO  56  ...        3º      andar   None  None
+
+[5 rows x 11 columns]
+31/10/2024 09:55:57 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+31/10/2024 09:55:57 - box_usuario
+31/10/2024 09:55:57 - box_senha
+31/10/2024 09:55:58 - bt_login
+31/10/2024 09:56:11 - def fechar()
+31/10/2024 09:56:13 - janela.destroy()
+31/10/2024 09:56:44 - ============================== inicio ========================
+31/10/2024 09:56:44 - interface_grafica()
+31/10/2024 09:56:45 - def iniciar()
+31/10/2024 09:56:45 - Botao Iniciar clicado!
+31/10/2024 09:56:45 - global statusThread: False
+31/10/2024 09:56:45 - ============================== execuçao ========================
+31/10/2024 09:56:45 - Tarefa inicializada!
+statusThread:True
+31/10/2024 09:56:45 - ============================== Geracao_Pdf_Prescricao ==============================
+31/10/2024 09:56:45 - def pdf_para_csv():
+31/10/2024 09:56:45 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 09:56:45 - Arquivos:
+['a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf', 'a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 09:56:45 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf
+31/10/2024 09:56:45 - df_filtrado:        0        1        2   3   ...        7          8      9     10
+0  423275  LUCIANA  BARBOSA  30  ...  Clinicas       None   None  None
+1  633490   MANUEL   GENTIL  DE  ...    Centro  Cirurgico   None  None
+2  635085   AFONSO    CELSO  56  ...        3º      andar   None  None
+3  621123  ANDREIA  RIBEIRO  DE  ...      U.I.         3º  andar  None
+4  637294  ANDREZA  BARRETO  56  ...        3º      andar   None  None
+
+[5 rows x 11 columns]
+31/10/2024 09:56:55 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+31/10/2024 09:56:55 - box_usuario
+31/10/2024 09:56:55 - box_senha
+31/10/2024 09:56:55 - bt_login
+31/10/2024 09:56:55 - global statusThread: False
+31/10/2024 09:57:42 - def fechar()
+31/10/2024 09:57:43 - janela.destroy()
+31/10/2024 09:57:51 - ============================== inicio ========================
+31/10/2024 09:57:51 - interface_grafica()
+31/10/2024 09:57:52 - def iniciar()
+31/10/2024 09:57:52 - Botao Iniciar clicado!
+31/10/2024 09:57:52 - global statusThread: False
+31/10/2024 09:57:52 - ============================== execuçao ========================
+31/10/2024 09:57:52 - Tarefa inicializada!
+statusThread:True
+31/10/2024 09:57:52 - ============================== Geracao_Pdf_Prescricao ==============================
+31/10/2024 09:57:52 - def pdf_para_csv():
+31/10/2024 09:57:52 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 09:57:52 - Arquivos:
+['a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf', 'a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 09:57:52 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf
+31/10/2024 09:57:52 - df_filtrado:        0        1        2   3   ...        7          8      9     10
+0  423275  LUCIANA  BARBOSA  30  ...  Clinicas       None   None  None
+1  633490   MANUEL   GENTIL  DE  ...    Centro  Cirurgico   None  None
+2  635085   AFONSO    CELSO  56  ...        3º      andar   None  None
+3  621123  ANDREIA  RIBEIRO  DE  ...      U.I.         3º  andar  None
+4  637294  ANDREZA  BARRETO  56  ...        3º      andar   None  None
+
+[5 rows x 11 columns]
+31/10/2024 09:58:02 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+31/10/2024 09:58:02 - box_usuario
+31/10/2024 09:58:02 - box_senha
+31/10/2024 09:58:02 - bt_login
+31/10/2024 09:58:02 - ============================== FIM:!
+global statusThread: False
+31/10/2024 09:59:11 - def fechar()
+31/10/2024 09:59:13 - janela.destroy()
+31/10/2024 09:59:26 - ============================== inicio ========================
+31/10/2024 09:59:26 - interface_grafica()
+31/10/2024 09:59:28 - def iniciar()
+31/10/2024 09:59:28 - Botao Iniciar clicado!
+31/10/2024 09:59:28 - global statusThread: False
+31/10/2024 09:59:28 - ============================== execuçao ========================
+31/10/2024 09:59:28 - Tarefa inicializada!
+statusThread:True
+31/10/2024 09:59:28 - ============================== Geracao_Pdf_Prescricao ==============================
+31/10/2024 09:59:28 - def pdf_para_csv():
+31/10/2024 09:59:28 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 09:59:28 - Arquivos:
+['a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf', 'a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 09:59:28 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf
+31/10/2024 09:59:28 - df_filtrado:        0        1        2   3   ...        7          8      9     10
+0  423275  LUCIANA  BARBOSA  30  ...  Clinicas       None   None  None
+1  633490   MANUEL   GENTIL  DE  ...    Centro  Cirurgico   None  None
+2  635085   AFONSO    CELSO  56  ...        3º      andar   None  None
+3  621123  ANDREIA  RIBEIRO  DE  ...      U.I.         3º  andar  None
+4  637294  ANDREZA  BARRETO  56  ...        3º      andar   None  None
+
+[5 rows x 11 columns]
+31/10/2024 09:59:38 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+31/10/2024 09:59:38 - box_usuario
+31/10/2024 09:59:40 - box_senha
+31/10/2024 09:59:42 - bt_login
+31/10/2024 09:59:44 - ============================== FIM:!
+global statusThread: False
+31/10/2024 10:00:11 - def fechar()
+31/10/2024 10:00:13 - janela.destroy()
+31/10/2024 10:06:40 - ============================== inicio ========================
+31/10/2024 10:06:40 - interface_grafica()
+31/10/2024 10:06:42 - def iniciar()
+31/10/2024 10:06:42 - Botao Iniciar clicado!
+31/10/2024 10:06:42 - global statusThread: False
+31/10/2024 10:06:42 - ============================== execuçao ========================
+31/10/2024 10:06:42 - Tarefa inicializada!
+statusThread:True
+31/10/2024 10:06:42 - ============================== Geracao_Pdf_Prescricao ==============================
+31/10/2024 10:06:42 - def pdf_para_csv():
+31/10/2024 10:06:42 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 10:06:42 - Arquivos:
+['a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf', 'a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 10:06:42 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf
+31/10/2024 10:06:42 - df_filtrado:        0        1        2   3   ...        7          8      9     10
+0  423275  LUCIANA  BARBOSA  30  ...  Clinicas       None   None  None
+1  633490   MANUEL   GENTIL  DE  ...    Centro  Cirurgico   None  None
+2  635085   AFONSO    CELSO  56  ...        3º      andar   None  None
+3  621123  ANDREIA  RIBEIRO  DE  ...      U.I.         3º  andar  None
+4  637294  ANDREZA  BARRETO  56  ...        3º      andar   None  None
+
+[5 rows x 11 columns]
+31/10/2024 10:06:52 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+31/10/2024 10:06:52 - box_usuario
+31/10/2024 10:06:54 - box_senha
+31/10/2024 10:06:56 - bt_login
+31/10/2024 10:07:13 - ============================== FIM:!
+global statusThread: False

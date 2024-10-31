@@ -58,6 +58,7 @@ def delete_all_files_in_directory(directory):
 
 def pdf_para_csv():
     global df_filtrado
+    global statusThread
     texto_completo = ""
     
     registrar_log("def pdf_para_csv():")
@@ -103,8 +104,8 @@ def pdf_para_csv():
 def Geracao_Pdf_Atendimen():
     global statusThread
     global df
-    # ============================== login no sistema ==============================
-    registrar_log('============================== login no sistema ==============================')
+    # ============================== Geracao_Pdf_Atendimen ==============================
+    registrar_log('============================== Geracao_Pdf_Atendimen ==============================')
 
     #tela toda:
 
@@ -135,8 +136,6 @@ def Geracao_Pdf_Atendimen():
     registrar_log('bt_login')
 
     driver.implicitly_wait(10)
-
-    #TODO: fazer rotina para puxar os numero de atendimento
 
     # click no atalho de utilitários:
     bt_utilitarios = driver.find_element(By.XPATH, value='//*[@id="app-view"]/tasy-corsisf1/div/w-mainlayout/div/div/w-launcher/div/ul/li[2]')
@@ -199,13 +198,97 @@ def Geracao_Pdf_Atendimen():
     
     registrar_log("=========== FIM ========")
 
+def Geracao_Pdf_Prescricao():
+    global statusThread
+    global df
+    global df_filtrado
+    # ============================== Geracao_Pdf_Prescricao ==============================
+    registrar_log('============================== Geracao_Pdf_Prescricao ==============================')
+    
+    df_filtrado = pdf_para_csv()
+    
+    registrar_log(f"df_filtrado: {df_filtrado.head(5)}")
+            
+    #TODO: Trabalhar o Data Frame
+    # Percorrendo cada linha e coluna e exibindo os dados no console
+    #print("\n***********************Exibindo dados linha por linha:")
+    #for linha in df_filtrado.iloc[:, 0]:
+    #    print(f"NR_ATENDIMENTO: {linha}")
+
+    
+    #tela toda:
+    driver = webdriver.Chrome()
+    options = Options()
+    options.add_argument("--start-maximized")
+    driver = webdriver.Chrome(options=options)
+
+    driver.get("http://aplicacao.hsf.local:7070/#/login")
+    registrar_log('driver.get("http://aplicacao.hsf.local:7070/#/login")')
+    title = driver.title
+
+    driver.implicitly_wait(1.5)
+
+    # box de usuario:
+    box_usuario = driver.find_element(By.XPATH, value='//*[@id="loginUsername"]')
+    box_usuario.send_keys('pvplima')
+    registrar_log('box_usuario')
+    driver.implicitly_wait(1.5)
+    time.sleep(2)
+
+    # box de senha:
+    box_senha = driver.find_element(By.XPATH, value='//*[@id="loginPassword"]')
+    box_senha.send_keys('hsf@2024')
+    registrar_log('box_senha')
+    driver.implicitly_wait(1.5)
+    time.sleep(2)
+
+    # botao de login:
+    bt_login = driver.find_element(By.XPATH, value='//*[@id="loginForm"]/input[3]')
+    bt_login.click()
+    registrar_log('bt_login')
+    driver.implicitly_wait(1.5)
+    time.sleep(10)
+    
+    # escrever CPOE
+    pyautogui.write('CPOE')
+    time.sleep(2)
+    
+    #dar enter:
+    pyautogui.press('enter')
+    time.sleep(2)
+    
+    #clicar no icone do CPOE:
+    bt_CPOE = driver.find_element(By.XPATH, value='//*[@id="app-view"]/tasy-corsisf1/div/w-mainlayout/div/div/w-launcher/div/div/div[1]/w-apps/div/div[1]/ul/li/w-feature-app/a/img')
+    bt_CPOE.click()
+    time.sleep(2)
+    driver.implicitly_wait(5)
+    
+    
+
+    driver.implicitly_wait(10)
+
+    #TODO: fazer rotina para puxar os numero de atendimento
+    
+    
+    
+    # FIM:
+    statusThread = False
+    registrar_log(f"============================== FIM:!\nglobal statusThread: {statusThread}")
+    
+    # pausa dramática:
+    driver.implicitly_wait(2)
+    time.sleep(20)
+    driver.quit()
+    
+    
+    
+    
 def interface_grafica():
     registrar_log("interface_grafica()")
 
     def iniciar():
         global statusThread
         global df_filtrado
-        global diretorio_atual
         registrar_log("def iniciar()")
         registrar_log("Botao Iniciar clicado!")
 
@@ -225,21 +308,9 @@ def interface_grafica():
 
             #TODO: inserir a execucao do login do tasy em uma thread:
             #Geracao_Pdf_Atendimen()
+            Geracao_Pdf_Prescricao()
             
-            #pdf_para_csv()
-            df_filtrado = pdf_para_csv()
-            
-            #TODO: Trabalhar o Data Frame
-            #print(f"global df_filtrado:{df_filtrado}")
-                    
-            #filtrando o data frame para retornar apenas os nr de atendimento:
-            #df_filtrado = df_filtrado[[0]].to_string(index=False)
-            print(df_filtrado)
-            
-            # Percorrendo cada linha e coluna e exibindo os dados no console
-            print("\n***********************Exibindo dados linha por linha:")
-            for linha in df_filtrado.iloc[:, 0]:
-                print(f"NR_ATENDIMENTO: {linha}")
+                
 
     def fechar():
         registrar_log("def fechar()")
