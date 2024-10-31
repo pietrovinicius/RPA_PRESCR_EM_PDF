@@ -3228,3 +3228,841 @@ statusThread:True
 31/10/2024 10:06:56 - bt_login
 31/10/2024 10:07:13 - ============================== FIM:!
 global statusThread: False
+31/10/2024 10:15:38 - def fechar()
+31/10/2024 10:15:41 - janela.destroy()
+31/10/2024 10:17:35 - ============================== inicio ========================
+31/10/2024 10:17:35 - interface_grafica()
+31/10/2024 10:17:38 - def iniciar()
+31/10/2024 10:17:38 - Botao Iniciar clicado!
+31/10/2024 10:17:38 - global statusThread: False
+31/10/2024 10:17:38 - ============================== execuçao ========================
+31/10/2024 10:17:38 - Tarefa inicializada!
+statusThread:True
+31/10/2024 10:17:38 - ============================== Geracao_Pdf_Prescricao ==============================
+31/10/2024 10:17:38 - def pdf_para_csv():
+31/10/2024 10:17:38 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 10:17:38 - Arquivos:
+['a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf', 'a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 10:17:38 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf
+31/10/2024 10:17:38 - df_filtrado:        0        1        2   3   ...        7          8      9     10
+0  423275  LUCIANA  BARBOSA  30  ...  Clinicas       None   None  None
+1  633490   MANUEL   GENTIL  DE  ...    Centro  Cirurgico   None  None
+2  635085   AFONSO    CELSO  56  ...        3º      andar   None  None
+3  621123  ANDREIA  RIBEIRO  DE  ...      U.I.         3º  andar  None
+4  637294  ANDREZA  BARRETO  56  ...        3º      andar   None  None
+
+[5 rows x 11 columns]
+31/10/2024 10:17:47 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+31/10/2024 10:17:48 - box_usuario
+31/10/2024 10:17:50 - box_senha
+31/10/2024 10:17:52 - bt_login
+31/10/2024 10:18:02 - CPOE
+31/10/2024 10:18:04 - enter
+31/10/2024 10:18:06 - clicar no icone do CPOE:
+31/10/2024 10:18:08 - nr_atendimento: 423275
+31/10/2024 10:18:10 - enter
+31/10/2024 10:18:12 - enter
+31/10/2024 10:18:14 - driver.implicitly_wait(10)
+31/10/2024 10:18:14 - CPOE
+31/10/2024 10:18:17 - enter
+31/10/2024 10:18:24 - clicar no icone do CPOE:
+31/10/2024 10:18:26 - nr_atendimento: 633490
+31/10/2024 10:18:29 - enter
+31/10/2024 10:18:31 - enter
+31/10/2024 10:18:33 - driver.implicitly_wait(10)
+31/10/2024 10:18:33 - CPOE
+31/10/2024 10:18:35 - enter
+31/10/2024 10:18:39 - def fechar()
+31/10/2024 10:18:40 - janela.destroy()
+31/10/2024 10:21:00 - ============================== inicio ========================
+31/10/2024 10:21:00 - interface_grafica()
+31/10/2024 10:21:02 - def iniciar()
+31/10/2024 10:21:02 - Botao Iniciar clicado!
+31/10/2024 10:21:02 - global statusThread: False
+31/10/2024 10:21:02 - ============================== execuçao ========================
+31/10/2024 10:21:02 - Tarefa inicializada!
+statusThread:True
+31/10/2024 10:21:02 - ============================== Geracao_Pdf_Prescricao ==============================
+31/10/2024 10:21:02 - def pdf_para_csv():
+31/10/2024 10:21:02 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 10:21:02 - Arquivos:
+['a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf', 'a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 10:21:02 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf
+31/10/2024 10:21:02 - df_filtrado:        0        1        2   3   ...        7          8      9     10
+0  423275  LUCIANA  BARBOSA  30  ...  Clinicas       None   None  None
+1  633490   MANUEL   GENTIL  DE  ...    Centro  Cirurgico   None  None
+2  635085   AFONSO    CELSO  56  ...        3º      andar   None  None
+3  621123  ANDREIA  RIBEIRO  DE  ...      U.I.         3º  andar  None
+4  637294  ANDREZA  BARRETO  56  ...        3º      andar   None  None
+
+[5 rows x 11 columns]
+31/10/2024 10:21:12 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+31/10/2024 10:21:12 - box_usuario
+31/10/2024 10:21:14 - box_senha
+31/10/2024 10:21:16 - bt_login
+31/10/2024 10:21:26 - Repeticao:
+NR_ATENDIMENTO: 423275
+31/10/2024 10:21:26 - CPOE
+31/10/2024 10:21:28 - enter
+31/10/2024 10:21:30 - clicar no icone do CPOE:
+31/10/2024 10:21:33 - nr_atendimento: 423275
+31/10/2024 10:21:35 - enter
+31/10/2024 10:21:37 - enter
+31/10/2024 10:21:39 - driver.implicitly_wait(10)
+31/10/2024 10:21:44 - def fechar()
+31/10/2024 10:21:46 - janela.destroy()
+31/10/2024 10:22:41 - ============================== inicio ========================
+31/10/2024 10:22:41 - interface_grafica()
+31/10/2024 10:22:42 - def iniciar()
+31/10/2024 10:22:42 - Botao Iniciar clicado!
+31/10/2024 10:22:42 - global statusThread: False
+31/10/2024 10:22:42 - ============================== execuçao ========================
+31/10/2024 10:22:42 - Tarefa inicializada!
+statusThread:True
+31/10/2024 10:22:42 - ============================== Geracao_Pdf_Prescricao ==============================
+31/10/2024 10:22:42 - def pdf_para_csv():
+31/10/2024 10:22:42 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 10:22:42 - Arquivos:
+['a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf', 'a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 10:22:42 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf
+31/10/2024 10:22:42 - df_filtrado:        0        1        2   3   ...        7          8      9     10
+0  423275  LUCIANA  BARBOSA  30  ...  Clinicas       None   None  None
+1  633490   MANUEL   GENTIL  DE  ...    Centro  Cirurgico   None  None
+2  635085   AFONSO    CELSO  56  ...        3º      andar   None  None
+3  621123  ANDREIA  RIBEIRO  DE  ...      U.I.         3º  andar  None
+4  637294  ANDREZA  BARRETO  56  ...        3º      andar   None  None
+
+[5 rows x 11 columns]
+31/10/2024 10:22:52 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+31/10/2024 10:22:52 - box_usuario
+31/10/2024 10:22:54 - box_senha
+31/10/2024 10:22:56 - bt_login
+31/10/2024 10:23:06 - Repeticao:
+NR_ATENDIMENTO: 423275
+31/10/2024 10:23:07 - CPOE
+31/10/2024 10:23:09 - enter
+31/10/2024 10:23:11 - clicar no icone do CPOE:
+31/10/2024 10:23:16 - nr_atendimento: 423275
+31/10/2024 10:23:21 - enter
+31/10/2024 10:23:26 - enter
+31/10/2024 10:23:31 - driver.implicitly_wait(10)
+31/10/2024 10:23:41 - Repeticao:
+NR_ATENDIMENTO: 633490
+31/10/2024 10:23:41 - CPOE
+31/10/2024 10:23:43 - enter
+31/10/2024 10:34:49 - ============================== inicio ========================
+31/10/2024 10:34:49 - interface_grafica()
+31/10/2024 10:34:54 - def iniciar()
+31/10/2024 10:34:54 - Botao Iniciar clicado!
+31/10/2024 10:34:54 - global statusThread: False
+31/10/2024 10:34:54 - ============================== execuçao ========================
+31/10/2024 10:34:54 - Tarefa inicializada!
+statusThread:True
+31/10/2024 10:34:54 - ============================== Geracao_Pdf_Prescricao ==============================
+31/10/2024 10:34:54 - def pdf_para_csv():
+31/10/2024 10:34:54 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 10:34:54 - Arquivos:
+['a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf', 'a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 10:34:54 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf
+31/10/2024 10:34:54 - df_filtrado:        0        1        2   3   ...        7          8      9     10
+0  423275  LUCIANA  BARBOSA  30  ...  Clinicas       None   None  None
+1  633490   MANUEL   GENTIL  DE  ...    Centro  Cirurgico   None  None
+2  635085   AFONSO    CELSO  56  ...        3º      andar   None  None
+3  621123  ANDREIA  RIBEIRO  DE  ...      U.I.         3º  andar  None
+4  637294  ANDREZA  BARRETO  56  ...        3º      andar   None  None
+
+[5 rows x 11 columns]
+31/10/2024 10:35:04 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+31/10/2024 10:35:04 - box_usuario
+31/10/2024 10:35:06 - box_senha
+31/10/2024 10:35:08 - bt_login
+31/10/2024 10:35:18 - Repeticao:
+NR_ATENDIMENTO: 423275
+31/10/2024 10:35:18 - CPOE
+31/10/2024 10:35:23 - enter
+31/10/2024 10:35:28 - clicar no icone do CPOE:
+31/10/2024 10:35:34 - nr_atendimento: 423275
+31/10/2024 10:35:39 - enter
+31/10/2024 10:35:44 - enter
+31/10/2024 10:35:54 - driver.implicitly_wait(10)
+31/10/2024 10:36:04 - Repeticao:
+NR_ATENDIMENTO: 633490
+31/10/2024 10:36:04 - CPOE
+31/10/2024 10:36:09 - def fechar()
+31/10/2024 10:36:11 - janela.destroy()
+31/10/2024 10:42:55 - ============================== inicio ========================
+31/10/2024 10:42:55 - interface_grafica()
+31/10/2024 10:43:01 - def iniciar()
+31/10/2024 10:43:01 - Botao Iniciar clicado!
+31/10/2024 10:43:01 - global statusThread: False
+31/10/2024 10:43:01 - ============================== execuçao ========================
+31/10/2024 10:43:01 - Tarefa inicializada!
+statusThread:True
+31/10/2024 10:43:01 - ============================== Geracao_Pdf_Prescricao ==============================
+31/10/2024 10:43:01 - def pdf_para_csv():
+31/10/2024 10:43:01 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 10:43:01 - Arquivos:
+['a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf', 'a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 10:43:01 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf
+31/10/2024 10:43:01 - df_filtrado:        0        1        2   3   ...        7          8      9     10
+0  423275  LUCIANA  BARBOSA  30  ...  Clinicas       None   None  None
+1  633490   MANUEL   GENTIL  DE  ...    Centro  Cirurgico   None  None
+2  635085   AFONSO    CELSO  56  ...        3º      andar   None  None
+3  621123  ANDREIA  RIBEIRO  DE  ...      U.I.         3º  andar  None
+4  637294  ANDREZA  BARRETO  56  ...        3º      andar   None  None
+
+[5 rows x 11 columns]
+31/10/2024 10:43:11 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+31/10/2024 10:43:11 - box_usuario
+31/10/2024 10:43:13 - box_senha
+31/10/2024 10:43:15 - bt_login
+31/10/2024 10:43:25 - Repeticao:
+NR_ATENDIMENTO: 423275
+31/10/2024 10:43:25 - CPOE
+31/10/2024 10:43:30 - enter
+31/10/2024 10:43:36 - clicar no icone do CPOE:
+31/10/2024 10:43:41 - nr_atendimento: 423275
+31/10/2024 10:43:46 - enter
+31/10/2024 10:43:51 - enter
+31/10/2024 10:44:46 - driver.implicitly_wait(10)
+31/10/2024 10:45:07 - def fechar()
+31/10/2024 10:45:08 - janela.destroy()
+31/10/2024 11:07:14 - ============================== inicio ========================
+31/10/2024 11:07:14 - interface_grafica()
+31/10/2024 11:07:15 - def iniciar()
+31/10/2024 11:07:15 - Botao Iniciar clicado!
+31/10/2024 11:07:15 - global statusThread: False
+31/10/2024 11:07:15 - ============================== execuçao ========================
+31/10/2024 11:07:15 - Tarefa inicializada!
+statusThread:True
+31/10/2024 11:07:15 - ============================== Geracao_Pdf_Prescricao ==============================
+31/10/2024 11:07:15 - def pdf_para_csv():
+31/10/2024 11:07:15 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 11:07:15 - Arquivos:
+['a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf', 'a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 11:07:15 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf
+31/10/2024 11:07:16 - df_filtrado:        0        1        2   3   ...        7          8      9     10
+0  423275  LUCIANA  BARBOSA  30  ...  Clinicas       None   None  None
+1  633490   MANUEL   GENTIL  DE  ...    Centro  Cirurgico   None  None
+2  635085   AFONSO    CELSO  56  ...        3º      andar   None  None
+3  621123  ANDREIA  RIBEIRO  DE  ...      U.I.         3º  andar  None
+4  637294  ANDREZA  BARRETO  56  ...        3º      andar   None  None
+
+[5 rows x 11 columns]
+31/10/2024 11:07:27 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+31/10/2024 11:07:27 - box_usuario
+31/10/2024 11:07:29 - box_senha
+31/10/2024 11:07:31 - bt_login
+31/10/2024 11:07:41 - Repeticao:
+NR_ATENDIMENTO: 423275
+31/10/2024 11:07:41 - CPOE
+31/10/2024 11:07:46 - enter
+31/10/2024 11:07:51 - clicar no icone do CPOE:
+31/10/2024 11:07:56 - nr_atendimento: 423275
+31/10/2024 11:08:01 - enter
+31/10/2024 11:08:07 - enter
+31/10/2024 11:08:17 - click no visualizar
+pyautogui.click(1456, 380)
+31/10/2024 11:08:37 - driver.implicitly_wait(10)
+31/10/2024 11:08:47 - Repeticao:
+NR_ATENDIMENTO: 633490
+31/10/2024 11:08:47 - CPOE
+31/10/2024 11:11:58 - def fechar()
+31/10/2024 11:11:59 - janela.destroy()
+31/10/2024 11:12:49 - ============================== inicio ========================
+31/10/2024 11:12:49 - interface_grafica()
+31/10/2024 11:12:54 - def iniciar()
+31/10/2024 11:12:54 - Botao Iniciar clicado!
+31/10/2024 11:12:54 - global statusThread: False
+31/10/2024 11:12:54 - ============================== execuçao ========================
+31/10/2024 11:12:54 - Tarefa inicializada!
+statusThread:True
+31/10/2024 11:12:54 - ============================== Geracao_Pdf_Prescricao ==============================
+31/10/2024 11:12:54 - def pdf_para_csv():
+31/10/2024 11:12:54 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 11:12:54 - Arquivos:
+['0f22d3be-c229-4055-88d1-f64700364af6.pdf', 'a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf', 'a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 11:12:54 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\0f22d3be-c229-4055-88d1-f64700364af6.pdf
+31/10/2024 11:12:54 - df_filtrado:            0           1               2   ...    17    18    19
+0  Associação         Lar             São  ...  None  None  None
+1  Prescrição  Eletrônica  Paciente423275  ...  None  None  None
+2    Paciente     LUCIANA         BARBOSA  ...  None  None  None
+3        Data      Nascto      06/05/1971  ...  None  None  None
+4        Sexo    Feminino            Data  ...  None  None  None
+
+[5 rows x 20 columns]
+31/10/2024 11:13:04 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+31/10/2024 11:13:04 - box_usuario
+31/10/2024 11:13:06 - box_senha
+31/10/2024 11:13:08 - bt_login
+31/10/2024 11:13:18 - Repeticao:
+NR_ATENDIMENTO: Associação
+31/10/2024 11:13:19 - CPOE
+31/10/2024 11:13:24 - enter
+31/10/2024 11:13:29 - clicar no icone do CPOE:
+31/10/2024 11:13:34 - nr_atendimento: Associação
+31/10/2024 11:13:39 - enter
+31/10/2024 11:13:44 - enter
+31/10/2024 11:13:51 - def fechar()
+31/10/2024 11:13:52 - janela.destroy()
+31/10/2024 11:14:53 - ============================== inicio ========================
+31/10/2024 11:14:53 - interface_grafica()
+31/10/2024 11:14:55 - def iniciar()
+31/10/2024 11:14:55 - Botao Iniciar clicado!
+31/10/2024 11:14:55 - global statusThread: False
+31/10/2024 11:14:55 - ============================== execuçao ========================
+31/10/2024 11:14:55 - Tarefa inicializada!
+statusThread:True
+31/10/2024 11:14:55 - ============================== Geracao_Pdf_Prescricao ==============================
+31/10/2024 11:14:55 - def pdf_para_csv():
+31/10/2024 11:14:55 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 11:14:55 - Arquivos:
+['0f22d3be-c229-4055-88d1-f64700364af6.pdf', 'a6e9ecd2-4768-4a77-bac9-52720f6d258b.pdf', 'a919f425-e3d4-4e55-867c-c5668220342a.pdf']
+31/10/2024 11:14:55 - 
+*****Ultimo arquivo: C:\Users\pvplima.C19NOT76\Downloads\0f22d3be-c229-4055-88d1-f64700364af6.pdf
+31/10/2024 11:14:55 - df_filtrado:            0           1               2   ...    17    18    19
+0  Associação         Lar             São  ...  None  None  None
+1  Prescrição  Eletrônica  Paciente423275  ...  None  None  None
+2    Paciente     LUCIANA         BARBOSA  ...  None  None  None
+3        Data      Nascto      06/05/1971  ...  None  None  None
+4        Sexo    Feminino            Data  ...  None  None  None
+
+[5 rows x 20 columns]
+31/10/2024 11:15:05 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+31/10/2024 11:15:05 - box_usuario
+31/10/2024 11:15:07 - box_senha
+31/10/2024 11:15:09 - bt_login
+31/10/2024 11:36:58 - def fechar()
+31/10/2024 11:37:00 - janela.destroy()
+31/10/2024 11:37:07 - ============================== inicio ========================
+31/10/2024 11:37:07 - interface_grafica()
+31/10/2024 11:37:09 - def iniciar()
+31/10/2024 11:37:09 - Botao Iniciar clicado!
+31/10/2024 11:37:09 - global statusThread: False
+31/10/2024 11:37:09 - ============================== execuçao ========================
+31/10/2024 11:37:09 - Tarefa inicializada!
+statusThread:True
+31/10/2024 11:37:09 - delete_all_files_in_directory(C:\Users\pvplima.C19NOT76\Downloads)
+31/10/2024 11:37:09 - ============================== Geracao_Pdf_Atendimen ==============================
+31/10/2024 11:37:18 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+31/10/2024 11:37:18 - box_usuario
+31/10/2024 11:37:18 - box_senha
+31/10/2024 11:37:18 - bt_login
+31/10/2024 11:37:23 - bt_utilitarios.click()
+31/10/2024 11:37:25 - bt_impressao_relatorios.click()
+31/10/2024 11:37:27 - box_codigo_rel.send_keys('1790')
+31/10/2024 11:37:29 - pyautogui.press('enter')
+31/10/2024 11:37:31 - bt_visualizar_.click()
+31/10/2024 11:37:43 - click apos o download
+pyautogui.click(1810,165)
+31/10/2024 11:37:53 - Pressionar Item
+pyautogui.press('enter')
+31/10/2024 11:37:57 - click no manter
+pyautogui.click(1751,109)
+31/10/2024 11:37:57 - ******def pdf_para_csv():
+31/10/2024 11:37:57 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 11:37:57 - Arquivos:
+[]
+31/10/2024 11:40:07 - ============================== inicio ========================
+31/10/2024 11:40:07 - interface_grafica()
+31/10/2024 11:40:09 - def iniciar()
+31/10/2024 11:40:09 - Botao Iniciar clicado!
+31/10/2024 11:40:09 - global statusThread: False
+31/10/2024 11:40:09 - ============================== execuçao ========================
+31/10/2024 11:40:09 - Tarefa inicializada!
+statusThread:True
+31/10/2024 11:40:09 - delete_all_files_in_directory(C:\Users\pvplima.C19NOT76\Downloads)
+31/10/2024 11:40:09 - ============================== Geracao_Pdf_Atendimen ==============================
+31/10/2024 11:40:19 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+31/10/2024 11:40:19 - box_usuario
+31/10/2024 11:40:19 - box_senha
+31/10/2024 11:40:19 - bt_login
+31/10/2024 11:40:24 - bt_utilitarios.click()
+31/10/2024 11:40:26 - bt_impressao_relatorios.click()
+31/10/2024 11:40:31 - box_codigo_rel.send_keys('1790')
+31/10/2024 11:40:36 - pyautogui.press('enter')
+31/10/2024 11:40:41 - bt_visualizar_.click()
+31/10/2024 11:41:01 - click apos o download
+pyautogui.click(1810,165)
+31/10/2024 11:41:11 - Pressionar Item
+pyautogui.press('enter')
+31/10/2024 11:41:15 - click no manter
+pyautogui.click(1751,109)
+31/10/2024 11:41:15 - ******def pdf_para_csv():
+31/10/2024 11:41:15 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 11:41:15 - Arquivos:
+['6cf24c21-2453-40e2-8cb6-60968a742c76.pdf']
+31/10/2024 11:41:15 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\6cf24c21-2453-40e2-8cb6-60968a742c76.pdf
+31/10/2024 11:41:15 - *****renomear arquivo: C:\Users\pvplima.C19NOT76\Downloads\Atendimentos.pdf
+31/10/2024 11:41:15 - *****os.rename
+novo_caminho: C:\Users\pvplima.C19NOT76\Downloads\Atendimentos.pdf
+31/10/2024 11:41:15 - 
+*****Ultimo arquivo apos renomear: C:\Users\pvplima.C19NOT76\Downloads\6cf24c21-2453-40e2-8cb6-60968a742c76.pdf
+31/10/2024 11:41:15 - Erro ao mover o arquivo: [WinError 2] O sistema não pode encontrar o arquivo especificado
+31/10/2024 11:44:17 - ============================== inicio ========================
+31/10/2024 11:44:17 - interface_grafica()
+31/10/2024 11:44:23 - def iniciar()
+31/10/2024 11:44:23 - Botao Iniciar clicado!
+31/10/2024 11:44:23 - global statusThread: False
+31/10/2024 11:44:23 - ============================== execuçao ========================
+31/10/2024 11:44:23 - Tarefa inicializada!
+statusThread:True
+31/10/2024 11:44:23 - delete_all_files_in_directory(C:\Users\pvplima.C19NOT76\Downloads)
+31/10/2024 11:44:23 - ============================== Geracao_Pdf_Atendimen ==============================
+31/10/2024 11:44:33 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+31/10/2024 11:44:33 - box_usuario
+31/10/2024 11:44:33 - box_senha
+31/10/2024 11:44:33 - bt_login
+31/10/2024 11:44:37 - bt_utilitarios.click()
+31/10/2024 11:44:39 - bt_impressao_relatorios.click()
+31/10/2024 11:44:44 - box_codigo_rel.send_keys('1790')
+31/10/2024 11:44:49 - pyautogui.press('enter')
+31/10/2024 11:44:54 - bt_visualizar_.click()
+31/10/2024 11:45:15 - click apos o download
+pyautogui.click(1810,165)
+31/10/2024 11:45:25 - Pressionar Item
+pyautogui.press('enter')
+31/10/2024 11:45:30 - click no manter
+pyautogui.click(1751,109)
+31/10/2024 11:45:35 - ******def pdf_para_csv():
+31/10/2024 11:45:35 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 11:45:35 - Arquivos:
+['7e637535-cb3b-4bd9-a3dd-542a104952fe.pdf']
+31/10/2024 11:45:35 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\7e637535-cb3b-4bd9-a3dd-542a104952fe.pdf
+31/10/2024 11:45:35 - *****renomear arquivo: C:\Users\pvplima.C19NOT76\Downloads\Atendimentos.pdf
+31/10/2024 11:45:35 - *****os.rename
+novo_caminho: C:\Users\pvplima.C19NOT76\Downloads\Atendimentos.pdf
+31/10/2024 11:45:35 - 
+*****Ultimo arquivo apos renomear: C:\Users\pvplima.C19NOT76\Downloads\Atendimentos.pdf
+31/10/2024 11:45:35 - Erro ao mover o arquivo: [WinError 2] O sistema não pode encontrar o arquivo especificado
+31/10/2024 11:47:00 - ============================== inicio ========================
+31/10/2024 11:47:00 - interface_grafica()
+31/10/2024 11:47:01 - def iniciar()
+31/10/2024 11:47:01 - Botao Iniciar clicado!
+31/10/2024 11:47:01 - global statusThread: False
+31/10/2024 11:47:01 - ============================== execuçao ========================
+31/10/2024 11:47:01 - Tarefa inicializada!
+statusThread:True
+31/10/2024 11:47:01 - delete_all_files_in_directory(C:\Users\pvplima.C19NOT76\Downloads)
+31/10/2024 11:47:01 - ============================== Geracao_Pdf_Atendimen ==============================
+31/10/2024 11:47:11 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+31/10/2024 11:47:11 - box_usuario
+31/10/2024 11:47:12 - box_senha
+31/10/2024 11:47:12 - bt_login
+31/10/2024 11:47:16 - bt_utilitarios.click()
+31/10/2024 11:47:18 - bt_impressao_relatorios.click()
+31/10/2024 11:47:23 - box_codigo_rel.send_keys('1790')
+31/10/2024 11:47:28 - pyautogui.press('enter')
+31/10/2024 11:47:33 - bt_visualizar_.click()
+31/10/2024 11:47:53 - click apos o download
+pyautogui.click(1810,165)
+31/10/2024 11:48:04 - Pressionar Item
+pyautogui.press('enter')
+31/10/2024 11:48:09 - click no manter
+pyautogui.click(1751,109)
+31/10/2024 11:48:14 - ******def pdf_para_csv():
+31/10/2024 11:48:14 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 11:48:14 - Arquivos:
+['3f895c4e-d211-480e-901d-031e65bb12d3.pdf']
+31/10/2024 11:48:14 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\3f895c4e-d211-480e-901d-031e65bb12d3.pdf
+31/10/2024 11:48:14 - *****renomear arquivo: C:\Users\pvplima.C19NOT76\Downloads\Atendimentos.pdf
+31/10/2024 11:48:14 - *****os.rename
+novo_caminho: C:\Users\pvplima.C19NOT76\Downloads\Atendimentos.pdf
+31/10/2024 11:48:14 - 
+*****Ultimo arquivo apos renomear: C:\Users\pvplima.C19NOT76\Downloads\Atendimentos.pdf
+31/10/2024 11:48:14 - Arquivo movido de C:\Users\pvplima.C19NOT76\Downloads\Atendimentos.pdf para C:\Pietro\Projetos\RPA_PRESCR_EM_PDF com sucesso!
+31/10/2024 11:52:53 - ============================== inicio ========================
+31/10/2024 11:52:53 - interface_grafica()
+31/10/2024 11:52:55 - def iniciar()
+31/10/2024 11:52:55 - Botao Iniciar clicado!
+31/10/2024 11:52:55 - global statusThread: False
+31/10/2024 11:52:55 - ============================== execuçao ========================
+31/10/2024 11:52:55 - Tarefa inicializada!
+statusThread:True
+31/10/2024 11:52:55 - delete_all_files_in_directory(C:\Users\pvplima.C19NOT76\Downloads)
+31/10/2024 11:52:55 - ============================== Geracao_Pdf_Atendimen ==============================
+31/10/2024 11:53:05 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+31/10/2024 11:53:05 - box_usuario
+31/10/2024 11:53:05 - box_senha
+31/10/2024 11:53:05 - bt_login
+31/10/2024 11:53:09 - bt_utilitarios.click()
+31/10/2024 11:53:12 - bt_impressao_relatorios.click()
+31/10/2024 11:53:17 - box_codigo_rel.send_keys('1790')
+31/10/2024 11:53:22 - pyautogui.press('enter')
+31/10/2024 11:53:27 - bt_visualizar_.click()
+31/10/2024 11:53:47 - click apos o download
+pyautogui.click(1810,165)
+31/10/2024 11:53:57 - Pressionar Item
+pyautogui.press('enter')
+31/10/2024 11:54:02 - click no manter
+pyautogui.click(1751,109)
+31/10/2024 11:54:07 - ******def pdf_para_csv():
+31/10/2024 11:54:07 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 11:54:07 - Arquivos:
+['55ac3b1a-f3c3-42c6-9dfa-a0327acf6f5f.pdf']
+31/10/2024 11:54:07 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\55ac3b1a-f3c3-42c6-9dfa-a0327acf6f5f.pdf
+31/10/2024 11:54:07 - *****renomear arquivo: C:\Users\pvplima.C19NOT76\Downloads\Atendimentos.pdf
+31/10/2024 11:54:07 - *****os.rename
+novo_caminho: C:\Users\pvplima.C19NOT76\Downloads\Atendimentos.pdf
+31/10/2024 11:54:07 - 
+*****Ultimo arquivo apos renomear: C:\Users\pvplima.C19NOT76\Downloads\Atendimentos.pdf
+31/10/2024 11:54:07 - Erro ao mover o arquivo: Destination path 'C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf' already exists
+31/10/2024 11:54:07 - Arquivos diretorio_atual:
+['Atendimentos.pdf']
+31/10/2024 11:57:44 - ============================== inicio ========================
+31/10/2024 11:57:44 - interface_grafica()
+31/10/2024 11:57:46 - def iniciar()
+31/10/2024 11:57:46 - Botao Iniciar clicado!
+31/10/2024 11:57:46 - global statusThread: False
+31/10/2024 11:57:46 - ============================== execuçao ========================
+31/10/2024 11:57:46 - Tarefa inicializada!
+statusThread:True
+31/10/2024 11:57:46 - delete_all_files_in_directory(C:\Users\pvplima.C19NOT76\Downloads)
+31/10/2024 11:57:46 - ============================== Geracao_Pdf_Atendimen ==============================
+31/10/2024 11:57:56 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+31/10/2024 11:57:56 - box_usuario
+31/10/2024 11:57:56 - box_senha
+31/10/2024 11:57:56 - bt_login
+31/10/2024 11:58:00 - bt_utilitarios.click()
+31/10/2024 11:58:02 - bt_impressao_relatorios.click()
+31/10/2024 11:58:07 - box_codigo_rel.send_keys('1790')
+31/10/2024 11:58:13 - pyautogui.press('enter')
+31/10/2024 11:58:18 - bt_visualizar_.click()
+31/10/2024 11:58:38 - click apos o download
+pyautogui.click(1810,165)
+31/10/2024 11:58:48 - Pressionar Item
+pyautogui.press('enter')
+31/10/2024 11:58:53 - click no manter
+pyautogui.click(1751,109)
+31/10/2024 11:58:58 - ******def pdf_para_csv():
+31/10/2024 11:58:58 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 11:58:58 - Arquivos:
+['4e8bb36e-e466-44c8-8dcd-87b047720a15.pdf']
+31/10/2024 11:58:58 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\4e8bb36e-e466-44c8-8dcd-87b047720a15.pdf
+31/10/2024 11:58:58 - *****renomear arquivo: C:\Users\pvplima.C19NOT76\Downloads\Atendimentos.pdf
+31/10/2024 11:58:58 - *****os.rename
+novo_caminho: C:\Users\pvplima.C19NOT76\Downloads\Atendimentos.pdf
+31/10/2024 11:58:58 - 
+*****Ultimo arquivo apos renomear: C:\Users\pvplima.C19NOT76\Downloads\Atendimentos.pdf
+31/10/2024 11:58:58 - Erro ao mover o arquivo: Destination path 'C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf' already exists
+31/10/2024 11:58:58 - Arquivos diretorio_atual:
+['Atendimentos.pdf']
+31/10/2024 11:58:58 - 
+*****Ultimo arquivo antes de renomear: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\4e8bb36e-e466-44c8-8dcd-87b047720a15.pdf
+31/10/2024 12:01:17 - ============================== inicio ========================
+31/10/2024 12:01:17 - interface_grafica()
+31/10/2024 12:01:19 - def iniciar()
+31/10/2024 12:01:19 - Botao Iniciar clicado!
+31/10/2024 12:01:19 - global statusThread: False
+31/10/2024 12:01:19 - ============================== execuçao ========================
+31/10/2024 12:01:19 - Tarefa inicializada!
+statusThread:True
+31/10/2024 12:01:19 - delete_all_files_in_directory(C:\Users\pvplima.C19NOT76\Downloads)
+31/10/2024 12:01:19 - ============================== Geracao_Pdf_Atendimen ==============================
+31/10/2024 12:01:28 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+31/10/2024 12:01:28 - box_usuario
+31/10/2024 12:01:28 - box_senha
+31/10/2024 12:01:28 - bt_login
+31/10/2024 12:01:33 - bt_utilitarios.click()
+31/10/2024 12:01:35 - bt_impressao_relatorios.click()
+31/10/2024 12:01:40 - box_codigo_rel.send_keys('1790')
+31/10/2024 12:01:45 - pyautogui.press('enter')
+31/10/2024 12:01:50 - bt_visualizar_.click()
+31/10/2024 12:02:10 - click apos o download
+pyautogui.click(1810,165)
+31/10/2024 12:02:20 - Pressionar Item
+pyautogui.press('enter')
+31/10/2024 12:02:25 - click no manter
+pyautogui.click(1751,109)
+31/10/2024 12:02:30 - ******def pdf_para_csv():
+31/10/2024 12:02:30 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 12:02:30 - Arquivos:
+['383e5415-d737-4cb6-8e22-68f41f153ff6.pdf']
+31/10/2024 12:02:30 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\383e5415-d737-4cb6-8e22-68f41f153ff6.pdf
+31/10/2024 12:02:30 - *****renomear arquivo: C:\Users\pvplima.C19NOT76\Downloads\Atendimentos.pdf
+31/10/2024 12:02:30 - *****os.rename
+novo_caminho: C:\Users\pvplima.C19NOT76\Downloads\Atendimentos.pdf
+31/10/2024 12:02:30 - 
+*****Ultimo arquivo apos renomear: C:\Users\pvplima.C19NOT76\Downloads\Atendimentos.pdf
+31/10/2024 12:02:30 - Erro ao mover o arquivo: Destination path 'C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf' already exists
+31/10/2024 12:02:30 - Arquivos diretorio_atual:
+['Atendimentos.pdf']
+31/10/2024 12:02:30 - 
+*****Ultimo arquivo antes de renomear: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\383e5415-d737-4cb6-8e22-68f41f153ff6.pdf
+31/10/2024 12:03:42 - ============================== inicio ========================
+31/10/2024 12:03:42 - interface_grafica()
+31/10/2024 12:03:44 - def iniciar()
+31/10/2024 12:03:44 - Botao Iniciar clicado!
+31/10/2024 12:03:44 - global statusThread: False
+31/10/2024 12:03:44 - ============================== execuçao ========================
+31/10/2024 12:03:44 - Tarefa inicializada!
+statusThread:True
+31/10/2024 12:03:44 - delete_all_files_in_directory(C:\Users\pvplima.C19NOT76\Downloads)
+31/10/2024 12:03:44 - ============================== Geracao_Pdf_Atendimen ==============================
+31/10/2024 12:03:54 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+31/10/2024 12:03:54 - box_usuario
+31/10/2024 12:03:54 - box_senha
+31/10/2024 12:03:54 - bt_login
+31/10/2024 12:03:58 - bt_utilitarios.click()
+31/10/2024 12:04:00 - bt_impressao_relatorios.click()
+31/10/2024 12:04:06 - box_codigo_rel.send_keys('1790')
+31/10/2024 12:04:11 - pyautogui.press('enter')
+31/10/2024 12:04:16 - bt_visualizar_.click()
+31/10/2024 12:04:36 - click apos o download
+pyautogui.click(1810,165)
+31/10/2024 12:04:46 - Pressionar Item
+pyautogui.press('enter')
+31/10/2024 12:04:51 - click no manter
+pyautogui.click(1751,109)
+31/10/2024 12:04:56 - ******def pdf_para_csv():
+31/10/2024 12:04:56 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 12:04:56 - Arquivos:
+['27e60a0d-caa9-416b-938b-859c82d8796b.pdf']
+31/10/2024 12:04:56 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\27e60a0d-caa9-416b-938b-859c82d8796b.pdf
+31/10/2024 12:04:56 - global statusThread: False
+31/10/2024 12:05:00 - =========== FIM ========
+31/10/2024 12:06:51 - def fechar()
+31/10/2024 12:06:52 - janela.destroy()
+31/10/2024 12:15:24 - ============================== inicio ========================
+31/10/2024 12:15:24 - interface_grafica()
+31/10/2024 12:15:26 - def iniciar()
+31/10/2024 12:15:26 - Botao Iniciar clicado!
+31/10/2024 12:15:26 - global statusThread: False
+31/10/2024 12:15:26 - ============================== execuçao ========================
+31/10/2024 12:15:26 - Tarefa inicializada!
+statusThread:True
+31/10/2024 12:15:26 - ******def pdf_para_csv():
+31/10/2024 12:15:26 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 12:15:26 - Arquivos:
+['27e60a0d-caa9-416b-938b-859c82d8796b.pdf']
+31/10/2024 12:15:26 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\27e60a0d-caa9-416b-938b-859c82d8796b.pdf
+31/10/2024 12:16:38 - def fechar()
+31/10/2024 12:16:39 - janela.destroy()
+31/10/2024 12:16:42 - ============================== inicio ========================
+31/10/2024 12:16:42 - interface_grafica()
+31/10/2024 12:16:44 - def iniciar()
+31/10/2024 12:16:44 - Botao Iniciar clicado!
+31/10/2024 12:16:44 - global statusThread: False
+31/10/2024 12:16:44 - ============================== execuçao ========================
+31/10/2024 12:16:44 - Tarefa inicializada!
+statusThread:True
+31/10/2024 12:16:44 - ******def pdf_para_csv():
+31/10/2024 12:16:44 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 12:16:44 - Arquivos:
+['27e60a0d-caa9-416b-938b-859c82d8796b.pdf']
+31/10/2024 12:16:44 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\27e60a0d-caa9-416b-938b-859c82d8796b.pdf
+31/10/2024 12:16:44 - mover_ultimo_pdf_para_raiz(ultimo_arquivo,diretorio_atual)
+31/10/2024 12:16:54 - def fechar()
+31/10/2024 12:16:55 - janela.destroy()
+31/10/2024 12:21:43 - ============================== inicio ========================
+31/10/2024 12:21:43 - interface_grafica()
+31/10/2024 12:21:44 - def iniciar()
+31/10/2024 12:21:44 - Botao Iniciar clicado!
+31/10/2024 12:21:44 - global statusThread: False
+31/10/2024 12:21:44 - ============================== execuçao ========================
+31/10/2024 12:21:44 - Tarefa inicializada!
+statusThread:True
+31/10/2024 12:21:44 - ******def pdf_para_csv():
+31/10/2024 12:21:44 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 12:21:44 - Arquivos:
+['Atendimentos.pdf']
+31/10/2024 12:21:44 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\Atendimentos.pdf
+31/10/2024 12:21:44 - mover_ultimo_pdf_para_raiz(ultimo_arquivo,diretorio_atual)
+31/10/2024 12:21:44 - *****caminho_arquivo: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf
+31/10/2024 12:22:36 - def fechar()
+31/10/2024 12:22:37 - janela.destroy()
+31/10/2024 12:22:39 - ============================== inicio ========================
+31/10/2024 12:22:39 - interface_grafica()
+31/10/2024 12:22:41 - def iniciar()
+31/10/2024 12:22:41 - Botao Iniciar clicado!
+31/10/2024 12:22:41 - global statusThread: False
+31/10/2024 12:22:41 - ============================== execuçao ========================
+31/10/2024 12:22:41 - Tarefa inicializada!
+statusThread:True
+31/10/2024 12:22:41 - ******def pdf_para_csv():
+31/10/2024 12:22:41 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 12:22:41 - Arquivos:
+[]
+31/10/2024 12:23:02 - def fechar()
+31/10/2024 12:23:03 - janela.destroy()
+31/10/2024 12:23:51 - ============================== inicio ========================
+31/10/2024 12:23:51 - interface_grafica()
+31/10/2024 12:23:53 - def iniciar()
+31/10/2024 12:23:53 - Botao Iniciar clicado!
+31/10/2024 12:23:53 - global statusThread: False
+31/10/2024 12:23:53 - ============================== execuçao ========================
+31/10/2024 12:23:53 - Tarefa inicializada!
+statusThread:True
+31/10/2024 12:23:53 - ******def pdf_para_csv():
+31/10/2024 12:23:53 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 12:23:53 - Arquivos:
+['Atendimentos - Copia (10).pdf', 'Atendimentos - Copia (11).pdf', 'Atendimentos - Copia (12).pdf', 'Atendimentos - Copia (13).pdf', 'Atendimentos - Copia (2).pdf', 'Atendimentos - Copia (3).pdf', 'Atendimentos - Copia (4).pdf', 'Atendimentos - Copia (5).pdf', 'Atendimentos - Copia (6).pdf', 'Atendimentos - Copia (7).pdf', 'Atendimentos - Copia (8).pdf', 'Atendimentos - Copia (9).pdf', 'Atendimentos - Copia.pdf', 'Atendimentos.pdf']
+31/10/2024 12:23:53 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\Atendimentos - Copia (10).pdf
+31/10/2024 12:23:53 - mover_ultimo_pdf_para_raiz(ultimo_arquivo,diretorio_atual)
+31/10/2024 12:24:12 - def iniciar()
+31/10/2024 12:24:12 - Botao Iniciar clicado!
+31/10/2024 12:24:12 - global statusThread: True
+31/10/2024 12:24:12 - Thread já foi iniciada, statusThread: 
+True
+31/10/2024 12:24:16 - def fechar()
+31/10/2024 12:24:17 - janela.destroy()
+31/10/2024 12:24:20 - ============================== inicio ========================
+31/10/2024 12:24:20 - interface_grafica()
+31/10/2024 12:24:22 - def iniciar()
+31/10/2024 12:24:22 - Botao Iniciar clicado!
+31/10/2024 12:24:22 - global statusThread: False
+31/10/2024 12:24:22 - ============================== execuçao ========================
+31/10/2024 12:24:22 - Tarefa inicializada!
+statusThread:True
+31/10/2024 12:24:22 - ******def pdf_para_csv():
+31/10/2024 12:24:22 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 12:24:22 - Arquivos:
+['Atendimentos - Copia (10).pdf', 'Atendimentos - Copia (11).pdf', 'Atendimentos - Copia (12).pdf', 'Atendimentos - Copia (13).pdf', 'Atendimentos - Copia (2).pdf', 'Atendimentos - Copia (3).pdf', 'Atendimentos - Copia (4).pdf', 'Atendimentos - Copia (5).pdf', 'Atendimentos - Copia (6).pdf', 'Atendimentos - Copia (7).pdf', 'Atendimentos - Copia (8).pdf', 'Atendimentos - Copia (9).pdf', 'Atendimentos - Copia.pdf', 'Atendimentos.pdf']
+31/10/2024 12:24:22 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\Atendimentos - Copia (10).pdf
+31/10/2024 12:24:22 - mover_ultimo_pdf_para_raiz(ultimo_arquivo,diretorio_atual)
+31/10/2024 12:24:29 - def fechar()
+31/10/2024 12:24:30 - janela.destroy()
+31/10/2024 12:24:55 - ============================== inicio ========================
+31/10/2024 12:24:55 - interface_grafica()
+31/10/2024 12:24:57 - def iniciar()
+31/10/2024 12:24:57 - Botao Iniciar clicado!
+31/10/2024 12:24:57 - global statusThread: False
+31/10/2024 12:24:57 - ============================== execuçao ========================
+31/10/2024 12:24:57 - Tarefa inicializada!
+statusThread:True
+31/10/2024 12:24:57 - ******def pdf_para_csv():
+31/10/2024 12:24:57 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 12:24:57 - Arquivos:
+['Atendimentos_testes.pdf']
+31/10/2024 12:24:57 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\Atendimentos_testes.pdf
+31/10/2024 12:24:57 - mover_ultimo_pdf_para_raiz(ultimo_arquivo,diretorio_atual)
+31/10/2024 12:24:57 - *****caminho_arquivo: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf
+31/10/2024 12:24:57 - ultimo_arquivo: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf
+31/10/2024 12:25:04 - def fechar()
+31/10/2024 12:25:05 - janela.destroy()
+31/10/2024 12:25:46 - ============================== inicio ========================
+31/10/2024 12:25:46 - interface_grafica()
+31/10/2024 12:25:48 - def iniciar()
+31/10/2024 12:25:48 - Botao Iniciar clicado!
+31/10/2024 12:25:48 - global statusThread: False
+31/10/2024 12:25:48 - ============================== execuçao ========================
+31/10/2024 12:25:48 - Tarefa inicializada!
+statusThread:True
+31/10/2024 12:25:48 - ******def pdf_para_csv():
+31/10/2024 12:25:48 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 12:25:48 - Arquivos:
+['Atendimentos_.pdf']
+31/10/2024 12:25:48 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\Atendimentos_.pdf
+31/10/2024 12:25:48 - mover_ultimo_pdf_para_raiz(ultimo_arquivo,diretorio_atual)
+31/10/2024 12:25:48 - *****caminho_arquivo: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf
+31/10/2024 12:25:48 - ultimo_arquivo: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf
+31/10/2024 12:25:50 - def fechar()
+31/10/2024 12:25:52 - janela.destroy()
+31/10/2024 12:34:14 - ============================== inicio ========================
+31/10/2024 12:34:14 - interface_grafica()
+31/10/2024 12:34:17 - def iniciar()
+31/10/2024 12:34:17 - Botao Iniciar clicado!
+31/10/2024 12:34:17 - global statusThread: False
+31/10/2024 12:34:17 - ============================== execuçao ========================
+31/10/2024 12:34:17 - Tarefa inicializada!
+statusThread:True
+31/10/2024 12:34:17 - ******def pdf_para_csv():
+31/10/2024 12:34:17 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 12:34:17 - Arquivos:
+['Atendimentos_.pdf']
+31/10/2024 12:34:17 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\Atendimentos_.pdf
+31/10/2024 12:34:17 - mover_ultimo_pdf_para_raiz(ultimo_arquivo,diretorio_atual)
+31/10/2024 12:34:17 - *****caminho_arquivo: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf
+31/10/2024 12:34:17 - ultimo_arquivo: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf
+31/10/2024 12:35:09 - ============================== inicio ========================
+31/10/2024 12:35:09 - interface_grafica()
+31/10/2024 12:35:11 - def iniciar()
+31/10/2024 12:35:11 - Botao Iniciar clicado!
+31/10/2024 12:35:11 - global statusThread: False
+31/10/2024 12:35:11 - ============================== execuçao ========================
+31/10/2024 12:35:11 - Tarefa inicializada!
+statusThread:True
+31/10/2024 12:35:11 - ******def pdf_para_csv():
+31/10/2024 12:35:11 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 12:35:11 - Arquivos:
+['Atendimentos_.pdf']
+31/10/2024 12:35:11 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\Atendimentos_.pdf
+31/10/2024 12:35:11 - mover_ultimo_pdf_para_raiz(ultimo_arquivo,diretorio_atual)
+31/10/2024 12:35:11 - *****caminho_arquivo: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf
+31/10/2024 12:35:11 - ultimo_arquivo: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf
+31/10/2024 12:35:13 - def fechar()
+31/10/2024 12:35:15 - janela.destroy()
+31/10/2024 12:38:54 - ============================== inicio ========================
+31/10/2024 12:38:54 - interface_grafica()
+31/10/2024 12:38:56 - def iniciar()
+31/10/2024 12:38:56 - Botao Iniciar clicado!
+31/10/2024 12:38:56 - global statusThread: False
+31/10/2024 12:38:56 - ============================== execuçao ========================
+31/10/2024 12:38:56 - Tarefa inicializada!
+statusThread:True
+31/10/2024 12:38:56 - ******def pdf_para_csv():
+31/10/2024 12:38:56 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 12:38:56 - Arquivos:
+['Atendimentos99999.pdf']
+31/10/2024 12:38:56 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\Atendimentos99999.pdf
+31/10/2024 12:38:56 - mover_ultimo_pdf_para_raiz(ultimo_arquivo,diretorio_atual)
+31/10/2024 12:38:56 - *****caminho_arquivo: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf
+31/10/2024 12:38:56 - ultimo_arquivo: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf
+31/10/2024 12:39:05 - def fechar()
+31/10/2024 12:39:07 - janela.destroy()
+31/10/2024 12:41:28 - ============================== inicio ========================
+31/10/2024 12:41:28 - interface_grafica()
+31/10/2024 12:41:30 - def iniciar()
+31/10/2024 12:41:30 - Botao Iniciar clicado!
+31/10/2024 12:41:30 - global statusThread: False
+31/10/2024 12:41:30 - ============================== execuçao ========================
+31/10/2024 12:41:30 - Tarefa inicializada!
+statusThread:True
+31/10/2024 12:41:30 - ******def pdf_para_csv():
+31/10/2024 12:41:30 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 12:41:30 - Arquivos:
+['Atendimentossssss - Copia.pdf', 'Atendimentossssss.pdf']
+31/10/2024 12:41:30 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\Atendimentossssss - Copia.pdf
+31/10/2024 12:41:30 - mover_ultimo_pdf_para_raiz(ultimo_arquivo,diretorio_atual)
+31/10/2024 12:41:30 - *****caminho_arquivo: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf
+31/10/2024 12:41:30 - ultimo_arquivo: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf
+31/10/2024 12:41:30 - ============================== Geracao_Pdf_Prescricao ==============================
+31/10/2024 12:41:30 - df_filtrado: 0      423275
+1      637883
+2      637879
+3      635085
+4      621123
+        ...  
+161    614694
+162    618731
+163    618176
+164    608383
+165    637787
+Name: 0, Length: 166, dtype: object
+31/10/2024 12:42:13 - def fechar()
+31/10/2024 12:42:14 - janela.destroy()
