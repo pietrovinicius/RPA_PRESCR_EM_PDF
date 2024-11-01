@@ -9,7 +9,6 @@ def pdf_para_csv():
     texto_completo = ""
     
     #acessando pasta download:
-    print("get_latest_xls_from_downloads")
     downloads_path = os.path.join(os.path.expanduser("~"), "Downloads")
     print(f'Caminho da pasta download: {downloads_path}')
     

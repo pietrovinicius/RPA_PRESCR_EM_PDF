@@ -4066,3 +4066,3081 @@ statusThread:True
 Name: 0, Length: 166, dtype: object
 31/10/2024 12:42:13 - def fechar()
 31/10/2024 12:42:14 - janela.destroy()
+31/10/2024 12:48:52 - ============================== inicio ========================
+31/10/2024 12:48:52 - interface_grafica()
+31/10/2024 12:48:54 - def iniciar()
+31/10/2024 12:48:54 - Botao Iniciar clicado!
+31/10/2024 12:48:54 - global statusThread: False
+31/10/2024 12:48:54 - ============================== execuçao ========================
+31/10/2024 12:48:54 - Tarefa inicializada!
+statusThread:True
+31/10/2024 12:48:54 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 12:48:54 - delete_all_files_in_directory(C:\Users\pvplima.C19NOT76\Downloads)
+31/10/2024 12:49:05 - def iniciar()
+31/10/2024 12:49:05 - Botao Iniciar clicado!
+31/10/2024 12:49:05 - global statusThread: True
+31/10/2024 12:49:05 - Thread já foi iniciada, statusThread: 
+True
+31/10/2024 12:49:07 - def fechar()
+31/10/2024 12:49:09 - janela.destroy()
+31/10/2024 12:49:11 - ============================== inicio ========================
+31/10/2024 12:49:11 - interface_grafica()
+31/10/2024 12:49:13 - def iniciar()
+31/10/2024 12:49:13 - Botao Iniciar clicado!
+31/10/2024 12:49:13 - global statusThread: False
+31/10/2024 12:49:13 - ============================== execuçao ========================
+31/10/2024 12:49:13 - Tarefa inicializada!
+statusThread:True
+31/10/2024 12:49:13 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 12:49:13 - delete_all_files_in_directory(C:\Users\pvplima.C19NOT76\Downloads)
+31/10/2024 12:49:16 - def fechar()
+31/10/2024 12:49:16 - janela.destroy()
+31/10/2024 12:49:29 - ============================== inicio ========================
+31/10/2024 12:49:29 - interface_grafica()
+31/10/2024 12:50:09 - def fechar()
+31/10/2024 12:50:11 - janela.destroy()
+31/10/2024 13:48:25 - ============================== inicio ========================
+31/10/2024 13:48:25 - interface_grafica()
+31/10/2024 13:48:28 - def iniciar()
+31/10/2024 13:48:28 - Botao Iniciar clicado!
+31/10/2024 13:48:28 - global statusThread: False
+31/10/2024 13:48:28 - ============================== execuçao ========================
+31/10/2024 13:48:28 - Tarefa inicializada!
+statusThread:True
+31/10/2024 13:48:28 - ******def pdf_para_df():
+31/10/2024 13:48:28 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 13:48:28 - Arquivos:
+['353aa9d6-a695-4c2d-84f4-9d5cc02f045c.pdf', 'Atendimentos_.pdf']
+31/10/2024 13:48:28 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\353aa9d6-a695-4c2d-84f4-9d5cc02f045c.pdf
+31/10/2024 13:48:28 - mover_ultimo_pdf_para_raiz(ultimo_arquivo,diretorio_atual)
+31/10/2024 13:48:28 - *****caminho_arquivo: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf
+31/10/2024 13:48:28 - ultimo_arquivo: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf
+31/10/2024 13:48:30 - def fechar()
+31/10/2024 13:48:32 - janela.destroy()
+31/10/2024 13:49:34 - ============================== inicio ========================
+31/10/2024 13:49:34 - interface_grafica()
+31/10/2024 13:49:36 - def iniciar()
+31/10/2024 13:49:36 - Botao Iniciar clicado!
+31/10/2024 13:49:36 - global statusThread: False
+31/10/2024 13:49:36 - ============================== execuçao ========================
+31/10/2024 13:49:36 - Tarefa inicializada!
+statusThread:True
+31/10/2024 13:49:36 - ******def pdf_para_df():
+31/10/2024 13:49:36 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 13:49:36 - Arquivos:
+['Atendimentos_.pdf']
+31/10/2024 13:49:36 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\Atendimentos_.pdf
+31/10/2024 13:49:36 - mover_ultimo_pdf_para_raiz(ultimo_arquivo,diretorio_atual)
+31/10/2024 13:49:36 - *****caminho_arquivo: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf
+31/10/2024 13:49:36 - ultimo_arquivo: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf
+31/10/2024 13:50:04 - ============================== inicio ========================
+31/10/2024 13:50:04 - interface_grafica()
+31/10/2024 13:50:06 - def iniciar()
+31/10/2024 13:50:06 - Botao Iniciar clicado!
+31/10/2024 13:50:06 - global statusThread: False
+31/10/2024 13:50:06 - ============================== execuçao ========================
+31/10/2024 13:50:06 - Tarefa inicializada!
+statusThread:True
+31/10/2024 13:50:06 - ============================== Geracao_Pdf_Atendimen ==============================
+31/10/2024 13:50:16 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+31/10/2024 13:50:17 - box_usuario
+31/10/2024 13:50:17 - box_senha
+31/10/2024 13:50:17 - bt_login
+31/10/2024 13:50:21 - bt_utilitarios.click()
+31/10/2024 13:50:23 - bt_impressao_relatorios.click()
+31/10/2024 13:50:28 - box_codigo_rel.send_keys('1790')
+31/10/2024 13:50:33 - pyautogui.press('enter')
+31/10/2024 13:50:38 - bt_visualizar_.click()
+31/10/2024 13:50:58 - click apos o download
+pyautogui.click(1810,165)
+31/10/2024 13:51:08 - Pressionar Item
+pyautogui.press('enter')
+31/10/2024 13:51:14 - click no manter
+pyautogui.click(1751,109)
+31/10/2024 13:51:19 - global statusThread: False
+31/10/2024 13:51:23 - =========== FIM ========
+31/10/2024 13:51:27 - ******def pdf_para_df():
+31/10/2024 13:51:27 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 13:51:27 - Arquivos:
+['c0fdd67a-c005-4def-ad7a-f1bb56ac63ec.pdf']
+31/10/2024 13:51:27 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\c0fdd67a-c005-4def-ad7a-f1bb56ac63ec.pdf
+31/10/2024 13:51:27 - mover_ultimo_pdf_para_raiz(ultimo_arquivo,diretorio_atual)
+31/10/2024 13:51:27 - *****caminho_arquivo: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf
+31/10/2024 13:51:27 - ultimo_arquivo: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf
+31/10/2024 13:51:27 - ============================== Geracao_Pdf_Prescricao ==============================
+31/10/2024 13:51:59 - def fechar()
+31/10/2024 13:52:01 - janela.destroy()
+31/10/2024 13:54:06 - ============================== inicio ========================
+31/10/2024 13:54:06 - interface_grafica()
+31/10/2024 13:54:08 - def iniciar()
+31/10/2024 13:54:08 - Botao Iniciar clicado!
+31/10/2024 13:54:08 - global statusThread: False
+31/10/2024 13:54:08 - ============================== execuçao ========================
+31/10/2024 13:54:08 - Tarefa inicializada!
+statusThread:True
+31/10/2024 13:54:08 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 13:54:08 - delete_all_files_in_directory(C:\Users\pvplima.C19NOT76\Downloads)
+31/10/2024 13:54:12 - def fechar()
+31/10/2024 13:54:13 - janela.destroy()
+31/10/2024 14:06:56 - ============================== inicio ========================
+31/10/2024 14:06:56 - interface_grafica()
+31/10/2024 14:06:58 - def iniciar()
+31/10/2024 14:06:58 - Botao Iniciar clicado!
+31/10/2024 14:06:58 - global statusThread: False
+31/10/2024 14:06:58 - ============================== execuçao ========================
+31/10/2024 14:06:58 - Tarefa inicializada!
+statusThread:True
+31/10/2024 14:06:58 - *****renomear o pdf gerado para o nr_atendimento e hora gerado
+31/10/2024 14:06:58 - acessando pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 14:06:58 - verificando arquivos da pasta download:
+['Atendimentos - Copia.pdf', 'Atendimentos.pdf']
+31/10/2024 14:06:58 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\Atendimentos - Copia.pdf
+31/10/2024 14:06:58 - mover_ultimo_pdf_para_raiz(ultimo_arquivo,diretorio_atual_prescricoes)
+31/10/2024 14:08:10 - ============================== inicio ========================
+31/10/2024 14:08:10 - interface_grafica()
+31/10/2024 14:08:13 - def iniciar()
+31/10/2024 14:08:13 - Botao Iniciar clicado!
+31/10/2024 14:08:13 - global statusThread: False
+31/10/2024 14:08:13 - ============================== execuçao ========================
+31/10/2024 14:08:13 - Tarefa inicializada!
+statusThread:True
+31/10/2024 14:08:13 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 14:08:13 - delete_all_files_in_directory(C:\Users\pvplima.C19NOT76\Downloads)
+31/10/2024 14:08:13 - ******def pdf_para_df():
+31/10/2024 14:08:13 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 14:08:13 - Arquivos:
+[]
+31/10/2024 14:08:55 - def fechar()
+31/10/2024 14:08:56 - janela.destroy()
+31/10/2024 14:08:59 - ============================== inicio ========================
+31/10/2024 14:08:59 - interface_grafica()
+31/10/2024 14:09:01 - def iniciar()
+31/10/2024 14:09:01 - Botao Iniciar clicado!
+31/10/2024 14:09:01 - global statusThread: False
+31/10/2024 14:09:01 - ============================== execuçao ========================
+31/10/2024 14:09:01 - Tarefa inicializada!
+statusThread:True
+31/10/2024 14:09:01 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 14:09:01 - delete_all_files_in_directory(C:\Users\pvplima.C19NOT76\Downloads)
+31/10/2024 14:09:01 - ******def pdf_para_df():
+31/10/2024 14:09:01 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 14:09:01 - Arquivos:
+[]
+31/10/2024 14:09:46 - ============================== inicio ========================
+31/10/2024 14:09:46 - interface_grafica()
+31/10/2024 14:09:47 - def iniciar()
+31/10/2024 14:09:47 - Botao Iniciar clicado!
+31/10/2024 14:09:47 - global statusThread: False
+31/10/2024 14:09:47 - ============================== execuçao ========================
+31/10/2024 14:09:47 - Tarefa inicializada!
+statusThread:True
+31/10/2024 14:09:47 - ******def pdf_para_df():
+31/10/2024 14:09:47 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 14:09:47 - Arquivos:
+['Atendimentos0000.pdf']
+31/10/2024 14:09:47 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\Atendimentos0000.pdf
+31/10/2024 14:09:47 - mover_ultimo_pdf_para_raiz(ultimo_arquivo,diretorio_atual)
+31/10/2024 14:09:47 - *****caminho_arquivo: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf
+31/10/2024 14:09:47 - ultimo_arquivo: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf
+31/10/2024 14:09:47 - ============================== Geracao_Pdf_Prescricao ==============================
+31/10/2024 14:09:57 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+31/10/2024 14:09:58 - box_usuario
+31/10/2024 14:10:00 - box_senha
+31/10/2024 14:10:02 - bt_login
+31/10/2024 14:12:12 - ============================== inicio ========================
+31/10/2024 14:12:12 - interface_grafica()
+31/10/2024 14:12:13 - def iniciar()
+31/10/2024 14:12:13 - Botao Iniciar clicado!
+31/10/2024 14:12:13 - global statusThread: False
+31/10/2024 14:12:13 - ============================== execuçao ========================
+31/10/2024 14:12:13 - Tarefa inicializada!
+statusThread:True
+31/10/2024 14:12:13 - ******def pdf_para_df():
+31/10/2024 14:12:13 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 14:12:13 - Arquivos:
+['Atendimentos000.pdf']
+31/10/2024 14:12:13 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\Atendimentos000.pdf
+31/10/2024 14:12:13 - mover_ultimo_pdf_para_raiz(ultimo_arquivo,diretorio_atual)
+31/10/2024 14:12:13 - *****caminho_arquivo: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf
+31/10/2024 14:12:13 - ultimo_arquivo: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf
+31/10/2024 14:12:14 - ============================== Geracao_Pdf_Prescricao ==============================
+31/10/2024 14:12:23 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+31/10/2024 14:12:23 - box_usuario
+31/10/2024 14:12:26 - box_senha
+31/10/2024 14:12:28 - bt_login
+31/10/2024 14:12:38 - for linha in df_filtrado.iloc[:, 0]
+31/10/2024 14:12:38 - CPOE
+31/10/2024 14:12:43 - enter
+31/10/2024 14:12:48 - clicar no icone do CPOE:
+31/10/2024 14:12:53 - nr_atendimento: 423275
+31/10/2024 14:12:58 - enter
+31/10/2024 14:13:03 - enter
+31/10/2024 14:13:13 - click no visualizar
+pyautogui.click(1456, 380)
+31/10/2024 14:13:34 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+31/10/2024 14:13:39 - enter
+31/10/2024 14:13:44 - clicar para manter
+pyautogui.click(1750,108)
+31/10/2024 14:13:49 - driver.implicitly_wait(10)
+31/10/2024 14:14:53 - def fechar()
+31/10/2024 14:14:54 - janela.destroy()
+31/10/2024 14:26:10 - ============================== inicio ========================
+31/10/2024 14:26:10 - interface_grafica()
+31/10/2024 14:26:11 - def iniciar()
+31/10/2024 14:26:11 - Botao Iniciar clicado!
+31/10/2024 14:26:11 - global statusThread: False
+31/10/2024 14:26:11 - ============================== execuçao ========================
+31/10/2024 14:26:11 - Tarefa inicializada!
+statusThread:True
+31/10/2024 14:26:11 - ******def pdf_para_df():
+31/10/2024 14:26:11 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 14:26:11 - Arquivos:
+['Atendimentos.pdf']
+31/10/2024 14:26:11 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\Atendimentos.pdf
+31/10/2024 14:26:11 - mover_ultimo_pdf_para_raiz(ultimo_arquivo,diretorio_atual)
+31/10/2024 14:26:11 - *****caminho_arquivo: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf
+31/10/2024 14:26:11 - ultimo_arquivo: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf
+31/10/2024 14:26:12 - ============================== Geracao_Pdf_Prescricao ==============================
+31/10/2024 14:26:21 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+31/10/2024 14:26:22 - box_usuario
+31/10/2024 14:26:24 - box_senha
+31/10/2024 14:26:26 - bt_login
+31/10/2024 14:26:36 - for linha in df_filtrado.iloc[:, 0]
+31/10/2024 14:26:36 - CPOE
+31/10/2024 14:26:41 - enter
+31/10/2024 14:26:46 - clicar no icone do CPOE:
+31/10/2024 14:26:51 - nr_atendimento: 423275
+31/10/2024 14:26:56 - enter
+31/10/2024 14:27:01 - enter
+31/10/2024 14:27:11 - click no visualizar
+pyautogui.click(1456, 380)
+31/10/2024 14:27:32 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+31/10/2024 14:27:37 - enter
+31/10/2024 14:27:42 - clicar para manter
+pyautogui.click(1750,108)
+31/10/2024 14:27:47 - pyautogui.hotkey('ctrl', 'w')
+31/10/2024 14:27:52 - clicar para cancelar
+pyautogui.click(1750,108)
+31/10/2024 14:27:57 - driver.implicitly_wait(10)
+31/10/2024 14:44:14 - ============================== inicio ========================
+31/10/2024 14:44:14 - interface_grafica()
+31/10/2024 14:44:16 - def iniciar()
+31/10/2024 14:44:16 - Botao Iniciar clicado!
+31/10/2024 14:44:16 - global statusThread: False
+31/10/2024 14:44:16 - ============================== execuçao ========================
+31/10/2024 14:44:16 - Tarefa inicializada!
+statusThread:True
+31/10/2024 14:44:16 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 14:44:16 - Arquivos:
+['Atendimentos.pdf', 'b457ff95-082d-4b2f-a94e-43e2aef20272 (1).pdf']
+31/10/2024 14:44:16 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\Atendimentos.pdf
+31/10/2024 14:44:19 - def fechar()
+31/10/2024 14:44:21 - janela.destroy()
+31/10/2024 14:48:21 - ============================== inicio ========================
+31/10/2024 14:48:21 - interface_grafica()
+31/10/2024 14:48:23 - def iniciar()
+31/10/2024 14:48:23 - Botao Iniciar clicado!
+31/10/2024 14:48:23 - global statusThread: False
+31/10/2024 14:48:23 - ============================== execuçao ========================
+31/10/2024 14:48:23 - Tarefa inicializada!
+statusThread:True
+31/10/2024 14:48:23 - ============================== Geracao_Pdf_Prescricao ==============================
+31/10/2024 14:49:40 - def fechar()
+31/10/2024 14:49:41 - janela.destroy()
+31/10/2024 14:50:45 - ============================== inicio ========================
+31/10/2024 14:50:45 - interface_grafica()
+31/10/2024 14:50:47 - def iniciar()
+31/10/2024 14:50:47 - Botao Iniciar clicado!
+31/10/2024 14:50:47 - global statusThread: False
+31/10/2024 14:50:47 - ============================== execuçao ========================
+31/10/2024 14:50:47 - Tarefa inicializada!
+statusThread:True
+31/10/2024 14:50:47 - ******def pdf_para_df():
+31/10/2024 14:50:47 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 14:50:47 - Arquivos:
+['Atendimentos - Copia.pdf', 'Atendimentos.pdf', 'b457ff95-082d-4b2f-a94e-43e2aef20272 (1).pdf', 'b457ff95-082d-4b2f-a94e-43e2aef20272 (2).pdf']
+31/10/2024 14:50:47 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\Atendimentos - Copia.pdf
+31/10/2024 14:50:47 - mover_ultimo_pdf_para_raiz(ultimo_arquivo,diretorio_atual)
+31/10/2024 14:51:42 - def fechar()
+31/10/2024 14:51:44 - janela.destroy()
+31/10/2024 14:51:48 - ============================== inicio ========================
+31/10/2024 14:51:48 - interface_grafica()
+31/10/2024 14:51:50 - def iniciar()
+31/10/2024 14:51:50 - Botao Iniciar clicado!
+31/10/2024 14:51:50 - global statusThread: False
+31/10/2024 14:51:50 - ============================== execuçao ========================
+31/10/2024 14:51:50 - Tarefa inicializada!
+statusThread:True
+31/10/2024 14:51:50 - ******def pdf_para_df():
+31/10/2024 14:51:50 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 14:51:50 - Arquivos:
+['Atendimentos - Copia.pdf', 'Atendimentos.pdf', 'b457ff95-082d-4b2f-a94e-43e2aef20272 (1).pdf', 'b457ff95-082d-4b2f-a94e-43e2aef20272 (2).pdf']
+31/10/2024 14:51:50 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\Atendimentos - Copia.pdf
+31/10/2024 14:51:50 - mover_ultimo_pdf_para_raiz(ultimo_arquivo,diretorio_atual)
+31/10/2024 14:51:55 - def fechar()
+31/10/2024 14:51:57 - janela.destroy()
+31/10/2024 14:52:10 - ============================== inicio ========================
+31/10/2024 14:52:10 - interface_grafica()
+31/10/2024 14:52:12 - def iniciar()
+31/10/2024 14:52:12 - Botao Iniciar clicado!
+31/10/2024 14:52:12 - global statusThread: False
+31/10/2024 14:52:12 - ============================== execuçao ========================
+31/10/2024 14:52:12 - Tarefa inicializada!
+statusThread:True
+31/10/2024 14:52:12 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 14:52:12 - delete_all_files_in_directory(C:\Users\pvplima.C19NOT76\Downloads)
+31/10/2024 14:52:12 - ============================== Geracao_Pdf_Atendimen ==============================
+31/10/2024 14:52:23 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+31/10/2024 14:52:23 - box_usuario
+31/10/2024 14:52:23 - box_senha
+31/10/2024 14:52:23 - bt_login
+31/10/2024 14:52:28 - bt_utilitarios.click()
+31/10/2024 14:52:30 - bt_impressao_relatorios.click()
+31/10/2024 14:52:35 - box_codigo_rel.send_keys('1790')
+31/10/2024 14:52:40 - pyautogui.press('enter')
+31/10/2024 14:52:45 - bt_visualizar_.click()
+31/10/2024 14:53:05 - click apos o download
+pyautogui.click(1810,165)
+31/10/2024 14:53:15 - Pressionar Item
+pyautogui.press('enter')
+31/10/2024 14:53:20 - click no manter
+pyautogui.click(1751,109)
+31/10/2024 14:53:25 - global statusThread: False
+31/10/2024 14:53:29 - =========== FIM ========
+31/10/2024 14:53:33 - ******def pdf_para_df():
+31/10/2024 14:53:33 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 14:53:33 - Arquivos:
+['ebee4845-733e-49d4-9b08-9d0defcac421.pdf']
+31/10/2024 14:53:33 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\ebee4845-733e-49d4-9b08-9d0defcac421.pdf
+31/10/2024 14:53:33 - mover_ultimo_pdf_para_raiz(ultimo_arquivo,diretorio_atual)
+31/10/2024 14:53:33 - *****caminho_arquivo: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf
+31/10/2024 14:53:33 - ultimo_arquivo: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf
+31/10/2024 14:53:34 - ============================== Geracao_Pdf_Prescricao ==============================
+31/10/2024 14:53:44 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+31/10/2024 14:53:44 - box_usuario
+31/10/2024 14:53:46 - box_senha
+31/10/2024 14:53:48 - bt_login
+31/10/2024 14:53:58 - for linha in df_filtrado.iloc[:, 0]
+31/10/2024 14:53:58 - CPOE
+31/10/2024 14:54:03 - enter
+31/10/2024 14:54:08 - clicar no icone do CPOE:
+31/10/2024 14:54:13 - nr_atendimento: 423275
+31/10/2024 14:54:18 - enter
+31/10/2024 14:54:23 - enter
+31/10/2024 14:54:34 - click no visualizar
+pyautogui.click(1456, 380)
+31/10/2024 14:54:54 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+31/10/2024 14:54:59 - enter
+31/10/2024 14:55:04 - clicar para manter
+pyautogui.click(1750,108)
+31/10/2024 14:55:09 - pyautogui.hotkey('ctrl', 'w')
+31/10/2024 14:55:14 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+31/10/2024 14:55:19 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 14:55:19 - Arquivos:
+['8f1ff192-b4a2-409b-b914-0675d97ed5b7.pdf']
+31/10/2024 14:55:19 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\8f1ff192-b4a2-409b-b914-0675d97ed5b7.pdf
+31/10/2024 15:02:15 - ============================== inicio ========================
+31/10/2024 15:02:15 - interface_grafica()
+31/10/2024 15:02:47 - def iniciar()
+31/10/2024 15:02:47 - Botao Iniciar clicado!
+31/10/2024 15:02:47 - global statusThread: False
+31/10/2024 15:02:47 - ============================== execuçao ========================
+31/10/2024 15:02:47 - Tarefa inicializada!
+statusThread:True
+31/10/2024 15:02:47 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 15:02:47 - delete_all_files_in_directory(C:\Users\pvplima.C19NOT76\Downloads)
+31/10/2024 15:02:47 - ============================== Geracao_Pdf_Atendimen ==============================
+31/10/2024 15:02:57 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+31/10/2024 15:02:57 - box_usuario
+31/10/2024 15:02:57 - box_senha
+31/10/2024 15:02:57 - bt_login
+31/10/2024 15:03:02 - bt_utilitarios.click()
+31/10/2024 15:03:04 - bt_impressao_relatorios.click()
+31/10/2024 15:03:09 - box_codigo_rel.send_keys('1790')
+31/10/2024 15:03:14 - pyautogui.press('enter')
+31/10/2024 15:03:19 - bt_visualizar_.click()
+31/10/2024 15:03:39 - click apos o download
+pyautogui.click(1810,165)
+31/10/2024 15:03:49 - Pressionar Item
+pyautogui.press('enter')
+31/10/2024 15:03:54 - click no manter
+pyautogui.click(1751,109)
+31/10/2024 15:03:59 - global statusThread: False
+31/10/2024 15:04:04 - =========== FIM ========
+31/10/2024 15:04:08 - ******def pdf_para_df():
+31/10/2024 15:04:08 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 15:04:08 - Arquivos:
+['0d84c5c7-66bd-4402-b16a-197d85d89c52.pdf']
+31/10/2024 15:04:08 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\0d84c5c7-66bd-4402-b16a-197d85d89c52.pdf
+31/10/2024 15:04:08 - mover_ultimo_pdf_para_raiz(ultimo_arquivo,diretorio_atual)
+31/10/2024 15:04:08 - *****caminho_arquivo: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf
+31/10/2024 15:04:08 - ultimo_arquivo: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf
+31/10/2024 15:04:08 - ============================== Geracao_Pdf_Prescricao ==============================
+31/10/2024 15:04:18 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+31/10/2024 15:04:18 - box_usuario
+31/10/2024 15:04:20 - box_senha
+31/10/2024 15:04:22 - bt_login
+31/10/2024 15:04:32 - for linha in df_filtrado.iloc[:, 0]
+31/10/2024 15:04:32 - CPOE
+31/10/2024 15:04:37 - enter
+31/10/2024 15:04:42 - clicar no icone do CPOE:
+31/10/2024 15:04:47 - nr_atendimento: 423275
+31/10/2024 15:04:52 - enter
+31/10/2024 15:04:58 - enter
+31/10/2024 15:05:08 - click no visualizar
+pyautogui.click(1456, 380)
+31/10/2024 15:05:28 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+31/10/2024 15:05:33 - enter
+31/10/2024 15:05:38 - clicar para manter
+pyautogui.click(1750,108)
+31/10/2024 15:05:43 - pyautogui.hotkey('ctrl', 'w')
+31/10/2024 15:05:48 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+31/10/2024 15:05:53 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 15:05:53 - Arquivos:
+['ab4f195c-0035-4bbb-aa85-d9a6e036a909.pdf']
+31/10/2024 15:05:53 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\ab4f195c-0035-4bbb-aa85-d9a6e036a909.pdf
+31/10/2024 15:05:53 - caminho_antigo = os.path.join(downloads_path, ultimo_arquivo)
+31/10/2024 15:05:53 - caminho_novo = os.path.join(pasta_prescricoes, f"{linha}_{data_hora}.pdf")
+31/10/2024 15:25:15 - ============================== inicio ========================
+31/10/2024 15:25:15 - interface_grafica()
+31/10/2024 15:25:16 - def iniciar()
+31/10/2024 15:25:16 - Botao Iniciar clicado!
+31/10/2024 15:25:16 - global statusThread: False
+31/10/2024 15:25:16 - ============================== execuçao ========================
+31/10/2024 15:25:16 - Tarefa inicializada!
+statusThread:True
+31/10/2024 15:25:16 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 15:25:16 - Arquivos:
+['ab4f195c-0035-4bbb-aa85-d9a6e036a909.pdf']
+31/10/2024 15:25:16 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\ab4f195c-0035-4bbb-aa85-d9a6e036a909.pdf
+31/10/2024 15:25:16 - pasta_prescricoes: Prescricoes
+31/10/2024 15:26:13 - ============================== inicio ========================
+31/10/2024 15:26:13 - interface_grafica()
+31/10/2024 15:26:15 - def iniciar()
+31/10/2024 15:26:15 - Botao Iniciar clicado!
+31/10/2024 15:26:15 - global statusThread: False
+31/10/2024 15:26:15 - ============================== execuçao ========================
+31/10/2024 15:26:15 - Tarefa inicializada!
+statusThread:True
+31/10/2024 15:26:15 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31/10/2024 15:26:15 - Arquivos:
+['ab4f195c-0035-4bbb-aa85-d9a6e036a909.pdf']
+31/10/2024 15:26:15 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\ab4f195c-0035-4bbb-aa85-d9a6e036a909.pdf
+31/10/2024 15:26:15 - pasta_prescricoes: Prescricoes
+31/10/2024 15:26:15 - pasta_data: Prescricoes\31/10/2024 15:26:15
+31_10_2024 15_47_18 - ============================== inicio ========================
+31_10_2024 15_47_18 - interface_grafica()
+31_10_2024 15_47_22 - def iniciar()
+31_10_2024 15_47_22 - Botao Iniciar clicado!
+31_10_2024 15_47_22 - global statusThread: False
+31_10_2024 15_47_22 - ============================== execuçao ========================
+31_10_2024 15_47_22 - Tarefa inicializada!
+statusThread:True
+31_10_2024 15_47_22 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31_10_2024 15_47_22 - Arquivos:
+['ab4f195c-0035-4bbb-aa85-d9a6e036a909.pdf']
+31_10_2024 15_47_22 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\ab4f195c-0035-4bbb-aa85-d9a6e036a909.pdf
+31_10_2024 15_47_22 - pasta_prescricoes: Prescricoes
+31_10_2024 15_47_22 - pasta_data: Prescricoes\31_10_2024 15_47_22
+31_10_2024 15_47_22 - ***********os.makedirs
+31_10_2024 15_47_22 - Data_hora: 31_10_2024 15_47_22
+31_10_2024 15_47_22 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\ab4f195c-0035-4bbb-aa85-d9a6e036a909.pdf
+31_10_2024 15_47_22 - caminho_novo = Prescricoes\teste_31_10_2024 15_47_22.pdf,
+arquivo:31_10_2024 15_47_22.pdf)
+31_10_2024 15_48_18 - def fechar()
+31_10_2024 15_48_19 - janela.destroy()
+31_10_2024 - ============================== inicio ========================
+31_10_2024 - interface_grafica()
+31_10_2024 - def iniciar()
+31_10_2024 - Botao Iniciar clicado!
+31_10_2024 - global statusThread: False
+31_10_2024 - ============================== execuçao ========================
+31_10_2024 - Tarefa inicializada!
+statusThread:True
+31_10_2024 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31_10_2024 - Arquivos:
+[]
+31_10_2024 - ============================== inicio ========================
+31_10_2024 - interface_grafica()
+31_10_2024 - def iniciar()
+31_10_2024 - Botao Iniciar clicado!
+31_10_2024 - global statusThread: False
+31_10_2024 - ============================== execuçao ========================
+31_10_2024 - Tarefa inicializada!
+statusThread:True
+31_10_2024 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+31_10_2024 - Arquivos:
+['teste_31_10_2024 15_47_22.pdf']
+31_10_2024 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\teste_31_10_2024 15_47_22.pdf
+31_10_2024 - pasta_prescricoes: Prescricoes
+31_10_2024 - pasta_data: Prescricoes\31_10_2024
+31_10_2024 - ***********os.makedirs
+31_10_2024 - Data_hora: 31_10_2024
+31_10_2024 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\teste_31_10_2024 15_47_22.pdf
+31_10_2024 - caminho_novo = Prescricoes\teste_31_10_2024.pdf,
+arquivo:31_10_2024.pdf)
+31_10_2024 - def fechar()
+31_10_2024 - janela.destroy()
+2024_10_31 - ============================== inicio ========================
+2024_10_31 - interface_grafica()
+2024_10_31 - def iniciar()
+2024_10_31 - Botao Iniciar clicado!
+2024_10_31 - global statusThread: False
+2024_10_31 - ============================== execuçao ========================
+2024_10_31 - Tarefa inicializada!
+statusThread:True
+2024_10_31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_10_31 - Arquivos:
+['aaaaaaaaaaaaaaaaaaaa.pdf']
+2024_10_31 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\aaaaaaaaaaaaaaaaaaaa.pdf
+2024_10_31 - pasta_prescricoes: Prescricoes
+2024_10_31 - pasta_data: Prescricoes\2024_10_31
+2024_10_31 - ***********os.makedirs: Prescricoes\2024_10_31
+2024_10_31 - Data_hora: 2024_10_31 15_54_40
+2024_10_31 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\aaaaaaaaaaaaaaaaaaaa.pdf
+2024_10_31 - caminho_novo = Prescricoes\2024_10_31\teste_2024_10_31 15_54_40.pdf,
+arquivo:2024_10_31 15_54_40.pdf)
+2024_10_31 - def fechar()
+2024_10_31 - janela.destroy()
+2024_10_31 - ============================== inicio ========================
+2024_10_31 - interface_grafica()
+2024_10_31 - def iniciar()
+2024_10_31 - Botao Iniciar clicado!
+2024_10_31 - global statusThread: False
+2024_10_31 - ============================== execuçao ========================
+2024_10_31 - Tarefa inicializada!
+statusThread:True
+2024_10_31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_10_31 - Arquivos:
+['teste_2024_10_31 15_54_40.pdf']
+2024_10_31 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\teste_2024_10_31 15_54_40.pdf
+2024_10_31 - pasta_prescricoes: Prescricoes
+2024_10_31 - pasta_data: Prescricoes\2024_10_31
+2024_10_31 - ***********os.makedirs: Prescricoes\2024_10_31
+2024_10_31 - Data_hora: 2024_10_31 15_57_35
+2024_10_31 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\teste_2024_10_31 15_54_40.pdf
+2024_10_31 - caminho_novo = Prescricoes\2024_10_31\2923556_2024_10_31 15_57_35.pdf,
+arquivo:2024_10_31 15_57_35.pdf)
+2024_10_31 - def fechar()
+2024_10_31 - janela.destroy()
+2024_10_31 - ============================== inicio ========================
+2024_10_31 - interface_grafica()
+2024_10_31 - def iniciar()
+2024_10_31 - Botao Iniciar clicado!
+2024_10_31 - global statusThread: False
+2024_10_31 - ============================== execuçao ========================
+2024_10_31 - Tarefa inicializada!
+statusThread:True
+2024_10_31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_10_31 - Arquivos:
+[]
+2024_10_31 - def fechar()
+2024_10_31 - janela.destroy()
+2024_10_31 - ============================== inicio ========================
+2024_10_31 - interface_grafica()
+2024_10_31 - def iniciar()
+2024_10_31 - Botao Iniciar clicado!
+2024_10_31 - global statusThread: False
+2024_10_31 - ============================== execuçao ========================
+2024_10_31 - Tarefa inicializada!
+statusThread:True
+2024_10_31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_10_31 - delete_all_files_in_directory(C:\Users\pvplima.C19NOT76\Downloads)
+2024_10_31 - ============================== Geracao_Pdf_Atendimen ==============================
+2024_10_31 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+2024_10_31 - box_usuario
+2024_10_31 - box_senha
+2024_10_31 - bt_login
+2024_10_31 - bt_utilitarios.click()
+2024_10_31 - bt_impressao_relatorios.click()
+2024_10_31 - box_codigo_rel.send_keys('1790')
+2024_10_31 - pyautogui.press('enter')
+2024_10_31 - bt_visualizar_.click()
+2024_10_31 - click apos o download
+pyautogui.click(1810,165)
+2024_10_31 - Pressionar Item
+pyautogui.press('enter')
+2024_10_31 - click no manter
+pyautogui.click(1751,109)
+2024_10_31 - global statusThread: False
+2024_10_31 - =========== FIM ========
+2024_10_31 - ******def pdf_para_df():
+2024_10_31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_10_31 - Arquivos:
+['fca3ba0f-65e3-4d6c-9a26-78a64990a565.pdf']
+2024_10_31 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\fca3ba0f-65e3-4d6c-9a26-78a64990a565.pdf
+2024_10_31 - mover_ultimo_pdf_para_raiz(ultimo_arquivo,diretorio_atual)
+2024_10_31 - *****caminho_arquivo: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf
+2024_10_31 - ultimo_arquivo: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf
+2024_10_31 - ============================== Geracao_Pdf_Prescricao ==============================
+2024_10_31 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+2024_10_31 - box_usuario
+2024_10_31 - box_senha
+2024_10_31 - bt_login
+2024_10_31 - for linha in df_filtrado.iloc[:, 0]
+2024_10_31 - CPOE
+2024_10_31 - enter
+2024_10_31 - clicar no icone do CPOE:
+2024_10_31 - nr_atendimento: 423275
+2024_10_31 - enter
+2024_10_31 - enter
+2024_10_31 - click no visualizar
+pyautogui.click(1456, 380)
+2024_10_31 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024_10_31 - enter
+2024_10_31 - def fechar()
+2024_10_31 - janela.destroy()
+2024_10_31 - ============================== inicio ========================
+2024_10_31 - interface_grafica()
+2024_10_31 - def iniciar()
+2024_10_31 - Botao Iniciar clicado!
+2024_10_31 - global statusThread: False
+2024_10_31 - ============================== execuçao ========================
+2024_10_31 - Tarefa inicializada!
+statusThread:True
+2024_10_31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_10_31 - delete_all_files_in_directory(C:\Users\pvplima.C19NOT76\Downloads)
+2024_10_31 - ============================== Geracao_Pdf_Atendimen ==============================
+2024_10_31 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+2024_10_31 - box_usuario
+2024_10_31 - box_senha
+2024_10_31 - bt_login
+2024_10_31 - bt_utilitarios.click()
+2024_10_31 - bt_impressao_relatorios.click()
+2024_10_31 - box_codigo_rel.send_keys('1790')
+2024_10_31 - pyautogui.press('enter')
+2024_10_31 - bt_visualizar_.click()
+2024_10_31 - click apos o download
+pyautogui.click(1810,165)
+2024_10_31 - Pressionar Item
+pyautogui.press('enter')
+2024_10_31 - click no manter
+pyautogui.click(1751,109)
+2024_10_31 - global statusThread: False
+2024_10_31 - =========== FIM ========
+2024_10_31 - ******def pdf_para_df():
+2024_10_31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_10_31 - Arquivos:
+['05689483-e680-404e-8748-7a8afa75f261.pdf']
+2024_10_31 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\05689483-e680-404e-8748-7a8afa75f261.pdf
+2024_10_31 - mover_ultimo_pdf_para_raiz(ultimo_arquivo,diretorio_atual)
+2024_10_31 - *****caminho_arquivo: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf
+2024_10_31 - ultimo_arquivo: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf
+2024_10_31 - ============================== Geracao_Pdf_Prescricao ==============================
+2024_10_31 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+2024_10_31 - box_usuario
+2024_10_31 - box_senha
+2024_10_31 - bt_login
+2024_10_31 - for linha in df_filtrado.iloc[:, 0]
+2024_10_31 - CPOE
+2024_10_31 - enter
+2024_10_31 - clicar no icone do CPOE:
+2024_10_31 - nr_atendimento: 423275
+2024_10_31 - enter
+2024_10_31 - enter
+2024_10_31 - click no visualizar
+pyautogui.click(1456, 380)
+2024_10_31 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024_10_31 - enter
+2024_10_31 - clicar para manter
+pyautogui.click(1750,108)
+2024_10_31 - pyautogui.hotkey('ctrl', 'w')
+2024_10_31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_10_31 - Arquivos:
+['53fce0b1-0603-470e-b222-0dd239bd0d61.pdf']
+2024_10_31 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\53fce0b1-0603-470e-b222-0dd239bd0d61.pdf
+2024_10_31 - pasta_prescricoes: Prescricoes
+2024_10_31 - pasta_data: Prescricoes\2024_10_31
+2024_10_31 - ***********os.makedirs: Prescricoes\2024_10_31
+2024_10_31 - Data_hora: 2024_10_31 16_38_27
+2024_10_31 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\53fce0b1-0603-470e-b222-0dd239bd0d61.pdf
+2024_10_31 - caminho_novo = Prescricoes\2024_10_31\2923556 - 2024_10_31 16_38_27.pdf,
+arquivo:2024_10_31 16_38_27.pdf)
+2024_10_31 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024_10_31 - Atendimento:423275
+
+********************FIM********************
+
+2024_10_31 - nr_atendimento: 638284
+2024_10_31 - enter
+2024_10_31 - def fechar()
+2024_10_31 - janela.destroy()
+2024_10_31 - ============================== inicio ========================
+2024_10_31 - interface_grafica()
+2024_10_31 - def iniciar()
+2024_10_31 - Botao Iniciar clicado!
+2024_10_31 - global statusThread: False
+2024_10_31 - ============================== execuçao ========================
+2024_10_31 - Tarefa inicializada!
+statusThread:True
+2024_10_31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_10_31 - delete_all_files_in_directory(C:\Users\pvplima.C19NOT76\Downloads)
+2024_10_31 - ============================== Geracao_Pdf_Atendimen ==============================
+2024_10_31 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+2024_10_31 - box_usuario
+2024_10_31 - box_senha
+2024_10_31 - bt_login
+2024_10_31 - bt_utilitarios.click()
+2024_10_31 - bt_impressao_relatorios.click()
+2024_10_31 - box_codigo_rel.send_keys('1790')
+2024_10_31 - pyautogui.press('enter')
+2024_10_31 - bt_visualizar_.click()
+2024_10_31 - click apos o download
+pyautogui.click(1810,165)
+2024_10_31 - Pressionar Item
+pyautogui.press('enter')
+2024_10_31 - click no manter
+pyautogui.click(1751,109)
+2024_10_31 - global statusThread: False
+2024_10_31 - =========== FIM ========
+2024_10_31 - ******def pdf_para_df():
+2024_10_31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_10_31 - Arquivos:
+['ffe98adb-22e1-4251-ade6-f06f3d379159.pdf']
+2024_10_31 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\ffe98adb-22e1-4251-ade6-f06f3d379159.pdf
+2024_10_31 - mover_ultimo_pdf_para_raiz(ultimo_arquivo,diretorio_atual)
+2024_10_31 - *****caminho_arquivo: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf
+2024_10_31 - ultimo_arquivo: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf
+2024_10_31 - ============================== Geracao_Pdf_Prescricao ==============================
+2024_10_31 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+2024_10_31 - box_usuario
+2024_10_31 - box_senha
+2024_10_31 - bt_login
+2024_10_31 - for linha in df_filtrado.iloc[:, 0]
+2024_10_31 - CPOE
+2024_10_31 - enter
+2024_10_31 - clicar no icone do CPOE:
+2024_10_31 - nr_atendimento: 423275
+2024_10_31 - enter
+2024_10_31 - enter
+2024_10_31 - click no visualizar
+pyautogui.click(1456, 380)
+2024_10_31 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024_10_31 - enter
+2024_10_31 - clicar para manter
+pyautogui.click(1750,108)
+2024_10_31 - pyautogui.hotkey('ctrl', 'w')
+2024_10_31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_10_31 - Arquivos:
+['5834e470-eef5-4a9e-94d5-b71707f69534.pdf']
+2024_10_31 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\5834e470-eef5-4a9e-94d5-b71707f69534.pdf
+2024_10_31 - pasta_prescricoes: Prescricoes
+2024_10_31 - pasta_data: Prescricoes\2024_10_31
+2024_10_31 - ***********os.makedirs: Prescricoes\2024_10_31
+2024_10_31 - Data_hora: 2024_10_31 16_58_49
+2024_10_31 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\5834e470-eef5-4a9e-94d5-b71707f69534.pdf
+2024_10_31 - caminho_novo = Prescricoes\2024_10_31\423275 - 2024_10_31 16_58_49.pdf,
+arquivo:2024_10_31 16_58_49.pdf)
+2024_10_31 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\5834e470-eef5-4a9e-94d5-b71707f69534.pdf renomeado e movido com sucesso.
+2024_10_31 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024_10_31 - Atendimento:423275
+
+********************FIM********************
+
+2024_10_31 - nr_atendimento: 638301
+2024_10_31 - enter
+2024_10_31 - enter
+2024_10_31 - click no visualizar
+pyautogui.click(1456, 380)
+2024_10_31 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024_10_31 - enter
+2024_10_31 - clicar para manter
+pyautogui.click(1750,108)
+2024_10_31 - pyautogui.hotkey('ctrl', 'w')
+2024_10_31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_10_31 - Arquivos:
+['4ccd8819-659d-4043-bd5d-6469c4a7cc2e.pdf']
+2024_10_31 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\4ccd8819-659d-4043-bd5d-6469c4a7cc2e.pdf
+2024_10_31 - pasta_prescricoes: Prescricoes
+2024_10_31 - pasta_data: Prescricoes\2024_10_31
+2024_10_31 - ***********os.makedirs: Prescricoes\2024_10_31
+2024_10_31 - Data_hora: 2024_10_31 17_00_32
+2024_10_31 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\4ccd8819-659d-4043-bd5d-6469c4a7cc2e.pdf
+2024_10_31 - caminho_novo = Prescricoes\2024_10_31\638301 - 2024_10_31 17_00_32.pdf,
+arquivo:2024_10_31 17_00_32.pdf)
+2024_10_31 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\4ccd8819-659d-4043-bd5d-6469c4a7cc2e.pdf renomeado e movido com sucesso.
+2024_10_31 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024_10_31 - Atendimento:638301
+
+********************FIM********************
+
+2024_10_31 - nr_atendimento: 635085
+2024_10_31 - enter
+2024_10_31 - enter
+2024_10_31 - click no visualizar
+pyautogui.click(1456, 380)
+2024_10_31 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024_10_31 - enter
+2024_10_31 - clicar para manter
+pyautogui.click(1750,108)
+2024_10_31 - pyautogui.hotkey('ctrl', 'w')
+2024_10_31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_10_31 - Arquivos:
+['1fd04bae-ee7f-43a0-9aed-ca453b7e125e.pdf']
+2024_10_31 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\1fd04bae-ee7f-43a0-9aed-ca453b7e125e.pdf
+2024_10_31 - pasta_prescricoes: Prescricoes
+2024_10_31 - pasta_data: Prescricoes\2024_10_31
+2024_10_31 - ***********os.makedirs: Prescricoes\2024_10_31
+2024_10_31 - Data_hora: 2024_10_31 17_02_15
+2024_10_31 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\1fd04bae-ee7f-43a0-9aed-ca453b7e125e.pdf
+2024_10_31 - caminho_novo = Prescricoes\2024_10_31\635085 - 2024_10_31 17_02_15.pdf,
+arquivo:2024_10_31 17_02_15.pdf)
+2024_10_31 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\1fd04bae-ee7f-43a0-9aed-ca453b7e125e.pdf renomeado e movido com sucesso.
+2024_10_31 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024_10_31 - Atendimento:635085
+
+********************FIM********************
+
+2024_10_31 - nr_atendimento: 621123
+2024_10_31 - enter
+2024_10_31 - enter
+2024_10_31 - click no visualizar
+pyautogui.click(1456, 380)
+2024_10_31 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024_10_31 - enter
+2024_10_31 - clicar para manter
+pyautogui.click(1750,108)
+2024_10_31 - pyautogui.hotkey('ctrl', 'w')
+2024_10_31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_10_31 - Arquivos:
+['150ca007-ab08-48cf-99a4-1377186d6a22.pdf']
+2024_10_31 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\150ca007-ab08-48cf-99a4-1377186d6a22.pdf
+2024_10_31 - pasta_prescricoes: Prescricoes
+2024_10_31 - pasta_data: Prescricoes\2024_10_31
+2024_10_31 - ***********os.makedirs: Prescricoes\2024_10_31
+2024_10_31 - Data_hora: 2024_10_31 17_03_58
+2024_10_31 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\150ca007-ab08-48cf-99a4-1377186d6a22.pdf
+2024_10_31 - caminho_novo = Prescricoes\2024_10_31\621123 - 2024_10_31 17_03_58.pdf,
+arquivo:2024_10_31 17_03_58.pdf)
+2024_10_31 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\150ca007-ab08-48cf-99a4-1377186d6a22.pdf renomeado e movido com sucesso.
+2024_10_31 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024_10_31 - Atendimento:621123
+
+********************FIM********************
+
+2024_10_31 - nr_atendimento: 637294
+2024_10_31 - enter
+2024_10_31 - enter
+2024_10_31 - click no visualizar
+pyautogui.click(1456, 380)
+2024_10_31 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024_10_31 - enter
+2024_10_31 - clicar para manter
+pyautogui.click(1750,108)
+2024_10_31 - pyautogui.hotkey('ctrl', 'w')
+2024_10_31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_10_31 - Arquivos:
+['e0fecef6-3f9d-4bf5-8f74-d2fee944bf68.pdf']
+2024_10_31 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\e0fecef6-3f9d-4bf5-8f74-d2fee944bf68.pdf
+2024_10_31 - pasta_prescricoes: Prescricoes
+2024_10_31 - pasta_data: Prescricoes\2024_10_31
+2024_10_31 - ***********os.makedirs: Prescricoes\2024_10_31
+2024_10_31 - Data_hora: 2024_10_31 17_05_42
+2024_10_31 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\e0fecef6-3f9d-4bf5-8f74-d2fee944bf68.pdf
+2024_10_31 - caminho_novo = Prescricoes\2024_10_31\637294 - 2024_10_31 17_05_42.pdf,
+arquivo:2024_10_31 17_05_42.pdf)
+2024_10_31 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\e0fecef6-3f9d-4bf5-8f74-d2fee944bf68.pdf renomeado e movido com sucesso.
+2024_10_31 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024_10_31 - Atendimento:637294
+
+********************FIM********************
+
+2024_10_31 - nr_atendimento: 636098
+2024_10_31 - enter
+2024_10_31 - enter
+2024_10_31 - click no visualizar
+pyautogui.click(1456, 380)
+2024_10_31 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024_10_31 - enter
+2024_10_31 - clicar para manter
+pyautogui.click(1750,108)
+2024_10_31 - pyautogui.hotkey('ctrl', 'w')
+2024_10_31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_10_31 - Arquivos:
+['049322ea-d356-4c79-8a7e-9fa10fd4d748.pdf']
+2024_10_31 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\049322ea-d356-4c79-8a7e-9fa10fd4d748.pdf
+2024_10_31 - pasta_prescricoes: Prescricoes
+2024_10_31 - pasta_data: Prescricoes\2024_10_31
+2024_10_31 - ***********os.makedirs: Prescricoes\2024_10_31
+2024_10_31 - Data_hora: 2024_10_31 17_07_25
+2024_10_31 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\049322ea-d356-4c79-8a7e-9fa10fd4d748.pdf
+2024_10_31 - caminho_novo = Prescricoes\2024_10_31\636098 - 2024_10_31 17_07_25.pdf,
+arquivo:2024_10_31 17_07_25.pdf)
+2024_10_31 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\049322ea-d356-4c79-8a7e-9fa10fd4d748.pdf renomeado e movido com sucesso.
+2024_10_31 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024_10_31 - Atendimento:636098
+
+********************FIM********************
+
+2024_10_31 - nr_atendimento: 630314
+2024_10_31 - enter
+2024_10_31 - enter
+2024_10_31 - click no visualizar
+pyautogui.click(1456, 380)
+2024_10_31 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024_10_31 - enter
+2024_10_31 - clicar para manter
+pyautogui.click(1750,108)
+2024_10_31 - pyautogui.hotkey('ctrl', 'w')
+2024_10_31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_10_31 - Arquivos:
+['1bf1d013-b42c-411e-8773-a91a93363c6b.pdf']
+2024_10_31 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\1bf1d013-b42c-411e-8773-a91a93363c6b.pdf
+2024_10_31 - pasta_prescricoes: Prescricoes
+2024_10_31 - pasta_data: Prescricoes\2024_10_31
+2024_10_31 - ***********os.makedirs: Prescricoes\2024_10_31
+2024_10_31 - Data_hora: 2024_10_31 17_09_08
+2024_10_31 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\1bf1d013-b42c-411e-8773-a91a93363c6b.pdf
+2024_10_31 - caminho_novo = Prescricoes\2024_10_31\630314 - 2024_10_31 17_09_08.pdf,
+arquivo:2024_10_31 17_09_08.pdf)
+2024_10_31 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\1bf1d013-b42c-411e-8773-a91a93363c6b.pdf renomeado e movido com sucesso.
+2024_10_31 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024_10_31 - Atendimento:630314
+
+********************FIM********************
+
+2024_10_31 - nr_atendimento: 635130
+2024_10_31 - enter
+2024_10_31 - enter
+2024_10_31 - click no visualizar
+pyautogui.click(1456, 380)
+2024_10_31 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024_10_31 - enter
+2024_10_31 - clicar para manter
+pyautogui.click(1750,108)
+2024_10_31 - pyautogui.hotkey('ctrl', 'w')
+2024_10_31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_10_31 - Arquivos:
+['a7bd2320-50b4-42b3-9d64-74f00c0ae961.pdf']
+2024_10_31 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\a7bd2320-50b4-42b3-9d64-74f00c0ae961.pdf
+2024_10_31 - pasta_prescricoes: Prescricoes
+2024_10_31 - pasta_data: Prescricoes\2024_10_31
+2024_10_31 - ***********os.makedirs: Prescricoes\2024_10_31
+2024_10_31 - Data_hora: 2024_10_31 17_10_51
+2024_10_31 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\a7bd2320-50b4-42b3-9d64-74f00c0ae961.pdf
+2024_10_31 - caminho_novo = Prescricoes\2024_10_31\635130 - 2024_10_31 17_10_51.pdf,
+arquivo:2024_10_31 17_10_51.pdf)
+2024_10_31 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\a7bd2320-50b4-42b3-9d64-74f00c0ae961.pdf renomeado e movido com sucesso.
+2024_10_31 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024_10_31 - Atendimento:635130
+
+********************FIM********************
+
+2024_10_31 - nr_atendimento: 622711
+2024_10_31 - enter
+2024_10_31 - enter
+2024_10_31 - click no visualizar
+pyautogui.click(1456, 380)
+2024_10_31 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024_10_31 - enter
+2024_10_31 - clicar para manter
+pyautogui.click(1750,108)
+2024_10_31 - pyautogui.hotkey('ctrl', 'w')
+2024_10_31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_10_31 - Arquivos:
+['591df826-45c3-4f1a-ac3e-730db76be42a.pdf']
+2024_10_31 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\591df826-45c3-4f1a-ac3e-730db76be42a.pdf
+2024_10_31 - pasta_prescricoes: Prescricoes
+2024_10_31 - pasta_data: Prescricoes\2024_10_31
+2024_10_31 - ***********os.makedirs: Prescricoes\2024_10_31
+2024_10_31 - Data_hora: 2024_10_31 17_12_34
+2024_10_31 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\591df826-45c3-4f1a-ac3e-730db76be42a.pdf
+2024_10_31 - caminho_novo = Prescricoes\2024_10_31\622711 - 2024_10_31 17_12_34.pdf,
+arquivo:2024_10_31 17_12_34.pdf)
+2024_10_31 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\591df826-45c3-4f1a-ac3e-730db76be42a.pdf renomeado e movido com sucesso.
+2024_10_31 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024_10_31 - Atendimento:622711
+
+********************FIM********************
+
+2024_10_31 - nr_atendimento: 633912
+2024_10_31 - enter
+2024_10_31 - enter
+2024_10_31 - click no visualizar
+pyautogui.click(1456, 380)
+2024_10_31 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024_10_31 - enter
+2024_10_31 - clicar para manter
+pyautogui.click(1750,108)
+2024_10_31 - pyautogui.hotkey('ctrl', 'w')
+2024_10_31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_10_31 - Arquivos:
+['ff84bb5c-b2c1-4437-8db3-f3c2f3a7faa4.pdf']
+2024_10_31 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\ff84bb5c-b2c1-4437-8db3-f3c2f3a7faa4.pdf
+2024_10_31 - pasta_prescricoes: Prescricoes
+2024_10_31 - pasta_data: Prescricoes\2024_10_31
+2024_10_31 - ***********os.makedirs: Prescricoes\2024_10_31
+2024_10_31 - Data_hora: 2024_10_31 17_14_18
+2024_10_31 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\ff84bb5c-b2c1-4437-8db3-f3c2f3a7faa4.pdf
+2024_10_31 - caminho_novo = Prescricoes\2024_10_31\633912 - 2024_10_31 17_14_18.pdf,
+arquivo:2024_10_31 17_14_18.pdf)
+2024_10_31 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\ff84bb5c-b2c1-4437-8db3-f3c2f3a7faa4.pdf renomeado e movido com sucesso.
+2024_10_31 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024_10_31 - Atendimento:633912
+
+********************FIM********************
+
+2024_10_31 - nr_atendimento: 632424
+2024_10_31 - enter
+2024_10_31 - enter
+2024_10_31 - click no visualizar
+pyautogui.click(1456, 380)
+2024_10_31 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024_10_31 - enter
+2024_10_31 - clicar para manter
+pyautogui.click(1750,108)
+2024_10_31 - pyautogui.hotkey('ctrl', 'w')
+2024_10_31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_10_31 - Arquivos:
+['2ac12f94-6c52-4c88-8157-031cc2850d2b.pdf']
+2024_10_31 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\2ac12f94-6c52-4c88-8157-031cc2850d2b.pdf
+2024_10_31 - pasta_prescricoes: Prescricoes
+2024_10_31 - pasta_data: Prescricoes\2024_10_31
+2024_10_31 - ***********os.makedirs: Prescricoes\2024_10_31
+2024_10_31 - Data_hora: 2024_10_31 17_16_01
+2024_10_31 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\2ac12f94-6c52-4c88-8157-031cc2850d2b.pdf
+2024_10_31 - caminho_novo = Prescricoes\2024_10_31\632424 - 2024_10_31 17_16_01.pdf,
+arquivo:2024_10_31 17_16_01.pdf)
+2024_10_31 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\2ac12f94-6c52-4c88-8157-031cc2850d2b.pdf renomeado e movido com sucesso.
+2024_10_31 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024_10_31 - Atendimento:632424
+
+********************FIM********************
+
+2024_10_31 - nr_atendimento: 616885
+2024_10_31 - enter
+2024_10_31 - enter
+2024_10_31 - click no visualizar
+pyautogui.click(1456, 380)
+2024_10_31 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024_10_31 - enter
+2024_10_31 - clicar para manter
+pyautogui.click(1750,108)
+2024_10_31 - pyautogui.hotkey('ctrl', 'w')
+2024_10_31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_10_31 - Arquivos:
+['d33dd655-70e6-4f91-bc13-dd2094a2ab17.pdf']
+2024_10_31 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\d33dd655-70e6-4f91-bc13-dd2094a2ab17.pdf
+2024_10_31 - pasta_prescricoes: Prescricoes
+2024_10_31 - pasta_data: Prescricoes\2024_10_31
+2024_10_31 - ***********os.makedirs: Prescricoes\2024_10_31
+2024_10_31 - Data_hora: 2024_10_31 17_17_44
+2024_10_31 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\d33dd655-70e6-4f91-bc13-dd2094a2ab17.pdf
+2024_10_31 - caminho_novo = Prescricoes\2024_10_31\616885 - 2024_10_31 17_17_44.pdf,
+arquivo:2024_10_31 17_17_44.pdf)
+2024_10_31 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\d33dd655-70e6-4f91-bc13-dd2094a2ab17.pdf renomeado e movido com sucesso.
+2024_10_31 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024_10_31 - Atendimento:616885
+
+********************FIM********************
+
+2024_10_31 - nr_atendimento: 635141
+2024_10_31 - enter
+2024_10_31 - enter
+2024_10_31 - click no visualizar
+pyautogui.click(1456, 380)
+2024_10_31 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024_10_31 - enter
+2024_10_31 - clicar para manter
+pyautogui.click(1750,108)
+2024_10_31 - pyautogui.hotkey('ctrl', 'w')
+2024_10_31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_10_31 - Arquivos:
+['1079b398-d1ef-4d06-b871-64921b107550.pdf']
+2024_10_31 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\1079b398-d1ef-4d06-b871-64921b107550.pdf
+2024_10_31 - pasta_prescricoes: Prescricoes
+2024_10_31 - pasta_data: Prescricoes\2024_10_31
+2024_10_31 - ***********os.makedirs: Prescricoes\2024_10_31
+2024_10_31 - Data_hora: 2024_10_31 17_19_27
+2024_10_31 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\1079b398-d1ef-4d06-b871-64921b107550.pdf
+2024_10_31 - caminho_novo = Prescricoes\2024_10_31\635141 - 2024_10_31 17_19_27.pdf,
+arquivo:2024_10_31 17_19_27.pdf)
+2024_10_31 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\1079b398-d1ef-4d06-b871-64921b107550.pdf renomeado e movido com sucesso.
+2024_10_31 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024_10_31 - Atendimento:635141
+
+********************FIM********************
+
+2024_10_31 - nr_atendimento: 637877
+2024_10_31 - enter
+2024_10_31 - enter
+2024_10_31 - click no visualizar
+pyautogui.click(1456, 380)
+2024_10_31 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024_10_31 - enter
+2024_10_31 - clicar para manter
+pyautogui.click(1750,108)
+2024_10_31 - pyautogui.hotkey('ctrl', 'w')
+2024_10_31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_10_31 - Arquivos:
+['4ae12520-f458-4708-9022-bbdf1ae1f7fe.pdf']
+2024_10_31 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\4ae12520-f458-4708-9022-bbdf1ae1f7fe.pdf
+2024_10_31 - pasta_prescricoes: Prescricoes
+2024_10_31 - pasta_data: Prescricoes\2024_10_31
+2024_10_31 - ***********os.makedirs: Prescricoes\2024_10_31
+2024_10_31 - Data_hora: 2024_10_31 17_21_11
+2024_10_31 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\4ae12520-f458-4708-9022-bbdf1ae1f7fe.pdf
+2024_10_31 - caminho_novo = Prescricoes\2024_10_31\637877 - 2024_10_31 17_21_11.pdf,
+arquivo:2024_10_31 17_21_11.pdf)
+2024_10_31 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\4ae12520-f458-4708-9022-bbdf1ae1f7fe.pdf renomeado e movido com sucesso.
+2024_10_31 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024_10_31 - Atendimento:637877
+
+********************FIM********************
+
+2024_10_31 - nr_atendimento: 483921
+2024_10_31 - enter
+2024_10_31 - enter
+2024_10_31 - click no visualizar
+pyautogui.click(1456, 380)
+2024_10_31 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024_10_31 - enter
+2024_10_31 - clicar para manter
+pyautogui.click(1750,108)
+2024_10_31 - pyautogui.hotkey('ctrl', 'w')
+2024_10_31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_10_31 - Arquivos:
+['00d1ed2a-9949-4be1-b227-077b967e1a26.pdf']
+2024_10_31 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\00d1ed2a-9949-4be1-b227-077b967e1a26.pdf
+2024_10_31 - pasta_prescricoes: Prescricoes
+2024_10_31 - pasta_data: Prescricoes\2024_10_31
+2024_10_31 - ***********os.makedirs: Prescricoes\2024_10_31
+2024_10_31 - Data_hora: 2024_10_31 17_22_54
+2024_10_31 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\00d1ed2a-9949-4be1-b227-077b967e1a26.pdf
+2024_10_31 - caminho_novo = Prescricoes\2024_10_31\483921 - 2024_10_31 17_22_54.pdf,
+arquivo:2024_10_31 17_22_54.pdf)
+2024_10_31 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\00d1ed2a-9949-4be1-b227-077b967e1a26.pdf renomeado e movido com sucesso.
+2024_10_31 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024_10_31 - Atendimento:483921
+
+********************FIM********************
+
+2024_10_31 - nr_atendimento: 630694
+2024_10_31 - enter
+2024_10_31 - enter
+2024_10_31 - click no visualizar
+pyautogui.click(1456, 380)
+2024_10_31 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024_10_31 - enter
+2024_10_31 - clicar para manter
+pyautogui.click(1750,108)
+2024_10_31 - pyautogui.hotkey('ctrl', 'w')
+2024_10_31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_10_31 - Arquivos:
+['72c1dad4-b5f4-4639-b2b3-ec71a3c9363c.pdf']
+2024_10_31 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\72c1dad4-b5f4-4639-b2b3-ec71a3c9363c.pdf
+2024_10_31 - pasta_prescricoes: Prescricoes
+2024_10_31 - pasta_data: Prescricoes\2024_10_31
+2024_10_31 - ***********os.makedirs: Prescricoes\2024_10_31
+2024_10_31 - Data_hora: 2024_10_31 17_24_37
+2024_10_31 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\72c1dad4-b5f4-4639-b2b3-ec71a3c9363c.pdf
+2024_10_31 - caminho_novo = Prescricoes\2024_10_31\630694 - 2024_10_31 17_24_37.pdf,
+arquivo:2024_10_31 17_24_37.pdf)
+2024_10_31 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\72c1dad4-b5f4-4639-b2b3-ec71a3c9363c.pdf renomeado e movido com sucesso.
+2024_10_31 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024_10_31 - Atendimento:630694
+
+********************FIM********************
+
+2024_10_31 - nr_atendimento: 630840
+2024_10_31 - enter
+2024_10_31 - enter
+2024_10_31 - click no visualizar
+pyautogui.click(1456, 380)
+2024_10_31 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024_10_31 - enter
+2024_10_31 - clicar para manter
+pyautogui.click(1750,108)
+2024_10_31 - pyautogui.hotkey('ctrl', 'w')
+2024_10_31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_10_31 - Arquivos:
+['fa7b8377-d58b-435f-abcf-a8f6807cb45c.pdf']
+2024_10_31 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\fa7b8377-d58b-435f-abcf-a8f6807cb45c.pdf
+2024_10_31 - pasta_prescricoes: Prescricoes
+2024_10_31 - pasta_data: Prescricoes\2024_10_31
+2024_10_31 - ***********os.makedirs: Prescricoes\2024_10_31
+2024_10_31 - Data_hora: 2024_10_31 17_26_20
+2024_10_31 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\fa7b8377-d58b-435f-abcf-a8f6807cb45c.pdf
+2024_10_31 - caminho_novo = Prescricoes\2024_10_31\630840 - 2024_10_31 17_26_20.pdf,
+arquivo:2024_10_31 17_26_20.pdf)
+2024_10_31 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\fa7b8377-d58b-435f-abcf-a8f6807cb45c.pdf renomeado e movido com sucesso.
+2024_10_31 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024_10_31 - Atendimento:630840
+
+********************FIM********************
+
+2024_10_31 - nr_atendimento: 629684
+2024_10_31 - enter
+2024_10_31 - enter
+2024_10_31 - click no visualizar
+pyautogui.click(1456, 380)
+2024_10_31 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024_10_31 - enter
+2024_10_31 - clicar para manter
+pyautogui.click(1750,108)
+2024_10_31 - pyautogui.hotkey('ctrl', 'w')
+2024_10_31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_10_31 - Arquivos:
+['48b01a5d-3f81-44dd-8da2-58ff68736cf1.pdf']
+2024_10_31 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\48b01a5d-3f81-44dd-8da2-58ff68736cf1.pdf
+2024_10_31 - pasta_prescricoes: Prescricoes
+2024_10_31 - pasta_data: Prescricoes\2024_10_31
+2024_10_31 - ***********os.makedirs: Prescricoes\2024_10_31
+2024_10_31 - Data_hora: 2024_10_31 17_28_04
+2024_10_31 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\48b01a5d-3f81-44dd-8da2-58ff68736cf1.pdf
+2024_10_31 - caminho_novo = Prescricoes\2024_10_31\629684 - 2024_10_31 17_28_04.pdf,
+arquivo:2024_10_31 17_28_04.pdf)
+2024_10_31 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\48b01a5d-3f81-44dd-8da2-58ff68736cf1.pdf renomeado e movido com sucesso.
+2024_10_31 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024_10_31 - Atendimento:629684
+
+********************FIM********************
+
+2024_10_31 - nr_atendimento: 636800
+2024_10_31 - enter
+2024_10_31 - enter
+2024_10_31 - click no visualizar
+pyautogui.click(1456, 380)
+2024_10_31 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024_10_31 - enter
+2024_10_31 - clicar para manter
+pyautogui.click(1750,108)
+2024_10_31 - pyautogui.hotkey('ctrl', 'w')
+2024_10_31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_10_31 - Arquivos:
+['27fb1e25-613d-41bc-b5f7-bae626f988d7.pdf']
+2024_10_31 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\27fb1e25-613d-41bc-b5f7-bae626f988d7.pdf
+2024_10_31 - pasta_prescricoes: Prescricoes
+2024_10_31 - pasta_data: Prescricoes\2024_10_31
+2024_10_31 - ***********os.makedirs: Prescricoes\2024_10_31
+2024_10_31 - Data_hora: 2024_10_31 17_29_47
+2024_10_31 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\27fb1e25-613d-41bc-b5f7-bae626f988d7.pdf
+2024_10_31 - caminho_novo = Prescricoes\2024_10_31\636800 - 2024_10_31 17_29_47.pdf,
+arquivo:2024_10_31 17_29_47.pdf)
+2024_10_31 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\27fb1e25-613d-41bc-b5f7-bae626f988d7.pdf renomeado e movido com sucesso.
+2024_10_31 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024_10_31 - Atendimento:636800
+
+********************FIM********************
+
+2024_10_31 - nr_atendimento: 632988
+2024_10_31 - enter
+2024_10_31 - enter
+2024_10_31 - click no visualizar
+pyautogui.click(1456, 380)
+2024_10_31 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024_10_31 - enter
+2024_10_31 - clicar para manter
+pyautogui.click(1750,108)
+2024_10_31 - pyautogui.hotkey('ctrl', 'w')
+2024_10_31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_10_31 - Arquivos:
+['e9a37296-5aed-4a3f-a909-d5ced837e839.pdf']
+2024_10_31 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\e9a37296-5aed-4a3f-a909-d5ced837e839.pdf
+2024_10_31 - pasta_prescricoes: Prescricoes
+2024_10_31 - pasta_data: Prescricoes\2024_10_31
+2024_10_31 - ***********os.makedirs: Prescricoes\2024_10_31
+2024_10_31 - Data_hora: 2024_10_31 17_31_30
+2024_10_31 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\e9a37296-5aed-4a3f-a909-d5ced837e839.pdf
+2024_10_31 - caminho_novo = Prescricoes\2024_10_31\632988 - 2024_10_31 17_31_30.pdf,
+arquivo:2024_10_31 17_31_30.pdf)
+2024_10_31 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\e9a37296-5aed-4a3f-a909-d5ced837e839.pdf renomeado e movido com sucesso.
+2024_10_31 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024_10_31 - Atendimento:632988
+
+********************FIM********************
+
+2024_10_31 - nr_atendimento: 637322
+2024_10_31 - enter
+2024_10_31 - enter
+2024_10_31 - click no visualizar
+pyautogui.click(1456, 380)
+2024_10_31 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024_10_31 - enter
+2024_10_31 - clicar para manter
+pyautogui.click(1750,108)
+2024_10_31 - pyautogui.hotkey('ctrl', 'w')
+2024_10_31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_10_31 - Arquivos:
+['47535f92-3472-4357-9421-91bce9a44d85.pdf']
+2024_10_31 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\47535f92-3472-4357-9421-91bce9a44d85.pdf
+2024_10_31 - pasta_prescricoes: Prescricoes
+2024_10_31 - pasta_data: Prescricoes\2024_10_31
+2024_10_31 - ***********os.makedirs: Prescricoes\2024_10_31
+2024_10_31 - Data_hora: 2024_10_31 17_33_13
+2024_10_31 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\47535f92-3472-4357-9421-91bce9a44d85.pdf
+2024_10_31 - caminho_novo = Prescricoes\2024_10_31\637322 - 2024_10_31 17_33_14.pdf,
+arquivo:2024_10_31 17_33_14.pdf)
+2024_10_31 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\47535f92-3472-4357-9421-91bce9a44d85.pdf renomeado e movido com sucesso.
+2024_10_31 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024_10_31 - Atendimento:637322
+
+********************FIM********************
+
+2024_10_31 - nr_atendimento: 629269
+2024_10_31 - enter
+2024_10_31 - enter
+2024_10_31 - click no visualizar
+pyautogui.click(1456, 380)
+2024_10_31 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024_10_31 - enter
+2024_10_31 - clicar para manter
+pyautogui.click(1750,108)
+2024_10_31 - pyautogui.hotkey('ctrl', 'w')
+2024_10_31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_10_31 - Arquivos:
+['004fad3a-1143-4773-85d8-7ed8e77d0a02.pdf']
+2024_10_31 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\004fad3a-1143-4773-85d8-7ed8e77d0a02.pdf
+2024_10_31 - pasta_prescricoes: Prescricoes
+2024_10_31 - pasta_data: Prescricoes\2024_10_31
+2024_10_31 - ***********os.makedirs: Prescricoes\2024_10_31
+2024_10_31 - Data_hora: 2024_10_31 17_34_57
+2024_10_31 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\004fad3a-1143-4773-85d8-7ed8e77d0a02.pdf
+2024_10_31 - caminho_novo = Prescricoes\2024_10_31\629269 - 2024_10_31 17_34_57.pdf,
+arquivo:2024_10_31 17_34_57.pdf)
+2024_10_31 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\004fad3a-1143-4773-85d8-7ed8e77d0a02.pdf renomeado e movido com sucesso.
+2024_10_31 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024_10_31 - Atendimento:629269
+
+********************FIM********************
+
+2024_10_31 - nr_atendimento: 636226
+2024_10_31 - enter
+2024_10_31 - enter
+2024_10_31 - click no visualizar
+pyautogui.click(1456, 380)
+2024_10_31 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024_10_31 - enter
+2024_10_31 - clicar para manter
+pyautogui.click(1750,108)
+2024_10_31 - pyautogui.hotkey('ctrl', 'w')
+2024_10_31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_10_31 - Arquivos:
+['ca8ea6b3-2109-48ae-8450-1c38e84437f1.pdf']
+2024_10_31 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\ca8ea6b3-2109-48ae-8450-1c38e84437f1.pdf
+2024_10_31 - pasta_prescricoes: Prescricoes
+2024_10_31 - pasta_data: Prescricoes\2024_10_31
+2024_10_31 - ***********os.makedirs: Prescricoes\2024_10_31
+2024_10_31 - Data_hora: 2024_10_31 17_36_40
+2024_10_31 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\ca8ea6b3-2109-48ae-8450-1c38e84437f1.pdf
+2024_10_31 - caminho_novo = Prescricoes\2024_10_31\636226 - 2024_10_31 17_36_40.pdf,
+arquivo:2024_10_31 17_36_40.pdf)
+2024_10_31 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\ca8ea6b3-2109-48ae-8450-1c38e84437f1.pdf renomeado e movido com sucesso.
+2024_10_31 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024_10_31 - Atendimento:636226
+
+********************FIM********************
+
+2024_10_31 - nr_atendimento: 637318
+2024_10_31 - enter
+2024_10_31 - enter
+2024_10_31 - click no visualizar
+pyautogui.click(1456, 380)
+2024_10_31 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024_10_31 - enter
+2024_10_31 - clicar para manter
+pyautogui.click(1750,108)
+2024_10_31 - pyautogui.hotkey('ctrl', 'w')
+2024_10_31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_10_31 - Arquivos:
+['c7621af3-f1ee-42d9-9aaa-4dd610e1a802.pdf']
+2024_10_31 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\c7621af3-f1ee-42d9-9aaa-4dd610e1a802.pdf
+2024_10_31 - pasta_prescricoes: Prescricoes
+2024_10_31 - pasta_data: Prescricoes\2024_10_31
+2024_10_31 - ***********os.makedirs: Prescricoes\2024_10_31
+2024_10_31 - Data_hora: 2024_10_31 17_38_23
+2024_10_31 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\c7621af3-f1ee-42d9-9aaa-4dd610e1a802.pdf
+2024_10_31 - caminho_novo = Prescricoes\2024_10_31\637318 - 2024_10_31 17_38_23.pdf,
+arquivo:2024_10_31 17_38_23.pdf)
+2024_10_31 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\c7621af3-f1ee-42d9-9aaa-4dd610e1a802.pdf renomeado e movido com sucesso.
+2024_10_31 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024_10_31 - Atendimento:637318
+
+********************FIM********************
+
+2024_10_31 - nr_atendimento: 636773
+2024_10_31 - enter
+2024_10_31 - enter
+2024_10_31 - click no visualizar
+pyautogui.click(1456, 380)
+2024_10_31 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024_10_31 - enter
+2024_10_31 - clicar para manter
+pyautogui.click(1750,108)
+2024_10_31 - pyautogui.hotkey('ctrl', 'w')
+2024_10_31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_10_31 - Arquivos:
+['9caf953d-4a4b-47d0-853e-2f3f2b3ccada.pdf']
+2024_10_31 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\9caf953d-4a4b-47d0-853e-2f3f2b3ccada.pdf
+2024_10_31 - pasta_prescricoes: Prescricoes
+2024_10_31 - pasta_data: Prescricoes\2024_10_31
+2024_10_31 - ***********os.makedirs: Prescricoes\2024_10_31
+2024_10_31 - Data_hora: 2024_10_31 17_40_07
+2024_10_31 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\9caf953d-4a4b-47d0-853e-2f3f2b3ccada.pdf
+2024_10_31 - caminho_novo = Prescricoes\2024_10_31\636773 - 2024_10_31 17_40_07.pdf,
+arquivo:2024_10_31 17_40_07.pdf)
+2024_10_31 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\9caf953d-4a4b-47d0-853e-2f3f2b3ccada.pdf renomeado e movido com sucesso.
+2024_10_31 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024_10_31 - Atendimento:636773
+
+********************FIM********************
+
+2024_10_31 - nr_atendimento: 637879
+2024_10_31 - enter
+2024_10_31 - enter
+2024_10_31 - click no visualizar
+pyautogui.click(1456, 380)
+2024_10_31 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024_10_31 - enter
+2024_10_31 - clicar para manter
+pyautogui.click(1750,108)
+2024_10_31 - pyautogui.hotkey('ctrl', 'w')
+2024_10_31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_10_31 - Arquivos:
+['70bbded1-fd6a-420c-8059-4ef67e58ce6f.pdf']
+2024_10_31 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\70bbded1-fd6a-420c-8059-4ef67e58ce6f.pdf
+2024_10_31 - pasta_prescricoes: Prescricoes
+2024_10_31 - pasta_data: Prescricoes\2024_10_31
+2024_10_31 - ***********os.makedirs: Prescricoes\2024_10_31
+2024_10_31 - Data_hora: 2024_10_31 17_41_50
+2024_10_31 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\70bbded1-fd6a-420c-8059-4ef67e58ce6f.pdf
+2024_10_31 - caminho_novo = Prescricoes\2024_10_31\637879 - 2024_10_31 17_41_50.pdf,
+arquivo:2024_10_31 17_41_50.pdf)
+2024_10_31 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\70bbded1-fd6a-420c-8059-4ef67e58ce6f.pdf renomeado e movido com sucesso.
+2024_10_31 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024_10_31 - Atendimento:637879
+
+********************FIM********************
+
+2024_10_31 - nr_atendimento: 638336
+2024_10_31 - enter
+2024_10_31 - enter
+2024_10_31 - click no visualizar
+pyautogui.click(1456, 380)
+2024_10_31 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024_10_31 - enter
+2024_10_31 - clicar para manter
+pyautogui.click(1750,108)
+2024_10_31 - pyautogui.hotkey('ctrl', 'w')
+2024_10_31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_10_31 - Arquivos:
+['60608915-32b8-448f-908e-a8b031bb0046.pdf']
+2024_10_31 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\60608915-32b8-448f-908e-a8b031bb0046.pdf
+2024_10_31 - pasta_prescricoes: Prescricoes
+2024_10_31 - pasta_data: Prescricoes\2024_10_31
+2024_10_31 - ***********os.makedirs: Prescricoes\2024_10_31
+2024_10_31 - Data_hora: 2024_10_31 17_43_33
+2024_10_31 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\60608915-32b8-448f-908e-a8b031bb0046.pdf
+2024_10_31 - caminho_novo = Prescricoes\2024_10_31\638336 - 2024_10_31 17_43_33.pdf,
+arquivo:2024_10_31 17_43_33.pdf)
+2024_10_31 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\60608915-32b8-448f-908e-a8b031bb0046.pdf renomeado e movido com sucesso.
+2024_10_31 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024_10_31 - Atendimento:638336
+
+********************FIM********************
+
+2024_10_31 - nr_atendimento: 633490
+2024_10_31 - enter
+2024_10_31 - enter
+2024_10_31 - click no visualizar
+pyautogui.click(1456, 380)
+2024_10_31 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024_10_31 - enter
+2024_10_31 - clicar para manter
+pyautogui.click(1750,108)
+2024_10_31 - pyautogui.hotkey('ctrl', 'w')
+2024_10_31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_10_31 - Arquivos:
+['c1504a0c-6ed4-45eb-a6a7-9f316e5f53ee.pdf']
+2024_10_31 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\c1504a0c-6ed4-45eb-a6a7-9f316e5f53ee.pdf
+2024_10_31 - pasta_prescricoes: Prescricoes
+2024_10_31 - pasta_data: Prescricoes\2024_10_31
+2024_10_31 - ***********os.makedirs: Prescricoes\2024_10_31
+2024_10_31 - Data_hora: 2024_10_31 17_45_16
+2024_10_31 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\c1504a0c-6ed4-45eb-a6a7-9f316e5f53ee.pdf
+2024_10_31 - caminho_novo = Prescricoes\2024_10_31\633490 - 2024_10_31 17_45_16.pdf,
+arquivo:2024_10_31 17_45_16.pdf)
+2024_10_31 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\c1504a0c-6ed4-45eb-a6a7-9f316e5f53ee.pdf renomeado e movido com sucesso.
+2024_10_31 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024_10_31 - Atendimento:633490
+
+********************FIM********************
+
+2024_10_31 - nr_atendimento: 636810
+2024_10_31 - enter
+2024_10_31 - enter
+2024_10_31 - click no visualizar
+pyautogui.click(1456, 380)
+2024_10_31 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024_10_31 - enter
+2024_10_31 - clicar para manter
+pyautogui.click(1750,108)
+2024_10_31 - pyautogui.hotkey('ctrl', 'w')
+2024_10_31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_10_31 - Arquivos:
+['7972df5d-a00b-478f-9044-e49a7fcb2e50.pdf']
+2024_10_31 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\7972df5d-a00b-478f-9044-e49a7fcb2e50.pdf
+2024_10_31 - pasta_prescricoes: Prescricoes
+2024_10_31 - pasta_data: Prescricoes\2024_10_31
+2024_10_31 - ***********os.makedirs: Prescricoes\2024_10_31
+2024_10_31 - Data_hora: 2024_10_31 17_47_00
+2024_10_31 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\7972df5d-a00b-478f-9044-e49a7fcb2e50.pdf
+2024_10_31 - caminho_novo = Prescricoes\2024_10_31\636810 - 2024_10_31 17_47_00.pdf,
+arquivo:2024_10_31 17_47_00.pdf)
+2024_10_31 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\7972df5d-a00b-478f-9044-e49a7fcb2e50.pdf renomeado e movido com sucesso.
+2024_10_31 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024_10_31 - Atendimento:636810
+
+********************FIM********************
+
+2024_10_31 - nr_atendimento: 637217
+2024_10_31 - enter
+2024_10_31 - enter
+2024_10_31 - click no visualizar
+pyautogui.click(1456, 380)
+2024_10_31 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024_10_31 - enter
+2024_10_31 - clicar para manter
+pyautogui.click(1750,108)
+2024_10_31 - pyautogui.hotkey('ctrl', 'w')
+2024_10_31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_10_31 - Arquivos:
+['906c99a3-d615-4045-b43c-21a6e1f2effa.pdf']
+2024_10_31 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\906c99a3-d615-4045-b43c-21a6e1f2effa.pdf
+2024_10_31 - pasta_prescricoes: Prescricoes
+2024_10_31 - pasta_data: Prescricoes\2024_10_31
+2024_10_31 - ***********os.makedirs: Prescricoes\2024_10_31
+2024_10_31 - Data_hora: 2024_10_31 17_48_43
+2024_10_31 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\906c99a3-d615-4045-b43c-21a6e1f2effa.pdf
+2024_10_31 - caminho_novo = Prescricoes\2024_10_31\637217 - 2024_10_31 17_48_43.pdf,
+arquivo:2024_10_31 17_48_43.pdf)
+2024_10_31 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\906c99a3-d615-4045-b43c-21a6e1f2effa.pdf renomeado e movido com sucesso.
+2024_10_31 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024_10_31 - Atendimento:637217
+
+********************FIM********************
+
+2024_10_31 - nr_atendimento: 638364
+2024_10_31 - enter
+2024_10_31 - enter
+2024_10_31 - click no visualizar
+pyautogui.click(1456, 380)
+2024_10_31 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024_10_31 - enter
+2024_10_31 - clicar para manter
+pyautogui.click(1750,108)
+2024_10_31 - pyautogui.hotkey('ctrl', 'w')
+2024_10_31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_10_31 - Arquivos:
+['a7c80542-cb10-405c-8d72-325ca5238d39.pdf']
+2024_10_31 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\a7c80542-cb10-405c-8d72-325ca5238d39.pdf
+2024_10_31 - pasta_prescricoes: Prescricoes
+2024_10_31 - pasta_data: Prescricoes\2024_10_31
+2024_10_31 - ***********os.makedirs: Prescricoes\2024_10_31
+2024_10_31 - Data_hora: 2024_10_31 17_50_26
+2024_10_31 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\a7c80542-cb10-405c-8d72-325ca5238d39.pdf
+2024_10_31 - caminho_novo = Prescricoes\2024_10_31\638364 - 2024_10_31 17_50_26.pdf,
+arquivo:2024_10_31 17_50_26.pdf)
+2024_10_31 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\a7c80542-cb10-405c-8d72-325ca5238d39.pdf renomeado e movido com sucesso.
+2024_10_31 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024_10_31 - Atendimento:638364
+
+********************FIM********************
+
+2024_10_31 - nr_atendimento: 636204
+2024_10_31 - enter
+2024_10_31 - enter
+2024_10_31 - click no visualizar
+pyautogui.click(1456, 380)
+2024_10_31 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024_10_31 - enter
+2024_10_31 - clicar para manter
+pyautogui.click(1750,108)
+2024_10_31 - pyautogui.hotkey('ctrl', 'w')
+2024_10_31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_10_31 - Arquivos:
+['e8b2f854-739d-4b46-b2ee-b7e7dc8cae71.pdf']
+2024_10_31 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\e8b2f854-739d-4b46-b2ee-b7e7dc8cae71.pdf
+2024_10_31 - pasta_prescricoes: Prescricoes
+2024_10_31 - pasta_data: Prescricoes\2024_10_31
+2024_10_31 - ***********os.makedirs: Prescricoes\2024_10_31
+2024_10_31 - Data_hora: 2024_10_31 17_52_10
+2024_10_31 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\e8b2f854-739d-4b46-b2ee-b7e7dc8cae71.pdf
+2024_10_31 - caminho_novo = Prescricoes\2024_10_31\636204 - 2024_10_31 17_52_10.pdf,
+arquivo:2024_10_31 17_52_10.pdf)
+2024_10_31 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\e8b2f854-739d-4b46-b2ee-b7e7dc8cae71.pdf renomeado e movido com sucesso.
+2024_10_31 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024_10_31 - Atendimento:636204
+
+********************FIM********************
+
+2024_10_31 - nr_atendimento: 633493
+2024_10_31 - enter
+2024_10_31 - enter
+2024_10_31 - click no visualizar
+pyautogui.click(1456, 380)
+2024_10_31 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024_10_31 - enter
+2024_10_31 - clicar para manter
+pyautogui.click(1750,108)
+2024_10_31 - pyautogui.hotkey('ctrl', 'w')
+2024_10_31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_10_31 - Arquivos:
+['4cf50352-676f-4fb8-aca4-d7963fa742d1.pdf']
+2024_10_31 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\4cf50352-676f-4fb8-aca4-d7963fa742d1.pdf
+2024_10_31 - pasta_prescricoes: Prescricoes
+2024_10_31 - pasta_data: Prescricoes\2024_10_31
+2024_10_31 - ***********os.makedirs: Prescricoes\2024_10_31
+2024_10_31 - Data_hora: 2024_10_31 17_53_56
+2024_10_31 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\4cf50352-676f-4fb8-aca4-d7963fa742d1.pdf
+2024_10_31 - caminho_novo = Prescricoes\2024_10_31\633493 - 2024_10_31 17_53_56.pdf,
+arquivo:2024_10_31 17_53_56.pdf)
+2024_10_31 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\4cf50352-676f-4fb8-aca4-d7963fa742d1.pdf renomeado e movido com sucesso.
+2024_10_31 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024_10_31 - Atendimento:633493
+
+********************FIM********************
+
+2024_10_31 - nr_atendimento: 613880
+2024_10_31 - enter
+2024_10_31 - enter
+2024_10_31 - click no visualizar
+pyautogui.click(1456, 380)
+2024_10_31 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024_10_31 - enter
+2024_10_31 - clicar para manter
+pyautogui.click(1750,108)
+2024_10_31 - pyautogui.hotkey('ctrl', 'w')
+2024_10_31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_10_31 - Arquivos:
+['aede8d67-a516-4695-92a2-b06de6d54118.pdf']
+2024_10_31 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\aede8d67-a516-4695-92a2-b06de6d54118.pdf
+2024_10_31 - pasta_prescricoes: Prescricoes
+2024_10_31 - pasta_data: Prescricoes\2024_10_31
+2024_10_31 - ***********os.makedirs: Prescricoes\2024_10_31
+2024_10_31 - Data_hora: 2024_10_31 17_55_45
+2024_10_31 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\aede8d67-a516-4695-92a2-b06de6d54118.pdf
+2024_10_31 - caminho_novo = Prescricoes\2024_10_31\613880 - 2024_10_31 17_55_45.pdf,
+arquivo:2024_10_31 17_55_45.pdf)
+2024_10_31 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\aede8d67-a516-4695-92a2-b06de6d54118.pdf renomeado e movido com sucesso.
+2024_10_31 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024_10_31 - Atendimento:613880
+
+********************FIM********************
+
+2024_10_31 - nr_atendimento: 637867
+2024_10_31 - enter
+2024_10_31 - enter
+2024_10_31 - click no visualizar
+pyautogui.click(1456, 380)
+2024_10_31 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024_10_31 - enter
+2024_10_31 - clicar para manter
+pyautogui.click(1750,108)
+2024_10_31 - pyautogui.hotkey('ctrl', 'w')
+2024_10_31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_10_31 - Arquivos:
+['822a7451-7129-4994-84f1-40f3d6135955.pdf']
+2024_10_31 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\822a7451-7129-4994-84f1-40f3d6135955.pdf
+2024_10_31 - pasta_prescricoes: Prescricoes
+2024_10_31 - pasta_data: Prescricoes\2024_10_31
+2024_10_31 - ***********os.makedirs: Prescricoes\2024_10_31
+2024_10_31 - Data_hora: 2024_10_31 17_57_30
+2024_10_31 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\822a7451-7129-4994-84f1-40f3d6135955.pdf
+2024_10_31 - caminho_novo = Prescricoes\2024_10_31\637867 - 2024_10_31 17_57_30.pdf,
+arquivo:2024_10_31 17_57_30.pdf)
+2024_10_31 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\822a7451-7129-4994-84f1-40f3d6135955.pdf renomeado e movido com sucesso.
+2024_10_31 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024_10_31 - Atendimento:637867
+
+********************FIM********************
+
+2024_10_31 - nr_atendimento: 623563
+2024_10_31 - enter
+2024_10_31 - enter
+2024_10_31 - click no visualizar
+pyautogui.click(1456, 380)
+2024_10_31 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024_10_31 - enter
+2024_10_31 - clicar para manter
+pyautogui.click(1750,108)
+2024_10_31 - pyautogui.hotkey('ctrl', 'w')
+2024_10_31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_10_31 - Arquivos:
+['87beb46e-aa49-4ab3-a221-a9b5f34fd505.pdf']
+2024_10_31 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\87beb46e-aa49-4ab3-a221-a9b5f34fd505.pdf
+2024_10_31 - pasta_prescricoes: Prescricoes
+2024_10_31 - pasta_data: Prescricoes\2024_10_31
+2024_10_31 - ***********os.makedirs: Prescricoes\2024_10_31
+2024_10_31 - Data_hora: 2024_10_31 17_59_14
+2024_10_31 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\87beb46e-aa49-4ab3-a221-a9b5f34fd505.pdf
+2024_10_31 - caminho_novo = Prescricoes\2024_10_31\623563 - 2024_10_31 17_59_14.pdf,
+arquivo:2024_10_31 17_59_14.pdf)
+2024_10_31 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\87beb46e-aa49-4ab3-a221-a9b5f34fd505.pdf renomeado e movido com sucesso.
+2024_10_31 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024_10_31 - Atendimento:623563
+
+********************FIM********************
+
+2024_10_31 - nr_atendimento: 630831
+2024_10_31 - enter
+2024_10_31 - enter
+2024_10_31 - click no visualizar
+pyautogui.click(1456, 380)
+2024_10_31 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024_10_31 - enter
+2024_10_31 - clicar para manter
+pyautogui.click(1750,108)
+2024_10_31 - pyautogui.hotkey('ctrl', 'w')
+2024_10_31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_10_31 - Arquivos:
+[]
+2024_11_01 - def fechar()
+2024_11_01 - janela.destroy()
+2024_11_01 07_49_49 - ============================== inicio ========================
+2024_11_01 07_49_49 - interface_grafica()
+2024_11_01 07_49_51 - def iniciar()
+2024_11_01 07_49_51 - Botao Iniciar clicado!
+2024_11_01 07_49_51 - global statusThread: False
+2024_11_01 07_49_51 - ============================== execuçao ========================
+2024_11_01 07_49_51 - Tarefa inicializada!
+statusThread:True
+2024_11_01 07_49_51 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_11_01 07_49_51 - delete_all_files_in_directory(C:\Users\pvplima.C19NOT76\Downloads)
+2024_11_01 07_49_51 - ============================== Geracao_Pdf_Atendimen ==============================
+2024_11_01 07_50_03 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+2024_11_01 07_50_04 - box_usuario
+2024_11_01 07_50_04 - box_senha
+2024_11_01 07_50_04 - bt_login
+2024_11_01 07_50_08 - bt_utilitarios.click()
+2024_11_01 07_50_11 - bt_impressao_relatorios.click()
+2024_11_01 07_50_19 - box_codigo_rel.send_keys('1790')
+2024_11_01 07_50_27 - pyautogui.press('enter')
+2024_11_01 07_50_35 - bt_visualizar_.click()
+2024_11_01 07_51_05 - click apos o download
+pyautogui.click(1810,165)
+2024_11_01 07_51_15 - Pressionar Item
+pyautogui.press('enter')
+2024_11_01 07_51_23 - click no manter
+pyautogui.click(1751,109)
+2024_11_01 07_51_31 - global statusThread: False
+2024_11_01 07_51_35 - =========== FIM ========
+2024_11_01 07_51_39 - ******def pdf_para_df():
+2024_11_01 07_51_39 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_11_01 07_51_39 - Arquivos:
+['c4a5872f-e952-426a-8735-67c021913d65.pdf']
+2024_11_01 07_51_39 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\c4a5872f-e952-426a-8735-67c021913d65.pdf
+2024_11_01 07_51_39 - mover_ultimo_pdf_para_raiz(ultimo_arquivo,diretorio_atual)
+2024_11_01 07_51_39 - *****caminho_arquivo: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf
+2024_11_01 07_51_39 - ultimo_arquivo: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf
+2024_11_01 07_51_39 - ============================== Geracao_Pdf_Prescricao ==============================
+2024_11_01 07_51_49 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+2024_11_01 07_51_50 - box_usuario
+2024_11_01 07_51_52 - box_senha
+2024_11_01 07_51_54 - bt_login
+2024_11_01 07_52_04 - for linha in df_filtrado.iloc[:, 0]
+2024_11_01 07_52_04 - CPOE
+2024_11_01 07_52_12 - enter
+2024_11_01 07_52_20 - clicar no icone do CPOE:
+2024_11_01 07_52_28 - nr_atendimento: 423275
+2024_11_01 07_52_36 - enter
+2024_11_01 07_52_44 - enter
+2024_11_01 07_53_01 - click no visualizar
+pyautogui.click(1456, 380)
+2024_11_01 07_53_21 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024_11_01 07_54_06 - enter
+2024_11_01 07_54_14 - clicar para manter
+pyautogui.click(1750,108)
+2024_11_01 07_54_22 - pyautogui.hotkey('ctrl', 'w')
+2024_11_01 07_54_30 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_11_01 07_54_30 - Arquivos:
+['87784abf-9003-4751-9280-6da40af4ad1d.pdf']
+2024_11_01 07_54_30 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\87784abf-9003-4751-9280-6da40af4ad1d.pdf
+2024_11_01 07_54_30 - pasta_prescricoes: Prescricoes
+2024_11_01 07_54_30 - pasta_data: Prescricoes\2024_11_01
+2024_11_01 07_54_30 - ***********os.makedirs: Prescricoes\2024_11_01
+2024_11_01 07_54_30 - Data_hora: 2024_11_01 07_54_30
+2024_11_01 07_54_30 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\87784abf-9003-4751-9280-6da40af4ad1d.pdf
+2024_11_01 07_54_30 - caminho_novo = Prescricoes\2024_11_01\423275 - 2024_11_01 07_54_30.pdf,
+arquivo:2024_11_01 07_54_30.pdf)
+2024_11_01 07_54_30 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\87784abf-9003-4751-9280-6da40af4ad1d.pdf renomeado e movido com sucesso.
+2024_11_01 07_54_30 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024_11_01 07_54_38 - Atendimento:423275
+
+********************FIM********************
+
+2024_11_01 07_54_48 - nr_atendimento: 635085
+2024_11_01 07_54_56 - enter
+2024_11_01 07_55_05 - enter
+2024_11_01 07_55_21 - click no visualizar
+pyautogui.click(1456, 380)
+2024_11_01 07_55_41 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024_11_01 07_56_26 - enter
+2024_11_01 07_56_34 - clicar para manter
+pyautogui.click(1750,108)
+2024_11_01 07_56_42 - pyautogui.hotkey('ctrl', 'w')
+2024_11_01 07_56_50 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_11_01 07_56_50 - Arquivos:
+['31df62a9-d736-4740-8a3b-361ccf91a590.pdf']
+2024_11_01 07_56_50 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\31df62a9-d736-4740-8a3b-361ccf91a590.pdf
+2024_11_01 07_56_50 - pasta_prescricoes: Prescricoes
+2024_11_01 07_56_50 - pasta_data: Prescricoes\2024_11_01
+2024_11_01 07_56_50 - ***********os.makedirs: Prescricoes\2024_11_01
+2024_11_01 07_56_50 - Data_hora: 2024_11_01 07_56_50
+2024_11_01 07_56_50 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\31df62a9-d736-4740-8a3b-361ccf91a590.pdf
+2024_11_01 07_56_50 - caminho_novo = Prescricoes\2024_11_01\635085 - 2024_11_01 07_56_50.pdf,
+arquivo:2024_11_01 07_56_50.pdf)
+2024_11_01 07_56_50 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\31df62a9-d736-4740-8a3b-361ccf91a590.pdf renomeado e movido com sucesso.
+2024_11_01 07_56_50 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024_11_01 07_56_58 - Atendimento:635085
+
+********************FIM********************
+
+2024_11_01 07_57_08 - nr_atendimento: 621123
+2024_11_01 07_57_17 - enter
+2024_11_01 07_57_25 - enter
+2024_11_01 07_57_41 - click no visualizar
+pyautogui.click(1456, 380)
+2024_11_01 07_58_01 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024_11_01 07_58_46 - enter
+2024_11_01 07_58_54 - clicar para manter
+pyautogui.click(1750,108)
+2024_11_01 07_59_02 - pyautogui.hotkey('ctrl', 'w')
+2024_11_01 07_59_10 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_11_01 07_59_10 - Arquivos:
+['e4704f1f-085e-4d7f-83c8-bcfe712b62e4.pdf']
+2024_11_01 07_59_10 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\e4704f1f-085e-4d7f-83c8-bcfe712b62e4.pdf
+2024_11_01 07_59_10 - pasta_prescricoes: Prescricoes
+2024_11_01 07_59_10 - pasta_data: Prescricoes\2024_11_01
+2024_11_01 07_59_10 - ***********os.makedirs: Prescricoes\2024_11_01
+2024_11_01 07_59_10 - Data_hora: 2024_11_01 07_59_10
+2024_11_01 07_59_10 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\e4704f1f-085e-4d7f-83c8-bcfe712b62e4.pdf
+2024_11_01 07_59_10 - caminho_novo = Prescricoes\2024_11_01\621123 - 2024_11_01 07_59_10.pdf,
+arquivo:2024_11_01 07_59_10.pdf)
+2024_11_01 07_59_10 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\e4704f1f-085e-4d7f-83c8-bcfe712b62e4.pdf renomeado e movido com sucesso.
+2024_11_01 07_59_11 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024_11_01 07_59_19 - Atendimento:621123
+
+********************FIM********************
+
+2024_11_01 07_59_29 - nr_atendimento: 637294
+2024_11_01 07_59_37 - enter
+2024_11_01 07_59_45 - enter
+2024_11_01 08_00_01 - click no visualizar
+pyautogui.click(1456, 380)
+2024_11_01 08_00_21 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024_11_01 08_01_06 - enter
+2024_11_01 08_01_14 - clicar para manter
+pyautogui.click(1750,108)
+2024_11_01 08_01_23 - pyautogui.hotkey('ctrl', 'w')
+2024_11_01 08_01_31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_11_01 08_01_31 - Arquivos:
+['58fd3e27-6a02-4c35-8302-e2cb07ac0ccd.pdf']
+2024_11_01 08_01_31 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\58fd3e27-6a02-4c35-8302-e2cb07ac0ccd.pdf
+2024_11_01 08_01_31 - pasta_prescricoes: Prescricoes
+2024_11_01 08_01_31 - pasta_data: Prescricoes\2024_11_01
+2024_11_01 08_01_31 - ***********os.makedirs: Prescricoes\2024_11_01
+2024_11_01 08_01_31 - Data_hora: 2024_11_01 08_01_31
+2024_11_01 08_01_31 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\58fd3e27-6a02-4c35-8302-e2cb07ac0ccd.pdf
+2024_11_01 08_01_31 - caminho_novo = Prescricoes\2024_11_01\637294 - 2024_11_01 08_01_31.pdf,
+arquivo:2024_11_01 08_01_31.pdf)
+2024_11_01 08_01_31 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\58fd3e27-6a02-4c35-8302-e2cb07ac0ccd.pdf renomeado e movido com sucesso.
+2024_11_01 08_01_31 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024_11_01 08_01_39 - Atendimento:637294
+
+********************FIM********************
+
+2024_11_01 08_01_49 - nr_atendimento: 636098
+2024_11_01 08_01_57 - enter
+2024_11_01 08_02_05 - enter
+2024_11_01 08_02_21 - click no visualizar
+pyautogui.click(1456, 380)
+2024_11_01 08_02_41 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024_11_01 08_03_27 - enter
+2024_11_01 08_03_35 - clicar para manter
+pyautogui.click(1750,108)
+2024_11_01 08_03_43 - pyautogui.hotkey('ctrl', 'w')
+2024_11_01 08_03_51 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024_11_01 08_03_51 - Arquivos:
+['701d4e63-440b-4413-950e-6ccb3f47e3f1.pdf']
+2024_11_01 08_03_51 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\701d4e63-440b-4413-950e-6ccb3f47e3f1.pdf
+2024_11_01 08_03_51 - pasta_prescricoes: Prescricoes
+2024_11_01 08_03_51 - pasta_data: Prescricoes\2024_11_01
+2024_11_01 08_03_51 - ***********os.makedirs: Prescricoes\2024_11_01
+2024_11_01 08_03_51 - Data_hora: 2024_11_01 08_03_51
+2024_11_01 08_03_51 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\701d4e63-440b-4413-950e-6ccb3f47e3f1.pdf
+2024_11_01 08_03_51 - caminho_novo = Prescricoes\2024_11_01\636098 - 2024_11_01 08_03_51.pdf,
+arquivo:2024_11_01 08_03_51.pdf)
+2024_11_01 08_03_51 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\701d4e63-440b-4413-950e-6ccb3f47e3f1.pdf renomeado e movido com sucesso.
+2024_11_01 08_03_51 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024_11_01 08_03_59 - Atendimento:636098
+
+********************FIM********************
+
+2024_11_01 08_04_09 - nr_atendimento: 630314
+2024_11_01 08_04_17 - enter
+2024_11_01 08_04_25 - enter
+2024_11_01 08_04_42 - click no visualizar
+pyautogui.click(1456, 380)
+2024_11_01 08_05_02 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024_11_01 08_05_28 - def fechar()- janela.destroy()
+2024_11_01 08_06_05 - ============================== inicio ========================
+2024_11_01 08_06_05 - interface_grafica()
+2024_11_01 08_06_11 - def fechar()- janela.destroy()
+2024_11_01 08_07_27 - ============================== inicio ========================
+2024_11_01 08_07_27 - interface_grafica()
+2024_11_01 08_09_54 - def fechar()- janela.destroy()
+2024-11-01 08:09:55 - ============================== inicio ========================
+2024-11-01 08:09:55 - interface_grafica()
+2024-11-01 08:10:05 - def iniciar()
+2024-11-01 08:10:05 - Botao Iniciar clicado!
+2024-11-01 08:10:05 - global statusThread: False
+2024-11-01 08:10:05 - ============================== execuçao ========================
+2024-11-01 08:10:05 - Tarefa inicializada!
+statusThread:True
+2024-11-01 08:10:05 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024-11-01 08:10:05 - delete_all_files_in_directory(C:\Users\pvplima.C19NOT76\Downloads)
+2024-11-01 08:10:05 - ============================== Geracao_Pdf_Atendimen ==============================
+2024-11-01 08:10:15 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+2024-11-01 08:10:16 - box_usuario
+2024-11-01 08:10:16 - box_senha
+2024-11-01 08:10:16 - bt_login
+2024-11-01 08:10:20 - bt_utilitarios.click()
+2024-11-01 08:10:22 - bt_impressao_relatorios.click()
+2024-11-01 08:10:30 - box_codigo_rel.send_keys('1790')
+2024-11-01 08:10:38 - pyautogui.press('enter')
+2024-11-01 08:10:46 - bt_visualizar_.click()
+2024-11-01 08:11:16 - click apos o download
+pyautogui.click(1810,165)
+2024-11-01 08:11:27 - Pressionar Item
+pyautogui.press('enter')
+2024-11-01 08:11:35 - click no manter
+pyautogui.click(1751,109)
+2024-11-01 08:11:43 - global statusThread: False
+2024-11-01 08:11:47 - =========== FIM ========
+2024-11-01 08:11:51 - ******def pdf_para_df():
+2024-11-01 08:11:51 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024-11-01 08:11:51 - Arquivos:
+['3a38cbdb-7273-49d3-86c1-8e4144a52c6d.pdf']
+2024-11-01 08:11:51 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\3a38cbdb-7273-49d3-86c1-8e4144a52c6d.pdf
+2024-11-01 08:11:51 - mover_ultimo_pdf_para_raiz(ultimo_arquivo,diretorio_atual)
+2024-11-01 08:11:51 - *****caminho_arquivo: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf
+2024-11-01 08:11:51 - ultimo_arquivo: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf
+2024-11-01 08:11:51 - ============================== Geracao_Pdf_Prescricao ==============================
+2024-11-01 08:12:01 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+2024-11-01 08:12:01 - box_usuario
+2024-11-01 08:12:03 - box_senha
+2024-11-01 08:12:05 - bt_login
+2024-11-01 08:12:15 - for linha in df_filtrado.iloc[:, 0]
+2024-11-01 08:12:15 - CPOE
+2024-11-01 08:12:24 - enter
+2024-11-01 08:12:32 - clicar no icone do CPOE:
+2024-11-01 08:12:40 - nr_atendimento: 423275
+2024-11-01 08:12:48 - enter
+2024-11-01 08:12:56 - enter
+2024-11-01 08:13:12 - click no visualizar
+pyautogui.click(1456, 380)
+2024-11-01 08:13:32 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024-11-01 08:14:17 - enter
+2024-11-01 08:14:26 - clicar para manter
+pyautogui.click(1750,108)
+2024-11-01 08:14:34 - pyautogui.hotkey('ctrl', 'w')
+2024-11-01 08:14:42 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024-11-01 08:14:42 - Arquivos:
+['8b81ddcf-0d25-4e7e-901a-49912400edae.pdf']
+2024-11-01 08:14:42 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\8b81ddcf-0d25-4e7e-901a-49912400edae.pdf
+2024-11-01 08:14:42 - pasta_prescricoes: Prescricoes
+2024-11-01 08:14:42 - pasta_data: Prescricoes\2024_11_01
+2024-11-01 08:14:42 - ***********os.makedirs: Prescricoes\2024_11_01
+2024-11-01 08:14:42 - Data_hora: 2024-11-01 08:14:42
+2024-11-01 08:14:42 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\8b81ddcf-0d25-4e7e-901a-49912400edae.pdf
+2024-11-01 08:14:42 - caminho_novo = Prescricoes\2024_11_01\423275 - 2024-11-01 08:14:42.pdf,
+arquivo:2024-11-01 08:14:42.pdf)
+2024-11-01 08-22-00 - ============================== inicio ========================
+2024-11-01 08-22-00 - interface_grafica()
+2024-11-01 08-22-02 - def iniciar()
+2024-11-01 08-22-02 - Botao Iniciar clicado!
+2024-11-01 08-22-02 - global statusThread: False
+2024-11-01 08-22-02 - ============================== execuçao ========================
+2024-11-01 08-22-02 - Tarefa inicializada!
+statusThread:True
+2024-11-01 08-22-02 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024-11-01 08-22-02 - delete_all_files_in_directory(C:\Users\pvplima.C19NOT76\Downloads)
+2024-11-01 08-22-02 - ============================== Geracao_Pdf_Atendimen ==============================
+2024-11-01 08-22-12 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+2024-11-01 08-22-13 - box_usuario
+2024-11-01 08-22-13 - box_senha
+2024-11-01 08-22-13 - bt_login
+2024-11-01 08-22-18 - bt_utilitarios.click()
+2024-11-01 08-22-20 - bt_impressao_relatorios.click()
+2024-11-01 08-22-29 - box_codigo_rel.send_keys('1790')
+2024-11-01 08-22-37 - pyautogui.press('enter')
+2024-11-01 08-22-45 - bt_visualizar_.click()
+2024-11-01 08-23-15 - click apos o download
+pyautogui.click(1810,165)
+2024-11-01 08-23-25 - Pressionar Item
+pyautogui.press('enter')
+2024-11-01 08-23-33 - click no manter
+pyautogui.click(1751,109)
+2024-11-01 08-23-41 - global statusThread: False
+2024-11-01 08-23-45 - =========== FIM ========
+2024-11-01 08-23-49 - ******def pdf_para_df():
+2024-11-01 08-23-49 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024-11-01 08-23-49 - Arquivos:
+['65c929eb-03f2-408c-9f47-5358c58746e2.pdf']
+2024-11-01 08-23-49 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\65c929eb-03f2-408c-9f47-5358c58746e2.pdf
+2024-11-01 08-23-49 - mover_ultimo_pdf_para_raiz(ultimo_arquivo,diretorio_atual)
+2024-11-01 08-23-49 - *****caminho_arquivo: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf
+2024-11-01 08-23-49 - ultimo_arquivo: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf
+2024-11-01 08-23-49 - ============================== Geracao_Pdf_Prescricao ==============================
+2024-11-01 08-24-00 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+2024-11-01 08-24-00 - box_usuario
+2024-11-01 08-24-02 - box_senha
+2024-11-01 08-24-04 - bt_login
+2024-11-01 08-24-14 - for linha in df_filtrado.iloc[:, 0]
+2024-11-01 08-24-14 - CPOE
+2024-11-01 08-24-22 - enter
+2024-11-01 08-24-30 - clicar no icone do CPOE:
+2024-11-01 08-24-38 - nr_atendimento: 423275
+2024-11-01 08-24-47 - enter
+2024-11-01 08-24-55 - enter
+2024-11-01 08-25-11 - click no visualizar
+pyautogui.click(1456, 380)
+2024-11-01 08-25-31 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024-11-01 08-26-16 - enter
+2024-11-01 08-26-24 - clicar para manter
+pyautogui.click(1750,108)
+2024-11-01 08-26-32 - pyautogui.hotkey('ctrl', 'w')
+2024-11-01 08-26-40 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024-11-01 08-26-40 - Arquivos:
+['521267c1-5af0-48e2-84c0-f97f35810b0c.pdf']
+2024-11-01 08-26-40 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\521267c1-5af0-48e2-84c0-f97f35810b0c.pdf
+2024-11-01 08-26-40 - pasta_prescricoes: Prescricoes
+2024-11-01 08-26-40 - pasta_data: Prescricoes\2024_11_01
+2024-11-01 08-26-40 - ***********os.makedirs: Prescricoes\2024_11_01
+2024-11-01 08-26-45 - Data_hora: 2024-11-01 08-26-45
+2024-11-01 08-26-45 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\521267c1-5af0-48e2-84c0-f97f35810b0c.pdf
+2024-11-01 08-26-45 - caminho_novo = Prescricoes\2024_11_01\423275 - 2024-11-01 08-26-45.pdf,
+arquivo:2024-11-01 08-26-45.pdf)
+2024-11-01 08-26-45 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\521267c1-5af0-48e2-84c0-f97f35810b0c.pdf renomeado e movido com sucesso.
+2024-11-01 08-26-45 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024-11-01 08-26-53 - Atendimento:423275
+
+********************FIM********************
+
+2024-11-01 08-27-04 - nr_atendimento: 638375
+2024-11-01 08-27-12 - enter
+2024-11-01 08-27-20 - enter
+2024-11-01 08-27-36 - click no visualizar
+pyautogui.click(1456, 380)
+2024-11-01 08-27-56 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024-11-01 08-28-41 - enter
+2024-11-01 08-28-49 - clicar para manter
+pyautogui.click(1750,108)
+2024-11-01 08-28-57 - pyautogui.hotkey('ctrl', 'w')
+2024-11-01 08-29-05 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024-11-01 08-29-05 - Arquivos:
+['13f6c985-493e-434f-97c9-168648997195.pdf']
+2024-11-01 08-29-05 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\13f6c985-493e-434f-97c9-168648997195.pdf
+2024-11-01 08-29-05 - pasta_prescricoes: Prescricoes
+2024-11-01 08-29-05 - pasta_data: Prescricoes\2024_11_01
+2024-11-01 08-29-05 - ***********os.makedirs: Prescricoes\2024_11_01
+2024-11-01 08-29-10 - Data_hora: 2024-11-01 08-29-10
+2024-11-01 08-29-10 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\13f6c985-493e-434f-97c9-168648997195.pdf
+2024-11-01 08-29-10 - caminho_novo = Prescricoes\2024_11_01\638375 - 2024-11-01 08-29-10.pdf,
+arquivo:2024-11-01 08-29-10.pdf)
+2024-11-01 08-29-10 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\13f6c985-493e-434f-97c9-168648997195.pdf renomeado e movido com sucesso.
+2024-11-01 08-29-11 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024-11-01 08-29-19 - Atendimento:638375
+
+********************FIM********************
+
+2024-11-01 08-29-29 - nr_atendimento: 635085
+2024-11-01 08-29-37 - enter
+2024-11-01 08-29-45 - enter
+2024-11-01 08-30-01 - click no visualizar
+pyautogui.click(1456, 380)
+2024-11-01 08-30-21 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024-11-01 08-31-06 - enter
+2024-11-01 08-31-15 - clicar para manter
+pyautogui.click(1750,108)
+2024-11-01 08-31-23 - pyautogui.hotkey('ctrl', 'w')
+2024-11-01 08-31-31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024-11-01 08-31-31 - Arquivos:
+['9bf22f7e-7ec9-4869-b677-7f776dd72823.pdf']
+2024-11-01 08-31-31 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\9bf22f7e-7ec9-4869-b677-7f776dd72823.pdf
+2024-11-01 08-31-31 - pasta_prescricoes: Prescricoes
+2024-11-01 08-31-31 - pasta_data: Prescricoes\2024_11_01
+2024-11-01 08-31-31 - ***********os.makedirs: Prescricoes\2024_11_01
+2024-11-01 08-31-36 - Data_hora: 2024-11-01 08-31-36
+2024-11-01 08-31-36 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\9bf22f7e-7ec9-4869-b677-7f776dd72823.pdf
+2024-11-01 08-31-36 - caminho_novo = Prescricoes\2024_11_01\635085 - 2024-11-01 08-31-36.pdf,
+arquivo:2024-11-01 08-31-36.pdf)
+2024-11-01 08-31-36 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\9bf22f7e-7ec9-4869-b677-7f776dd72823.pdf renomeado e movido com sucesso.
+2024-11-01 08-31-36 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024-11-01 08-31-44 - Atendimento:635085
+
+********************FIM********************
+
+2024-11-01 08-31-54 - nr_atendimento: 621123
+2024-11-01 08-32-02 - enter
+2024-11-01 08-32-10 - enter
+2024-11-01 08-32-26 - click no visualizar
+pyautogui.click(1456, 380)
+2024-11-01 08-32-47 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024-11-01 08-33-32 - enter
+2024-11-01 08-33-40 - clicar para manter
+pyautogui.click(1750,108)
+2024-11-01 08-33-48 - pyautogui.hotkey('ctrl', 'w')
+2024-11-01 08-33-56 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024-11-01 08-33-56 - Arquivos:
+['c7c7cf68-5274-46fe-8fe2-fae7a090faa7.pdf']
+2024-11-01 08-33-56 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\c7c7cf68-5274-46fe-8fe2-fae7a090faa7.pdf
+2024-11-01 08-33-56 - pasta_prescricoes: Prescricoes
+2024-11-01 08-33-56 - pasta_data: Prescricoes\2024_11_01
+2024-11-01 08-33-56 - ***********os.makedirs: Prescricoes\2024_11_01
+2024-11-01 08-34-01 - Data_hora: 2024-11-01 08-34-01
+2024-11-01 08-34-01 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\c7c7cf68-5274-46fe-8fe2-fae7a090faa7.pdf
+2024-11-01 08-34-01 - caminho_novo = Prescricoes\2024_11_01\621123 - 2024-11-01 08-34-01.pdf,
+arquivo:2024-11-01 08-34-01.pdf)
+2024-11-01 08-34-01 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\c7c7cf68-5274-46fe-8fe2-fae7a090faa7.pdf renomeado e movido com sucesso.
+2024-11-01 08-34-01 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024-11-01 08-34-09 - Atendimento:621123
+
+********************FIM********************
+
+2024-11-01 08-34-19 - nr_atendimento: 637294
+2024-11-01 08-34-27 - enter
+2024-11-01 08-34-35 - enter
+2024-11-01 08-34-52 - click no visualizar
+pyautogui.click(1456, 380)
+2024-11-01 08-35-12 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024-11-01 08-35-57 - enter
+2024-11-01 08-36-05 - clicar para manter
+pyautogui.click(1750,108)
+2024-11-01 08-36-13 - pyautogui.hotkey('ctrl', 'w')
+2024-11-01 08-36-21 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024-11-01 08-36-21 - Arquivos:
+['59dc3cf2-6501-4c4e-a327-087fb6ae7dbc.pdf']
+2024-11-01 08-36-21 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\59dc3cf2-6501-4c4e-a327-087fb6ae7dbc.pdf
+2024-11-01 08-36-21 - pasta_prescricoes: Prescricoes
+2024-11-01 08-36-21 - pasta_data: Prescricoes\2024_11_01
+2024-11-01 08-36-21 - ***********os.makedirs: Prescricoes\2024_11_01
+2024-11-01 08-36-26 - Data_hora: 2024-11-01 08-36-26
+2024-11-01 08-36-26 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\59dc3cf2-6501-4c4e-a327-087fb6ae7dbc.pdf
+2024-11-01 08-36-26 - caminho_novo = Prescricoes\2024_11_01\637294 - 2024-11-01 08-36-26.pdf,
+arquivo:2024-11-01 08-36-26.pdf)
+2024-11-01 08-36-26 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\59dc3cf2-6501-4c4e-a327-087fb6ae7dbc.pdf renomeado e movido com sucesso.
+2024-11-01 08-36-26 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024-11-01 08-36-34 - Atendimento:637294
+
+********************FIM********************
+
+2024-11-01 08-36-44 - nr_atendimento: 636098
+2024-11-01 08-36-52 - enter
+2024-11-01 08-37-01 - enter
+2024-11-01 08-37-17 - click no visualizar
+pyautogui.click(1456, 380)
+2024-11-01 08-37-37 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024-11-01 08-38-22 - enter
+2024-11-01 08-38-30 - clicar para manter
+pyautogui.click(1750,108)
+2024-11-01 08-38-38 - pyautogui.hotkey('ctrl', 'w')
+2024-11-01 08-38-46 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024-11-01 08-38-46 - Arquivos:
+['a338f619-83ce-4c16-a5ee-d6a5773aee0d.pdf']
+2024-11-01 08-38-46 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\a338f619-83ce-4c16-a5ee-d6a5773aee0d.pdf
+2024-11-01 08-38-46 - pasta_prescricoes: Prescricoes
+2024-11-01 08-38-46 - pasta_data: Prescricoes\2024_11_01
+2024-11-01 08-38-46 - ***********os.makedirs: Prescricoes\2024_11_01
+2024-11-01 08-38-51 - Data_hora: 2024-11-01 08-38-51
+2024-11-01 08-38-51 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\a338f619-83ce-4c16-a5ee-d6a5773aee0d.pdf
+2024-11-01 08-38-51 - caminho_novo = Prescricoes\2024_11_01\636098 - 2024-11-01 08-38-51.pdf,
+arquivo:2024-11-01 08-38-51.pdf)
+2024-11-01 08-38-51 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\a338f619-83ce-4c16-a5ee-d6a5773aee0d.pdf renomeado e movido com sucesso.
+2024-11-01 08-38-51 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024-11-01 08-38-59 - Atendimento:636098
+
+********************FIM********************
+
+2024-11-01 08-39-10 - nr_atendimento: 630314
+2024-11-01 08-39-18 - enter
+2024-11-01 08-39-26 - enter
+2024-11-01 08-39-42 - click no visualizar
+pyautogui.click(1456, 380)
+2024-11-01 08-40-02 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024-11-01 08-40-47 - enter
+2024-11-01 08-40-55 - clicar para manter
+pyautogui.click(1750,108)
+2024-11-01 08-41-04 - pyautogui.hotkey('ctrl', 'w')
+2024-11-01 08-41-12 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024-11-01 08-41-12 - Arquivos:
+['1c77c570-dff1-40b6-91b3-0e16b0e00e25.pdf']
+2024-11-01 08-41-12 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\1c77c570-dff1-40b6-91b3-0e16b0e00e25.pdf
+2024-11-01 08-41-12 - pasta_prescricoes: Prescricoes
+2024-11-01 08-41-12 - pasta_data: Prescricoes\2024_11_01
+2024-11-01 08-41-12 - ***********os.makedirs: Prescricoes\2024_11_01
+2024-11-01 08-41-17 - Data_hora: 2024-11-01 08-41-17
+2024-11-01 08-41-17 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\1c77c570-dff1-40b6-91b3-0e16b0e00e25.pdf
+2024-11-01 08-41-17 - caminho_novo = Prescricoes\2024_11_01\630314 - 2024-11-01 08-41-17.pdf,
+arquivo:2024-11-01 08-41-17.pdf)
+2024-11-01 08-41-17 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\1c77c570-dff1-40b6-91b3-0e16b0e00e25.pdf renomeado e movido com sucesso.
+2024-11-01 08-41-17 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024-11-01 08-41-25 - Atendimento:630314
+
+********************FIM********************
+
+2024-11-01 08-41-35 - nr_atendimento: 635130
+2024-11-01 08-41-43 - enter
+2024-11-01 08-41-51 - enter
+2024-11-01 08-42-07 - click no visualizar
+pyautogui.click(1456, 380)
+2024-11-01 08-42-27 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024-11-01 08-43-13 - enter
+2024-11-01 08-43-21 - clicar para manter
+pyautogui.click(1750,108)
+2024-11-01 08-43-29 - pyautogui.hotkey('ctrl', 'w')
+2024-11-01 08-43-37 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024-11-01 08-43-37 - Arquivos:
+['3b386c9e-c183-4c6e-9a2f-1354a1f2566b.pdf']
+2024-11-01 08-43-37 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\3b386c9e-c183-4c6e-9a2f-1354a1f2566b.pdf
+2024-11-01 08-43-37 - pasta_prescricoes: Prescricoes
+2024-11-01 08-43-37 - pasta_data: Prescricoes\2024_11_01
+2024-11-01 08-43-37 - ***********os.makedirs: Prescricoes\2024_11_01
+2024-11-01 08-43-42 - Data_hora: 2024-11-01 08-43-42
+2024-11-01 08-43-42 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\3b386c9e-c183-4c6e-9a2f-1354a1f2566b.pdf
+2024-11-01 08-43-42 - caminho_novo = Prescricoes\2024_11_01\635130 - 2024-11-01 08-43-42.pdf,
+arquivo:2024-11-01 08-43-42.pdf)
+2024-11-01 08-43-42 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\3b386c9e-c183-4c6e-9a2f-1354a1f2566b.pdf renomeado e movido com sucesso.
+2024-11-01 08-43-42 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024-11-01 08-43-50 - Atendimento:635130
+
+********************FIM********************
+
+2024-11-01 08-44-00 - nr_atendimento: 622711
+2024-11-01 08-44-08 - enter
+2024-11-01 08-44-16 - enter
+2024-11-01 08-44-33 - click no visualizar
+pyautogui.click(1456, 380)
+2024-11-01 08-44-53 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024-11-01 08-45-38 - enter
+2024-11-01 08-45-46 - clicar para manter
+pyautogui.click(1750,108)
+2024-11-01 08-45-54 - pyautogui.hotkey('ctrl', 'w')
+2024-11-01 08-46-02 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024-11-01 08-46-02 - Arquivos:
+['2bfc86f5-2f68-466d-839a-e12d82176133.pdf']
+2024-11-01 08-46-02 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\2bfc86f5-2f68-466d-839a-e12d82176133.pdf
+2024-11-01 08-46-02 - pasta_prescricoes: Prescricoes
+2024-11-01 08-46-02 - pasta_data: Prescricoes\2024_11_01
+2024-11-01 08-46-02 - ***********os.makedirs: Prescricoes\2024_11_01
+2024-11-01 08-46-07 - Data_hora: 2024-11-01 08-46-07
+2024-11-01 08-46-07 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\2bfc86f5-2f68-466d-839a-e12d82176133.pdf
+2024-11-01 08-46-07 - caminho_novo = Prescricoes\2024_11_01\622711 - 2024-11-01 08-46-07.pdf,
+arquivo:2024-11-01 08-46-07.pdf)
+2024-11-01 08-46-07 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\2bfc86f5-2f68-466d-839a-e12d82176133.pdf renomeado e movido com sucesso.
+2024-11-01 08-46-07 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024-11-01 08-46-15 - Atendimento:622711
+
+********************FIM********************
+
+2024-11-01 08-46-25 - nr_atendimento: 633912
+2024-11-01 08-46-33 - enter
+2024-11-01 08-46-41 - enter
+2024-11-01 08-46-58 - click no visualizar
+pyautogui.click(1456, 380)
+2024-11-01 08-47-18 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024-11-01 08-48-03 - enter
+2024-11-01 08-48-11 - clicar para manter
+pyautogui.click(1750,108)
+2024-11-01 08-48-19 - pyautogui.hotkey('ctrl', 'w')
+2024-11-01 08-48-27 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024-11-01 08-48-27 - Arquivos:
+['72440ceb-1392-4b2d-a8ac-b5604ca4ac21.pdf']
+2024-11-01 08-48-27 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\72440ceb-1392-4b2d-a8ac-b5604ca4ac21.pdf
+2024-11-01 08-48-27 - pasta_prescricoes: Prescricoes
+2024-11-01 08-48-27 - pasta_data: Prescricoes\2024_11_01
+2024-11-01 08-48-27 - ***********os.makedirs: Prescricoes\2024_11_01
+2024-11-01 08-48-32 - Data_hora: 2024-11-01 08-48-32
+2024-11-01 08-48-32 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\72440ceb-1392-4b2d-a8ac-b5604ca4ac21.pdf
+2024-11-01 08-48-32 - caminho_novo = Prescricoes\2024_11_01\633912 - 2024-11-01 08-48-32.pdf,
+arquivo:2024-11-01 08-48-32.pdf)
+2024-11-01 08-48-32 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\72440ceb-1392-4b2d-a8ac-b5604ca4ac21.pdf renomeado e movido com sucesso.
+2024-11-01 08-48-32 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024-11-01 08-48-40 - Atendimento:633912
+
+********************FIM********************
+
+2024-11-01 08-48-50 - nr_atendimento: 632424
+2024-11-01 08-48-59 - enter
+2024-11-01 08-49-07 - enter
+2024-11-01 08-49-23 - click no visualizar
+pyautogui.click(1456, 380)
+2024-11-01 08-49-43 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024-11-01 08-50-28 - enter
+2024-11-01 08-50-36 - clicar para manter
+pyautogui.click(1750,108)
+2024-11-01 08-50-44 - pyautogui.hotkey('ctrl', 'w')
+2024-11-01 08-50-52 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024-11-01 08-50-52 - Arquivos:
+['0a14b748-3c8c-493c-a5f8-6f48be293e1e.pdf']
+2024-11-01 08-50-52 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\0a14b748-3c8c-493c-a5f8-6f48be293e1e.pdf
+2024-11-01 08-50-52 - pasta_prescricoes: Prescricoes
+2024-11-01 08-50-52 - pasta_data: Prescricoes\2024_11_01
+2024-11-01 08-50-52 - ***********os.makedirs: Prescricoes\2024_11_01
+2024-11-01 08-50-57 - Data_hora: 2024-11-01 08-50-57
+2024-11-01 08-50-57 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\0a14b748-3c8c-493c-a5f8-6f48be293e1e.pdf
+2024-11-01 08-50-57 - caminho_novo = Prescricoes\2024_11_01\632424 - 2024-11-01 08-50-57.pdf,
+arquivo:2024-11-01 08-50-57.pdf)
+2024-11-01 08-50-57 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\0a14b748-3c8c-493c-a5f8-6f48be293e1e.pdf renomeado e movido com sucesso.
+2024-11-01 08-50-58 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024-11-01 08-51-06 - Atendimento:632424
+
+********************FIM********************
+
+2024-11-01 08-51-16 - nr_atendimento: 616885
+2024-11-01 08-51-24 - enter
+2024-11-01 08-51-32 - enter
+2024-11-01 08-51-48 - click no visualizar
+pyautogui.click(1456, 380)
+2024-11-01 08-52-08 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024-11-01 08-52-53 - enter
+2024-11-01 08-53-02 - clicar para manter
+pyautogui.click(1750,108)
+2024-11-01 08-53-10 - pyautogui.hotkey('ctrl', 'w')
+2024-11-01 08-53-18 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024-11-01 08-53-18 - Arquivos:
+['7f674b47-936c-4f9e-a93a-d059a4d4cd2d.pdf']
+2024-11-01 08-53-18 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\7f674b47-936c-4f9e-a93a-d059a4d4cd2d.pdf
+2024-11-01 08-53-18 - pasta_prescricoes: Prescricoes
+2024-11-01 08-53-18 - pasta_data: Prescricoes\2024_11_01
+2024-11-01 08-53-18 - ***********os.makedirs: Prescricoes\2024_11_01
+2024-11-01 08-53-23 - Data_hora: 2024-11-01 08-53-23
+2024-11-01 08-53-23 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\7f674b47-936c-4f9e-a93a-d059a4d4cd2d.pdf
+2024-11-01 08-53-23 - caminho_novo = Prescricoes\2024_11_01\616885 - 2024-11-01 08-53-23.pdf,
+arquivo:2024-11-01 08-53-23.pdf)
+2024-11-01 08-53-23 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\7f674b47-936c-4f9e-a93a-d059a4d4cd2d.pdf renomeado e movido com sucesso.
+2024-11-01 08-53-23 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024-11-01 08-53-31 - Atendimento:616885
+
+********************FIM********************
+
+2024-11-01 08-53-41 - nr_atendimento: 638384
+2024-11-01 08-53-49 - enter
+2024-11-01 08-53-57 - enter
+2024-11-01 08-54-13 - click no visualizar
+pyautogui.click(1456, 380)
+2024-11-01 08-54-34 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024-11-01 08-55-19 - enter
+2024-11-01 08-55-27 - clicar para manter
+pyautogui.click(1750,108)
+2024-11-01 08-55-35 - pyautogui.hotkey('ctrl', 'w')
+2024-11-01 08-55-43 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024-11-01 08-55-43 - Arquivos:
+['1a0cad49-2741-4709-86f1-fc0840e1c6f6.pdf']
+2024-11-01 08-55-43 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\1a0cad49-2741-4709-86f1-fc0840e1c6f6.pdf
+2024-11-01 08-55-43 - pasta_prescricoes: Prescricoes
+2024-11-01 08-55-43 - pasta_data: Prescricoes\2024_11_01
+2024-11-01 08-55-43 - ***********os.makedirs: Prescricoes\2024_11_01
+2024-11-01 08-55-48 - Data_hora: 2024-11-01 08-55-48
+2024-11-01 08-55-48 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\1a0cad49-2741-4709-86f1-fc0840e1c6f6.pdf
+2024-11-01 08-55-48 - caminho_novo = Prescricoes\2024_11_01\638384 - 2024-11-01 08-55-48.pdf,
+arquivo:2024-11-01 08-55-48.pdf)
+2024-11-01 08-55-48 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\1a0cad49-2741-4709-86f1-fc0840e1c6f6.pdf renomeado e movido com sucesso.
+2024-11-01 08-55-48 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024-11-01 08-55-56 - Atendimento:638384
+
+********************FIM********************
+
+2024-11-01 08-56-06 - nr_atendimento: 635141
+2024-11-01 08-56-14 - enter
+2024-11-01 08-56-22 - enter
+2024-11-01 08-56-39 - click no visualizar
+pyautogui.click(1456, 380)
+2024-11-01 08-56-59 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024-11-01 08-57-44 - enter
+2024-11-01 08-57-52 - clicar para manter
+pyautogui.click(1750,108)
+2024-11-01 08-58-00 - pyautogui.hotkey('ctrl', 'w')
+2024-11-01 08-58-08 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024-11-01 08-58-08 - Arquivos:
+['423a25cc-ae73-4a4a-bf87-fcfad3a21d41.pdf']
+2024-11-01 08-58-08 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\423a25cc-ae73-4a4a-bf87-fcfad3a21d41.pdf
+2024-11-01 08-58-08 - pasta_prescricoes: Prescricoes
+2024-11-01 08-58-08 - pasta_data: Prescricoes\2024_11_01
+2024-11-01 08-58-08 - ***********os.makedirs: Prescricoes\2024_11_01
+2024-11-01 08-58-13 - Data_hora: 2024-11-01 08-58-13
+2024-11-01 08-58-13 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\423a25cc-ae73-4a4a-bf87-fcfad3a21d41.pdf
+2024-11-01 08-58-13 - caminho_novo = Prescricoes\2024_11_01\635141 - 2024-11-01 08-58-13.pdf,
+arquivo:2024-11-01 08-58-13.pdf)
+2024-11-01 08-58-13 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\423a25cc-ae73-4a4a-bf87-fcfad3a21d41.pdf renomeado e movido com sucesso.
+2024-11-01 08-58-13 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024-11-01 08-58-21 - Atendimento:635141
+
+********************FIM********************
+
+2024-11-01 08-58-31 - nr_atendimento: 637877
+2024-11-01 08-58-39 - enter
+2024-11-01 08-58-48 - enter
+2024-11-01 08-59-04 - click no visualizar
+pyautogui.click(1456, 380)
+2024-11-01 08-59-24 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024-11-01 09-00-09 - enter
+2024-11-01 09-00-17 - clicar para manter
+pyautogui.click(1750,108)
+2024-11-01 09-00-25 - pyautogui.hotkey('ctrl', 'w')
+2024-11-01 09-00-33 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024-11-01 09-00-33 - Arquivos:
+['9c27208b-b248-4f2c-a232-9ad62379f63f.pdf']
+2024-11-01 09-00-33 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\9c27208b-b248-4f2c-a232-9ad62379f63f.pdf
+2024-11-01 09-00-33 - pasta_prescricoes: Prescricoes
+2024-11-01 09-00-33 - pasta_data: Prescricoes\2024_11_01
+2024-11-01 09-00-33 - ***********os.makedirs: Prescricoes\2024_11_01
+2024-11-01 09-00-38 - Data_hora: 2024-11-01 09-00-38
+2024-11-01 09-00-38 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\9c27208b-b248-4f2c-a232-9ad62379f63f.pdf
+2024-11-01 09-00-38 - caminho_novo = Prescricoes\2024_11_01\637877 - 2024-11-01 09-00-38.pdf,
+arquivo:2024-11-01 09-00-38.pdf)
+2024-11-01 09-00-38 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\9c27208b-b248-4f2c-a232-9ad62379f63f.pdf renomeado e movido com sucesso.
+2024-11-01 09-00-38 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024-11-01 09-00-46 - Atendimento:637877
+
+********************FIM********************
+
+2024-11-01 09-00-57 - nr_atendimento: 483921
+2024-11-01 09-01-05 - enter
+2024-11-01 09-01-13 - enter
+2024-11-01 09-01-29 - click no visualizar
+pyautogui.click(1456, 380)
+2024-11-01 09-01-49 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024-11-01 09-02-34 - enter
+2024-11-01 09-02-42 - clicar para manter
+pyautogui.click(1750,108)
+2024-11-01 09-02-51 - pyautogui.hotkey('ctrl', 'w')
+2024-11-01 09-02-59 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024-11-01 09-02-59 - Arquivos:
+['ca84eff9-0706-4e6e-91e6-f4dcf63f393f.pdf']
+2024-11-01 09-02-59 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\ca84eff9-0706-4e6e-91e6-f4dcf63f393f.pdf
+2024-11-01 09-02-59 - pasta_prescricoes: Prescricoes
+2024-11-01 09-02-59 - pasta_data: Prescricoes\2024_11_01
+2024-11-01 09-02-59 - ***********os.makedirs: Prescricoes\2024_11_01
+2024-11-01 09-03-04 - Data_hora: 2024-11-01 09-03-04
+2024-11-01 09-03-04 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\ca84eff9-0706-4e6e-91e6-f4dcf63f393f.pdf
+2024-11-01 09-03-04 - caminho_novo = Prescricoes\2024_11_01\483921 - 2024-11-01 09-03-04.pdf,
+arquivo:2024-11-01 09-03-04.pdf)
+2024-11-01 09-03-04 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\ca84eff9-0706-4e6e-91e6-f4dcf63f393f.pdf renomeado e movido com sucesso.
+2024-11-01 09-03-04 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024-11-01 09-03-12 - Atendimento:483921
+
+********************FIM********************
+
+2024-11-01 09-03-22 - nr_atendimento: 630694
+2024-11-01 09-03-30 - enter
+2024-11-01 09-03-38 - enter
+2024-11-01 09-03-54 - click no visualizar
+pyautogui.click(1456, 380)
+2024-11-01 09-04-14 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024-11-01 09-05-00 - enter
+2024-11-01 09-05-08 - clicar para manter
+pyautogui.click(1750,108)
+2024-11-01 09-05-16 - pyautogui.hotkey('ctrl', 'w')
+2024-11-01 09-05-24 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024-11-01 09-05-24 - Arquivos:
+['980bcf6b-1c46-4d82-ab63-3c22530934dd.pdf']
+2024-11-01 09-05-24 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\980bcf6b-1c46-4d82-ab63-3c22530934dd.pdf
+2024-11-01 09-05-24 - pasta_prescricoes: Prescricoes
+2024-11-01 09-05-24 - pasta_data: Prescricoes\2024_11_01
+2024-11-01 09-05-24 - ***********os.makedirs: Prescricoes\2024_11_01
+2024-11-01 09-05-29 - Data_hora: 2024-11-01 09-05-29
+2024-11-01 09-05-29 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\980bcf6b-1c46-4d82-ab63-3c22530934dd.pdf
+2024-11-01 09-05-29 - caminho_novo = Prescricoes\2024_11_01\630694 - 2024-11-01 09-05-29.pdf,
+arquivo:2024-11-01 09-05-29.pdf)
+2024-11-01 09-05-29 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\980bcf6b-1c46-4d82-ab63-3c22530934dd.pdf renomeado e movido com sucesso.
+2024-11-01 09-05-29 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024-11-01 09-05-37 - Atendimento:630694
+
+********************FIM********************
+
+2024-11-01 09-05-47 - nr_atendimento: 630840
+2024-11-01 09-05-55 - enter
+2024-11-01 09-06-03 - enter
+2024-11-01 09-06-20 - click no visualizar
+pyautogui.click(1456, 380)
+2024-11-01 09-06-40 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024-11-01 09-07-25 - enter
+2024-11-01 09-07-33 - clicar para manter
+pyautogui.click(1750,108)
+2024-11-01 09-07-41 - pyautogui.hotkey('ctrl', 'w')
+2024-11-01 09-07-49 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024-11-01 09-07-49 - Arquivos:
+['b5d869d8-f3d1-42da-9f4c-8cffc1e08ad3.pdf']
+2024-11-01 09-07-49 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\b5d869d8-f3d1-42da-9f4c-8cffc1e08ad3.pdf
+2024-11-01 09-07-49 - pasta_prescricoes: Prescricoes
+2024-11-01 09-07-49 - pasta_data: Prescricoes\2024_11_01
+2024-11-01 09-07-49 - ***********os.makedirs: Prescricoes\2024_11_01
+2024-11-01 09-07-54 - Data_hora: 2024-11-01 09-07-54
+2024-11-01 09-07-54 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\b5d869d8-f3d1-42da-9f4c-8cffc1e08ad3.pdf
+2024-11-01 09-07-54 - caminho_novo = Prescricoes\2024_11_01\630840 - 2024-11-01 09-07-54.pdf,
+arquivo:2024-11-01 09-07-54.pdf)
+2024-11-01 09-07-54 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\b5d869d8-f3d1-42da-9f4c-8cffc1e08ad3.pdf renomeado e movido com sucesso.
+2024-11-01 09-07-54 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024-11-01 09-08-02 - Atendimento:630840
+
+********************FIM********************
+
+2024-11-01 09-08-12 - nr_atendimento: 629684
+2024-11-01 09-08-20 - enter
+2024-11-01 09-08-29 - enter
+2024-11-01 09-08-45 - click no visualizar
+pyautogui.click(1456, 380)
+2024-11-01 09-09-05 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024-11-01 09-09-50 - enter
+2024-11-01 09-09-58 - clicar para manter
+pyautogui.click(1750,108)
+2024-11-01 09-10-06 - pyautogui.hotkey('ctrl', 'w')
+2024-11-01 09-10-14 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024-11-01 09-10-14 - Arquivos:
+['eb9f87ef-f715-4e85-93fe-93a626e3d7d9.pdf']
+2024-11-01 09-10-14 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\eb9f87ef-f715-4e85-93fe-93a626e3d7d9.pdf
+2024-11-01 09-10-14 - pasta_prescricoes: Prescricoes
+2024-11-01 09-10-14 - pasta_data: Prescricoes\2024_11_01
+2024-11-01 09-10-14 - ***********os.makedirs: Prescricoes\2024_11_01
+2024-11-01 09-10-19 - Data_hora: 2024-11-01 09-10-19
+2024-11-01 09-10-19 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\eb9f87ef-f715-4e85-93fe-93a626e3d7d9.pdf
+2024-11-01 09-10-19 - caminho_novo = Prescricoes\2024_11_01\629684 - 2024-11-01 09-10-19.pdf,
+arquivo:2024-11-01 09-10-19.pdf)
+2024-11-01 09-10-19 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\eb9f87ef-f715-4e85-93fe-93a626e3d7d9.pdf renomeado e movido com sucesso.
+2024-11-01 09-10-19 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024-11-01 09-10-27 - Atendimento:629684
+
+********************FIM********************
+
+2024-11-01 09-10-38 - nr_atendimento: 632988
+2024-11-01 09-10-46 - enter
+2024-11-01 09-10-54 - enter
+2024-11-01 09-11-10 - click no visualizar
+pyautogui.click(1456, 380)
+2024-11-01 09-11-30 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024-11-01 09-12-15 - enter
+2024-11-01 09-12-23 - clicar para manter
+pyautogui.click(1750,108)
+2024-11-01 09-12-32 - pyautogui.hotkey('ctrl', 'w')
+2024-11-01 09-12-40 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024-11-01 09-12-40 - Arquivos:
+['f2455406-ef04-496b-8ab5-ca9077a9dd92.pdf']
+2024-11-01 09-12-40 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\f2455406-ef04-496b-8ab5-ca9077a9dd92.pdf
+2024-11-01 09-12-40 - pasta_prescricoes: Prescricoes
+2024-11-01 09-12-40 - pasta_data: Prescricoes\2024_11_01
+2024-11-01 09-12-40 - ***********os.makedirs: Prescricoes\2024_11_01
+2024-11-01 09-12-45 - Data_hora: 2024-11-01 09-12-45
+2024-11-01 09-12-45 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\f2455406-ef04-496b-8ab5-ca9077a9dd92.pdf
+2024-11-01 09-12-45 - caminho_novo = Prescricoes\2024_11_01\632988 - 2024-11-01 09-12-45.pdf,
+arquivo:2024-11-01 09-12-45.pdf)
+2024-11-01 09-12-45 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\f2455406-ef04-496b-8ab5-ca9077a9dd92.pdf renomeado e movido com sucesso.
+2024-11-01 09-12-45 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024-11-01 09-12-53 - Atendimento:632988
+
+********************FIM********************
+
+2024-11-01 09-13-03 - nr_atendimento: 637322
+2024-11-01 09-13-11 - enter
+2024-11-01 09-13-19 - enter
+2024-11-01 09-13-35 - click no visualizar
+pyautogui.click(1456, 380)
+2024-11-01 09-13-56 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024-11-01 09-14-41 - enter
+2024-11-01 09-14-49 - clicar para manter
+pyautogui.click(1750,108)
+2024-11-01 09-14-57 - pyautogui.hotkey('ctrl', 'w')
+2024-11-01 09-15-05 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024-11-01 09-15-05 - Arquivos:
+['b4bc5dcf-9765-40c9-9825-9ec5a1f079e0.pdf']
+2024-11-01 09-15-05 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\b4bc5dcf-9765-40c9-9825-9ec5a1f079e0.pdf
+2024-11-01 09-15-05 - pasta_prescricoes: Prescricoes
+2024-11-01 09-15-05 - pasta_data: Prescricoes\2024_11_01
+2024-11-01 09-15-05 - ***********os.makedirs: Prescricoes\2024_11_01
+2024-11-01 09-15-10 - Data_hora: 2024-11-01 09-15-10
+2024-11-01 09-15-10 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\b4bc5dcf-9765-40c9-9825-9ec5a1f079e0.pdf
+2024-11-01 09-15-10 - caminho_novo = Prescricoes\2024_11_01\637322 - 2024-11-01 09-15-10.pdf,
+arquivo:2024-11-01 09-15-10.pdf)
+2024-11-01 09-15-10 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\b4bc5dcf-9765-40c9-9825-9ec5a1f079e0.pdf renomeado e movido com sucesso.
+2024-11-01 09-15-10 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024-11-01 09-15-18 - Atendimento:637322
+
+********************FIM********************
+
+2024-11-01 09-15-28 - nr_atendimento: 629269
+2024-11-01 09-15-36 - enter
+2024-11-01 09-15-44 - enter
+2024-11-01 09-16-01 - click no visualizar
+pyautogui.click(1456, 380)
+2024-11-01 09-16-21 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024-11-01 09-17-06 - enter
+2024-11-01 09-17-14 - clicar para manter
+pyautogui.click(1750,108)
+2024-11-01 09-17-22 - pyautogui.hotkey('ctrl', 'w')
+2024-11-01 09-17-30 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024-11-01 09-17-30 - Arquivos:
+['2e8d0ae8-c5c2-4637-891e-e496058c797a.pdf']
+2024-11-01 09-17-30 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\2e8d0ae8-c5c2-4637-891e-e496058c797a.pdf
+2024-11-01 09-17-30 - pasta_prescricoes: Prescricoes
+2024-11-01 09-17-30 - pasta_data: Prescricoes\2024_11_01
+2024-11-01 09-17-30 - ***********os.makedirs: Prescricoes\2024_11_01
+2024-11-01 09-17-35 - Data_hora: 2024-11-01 09-17-35
+2024-11-01 09-17-35 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\2e8d0ae8-c5c2-4637-891e-e496058c797a.pdf
+2024-11-01 09-17-35 - caminho_novo = Prescricoes\2024_11_01\629269 - 2024-11-01 09-17-35.pdf,
+arquivo:2024-11-01 09-17-35.pdf)
+2024-11-01 09-17-35 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\2e8d0ae8-c5c2-4637-891e-e496058c797a.pdf renomeado e movido com sucesso.
+2024-11-01 09-17-35 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024-11-01 09-17-43 - Atendimento:629269
+
+********************FIM********************
+
+2024-11-01 09-17-53 - nr_atendimento: 637318
+2024-11-01 09-18-01 - enter
+2024-11-01 09-18-10 - enter
+2024-11-01 09-18-26 - click no visualizar
+pyautogui.click(1456, 380)
+2024-11-01 09-18-46 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024-11-01 09-19-31 - enter
+2024-11-01 09-19-39 - clicar para manter
+pyautogui.click(1750,108)
+2024-11-01 09-19-47 - pyautogui.hotkey('ctrl', 'w')
+2024-11-01 09-19-55 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024-11-01 09-19-55 - Arquivos:
+['d2308309-a577-4627-8dd2-3ac3d161dabc.pdf']
+2024-11-01 09-19-55 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\d2308309-a577-4627-8dd2-3ac3d161dabc.pdf
+2024-11-01 09-19-55 - pasta_prescricoes: Prescricoes
+2024-11-01 09-19-55 - pasta_data: Prescricoes\2024_11_01
+2024-11-01 09-19-55 - ***********os.makedirs: Prescricoes\2024_11_01
+2024-11-01 09-20-00 - Data_hora: 2024-11-01 09-20-00
+2024-11-01 09-20-00 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\d2308309-a577-4627-8dd2-3ac3d161dabc.pdf
+2024-11-01 09-20-00 - caminho_novo = Prescricoes\2024_11_01\637318 - 2024-11-01 09-20-00.pdf,
+arquivo:2024-11-01 09-20-00.pdf)
+2024-11-01 09-20-00 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\d2308309-a577-4627-8dd2-3ac3d161dabc.pdf renomeado e movido com sucesso.
+2024-11-01 09-20-00 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024-11-01 09-20-08 - Atendimento:637318
+
+********************FIM********************
+
+2024-11-01 09-20-19 - nr_atendimento: 638405
+2024-11-01 09-20-27 - enter
+2024-11-01 09-20-35 - enter
+2024-11-01 09-20-51 - click no visualizar
+pyautogui.click(1456, 380)
+2024-11-01 09-21-11 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024-11-01 09-21-56 - enter
+2024-11-01 09-22-04 - clicar para manter
+pyautogui.click(1750,108)
+2024-11-01 09-22-13 - pyautogui.hotkey('ctrl', 'w')
+2024-11-01 09-22-21 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024-11-01 09-22-21 - Arquivos:
+['1dc84547-e2eb-428e-b720-3216e3ae3b49.pdf']
+2024-11-01 09-22-21 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\1dc84547-e2eb-428e-b720-3216e3ae3b49.pdf
+2024-11-01 09-22-21 - pasta_prescricoes: Prescricoes
+2024-11-01 09-22-21 - pasta_data: Prescricoes\2024_11_01
+2024-11-01 09-22-21 - ***********os.makedirs: Prescricoes\2024_11_01
+2024-11-01 09-22-26 - Data_hora: 2024-11-01 09-22-26
+2024-11-01 09-22-26 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\1dc84547-e2eb-428e-b720-3216e3ae3b49.pdf
+2024-11-01 09-22-26 - caminho_novo = Prescricoes\2024_11_01\638405 - 2024-11-01 09-22-26.pdf,
+arquivo:2024-11-01 09-22-26.pdf)
+2024-11-01 09-22-26 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\1dc84547-e2eb-428e-b720-3216e3ae3b49.pdf renomeado e movido com sucesso.
+2024-11-01 09-22-26 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024-11-01 09-22-34 - Atendimento:638405
+
+********************FIM********************
+
+2024-11-01 09-22-44 - nr_atendimento: 636773
+2024-11-01 09-22-52 - enter
+2024-11-01 09-23-00 - enter
+2024-11-01 09-23-16 - click no visualizar
+pyautogui.click(1456, 380)
+2024-11-01 09-23-37 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024-11-01 09-24-22 - enter
+2024-11-01 09-24-30 - clicar para manter
+pyautogui.click(1750,108)
+2024-11-01 09-24-38 - pyautogui.hotkey('ctrl', 'w')
+2024-11-01 09-24-46 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024-11-01 09-24-46 - Arquivos:
+['8c3b3188-52f7-4b7a-b5c3-850b15c6baa9.pdf']
+2024-11-01 09-24-46 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\8c3b3188-52f7-4b7a-b5c3-850b15c6baa9.pdf
+2024-11-01 09-24-46 - pasta_prescricoes: Prescricoes
+2024-11-01 09-24-46 - pasta_data: Prescricoes\2024_11_01
+2024-11-01 09-24-46 - ***********os.makedirs: Prescricoes\2024_11_01
+2024-11-01 09-24-51 - Data_hora: 2024-11-01 09-24-51
+2024-11-01 09-24-51 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\8c3b3188-52f7-4b7a-b5c3-850b15c6baa9.pdf
+2024-11-01 09-24-51 - caminho_novo = Prescricoes\2024_11_01\636773 - 2024-11-01 09-24-51.pdf,
+arquivo:2024-11-01 09-24-51.pdf)
+2024-11-01 09-24-51 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\8c3b3188-52f7-4b7a-b5c3-850b15c6baa9.pdf renomeado e movido com sucesso.
+2024-11-01 09-24-51 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024-11-01 09-24-59 - Atendimento:636773
+
+********************FIM********************
+
+2024-11-01 09-25-09 - nr_atendimento: 637879
+2024-11-01 09-25-17 - enter
+2024-11-01 09-25-25 - enter
+2024-11-01 09-25-42 - click no visualizar
+pyautogui.click(1456, 380)
+2024-11-01 09-26-02 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024-11-01 09-26-47 - enter
+2024-11-01 09-26-55 - clicar para manter
+pyautogui.click(1750,108)
+2024-11-01 09-27-03 - pyautogui.hotkey('ctrl', 'w')
+2024-11-01 09-27-11 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024-11-01 09-27-11 - Arquivos:
+['f27f984b-df90-44d7-b616-0d5fd6d29a27.pdf']
+2024-11-01 09-27-11 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\f27f984b-df90-44d7-b616-0d5fd6d29a27.pdf
+2024-11-01 09-27-11 - pasta_prescricoes: Prescricoes
+2024-11-01 09-27-11 - pasta_data: Prescricoes\2024_11_01
+2024-11-01 09-27-11 - ***********os.makedirs: Prescricoes\2024_11_01
+2024-11-01 09-27-16 - Data_hora: 2024-11-01 09-27-16
+2024-11-01 09-27-16 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\f27f984b-df90-44d7-b616-0d5fd6d29a27.pdf
+2024-11-01 09-27-16 - caminho_novo = Prescricoes\2024_11_01\637879 - 2024-11-01 09-27-16.pdf,
+arquivo:2024-11-01 09-27-16.pdf)
+2024-11-01 09-27-16 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\f27f984b-df90-44d7-b616-0d5fd6d29a27.pdf renomeado e movido com sucesso.
+2024-11-01 09-27-16 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024-11-01 09-27-24 - Atendimento:637879
+
+********************FIM********************
+
+2024-11-01 09-27-34 - nr_atendimento: 638336
+2024-11-01 09-27-42 - enter
+2024-11-01 09-27-51 - enter
+2024-11-01 09-28-07 - click no visualizar
+pyautogui.click(1456, 380)
+2024-11-01 09-28-27 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024-11-01 09-29-12 - enter
+2024-11-01 09-29-20 - clicar para manter
+pyautogui.click(1750,108)
+2024-11-01 09-29-28 - pyautogui.hotkey('ctrl', 'w')
+2024-11-01 09-29-36 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024-11-01 09-29-36 - Arquivos:
+['6f37ac5e-b3c5-42bf-a919-89588daddb56.pdf']
+2024-11-01 09-29-36 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\6f37ac5e-b3c5-42bf-a919-89588daddb56.pdf
+2024-11-01 09-29-36 - pasta_prescricoes: Prescricoes
+2024-11-01 09-29-36 - pasta_data: Prescricoes\2024_11_01
+2024-11-01 09-29-36 - ***********os.makedirs: Prescricoes\2024_11_01
+2024-11-01 09-29-41 - Data_hora: 2024-11-01 09-29-41
+2024-11-01 09-29-41 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\6f37ac5e-b3c5-42bf-a919-89588daddb56.pdf
+2024-11-01 09-29-41 - caminho_novo = Prescricoes\2024_11_01\638336 - 2024-11-01 09-29-41.pdf,
+arquivo:2024-11-01 09-29-41.pdf)
+2024-11-01 09-29-41 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\6f37ac5e-b3c5-42bf-a919-89588daddb56.pdf renomeado e movido com sucesso.
+2024-11-01 09-29-42 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024-11-01 09-29-50 - Atendimento:638336
+
+********************FIM********************
+
+2024-11-01 09-30-00 - nr_atendimento: 633490
+2024-11-01 09-30-08 - enter
+2024-11-01 09-30-16 - enter
+2024-11-01 09-30-32 - click no visualizar
+pyautogui.click(1456, 380)
+2024-11-01 09-30-52 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024-11-01 09-31-37 - enter
+2024-11-01 09-31-46 - clicar para manter
+pyautogui.click(1750,108)
+2024-11-01 09-31-54 - pyautogui.hotkey('ctrl', 'w')
+2024-11-01 09-32-02 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024-11-01 09-32-02 - Arquivos:
+['23ad06cb-5cda-435f-91db-37d021913eb1.pdf']
+2024-11-01 09-32-02 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\23ad06cb-5cda-435f-91db-37d021913eb1.pdf
+2024-11-01 09-32-02 - pasta_prescricoes: Prescricoes
+2024-11-01 09-32-02 - pasta_data: Prescricoes\2024_11_01
+2024-11-01 09-32-02 - ***********os.makedirs: Prescricoes\2024_11_01
+2024-11-01 09-32-07 - Data_hora: 2024-11-01 09-32-07
+2024-11-01 09-32-07 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\23ad06cb-5cda-435f-91db-37d021913eb1.pdf
+2024-11-01 09-32-07 - caminho_novo = Prescricoes\2024_11_01\633490 - 2024-11-01 09-32-07.pdf,
+arquivo:2024-11-01 09-32-07.pdf)
+2024-11-01 09-32-07 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\23ad06cb-5cda-435f-91db-37d021913eb1.pdf renomeado e movido com sucesso.
+2024-11-01 09-32-07 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024-11-01 09-32-15 - Atendimento:633490
+
+********************FIM********************
+
+2024-11-01 09-32-25 - nr_atendimento: 636810
+2024-11-01 09-32-33 - enter
+2024-11-01 09-32-41 - enter
+2024-11-01 09-32-57 - click no visualizar
+pyautogui.click(1456, 380)
+2024-11-01 09-33-18 - clicar para baixar o pdf gerado
+pyautogui.click(1813,167)
+2024-11-01 09-34-03 - enter
+2024-11-01 09-34-11 - clicar para manter
+pyautogui.click(1750,108)
+2024-11-01 09-34-19 - pyautogui.hotkey('ctrl', 'w')
+2024-11-01 09-34-27 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024-11-01 09-34-27 - Arquivos:
+['cbb9bfb7-5a1a-46d7-b5e4-78e247a5e4f3.pdf']
+2024-11-01 09-34-27 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\cbb9bfb7-5a1a-46d7-b5e4-78e247a5e4f3.pdf
+2024-11-01 09-34-27 - pasta_prescricoes: Prescricoes
+2024-11-01 09-34-27 - pasta_data: Prescricoes\2024_11_01
+2024-11-01 09-34-27 - ***********os.makedirs: Prescricoes\2024_11_01
+2024-11-01 09-34-32 - Data_hora: 2024-11-01 09-34-32
+2024-11-01 09-34-32 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\cbb9bfb7-5a1a-46d7-b5e4-78e247a5e4f3.pdf
+2024-11-01 09-34-32 - caminho_novo = Prescricoes\2024_11_01\636810 - 2024-11-01 09-34-32.pdf,
+arquivo:2024-11-01 09-34-32.pdf)
+2024-11-01 09-34-32 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\cbb9bfb7-5a1a-46d7-b5e4-78e247a5e4f3.pdf renomeado e movido com sucesso.
+2024-11-01 09-34-32 - clicar para procurar novo paciente
+pyautogui.click(65,250)
+2024-11-01 09-34-40 - Atendimento:636810
+
+********************FIM********************
+
+2024-11-01 09-34-50 - nr_atendimento: 637217
+2024-11-01 09-34-58 - def fechar()- janela.destroy()
+2024-11-01 09-56-10 - 
+
+
+
+2024-11-01 09-56-10
+============================== INICIO ========================
+2024-11-01 09-56-10 - interface_grafica()
+2024-11-01 09-56-28 - def fechar()- janela.destroy()

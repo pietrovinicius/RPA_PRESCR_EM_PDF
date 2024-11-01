@@ -28,28 +28,39 @@ statusThread = False
 df = ""
 
 df_filtrado = ""
+diretorio_atual_prescricoes = ""
 
 
 def agora_limpo():
     agora_limpo = datetime.datetime.now()
-    agora_limpo = agora_limpo.strftime("%d/%m/%Y %H:%M:%S")
-    #agora_limpo = agora_limpo.replace(":", "_").replace("/", "_")
+    agora_limpo = agora_limpo.strftime("%Y/%m/%d")    
+    agora_limpo = agora_limpo.replace(":", "_").replace("/", "_")
     return str(agora_limpo)
+
+def agora():
+    agora = datetime.datetime.now()
+    agora = agora.strftime("%Y-%m-%d %H-%M-%S")
+    return str(agora)
+
 
 def registrar_log(texto):
     global diretorio_atual
     #Função para registrar um texto em um arquivo de log.
     diretorio_atual = os.getcwd()
     caminho_arquivo = os.path.join(diretorio_atual, 'log.txt')
-    print(f"{agora_limpo()} - {texto}\n")
+    print(f"{agora()} - {texto}\n")
 
     # Abre o arquivo em modo de append (adiciona texto ao final)
     with open(caminho_arquivo, 'a') as arquivo:
-        arquivo.write(f"{agora_limpo()} - {texto}\n")
+        arquivo.write(f"{agora()} - {texto}\n")
     
-def delete_all_files_in_directory(directory):
-    registrar_log(f"delete_all_files_in_directory({directory})")
-    files = glob.glob(os.path.join(directory, '*'))
+def delete_all_files_in_directory():
+    #acessando pasta download:
+    downloads_path = os.path.join(os.path.expanduser("~"), "Downloads")
+    registrar_log(f'Caminho da pasta download: {downloads_path}')
+    
+    registrar_log(f"delete_all_files_in_directory({downloads_path})")
+    files = glob.glob(os.path.join(downloads_path, '*'))
     for f in files:
         try:
             os.remove(f)
@@ -88,14 +99,13 @@ def mover_ultimo_pdf_para_raiz(caminho_downloads, pasta_raiz):
   else:
     print("Nenhum arquivo PDF encontrado na pasta de downloads.")
     
-    
-def pdf_para_csv():
+def pdf_para_df():
     global df_filtrado
     global df
     global statusThread
     texto_completo = ""
     
-    registrar_log("******def pdf_para_csv():")
+    registrar_log("******def pdf_para_df():")
     
     #acessando pasta download:
     downloads_path = os.path.join(os.path.expanduser("~"), "Downloads")
@@ -110,13 +120,14 @@ def pdf_para_csv():
     registrar_log(f"\n*****Ultimo arquivo antes de renomear: {ultimo_arquivo}")
     
     registrar_log("mover_ultimo_pdf_para_raiz(ultimo_arquivo,diretorio_atual)")
+    
     mover_ultimo_pdf_para_raiz(downloads_path,diretorio_atual)
     
-    caminho_arquivo = os.path.join(diretorio_atual, 'Atendimentos.pdf')
+    renomeado_arquivo = os.path.join(diretorio_atual, 'Atendimentos.pdf')
     
-    registrar_log(f"*****caminho_arquivo: {caminho_arquivo}")
+    registrar_log(f"*****caminho_arquivo: {renomeado_arquivo}")
     
-    ultimo_arquivo = caminho_arquivo
+    ultimo_arquivo = renomeado_arquivo
     registrar_log((f"ultimo_arquivo: {ultimo_arquivo}"))
     
     #abrindo ultimo arquivo para a geracao do DF
@@ -132,15 +143,14 @@ def pdf_para_csv():
             
         linhas = texto_completo.split('\n') 
         dados = [linha.split() for linha in linhas if linha.strip()] 
-        df = pd.DataFrame(dados) 
-        
+        df = pd.DataFrame(dados)
         #exibindo as 5 primeiras linhas:
         #print(df.head(5))
         
         #exibindo todas as linhas mas só a primeira coluna:
         #print(f"#exibindo todas as linhas mas só a primeira coluna:\n{df}")
+    return df
         
-
 def Geracao_Pdf_Atendimen():
     global statusThread
     global df
@@ -188,27 +198,27 @@ def Geracao_Pdf_Atendimen():
     bt_impressao_relatorios.click()
     registrar_log('bt_impressao_relatorios.click()')
     driver.implicitly_wait(5)
-    time.sleep(5)
+    time.sleep(8)
 
     # click no campo para procurar o relatório 1790:
     box_codigo_rel = driver.find_element(By.XPATH, value='//*[@id="detail_1_container"]/div[1]/div/div[2]/tasy-wtextbox/div/div/input')
     box_codigo_rel.send_keys('1790')
     registrar_log("box_codigo_rel.send_keys('1790')")
     driver.implicitly_wait(5)
-    time.sleep(5)
+    time.sleep(8)
 
     #Pressionar Item:
     pyautogui.press('enter')
     registrar_log("pyautogui.press('enter')")
     driver.implicitly_wait(5)
-    time.sleep(5)
+    time.sleep(8)
     
     # Click no botao visualizar:
     bt_visualizar_ = driver.find_element(By.XPATH, value='//*[@id="handlebar-455491"]')
     bt_visualizar_.click()
     registrar_log("bt_visualizar_.click()")
     driver.implicitly_wait(20)
-    time.sleep(20)
+    time.sleep(30)
     
     #click apos o download
     pyautogui.click(1810,165)
@@ -219,18 +229,18 @@ def Geracao_Pdf_Atendimen():
     #Pressionar Item:
     pyautogui.press('enter')
     registrar_log("Pressionar Item\npyautogui.press('enter')")
-    time.sleep(5)
+    time.sleep(8)
     
     #click no manter:
     pyautogui.click(1751,109)
     registrar_log("click no manter\npyautogui.click(1751,109)")
     driver.implicitly_wait(5)
-    time.sleep(5)
+    time.sleep(8)
        
-    #print(f"pdf_para_csv():\n{pdf_para_csv()}")
+    #print(f"pdf_para_df():\n{pdf_para_df()}")
     
-    #TODO: pdf_para_csv()
-    #df = pdf_para_csv()
+    #TODO: pdf_para_df()
+    #df = pdf_para_df()
     
     #registrar_log(f"\nDF:\n{df}")
     
@@ -243,18 +253,19 @@ def Geracao_Pdf_Atendimen():
     time.sleep(2)
     driver.quit()
     
-    registrar_log("=========== FIM ========")
+    registrar_log("=========== Geracao_Pdf_Atendimen fim ========")
 
 def Geracao_Pdf_Prescricao():
     global statusThread
     global df
     global df_filtrado
+    global diretorio_atual_prescricoes
     # ============================== Geracao_Pdf_Prescricao ==============================
     registrar_log('============================== Geracao_Pdf_Prescricao ==============================')
     
     df_filtrado = df.iloc[:, 0]
-    registrar_log(f"df_filtrado: {df_filtrado}")
-    """     
+    #print(f"df_filtrado: {df_filtrado}")
+    
     #tela toda:
     driver = webdriver.Chrome()
     options = Options()
@@ -289,93 +300,138 @@ def Geracao_Pdf_Prescricao():
     time.sleep(10)
     
     #TODO: aqui vai ser feita a sequencia de repetições para emitir os pdfs
+    registrar_log("for linha in df_filtrado.iloc[:, 0]")
+    #registrar_log(f"Repeticao:\nNR_ATENDIMENTO: {linha}")
+    
+    # escrever CPOE
+    pyautogui.write('CPOE')
+    registrar_log('CPOE')
+    time.sleep(8)
+
+    #dar enter:
+    pyautogui.press('enter')
+    registrar_log('enter')
+    time.sleep(8)
+
+    #clicar no icone do CPOE:
+    bt_CPOE = driver.find_element(By.XPATH, value='//*[@id="app-view"]/tasy-corsisf1/div/w-mainlayout/div/div/w-launcher/div/div/div[1]/w-apps/div/div[1]/ul/li/w-feature-app/a/img')
+    bt_CPOE.click()
+    registrar_log('clicar no icone do CPOE:')
+    driver.implicitly_wait(5)
+    time.sleep(8)
     
     # Percorrendo cada linha e coluna e exibindo os dados no console
     print("\n***********************Exibindo dados linha por linha:")
-    for linha in df_filtrado.iloc[:, 0]:
-        registrar_log(f"Repeticao:\nNR_ATENDIMENTO: {linha}")
+    for linha in df_filtrado:
         
-        # escrever CPOE
-        pyautogui.write('CPOE')
-        registrar_log('CPOE')
-        time.sleep(5)
-    
-        #dar enter:
-        pyautogui.press('enter')
-        registrar_log('enter')
-        time.sleep(5)
-    
-        #clicar no icone do CPOE:
-        bt_CPOE = driver.find_element(By.XPATH, value='//*[@id="app-view"]/tasy-corsisf1/div/w-mainlayout/div/div/w-launcher/div/div/div[1]/w-apps/div/div[1]/ul/li/w-feature-app/a/img')
-        bt_CPOE.click()
-        registrar_log('clicar no icone do CPOE:')
-        driver.implicitly_wait(5)
-        time.sleep(5)
-    
         #nr_atendimento
         pyautogui.write(linha)
         registrar_log(f'nr_atendimento: {linha}')
         driver.implicitly_wait(5)
-        time.sleep(5)
+        time.sleep(8)
         
         #enter
         pyautogui.press('enter')
         registrar_log('enter')
         driver.implicitly_wait(5)
-        time.sleep(5)
+        time.sleep(8)
         
         #enter
         pyautogui.press('enter')
         registrar_log('enter')
         driver.implicitly_wait(5)
-        time.sleep(5)
+        time.sleep(8)
         
         #botao visualizar
         bt_cpoe_relatorios = driver.find_element(By.XPATH, value='//*[@id="handlebar-40"]')
         bt_cpoe_relatorios.click()
         driver.implicitly_wait(5)
-        time.sleep(5)
+        time.sleep(8)
         
         #TODO: ajustar por que dependendo da tela ele não irá clicar:
         
         #click no visualizar:
         pyautogui.click(1456, 380)
         registrar_log("click no visualizar\npyautogui.click(1456, 380)")
-        driver.implicitly_wait(15)
-        #TODO: aumentar esse tempo para 45
+        driver.implicitly_wait(90)
+        #TODO: aumentar esse tempo para 20
         time.sleep(20)
         
         #clicar para baixar o pdf gerado
         pyautogui.click(1813,167)
         registrar_log("clicar para baixar o pdf gerado\npyautogui.click(1813,167)")
-        driver.implicitly_wait(5)
-        #TODO: aumentar esse tempo para 45
-        time.sleep(5)
+        driver.implicitly_wait(90)
+        #TODO: aumentar esse tempo para 20
+        time.sleep(20)
         
         #enter
         pyautogui.press('enter')
         registrar_log('enter')
-        driver.implicitly_wait(5)
-        time.sleep(5)
+        driver.implicitly_wait(8)
+        time.sleep(8)
         
         #clicar para manter
         pyautogui.click(1750,108)
         registrar_log("clicar para manter\npyautogui.click(1750,108)")
-        driver.implicitly_wait(5)
-        #TODO: aumentar esse tempo para 45
+        driver.implicitly_wait(8)
+        #TODO: aumentar esse tempo para 20
+        time.sleep(8)
+        
+        #ctrl+W
+        pyautogui.hotkey('ctrl', 'w')
+        registrar_log("pyautogui.hotkey('ctrl', 'w')")
+        driver.implicitly_wait(8)
+        time.sleep(8)
+        
+        #acessando pasta download:
+        downloads_path = os.path.join(os.path.expanduser("~"), "Downloads")
+        registrar_log(f'Caminho da pasta download: {downloads_path}')
+        
+        #verificando arquivos da pasta download
+        files = [f for f in os.listdir(downloads_path) if f.endswith('.pdf')]
+        registrar_log(f"Arquivos:\n{files}")
+        #ultimo arquivo
+        ultimo_arquivo = os.path.join(downloads_path, files[0])
+        registrar_log(f"\n*****Ultimo arquivo antes de renomear: {ultimo_arquivo}")
+    
+        # Caminho da pasta Prescricoes
+        #data_hora = agora_limpo()
+        pasta_prescricoes = "Prescricoes"
+        registrar_log(f"pasta_prescricoes: {pasta_prescricoes}")
+        
+        pasta_data = os.path.join(pasta_prescricoes, agora_limpo())
+        registrar_log(f"pasta_data: {pasta_data}")
+        
+        # Cria a pasta da data se não existir
+        os.makedirs(pasta_data, exist_ok=True)
+        registrar_log(f"***********os.makedirs: {pasta_data}")
+        
         time.sleep(5)
         
+        #renomeia e move os arquivos
+        registrar_log(f"Data_hora: {agora()}")
+        caminho_antigo = os.path.join(downloads_path, ultimo_arquivo)
+        registrar_log(f"caminho antigo: {caminho_antigo}")
         
+        nr_atendimento = linha
+        caminho_novo = os.path.join(pasta_data, f"{nr_atendimento} - {agora()}.pdf")
+        registrar_log(f'caminho_novo = {caminho_novo},\narquivo:{agora()}.pdf)')
         
-        #TODO: renomear o pdf gerado para o nr_atendimento e hora gerado
+        try:
+            shutil.move(caminho_antigo, caminho_novo)
+            registrar_log(f"Arquivo {ultimo_arquivo} renomeado e movido com sucesso.")
+        except shutil.Error as e:
+            registrar_log(f"Erro ao mover o arquivo: {e}")
         
-        #TODO: movimentar pdf gerado para a pasta desejada
-        
-        
-        
+        #65,250
+        pyautogui.click(65,250)
+        registrar_log("clicar para procurar novo paciente\npyautogui.click(65,250)")
+        driver.implicitly_wait(5)
+        #TODO: aumentar esse tempo para 20
+        time.sleep(8)
         
         #FIM
-        registrar_log('driver.implicitly_wait(10)')
+        registrar_log(f'Atendimento:{linha}\n\n********************FIM********************\n')
         driver.implicitly_wait(10)
         #TODO: retirar a pausa abaixo:
         time.sleep(10)
@@ -384,23 +440,14 @@ def Geracao_Pdf_Prescricao():
     registrar_log('driver.implicitly_wait(10)')
     driver.implicitly_wait(10)
 
-    #TODO: fazer rotina para puxar os numero de atendimento
-    
-    
-    
     # FIM:
     statusThread = False
-    registrar_log(f"============================== FIM:!\nglobal statusThread: {statusThread}")
+    registrar_log(f"============================== Geracao_Pdf_Prescricao FIM!\nglobal statusThread: {statusThread}")
     
     # pausa dramática:
     driver.implicitly_wait(2)
     time.sleep(20)
     driver.quit()
-    
-    
-    """
-    
-    
     
 def interface_grafica():
     registrar_log("interface_grafica()")
@@ -425,28 +472,21 @@ def interface_grafica():
             registrar_log(f"Tarefa inicializada!\nstatusThread:{statusThread}")
             
             #============================== execuçao ========================
-
-            #TODO: inserir a execucao do login do tasy em uma thread:
-            
-            #delete_all_files_in_directory(pasta_downloads)
-            
-            #Geracao_Pdf_Atendimen()
-            
-            pdf_para_csv()
+            #TODO: inserir a execucao do login do tasy em um process
+            delete_all_files_in_directory()
+            Geracao_Pdf_Atendimen()
+            print(pdf_para_df())
             Geracao_Pdf_Prescricao()
-            
-            
-            
-                
-
+    
     def fechar():
-        registrar_log("def fechar()")
+        registrar_log("def fechar()- janela.destroy()")
         # Exiba uma caixa de diálogo de confirmação
-        resultado = messagebox.askyesno("Confirmação", "Tem certeza de que deseja fechar o aplicativo?")
-        if resultado:
-            # Feche o aplicativo
-            registrar_log("janela.destroy()")
-            janela.destroy()
+        #resultado = messagebox.askyesno("Confirmação", "Tem certeza de que deseja fechar o aplicativo?")
+        #if resultado:
+        #    # Feche o aplicativo
+        #    registrar_log("janela.destroy()")
+        #    janela.destroy()
+        janela.destroy()
 
     #INTERFACE GRAFICA:
     janela = tk.Tk()
@@ -465,11 +505,9 @@ def interface_grafica():
 
     janela.mainloop()
 
-
-
 if __name__ == "__main__":
     try:
-        registrar_log("============================== inicio ========================")
+        registrar_log(f"\n\n\n\n{agora()}\n============================== INICIO ========================")
         
         #deletando todos os arquivos da pasta download
         pasta_downloads = os.path.join(os.path.expanduser("~"), "Downloads")
