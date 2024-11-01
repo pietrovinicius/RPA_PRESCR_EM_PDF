@@ -451,6 +451,16 @@ def Geracao_Pdf_Prescricao():
     
 def interface_grafica():
     registrar_log("interface_grafica()")
+    
+    def ao_fechar():
+        resultado = messagebox.askyesno("Confirmação", "Tem certeza de que deseja fechar o aplicativo?")
+        if resultado:
+            # Feche o aplicativo
+            janela.destroy()
+        """Função chamada quando o usuário clica no botão 'X' para fechar a janela."""
+        registrar_log("O aplicativo foi fechado no botão X\n")
+
+    
 
     def iniciar():
         global statusThread
@@ -479,7 +489,7 @@ def interface_grafica():
             Geracao_Pdf_Prescricao()
     
     def fechar():
-        registrar_log("def fechar()- janela.destroy()")
+        registrar_log(f"\n\n{agora()}def fechar()- janela.destroy()")
         # Exiba uma caixa de diálogo de confirmação
         #resultado = messagebox.askyesno("Confirmação", "Tem certeza de que deseja fechar o aplicativo?")
         #if resultado:
@@ -493,6 +503,9 @@ def interface_grafica():
     janela.maxsize(600,400)
     janela.geometry('600x400')
     janela.title("RPA PRESCRICOES POR SETOR")
+    
+    # Associa a função ao_fechar ao evento de fechamento da janela
+    janela.protocol("WM_DELETE_WINDOW", ao_fechar)
 
     bt_Iniciar = tk.Button(janela, width=18, text="Iniciar",command=lambda: [
         #TODO: TESTAR ETAPAS DO SISTEMA ABAIXO
@@ -507,7 +520,7 @@ def interface_grafica():
 
 if __name__ == "__main__":
     try:
-        registrar_log(f"\n\n\n\n{agora()}\n============================== INICIO ========================")
+        registrar_log(f"\n\n\n\n{agora()}\n============================== INICIO ========================\n")
         
         #deletando todos os arquivos da pasta download
         pasta_downloads = os.path.join(os.path.expanduser("~"), "Downloads")

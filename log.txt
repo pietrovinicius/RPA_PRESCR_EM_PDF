@@ -7144,3 +7144,82 @@ pyautogui.click(65,250)
 ============================== INICIO ========================
 2024-11-01 09-56-10 - interface_grafica()
 2024-11-01 09-56-28 - def fechar()- janela.destroy()
+2024-11-01 10-13-44 - 
+
+
+
+2024-11-01 10-13-44
+============================== INICIO ========================
+
+2024-11-01 10-13-44 - interface_grafica()
+2024-11-01 10-13-47 - def iniciar()
+2024-11-01 10-13-47 - Botao Iniciar clicado!
+2024-11-01 10-13-47 - global statusThread: False
+2024-11-01 10-13-47 - ============================== execuçao ========================
+2024-11-01 10-13-47 - Tarefa inicializada!
+statusThread:True
+2024-11-01 10-13-47 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024-11-01 10-13-47 - delete_all_files_in_directory(C:\Users\pvplima.C19NOT76\Downloads)
+2024-11-01 10-13-47 - ============================== Geracao_Pdf_Atendimen ==============================
+2024-11-01 10-13-59 - 
+
+2024-11-01 10-13-59def fechar()- janela.destroy()
+2024-11-01 10-23-05 - 
+
+
+
+2024-11-01 10-23-05
+============================== INICIO ========================
+
+2024-11-01 10-23-05 - interface_grafica()
+2024-11-01 10-23-56 - 
+
+
+
+2024-11-01 10-23-56
+============================== INICIO ========================
+
+2024-11-01 10-23-56 - interface_grafica()
+2024-11-01 10-24-00 - 
+O aplicativo foi fechado no botão X.
+
+2024-11-01 10-24-23 - 
+
+
+
+2024-11-01 10-24-23
+============================== INICIO ========================
+
+2024-11-01 10-24-23 - interface_grafica()
+2024-11-01 10-24-25 - def iniciar()
+2024-11-01 10-24-25 - Botao Iniciar clicado!
+2024-11-01 10-24-25 - global statusThread: False
+2024-11-01 10-24-25 - ============================== execuçao ========================
+2024-11-01 10-24-25 - Tarefa inicializada!
+statusThread:True
+2024-11-01 10-24-25 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024-11-01 10-24-25 - delete_all_files_in_directory(C:\Users\pvplima.C19NOT76\Downloads)
+2024-11-01 10-24-25 - ============================== Geracao_Pdf_Atendimen ==============================
+2024-11-01 10-24-31 - 
+
+2024-11-01 10-24-31def fechar()- janela.destroy()
+2024-11-01 10-24-43 - 
+
+
+
+2024-11-01 10-24-43
+============================== INICIO ========================
+
+2024-11-01 10-24-43 - interface_grafica()
+2024-11-01 10-24-45 - O aplicativo foi fechado no botão X.
+
+2024-11-01 10-26-12 - 
+
+
+
+2024-11-01 10-26-12
+============================== INICIO ========================
+
+2024-11-01 10-26-12 - interface_grafica()
+2024-11-01 10-26-17 - O aplicativo foi fechado no botão X
+
