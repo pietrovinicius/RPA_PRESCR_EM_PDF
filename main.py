@@ -304,44 +304,41 @@ def Geracao_Pdf_Prescricao():
                 box_usuario = driver.find_element(By.XPATH, value='//*[@id="loginUsername"]')
                 box_usuario.send_keys('pvplima')
                 registrar_log('box_usuario')
-                driver.implicitly_wait(1.5)
-                time.sleep(1)
 
                 # box de senha:
                 box_senha = driver.find_element(By.XPATH, value='//*[@id="loginPassword"]')
                 box_senha.send_keys('hsf@2024')
                 registrar_log('box_senha')
-                driver.implicitly_wait(1.5)
-                time.sleep(1)
 
                 # botao de login:
                 bt_login = driver.find_element(By.XPATH, value='//*[@id="loginForm"]/input[3]')
                 bt_login.click()
                 registrar_log('bt_login')
                 driver.implicitly_wait(10)
-                time.sleep(6)
+                time.sleep(5)
                 
                 #1107,702    
                 pyautogui.click(1107,702  )
                 registrar_log("click objeto inválido\npyautogui.click(1107,702)")
-                time.sleep(3)
+                time.sleep(2)
                 
                 #TODO: aqui vai ser feita a sequencia de repetições para emitir os pdfs
                 registrar_log("for linha in df_filtrado.iloc[:, 0]")
                 registrar_log(f"Repeticao:\nNR_ATENDIMENTO: {linha}")
                 
-                # escrever CPOE
-                pyautogui.write('CPOE')
-                registrar_log('CPOE')
-                time.sleep(2)
+                ## escrever CPOE
+                #driver.implicitly_wait(1)
+                #pyautogui.write('CPOE')
+                #registrar_log('CPOE')
+                #time.sleep(1)
 
-                #dar enter:
-                pyautogui.press('enter')
-                registrar_log('enter')
-                time.sleep(2)
-
+                ##dar enter:
+                #pyautogui.press('enter')
+                #registrar_log('enter')
+                #time.sleep(1)
+                
                 #clicar no icone do CPOE:
-                bt_CPOE = driver.find_element(By.XPATH, value='//*[@id="app-view"]/tasy-corsisf1/div/w-mainlayout/div/div/w-launcher/div/div/div[1]/w-apps/div/div[1]/ul/li/w-feature-app/a/img')
+                bt_CPOE = driver.find_element(By.XPATH, value='//*[@id="app-view"]/tasy-corsisf1/div/w-mainlayout/div/div/w-launcher/div/div/div[1]/w-apps/div/div[1]/ul/li[2]/w-feature-app/a/img')
                 bt_CPOE.click()
                 registrar_log('clicar no icone do CPOE:')
                 driver.implicitly_wait(20)

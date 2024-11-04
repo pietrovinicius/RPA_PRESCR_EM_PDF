@@ -45373,3 +45373,214 @@ global statusThread: False
 2024-11-04 11-37-27 - 
 
 2024-11-04 11-37-27def fechar()- janela.destroy()
+2024-11-04 16-54-14 - 
+
+
+
+2024-11-04 16-54-14
+============================== INICIO ========================
+
+2024-11-04 16-54-14 - interface_grafica()
+2024-11-04 16-54-19 - def iniciar()
+2024-11-04 16-54-19 - Botao Iniciar clicado!
+2024-11-04 16-54-19 - global statusThread: False
+2024-11-04 16-54-19 - ============================== execucao ========================
+2024-11-04 16-54-19 - Tarefa inicializada!
+statusThread:True
+2024-11-04 16-54-19 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024-11-04 16-54-19 - delete_all_files_in_directory(C:\Users\pvplima.C19NOT76\Downloads)
+2024-11-04 16-54-19 - ============================== Geracao_Pdf_Atendimen ==============================
+2024-11-04 16-54-27 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+2024-11-04 16-54-28 - box_usuario
+2024-11-04 16-54-28 - box_senha
+2024-11-04 16-54-28 - bt_login
+2024-11-04 16-54-33 - click objeto inválido
+pyautogui.click(1107,702)
+2024-11-04 16-54-35 - bt_utilitarios.click()
+2024-11-04 16-54-37 - bt_impressao_relatorios.click()
+2024-11-04 16-54-39 - box_codigo_rel.send_keys('1790')
+2024-11-04 16-54-41 - pyautogui.press('enter')
+2024-11-04 16-54-43 - bt_visualizar_.click()
+2024-11-04 16-56-28 - 
+
+2024-11-04 16-56-28def fechar()- janela.destroy()
+2024-11-04 16-56-38 - 
+
+
+
+2024-11-04 16-56-38
+============================== INICIO ========================
+
+2024-11-04 16-56-38 - interface_grafica()
+2024-11-04 16-56-40 - def iniciar()
+2024-11-04 16-56-40 - Botao Iniciar clicado!
+2024-11-04 16-56-40 - global statusThread: False
+2024-11-04 16-56-40 - ============================== execucao ========================
+2024-11-04 16-56-40 - Tarefa inicializada!
+statusThread:True
+2024-11-04 16-56-40 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024-11-04 16-56-40 - delete_all_files_in_directory(C:\Users\pvplima.C19NOT76\Downloads)
+2024-11-04 16-56-40 - ============================== Geracao_Pdf_Atendimen ==============================
+2024-11-04 16-56-48 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+2024-11-04 16-56-48 - box_usuario
+2024-11-04 16-56-49 - box_senha
+2024-11-04 16-56-49 - bt_login
+2024-11-04 16-56-54 - click objeto inválido
+pyautogui.click(1107,702)
+2024-11-04 16-56-56 - bt_utilitarios.click()
+2024-11-04 16-56-58 - bt_impressao_relatorios.click()
+2024-11-04 16-57-00 - box_codigo_rel.send_keys('1790')
+2024-11-04 16-57-02 - pyautogui.press('enter')
+2024-11-04 16-57-04 - bt_visualizar_.click()
+2024-11-04 16-57-24 - click apos o download
+pyautogui.click(1810,165)
+2024-11-04 16-57-29 - Pressionar Item
+pyautogui.press('enter')
+2024-11-04 16-57-31 - click no manter
+pyautogui.click(1751,109)
+2024-11-04 16-57-33 - global statusThread: False
+2024-11-04 16-57-38 - =========== Geracao_Pdf_Atendimen fim ========
+2024-11-04 16-57-42 - ******def pdf_para_df():
+2024-11-04 16-57-42 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024-11-04 16-57-42 - Arquivos:
+['8a3a6961-acea-4790-ae5f-0992348d5aea.pdf']
+2024-11-04 16-57-42 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\8a3a6961-acea-4790-ae5f-0992348d5aea.pdf
+2024-11-04 16-57-42 - mover_ultimo_pdf_para_raiz(ultimo_arquivo,diretorio_atual)
+2024-11-04 16-57-42 - *****caminho_arquivo: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf
+2024-11-04 16-57-42 - ultimo_arquivo: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf
+2024-11-04 16-57-42 - ============================== Geracao_Pdf_Prescricao ==============================
+2024-11-04 16-57-49 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+2024-11-04 16-57-49 - box_usuario
+2024-11-04 16-57-50 - box_senha
+2024-11-04 16-57-50 - bt_login
+2024-11-04 16-57-55 - click objeto inválido
+pyautogui.click(1107,702)
+2024-11-04 16-57-57 - for linha in df_filtrado.iloc[:, 0]
+2024-11-04 16-57-57 - Repeticao:
+NR_ATENDIMENTO: 621123
+2024-11-04 16-57-57 - CPOE
+2024-11-04 16-57-58 - enter
+2024-11-04 16-57-59 - clicar no icone do CPOE:
+2024-11-04 17-00-13 - 
+
+2024-11-04 17-00-13def fechar()- janela.destroy()
+2024-11-04 17-00-19 - 
+
+
+
+2024-11-04 17-00-19
+============================== INICIO ========================
+
+2024-11-04 17-00-19 - interface_grafica()
+2024-11-04 17-00-20 - def iniciar()
+2024-11-04 17-00-20 - Botao Iniciar clicado!
+2024-11-04 17-00-20 - global statusThread: False
+2024-11-04 17-00-20 - ============================== execucao ========================
+2024-11-04 17-00-20 - Tarefa inicializada!
+statusThread:True
+2024-11-04 17-00-20 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024-11-04 17-00-20 - delete_all_files_in_directory(C:\Users\pvplima.C19NOT76\Downloads)
+2024-11-04 17-00-20 - ============================== Geracao_Pdf_Atendimen ==============================
+2024-11-04 17-00-28 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+2024-11-04 17-00-29 - box_usuario
+2024-11-04 17-00-29 - box_senha
+2024-11-04 17-00-29 - bt_login
+2024-11-04 17-00-34 - click objeto inválido
+pyautogui.click(1107,702)
+2024-11-04 17-00-36 - bt_utilitarios.click()
+2024-11-04 17-00-38 - bt_impressao_relatorios.click()
+2024-11-04 17-00-40 - box_codigo_rel.send_keys('1790')
+2024-11-04 17-00-42 - pyautogui.press('enter')
+2024-11-04 17-00-44 - bt_visualizar_.click()
+2024-11-04 17-01-04 - click apos o download
+pyautogui.click(1810,165)
+2024-11-04 17-01-09 - Pressionar Item
+pyautogui.press('enter')
+2024-11-04 17-01-12 - click no manter
+pyautogui.click(1751,109)
+2024-11-04 17-01-14 - global statusThread: False
+2024-11-04 17-01-18 - =========== Geracao_Pdf_Atendimen fim ========
+2024-11-04 17-01-22 - ******def pdf_para_df():
+2024-11-04 17-01-22 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024-11-04 17-01-22 - Arquivos:
+['0119376c-b044-414a-a384-d8bdd564c62d.pdf']
+2024-11-04 17-01-22 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\0119376c-b044-414a-a384-d8bdd564c62d.pdf
+2024-11-04 17-01-22 - mover_ultimo_pdf_para_raiz(ultimo_arquivo,diretorio_atual)
+2024-11-04 17-01-22 - *****caminho_arquivo: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf
+2024-11-04 17-01-22 - ultimo_arquivo: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf
+2024-11-04 17-01-22 - ============================== Geracao_Pdf_Prescricao ==============================
+2024-11-04 17-01-29 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+2024-11-04 17-01-30 - box_usuario
+2024-11-04 17-01-30 - box_senha
+2024-11-04 17-01-30 - bt_login
+2024-11-04 17-01-35 - click objeto inválido
+pyautogui.click(1107,702)
+2024-11-04 17-01-37 - for linha in df_filtrado.iloc[:, 0]
+2024-11-04 17-01-37 - Repeticao:
+NR_ATENDIMENTO: 621123
+2024-11-04 17-01-37 - clicar no icone do CPOE:
+2024-11-04 17-01-57 - nr_atendimento: 621123
+2024-11-04 17-01-59 - 1 - enter
+2024-11-04 17-03-50 - 
+
+2024-11-04 17-03-50def fechar()- janela.destroy()
+2024-11-04 17-04-02 - 
+
+
+
+2024-11-04 17-04-02
+============================== INICIO ========================
+
+2024-11-04 17-04-02 - interface_grafica()
+2024-11-04 17-04-04 - def iniciar()
+2024-11-04 17-04-04 - Botao Iniciar clicado!
+2024-11-04 17-04-04 - global statusThread: False
+2024-11-04 17-04-04 - ============================== execucao ========================
+2024-11-04 17-04-04 - Tarefa inicializada!
+statusThread:True
+2024-11-04 17-04-04 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024-11-04 17-04-04 - delete_all_files_in_directory(C:\Users\pvplima.C19NOT76\Downloads)
+2024-11-04 17-04-04 - ============================== Geracao_Pdf_Atendimen ==============================
+2024-11-04 17-04-12 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+2024-11-04 17-04-12 - box_usuario
+2024-11-04 17-04-12 - box_senha
+2024-11-04 17-04-12 - bt_login
+2024-11-04 17-04-17 - click objeto inválido
+pyautogui.click(1107,702)
+2024-11-04 17-04-19 - bt_utilitarios.click()
+2024-11-04 17-04-21 - bt_impressao_relatorios.click()
+2024-11-04 17-04-23 - box_codigo_rel.send_keys('1790')
+2024-11-04 17-04-25 - pyautogui.press('enter')
+2024-11-04 17-04-27 - bt_visualizar_.click()
+2024-11-04 17-04-47 - click apos o download
+pyautogui.click(1810,165)
+2024-11-04 17-04-53 - Pressionar Item
+pyautogui.press('enter')
+2024-11-04 17-04-55 - click no manter
+pyautogui.click(1751,109)
+2024-11-04 17-04-57 - global statusThread: False
+2024-11-04 17-05-01 - =========== Geracao_Pdf_Atendimen fim ========
+2024-11-04 17-05-05 - ******def pdf_para_df():
+2024-11-04 17-05-05 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2024-11-04 17-05-05 - Arquivos:
+['f4a8433d-d121-4950-b301-4b3ea6f786d2.pdf']
+2024-11-04 17-05-05 - 
+*****Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\f4a8433d-d121-4950-b301-4b3ea6f786d2.pdf
+2024-11-04 17-05-05 - mover_ultimo_pdf_para_raiz(ultimo_arquivo,diretorio_atual)
+2024-11-04 17-05-05 - *****caminho_arquivo: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf
+2024-11-04 17-05-05 - ultimo_arquivo: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Atendimentos.pdf
+2024-11-04 17-05-05 - ============================== Geracao_Pdf_Prescricao ==============================
+2024-11-04 17-05-13 - driver.get("http://aplicacao.hsf.local:7070/#/login")
+2024-11-04 17-05-13 - box_usuario
+2024-11-04 17-05-13 - box_senha
+2024-11-04 17-05-13 - bt_login
+2024-11-04 17-05-18 - click objeto inválido
+pyautogui.click(1107,702)
+2024-11-04 17-05-20 - for linha in df_filtrado.iloc[:, 0]
+2024-11-04 17-05-20 - Repeticao:
+NR_ATENDIMENTO: 621123
+2024-11-04 17-05-20 - clicar no icone do CPOE:
+2024-11-04 17-05-41 - nr_atendimento: 621123
+2024-11-04 17-05-43 - 1 - enter
