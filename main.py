@@ -1,3 +1,10 @@
+"""
+24/10/2024
+@PLima
+
+Automação PDID - Extrai em pdf todas as prescrições dos pacientes Internados
+"""
+
 import tkinter as tk
 import os
 import datetime
@@ -484,9 +491,7 @@ def interface_grafica():
             janela.destroy()
         """Função chamada quando o usuário clica no botão 'X' para fechar a janela."""
         registrar_log("O aplicativo foi fechado no botão X\n")
-
-    
-
+        
     def iniciar():
         global statusThread
         global df_filtrado
@@ -554,4 +559,4 @@ if __name__ == "__main__":
         interface_grafica()
 
     except Exception as erro:
-        registrar_log(f"================================ Error: \n{erro}")
+        registrar_log(f'================================ if __name__ == "__main__"\nException Error: \n{erro}')
