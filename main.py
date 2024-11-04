@@ -184,8 +184,13 @@ def Geracao_Pdf_Atendimen():
     bt_login = driver.find_element(By.XPATH, value='//*[@id="loginForm"]/input[3]')
     bt_login.click()
     registrar_log('bt_login')
-
     driver.implicitly_wait(10)
+    time.sleep(5)
+    
+    #1107,702    
+    pyautogui.click(1107,702  )
+    registrar_log("click objeto inválido\npyautogui.click(1107,702)")
+    time.sleep(2)
 
     # click no atalho de utilitários:
     bt_utilitarios = driver.find_element(By.XPATH, value='//*[@id="app-view"]/tasy-corsisf1/div/w-mainlayout/div/div/w-launcher/div/ul/li[2]')
@@ -197,45 +202,45 @@ def Geracao_Pdf_Atendimen():
     bt_impressao_relatorios = driver.find_element(By.XPATH, value='//*[@id="app-view"]/tasy-corsisf1/div/w-mainlayout/div/div/w-launcher/div/div/div[2]/w-apps/div/div[1]/ul/li[3]/w-feature-app/a/img')
     bt_impressao_relatorios.click()
     registrar_log('bt_impressao_relatorios.click()')
-    driver.implicitly_wait(5)
-    time.sleep(8)
+    driver.implicitly_wait(1.5)
+    time.sleep(2)
 
     # click no campo para procurar o relatório 1790:
     box_codigo_rel = driver.find_element(By.XPATH, value='//*[@id="detail_1_container"]/div[1]/div/div[2]/tasy-wtextbox/div/div/input')
     box_codigo_rel.send_keys('1790')
     registrar_log("box_codigo_rel.send_keys('1790')")
-    driver.implicitly_wait(5)
-    time.sleep(8)
+    driver.implicitly_wait(1.5)
+    time.sleep(2)
 
     #Pressionar Item:
     pyautogui.press('enter')
     registrar_log("pyautogui.press('enter')")
-    driver.implicitly_wait(5)
-    time.sleep(8)
+    driver.implicitly_wait(1.5)
+    time.sleep(2)
     
     # Click no botao visualizar:
     bt_visualizar_ = driver.find_element(By.XPATH, value='//*[@id="handlebar-455491"]')
     bt_visualizar_.click()
     registrar_log("bt_visualizar_.click()")
     driver.implicitly_wait(20)
-    time.sleep(30)
+    time.sleep(20)
     
     #click apos o download
     pyautogui.click(1810,165)
     registrar_log("click apos o download\npyautogui.click(1810,165)")
     driver.implicitly_wait(10)
-    time.sleep(10)
+    time.sleep(5)
     
     #Pressionar Item:
     pyautogui.press('enter')
     registrar_log("Pressionar Item\npyautogui.press('enter')")
-    time.sleep(8)
+    time.sleep(2)
     
     #click no manter:
     pyautogui.click(1751,109)
     registrar_log("click no manter\npyautogui.click(1751,109)")
-    driver.implicitly_wait(5)
-    time.sleep(8)
+    driver.implicitly_wait(1.5)
+    time.sleep(2)
        
     #print(f"pdf_para_df():\n{pdf_para_df()}")
     
@@ -266,188 +271,208 @@ def Geracao_Pdf_Prescricao():
     df_filtrado = df.iloc[:, 0]
     #print(f"df_filtrado: {df_filtrado}")
     
-    #tela toda:
-    driver = webdriver.Chrome()
-    options = Options()
-    options.add_argument("--start-maximized")
-    driver = webdriver.Chrome(options=options)
-
-    driver.get("http://aplicacao.hsf.local:7070/#/login")
-    registrar_log('driver.get("http://aplicacao.hsf.local:7070/#/login")')
-    title = driver.title
-
-    driver.implicitly_wait(1.5)
-
-    # box de usuario:
-    box_usuario = driver.find_element(By.XPATH, value='//*[@id="loginUsername"]')
-    box_usuario.send_keys('pvplima')
-    registrar_log('box_usuario')
-    driver.implicitly_wait(1.5)
-    time.sleep(2)
-
-    # box de senha:
-    box_senha = driver.find_element(By.XPATH, value='//*[@id="loginPassword"]')
-    box_senha.send_keys('hsf@2024')
-    registrar_log('box_senha')
-    driver.implicitly_wait(1.5)
-    time.sleep(2)
-
-    # botao de login:
-    bt_login = driver.find_element(By.XPATH, value='//*[@id="loginForm"]/input[3]')
-    bt_login.click()
-    registrar_log('bt_login')
-    driver.implicitly_wait(1.5)
-    time.sleep(10)
+    contador = 0
     
-    #TODO: aqui vai ser feita a sequencia de repetições para emitir os pdfs
-    registrar_log("for linha in df_filtrado.iloc[:, 0]")
-    #registrar_log(f"Repeticao:\nNR_ATENDIMENTO: {linha}")
-    
-    # escrever CPOE
-    pyautogui.write('CPOE')
-    registrar_log('CPOE')
-    time.sleep(8)
-
-    #dar enter:
-    pyautogui.press('enter')
-    registrar_log('enter')
-    time.sleep(8)
-
-    #clicar no icone do CPOE:
-    bt_CPOE = driver.find_element(By.XPATH, value='//*[@id="app-view"]/tasy-corsisf1/div/w-mainlayout/div/div/w-launcher/div/div/div[1]/w-apps/div/div[1]/ul/li/w-feature-app/a/img')
-    bt_CPOE.click()
-    registrar_log('clicar no icone do CPOE:')
-    driver.implicitly_wait(5)
-    time.sleep(8)
-    
-    # Percorrendo cada linha e coluna e exibindo os dados no console
+    #=================================== REPETICAO #=================================== 
+    #Percorrendo cada linha e coluna e exibindo os dados no console
     print("\n***********************Exibindo dados linha por linha:")
-    for linha in df_filtrado:
-        
-        #nr_atendimento
-        pyautogui.write(linha)
-        registrar_log(f'nr_atendimento: {linha}')
-        driver.implicitly_wait(5)
-        time.sleep(8)
-        
-        #enter
-        pyautogui.press('enter')
-        registrar_log('enter')
-        driver.implicitly_wait(5)
-        time.sleep(8)
-        
-        #enter
-        pyautogui.press('enter')
-        registrar_log('enter')
-        driver.implicitly_wait(5)
-        time.sleep(8)
-        
-        #botao visualizar
-        bt_cpoe_relatorios = driver.find_element(By.XPATH, value='//*[@id="handlebar-40"]')
-        bt_cpoe_relatorios.click()
-        driver.implicitly_wait(5)
-        time.sleep(8)
-        
-        #TODO: ajustar por que dependendo da tela ele não irá clicar:
-        
-        #click no visualizar:
-        pyautogui.click(1456, 380)
-        registrar_log("click no visualizar\npyautogui.click(1456, 380)")
-        driver.implicitly_wait(90)
-        #TODO: aumentar esse tempo para 20
-        time.sleep(20)
-        
-        #clicar para baixar o pdf gerado
-        pyautogui.click(1813,167)
-        registrar_log("clicar para baixar o pdf gerado\npyautogui.click(1813,167)")
-        driver.implicitly_wait(90)
-        #TODO: aumentar esse tempo para 20
-        time.sleep(20)
-        
-        #enter
-        pyautogui.press('enter')
-        registrar_log('enter')
-        driver.implicitly_wait(8)
-        time.sleep(8)
-        
-        #clicar para manter
-        pyautogui.click(1750,108)
-        registrar_log("clicar para manter\npyautogui.click(1750,108)")
-        driver.implicitly_wait(8)
-        #TODO: aumentar esse tempo para 20
-        time.sleep(8)
-        
-        #ctrl+W
-        pyautogui.hotkey('ctrl', 'w')
-        registrar_log("pyautogui.hotkey('ctrl', 'w')")
-        driver.implicitly_wait(8)
-        time.sleep(8)
-        
-        #acessando pasta download:
-        downloads_path = os.path.join(os.path.expanduser("~"), "Downloads")
-        registrar_log(f'Caminho da pasta download: {downloads_path}')
-        
-        #verificando arquivos da pasta download
-        files = [f for f in os.listdir(downloads_path) if f.endswith('.pdf')]
-        registrar_log(f"Arquivos:\n{files}")
-        #ultimo arquivo
-        ultimo_arquivo = os.path.join(downloads_path, files[0])
-        registrar_log(f"\n*****Ultimo arquivo antes de renomear: {ultimo_arquivo}")
-    
-        # Caminho da pasta Prescricoes
-        #data_hora = agora_limpo()
-        pasta_prescricoes = "Prescricoes"
-        registrar_log(f"pasta_prescricoes: {pasta_prescricoes}")
-        
-        pasta_data = os.path.join(pasta_prescricoes, agora_limpo())
-        registrar_log(f"pasta_data: {pasta_data}")
-        
-        # Cria a pasta da data se não existir
-        os.makedirs(pasta_data, exist_ok=True)
-        registrar_log(f"***********os.makedirs: {pasta_data}")
-        
-        time.sleep(5)
-        
-        #renomeia e move os arquivos
-        registrar_log(f"Data_hora: {agora()}")
-        caminho_antigo = os.path.join(downloads_path, ultimo_arquivo)
-        registrar_log(f"caminho antigo: {caminho_antigo}")
-        
-        nr_atendimento = linha
-        caminho_novo = os.path.join(pasta_data, f"{nr_atendimento} - {agora()}.pdf")
-        registrar_log(f'caminho_novo = {caminho_novo},\narquivo:{agora()}.pdf)')
-        
-        try:
-            shutil.move(caminho_antigo, caminho_novo)
-            registrar_log(f"Arquivo {ultimo_arquivo} renomeado e movido com sucesso.")
-        except shutil.Error as e:
-            registrar_log(f"Erro ao mover o arquivo: {e}")
-        
-        #65,250
-        pyautogui.click(65,250)
-        registrar_log("clicar para procurar novo paciente\npyautogui.click(65,250)")
-        driver.implicitly_wait(5)
-        #TODO: aumentar esse tempo para 20
-        time.sleep(8)
-        
-        #FIM
-        registrar_log(f'Atendimento:{linha}\n\n********************FIM********************\n')
-        driver.implicitly_wait(10)
-        #TODO: retirar a pausa abaixo:
-        time.sleep(10)
     
     
-    registrar_log('driver.implicitly_wait(10)')
-    driver.implicitly_wait(10)
+    try:
+        for linha in df_filtrado:
+            try:
+                #tela toda:
+                driver = webdriver.Chrome()
+                options = Options()
+                options.add_argument("--start-maximized")
+                driver = webdriver.Chrome(options=options)
+
+                driver.get("http://aplicacao.hsf.local:7070/#/login")
+                registrar_log('driver.get("http://aplicacao.hsf.local:7070/#/login")')
+                title = driver.title
+
+                driver.implicitly_wait(1.5)
+
+                # box de usuario:
+                box_usuario = driver.find_element(By.XPATH, value='//*[@id="loginUsername"]')
+                box_usuario.send_keys('pvplima')
+                registrar_log('box_usuario')
+                driver.implicitly_wait(1.5)
+                time.sleep(1)
+
+                # box de senha:
+                box_senha = driver.find_element(By.XPATH, value='//*[@id="loginPassword"]')
+                box_senha.send_keys('hsf@2024')
+                registrar_log('box_senha')
+                driver.implicitly_wait(1.5)
+                time.sleep(1)
+
+                # botao de login:
+                bt_login = driver.find_element(By.XPATH, value='//*[@id="loginForm"]/input[3]')
+                bt_login.click()
+                registrar_log('bt_login')
+                driver.implicitly_wait(10)
+                time.sleep(6)
+                
+                #1107,702    
+                pyautogui.click(1107,702  )
+                registrar_log("click objeto inválido\npyautogui.click(1107,702)")
+                time.sleep(3)
+                
+                #TODO: aqui vai ser feita a sequencia de repetições para emitir os pdfs
+                registrar_log("for linha in df_filtrado.iloc[:, 0]")
+                registrar_log(f"Repeticao:\nNR_ATENDIMENTO: {linha}")
+                
+                # escrever CPOE
+                pyautogui.write('CPOE')
+                registrar_log('CPOE')
+                time.sleep(2)
+
+                #dar enter:
+                pyautogui.press('enter')
+                registrar_log('enter')
+                time.sleep(2)
+
+                #clicar no icone do CPOE:
+                bt_CPOE = driver.find_element(By.XPATH, value='//*[@id="app-view"]/tasy-corsisf1/div/w-mainlayout/div/div/w-launcher/div/div/div[1]/w-apps/div/div[1]/ul/li/w-feature-app/a/img')
+                bt_CPOE.click()
+                registrar_log('clicar no icone do CPOE:')
+                driver.implicitly_wait(20)
+                time.sleep(20)
+                                
+                #nr_atendimento
+                driver.implicitly_wait(1.5)
+                pyautogui.write(linha)
+                registrar_log(f'nr_atendimento: {linha}')
+                driver.implicitly_wait(1.5)
+                time.sleep(2)
+
+                #enter
+                pyautogui.press('enter')
+                registrar_log('1 - enter')
+                driver.implicitly_wait(1.5)
+                time.sleep(8)
+
+                #enter
+                pyautogui.press('enter')
+                registrar_log('2 - enter')
+                driver.implicitly_wait(1.5)
+                time.sleep(12)
+
+                #click atendimento fechado
+                pyautogui.click(1100,709)
+                registrar_log("click atendimento fechado")
+                driver.implicitly_wait(3)
+                time.sleep(5)
+
+                #botao visualizar
+                bt_cpoe_relatorios = driver.find_element(By.XPATH, value='//*[@id="handlebar-40"]')
+                bt_cpoe_relatorios.click()
+                driver.implicitly_wait(1)
+                time.sleep(1)
+
+                #TODO: ajustar por que dependendo da tela ele não irá clicar:
+
+                #click no visualizar:
+                pyautogui.click(1442,382)
+                registrar_log("click no visualizar\npyautogui.click(1442,382)")
+                driver.implicitly_wait(20)
+                #TODO: aumentar esse tempo para 20
+                time.sleep(20)
+                                
+                #click apos o download
+                pyautogui.click(1810,165)
+                registrar_log("click apos o download\npyautogui.click(1810,165)")
+                driver.implicitly_wait(10)
+                time.sleep(5)
+                
+                #Pressionar Item:
+                pyautogui.press('enter')
+                registrar_log("Pressionar Item\npyautogui.press('enter')")
+                time.sleep(2)
+                
+                #click no manter:
+                pyautogui.click(1751,109)
+                registrar_log("click no manter\npyautogui.click(1751,109)")
+                driver.implicitly_wait(1.5)
+                time.sleep(2)
+                        
+                #ctrl+W
+                #pyautogui.hotkey('ctrl', 'w')
+                #registrar_log("pyautogui.hotkey('ctrl', 'w')")
+                #driver.implicitly_wait(5)
+                #time.sleep(5)
+
+                #acessando pasta download:
+                downloads_path = os.path.join(os.path.expanduser("~"), "Downloads")
+                registrar_log(f'Caminho da pasta download: {downloads_path}')
+                time.sleep(2)
+                
+                #verificando arquivos da pasta download
+                files = [f for f in os.listdir(downloads_path) if f.endswith('.pdf')]
+                registrar_log(f"Arquivos:\n{files}")
+                time.sleep(2)
+                #ultimo arquivo
+                ultimo_arquivo = os.path.join(downloads_path, files[0])
+                registrar_log(f"\n*****Ultimo arquivo antes de renomear: {ultimo_arquivo}")
+
+                time.sleep(2)
+                
+                # Caminho da pasta Prescricoes
+                #data_hora = agora_limpo()
+                pasta_prescricoes = "Prescricoes"
+                registrar_log(f"pasta_prescricoes: {pasta_prescricoes}")
+                time.sleep(2)
+                
+                pasta_data = os.path.join(pasta_prescricoes, agora_limpo())
+                registrar_log(f"pasta_data: {pasta_data}")
+                time.sleep(2)
+
+                # Cria a pasta da data se não existir
+                os.makedirs(pasta_data, exist_ok=True)
+                registrar_log(f"***********os.makedirs: {pasta_data}")
+                time.sleep(2)
+
+                #renomeia e move os arquivos
+                registrar_log(f"Data_hora: {agora()}")
+                caminho_antigo = os.path.join(downloads_path, ultimo_arquivo)
+                registrar_log(f"caminho antigo: {caminho_antigo}")
+
+                nr_atendimento = linha
+                caminho_novo = os.path.join(pasta_data, f"{nr_atendimento} - {agora()}.pdf")
+                registrar_log(f'caminho_novo = {caminho_novo},\narquivo:{agora()}.pdf)')
+
+                try:
+                    time.sleep(2)
+                    shutil.move(caminho_antigo, caminho_novo)
+                    registrar_log(f"Arquivo {ultimo_arquivo} renomeado e movido com sucesso.")
+                except shutil.Error as e:
+                    registrar_log(f"Erro ao mover o arquivo: {e}")
+                    
+                time.sleep(2)
+                #FIM
+                contador += 1
+                registrar_log(f'\ncontador = {contador}\nAtendimento:{linha}\n\n********************FIM********************\n')
+                
+                # pausa dramática:
+                driver.implicitly_wait(2)
+                time.sleep(2)
+                driver.quit()
+                
+            except Exception as erro:
+                registrar_log(f"=========== except do try de dento do for linha in df_filtrado::\ncontador: {contador} \n{erro}")
+    except Exception as erro:
+        #TODO: ao terminar extoura um exception e cai nesse bloco
+        registrar_log(f"=========== except: for linha in df_filtrado::\ncontador: {contador} \n{erro}")
+    
+    #TODO: Apos o erro ele segue com a execucao e precisa agora rodar novamente na hora pre determinda
+    registrar_log('\nFinal do for linha\ndriver.implicitly_wait(10)')
+    #driver.implicitly_wait(10)
 
     # FIM:
     statusThread = False
     registrar_log(f"============================== Geracao_Pdf_Prescricao FIM!\nglobal statusThread: {statusThread}")
     
-    # pausa dramática:
-    driver.implicitly_wait(2)
-    time.sleep(20)
-    driver.quit()
     
 def interface_grafica():
     registrar_log("interface_grafica()")
@@ -478,10 +503,10 @@ def interface_grafica():
 
         else:
             statusThread = True
-            registrar_log("============================== execuçao ========================")
+            registrar_log("============================== execucao ========================")
             registrar_log(f"Tarefa inicializada!\nstatusThread:{statusThread}")
             
-            #============================== execuçao ========================
+            #============================== execucao ========================
             #TODO: inserir a execucao do login do tasy em um process
             delete_all_files_in_directory()
             Geracao_Pdf_Atendimen()
