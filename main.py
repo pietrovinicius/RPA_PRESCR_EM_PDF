@@ -229,32 +229,67 @@ def Geracao_Pdf_Atendimen():
     bt_visualizar_ = driver.find_element(By.XPATH, value='//*[@id="handlebar-455491"]')
     bt_visualizar_.click()
     registrar_log("bt_visualizar_.click()")
-    driver.implicitly_wait(20)
-    time.sleep(20)
+    driver.implicitly_wait(5)
+    time.sleep(5)
     
     #click apos o download
-    pyautogui.click(1810,165)
-    registrar_log("click apos o download\npyautogui.click(1810,165)")
-    driver.implicitly_wait(10)
-    time.sleep(5)
+    #pyautogui.click(1810,165)
+    #pyautogui.click(1781,149)
+    registrar_log("8x tab - inicio")
+    pyautogui.press('tab')
+    pyautogui.press('tab')
+    pyautogui.press('tab')
+    pyautogui.press('tab')
+    pyautogui.press('tab')
+    pyautogui.press('tab')
+    pyautogui.press('tab')
+    pyautogui.press('tab')
+    registrar_log("8x tab - fim")
+    driver.implicitly_wait(1)
+    time.sleep(1)
     
     #Pressionar Item:
     pyautogui.press('enter')
     registrar_log("Pressionar Item\npyautogui.press('enter')")
-    time.sleep(2)
+    time.sleep(1)
     
-    #click no manter:
-    pyautogui.click(1751,109)
-    registrar_log("click no manter\npyautogui.click(1751,109)")
-    driver.implicitly_wait(1.5)
-    time.sleep(2)
-       
-    #print(f"pdf_para_df():\n{pdf_para_df()}")
+    #Pressionar Item:
+    pyautogui.press('enter')
+    registrar_log("Pressionar Item\npyautogui.press('enter')")
+    time.sleep(1)
     
-    #TODO: pdf_para_df()
-    #df = pdf_para_df()
+    registrar_log("8x tab - inicio")
+    pyautogui.press('tab')
+    pyautogui.press('tab')
+    pyautogui.press('tab')
+    pyautogui.press('tab')
+    pyautogui.press('tab')
+    pyautogui.press('tab')
+    pyautogui.press('tab')
+    pyautogui.press('tab')
+    registrar_log("8x tab - fim")
+    driver.implicitly_wait(1)
+    time.sleep(1)
     
-    #registrar_log(f"\nDF:\n{df}")
+    #Pressionar Item:
+    pyautogui.press('enter')
+    registrar_log("Pressionar Item\npyautogui.press('enter')")
+    time.sleep(1)
+    
+    registrar_log("5x tab - inicio")
+    pyautogui.press('tab')
+    pyautogui.press('tab')
+    pyautogui.press('tab')
+    pyautogui.press('tab')
+    pyautogui.press('tab')
+    registrar_log("5x tab - fim")
+    driver.implicitly_wait(1)
+    time.sleep(1)
+    
+    #Pressionar Item:
+    pyautogui.press('enter')
+    registrar_log("Pressionar Item\npyautogui.press('enter')")
+    time.sleep(1)
     
     # FIM:
     statusThread = False
@@ -326,17 +361,6 @@ def Geracao_Pdf_Prescricao():
                 registrar_log("for linha in df_filtrado.iloc[:, 0]")
                 registrar_log(f"Repeticao:\nNR_ATENDIMENTO: {linha}")
                 
-                ## escrever CPOE
-                #driver.implicitly_wait(1)
-                #pyautogui.write('CPOE')
-                #registrar_log('CPOE')
-                #time.sleep(1)
-
-                ##dar enter:
-                #pyautogui.press('enter')
-                #registrar_log('enter')
-                #time.sleep(1)
-                
                 #clicar no icone do CPOE:
                 bt_CPOE = driver.find_element(By.XPATH, value='//*[@id="app-view"]/tasy-corsisf1/div/w-mainlayout/div/div/w-launcher/div/div/div[1]/w-apps/div/div[1]/ul/li[2]/w-feature-app/a/img')
                 bt_CPOE.click()
@@ -355,87 +379,120 @@ def Geracao_Pdf_Prescricao():
                 pyautogui.press('enter')
                 registrar_log('1 - enter')
                 driver.implicitly_wait(1.5)
-                time.sleep(8)
+                time.sleep(2)
 
                 #enter
                 pyautogui.press('enter')
                 registrar_log('2 - enter')
-                driver.implicitly_wait(1.5)
-                time.sleep(12)
+                driver.implicitly_wait(10)
+                time.sleep(10)
 
                 #click atendimento fechado
                 pyautogui.click(1100,709)
                 registrar_log("click atendimento fechado")
-                driver.implicitly_wait(3)
-                time.sleep(5)
+                driver.implicitly_wait(2)
+                time.sleep(2)
 
                 #botao visualizar
                 bt_cpoe_relatorios = driver.find_element(By.XPATH, value='//*[@id="handlebar-40"]')
                 bt_cpoe_relatorios.click()
+                registrar_log("bt_cpoe_relatorios.click()")
                 driver.implicitly_wait(1)
                 time.sleep(1)
-
-                #TODO: ajustar por que dependendo da tela ele não irá clicar:
-
-                #click no visualizar:
-                pyautogui.click(1442,382)
-                registrar_log("click no visualizar\npyautogui.click(1442,382)")
-                driver.implicitly_wait(20)
-                #TODO: aumentar esse tempo para 20
-                time.sleep(20)
-                                
-                #click apos o download
-                pyautogui.click(1810,165)
-                registrar_log("click apos o download\npyautogui.click(1810,165)")
+                
+                #botao visualizar
+                bt_cpoe_visualizar = driver.find_element(By.XPATH, value='//*[@id="popupViewPort"]/li[5]/div[3]')
+                bt_cpoe_visualizar.click()
+                registrar_log("bt_cpoe_visualizar")
                 driver.implicitly_wait(10)
-                time.sleep(5)
+                time.sleep(10)
+                
+                #tab apos o download
+                registrar_log("8x tab - inicio")
+                pyautogui.press('tab')
+                pyautogui.press('tab')
+                pyautogui.press('tab')
+                pyautogui.press('tab')
+                pyautogui.press('tab')
+                pyautogui.press('tab')
+                pyautogui.press('tab')
+                pyautogui.press('tab')
+                registrar_log("8x tab - fim")
+                driver.implicitly_wait(1)
+                time.sleep(1)
                 
                 #Pressionar Item:
                 pyautogui.press('enter')
-                registrar_log("Pressionar Item\npyautogui.press('enter')")
-                time.sleep(2)
+                registrar_log("Pressionar Item\npyautogui.press('enter') 1")
+                time.sleep(1)
                 
-                #click no manter:
-                pyautogui.click(1751,109)
-                registrar_log("click no manter\npyautogui.click(1751,109)")
-                driver.implicitly_wait(1.5)
-                time.sleep(2)
-                        
-                #ctrl+W
-                #pyautogui.hotkey('ctrl', 'w')
-                #registrar_log("pyautogui.hotkey('ctrl', 'w')")
-                #driver.implicitly_wait(5)
-                #time.sleep(5)
-
+                #Pressionar Item:
+                pyautogui.press('enter')
+                registrar_log("Pressionar Item\npyautogui.press('enter') 2")
+                time.sleep(1)
+                
+                registrar_log("8x tab - inicio")
+                pyautogui.press('tab')
+                pyautogui.press('tab')
+                pyautogui.press('tab')
+                pyautogui.press('tab')
+                pyautogui.press('tab')
+                pyautogui.press('tab')
+                pyautogui.press('tab')
+                pyautogui.press('tab')
+                registrar_log("8x tab - fim")
+                driver.implicitly_wait(1)
+                time.sleep(1)
+                
+                #Pressionar Item:
+                pyautogui.press('enter')
+                registrar_log("Pressionar Item\npyautogui.press('enter') 1")
+                time.sleep(1)
+                
+                registrar_log("5x tab - inicio")
+                pyautogui.press('tab')
+                pyautogui.press('tab')
+                pyautogui.press('tab')
+                pyautogui.press('tab')
+                pyautogui.press('tab')
+                registrar_log("5x tab - fim")
+                driver.implicitly_wait(1)
+                time.sleep(1)
+                
+                #Pressionar Item:
+                pyautogui.press('enter')
+                registrar_log("Pressionar Item\npyautogui.press('enter') 1")
+                time.sleep(1)
+            
                 #acessando pasta download:
                 downloads_path = os.path.join(os.path.expanduser("~"), "Downloads")
                 registrar_log(f'Caminho da pasta download: {downloads_path}')
-                time.sleep(2)
+                time.sleep(1)
                 
                 #verificando arquivos da pasta download
                 files = [f for f in os.listdir(downloads_path) if f.endswith('.pdf')]
                 registrar_log(f"Arquivos:\n{files}")
-                time.sleep(2)
+                time.sleep(1)
                 #ultimo arquivo
                 ultimo_arquivo = os.path.join(downloads_path, files[0])
                 registrar_log(f"\n*****Ultimo arquivo antes de renomear: {ultimo_arquivo}")
 
-                time.sleep(2)
+                time.sleep(1)
                 
                 # Caminho da pasta Prescricoes
                 #data_hora = agora_limpo()
                 pasta_prescricoes = "Prescricoes"
                 registrar_log(f"pasta_prescricoes: {pasta_prescricoes}")
-                time.sleep(2)
+                time.sleep(1)
                 
                 pasta_data = os.path.join(pasta_prescricoes, agora_limpo())
                 registrar_log(f"pasta_data: {pasta_data}")
-                time.sleep(2)
+                time.sleep(1)
 
                 # Cria a pasta da data se não existir
                 os.makedirs(pasta_data, exist_ok=True)
                 registrar_log(f"***********os.makedirs: {pasta_data}")
-                time.sleep(2)
+                time.sleep(1)
 
                 #renomeia e move os arquivos
                 registrar_log(f"Data_hora: {agora()}")
