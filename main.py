@@ -28,6 +28,9 @@ import os
 import glob
 import shutil
 
+import schedule
+
+
 
 #inicialização de variaveis globais:
 diretorio_atual = ""
@@ -229,8 +232,8 @@ def Geracao_Pdf_Atendimen():
     bt_visualizar_ = driver.find_element(By.XPATH, value='//*[@id="handlebar-455491"]')
     bt_visualizar_.click()
     registrar_log("bt_visualizar_.click()")
-    driver.implicitly_wait(5)
-    time.sleep(5)
+    driver.implicitly_wait(20)
+    time.sleep(20)
     
     #click apos o download
     #pyautogui.click(1810,165)
@@ -246,17 +249,17 @@ def Geracao_Pdf_Atendimen():
     pyautogui.press('tab')
     registrar_log("8x tab - fim")
     driver.implicitly_wait(1)
-    time.sleep(1)
+    time.sleep(2)
     
     #Pressionar Item:
     pyautogui.press('enter')
     registrar_log("Pressionar Item\npyautogui.press('enter')")
-    time.sleep(1)
+    time.sleep(2)
     
     #Pressionar Item:
     pyautogui.press('enter')
     registrar_log("Pressionar Item\npyautogui.press('enter')")
-    time.sleep(1)
+    time.sleep(2)
     
     registrar_log("8x tab - inicio")
     pyautogui.press('tab')
@@ -269,12 +272,12 @@ def Geracao_Pdf_Atendimen():
     pyautogui.press('tab')
     registrar_log("8x tab - fim")
     driver.implicitly_wait(1)
-    time.sleep(1)
+    time.sleep(2)
     
     #Pressionar Item:
     pyautogui.press('enter')
     registrar_log("Pressionar Item\npyautogui.press('enter')")
-    time.sleep(1)
+    time.sleep(2)
     
     registrar_log("5x tab - inicio")
     pyautogui.press('tab')
@@ -284,12 +287,12 @@ def Geracao_Pdf_Atendimen():
     pyautogui.press('tab')
     registrar_log("5x tab - fim")
     driver.implicitly_wait(1)
-    time.sleep(1)
+    time.sleep(2)
     
     #Pressionar Item:
     pyautogui.press('enter')
     registrar_log("Pressionar Item\npyautogui.press('enter')")
-    time.sleep(1)
+    time.sleep(2)
     
     # FIM:
     statusThread = False
@@ -366,46 +369,46 @@ def Geracao_Pdf_Prescricao():
                 bt_CPOE.click()
                 registrar_log('clicar no icone do CPOE:')
                 driver.implicitly_wait(20)
-                time.sleep(20)
+                time.sleep(30)
                                 
                 #nr_atendimento
                 driver.implicitly_wait(1.5)
                 pyautogui.write(linha)
                 registrar_log(f'nr_atendimento: {linha}')
-                driver.implicitly_wait(1.5)
-                time.sleep(2)
+                driver.implicitly_wait(3)
+                time.sleep(5)
 
                 #enter
                 pyautogui.press('enter')
                 registrar_log('1 - enter')
-                driver.implicitly_wait(1.5)
-                time.sleep(2)
+                driver.implicitly_wait(3)
+                time.sleep(5)
 
                 #enter
                 pyautogui.press('enter')
                 registrar_log('2 - enter')
-                driver.implicitly_wait(10)
-                time.sleep(10)
+                driver.implicitly_wait(15)
+                time.sleep(15)
 
                 #click atendimento fechado
                 pyautogui.click(1100,709)
                 registrar_log("click atendimento fechado")
-                driver.implicitly_wait(2)
-                time.sleep(2)
+                driver.implicitly_wait(3)
+                time.sleep(3)
 
                 #botao visualizar
                 bt_cpoe_relatorios = driver.find_element(By.XPATH, value='//*[@id="handlebar-40"]')
                 bt_cpoe_relatorios.click()
                 registrar_log("bt_cpoe_relatorios.click()")
                 driver.implicitly_wait(1)
-                time.sleep(1)
+                time.sleep(2)
                 
                 #botao visualizar
                 bt_cpoe_visualizar = driver.find_element(By.XPATH, value='//*[@id="popupViewPort"]/li[5]/div[3]')
                 bt_cpoe_visualizar.click()
                 registrar_log("bt_cpoe_visualizar")
-                driver.implicitly_wait(10)
-                time.sleep(10)
+                driver.implicitly_wait(12)
+                time.sleep(12)
                 
                 #tab apos o download
                 registrar_log("8x tab - inicio")
@@ -419,17 +422,17 @@ def Geracao_Pdf_Prescricao():
                 pyautogui.press('tab')
                 registrar_log("8x tab - fim")
                 driver.implicitly_wait(1)
-                time.sleep(1)
+                time.sleep(2)
                 
                 #Pressionar Item:
                 pyautogui.press('enter')
                 registrar_log("Pressionar Item\npyautogui.press('enter') 1")
-                time.sleep(1)
+                time.sleep(2)
                 
                 #Pressionar Item:
                 pyautogui.press('enter')
                 registrar_log("Pressionar Item\npyautogui.press('enter') 2")
-                time.sleep(1)
+                time.sleep(2)
                 
                 registrar_log("8x tab - inicio")
                 pyautogui.press('tab')
@@ -442,12 +445,12 @@ def Geracao_Pdf_Prescricao():
                 pyautogui.press('tab')
                 registrar_log("8x tab - fim")
                 driver.implicitly_wait(1)
-                time.sleep(1)
+                time.sleep(2)
                 
                 #Pressionar Item:
                 pyautogui.press('enter')
                 registrar_log("Pressionar Item\npyautogui.press('enter') 1")
-                time.sleep(1)
+                time.sleep(2)
                 
                 registrar_log("5x tab - inicio")
                 pyautogui.press('tab')
@@ -457,42 +460,42 @@ def Geracao_Pdf_Prescricao():
                 pyautogui.press('tab')
                 registrar_log("5x tab - fim")
                 driver.implicitly_wait(1)
-                time.sleep(1)
+                time.sleep(2)
                 
                 #Pressionar Item:
                 pyautogui.press('enter')
                 registrar_log("Pressionar Item\npyautogui.press('enter') 1")
-                time.sleep(1)
+                time.sleep(2)
             
                 #acessando pasta download:
                 downloads_path = os.path.join(os.path.expanduser("~"), "Downloads")
                 registrar_log(f'Caminho da pasta download: {downloads_path}')
-                time.sleep(1)
+                time.sleep(2)
                 
                 #verificando arquivos da pasta download
                 files = [f for f in os.listdir(downloads_path) if f.endswith('.pdf')]
                 registrar_log(f"Arquivos:\n{files}")
-                time.sleep(1)
+                time.sleep(2)
                 #ultimo arquivo
                 ultimo_arquivo = os.path.join(downloads_path, files[0])
                 registrar_log(f"\n*****Ultimo arquivo antes de renomear: {ultimo_arquivo}")
 
-                time.sleep(1)
+                time.sleep(2)
                 
                 # Caminho da pasta Prescricoes
                 #data_hora = agora_limpo()
                 pasta_prescricoes = "Prescricoes"
                 registrar_log(f"pasta_prescricoes: {pasta_prescricoes}")
-                time.sleep(1)
+                time.sleep(2)
                 
                 pasta_data = os.path.join(pasta_prescricoes, agora_limpo())
                 registrar_log(f"pasta_data: {pasta_data}")
-                time.sleep(1)
+                time.sleep(2)
 
                 # Cria a pasta da data se não existir
                 os.makedirs(pasta_data, exist_ok=True)
                 registrar_log(f"***********os.makedirs: {pasta_data}")
-                time.sleep(1)
+                time.sleep(2)
 
                 #renomeia e move os arquivos
                 registrar_log(f"Data_hora: {agora()}")
@@ -533,7 +536,17 @@ def Geracao_Pdf_Prescricao():
     # FIM:
     statusThread = False
     registrar_log(f"============================== Geracao_Pdf_Prescricao FIM!\nglobal statusThread: {statusThread}")
+
+def execucao():
+    registrar_log("============================== execucao ========================")
+    registrar_log(f"Tarefa inicializada!\nstatusThread:{statusThread}")
     
+    #============================== execucao ========================
+    #TODO: inserir a execucao do login do tasy em um process
+    delete_all_files_in_directory()
+    Geracao_Pdf_Atendimen()
+    print(pdf_para_df())
+    Geracao_Pdf_Prescricao()    
     
 def interface_grafica():
     registrar_log("interface_grafica()")
@@ -561,16 +574,18 @@ def interface_grafica():
             messagebox.showinfo("Tarefa já incializada!")
 
         else:
-            statusThread = True
-            registrar_log("============================== execucao ========================")
-            registrar_log(f"Tarefa inicializada!\nstatusThread:{statusThread}")
+            statusThread = True                       
+            #execucao()
+            registrar_log('==================================== execucao() ====================================')
+            registrar_log('\n******schedule.every().day.at("00:05").do(tarefa_agendada)\n')
+            registrar_log('\n******schedule.every().day.at("14:00:00").do(tarefa_tarde)\n')
+        
             
-            #============================== execucao ========================
-            #TODO: inserir a execucao do login do tasy em um process
-            delete_all_files_in_directory()
-            Geracao_Pdf_Atendimen()
-            print(pdf_para_df())
-            Geracao_Pdf_Prescricao()
+            #inserindo o schedule
+            while True:
+                schedule.run_pending()
+                time.sleep(1)
+                registrar_log(f'\nschedule.run_pending()\n{agora()}\n\n')
     
     def fechar():
         registrar_log(f"\n\n{agora()}def fechar()- janela.destroy()")
@@ -599,18 +614,36 @@ def interface_grafica():
 
     bt_fechar = tk.Button(janela, width=18, text="Fechar", command=lambda: [fechar()])
     bt_fechar.place(x=350 , y=215)
-
+    
     janela.mainloop()
 
 if __name__ == "__main__":
     try:
         registrar_log(f"\n\n\n\n{agora()}\n============================== INICIO ========================\n")
-        
-        #deletando todos os arquivos da pasta download
-        pasta_downloads = os.path.join(os.path.expanduser("~"), "Downloads")
                 
+        #deletando todos os arquivos da pasta download
+        pasta_downloads = os.path.join(os.path.expanduser("~"), "Downloads")        
+        
+        #agendamentos:
+        schedule.every().day.at("00:05:00").do(execucao)
+        schedule.every().day.at("14:00:00").do(execucao)
+        schedule.every().day.at("22:56:00").do(execucao)
+        
+        registrar_log('==================================== execucao() ====================================')
+        registrar_log('\n******schedule.every().day.at("00:05:00").do(execucao)\n')
+        registrar_log('\n******schedule.every().day.at("14:00:00").do(execucao)\n')
+        
+        
         #iniciando interface grafica
-        interface_grafica()
+        interface_grafica() 
+        
+         #inserindo o schedule
+        while True:
+            schedule.run_pending()
+            time.sleep(1)
+            registrar_log(f'relogio do agendamento pendente')                   
+        
+        
 
     except Exception as erro:
         registrar_log(f'================================ if __name__ == "__main__"\nException Error: \n{erro}')
