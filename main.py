@@ -8,7 +8,6 @@ Automação PDID - Extrai em pdf todas as prescrições dos pacientes Internados
 import tkinter as tk
 import os
 import datetime
-import threading
 from tkinter import messagebox
 
 from selenium import webdriver
@@ -29,12 +28,14 @@ import glob
 import shutil
 
 import schedule
+import multiprocessing
+import sys
 
 
 
 #inicialização de variaveis globais:
 diretorio_atual = ""
-statusThread = False
+statusMultiprocessing = False
 df = ""
 
 df_filtrado = ""
@@ -55,6 +56,7 @@ def agora():
 
 def registrar_log(texto):
     global diretorio_atual
+    global statusMultiprocessing
     #Função para registrar um texto em um arquivo de log.
     diretorio_atual = os.getcwd()
     caminho_arquivo = os.path.join(diretorio_atual, 'log.txt')
@@ -112,7 +114,7 @@ def mover_ultimo_pdf_para_raiz(caminho_downloads, pasta_raiz):
 def pdf_para_df():
     global df_filtrado
     global df
-    global statusThread
+    global statusMultiprocessing
     texto_completo = ""
     
     registrar_log("******def pdf_para_df():")
@@ -162,7 +164,7 @@ def pdf_para_df():
     return df
         
 def Geracao_Pdf_Atendimen():
-    global statusThread
+    global statusMultiprocessing
     global df
     # ============================== Geracao_Pdf_Atendimen ==============================
     registrar_log('============================== Geracao_Pdf_Atendimen ==============================')
@@ -199,34 +201,34 @@ def Geracao_Pdf_Atendimen():
     
     #1107,702    
     pyautogui.click(1107,702  )
-    registrar_log("click objeto inválido\npyautogui.click(1107,702)")
-    time.sleep(2)
+    registrar_log("click objeto invalido\npyautogui.click(1107,702)")
+    time.sleep(4)
 
     # click no atalho de utilitários:
     bt_utilitarios = driver.find_element(By.XPATH, value='//*[@id="app-view"]/tasy-corsisf1/div/w-mainlayout/div/div/w-launcher/div/ul/li[2]')
     bt_utilitarios.click()
     registrar_log('bt_utilitarios.click()')
-    time.sleep(2)
+    time.sleep(3)
 
     # click no atalho de bt_impressao_relatorios:
     bt_impressao_relatorios = driver.find_element(By.XPATH, value='//*[@id="app-view"]/tasy-corsisf1/div/w-mainlayout/div/div/w-launcher/div/div/div[2]/w-apps/div/div[1]/ul/li[3]/w-feature-app/a/img')
     bt_impressao_relatorios.click()
     registrar_log('bt_impressao_relatorios.click()')
-    driver.implicitly_wait(1.5)
-    time.sleep(2)
+    driver.implicitly_wait(2)
+    time.sleep(3)
 
     # click no campo para procurar o relatório 1790:
     box_codigo_rel = driver.find_element(By.XPATH, value='//*[@id="detail_1_container"]/div[1]/div/div[2]/tasy-wtextbox/div/div/input')
     box_codigo_rel.send_keys('1790')
     registrar_log("box_codigo_rel.send_keys('1790')")
     driver.implicitly_wait(1.5)
-    time.sleep(2)
+    time.sleep(3)
 
     #Pressionar Item:
     pyautogui.press('enter')
     registrar_log("pyautogui.press('enter')")
     driver.implicitly_wait(1.5)
-    time.sleep(2)
+    time.sleep(3)
     
     # Click no botao visualizar:
     bt_visualizar_ = driver.find_element(By.XPATH, value='//*[@id="handlebar-455491"]')
@@ -249,17 +251,17 @@ def Geracao_Pdf_Atendimen():
     pyautogui.press('tab')
     registrar_log("8x tab - fim")
     driver.implicitly_wait(1)
-    time.sleep(2)
+    time.sleep(3)
     
     #Pressionar Item:
     pyautogui.press('enter')
     registrar_log("Pressionar Item\npyautogui.press('enter')")
-    time.sleep(2)
+    time.sleep(3)
     
     #Pressionar Item:
     pyautogui.press('enter')
     registrar_log("Pressionar Item\npyautogui.press('enter')")
-    time.sleep(2)
+    time.sleep(3)
     
     registrar_log("8x tab - inicio")
     pyautogui.press('tab')
@@ -272,12 +274,12 @@ def Geracao_Pdf_Atendimen():
     pyautogui.press('tab')
     registrar_log("8x tab - fim")
     driver.implicitly_wait(1)
-    time.sleep(2)
+    time.sleep(3)
     
     #Pressionar Item:
     pyautogui.press('enter')
     registrar_log("Pressionar Item\npyautogui.press('enter')")
-    time.sleep(2)
+    time.sleep(3)
     
     registrar_log("5x tab - inicio")
     pyautogui.press('tab')
@@ -287,7 +289,7 @@ def Geracao_Pdf_Atendimen():
     pyautogui.press('tab')
     registrar_log("5x tab - fim")
     driver.implicitly_wait(1)
-    time.sleep(2)
+    time.sleep(3)
     
     #Pressionar Item:
     pyautogui.press('enter')
@@ -295,8 +297,8 @@ def Geracao_Pdf_Atendimen():
     time.sleep(2)
     
     # FIM:
-    statusThread = False
-    registrar_log(f"global statusThread: {statusThread}")
+    statusMultiprocessing = False
+    registrar_log(f"global statusMultiprocessing: {statusMultiprocessing}")
     
     # pausa dramática:
     driver.implicitly_wait(2)
@@ -306,7 +308,7 @@ def Geracao_Pdf_Atendimen():
     registrar_log("=========== Geracao_Pdf_Atendimen fim ========")
 
 def Geracao_Pdf_Prescricao():
-    global statusThread
+    global statusMultiprocessing
     global df
     global df_filtrado
     global diretorio_atual_prescricoes
@@ -357,7 +359,7 @@ def Geracao_Pdf_Prescricao():
                 
                 #1107,702    
                 pyautogui.click(1107,702  )
-                registrar_log("click objeto inválido\npyautogui.click(1107,702)")
+                registrar_log("click objeto invalido\npyautogui.click(1107,702)")
                 time.sleep(2)
                 
                 #TODO: aqui vai ser feita a sequencia de repetições para emitir os pdfs
@@ -509,7 +511,7 @@ def Geracao_Pdf_Prescricao():
                 try:
                     time.sleep(2)
                     shutil.move(caminho_antigo, caminho_novo)
-                    registrar_log(f"Arquivo {ultimo_arquivo} renomeado e movido com sucesso.")
+                    registrar_log(f"Arquivo {caminho_novo} renomeado e movido com sucesso.")
                 except shutil.Error as e:
                     registrar_log(f"Erro ao mover o arquivo: {e}")
                     
@@ -534,12 +536,22 @@ def Geracao_Pdf_Prescricao():
     #driver.implicitly_wait(10)
 
     # FIM:
-    statusThread = False
-    registrar_log(f"============================== Geracao_Pdf_Prescricao FIM!\nglobal statusThread: {statusThread}")
+    statusMultiprocessing = False
+    registrar_log(f"============================== Geracao_Pdf_Prescricao FIM!\nglobal statusMultiprocessing: {statusMultiprocessing}")
+
+def cronometro_tarefa_agendada():
+    registrar_log(f'"============================== cronometro_tarefa_agendada() "==============================')
+    #inserindo o schedule
+    while True:
+        schedule.run_pending()
+        time.sleep(1)
+        print(f'\nschedule.run_pending()\n{agora()}\n\n')
+
 
 def execucao():
-    registrar_log("============================== execucao ========================")
-    registrar_log(f"Tarefa inicializada!\nstatusThread:{statusThread}")
+    global statusMultiprocessing
+    registrar_log("============================== execucao() ========================")
+    registrar_log(f"Tarefa inicializada!\nstatusMultiprocessing:{statusMultiprocessing}")
     
     #============================== execucao ========================
     #TODO: inserir a execucao do login do tasy em um process
@@ -560,32 +572,31 @@ def interface_grafica():
         registrar_log("O aplicativo foi fechado no botão X\n")
         
     def iniciar():
-        global statusThread
+        global statusMultiprocessing
         global df_filtrado
         global df
         registrar_log("def iniciar()")
         registrar_log("Botao Iniciar clicado!")
 
         #validacao da variavel global:
-        registrar_log(f"global statusThread: {statusThread}")
+        registrar_log(f"global statusMultiprocessing: {statusMultiprocessing}")
 
-        if statusThread:
-            registrar_log(f"Thread já foi iniciada, statusThread: \n{statusThread}")
+        if statusMultiprocessing:
+            registrar_log(f"Thread já foi iniciada, statusMultiprocessing: \n{statusMultiprocessing}")
             messagebox.showinfo("Tarefa já incializada!")
 
         else:
-            statusThread = True                       
+            statusMultiprocessing = True                       
             #execucao()
             registrar_log('==================================== execucao() ====================================')
             registrar_log('\n******schedule.every().day.at("00:05").do(tarefa_agendada)\n')
             registrar_log('\n******schedule.every().day.at("14:00:00").do(tarefa_tarde)\n')
-        
+            registrar_log(f"Thread já foi iniciada, statusMultiprocessing: \n{statusMultiprocessing}")
+            #TODO: colocar dentro da execucao que usa o multiprocessing
+            processo = multiprocessing.Process(target=cronometro_tarefa_agendada)
+            processo.start()
+            label_status['text'] = "Tarefa iniciada!"            
             
-            #inserindo o schedule
-            while True:
-                schedule.run_pending()
-                time.sleep(1)
-                registrar_log(f'\nschedule.run_pending()\n{agora()}\n\n')
     
     def fechar():
         registrar_log(f"\n\n{agora()}def fechar()- janela.destroy()")
@@ -596,6 +607,7 @@ def interface_grafica():
         #    registrar_log("janela.destroy()")
         #    janela.destroy()
         janela.destroy()
+        sys.exit()
 
     #INTERFACE GRAFICA:
     janela = tk.Tk()
@@ -605,6 +617,10 @@ def interface_grafica():
     
     # Associa a função ao_fechar ao evento de fechamento da janela
     janela.protocol("WM_DELETE_WINDOW", ao_fechar)
+    
+    # Rótulo para mostrar o status
+    label_status = tk.Label(janela, text="Tarefa não iniciada!")
+    label_status.place(x=220 , y=105)
 
     bt_Iniciar = tk.Button(janela, width=18, text="Iniciar",command=lambda: [
         #TODO: TESTAR ETAPAS DO SISTEMA ABAIXO
@@ -627,7 +643,7 @@ if __name__ == "__main__":
         #agendamentos:
         schedule.every().day.at("00:05:00").do(execucao)
         schedule.every().day.at("14:00:00").do(execucao)
-        schedule.every().day.at("22:56:00").do(execucao)
+        #schedule.every().day.at("22:56:00").do(execucao)
         
         registrar_log('==================================== execucao() ====================================')
         registrar_log('\n******schedule.every().day.at("00:05:00").do(execucao)\n')
@@ -635,13 +651,15 @@ if __name__ == "__main__":
         
         
         #iniciando interface grafica
+        
         interface_grafica() 
         
-         #inserindo o schedule
-        while True:
-            schedule.run_pending()
-            time.sleep(1)
-            registrar_log(f'relogio do agendamento pendente')                   
+        
+        #inserindo o schedule
+        #while True:
+        #    schedule.run_pending()
+        #    time.sleep(1)
+        #    print(f'relogio do agendamento pendente\n{agora()}\n\n')                 
         
         
 
