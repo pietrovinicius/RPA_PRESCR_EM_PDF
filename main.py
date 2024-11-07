@@ -67,11 +67,10 @@ def registrar_log(texto):
         arquivo.write(f"{agora()} - {texto}\n")
     
 def delete_all_files_in_directory():
+    registrar_log(f'============================== delete_all_files_in_directory() ==============================')
     #acessando pasta download:
     downloads_path = os.path.join(os.path.expanduser("~"), "Downloads")
-    registrar_log(f'Caminho da pasta download: {downloads_path}')
-    
-    registrar_log(f"delete_all_files_in_directory({downloads_path})")
+    registrar_log(f'Caminho da pasta downloads_path: {downloads_path}')    
     files = glob.glob(os.path.join(downloads_path, '*'))
     for f in files:
         try:
@@ -81,35 +80,30 @@ def delete_all_files_in_directory():
             print(f"Não foi possível remover o arquivo {f}. Erro: {e}")
 
 def mover_ultimo_pdf_para_raiz(caminho_downloads, pasta_raiz):
-  """
-  Move o último arquivo PDF encontrado na pasta de downloads para a pasta raiz da aplicação.
-
-  Args:
-    caminho_downloads: Caminho absoluto para a pasta de downloads.
-    pasta_raiz: Caminho absoluto para a pasta raiz da aplicação.
-  """
-
-  # Lista todos os arquivos na pasta de downloads
-  arquivos = os.listdir(caminho_downloads)
-
-  # Filtra apenas os arquivos PDF e ordena por data de modificação (mais recente primeiro)
-  pdfs = [f for f in arquivos if f.endswith('.pdf')]
-  pdfs.sort(key=lambda x: os.path.getmtime(os.path.join(caminho_downloads, x)), reverse=True)
-
-  if pdfs:
-    # Obtém o caminho completo do último PDF
-    ultimo_pdf = os.path.join(caminho_downloads, pdfs[0])
-
-    # Renomeia o arquivo para "arquivo.pdf"
-    novo_nome = os.path.join(caminho_downloads, "Atendimentos.pdf")
-    os.rename(ultimo_pdf, novo_nome)
-
-    # Move o arquivo para a pasta raiz
-    destino = os.path.join(pasta_raiz, "Atendimentos.pdf")
-    shutil.move(novo_nome, destino)
-    print(f"Arquivo movido para: {destino}")
-  else:
-    print("Nenhum arquivo PDF encontrado na pasta de downloads.")
+    registrar_log(f'============================== mover_ultimo_pdf_para_raiz({caminho_downloads}, {pasta_raiz}) ==============================')
+    """
+    Move o último arquivo PDF encontrado na pasta de downloads para a pasta raiz da aplicação.  
+    Args:
+      caminho_downloads: Caminho absoluto para a pasta de downloads.
+      pasta_raiz: Caminho absoluto para a pasta raiz da aplicação.
+    """ 
+    # Lista todos os arquivos na pasta de downloads
+    arquivos = os.listdir(caminho_downloads)    
+    # Filtra apenas os arquivos PDF e ordena por data de modificação (mais recente primeiro)
+    pdfs = [f for f in arquivos if f.endswith('.pdf')]
+    pdfs.sort(key=lambda x: os.path.getmtime(os.path.join(caminho_downloads, x)), reverse=True) 
+    if pdfs:
+      # Obtém o caminho completo do último PDF
+      ultimo_pdf = os.path.join(caminho_downloads, pdfs[0]) 
+      # Renomeia o arquivo para "arquivo.pdf"
+      novo_nome = os.path.join(caminho_downloads, "Atendimentos.pdf")
+      os.rename(ultimo_pdf, novo_nome)  
+      # Move o arquivo para a pasta raiz
+      destino = os.path.join(pasta_raiz, "Atendimentos.pdf")
+      shutil.move(novo_nome, destino)
+      print(f"Arquivo movido para: {destino}")
+    else:
+      print("Nenhum arquivo PDF encontrado na pasta de downloads.")
     
 def pdf_para_df():
     global df_filtrado
@@ -541,12 +535,15 @@ def Geracao_Pdf_Prescricao():
 
 def cronometro_tarefa_agendada():
     registrar_log(f'"============================== cronometro_tarefa_agendada() "==============================')
+    #agendamentos:
+    schedule.every().day.at("00:05:00").do(execucao)
+    schedule.every().day.at("14:00:00").do(execucao)
+    #schedule.every().day.at("09:22:00").do(execucao)
     #inserindo o schedule
     while True:
         schedule.run_pending()
         time.sleep(1)
         print(f'\nschedule.run_pending()\n{agora()}\n\n')
-
 
 def execucao():
     global statusMultiprocessing
@@ -561,7 +558,8 @@ def execucao():
     Geracao_Pdf_Prescricao()    
     
 def interface_grafica():
-    registrar_log("interface_grafica()")
+    registrar_log("============================== interface_grafica()")
+    
     
     def ao_fechar():
         resultado = messagebox.askyesno("Confirmação", "Tem certeza de que deseja fechar o aplicativo?")
@@ -575,23 +573,16 @@ def interface_grafica():
         global statusMultiprocessing
         global df_filtrado
         global df
-        registrar_log("def iniciar()")
-        registrar_log("Botao Iniciar clicado!")
-
-        #validacao da variavel global:
-        registrar_log(f"global statusMultiprocessing: {statusMultiprocessing}")
+        registrar_log("============================== def iniciar()")
+        registrar_log("Botao Iniciar clicado! \nglobal statusMultiprocessing: {statusMultiprocessing}")
 
         if statusMultiprocessing:
-            registrar_log(f"Thread já foi iniciada, statusMultiprocessing: \n{statusMultiprocessing}")
+            registrar_log(f"Thread já foi iniciada!")
             messagebox.showinfo("Tarefa já incializada!")
 
         else:
             statusMultiprocessing = True                       
-            #execucao()
-            registrar_log('==================================== execucao() ====================================')
-            registrar_log('\n******schedule.every().day.at("00:05").do(tarefa_agendada)\n')
-            registrar_log('\n******schedule.every().day.at("14:00:00").do(tarefa_tarde)\n')
-            registrar_log(f"Thread já foi iniciada, statusMultiprocessing: \n{statusMultiprocessing}")
+            registrar_log('==================================== def iniciar() ====================================')            
             #TODO: colocar dentro da execucao que usa o multiprocessing
             processo = multiprocessing.Process(target=cronometro_tarefa_agendada)
             processo.start()
@@ -599,7 +590,7 @@ def interface_grafica():
             
     
     def fechar():
-        registrar_log(f"\n\n{agora()}def fechar()- janela.destroy()")
+        registrar_log(f"\n\n{agora()}def fechar() - \njanela.destroy()\nsys.exit()")
         # Exiba uma caixa de diálogo de confirmação
         #resultado = messagebox.askyesno("Confirmação", "Tem certeza de que deseja fechar o aplicativo?")
         #if resultado:
@@ -643,25 +634,13 @@ if __name__ == "__main__":
         #agendamentos:
         schedule.every().day.at("00:05:00").do(execucao)
         schedule.every().day.at("14:00:00").do(execucao)
-        #schedule.every().day.at("22:56:00").do(execucao)
+        schedule.every().day.at("09:15:00").do(execucao)
         
         registrar_log('==================================== execucao() ====================================')
         registrar_log('\n******schedule.every().day.at("00:05:00").do(execucao)\n')
         registrar_log('\n******schedule.every().day.at("14:00:00").do(execucao)\n')
-        
-        
-        #iniciando interface grafica
-        
+       
         interface_grafica() 
-        
-        
-        #inserindo o schedule
-        #while True:
-        #    schedule.run_pending()
-        #    time.sleep(1)
-        #    print(f'relogio do agendamento pendente\n{agora()}\n\n')                 
-        
-        
 
     except Exception as erro:
         registrar_log(f'================================ if __name__ == "__main__"\nException Error: \n{erro}')
