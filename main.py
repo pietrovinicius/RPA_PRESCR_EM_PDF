@@ -180,12 +180,14 @@ def Geracao_Pdf_Atendimen():
     box_usuario = driver.find_element(By.XPATH, value='//*[@id="loginUsername"]')
     box_usuario.send_keys('pvplima')
     registrar_log('box_usuario')
-
+    time.sleep(2)
+    
     # box de senha:
     box_senha = driver.find_element(By.XPATH, value='//*[@id="loginPassword"]')
     box_senha.send_keys('hsf@2024')
     registrar_log('box_senha')
-
+    time.sleep(2)
+    
     # botao de login:
     bt_login = driver.find_element(By.XPATH, value='//*[@id="loginForm"]/input[3]')
     bt_login.click()
@@ -338,11 +340,13 @@ def Geracao_Pdf_Prescricao():
                 box_usuario = driver.find_element(By.XPATH, value='//*[@id="loginUsername"]')
                 box_usuario.send_keys('pvplima')
                 registrar_log('box_usuario')
-
+                time.sleep(2)
+                
                 # box de senha:
                 box_senha = driver.find_element(By.XPATH, value='//*[@id="loginPassword"]')
                 box_senha.send_keys('hsf@2024')
                 registrar_log('box_senha')
+                time.sleep(2)
 
                 # botao de login:
                 bt_login = driver.find_element(By.XPATH, value='//*[@id="loginForm"]/input[3]')
@@ -538,7 +542,7 @@ def cronometro_tarefa_agendada():
     #agendamentos:
     schedule.every().day.at("00:05:00").do(execucao)
     schedule.every().day.at("14:00:00").do(execucao)
-    #schedule.every().day.at("09:22:00").do(execucao)
+    #schedule.every().day.at("14:40:00").do(execucao)
     #inserindo o schedule
     while True:
         schedule.run_pending()
@@ -586,7 +590,26 @@ def interface_grafica():
             #TODO: colocar dentro da execucao que usa o multiprocessing
             processo = multiprocessing.Process(target=cronometro_tarefa_agendada)
             processo.start()
-            label_status['text'] = "Tarefa iniciada!"            
+            label_status['text'] = "Tarefa Agendada!"  
+            
+    def executar():
+        global statusMultiprocessing
+        global df_filtrado
+        global df
+        registrar_log("============================== def iniciar()")
+        registrar_log("Botao Iniciar clicado! \nglobal statusMultiprocessing: {statusMultiprocessing}")
+
+        if statusMultiprocessing:
+            registrar_log(f"Thread já foi iniciada!")
+            messagebox.showinfo("Tarefa já incializada!")
+
+        else:
+            statusMultiprocessing = True                       
+            registrar_log('==================================== def iniciar() ====================================')            
+            #TODO: colocar dentro da execucao que usa o multiprocessing
+            processo = multiprocessing.Process(target=execucao)
+            processo.start()
+            label_status['text'] = "Tarefa iniciada!"           
             
     
     def fechar():
@@ -613,14 +636,14 @@ def interface_grafica():
     label_status = tk.Label(janela, text="Tarefa não iniciada!")
     label_status.place(x=220 , y=105)
 
-    bt_Iniciar = tk.Button(janela, width=18, text="Iniciar",command=lambda: [
+    bt_Iniciar = tk.Button(janela, width=18, text="Tarefa Planejada",command=lambda: [
         #TODO: TESTAR ETAPAS DO SISTEMA ABAIXO
         iniciar()
     ])
     bt_Iniciar.place(x=80 , y=215)
 
-    bt_fechar = tk.Button(janela, width=18, text="Fechar", command=lambda: [fechar()])
-    bt_fechar.place(x=350 , y=215)
+    bt_executar = tk.Button(janela, width=18, text="Executar tarefa", command=lambda: [executar()])
+    bt_executar.place(x=350 , y=215)
     
     janela.mainloop()
 
@@ -632,9 +655,9 @@ if __name__ == "__main__":
         pasta_downloads = os.path.join(os.path.expanduser("~"), "Downloads")        
         
         #agendamentos:
-        schedule.every().day.at("00:05:00").do(execucao)
-        schedule.every().day.at("14:00:00").do(execucao)
-        schedule.every().day.at("09:15:00").do(execucao)
+        #schedule.every().day.at("00:05:00").do(execucao)
+        #schedule.every().day.at("14:08:00").do(execucao)
+        #schedule.every().day.at("09:15:00").do(execucao)
         
         registrar_log('==================================== execucao() ====================================')
         registrar_log('\n******schedule.every().day.at("00:05:00").do(execucao)\n')
