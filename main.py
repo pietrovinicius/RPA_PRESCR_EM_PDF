@@ -547,7 +547,7 @@ def cronometro_tarefa_agendada():
     while True:
         schedule.run_pending()
         time.sleep(1)
-        print(f'\nschedule.run_pending()\n{agora()}\n\n')
+        registrar_log(f'\nschedule.run_pending()\n{agora()}\n\n')
 
 def execucao():
     global statusMultiprocessing
@@ -560,6 +560,7 @@ def execucao():
     Geracao_Pdf_Atendimen()
     print(pdf_para_df())
     Geracao_Pdf_Prescricao()    
+    
     
 def interface_grafica():
     registrar_log("============================== interface_grafica()")
@@ -596,8 +597,8 @@ def interface_grafica():
         global statusMultiprocessing
         global df_filtrado
         global df
-        registrar_log("============================== def iniciar()")
-        registrar_log("Botao Iniciar clicado! \nglobal statusMultiprocessing: {statusMultiprocessing}")
+        registrar_log("============================== def executar()")
+        registrar_log("Botao executar clicado! \nglobal statusMultiprocessing: {statusMultiprocessing}")
 
         if statusMultiprocessing:
             registrar_log(f"Thread já foi iniciada!")
@@ -609,7 +610,7 @@ def interface_grafica():
             #TODO: colocar dentro da execucao que usa o multiprocessing
             processo = multiprocessing.Process(target=execucao)
             processo.start()
-            label_status['text'] = "Tarefa iniciada!"           
+            label_status['text'] = "Tarefa planejada inicializada!"           
             
     
     def fechar():
