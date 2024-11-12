@@ -66,6 +66,17 @@ def registrar_log(texto):
     with open(caminho_arquivo, 'a') as arquivo:
         arquivo.write(f"{agora()} - {texto}\n")
     
+def registrar_log_cronometro(texto):
+    global diretorio_atual
+    global statusMultiprocessing
+    #Função para registrar um texto em um arquivo de log.
+    diretorio_atual = os.getcwd()
+    caminho_arquivo = os.path.join(diretorio_atual, 'log_cronometro.txt')
+    # Abre o arquivo em modo de append (adiciona texto ao final)
+    with open(caminho_arquivo, 'a') as arquivo:
+        print(f"{texto}")
+        arquivo.write(f"\n{texto}")
+        
 def excluir_arquivos_past_downloads():
     registrar_log(f'============================== excluir_arquivos_past_downloads() ==============================')
     #acessando pasta download:
@@ -203,7 +214,7 @@ def Geracao_Pdf_Atendimen():
         bt_login.click()
         registrar_log('bt_login')
         driver.implicitly_wait(10)
-        time.sleep(5)
+        time.sleep(10)
         
         #1107,702    
         pyautogui.click(1107,702  )
@@ -241,23 +252,46 @@ def Geracao_Pdf_Atendimen():
         bt_visualizar_.click()
         registrar_log("bt_visualizar_.click()")
         driver.implicitly_wait(30)
-        time.sleep(30)
+        time.sleep(10)
         
         #click apos o download
         #pyautogui.click(1810,165)
         #pyautogui.click(1781,149)
-        registrar_log("8x tab - inicio")
-        pyautogui.press('tab')
-        pyautogui.press('tab')
-        pyautogui.press('tab')
-        pyautogui.press('tab')
-        pyautogui.press('tab')
-        pyautogui.press('tab')
-        pyautogui.press('tab')
-        pyautogui.press('tab')
-        registrar_log("8x tab - fim")
+        pyautogui.click(1786,211)
+        #registrar_log("14x tab - inicio")
+        #pyautogui.press('tab')
+        #time.sleep(1)
+        #pyautogui.press('tab')
+        #time.sleep(1)
+        #pyautogui.press('tab')
+        #time.sleep(1)
+        #pyautogui.press('tab')
+        #time.sleep(1)
+        #pyautogui.press('tab')
+        #time.sleep(1)
+        #pyautogui.press('tab')
+        #time.sleep(1)
+        #pyautogui.press('tab')
+        #time.sleep(1)
+        #pyautogui.press('tab')
+        #time.sleep(1)
+        #pyautogui.press('tab')
+        #time.sleep(1)
+        #pyautogui.press('tab')
+        #time.sleep(1)
+        #pyautogui.press('tab')
+        #time.sleep(1)
+        #pyautogui.press('tab')
+        #time.sleep(1)
+        #pyautogui.press('tab')
+        #time.sleep(1)
+        #pyautogui.press('tab')
+        #time.sleep(1)
+        ##pyautogui.press('tab')
+        ##time.sleep(1)
+        #registrar_log("14x tab - fim")
         driver.implicitly_wait(1)
-        time.sleep(3)
+        time.sleep(2)
         
         #Pressionar Item:
         pyautogui.press('enter')
@@ -265,11 +299,11 @@ def Geracao_Pdf_Atendimen():
         time.sleep(3)
         
         #Pressionar Item:
-        pyautogui.press('enter')
-        registrar_log("Pressionar Item\npyautogui.press('enter')")
-        time.sleep(3)
+        #pyautogui.press('enter')
+        #registrar_log("Pressionar Item\npyautogui.press('enter')")
+        #time.sleep(3)
         
-        registrar_log("8x tab - inicio")
+        registrar_log("9x tab - inicio")
         pyautogui.press('tab')
         pyautogui.press('tab')
         pyautogui.press('tab')
@@ -278,8 +312,8 @@ def Geracao_Pdf_Atendimen():
         pyautogui.press('tab')
         pyautogui.press('tab')
         pyautogui.press('tab')
-        registrar_log("8x tab - fim")
-        driver.implicitly_wait(1)
+        pyautogui.press('tab')
+        registrar_log("9x tab - fim")
         time.sleep(3)
         
         #Pressionar Item:
@@ -426,47 +460,72 @@ def Geracao_Pdf_Prescricao():
                 driver.implicitly_wait(12)
                 time.sleep(12)
                 
-                #tab apos o download
-                registrar_log("8x tab - inicio")
-                pyautogui.press('tab')
-                pyautogui.press('tab')
-                pyautogui.press('tab')
-                pyautogui.press('tab')
-                pyautogui.press('tab')
-                pyautogui.press('tab')
-                pyautogui.press('tab')
-                pyautogui.press('tab')
-                registrar_log("8x tab - fim")
+                #click apos o download
+                #pyautogui.click(1810,165)
+                #pyautogui.click(1781,149)
+                pyautogui.click(1786,211)
+                #registrar_log("14x tab - inicio")
+                #pyautogui.press('tab')
+                #time.sleep(1)
+                #pyautogui.press('tab')
+                #time.sleep(1)
+                #pyautogui.press('tab')
+                #time.sleep(1)
+                #pyautogui.press('tab')
+                #time.sleep(1)
+                #pyautogui.press('tab')
+                #time.sleep(1)
+                #pyautogui.press('tab')
+                #time.sleep(1)
+                #pyautogui.press('tab')
+                #time.sleep(1)
+                #pyautogui.press('tab')
+                #time.sleep(1)
+                #pyautogui.press('tab')
+                #time.sleep(1)
+                #pyautogui.press('tab')
+                #time.sleep(1)
+                #pyautogui.press('tab')
+                #time.sleep(1)
+                #pyautogui.press('tab')
+                #time.sleep(1)
+                #pyautogui.press('tab')
+                #time.sleep(1)
+                #pyautogui.press('tab')
+                #time.sleep(1)
+                ##pyautogui.press('tab')
+                ##time.sleep(1)
+                #registrar_log("14x tab - fim")
                 driver.implicitly_wait(1)
                 time.sleep(2)
                 
                 #Pressionar Item:
                 pyautogui.press('enter')
-                registrar_log("Pressionar Item\npyautogui.press('enter') 1")
-                time.sleep(2)
+                registrar_log("Pressionar Item\npyautogui.press('enter')")
+                time.sleep(3)
+                
+                #Pressionar Item:
+                #pyautogui.press('enter')
+                #registrar_log("Pressionar Item\npyautogui.press('enter')")
+                #time.sleep(3)
+                
+                registrar_log("9x tab - inicio")
+                pyautogui.press('tab')
+                pyautogui.press('tab')
+                pyautogui.press('tab')
+                pyautogui.press('tab')
+                pyautogui.press('tab')
+                pyautogui.press('tab')
+                pyautogui.press('tab')
+                pyautogui.press('tab')
+                pyautogui.press('tab')
+                registrar_log("9x tab - fim")
+                time.sleep(3)
                 
                 #Pressionar Item:
                 pyautogui.press('enter')
-                registrar_log("Pressionar Item\npyautogui.press('enter') 2")
-                time.sleep(2)
-                
-                registrar_log("8x tab - inicio")
-                pyautogui.press('tab')
-                pyautogui.press('tab')
-                pyautogui.press('tab')
-                pyautogui.press('tab')
-                pyautogui.press('tab')
-                pyautogui.press('tab')
-                pyautogui.press('tab')
-                pyautogui.press('tab')
-                registrar_log("8x tab - fim")
-                driver.implicitly_wait(1)
-                time.sleep(2)
-                
-                #Pressionar Item:
-                pyautogui.press('enter')
-                registrar_log("Pressionar Item\npyautogui.press('enter') 1")
-                time.sleep(2)
+                registrar_log("Pressionar Item\npyautogui.press('enter')")
+                time.sleep(3)
                 
                 registrar_log("5x tab - inicio")
                 pyautogui.press('tab')
@@ -476,13 +535,28 @@ def Geracao_Pdf_Prescricao():
                 pyautogui.press('tab')
                 registrar_log("5x tab - fim")
                 driver.implicitly_wait(1)
+                time.sleep(3)
+                
+                #Pressionar Item:
+                pyautogui.press('enter')
+                registrar_log("Pressionar Item\npyautogui.press('enter')")
+                time.sleep(3)
+                
+                # FIM:
+                statusMultiprocessing = False
+                registrar_log(f"global statusMultiprocessing: {statusMultiprocessing}")
+                
+                # pausa dramática:
+                driver.implicitly_wait(2)
                 time.sleep(2)
+                driver.quit()
                 
                 #Pressionar Item:
                 pyautogui.press('enter')
                 registrar_log("Pressionar Item\npyautogui.press('enter') 1")
                 time.sleep(2)
-            
+
+                #TODO: apos download do pdf:
                 #acessando pasta download:
                 downloads_path = os.path.join(os.path.expanduser("~"), "Downloads")
                 registrar_log(f'Caminho da pasta download: {downloads_path}')
@@ -567,7 +641,7 @@ def cronometro_tarefa_agendada():
     while True:
         schedule.run_pending()
         time.sleep(1)
-        registrar_log(f'\nschedule.run_pending()\n{agora()}\n\n')
+        registrar_log_cronometro(f'{agora()} - schedule.run_pending()')
 
 def copiar_arquivos():
     origem = "C:\\Pietro\\Projetos\\RPA_PRESCR_EM_PDF\\Prescricoes"
@@ -597,7 +671,7 @@ def execucao():
     #TODO: inserir a execucao do login do tasy em um process
     excluir_arquivos_past_downloads()
     Geracao_Pdf_Atendimen()
-    print(pdf_para_df())
+    pdf_para_df()
     Geracao_Pdf_Prescricao()    
     
     
