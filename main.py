@@ -113,26 +113,31 @@ def pdf_para_df():
     
     registrar_log("******def pdf_para_df():")
     
+    time.sleep(2)
     #acessando pasta download:
     downloads_path = os.path.join(os.path.expanduser("~"), "Downloads")
     registrar_log(f'Caminho da pasta download: {downloads_path}')
     
+    time.sleep(2)
     #verificando arquivos da pasta download
     files = [f for f in os.listdir(downloads_path) if f.endswith('.pdf')]
     registrar_log(f"Arquivos:\n{files}")
 
+    time.sleep(2)
     #ultimo arquivo
     ultimo_arquivo = os.path.join(downloads_path, files[0])
     registrar_log(f"\n*****Ultimo arquivo antes de renomear: {ultimo_arquivo}")
     
     registrar_log("mover_ultimo_pdf_para_raiz(ultimo_arquivo,diretorio_atual)")
     
+    time.sleep(2)
     mover_ultimo_pdf_para_raiz(downloads_path,diretorio_atual)
     
+    time.sleep(2)
     renomeado_arquivo = os.path.join(diretorio_atual, 'Atendimentos.pdf')
-    
     registrar_log(f"*****caminho_arquivo: {renomeado_arquivo}")
     
+    time.sleep(2)
     ultimo_arquivo = renomeado_arquivo
     registrar_log((f"ultimo_arquivo: {ultimo_arquivo}"))
     
@@ -146,9 +151,11 @@ def pdf_para_df():
             texto = pagina_atual.extract_text() 
             texto_completo += texto + "\n"
             #print(texto_completo)
-            
+        time.sleep(2)
         linhas = texto_completo.split('\n') 
+        time.sleep(2)
         dados = [linha.split() for linha in linhas if linha.strip()] 
+        time.sleep(2)
         df = pd.DataFrame(dados)
         #exibindo as 5 primeiras linhas:
         #print(df.head(5))
@@ -169,138 +176,146 @@ def Geracao_Pdf_Atendimen():
     options = Options()
     options.add_argument("--start-maximized")
     driver = webdriver.Chrome(options=options)
+    try:
+        registrar_log(f'(============================== Try:')
+        
+        driver.get("http://aplicacao.hsf.local:7070/#/login")
+        registrar_log('driver.get("http://aplicacao.hsf.local:7070/#/login")')
+        title = driver.title
 
-    driver.get("http://aplicacao.hsf.local:7070/#/login")
-    registrar_log('driver.get("http://aplicacao.hsf.local:7070/#/login")')
-    title = driver.title
+        driver.implicitly_wait(1.5)
 
-    driver.implicitly_wait(1.5)
+        # box de usuario:
+        box_usuario = driver.find_element(By.XPATH, value='//*[@id="loginUsername"]')
+        box_usuario.send_keys('pvplima')
+        registrar_log('box_usuario')
+        time.sleep(2)
+        
+        # box de senha:
+        box_senha = driver.find_element(By.XPATH, value='//*[@id="loginPassword"]')
+        box_senha.send_keys('hsf@2024')
+        registrar_log('box_senha')
+        time.sleep(2)
+        
+        # botao de login:
+        bt_login = driver.find_element(By.XPATH, value='//*[@id="loginForm"]/input[3]')
+        bt_login.click()
+        registrar_log('bt_login')
+        driver.implicitly_wait(10)
+        time.sleep(5)
+        
+        #1107,702    
+        pyautogui.click(1107,702  )
+        registrar_log("click objeto invalido\npyautogui.click(1107,702)")
+        time.sleep(4)
 
-    # box de usuario:
-    box_usuario = driver.find_element(By.XPATH, value='//*[@id="loginUsername"]')
-    box_usuario.send_keys('pvplima')
-    registrar_log('box_usuario')
-    time.sleep(2)
-    
-    # box de senha:
-    box_senha = driver.find_element(By.XPATH, value='//*[@id="loginPassword"]')
-    box_senha.send_keys('hsf@2024')
-    registrar_log('box_senha')
-    time.sleep(2)
-    
-    # botao de login:
-    bt_login = driver.find_element(By.XPATH, value='//*[@id="loginForm"]/input[3]')
-    bt_login.click()
-    registrar_log('bt_login')
-    driver.implicitly_wait(10)
-    time.sleep(5)
-    
-    #1107,702    
-    pyautogui.click(1107,702  )
-    registrar_log("click objeto invalido\npyautogui.click(1107,702)")
-    time.sleep(4)
+        # click no atalho de utilitários:
+        bt_utilitarios = driver.find_element(By.XPATH, value='//*[@id="app-view"]/tasy-corsisf1/div/w-mainlayout/div/div/w-launcher/div/ul/li[2]')
+        bt_utilitarios.click()
+        registrar_log('bt_utilitarios.click()')
+        time.sleep(3)
 
-    # click no atalho de utilitários:
-    bt_utilitarios = driver.find_element(By.XPATH, value='//*[@id="app-view"]/tasy-corsisf1/div/w-mainlayout/div/div/w-launcher/div/ul/li[2]')
-    bt_utilitarios.click()
-    registrar_log('bt_utilitarios.click()')
-    time.sleep(3)
+        # click no atalho de bt_impressao_relatorios:
+        bt_impressao_relatorios = driver.find_element(By.XPATH, value='//*[@id="app-view"]/tasy-corsisf1/div/w-mainlayout/div/div/w-launcher/div/div/div[2]/w-apps/div/div[1]/ul/li[3]/w-feature-app/a/img')
+        bt_impressao_relatorios.click()
+        registrar_log('bt_impressao_relatorios.click()')
+        driver.implicitly_wait(2)
+        time.sleep(3)
 
-    # click no atalho de bt_impressao_relatorios:
-    bt_impressao_relatorios = driver.find_element(By.XPATH, value='//*[@id="app-view"]/tasy-corsisf1/div/w-mainlayout/div/div/w-launcher/div/div/div[2]/w-apps/div/div[1]/ul/li[3]/w-feature-app/a/img')
-    bt_impressao_relatorios.click()
-    registrar_log('bt_impressao_relatorios.click()')
-    driver.implicitly_wait(2)
-    time.sleep(3)
+        # click no campo para procurar o relatório 1790:
+        box_codigo_rel = driver.find_element(By.XPATH, value='//*[@id="detail_1_container"]/div[1]/div/div[2]/tasy-wtextbox/div/div/input')
+        box_codigo_rel.send_keys('1790')
+        registrar_log("box_codigo_rel.send_keys('1790')")
+        driver.implicitly_wait(1.5)
+        time.sleep(3)
 
-    # click no campo para procurar o relatório 1790:
-    box_codigo_rel = driver.find_element(By.XPATH, value='//*[@id="detail_1_container"]/div[1]/div/div[2]/tasy-wtextbox/div/div/input')
-    box_codigo_rel.send_keys('1790')
-    registrar_log("box_codigo_rel.send_keys('1790')")
-    driver.implicitly_wait(1.5)
-    time.sleep(3)
-
-    #Pressionar Item:
-    pyautogui.press('enter')
-    registrar_log("pyautogui.press('enter')")
-    driver.implicitly_wait(1.5)
-    time.sleep(3)
-    
-    # Click no botao visualizar:
-    bt_visualizar_ = driver.find_element(By.XPATH, value='//*[@id="handlebar-455491"]')
-    bt_visualizar_.click()
-    registrar_log("bt_visualizar_.click()")
-    driver.implicitly_wait(20)
-    time.sleep(20)
-    
-    #click apos o download
-    #pyautogui.click(1810,165)
-    #pyautogui.click(1781,149)
-    registrar_log("8x tab - inicio")
-    pyautogui.press('tab')
-    pyautogui.press('tab')
-    pyautogui.press('tab')
-    pyautogui.press('tab')
-    pyautogui.press('tab')
-    pyautogui.press('tab')
-    pyautogui.press('tab')
-    pyautogui.press('tab')
-    registrar_log("8x tab - fim")
-    driver.implicitly_wait(1)
-    time.sleep(3)
-    
-    #Pressionar Item:
-    pyautogui.press('enter')
-    registrar_log("Pressionar Item\npyautogui.press('enter')")
-    time.sleep(3)
-    
-    #Pressionar Item:
-    pyautogui.press('enter')
-    registrar_log("Pressionar Item\npyautogui.press('enter')")
-    time.sleep(3)
-    
-    registrar_log("8x tab - inicio")
-    pyautogui.press('tab')
-    pyautogui.press('tab')
-    pyautogui.press('tab')
-    pyautogui.press('tab')
-    pyautogui.press('tab')
-    pyautogui.press('tab')
-    pyautogui.press('tab')
-    pyautogui.press('tab')
-    registrar_log("8x tab - fim")
-    driver.implicitly_wait(1)
-    time.sleep(3)
-    
-    #Pressionar Item:
-    pyautogui.press('enter')
-    registrar_log("Pressionar Item\npyautogui.press('enter')")
-    time.sleep(3)
-    
-    registrar_log("5x tab - inicio")
-    pyautogui.press('tab')
-    pyautogui.press('tab')
-    pyautogui.press('tab')
-    pyautogui.press('tab')
-    pyautogui.press('tab')
-    registrar_log("5x tab - fim")
-    driver.implicitly_wait(1)
-    time.sleep(3)
-    
-    #Pressionar Item:
-    pyautogui.press('enter')
-    registrar_log("Pressionar Item\npyautogui.press('enter')")
-    time.sleep(2)
-    
-    # FIM:
-    statusMultiprocessing = False
-    registrar_log(f"global statusMultiprocessing: {statusMultiprocessing}")
-    
-    # pausa dramática:
-    driver.implicitly_wait(2)
-    time.sleep(2)
-    driver.quit()
-    
+        #Pressionar Item:
+        pyautogui.press('enter')
+        registrar_log("pyautogui.press('enter')")
+        driver.implicitly_wait(1.5)
+        time.sleep(3)
+        
+        # Click no botao visualizar:
+        bt_visualizar_ = driver.find_element(By.XPATH, value='//*[@id="handlebar-455491"]')
+        bt_visualizar_.click()
+        registrar_log("bt_visualizar_.click()")
+        driver.implicitly_wait(30)
+        time.sleep(30)
+        
+        #click apos o download
+        #pyautogui.click(1810,165)
+        #pyautogui.click(1781,149)
+        registrar_log("8x tab - inicio")
+        pyautogui.press('tab')
+        pyautogui.press('tab')
+        pyautogui.press('tab')
+        pyautogui.press('tab')
+        pyautogui.press('tab')
+        pyautogui.press('tab')
+        pyautogui.press('tab')
+        pyautogui.press('tab')
+        registrar_log("8x tab - fim")
+        driver.implicitly_wait(1)
+        time.sleep(3)
+        
+        #Pressionar Item:
+        pyautogui.press('enter')
+        registrar_log("Pressionar Item\npyautogui.press('enter')")
+        time.sleep(3)
+        
+        #Pressionar Item:
+        pyautogui.press('enter')
+        registrar_log("Pressionar Item\npyautogui.press('enter')")
+        time.sleep(3)
+        
+        registrar_log("8x tab - inicio")
+        pyautogui.press('tab')
+        pyautogui.press('tab')
+        pyautogui.press('tab')
+        pyautogui.press('tab')
+        pyautogui.press('tab')
+        pyautogui.press('tab')
+        pyautogui.press('tab')
+        pyautogui.press('tab')
+        registrar_log("8x tab - fim")
+        driver.implicitly_wait(1)
+        time.sleep(3)
+        
+        #Pressionar Item:
+        pyautogui.press('enter')
+        registrar_log("Pressionar Item\npyautogui.press('enter')")
+        time.sleep(3)
+        
+        registrar_log("5x tab - inicio")
+        pyautogui.press('tab')
+        pyautogui.press('tab')
+        pyautogui.press('tab')
+        pyautogui.press('tab')
+        pyautogui.press('tab')
+        registrar_log("5x tab - fim")
+        driver.implicitly_wait(1)
+        time.sleep(3)
+        
+        #Pressionar Item:
+        pyautogui.press('enter')
+        registrar_log("Pressionar Item\npyautogui.press('enter')")
+        time.sleep(3)
+        
+        # FIM:
+        statusMultiprocessing = False
+        registrar_log(f"global statusMultiprocessing: {statusMultiprocessing}")
+        
+        # pausa dramática:
+        driver.implicitly_wait(2)
+        time.sleep(2)
+        driver.quit()
+        
+        
+    except Exception as erro:
+        registrar_log(f'================================ Geracao_Pdf_Atendimen\nException Error: \n{erro}') 
+        #caso de erro, vai executar novamente este bloco:
+        Geracao_Pdf_Atendimen()
+             
     registrar_log("=========== Geracao_Pdf_Atendimen fim ========")
 
 def Geracao_Pdf_Prescricao():
@@ -532,6 +547,10 @@ def Geracao_Pdf_Prescricao():
     #TODO: Apos o erro ele segue com a execucao e precisa agora rodar novamente na hora pre determinda
     registrar_log('\nFinal do for linha\ndriver.implicitly_wait(10)')
     #driver.implicitly_wait(10)
+    
+    # copiar_arquivos:
+    registrar_log(f'def Geracao_PDF_Prescricao() bloco com funcao copiar_arquivos()')
+    copiar_arquivos()
 
     # FIM:
     statusMultiprocessing = False
@@ -541,13 +560,32 @@ def cronometro_tarefa_agendada():
     registrar_log(f'"============================== cronometro_tarefa_agendada() "==============================')
     #agendamentos:
     schedule.every().day.at("00:05:00").do(execucao)
-    schedule.every().day.at("14:00:00").do(execucao)
+    #schedule.every().day.at("14:00:00").do(execucao)
     #schedule.every().day.at("14:40:00").do(execucao)
     #inserindo o schedule
     while True:
         schedule.run_pending()
         time.sleep(1)
         registrar_log(f'\nschedule.run_pending()\n{agora()}\n\n')
+
+def copiar_arquivos():
+    origem = "C:\\Pietro\\Projetos\\RPA_PRESCR_EM_PDF\\Prescricoes"
+    destino = "\\\\192.168.103.252\\tihsf$\\PIETRO\\Projetos\\RPA_PRESCR_EM_PDF\\Prescricoes"
+    """Copia todos os arquivos e subdiretórios de uma pasta para outra.
+
+    Args:
+      origem: Caminho completo da pasta de origem.
+      destino: Caminho completo da pasta de destino.
+    """
+
+    try:
+        registrar_log(f'"============================== copiar_arquivos() Try:\nshutil.copytree(origem, destino, dirs_exist_ok=True)')
+        shutil.copytree(origem, destino, dirs_exist_ok=True)
+        registrar_log(f"Arquivos copiados com sucesso \nde: {origem} \npara {destino}")
+    except FileExistsError:
+        registrar_log(f"A pasta de destino {destino} já existe. Verifique se deseja sobrescrever.")
+    except Exception as e:
+        registrar_log(f"Ocorreu um erro durante a cópia: {str(e)}")
 
 def execucao():
     global statusMultiprocessing
@@ -591,7 +629,7 @@ def interface_grafica():
             #TODO: colocar dentro da execucao que usa o multiprocessing
             processo = multiprocessing.Process(target=cronometro_tarefa_agendada)
             processo.start()
-            label_status['text'] = "Tarefa Agendada!"  
+            label_status['text'] = "Tarefa Agendada Inicializada!"  
             
     def executar():
         global statusMultiprocessing
