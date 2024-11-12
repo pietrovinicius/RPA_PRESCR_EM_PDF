@@ -66,8 +66,8 @@ def registrar_log(texto):
     with open(caminho_arquivo, 'a') as arquivo:
         arquivo.write(f"{agora()} - {texto}\n")
     
-def delete_all_files_in_directory():
-    registrar_log(f'============================== delete_all_files_in_directory() ==============================')
+def excluir_arquivos_past_downloads():
+    registrar_log(f'============================== excluir_arquivos_past_downloads() ==============================')
     #acessando pasta download:
     downloads_path = os.path.join(os.path.expanduser("~"), "Downloads")
     registrar_log(f'Caminho da pasta downloads_path: {downloads_path}')    
@@ -75,18 +75,19 @@ def delete_all_files_in_directory():
     for f in files:
         try:
             os.remove(f)
-            print(f"Arquivo {f} removido com sucesso.")
+            print(f"Arquivo {f} removido com sucesso.\n\n")
         except Exception as e:
-            print(f"Não foi possível remover o arquivo {f}. Erro: {e}")
+            print(f"Não foi possível remover o arquivo {f}. Erro: {e}\n")
+            
+def excluir_arquivos_pasta(pasta):
+  try:
+    shutil.rmtree(pasta)
+    print(f"A pasta {pasta} e seu conteúdo foram excluídos com sucesso.")
+  except OSError as error:
+    print(f"Erro ao excluir a pasta: {error}")
 
 def mover_ultimo_pdf_para_raiz(caminho_downloads, pasta_raiz):
-    registrar_log(f'============================== mover_ultimo_pdf_para_raiz({caminho_downloads}, {pasta_raiz}) ==============================')
-    """
-    Move o último arquivo PDF encontrado na pasta de downloads para a pasta raiz da aplicação.  
-    Args:
-      caminho_downloads: Caminho absoluto para a pasta de downloads.
-      pasta_raiz: Caminho absoluto para a pasta raiz da aplicação.
-    """ 
+    registrar_log(f'============================== mover_ultimo_pdf_para_raiz({caminho_downloads}, {pasta_raiz}) ==============================') 
     # Lista todos os arquivos na pasta de downloads
     arquivos = os.listdir(caminho_downloads)    
     # Filtra apenas os arquivos PDF e ordena por data de modificação (mais recente primeiro)
@@ -594,7 +595,7 @@ def execucao():
     
     #============================== execucao ========================
     #TODO: inserir a execucao do login do tasy em um process
-    delete_all_files_in_directory()
+    excluir_arquivos_past_downloads()
     Geracao_Pdf_Atendimen()
     print(pdf_para_df())
     Geracao_Pdf_Prescricao()    
@@ -688,21 +689,15 @@ def interface_grafica():
 
 if __name__ == "__main__":
     try:
-        registrar_log(f"\n\n\n\n{agora()}\n============================== INICIO ========================\n")
+        registrar_log(f'\n\n\n\n{agora()}\n============================== __name__ == "__main__" ========================\n')
                 
         #deletando todos os arquivos da pasta download
-        pasta_downloads = os.path.join(os.path.expanduser("~"), "Downloads")        
+        pasta_downloads = os.path.join(os.path.expanduser("~"), "Downloads")
         
-        #agendamentos:
-        #schedule.every().day.at("00:05:00").do(execucao)
-        #schedule.every().day.at("14:08:00").do(execucao)
-        #schedule.every().day.at("09:15:00").do(execucao)
-        
-        registrar_log('==================================== execucao() ====================================')
-        registrar_log('\n******schedule.every().day.at("00:05:00").do(execucao)\n')
-        registrar_log('\n******schedule.every().day.at("14:00:00").do(execucao)\n')
+        #deletando todos os arquivos da pasta Prescricoes
+        excluir_arquivos_pasta("Prescricoes")
        
         interface_grafica() 
-
+            
     except Exception as erro:
         registrar_log(f'================================ if __name__ == "__main__"\nException Error: \n{erro}')
