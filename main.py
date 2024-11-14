@@ -475,6 +475,7 @@ def Geracao_Pdf_Prescricao(df_):
                 files = [f for f in os.listdir(downloads_path) if f.endswith('.pdf')]
                 registrar_log(f"Arquivos:\n{files}")
                 time.sleep(2)
+                
                 #ultimo arquivo
                 ultimo_arquivo = os.path.join(downloads_path, files[0])
                 registrar_log(f"\n*****Ultimo arquivo antes de renomear: {ultimo_arquivo}")
@@ -489,10 +490,12 @@ def Geracao_Pdf_Prescricao(df_):
                 pasta_data = os.path.join(pasta_prescricoes, agora_limpo())
                 registrar_log(f"pasta_data: {pasta_data}")
                 time.sleep(2)
+                
                 # Cria a pasta da data se não existir
                 os.makedirs(pasta_data, exist_ok=True)
                 registrar_log(f"***********os.makedirs: {pasta_data}")
                 time.sleep(2)
+                
                 #renomeia e move os arquivos
                 registrar_log(f"Data_hora: {agora()}")
                 caminho_antigo = os.path.join(downloads_path, ultimo_arquivo)
@@ -503,8 +506,9 @@ def Geracao_Pdf_Prescricao(df_):
             
                 try:
                     time.sleep(2)
+                    registrar_log(f'try: shutil.move(\ncaminho_antigo:{caminho_antigo}, \ncaminho_novo{caminho_novo})')
                     shutil.move(caminho_antigo, caminho_novo)
-                    registrar_log(f"Arquivo {caminho_novo} renomeado e movido com sucesso.")
+                    registrar_log(f"Arquivo:{caminho_novo} \n*****Renomeado e movido com sucesso.")
                 except shutil.Error as e:
                     registrar_log(f"Erro ao mover o arquivo: {e}")
                     
@@ -562,12 +566,13 @@ def Geracao_Pdf_Prescricao(df_):
     #TODO: Apos o erro ele segue com a execucao e precisa agora rodar novamente na hora pre determinda
     registrar_log('\nFinal do for linha\ndriver.implicitly_wait(10)')
     #driver.implicitly_wait(10)
+    """
     
-    # copiar_arquivos:
+    #copiar_arquivos:
     registrar_log(f'def Geracao_PDF_Prescricao() bloco com funcao copiar_arquivos()')
     copiar_arquivos()
 
-    """     
+         
     # FIM:
     statusMultiprocessing = False
     registrar_log(f'statusMultiprocessing = {statusMultiprocessing}')
@@ -577,7 +582,7 @@ def cronometro_tarefa_agendada():
     #agendamentos:
     schedule.every().day.at("00:05:00").do(execucao)
     registrar_log(f'schedule.every().day.at("00:05:00").do(execucao)')
-    #schedule.every().day.at("14:00:00").do(execucao)
+    #schedule.every().day.at("17:55:00").do(execucao)
     #schedule.every().day.at("14:40:00").do(execucao)
     #inserindo o schedule
     while True:
@@ -595,15 +600,14 @@ def copiar_arquivos():
       destino: Caminho completo da pasta de destino.
     """
     registrar_log(f'============================== def copiar_arquivos() ==============================')
-
     try:
         registrar_log(f'"============================== copiar_arquivos() Try:\nshutil.copytree(origem, destino, dirs_exist_ok=True)')
         shutil.copytree(origem, destino, dirs_exist_ok=True)
-        registrar_log(f"\nArquivos copiados com sucesso \nde: {origem} \npara {destino}\n============================== FIM copiar_arquivos()")
+        registrar_log(f"\n*****Arquivos copiados com sucesso \nde: {origem} \npara {destino}\n============================== FIM copiar_arquivos()")
     except FileExistsError:
-        registrar_log(f"\nA pasta de destino {destino} ja existe. Verifique se deseja sobrescrever.\n============================== FileExistsError copiar_arquivos()")
+        registrar_log(f"\n*****A pasta de destino {destino} ja existe. Verifique se deseja sobrescrever.\n============================== FileExistsError copiar_arquivos()")
     except Exception as e:
-        registrar_log(f"Ocorreu um erro durante a cópia: {str(e)}\n============================== Exception copiar_arquivos()")
+        registrar_log(f"\n*****Ocorreu um erro durante a cópia: {str(e)}\n============================== Exception copiar_arquivos()")
 
 def execucao():
     global statusMultiprocessing
@@ -618,14 +622,13 @@ def execucao():
     excluir_arquivos_past_downloads()
     Geracao_Pdf_Atendimen()
     pdf_para_df()
-    registrar_log(f'\ndf:\n{df}\n')
     Geracao_Pdf_Prescricao(df)    
     
     
 def interface_grafica():
     registrar_log("============================== interface_grafica()")
     global lb_contador
-    
+    global statusMultiprocessing
     
     def ao_fechar():
         resultado = messagebox.askyesno("Confirmação", "Tem certeza de que deseja fechar o aplicativo?")
@@ -633,6 +636,7 @@ def interface_grafica():
             # Feche o aplicativo
             janela.destroy()
         """Função chamada quando o usuário clica no botao 'X' para fechar a janela."""
+        registrar_log(f'statusMultiprocessing:{statusMultiprocessing}')
         registrar_log("O aplicativo foi fechado no botao X\n")
         
     def iniciar():
@@ -698,10 +702,7 @@ def interface_grafica():
     label_status = tk.Label(janela, text="Tarefa não iniciada!")
     label_status.place(x=210 , y=105)
     
-    bt_Iniciar = tk.Button(janela, width=18, text="Tarefa Planejada",command=lambda: [
-        #TODO: TESTAR ETAPAS DO SISTEMA ABAIXO
-        iniciar()
-    ])
+    bt_Iniciar = tk.Button(janela, width=18, text="Tarefa Planejada",command=lambda: [iniciar()])
     bt_Iniciar.place(x=80 , y=215)
 
     bt_executar = tk.Button(janela, width=18, text="Executar tarefa", command=lambda: [executar()])
@@ -713,7 +714,8 @@ def interface_grafica():
     
 if __name__ == "__main__":
     try:
-        registrar_log(f'\n\n\n\n\n\n\n\n{agora()} ================================ __name__ == "__main__" ================================\n')
+        registrar_log(f'\n\n\n\n\n\n\n\n')
+        registrar_log(f'================================ __name__ == "__main__" ================================\n')
                 
         #deletando todos os arquivos da pasta download
         pasta_downloads = os.path.join(os.path.expanduser("~"), "Downloads")
@@ -721,4 +723,4 @@ if __name__ == "__main__":
         interface_grafica() 
             
     except Exception as erro:
-        registrar_log(f'================================ if __name__ == "__main__"\nException Error: \n{erro}')
+        registrar_log(f'================================ __name__ == "__main__"\nException Error: \n{erro}')
