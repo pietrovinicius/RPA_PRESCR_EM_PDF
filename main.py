@@ -696,7 +696,7 @@ def interface_grafica():
     
     # Rótulo para mostrar o status
     label_status = tk.Label(janela, text="Tarefa não iniciada!")
-    label_status.place(x=220 , y=105)
+    label_status.place(x=210 , y=105)
     
     bt_Iniciar = tk.Button(janela, width=18, text="Tarefa Planejada",command=lambda: [
         #TODO: TESTAR ETAPAS DO SISTEMA ABAIXO
@@ -713,7 +713,7 @@ def interface_grafica():
     
 if __name__ == "__main__":
     try:
-        registrar_log(f'\n\n\n\n{agora()}\n============================== __name__ == "__main__" ========================\n')
+        registrar_log(f'\n\n\n\n\n\n\n\n{agora()} ================================ __name__ == "__main__" ================================\n')
                 
         #deletando todos os arquivos da pasta download
         pasta_downloads = os.path.join(os.path.expanduser("~"), "Downloads")
