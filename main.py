@@ -542,6 +542,8 @@ def Geracao_Pdf_Prescricao(df_):
     registrar_log(f'Lista com nr_atendimentos com erro\nlista_nr_atendimento: {lista_nr_atendimento}')
     #montar data frame com lista de itens que tiveram erro e não foram deletados:
     df_lista_nr_atendimento = pd.DataFrame(lista_nr_atendimento)
+    lista_nr_atendimento = []
+    registrar_log(f'Lista com nr_atendimentos com erro APAGADA!\nlista_nr_atendimento: {lista_nr_atendimento}')
     registrar_log(f'df_lista_nr_atendimento: \n{df_lista_nr_atendimento}')
     
     #ação para o caso do df_lista_nr_atendimento for vazio ou não:
