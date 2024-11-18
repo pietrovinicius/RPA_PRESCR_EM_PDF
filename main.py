@@ -77,7 +77,7 @@ def registrar_log_cronometro(texto):
     caminho_arquivo = os.path.join(diretorio_atual, 'log_cronometro.txt')
     # Abre o arquivo em modo de append (adiciona texto ao final)
     with open(caminho_arquivo, 'a') as arquivo:
-        print(f"{texto}")
+        print(f"{agora()} - {texto}\n")
         arquivo.write(f"{agora()} - {texto}\n")
 
 def registrar_log_atend_erros(texto):
@@ -590,7 +590,7 @@ def cronometro_tarefa_agendada():
     while True:
         schedule.run_pending()
         time.sleep(1)
-        registrar_log_cronometro(f'{agora()} - schedule.run_pending()')
+        registrar_log_cronometro(f'schedule.every().day.at("00:05:00").do(execucao)')
 
 def copiar_arquivos():
     origem = "C:\\Pietro\\Projetos\\RPA_PRESCR_EM_PDF\\Prescricoes"
