@@ -552,7 +552,7 @@ def Geracao_Pdf_Prescricao(df_):
         registrar_log(f'\n=========== FIM Geracao_Pdf_Prescricao()\n\n\n\n\n')
         df_lista_nr_atendimento = None
         df = df_lista_nr_atendimento
-        registrar_log(f'if df_lista_nr_atendimento.empty:\ndf_lista_nr_atendimento:{df_lista_nr_atendimento}\df:{df}')
+        registrar_log(f'if df_lista_nr_atendimento.empty:\ndf_lista_nr_atendimento:{df_lista_nr_atendimento}\ndf:{df}')
     else:
         registrar_log(f'df_lista_nr_atendimento nao esta em branco\nglobal df recebera df_lista_nr_atendimento!!!!')
         registrar_log(f'\ndf = df_lista_nr_atendimento: \n{df_lista_nr_atendimento}')
@@ -582,8 +582,8 @@ def Geracao_Pdf_Prescricao(df_):
 def cronometro_tarefa_agendada():
     registrar_log(f'"============================== cronometro_tarefa_agendada() "==============================')
     #agendamentos:
-    schedule.every().day.at("00:05:00").do(execucao)
-    registrar_log(f'schedule.every().day.at("00:05:00").do(execucao)')
+    schedule.every().day.at("00:00:01").do(execucao)
+    registrar_log(f'schedule.every().day.at("00:00:01").do(execucao)')
     #schedule.every().day.at("17:55:00").do(execucao)
     #schedule.every().day.at("14:40:00").do(execucao)
     #inserindo o schedule
@@ -594,9 +594,9 @@ def cronometro_tarefa_agendada():
 
 def copiar_arquivos():
     origem = "C:\\Pietro\\Projetos\\RPA_PRESCR_EM_PDF\\Prescricoes"
-    destino = "\\\\192.168.103.252\\tihsf$\\PIETRO\\Projetos\\RPA_PRESCR_EM_PDF\\Prescricoes"
+    #destino = "\\\\192.168.103.252\\tihsf$\\PIETRO\\Projetos\\RPA_PRESCR_EM_PDF\\Prescricoes"
+    destino = "\\\\192.168.103.252\\contingencia_hsf$\\Impressos\\Prescricoes"
     """Copia todos os arquivos e subdiretórios de uma pasta para outra.
-
     Args:
       origem: Caminho completo da pasta de origem.
       destino: Caminho completo da pasta de destino.
