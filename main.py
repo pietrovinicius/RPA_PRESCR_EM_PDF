@@ -316,7 +316,7 @@ def Geracao_Pdf_Prescricao(df_):
     global lista_nr_atendimento
     global lb_contador
     # ============================== Geracao_Pdf_Prescricao ==============================
-    registrar_log('============================== Geracao_Pdf_Prescricao ==============================')
+    registrar_log('\n\n============================== Geracao_Pdf_Prescricao ==============================')
     registrar_log(f'df_filtrado = df_\nentao df_:\n{df_}')
     df_filtrado = df_
     registrar_log(f'\ndf_filtrado:\n{df_filtrado}')
@@ -529,14 +529,18 @@ def Geracao_Pdf_Prescricao(df_):
                 
             except Exception as erro:
                     registrar_log(f'=========== \nERROR:\nexcept do try de dento do for linha in df_filtrado')
-                    registrar_log('\nlista_nr_atendimento:{lista_nr_atendimento}\ncontador: {contador} \n{erro}')
-                    copiar_arquivos()
+                    registrar_log(f'\nlista_nr_atendimento:{lista_nr_atendimento}\ncontador: {contador} \n{erro}')
+                    #TODO: confirmar se com a retirada, ao finalizar os pdfs foram copiados:
+                    #copiar_arquivos()
     
     except Exception as erro:
         #ao terminar extoura um exception e cai nesse bloco
         registrar_log(f"=========== \nERROR:\n except: for linha in df_filtrado:\nlista_nr_atendimento:{lista_nr_atendimento}\ncontador: {contador} \n{erro}")
+        
         #tenho que apagar todos os atendimentos até o que deu erro, que é o linha
-        copiar_arquivos()        
+        
+        #TODO: confirmar se com a retirada, ao finalizar os pdfs foram copiados:
+        #copiar_arquivos()        
             
              
     registrar_log(f'Lista com nr_atendimentos com erro\nlista_nr_atendimento: {lista_nr_atendimento}')
@@ -575,9 +579,10 @@ def Geracao_Pdf_Prescricao(df_):
     copiar_arquivos()
 
          
-    # FIM:
+    #FIM:
     statusMultiprocessing = False
-    registrar_log(f'statusMultiprocessing = {statusMultiprocessing}')
+    registrar_log(f'\n============================== #FIM Geracao_Pdf_Prescricao(df_)\nstatusMultiprocessing = {statusMultiprocessing}')
+    registrar_log(f'\n\n\n')
 
 def cronometro_tarefa_agendada():
     registrar_log(f'"============================== cronometro_tarefa_agendada() "==============================')
@@ -590,7 +595,7 @@ def cronometro_tarefa_agendada():
     while True:
         schedule.run_pending()
         time.sleep(1)
-        registrar_log_cronometro(f'schedule.every().day.at("00:05:00").do(execucao)')
+        registrar_log_cronometro(f'schedule.every().day.at("00:00:01").do(execucao)')
 
 def copiar_arquivos():
     origem = "C:\\Pietro\\Projetos\\RPA_PRESCR_EM_PDF\\Prescricoes"
@@ -657,7 +662,7 @@ def interface_grafica():
             registrar_log('==================================== def iniciar() ====================================')            
             #TODO: colocar dentro da execucao que usa o multiprocessing
             processo = multiprocessing.Process(target=cronometro_tarefa_agendada)
-            processo.start()
+            #processo.start()
             label_status['text'] = "Tarefa Agendada Inicializada!"  
             
     def executar():
@@ -678,7 +683,6 @@ def interface_grafica():
             #TODO: colocar dentro da execucao que usa o multiprocessing
             processo = multiprocessing.Process(target=execucao)
             processo.start()
-            label_status['text'] = "Tarefa planejada inicializada!"
     
     def fechar():
         registrar_log(f"\n\n{agora()}def fechar() - \njanela.destroy()\nsys.exit()")
@@ -704,10 +708,18 @@ def interface_grafica():
     label_status = tk.Label(janela, text="Tarefa não iniciada!")
     label_status.place(x=210 , y=105)
     
-    bt_Iniciar = tk.Button(janela, width=18, text="Tarefa Planejada",command=lambda: [iniciar()])
+    bt_Iniciar = tk.Button(janela, width=18, text="Tarefa Planejada",command=lambda: [
+                                                                                        iniciar(),
+                                                                                        label_status.config(text="Tarefa planejada inicializada!"),
+                                                                                        label_status.place(x=180 , y=105)
+                                                                                        ])
     bt_Iniciar.place(x=80 , y=215)
 
-    bt_executar = tk.Button(janela, width=18, text="Executar tarefa", command=lambda: [executar()])
+    bt_executar = tk.Button(janela, width=18, text="Executar tarefa", command=lambda: [
+                                                                                        executar(),
+                                                                                        label_status.config(text="Tarefa executada inicializada!"),
+                                                                                        label_status.place(x=180 , y=105)
+                                                                                        ])
     bt_executar.place(x=350 , y=215)
     
     janela.mainloop()
