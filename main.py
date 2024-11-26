@@ -59,7 +59,6 @@ def agora():
 
 def registrar_log(texto):
     global diretorio_atual
-    global statusMultiprocessing
     #Função para registrar um texto em um arquivo de log.
     diretorio_atual = os.getcwd()
     caminho_arquivo = os.path.join(diretorio_atual, 'log.txt')
@@ -71,7 +70,6 @@ def registrar_log(texto):
     
 def registrar_log_cronometro(texto):
     global diretorio_atual
-    global statusMultiprocessing
     #Função para registrar um texto em um arquivo de log.
     diretorio_atual = os.getcwd()
     caminho_arquivo = os.path.join(diretorio_atual, 'log_cronometro.txt')
@@ -82,7 +80,6 @@ def registrar_log_cronometro(texto):
 
 def registrar_log_atend_erros(texto):
     global diretorio_atual
-    global statusMultiprocessing
     #Função para registrar um texto em um arquivo de log.
     diretorio_atual = os.getcwd()
     caminho_arquivo = os.path.join(diretorio_atual, 'log_atend_erros.txt')
@@ -153,7 +150,7 @@ def pdf_para_df():
         time.sleep(2)
         #ultimo arquivo
         ultimo_arquivo = os.path.join(downloads_path, files[0])
-        registrar_log(f"\n*****Ultimo arquivo antes de renomear: {ultimo_arquivo}")
+        registrar_log(f"Ultimo arquivo antes de renomear: {ultimo_arquivo}")
         
         registrar_log("mover_ultimo_pdf_para_raiz(ultimo_arquivo,diretorio_atual)")
         
@@ -162,7 +159,7 @@ def pdf_para_df():
         
         time.sleep(2)
         renomeado_arquivo = os.path.join(diretorio_atual, 'Atendimentos.pdf')
-        registrar_log(f"*****caminho_arquivo: {renomeado_arquivo}")
+        registrar_log(f"caminho_arquivo: {renomeado_arquivo}")
         
         time.sleep(2)
         ultimo_arquivo = renomeado_arquivo
@@ -188,16 +185,16 @@ def pdf_para_df():
             print(df.head(5))
             
             #exibindo todas as linhas mas só a primeira coluna:
-            print(f"\n\n\n#exibindo todas as linhas mas só a primeira coluna:\n{df}")
+            print(f"#exibindo todas as linhas mas só a primeira coluna:\n{df}")
         #return df
     
     except Exception as erro:
         registrar_log(f'================================ pdf_para_df() \n{erro}') 
         #caso de erro, vai executar novamente o app:
-        execucao()
+        main()
         
 def Geracao_Pdf_Atendimen():
-    global statusMultiprocessing
+    #global statusMultiprocessing
     global df
     # ============================== Geracao_Pdf_Atendimen ==============================
     registrar_log('============================== Geracao_Pdf_Atendimen ==============================')
@@ -287,30 +284,29 @@ def Geracao_Pdf_Atendimen():
         registrar_log("Pressionar Item - pyautogui.press('enter')")
         time.sleep(15)
         
-        #TODO: mudar para click
         #1711,136
         registrar_log('pyautogui.click(1711,136)')
         pyautogui.click(1711,136)
-        driver.implicitly_wait(2)
-        time.sleep(10)
-    
+        driver.implicitly_wait(5)
+        time.sleep(5)
+        driver.quit()
+        registrar_log(f'driver.quit()')
+
     except Exception as erro:
-        registrar_log(f'================================ Geracao_Pdf_Atendimen\nException Error: \n{erro}') 
+        registrar_log(f'================================ ERRO Geracao_Pdf_Atendimen\nException Error: \n{erro}') 
         #caso de erro, vai executar novamente este bloco:
         Geracao_Pdf_Atendimen()
-             
-    registrar_log("=========== Geracao_Pdf_Atendimen fim ========")
+        registrar_log(f'Retorno para Geracao_Pdf_Atendimen(), pois houve erro\n')
+       
+    registrar_log("=========== FIM Geracao_Pdf_Atendimen ========")
     # FIM:
-    statusMultiprocessing = False
-    registrar_log(f"global statusMultiprocessing: {statusMultiprocessing}")
-    
+    #statusMultiprocessing = False
+    #registrar_log(f"global statusMultiprocessing: {statusMultiprocessing}")    
     # pausa dramática:
-    driver.implicitly_wait(2)
     time.sleep(2)
-    driver.quit()
 
 def Geracao_Pdf_Prescricao(df_):
-    global statusMultiprocessing
+    #global statusMultiprocessing
     global df_filtrado
     global diretorio_atual_prescricoes
     global lista_nr_atendimento
@@ -337,7 +333,6 @@ def Geracao_Pdf_Prescricao(df_):
             lb_contador = linha
             registrar_log(f"lb_contador:{lb_contador} - linha:{linha}")
             
-            #TODO: inserir o bloco try que gera o pdf através do nr da linha
             try:
                 #registrar_log("for linha in df_filtrado.iloc[:, 0]")
                 registrar_log(f"Repeticao com NR_ATENDIMENTO: {linha}")
@@ -374,7 +369,6 @@ def Geracao_Pdf_Prescricao(df_):
                 registrar_log("click objeto invalido\npyautogui.click(1107,702)")
                 time.sleep(2)
         
-                #TODO: foi identificado nesse momento um erro de execucao:
                 #clicar no icone do CPOE:
                 bt_CPOE = driver.find_element(By.XPATH, value='//*[@id="app-view"]/tasy-corsisf1/div/w-mainlayout/div/div/w-launcher/div/div/div[1]/w-apps/div/div[1]/ul/li[2]/w-feature-app/a/img')
                 bt_CPOE.click()
@@ -466,6 +460,10 @@ def Geracao_Pdf_Prescricao(df_):
                 pyautogui.press('enter')
                 registrar_log("Pressionar Item\npyautogui.press('enter') 1")
                 time.sleep(2)
+                driver.quit()
+                registrar_log(f'\ndriver.quit()\n')
+                registrar_log(f'\ncontador = {contador} - de contador_linhas_df:{contador_linhas_df}')
+                
                 #acessando pasta download:
                 downloads_path = os.path.join(os.path.expanduser("~"), "Downloads")
                 registrar_log(f'Caminho da pasta download: {downloads_path}')
@@ -525,23 +523,15 @@ def Geracao_Pdf_Prescricao(df_):
                 
                 # pausa dramática:
                 time.sleep(2)
-                driver.quit()
+                #driver.quit()
                 
             except Exception as erro:
                     registrar_log(f'=========== \nERROR:\nexcept do try de dento do for linha in df_filtrado')
                     registrar_log(f'\nlista_nr_atendimento:{lista_nr_atendimento}\ncontador: {contador} \n{erro}')
-                    #TODO: confirmar se com a retirada, ao finalizar os pdfs foram copiados:
-                    #copiar_arquivos()
     
     except Exception as erro:
         #ao terminar extoura um exception e cai nesse bloco
-        registrar_log(f"=========== \nERROR:\n except: for linha in df_filtrado:\nlista_nr_atendimento:{lista_nr_atendimento}\ncontador: {contador} \n{erro}")
-        
-        #tenho que apagar todos os atendimentos até o que deu erro, que é o linha
-        
-        #TODO: confirmar se com a retirada, ao finalizar os pdfs foram copiados:
-        #copiar_arquivos()        
-            
+        registrar_log(f"=========== \nERROR:\n except: for linha in df_filtrado:\nlista_nr_atendimento:{lista_nr_atendimento}\ncontador: {contador} \n{erro}")                    
              
     registrar_log(f'Lista com nr_atendimentos com erro\nlista_nr_atendimento: {lista_nr_atendimento}')
     #montar data frame com lista de itens que tiveram erro e não foram deletados:
@@ -567,27 +557,26 @@ def Geracao_Pdf_Prescricao(df_):
         registrar_log_atend_erros(df)
         registrar_log(f"Executara novamente a Geracao_Pdf_Prescricao() com o global df apenas com os nr_atendimento que tiveram erros:\n{df}")
         Geracao_Pdf_Prescricao(df)
-    
-    """
-    #TODO: Apos o erro ele segue com a execucao e precisa agora rodar novamente na hora pre determinda
-    registrar_log('\nFinal do for linha\ndriver.implicitly_wait(10)')
-    #driver.implicitly_wait(10)
-    """
-    
+        
     #copiar_arquivos:
     registrar_log(f'def Geracao_PDF_Prescricao() bloco com funcao copiar_arquivos()')
     copiar_arquivos()
 
          
     #FIM:
-    statusMultiprocessing = False
-    registrar_log(f'\n============================== #FIM Geracao_Pdf_Prescricao(df_)\nstatusMultiprocessing = {statusMultiprocessing}')
+    #statusMultiprocessing = False
+    df_ = []
+    registrar_log(f'\n============================== df_: \n{df_}')
+    #registrar_log(f'\n============================== #FIM Geracao_Pdf_Prescricao(df_)\nstatusMultiprocessing = {statusMultiprocessing}')
+    registrar_log(f'\n============================== #FIM Geracao_Pdf_Prescricao(df_)\n')
     registrar_log(f'\n\n\n')
 
 def cronometro_tarefa_agendada():
     registrar_log(f'"============================== cronometro_tarefa_agendada() "==============================')
     #agendamentos:
-    schedule.every().day.at("00:00:01").do(execucao)
+    schedule.every().day.at("00:00:01").do(main)
+    schedule.every().day.at("09:00:01").do(main)
+    schedule.every().day.at("17:00:01").do(main)
     registrar_log(f'schedule.every().day.at("00:00:01").do(execucao)')
     #schedule.every().day.at("17:55:00").do(execucao)
     #schedule.every().day.at("14:40:00").do(execucao)
@@ -616,24 +605,23 @@ def copiar_arquivos():
     except Exception as e:
         registrar_log(f"\n*****Ocorreu um erro durante a cópia: {str(e)}\n============================== Exception copiar_arquivos()")
 
-def execucao():
-    global statusMultiprocessing
+def main():
+    #global statusMultiprocessing
     global df
     global lb_contador
     registrar_log("============================== execucao() ========================")
-    registrar_log(f"Tarefa inicializada!\nstatusMultiprocessing:{statusMultiprocessing}\ndf:{df}\nlb_contador:{lb_contador}")
-    
-    #============================== execucao ========================
-    #deletando todos os arquivos da pasta Prescricoes
-    #excluir_arquivos_pasta("Prescricoes")
+    #registrar_log(f"Tarefa inicializada!\nstatusMultiprocessing:{statusMultiprocessing}\ndf:{df}\nlb_contador:{lb_contador}")
+
     excluir_arquivos_past_downloads()
     Geracao_Pdf_Atendimen()
     pdf_para_df()
-    Geracao_Pdf_Prescricao(df)    
+    Geracao_Pdf_Prescricao(df)
+    #registrar_log(f"Tarefa Finalizada!\nstatusMultiprocessing:{statusMultiprocessing}\ndf:\n{df}")    
+    registrar_log("============================== FIM execucao() ========================")
     
     
 def interface_grafica():
-    registrar_log("============================== interface_grafica()")
+    registrar_log("============================== interface_grafica() ==============================")
     global lb_contador
     global statusMultiprocessing
     
@@ -647,42 +635,48 @@ def interface_grafica():
         registrar_log("O aplicativo foi fechado no botao X\n")
         
     def iniciar():
-        global statusMultiprocessing
+        #global statusMultiprocessing
         global df_filtrado
         global df
         registrar_log("============================== def iniciar()")
-        registrar_log(f"Botao Iniciar clicado! \nglobal statusMultiprocessing: {statusMultiprocessing}")
+        registrar_log(f"Botao Iniciar clicado!")
+        processo = multiprocessing.Process(target=cronometro_tarefa_agendada)
+        processo.start()
+        registrar_log(f'processo = multiprocessing.Process(target=cronometro_tarefa_agendada)\nprocesso.start()')
+        label_status['text'] = "Tarefa Agendada Inicializada!"  
+        registrar_log(f'label_status["text"] = "Tarefa Agendada Inicializada!"')
 
-        if statusMultiprocessing:
-            registrar_log(f"Thread já foi iniciada!")
-            messagebox.showinfo("Tarefa já incializada!")
+        #if statusMultiprocessing:
+        #    registrar_log(f"Thread já foi iniciada!")
+        #    messagebox.showinfo("Tarefa já incializada!")
 
-        else:
-            statusMultiprocessing = True                       
-            registrar_log('==================================== def iniciar() ====================================')            
-            #TODO: colocar dentro da execucao que usa o multiprocessing
-            processo = multiprocessing.Process(target=cronometro_tarefa_agendada)
-            #processo.start()
-            label_status['text'] = "Tarefa Agendada Inicializada!"  
+        #else:
+        #    statusMultiprocessing = True                       
+        #    registrar_log('==================================== def iniciar() ====================================')            
+        #    processo = multiprocessing.Process(target=cronometro_tarefa_agendada)
+        #    processo.start()
+        #    label_status['text'] = "Tarefa Agendada Inicializada!"  
             
     def executar():
-        global statusMultiprocessing
+        #global statusMultiprocessing
         global df_filtrado
         global df
         global lb_contador
         registrar_log("============================== def executar()")
-        registrar_log(f"Botao executar clicado! \nglobal statusMultiprocessing: {statusMultiprocessing}\nlb_contador:{lb_contador}")
-
-        if statusMultiprocessing:
-            registrar_log(f"Thread já foi iniciada!")
-            messagebox.showinfo("Tarefa já incializada!")
-
-        else:
-            statusMultiprocessing = True                       
-            registrar_log('==================================== def iniciar() ====================================')            
-            #TODO: colocar dentro da execucao que usa o multiprocessing
-            processo = multiprocessing.Process(target=execucao)
-            processo.start()
+        registrar_log(f"Botao executar clicado!")
+        
+        registrar_log('==================================== def iniciar() ====================================')            
+        processo = multiprocessing.Process(target=main)
+        processo.start()
+            
+        #if statusMultiprocessing:
+        #    registrar_log(f"Thread já foi iniciada!")
+        #    messagebox.showinfo("Tarefa já incializada!")
+        #else:
+        #    statusMultiprocessing = True                       
+        #    registrar_log('==================================== def iniciar() ====================================')            
+        #    processo = multiprocessing.Process(target=execucao)
+        #    processo.start()
     
     def fechar():
         registrar_log(f"\n\n{agora()}def fechar() - \njanela.destroy()\nsys.exit()")
@@ -708,12 +702,12 @@ def interface_grafica():
     label_status = tk.Label(janela, text="Tarefa não iniciada!")
     label_status.place(x=210 , y=105)
     
-    bt_Iniciar = tk.Button(janela, width=18, text="Tarefa Planejada",command=lambda: [
+    bt_Planejar = tk.Button(janela, width=18, text="Planejar Tarefa",command=lambda: [
                                                                                         iniciar(),
                                                                                         label_status.config(text="Tarefa planejada inicializada!"),
                                                                                         label_status.place(x=180 , y=105)
                                                                                         ])
-    bt_Iniciar.place(x=80 , y=215)
+    bt_Planejar.place(x=80 , y=215)
 
     bt_executar = tk.Button(janela, width=18, text="Executar tarefa", command=lambda: [
                                                                                         executar(),
@@ -733,7 +727,7 @@ if __name__ == "__main__":
                 
         #deletando todos os arquivos da pasta download
         pasta_downloads = os.path.join(os.path.expanduser("~"), "Downloads")
-        
+        registrar_log(f'deletando todos os arquivos da pasta download\npasta_downloads = os.path.join(os.path.expanduser("~"), "Downloads")\n')
         interface_grafica() 
             
     except Exception as erro:
