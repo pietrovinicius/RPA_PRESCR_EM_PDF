@@ -89,17 +89,17 @@ def registrar_log_atend_erros(texto):
         arquivo.write(f"{agora()} - {texto}\n")
         
 def excluir_arquivos_past_downloads():
-    registrar_log(f'============================== excluir_arquivos_past_downloads() ==============================')
+    registrar_log(f'============================== Excluir_arquivos_past_downloads() ==============================')
     #acessando pasta download:
     downloads_path = os.path.join(os.path.expanduser("~"), "Downloads")
-    registrar_log(f'Caminho da pasta downloads_path: {downloads_path}')    
+    registrar_log(f'Caminho da pasta downloads_path:\n{downloads_path}')    
     files = glob.glob(os.path.join(downloads_path, '*'))
     for f in files:
         try:
             os.remove(f)
-            print(f"Arquivo {f} removido com sucesso.\n\n")
+            registrar_log(f"Arquivo {f} removido com sucesso.\n\n")
         except Exception as e:
-            print(f"Não foi possível remover o arquivo {f}. Erro: {e}\n")
+            registrar_log(f"Não foi possível remover o arquivo {f}. Erro: {e}\n")
             
 def excluir_arquivos_pasta(pasta):
   try:
@@ -610,13 +610,10 @@ def main():
     global df
     global lb_contador
     registrar_log("============================== execucao() ========================")
-    #registrar_log(f"Tarefa inicializada!\nstatusMultiprocessing:{statusMultiprocessing}\ndf:{df}\nlb_contador:{lb_contador}")
-
     excluir_arquivos_past_downloads()
     Geracao_Pdf_Atendimen()
     pdf_para_df()
     Geracao_Pdf_Prescricao(df)
-    #registrar_log(f"Tarefa Finalizada!\nstatusMultiprocessing:{statusMultiprocessing}\ndf:\n{df}")    
     registrar_log("============================== FIM execucao() ========================")
     
     
@@ -635,7 +632,6 @@ def interface_grafica():
         registrar_log("O aplicativo foi fechado no botao X\n")
         
     def iniciar():
-        #global statusMultiprocessing
         global df_filtrado
         global df
         registrar_log("============================== def iniciar()")
@@ -644,48 +640,20 @@ def interface_grafica():
         processo.start()
         registrar_log(f'processo = multiprocessing.Process(target=cronometro_tarefa_agendada)\nprocesso.start()')
         label_status['text'] = "Tarefa Agendada Inicializada!"  
-        registrar_log(f'label_status["text"] = "Tarefa Agendada Inicializada!"')
-
-        #if statusMultiprocessing:
-        #    registrar_log(f"Thread já foi iniciada!")
-        #    messagebox.showinfo("Tarefa já incializada!")
-
-        #else:
-        #    statusMultiprocessing = True                       
-        #    registrar_log('==================================== def iniciar() ====================================')            
-        #    processo = multiprocessing.Process(target=cronometro_tarefa_agendada)
-        #    processo.start()
-        #    label_status['text'] = "Tarefa Agendada Inicializada!"  
+        registrar_log(f'label_status["text"] = "Tarefa Agendada Inicializada!"')  
             
     def executar():
-        #global statusMultiprocessing
         global df_filtrado
         global df
         global lb_contador
         registrar_log("============================== def executar()")
         registrar_log(f"Botao executar clicado!")
-        
         registrar_log('==================================== def iniciar() ====================================')            
         processo = multiprocessing.Process(target=main)
         processo.start()
-            
-        #if statusMultiprocessing:
-        #    registrar_log(f"Thread já foi iniciada!")
-        #    messagebox.showinfo("Tarefa já incializada!")
-        #else:
-        #    statusMultiprocessing = True                       
-        #    registrar_log('==================================== def iniciar() ====================================')            
-        #    processo = multiprocessing.Process(target=execucao)
-        #    processo.start()
     
     def fechar():
         registrar_log(f"\n\n{agora()}def fechar() - \njanela.destroy()\nsys.exit()")
-        # Exiba uma caixa de diálogo de confirmação
-        #resultado = messagebox.askyesno("Confirmação", "Tem certeza de que deseja fechar o aplicativo?")
-        #if resultado:
-        #    # Feche o aplicativo
-        #    registrar_log("janela.destroy()")
-        #    janela.destroy()
         janela.destroy()
         sys.exit()
 
@@ -693,29 +661,38 @@ def interface_grafica():
     janela = tk.Tk()
     janela.maxsize(600,400)
     janela.geometry('600x400')
-    janela.title("RPA PRESCRICOES POR SETOR")
+    
+    #titulo do app
+    janela.title("PDD")
     
     # Associa a função ao_fechar ao evento de fechamento da janela
     janela.protocol("WM_DELETE_WINDOW", ao_fechar)
     
+    #imagem do HSF em 60x77
+    imagem = tk.PhotoImage(file='HSF_LOGO_-_60x77_001.png', height=60, width=77)
+    lb_imagem = tk.Label(janela, image=imagem)
+    lb_imagem.place(x=20, y=10)
+    
+    titulo_label = tk.Label(janela, text='APP GERADOR DE PRESCRIÇÕES POR SETOR', font=('Arial',12))
+    titulo_label.place(x=105, y=33.5)
+    
     # Rótulo para mostrar o status
-    label_status = tk.Label(janela, text="Tarefa não iniciada!")
-    label_status.place(x=210 , y=105)
+    label_status = tk.Label(janela, text="Escolha uma das opções abaixo:")
+    label_status.place(x=206 , y=175)
     
     bt_Planejar = tk.Button(janela, width=18, text="Planejar Tarefa",command=lambda: [
                                                                                         iniciar(),
                                                                                         label_status.config(text="Tarefa planejada inicializada!"),
-                                                                                        label_status.place(x=180 , y=105)
+                                                                                        label_status.place(x=180 , y=175)
                                                                                         ])
-    bt_Planejar.place(x=80 , y=215)
+    bt_Planejar.place(x=80 , y=275)
 
     bt_executar = tk.Button(janela, width=18, text="Executar tarefa", command=lambda: [
                                                                                         executar(),
                                                                                         label_status.config(text="Tarefa executada inicializada!"),
-                                                                                        label_status.place(x=180 , y=105)
+                                                                                        label_status.place(x=180 , y=175)
                                                                                         ])
-    bt_executar.place(x=350 , y=215)
-    
+    bt_executar.place(x=350 , y=275)
     janela.mainloop()
 
     
