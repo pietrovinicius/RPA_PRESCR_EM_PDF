@@ -693,6 +693,11 @@ def interface_grafica():
                                                                                         label_status.place(x=180 , y=175)
                                                                                         ])
     bt_executar.place(x=350 , y=275)
+    
+    PLima_label = tk.Label(janela, text='@PLima', font=('Arial',4))
+    PLima_label.place(x=565, y=387)
+    
+    
     janela.mainloop()
 
     
