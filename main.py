@@ -98,10 +98,8 @@ def excluir_arquivos_past_downloads():
             os.remove(f)
             registrar_log(f"Arquivo {f} removido com sucesso.\n\n")
         except Exception as e:
-            registrar_log(f"Não foi possível remover o arquivo {f}. Erro: {e}\n")
-            
+            registrar_log(f"Não foi possível remover o arquivo {f}. Erro: {e}\n")          
 
-#apontamento para usar o Think Mod
 def encontrar_diretorio_instantclient(nome_pasta="instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6"):
   """
   Localiza o diretório do Instant Client dentro da pasta raiz do aplicativo.
@@ -170,7 +168,6 @@ def obter_pacientes_atendimentos():
                             APV.CD_PESSOA_FISICA
                         ORDER BY 
                             APV.CD_SETOR_ATENDIMENTO
-                        FETCH FIRST 1 ROWS ONLY
                     """
                 #####################################################################################
                 
