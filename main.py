@@ -278,21 +278,25 @@ def Geracao_Pdf_Prescricao(df_):
                 registrar_log(f'nr_atendimento: {linha}')
                 driver.implicitly_wait(3)
                 time.sleep(5)
+                
                 #enter
                 pyautogui.press('enter')
                 registrar_log('1 - enter')
                 driver.implicitly_wait(3)
                 time.sleep(5)
+                
                 #enter
                 pyautogui.press('enter')
                 registrar_log('2 - enter')
                 driver.implicitly_wait(15)
                 time.sleep(15)
+                
                 #click atendimento fechado
                 pyautogui.click(1100,709)
                 registrar_log("click atendimento fechado")
-                driver.implicitly_wait(3)
-                time.sleep(3)
+                driver.implicitly_wait(1.5)
+                time.sleep(1.5)
+                
                 #botao visualizar
                 bt_cpoe_relatorios = driver.find_element(By.XPATH, value='//*[@id="handlebar-40"]')
                 bt_cpoe_relatorios.click()
@@ -304,21 +308,13 @@ def Geracao_Pdf_Prescricao(df_):
                 bt_cpoe_visualizar = driver.find_element(By.XPATH, value='//*[@id="popupViewPort"]/li[5]/div[3]')
                 bt_cpoe_visualizar.click()
                 registrar_log("bt_cpoe_visualizar")
-                driver.implicitly_wait(12)
-                time.sleep(12)
+                driver.implicitly_wait(5)
+                time.sleep(5)
                 
-                #click apos o download
-                registrar_log(f'click apos o download\nbtn_baixar.png')
-                # Localiza a imagem 'botao_ok.png' na tela
-                btn_baixar = pyautogui.locateOnScreen('btn_baixar.png')
-                # Se a imagem foi encontrada, clica no centro dela
-                if btn_baixar:
-                    button_x, button_y = pyautogui.center(btn_baixar)
-                    pyautogui.click(button_x, button_y)
-                    registrar_log(f'pyautogui.click({button_x}, {button_y})')
-                    driver.implicitly_wait(10)
-                else:
-                    registrar_log("btn_baixar - Botão não encontrado!!!!")
+                #click no baixar
+                registrar_log(f'click no baixar')
+                pyautogui.click(1817,165)
+                registrar_log(f'pyautogui.click(1817,165)')
                 time.sleep(2)
                 
                 #Pressionar enter:
@@ -332,6 +328,7 @@ def Geracao_Pdf_Prescricao(df_):
                 registrar_log(f'pyautogui.click(1755,106)')
                 time.sleep(2)
                 
+                #driver.quit()
                 driver.quit()
                 registrar_log(f'\ndriver.quit()\n')
                 
@@ -488,8 +485,7 @@ def main():
     excluir_arquivos_past_downloads()
     encontrar_diretorio_instantclient()
     df_filtrado  = obter_pacientes_atendimentos()
-    #Geracao_Pdf_Prescricao(df_filtrado)
-    
+    Geracao_Pdf_Prescricao(df_filtrado)
     registrar_log("\n============================== FIM execucao() ========================")
     
     
