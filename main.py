@@ -31,7 +31,7 @@ import schedule
 import multiprocessing
 import sys
 
-
+import oracledb
 
 #inicialização de variaveis globais:
 diretorio_atual = ""
@@ -55,7 +55,6 @@ def agora():
     agora = datetime.datetime.now()
     agora = agora.strftime("%Y-%m-%d %H-%M-%S")
     return str(agora)
-
 
 def registrar_log(texto):
     global diretorio_atual
@@ -101,219 +100,118 @@ def excluir_arquivos_past_downloads():
         except Exception as e:
             registrar_log(f"Não foi possível remover o arquivo {f}. Erro: {e}\n")
             
-def excluir_arquivos_pasta(pasta):
-  try:
-    shutil.rmtree(pasta)
-    print(f"A pasta {pasta} e seu conteúdo foram excluídos com sucesso.")
-  except OSError as error:
-    print(f"Erro ao excluir a pasta: {error}")
 
-def mover_ultimo_pdf_para_raiz(caminho_downloads, pasta_raiz):
-    registrar_log(f'============================== mover_ultimo_pdf_para_raiz({caminho_downloads}, {pasta_raiz}) ==============================') 
-    # Lista todos os arquivos na pasta de downloads
-    arquivos = os.listdir(caminho_downloads)    
-    # Filtra apenas os arquivos PDF e ordena por data de modificação (mais recente primeiro)
-    pdfs = [f for f in arquivos if f.endswith('.pdf')]
-    pdfs.sort(key=lambda x: os.path.getmtime(os.path.join(caminho_downloads, x)), reverse=True) 
-    if pdfs:
-      # Obtém o caminho completo do último PDF
-      ultimo_pdf = os.path.join(caminho_downloads, pdfs[0]) 
-      # Renomeia o arquivo para "arquivo.pdf"
-      novo_nome = os.path.join(caminho_downloads, "Atendimentos.pdf")
-      os.rename(ultimo_pdf, novo_nome)  
-      # Move o arquivo para a pasta raiz
-      destino = os.path.join(pasta_raiz, "Atendimentos.pdf")
-      shutil.move(novo_nome, destino)
-      print(f"Arquivo movido para: {destino}")
-    else:
-      print("Nenhum arquivo PDF encontrado na pasta de downloads.")
-    
-def pdf_para_df():
-    global df_filtrado
-    global df
-    global statusMultiprocessing
-    texto_completo = ""
-    
+#apontamento para usar o Think Mod
+def encontrar_diretorio_instantclient(nome_pasta="instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6"):
+  """
+  Localiza o diretório do Instant Client dentro da pasta raiz do aplicativo.
+    a pasta é C:\Pietro\Projetos\EXECUTA_QUERY_RETORNA_XLSX\instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6
+  Args:
+    nome_pasta: Nome da pasta do Instant Client.
+
+  Returns:
+    Caminho completo para a pasta do Instant Client, ou None se não encontrada.
+  """
+  registrar_log(f' ============================== encontrar_diretorio_instantclient')
+  # Obtém o diretório do script atual
+  diretorio_atual = os.path.dirname(os.path.abspath(__file__))
+
+  # Constrói o caminho completo para a pasta do Instant Client
+  caminho_instantclient = os.path.join(diretorio_atual, nome_pasta)
+
+  # Verifica se a pasta existe
+  if os.path.exists(caminho_instantclient):
+    return caminho_instantclient
+  else:
+    registrar_log(f"A pasta '{nome_pasta}' não foi encontrada na raiz do aplicativo.")
+    return None
+
+def obter_pacientes_atendimentos():
     try:
-        registrar_log("******def pdf_para_df():")
-    
-        time.sleep(2)
-        #acessando pasta download:
-        downloads_path = os.path.join(os.path.expanduser("~"), "Downloads")
-        registrar_log(f'Caminho da pasta download: {downloads_path}')
-        
-        time.sleep(2)
-        #verificando arquivos da pasta download
-        files = [f for f in os.listdir(downloads_path) if f.endswith('.pdf')]
-        registrar_log(f"Arquivos:\n{files}")
+        un = 'PIETRO'
+        cs = '192.168.5.9:1521/TASYPRD'
 
-        time.sleep(2)
-        #ultimo arquivo
-        ultimo_arquivo = os.path.join(downloads_path, files[0])
-        registrar_log(f"Ultimo arquivo antes de renomear: {ultimo_arquivo}")
+        # Chamar a função para obter o caminho do Instant Client
+        caminho_instantclient = encontrar_diretorio_instantclient()
+
+        # Usar o caminho encontrado para inicializar o Oracle Client
+        if caminho_instantclient:
+            print(f'if caminho_instantclient:\n')
+            print(f'oracledb.init_oracle_client(lib_dir=caminho_instantclient)\n')
+            oracledb.init_oracle_client(lib_dir=caminho_instantclient)
+        else:
+            print("Erro ao localizar o Instant Client. Verifique o nome da pasta e o caminho.")
         
-        registrar_log("mover_ultimo_pdf_para_raiz(ultimo_arquivo,diretorio_atual)")
+        connection = oracledb.connect( user="PIETRO", password="ATxjWPm", dsn="192.168.5.9:1521/TASYPRD")
         
-        time.sleep(2)
-        mover_ultimo_pdf_para_raiz(downloads_path,diretorio_atual)
-        
-        time.sleep(2)
-        renomeado_arquivo = os.path.join(diretorio_atual, 'Atendimentos.pdf')
-        registrar_log(f"caminho_arquivo: {renomeado_arquivo}")
-        
-        time.sleep(2)
-        ultimo_arquivo = renomeado_arquivo
-        registrar_log((f"ultimo_arquivo: {ultimo_arquivo}"))
-        
-        #abrindo ultimo arquivo para a geracao do DF
-        with open(ultimo_arquivo, 'rb') as arquivo_pdf:
-            leitor_pdf = PyPDF2.PdfReader(arquivo_pdf) 
+        with connection:
+            print(f'with oracledb.connect(user=un, password=pw, dsn=cs) as connection\n')
             
-            # Ler todas as páginas do PDF 
-            for pagina in range(len(leitor_pdf.pages)): 
-                pagina_atual = leitor_pdf.pages[pagina] 
-                texto = pagina_atual.extract_text() 
-                texto_completo += texto + "\n"
-                #print(texto_completo)
-            time.sleep(2)
-            linhas = texto_completo.split('\n') 
-            time.sleep(2)
-            dados = [linha.split() for linha in linhas if linha.strip()] 
-            time.sleep(2)
-            df = pd.DataFrame(dados)
-            #exibindo as 5 primeiras linhas:
-            print(df.head(5))
+            print(f'\nconnection.current_schema: {connection.current_schema}')
             
-            #exibindo todas as linhas mas só a primeira coluna:
-            print(f"#exibindo todas as linhas mas só a primeira coluna:\n{df}")
-        #return df
-    
-    except Exception as erro:
-        registrar_log(f'================================ pdf_para_df() \n{erro}') 
-        #caso de erro, vai executar novamente o app:
-        main()
+            with connection.cursor() as cursor:
+                print(f'with connection.cursor() as cursor:\n')
+                
+                #####################################################################################
+                #QUERY:
+                sql = """ 
+                        SELECT 
+                            APV.NR_ATENDIMENTO
+                        FROM ATENDIMENTO_PACIENTE_V APV
+                        LEFT JOIN prescr_medica PM ON (  PM.NR_ATENDIMENTO = APV.NR_ATENDIMENTO )
+                        LEFT JOIN prescr_mat_hor PH ON ( PH.NR_PRESCRICAO = PM.NR_PRESCRICAO)
+                        WHERE APV.DT_ALTA IS NULL
+                        --AND APV.IE_STATUS_ATENDIMENTO = 'E'
+                        And	PH.dt_horario between SYSDATE -1 and SYSDATE
+                        and APV.CD_SETOR_ATENDIMENTO not in (  171 )
+                        GROUP BY 
+                            APV.NR_ATENDIMENTO,
+                            APV.CD_SETOR_ATENDIMENTO,
+                            APV.CD_PESSOA_FISICA
+                        ORDER BY 
+                            APV.CD_SETOR_ATENDIMENTO
+                        FETCH FIRST 1 ROWS ONLY
+                    """
+                #####################################################################################
+                
+                #Executando a query:
+                #print(f'cursor.execute(sql)\n{sql}')
+                cursor.execute(sql)
+                
+                # Imprimir os resultados da consulta para verificar
+                registrar_log(f'results = cursor.fetchall()\n')
+                results = cursor.fetchall()
         
-def Geracao_Pdf_Atendimen():
-    #global statusMultiprocessing
-    global df
-    # ============================== Geracao_Pdf_Atendimen ==============================
-    registrar_log('============================== Geracao_Pdf_Atendimen ==============================')
-
-    #tela toda:
-
-    driver = webdriver.Chrome()
-    options = Options()
-    options.add_argument("--start-maximized")
-    driver = webdriver.Chrome(options=options)
-    try:
-        registrar_log(f'(============================== Try:')
-        
-        driver.get("http://aplicacao.hsf.local:7070/#/login")
-        registrar_log('driver.get("http://aplicacao.hsf.local:7070/#/login")')
-        title = driver.title
-
-        driver.implicitly_wait(1.5)
-
-        # box de usuario:
-        box_usuario = driver.find_element(By.XPATH, value='//*[@id="loginUsername"]')
-        box_usuario.send_keys('pvplima')
-        registrar_log('box_usuario')
-        time.sleep(2)
-        
-        # box de senha:
-        box_senha = driver.find_element(By.XPATH, value='//*[@id="loginPassword"]')
-        box_senha.send_keys('hsf@2024')
-        registrar_log('box_senha')
-        time.sleep(2)
-        
-        # botao de login:
-        bt_login = driver.find_element(By.XPATH, value='//*[@id="loginForm"]/input[3]')
-        bt_login.click()
-        registrar_log('bt_login')
-        driver.implicitly_wait(10)
-        time.sleep(10)
-        
-        #1107,702    
-        pyautogui.click(1107,702  )
-        registrar_log("click objeto invalido\npyautogui.click(1107,702)")
-        time.sleep(4)
-
-        # click no atalho de utilitários:
-        bt_utilitarios = driver.find_element(By.XPATH, value='//*[@id="app-view"]/tasy-corsisf1/div/w-mainlayout/div/div/w-launcher/div/ul/li[2]')
-        bt_utilitarios.click()
-        registrar_log('bt_utilitarios.click()')
-        time.sleep(3)
-
-        # click no atalho de bt_impressao_relatorios:
-        bt_impressao_relatorios = driver.find_element(By.XPATH, value='//*[@id="app-view"]/tasy-corsisf1/div/w-mainlayout/div/div/w-launcher/div/div/div[2]/w-apps/div/div[1]/ul/li[3]/w-feature-app/a/img')
-        bt_impressao_relatorios.click()
-        registrar_log('bt_impressao_relatorios.click()')
-        driver.implicitly_wait(2)
-        time.sleep(2)
-
-        # click no campo para procurar o relatório 1790:
-        box_codigo_rel = driver.find_element(By.XPATH, value='//*[@id="detail_1_container"]/div[1]/div/div[2]/tasy-wtextbox/div/div/input')
-        box_codigo_rel.send_keys('1790')
-        registrar_log("box_codigo_rel.send_keys('1790')")
-        driver.implicitly_wait(2)
-        time.sleep(2)
-
-        #Pressionar Item:
-        pyautogui.press('enter')
-        registrar_log("pyautogui.press('enter')")
-        driver.implicitly_wait(5)
-        time.sleep(5)
-        
-        # Click no botao visualizar:
-        bt_visualizar_ = driver.find_element(By.XPATH, value='//*[@id="handlebar-455491"]')
-        bt_visualizar_.click()
-        registrar_log("bt_visualizar_.click()")
-        driver.implicitly_wait(30)
-        time.sleep(30)
-        
-        #click apos o download
-        #pyautogui.click(1810,165)
-        #pyautogui.click(1781,149)
-        registrar_log('pyautogui.click(1786,211)')
-        pyautogui.click(1786,211)
-        driver.implicitly_wait(1)
-        time.sleep(2)
-        
-        #Pressionar Item:
-        pyautogui.press('enter')
-        registrar_log("Pressionar Item - pyautogui.press('enter')")
-        time.sleep(15)
-        
-        #1711,136
-        registrar_log('pyautogui.click(1711,136)')
-        pyautogui.click(1711,136)
-        driver.implicitly_wait(5)
-        time.sleep(5)
-        driver.quit()
-        registrar_log(f'driver.quit()')
+                #Exibindo redultado no console:
+                #print(f'Exibindo redultado no console:\n')    
+                #for r in cursor.execute(sql):
+                #    print(r)
+                
+                #Inserindo resultado em um data frame:
+                #df = pd.DataFrame(cursor.fetchall(), columns=[desc[0] for desc in cursor.description])
+                
+                registrar_log(f'df = pd.DataFrame(results, columns=[desc[0] for desc in cursor.description])')
+                df = pd.DataFrame(results, columns=[desc[0] for desc in cursor.description])
+                
+                # Visualizar os primeiros 5 registros
+                registrar_log(f'data_frame:\n{df.head()}')
+                registrar_log(f'\ndata_frame:\n{df.shape}')
+                registrar_log("DataFrame salvo com sucesso!")
 
     except Exception as erro:
-        registrar_log(f'================================ ERRO Geracao_Pdf_Atendimen\nException Error: \n{erro}') 
-        #caso de erro, vai executar novamente este bloco:
-        Geracao_Pdf_Atendimen()
-        registrar_log(f'Retorno para Geracao_Pdf_Atendimen(), pois houve erro\n')
-       
-    registrar_log("=========== FIM Geracao_Pdf_Atendimen ========")
-    # FIM:
-    #statusMultiprocessing = False
-    #registrar_log(f"global statusMultiprocessing: {statusMultiprocessing}")    
-    # pausa dramática:
-    time.sleep(2)
+        registrar_log(f"Erro Inexperado:\n{erro}")
+    
+    registrar_log(f'return df:{df.head}')
+    return df
 
 def Geracao_Pdf_Prescricao(df_):
     #global statusMultiprocessing
-    global df_filtrado
     global diretorio_atual_prescricoes
     global lista_nr_atendimento
     global lb_contador
     # ============================== Geracao_Pdf_Prescricao ==============================
     registrar_log('\n\n============================== Geracao_Pdf_Prescricao ==============================')
-    registrar_log(f'df_filtrado = df_\nentao df_:\n{df_}')
+    #registrar_log(f'df_filtrado = df_\nentao df_:\n{df_}')
     df_filtrado = df_
     registrar_log(f'\ndf_filtrado:\n{df_filtrado}')
     
@@ -327,6 +225,7 @@ def Geracao_Pdf_Prescricao(df_):
         registrar_log('=================================== INICIO REPETICAO =================================== ')
         for index, row in df_filtrado.iterrows():
             linha = row[0]
+            linha = str(linha)
             lista_nr_atendimento.append(linha)
             registrar_log(f'============================== Repeticao for index, row in df_filtrado.iterrows():')
             registrar_log(f"Adicionando a lista o nr_atendimento:{linha}")
@@ -334,9 +233,7 @@ def Geracao_Pdf_Prescricao(df_):
             registrar_log(f"lb_contador:{lb_contador} - linha:{linha}")
             
             try:
-                #registrar_log("for linha in df_filtrado.iloc[:, 0]")
-                registrar_log(f"Repeticao com NR_ATENDIMENTO: {linha}")
-                
+                registrar_log('============================== try:')                
                 #tela toda:
                 driver = webdriver.Chrome()
                 options = Options()
@@ -345,7 +242,8 @@ def Geracao_Pdf_Prescricao(df_):
                 driver.get("http://aplicacao.hsf.local:7070/#/login")
                 registrar_log('driver.get("http://aplicacao.hsf.local:7070/#/login")')
                 title = driver.title
-                driver.implicitly_wait(1.5)
+                driver.implicitly_wait(5)
+                
                 # box de usuario:
                 box_usuario = driver.find_element(By.XPATH, value='//*[@id="loginUsername"]')
                 box_usuario.send_keys('pvplima')
@@ -357,6 +255,7 @@ def Geracao_Pdf_Prescricao(df_):
                 box_senha.send_keys('hsf@2024')
                 registrar_log('box_senha')
                 time.sleep(2)
+                
                 # botao de login:
                 bt_login = driver.find_element(By.XPATH, value='//*[@id="loginForm"]/input[3]')
                 bt_login.click()
@@ -364,7 +263,7 @@ def Geracao_Pdf_Prescricao(df_):
                 driver.implicitly_wait(10)
                 time.sleep(5)
                 
-                #1107,702    
+                #click objeto invalido\npyautogui.click(1107,702)
                 pyautogui.click(1107,702  )
                 registrar_log("click objeto invalido\npyautogui.click(1107,702)")
                 time.sleep(2)
@@ -412,56 +311,33 @@ def Geracao_Pdf_Prescricao(df_):
                 time.sleep(12)
                 
                 #click apos o download
-                #pyautogui.click(1810,165)
-                #pyautogui.click(1781,149)
-                pyautogui.click(1786,211)
-                driver.implicitly_wait(1)
+                registrar_log(f'click apos o download\nbtn_baixar.png')
+                # Localiza a imagem 'botao_ok.png' na tela
+                btn_baixar = pyautogui.locateOnScreen('btn_baixar.png')
+                # Se a imagem foi encontrada, clica no centro dela
+                if btn_baixar:
+                    button_x, button_y = pyautogui.center(btn_baixar)
+                    pyautogui.click(button_x, button_y)
+                    registrar_log(f'pyautogui.click({button_x}, {button_y})')
+                    driver.implicitly_wait(10)
+                else:
+                    registrar_log("btn_baixar - Botão não encontrado!!!!")
                 time.sleep(2)
                 
-                #Pressionar Item:
+                #Pressionar enter:
                 pyautogui.press('enter')
                 registrar_log("Pressionar Item\npyautogui.press('enter')")
-                time.sleep(3)
-                            
-                registrar_log("9x tab - inicio")
-                pyautogui.press('tab')
-                pyautogui.press('tab')
-                pyautogui.press('tab')
-                pyautogui.press('tab')
-                pyautogui.press('tab')
-                pyautogui.press('tab')
-                pyautogui.press('tab')
-                pyautogui.press('tab')
-                pyautogui.press('tab')
-                registrar_log("9x tab - fim")
-                time.sleep(3)
-                
-                #Pressionar Item:
-                pyautogui.press('enter')
-                registrar_log("Pressionar Item\npyautogui.press('enter')")
-                time.sleep(3)
-                
-                registrar_log("5x tab - inicio")
-                pyautogui.press('tab')
-                pyautogui.press('tab')
-                pyautogui.press('tab')
-                pyautogui.press('tab')
-                pyautogui.press('tab')
-                registrar_log("5x tab - fim")
-                driver.implicitly_wait(1)
-                time.sleep(3)
-                
-                #Pressionar Item:
-                pyautogui.press('enter')
-                registrar_log("Pressionar Item\npyautogui.press('enter')")
-                time.sleep(3)
-        
-                #Pressionar Item:
-                pyautogui.press('enter')
-                registrar_log("Pressionar Item\npyautogui.press('enter') 1")
                 time.sleep(2)
+                
+                #click no manter
+                registrar_log(f'btn_manter')
+                pyautogui.click(1755,106)
+                registrar_log(f'pyautogui.click(1755,106)')
+                time.sleep(2)
+                
                 driver.quit()
                 registrar_log(f'\ndriver.quit()\n')
+                
                 registrar_log(f'\ncontador = {contador} - de contador_linhas_df:{contador_linhas_df}')
                 
                 #acessando pasta download:
@@ -609,12 +485,15 @@ def main():
     #global statusMultiprocessing
     global df
     global lb_contador
+    global df_filtrado
+    
     registrar_log("============================== execucao() ========================")
     excluir_arquivos_past_downloads()
-    Geracao_Pdf_Atendimen()
-    pdf_para_df()
-    Geracao_Pdf_Prescricao(df)
-    registrar_log("============================== FIM execucao() ========================")
+    encontrar_diretorio_instantclient()
+    df_filtrado  = obter_pacientes_atendimentos()
+    #Geracao_Pdf_Prescricao(df_filtrado)
+    
+    registrar_log("\n============================== FIM execucao() ========================")
     
     
 def interface_grafica():
