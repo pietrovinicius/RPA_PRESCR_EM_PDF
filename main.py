@@ -64,7 +64,7 @@ def registrar_log(texto):
     print(f"{agora()} - {texto}\n")
 
     # Abre o arquivo em modo de append (adiciona texto ao final)
-    with open(caminho_arquivo, 'a') as arquivo:
+    with open(caminho_arquivo, 'w') as arquivo:
         arquivo.write(f"{agora()} - {texto}\n")
     
 def registrar_log_cronometro(texto):
@@ -73,7 +73,7 @@ def registrar_log_cronometro(texto):
     diretorio_atual = os.getcwd()
     caminho_arquivo = os.path.join(diretorio_atual, 'log_cronometro.txt')
     # Abre o arquivo em modo de append (adiciona texto ao final)
-    with open(caminho_arquivo, 'a') as arquivo:
+    with open(caminho_arquivo, 'w') as arquivo:
         print(f"{agora()} - {texto}\n")
         arquivo.write(f"{agora()} - {texto}\n")
 
