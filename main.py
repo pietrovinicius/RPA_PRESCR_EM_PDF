@@ -443,13 +443,11 @@ def Geracao_Pdf_Prescricao(df_):
 
 def cronometro_tarefa_agendada():
     registrar_log(f'"============================== cronometro_tarefa_agendada() "==============================')
+    
     #agendamentos:
     schedule.every().day.at("00:00:01").do(main)
-    schedule.every().day.at("09:00:01").do(main)
-    schedule.every().day.at("17:00:01").do(main)
     registrar_log(f'schedule.every().day.at("00:00:01").do(execucao)')
-    #schedule.every().day.at("17:55:00").do(execucao)
-    #schedule.every().day.at("14:40:00").do(execucao)
+    
     #inserindo o schedule
     while True:
         schedule.run_pending()
@@ -546,7 +544,7 @@ def interface_grafica():
     lb_imagem.place(x=20, y=10)
     
     titulo_label = tk.Label(janela, text='APP GERADOR DE PRESCRIÇÕES POR SETOR', font=('Arial',12))
-    titulo_label.place(x=105, y=33.5)
+    titulo_label.place(x=135, y=33.5)
     
     # Rótulo para mostrar o status
     label_status = tk.Label(janela, text="Escolha uma das opções abaixo:")
@@ -555,14 +553,14 @@ def interface_grafica():
     bt_Planejar = tk.Button(janela, width=18, text="Planejar Tarefa",command=lambda: [
                                                                                         iniciar(),
                                                                                         label_status.config(text="Tarefa planejada inicializada!"),
-                                                                                        label_status.place(x=180 , y=175)
+                                                                                        label_status.place(x=200 , y=175)
                                                                                         ])
     bt_Planejar.place(x=80 , y=275)
 
-    bt_executar = tk.Button(janela, width=18, text="Executar tarefa", command=lambda: [
+    bt_executar = tk.Button(janela, width=18, text="Executar Tarefa", command=lambda: [
                                                                                         executar(),
                                                                                         label_status.config(text="Tarefa executada inicializada!"),
-                                                                                        label_status.place(x=180 , y=175)
+                                                                                        label_status.place(x=200 , y=175)
                                                                                         ])
     bt_executar.place(x=350 , y=275)
     
