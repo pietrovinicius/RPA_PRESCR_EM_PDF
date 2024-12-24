@@ -64,7 +64,7 @@ def registrar_log(texto):
     print(f"{agora()} - {texto}\n")
 
     # Abre o arquivo em modo de append (adiciona texto ao final)
-    with open(caminho_arquivo, 'w') as arquivo:
+    with open(caminho_arquivo, 'a') as arquivo:
         arquivo.write(f"{agora()} - {texto}\n")
     
 def registrar_log_cronometro(texto):
@@ -100,16 +100,7 @@ def excluir_arquivos_past_downloads():
         except Exception as e:
             registrar_log(f"Não foi possível remover o arquivo {f}. Erro: {e}\n")          
 
-def encontrar_diretorio_instantclient(nome_pasta="instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6"):
-  """
-  Localiza o diretório do Instant Client dentro da pasta raiz do aplicativo.
-    a pasta é C:\Pietro\Projetos\EXECUTA_QUERY_RETORNA_XLSX\instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6
-  Args:
-    nome_pasta: Nome da pasta do Instant Client.
-
-  Returns:
-    Caminho completo para a pasta do Instant Client, ou None se não encontrada.
-  """
+def encontrar_diretorio_instantclient(nome_pasta="instantclient-basiclite-windows.x64-23.6.0.24.10\\instantclient_23_6"):
   registrar_log(f' ============================== encontrar_diretorio_instantclient')
   # Obtém o diretório do script atual
   diretorio_atual = os.path.dirname(os.path.abspath(__file__))
