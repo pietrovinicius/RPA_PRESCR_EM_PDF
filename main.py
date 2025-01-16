@@ -93,8 +93,7 @@ def registrar_log_contador(texto):
     with open(caminho_arquivo, 'w') as arquivo:
         print(f"{texto}")
         arquivo.write(texto)
-        
-        
+           
 def excluir_arquivos_past_downloads():
     registrar_log(f'Excluir_arquivos_past_downloads()')
     #acessando pasta download:
@@ -474,13 +473,17 @@ def cronometro_tarefa_agendada():
     
     #agendamentos:
     schedule.every().day.at("00:00:01").do(main)
-    registrar_log(f'schedule every day ("00:00:01") do(execucao)')
+    registrar_log(f'Planejada execução todos os dia as 00:00')
+    
+     #agendamentos:
+    schedule.every().day.at("12:00:01").do(main)
+    registrar_log(f'Planejada execução todos os dia as 12:00')
     
     #inserindo o schedule
     while True:
         schedule.run_pending()
         time.sleep(1)
-        registrar_log(f'schedule every day ("00:00:01") do(execucao)')
+        registrar_log_cronometro(f'schedule every day ("00:00:01") do(execucao)')
 
 def copiar_arquivos():
     origem = "C:\\Pietro\\Projetos\\RPA_PRESCR_EM_PDF\\Prescricoes"
@@ -520,6 +523,7 @@ def main():
     if not tarefa_executada_erro:
          tarefa_executada = True
          registrar_log(f" {contador} gerada(s)!")
+         #Zerando o contador no txt:
          registrar_log_contador(str(0))
     #registrar_log("FIM execucao")
 
@@ -540,20 +544,20 @@ def interface_grafica():
         registrar_log(f'statusMultiprocessing:{statusMultiprocessing}')
         registrar_log("O aplicativo foi fechado no botao X\n")
         
-    def iniciar():
+    def Planejar():
         global df_filtrado
         global df
         global tarefa_agendada_iniciada
         if not tarefa_agendada_iniciada:
-           registrar_log(f"Botao Iniciar clicado!")
+           registrar_log(f"Botao Planejar clicado!")
            processo = multiprocessing.Process(target=cronometro_tarefa_agendada)
            processo.start()
-           processo.join()
-           registrar_log(f'processo = multiprocessing.Process(target=cronometro_tarefa_agendada)\nprocesso.start()')
-           label_status['text'] = "Tarefa Agendada Inicializada!"  
-           registrar_log(f'label_status["text"] = "Tarefa Agendada Inicializada!"')
-           tarefa_agendada_iniciada = True
            bt_Planejar.config(state="disabled") # desabilitando o botão de planejar a tarefa
+           registrar_log(f'Planejar processo start()')
+           #label_status['text'] = "Tarefa Agendada Inicializada!"  
+           #registrar_log(f'label_status["text"] = "Tarefa Agendada Inicializada!"')
+           tarefa_agendada_iniciada = True
+           
         else:
             registrar_log('Tarefa planejada ja inicializada')
             label_status['text'] = "Tarefa Agendada Já Inicializada!" 
@@ -571,10 +575,10 @@ def interface_grafica():
             tarefa_executada_erro = False
             processo = multiprocessing.Process(target=main)
             processo.start()
-            
-            label_status['text'] = "Tarefa executada inicializada!"
-            registrar_log(f'processo = multiprocessing.Process(target=main)\nprocesso.start()')    
-            registrar_log(f'Tarefa executada inicializada!')
+            bt_executar.config(state="disabled")
+            #label_status['text'] = "Tarefa executada inicializada!"
+            registrar_log(f'Executar processo start()')    
+            #registrar_log(f'Tarefa executada inicializada!')
             
         else:
            registrar_log("Tarefa ja executada ou planejada não inicializada. Ignorando clique.")
@@ -641,7 +645,7 @@ def interface_grafica():
     label_status.place(relx=0.5, rely=0.45, anchor='center') #centralizando na vertical
     
     bt_Planejar = tk.Button(janela, width=18, text="Planejar Tarefa",command=lambda: [
-                                                                                        iniciar(),
+                                                                                        Planejar(),
                                                                                         label_status.config(text="Tarefa planejada inicializada!"),
                                                                                         label_status.place(relx=0.5, rely=0.45, anchor='center')
                                                                                         ])
