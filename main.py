@@ -21,6 +21,7 @@ import shutil
 import schedule
 import multiprocessing
 import oracledb
+import sys
 
 #inicialização de variaveis globais:
 diretorio_atual = ""
@@ -93,7 +94,35 @@ def registrar_log_contador(texto):
     with open(caminho_arquivo, 'w') as arquivo:
         print(f"{texto}")
         arquivo.write(texto)
-           
+
+def registrar_log_tarefa_executada(texto):
+    global diretorio_atual
+    #Função para registrar um texto em um arquivo de log.
+    diretorio_atual = os.getcwd()
+    caminho_arquivo = os.path.join(diretorio_atual, 'log_tarefa_executada.txt')
+    # Abre o arquivo em modo de append (adiciona texto ao final)
+    with open(caminho_arquivo, 'w') as arquivo:
+        registrar_log(f"****registrar_log_tarefa_executada() tarefa_executada = {texto}")
+        arquivo.write(texto)
+
+def ler_tarefa_executada():
+    try:
+        with open('log_tarefa_executada.txt', 'r') as arquivo:
+            linhas_tarefa_executada = arquivo.readlines()
+            if linhas_tarefa_executada:
+                ultimo_tarefa_executada = linhas_tarefa_executada[-1].strip()
+                registrar_log(f'****ler_tarefa_executada: {ultimo_tarefa_executada}')
+                return ultimo_tarefa_executada
+    except FileNotFoundError:
+        registrar_log(f'atualizar_tarefa_executada - except FileNotFoundError\ntarefa_executada: {tarefa_executada}')
+        ultimo_tarefa_executada = False
+        return ultimo_tarefa_executada
+    except Exception as e:
+        registrar_log(f"atualizar_tarefa_executada - Erro ao ler o contador: \n{e}\ntarefa_executada: {tarefa_executada}")
+        ultimo_tarefa_executada = False
+        return ultimo_tarefa_executada
+    	
+
 def excluir_arquivos_past_downloads():
     registrar_log(f'Excluir_arquivos_past_downloads()')
     #acessando pasta download:
@@ -466,6 +495,13 @@ def Geracao_Pdf_Prescricao(df_):
     df_ = []
     registrar_log(f'df_: \n{df_}')
     #registrar_log(f'\n #FIM Geracao_Pdf_Prescricao(df_)\nstatusMultiprocessing = {statusMultiprocessing}')
+
+    registrar_log(f"Geracao Pdf Prescricao\nANTES:\nTarefa_executada: {tarefa_executada}\nTarefa_executada_erro:{tarefa_executada_erro}")
+
+    tarefa_executada = False
+
+    registrar_log(f"Geracao Pdf Prescricao\nDEPOIS:\nTarefa_executada: {tarefa_executada}\nTarefa_executada_erro:{tarefa_executada_erro}")
+    
     registrar_log(f'FIM Geracao_Pdf_Prescricao(df_)\n')
 
 def cronometro_tarefa_agendada():
@@ -486,23 +522,28 @@ def cronometro_tarefa_agendada():
         registrar_log_cronometro(f'schedule every day ("00:00:01") do(execucao)')
 
 def copiar_arquivos():
-    origem = "C:\\Pietro\\Projetos\\RPA_PRESCR_EM_PDF\\Prescricoes"
+    """Copia todos os arquivos e subdiretórios de uma pasta para outra."""
+    registrar_log(f'def copiar_arquivos()')
+    
+    # Obter o diretório base do arquivo executável:
+    base_dir = getattr(sys, '_MEIPASS', os.path.abspath("."))
+    registrar_log(f'base_dir: {base_dir}')
+    
+    origem = os.path.join(base_dir,"Prescricoes") # A pasta Prescricoes esta na raiz do projeto
     #destino = "\\\\192.168.103.252\\tihsf$\\PIETRO\\Projetos\\RPA_PRESCR_EM_PDF\\Prescricoes"
     destino = "\\\\192.168.103.252\\contingencia_hsf$\\Impressos\\Prescricoes"
-    """Copia todos os arquivos e subdiretórios de uma pasta para outra.
-    Args:
-      origem: Caminho completo da pasta de origem.
-      destino: Caminho completo da pasta de destino.
-    """
-    registrar_log(f'def copiar_arquivos()')
+    
+    registrar_log(f'Caminho de origem: {origem}')
+    registrar_log(f'Caminho de destino: {destino}')
+    
     try:
-        registrar_log(f'"copiar_arquivos()')
+        registrar_log(f'shutil.copytree(origem, destino, dirs_exist_ok=True)')
         shutil.copytree(origem, destino, dirs_exist_ok=True)
-        registrar_log(f"Arquivos copiados com sucesso de: {origem} para {destino}")
+        registrar_log(f"\nArquivos copiados com sucesso \nde: {origem} \npara {destino}\nFIM copiar_arquivos()")
     except FileExistsError:
-        registrar_log(f"A pasta de destino {destino} ja existe. Verifique se deseja sobrescrever.\nFileExistsError copiar_arquivos()")
+        registrar_log(f"\nA pasta de destino {destino} ja existe. Verifique se deseja sobrescrever.\nFileExistsError copiar_arquivos()")
     except Exception as e:
-        registrar_log(f"Ocorreu um erro durante a cópia: {str(e)}\nException copiar_arquivos()")
+        registrar_log(f"\nOcorreu um erro durante a cópia: {str(e)}\nException copiar_arquivos()\n{e}")
 
 def main():
     #global statusMultiprocessing
@@ -515,24 +556,40 @@ def main():
     global contador
     
     registrar_log("Execucao")
-    excluir_arquivos_past_downloads()
-    encontrar_diretorio_instantclient()
-    df_filtrado  = obter_pacientes_atendimentos()
-    Geracao_Pdf_Prescricao(df_filtrado)
     
-    if not tarefa_executada_erro:
-         tarefa_executada = True
-         registrar_log(f" {contador} gerada(s)!")
-         #Zerando o contador no txt:
-         registrar_log_contador(str(0))
-    #registrar_log("FIM execucao")
+    #verificação do tarefa_executada:
 
+    #ler arquivo de tarefa executada
+    temp_tarefa_executada = ler_tarefa_executada()
+    if temp_tarefa_executada == 'False':
+        registrar_log_tarefa_executada('True')
+        registrar_log(f'temp_tarefa_executada: {temp_tarefa_executada}')
+        #tarefa_executada = True
+
+        excluir_arquivos_past_downloads()
+        encontrar_diretorio_instantclient()
+        df_filtrado  = obter_pacientes_atendimentos()
+        Geracao_Pdf_Prescricao(df_filtrado)
+
+        registrar_log(f"MAIN\nANTES:\nTarefa_executada: {tarefa_executada}\nTarefa_executada_erro:{tarefa_executada_erro}")
+
+        tarefa_executada = False
+
+        registrar_log(f"MAIN\nDEPOIS:\nTarefa_executada: {tarefa_executada}\nTarefa_executada_erro:{tarefa_executada_erro}")
+
+        if not tarefa_executada_erro:
+            registrar_log(f" {contador} gerada(s)!")
+            #Zerando o contador no txt:
+            registrar_log_contador(str(0))
+        #registrar_log("FIM execucao")
+    elif temp_tarefa_executada == 'True':
+        registrar_log(f'Tarefa de execução já inicializada!')
+        resultado = messagebox.showwarning("Tarefa em execução!", "Em execução!")
 
 def interface_grafica():
     global lb_contador
     global statusMultiprocessing
     global tarefa_agendada_iniciada
-    global tarefa_executada
     global tarefa_executada_erro
     
     def ao_fechar():
@@ -566,24 +623,23 @@ def interface_grafica():
         global df_filtrado
         global df
         global lb_contador
-        global tarefa_executada
         global tarefa_executada_erro
-        registrar_log(f"Botao executar clicado! - tarefa_executada: {tarefa_executada}, tarefa_executada_erro:{tarefa_executada_erro}")
-        if not tarefa_executada or tarefa_executada_erro :
+
+        
+        if not tarefa_executada_erro :
             registrar_log("Executando Tarefa")
-            tarefa_executada = True
             tarefa_executada_erro = False
             processo = multiprocessing.Process(target=main)
             processo.start()
-            bt_executar.config(state="disabled")
+            #bt_executar.config(state="disabled")
             #label_status['text'] = "Tarefa executada inicializada!"
-            registrar_log(f'Executar processo start()')    
+            registrar_log(f'Executar processo start()') 
+            registrar_log(f"Botao executar apos start()\nTarefa_executada_erro:{tarefa_executada_erro}")   
             #registrar_log(f'Tarefa executada inicializada!')
             
         else:
-           registrar_log("Tarefa ja executada ou planejada não inicializada. Ignorando clique.")
-           label_status['text'] = "Tarefa ja executada ou planejada não inicializada!" 
-           registrar_log(f'Tarefa ja executada ou planejada não inicializada!')
+           label_status['text'] = "Tarefa ja em execução!" 
+           registrar_log(f'Tarefa ja em execução!')
     
     def atualizar_log():
         global lb_contador
@@ -620,6 +676,22 @@ def interface_grafica():
             label_status_lb_contador['text'] = f"Erro ao ler o contador: {e}"
         finally:
             janela.after(2000, atualizar_contador)
+
+    def atualizar_tarefa_executada():
+        """Atualiza o rótulo do contador com a última linha do arquivo log_contador.txt."""
+        try:
+            with open('log_tarefa_executada.txt', 'r') as arquivo:
+                linhas_tarefa_executada = arquivo.readlines()
+                if linhas_tarefa_executada:
+                    ultimo_tarefa_executada = linhas_tarefa_executada[-1].strip()
+                    registrar_log(f'Ultima tarefa executada: {ultimo_tarefa_executada}')
+                    return ultimo_tarefa_executada
+        except FileNotFoundError:
+            registrar_log('atualizar_tarefa_executada - except FileNotFoundError')
+        except Exception as e:
+            registrar_log(f"atualizar_tarefa_executada - Erro ao ler o contador: \n{e}")
+        finally:
+            janela.after(4000, atualizar_tarefa_executada)
 
     #INTERFACE GRAFICA:
     janela = tk.Tk()
@@ -684,6 +756,7 @@ if __name__ == "__main__":
         #deletando todos os arquivos da pasta download
         pasta_downloads = os.path.join(os.path.expanduser("~"), "Downloads")
         #registrar_log(f'deletando todos os arquivos da pasta download\npasta_downloads = os.path.join(os.path.expanduser("~"), "Downloads")\n')
+        registrar_log_tarefa_executada('False')
         interface_grafica() 
             
     except Exception as erro:
