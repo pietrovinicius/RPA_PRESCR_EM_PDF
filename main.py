@@ -156,7 +156,7 @@ def obter_pacientes_atendimentos():
                             APV.CD_PESSOA_FISICA
                         ORDER BY 
                             APV.CD_SETOR_ATENDIMENTO
-                        FETCH FIRST 2 ROWS ONLY
+                        FETCH FIRST 1 ROWS ONLY
                     """
                 #####################################################################################
                 
@@ -191,7 +191,8 @@ def Geracao_Pdf_Prescricao(df_):
     global lb_contador
     global tarefa_executada
     global tarefa_executada_erro
-    # ============================== Geracao_Pdf_Prescricao ==============================
+    global contador
+    #  Geracao_Pdf_Prescricao 
     registrar_log('Geracao de Pdf ()')
     df_filtrado = df_
     registrar_log(f'\ndf_filtrado:\n{df_filtrado.head(1)}')
@@ -202,7 +203,7 @@ def Geracao_Pdf_Prescricao(df_):
     registrar_log(f'contador:{contador}\ncontador_linhas_df: {contador_linhas_df}')
     registrar_log_contador(str(contador))
     
-    #=================================== REPETICAO #=================================== 
+    #===== REPETICAO #===== 
     try:
         registrar_log('Inicio da repetição')
         for index, row in df_filtrado.iterrows():
@@ -391,13 +392,13 @@ def Geracao_Pdf_Prescricao(df_):
                 registrar_log(f"caminho antigo: {caminho_antigo}")
                 nr_atendimento = linha
                 caminho_novo = os.path.join(pasta_data, f"{nr_atendimento} - {agora().replace(':', '-')}.pdf")
-                registrar_log(f'caminho_novo = {caminho_novo},\narquivo:{agora().replace(':', '-')}.pdf)')
+                registrar_log(f'caminho_novo = {caminho_novo},arquivo:{agora().replace(':', '-')}.pdf)')
             
                 try:
                     time.sleep(TEMPO_ESPERA/5)
                     registrar_log(f'try: shutil.move(\ncaminho_antigo:{caminho_antigo}, \ncaminho_novo{caminho_novo})')
                     shutil.move(caminho_antigo, caminho_novo)
-                    registrar_log(f"Arquivo:{caminho_novo} \n*****Renomeado e movido com sucesso.")
+                    registrar_log(f"Arquivo:{caminho_novo} Renomeado e movido com sucesso.")
                 except shutil.Error as e:
                     registrar_log(f"Erro ao mover o arquivo: {e}")
                     tarefa_executada_erro = True
@@ -414,7 +415,7 @@ def Geracao_Pdf_Prescricao(df_):
                 #registrar_log(f'Retirando da lista o nr_atendimento: {linha}')
                 #registrar_log(f'lista_nr_atendimento:\n{lista_nr_atendimento}')
                 #registrar_log(f'\ncontador = {contador} - de contador_linhas_df:{contador_linhas_df}')
-                registrar_log(f'******************** FIM ********************')
+                #registrar_log(f'******************** FIM ********************')
                 
                 # pausa dramática:
                 time.sleep(TEMPO_ESPERA/5)
@@ -431,11 +432,11 @@ def Geracao_Pdf_Prescricao(df_):
          if not tarefa_executada_erro:
             tarefa_executada = True
 
-    registrar_log(f'Lista com nr_atendimentos com erro\nlista_nr_atendimento: {lista_nr_atendimento}')
+    #registrar_log(f'Lista com nr_atendimentos com erro\nlista_nr_atendimento: {lista_nr_atendimento}')
     #montar data frame com lista de itens que tiveram erro e não foram deletados:
     df_lista_nr_atendimento = pd.DataFrame(lista_nr_atendimento)
     lista_nr_atendimento = []
-    registrar_log(f'Lista com nr_atendimentos com erro APAGADA!\nlista_nr_atendimento: {lista_nr_atendimento}')
+    #registrar_log(f'Lista com nr_atendimentos com erro APAGADA!\nlista_nr_atendimento: {lista_nr_atendimento}')
     #registrar_log(f'df_lista_nr_atendimento: {df_lista_nr_atendimento}')
     
     #ação para o caso do df_lista_nr_atendimento for vazio ou não:
@@ -446,13 +447,13 @@ def Geracao_Pdf_Prescricao(df_):
         df = df_lista_nr_atendimento
         #registrar_log(f'if df_lista_nr_atendimento.empty:{df_lista_nr_atendimento}\ndf:{df}')
     else:
-        registrar_log(f'df_lista_nr_atendimento nao esta em branco\nglobal df recebera df_lista_nr_atendimento!!!!')
+        #registrar_log(f'df_lista_nr_atendimento nao esta em branco\nglobal df recebera df_lista_nr_atendimento!!!!')
         #registrar_log(f'\ndf = df_lista_nr_atendimento: \n{df_lista_nr_atendimento}')
         df = df_lista_nr_atendimento
         df_lista_nr_atendimento = None
         #registrar_log(f'df_lista_nr_atendimento.clear(){df_lista_nr_atendimento.sample()}')
         #registrar_log(f'df = df: \n{df.sample()}')
-        registrar_log_atend_erros(df)
+        #registrar_log_atend_erros(df)
         registrar_log(f"Executara novamente a Geracao_Pdf_Prescricao() com o global df apenas com os nr_atendimento que tiveram erros:")
         Geracao_Pdf_Prescricao(df)
         
@@ -465,7 +466,7 @@ def Geracao_Pdf_Prescricao(df_):
     #statusMultiprocessing = False
     df_ = []
     registrar_log(f'df_: \n{df_}')
-    #registrar_log(f'\n============================== #FIM Geracao_Pdf_Prescricao(df_)\nstatusMultiprocessing = {statusMultiprocessing}')
+    #registrar_log(f'\n #FIM Geracao_Pdf_Prescricao(df_)\nstatusMultiprocessing = {statusMultiprocessing}')
     registrar_log(f'FIM Geracao_Pdf_Prescricao(df_)\n')
 
 def cronometro_tarefa_agendada():
@@ -506,15 +507,21 @@ def main():
     global lb_contador
     global df_filtrado
     global tarefa_executada
+    global tarefa_executada_erro
+    global janela 
+    global contador
     
-    registrar_log(" main()")
+    registrar_log("Execucao")
     excluir_arquivos_past_downloads()
     encontrar_diretorio_instantclient()
     df_filtrado  = obter_pacientes_atendimentos()
     Geracao_Pdf_Prescricao(df_filtrado)
-    tarefa_executada = True
-    registrar_log_contador(0)
-    registrar_log("Prescrições geradas!")
+    
+    if not tarefa_executada_erro:
+         tarefa_executada = True
+         registrar_log(f" {contador} gerada(s)!")
+         registrar_log_contador(str(0))
+    #registrar_log("FIM execucao")
 
 
 def interface_grafica():
@@ -565,9 +572,14 @@ def interface_grafica():
             processo = multiprocessing.Process(target=main)
             processo.start()
             
-            bt_executar.config(state="disabled")  # desabilita o botão
+            label_status['text'] = "Tarefa executada inicializada!"
+            registrar_log(f'processo = multiprocessing.Process(target=main)\nprocesso.start()')    
+            registrar_log(f'Tarefa executada inicializada!')
+            
         else:
+           registrar_log("Tarefa ja executada ou planejada não inicializada. Ignorando clique.")
            label_status['text'] = "Tarefa ja executada ou planejada não inicializada!" 
+           registrar_log(f'Tarefa ja executada ou planejada não inicializada!')
     
     def atualizar_log():
         global lb_contador
@@ -577,7 +589,8 @@ def interface_grafica():
                 linhas = arquivo.readlines()
                 if linhas:
                     ultima_linha = linhas[-1].strip() #pega a última linha, e remove os espaços
-                    label_log['text'] = ultima_linha # Atualiza o texto do label do log
+                    label_status['text'] = ultima_linha
+                    label_status.update_idletasks()
                     if "lb_contador" in ultima_linha:
                          lb_contador = ultima_linha.split("lb_contador:")[1].split(" - linha:")[0].strip() #extraindo o lb_contador do texto
                          label_status_lb_contador['text'] = str(lb_contador)
@@ -603,6 +616,7 @@ def interface_grafica():
             label_status_lb_contador['text'] = f"Erro ao ler o contador: {e}"
         finally:
             janela.after(2000, atualizar_contador)
+
     #INTERFACE GRAFICA:
     janela = tk.Tk()
     janela.maxsize(600,400)
@@ -623,17 +637,19 @@ def interface_grafica():
     titulo_label.place(x=135, y=33.5)
     
     # Rótulo para mostrar o status
-    label_status = tk.Label(janela, text="...")
+    label_status = tk.Label(janela, text="", wraplength=550, justify="center")
     label_status.place(relx=0.5, rely=0.45, anchor='center') #centralizando na vertical
     
     bt_Planejar = tk.Button(janela, width=18, text="Planejar Tarefa",command=lambda: [
                                                                                         iniciar(),
+                                                                                        label_status.config(text="Tarefa planejada inicializada!"),
                                                                                         label_status.place(relx=0.5, rely=0.45, anchor='center')
                                                                                         ])
     bt_Planejar.place(x=80 , y=275)
 
     bt_executar = tk.Button(janela, width=18, text="Executar Tarefa", command=lambda: [
                                                                                         executar(),
+                                                                                        label_status.config(text="Tarefa executada inicializada!"),
                                                                                         label_status.place(relx=0.5, rely=0.45, anchor='center')
                                                                                         ])
     bt_executar.place(x=350 , y=275)
@@ -656,7 +672,7 @@ def interface_grafica():
     atualizar_contador()
     
     janela.mainloop()
-    
+
 if __name__ == "__main__":
     try:
         registrar_log(f'{agora()}\n__name__ == "__main__" \n')
