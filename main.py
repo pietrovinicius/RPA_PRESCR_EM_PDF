@@ -509,17 +509,13 @@ def cronometro_tarefa_agendada():
     
     #agendamentos:
     schedule.every().day.at("00:00:01").do(main)
-    registrar_log(f'Planejada execução todos os dia as 00:00')
-    
-     #agendamentos:
     schedule.every().day.at("12:00:01").do(main)
-    registrar_log(f'Planejada execução todos os dia as 12:00')
-    
+    registrar_log(f'Planejada execução todos os dia as 00:00 e 12:00')
     #inserindo o schedule
     while True:
         schedule.run_pending()
         time.sleep(1)
-        registrar_log_cronometro(f'schedule every day ("00:00:01") do(execucao)')
+        registrar_log_cronometro(f'Planejada execução todos os dia as 00:00 e 12:00')
 
 def copiar_arquivos():
     """Copia todos os arquivos e subdiretórios de uma pasta para outra."""
@@ -604,16 +600,16 @@ def interface_grafica():
     def Planejar():
         global df_filtrado
         global df
-        global tarefa_agendada_iniciada
-        if not tarefa_agendada_iniciada:
+        global tarefa_executada_erro
+
+        if not tarefa_executada_erro:
            registrar_log(f"Botao Planejar clicado!")
            processo = multiprocessing.Process(target=cronometro_tarefa_agendada)
            processo.start()
            bt_Planejar.config(state="disabled") # desabilitando o botão de planejar a tarefa
            registrar_log(f'Planejar processo start()')
-           #label_status['text'] = "Tarefa Agendada Inicializada!"  
+           registrar_log(f"Botao executar apos start()\nTarefa_executada_erro:{tarefa_executada_erro}")  
            #registrar_log(f'label_status["text"] = "Tarefa Agendada Inicializada!"')
-           tarefa_agendada_iniciada = True
            
         else:
             registrar_log('Tarefa planejada ja inicializada')
@@ -631,11 +627,9 @@ def interface_grafica():
             tarefa_executada_erro = False
             processo = multiprocessing.Process(target=main)
             processo.start()
-            #bt_executar.config(state="disabled")
-            #label_status['text'] = "Tarefa executada inicializada!"
+            bt_executar.config(state="disabled")
             registrar_log(f'Executar processo start()') 
             registrar_log(f"Botao executar apos start()\nTarefa_executada_erro:{tarefa_executada_erro}")   
-            #registrar_log(f'Tarefa executada inicializada!')
             
         else:
            label_status['text'] = "Tarefa ja em execução!" 
