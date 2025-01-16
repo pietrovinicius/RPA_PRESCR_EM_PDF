@@ -1,30 +1,28 @@
+"""
+24/10/2024
+@PLima
+
+Automação PDID - Extrai em pdf todas as prescrições dos pacientes Internados
+"""
 import tkinter as tk
 import os
 import datetime
 from tkinter import messagebox
-
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
-
 import time
 import pyautogui
-
 import os
 import pandas as pd
-import PyPDF2
-
 import os
 import glob
 import shutil
-
 import schedule
 import multiprocessing
-import sys
-
 import oracledb
 
-# inicialização de variaveis globais:
+#inicialização de variaveis globais:
 diretorio_atual = ""
 statusMultiprocessing = False
 df = ""
@@ -35,6 +33,12 @@ diretorio_atual_prescricoes = ""
 lista_nr_atendimento = []
 
 lb_contador = 0
+
+#variáveis de controle:
+tarefa_agendada_iniciada = False
+tarefa_executada = False
+tarefa_executada_erro = False
+
 # Constante para tempo de espera:
 TEMPO_ESPERA = 10
 
@@ -46,7 +50,7 @@ def agora_limpo():
 
 def agora():
     agora = datetime.datetime.now()
-    agora = agora.strftime("%Y-%m-%d %H-%M-%S")
+    agora = agora.strftime("%Y-%m-%d %H:%M:%S")
     return str(agora)
 
 def registrar_log(texto):
@@ -79,22 +83,33 @@ def registrar_log_atend_erros(texto):
     with open(caminho_arquivo, 'a') as arquivo:
         print(f"{texto}")
         arquivo.write(f"{agora()} - {texto}\n")
+
+def registrar_log_contador(texto):
+    global diretorio_atual
+    #Função para registrar um texto em um arquivo de log.
+    diretorio_atual = os.getcwd()
+    caminho_arquivo = os.path.join(diretorio_atual, 'log_contador.txt')
+    # Abre o arquivo em modo de append (adiciona texto ao final)
+    with open(caminho_arquivo, 'w') as arquivo:
+        print(f"{texto}")
+        arquivo.write(texto)
+        
         
 def excluir_arquivos_past_downloads():
-    registrar_log(f'============================== Excluir_arquivos_past_downloads() ==============================')
+    registrar_log(f'Excluir_arquivos_past_downloads()')
     #acessando pasta download:
     downloads_path = os.path.join(os.path.expanduser("~"), "Downloads")
-    registrar_log(f'Caminho da pasta downloads_path:\n{downloads_path}')    
+    registrar_log(f'Caminho da pasta downloads: {downloads_path}')    
     files = glob.glob(os.path.join(downloads_path, '*'))
     for f in files:
         try:
             os.remove(f)
-            registrar_log(f"Arquivo {f} removido com sucesso.\n\n")
+            registrar_log(f"Arquivo {f} removido com sucesso.")
         except Exception as e:
-            registrar_log(f"Não foi possível remover o arquivo {f}. Erro: {e}\n")          
+            registrar_log(f"Não foi possível remover o arquivo {f}\nErro: {e}\n")          
 
 def encontrar_diretorio_instantclient(nome_pasta="instantclient-basiclite-windows.x64-23.6.0.24.10\\instantclient_23_6"):
-  registrar_log(f' ============================== encontrar_diretorio_instantclient')
+  #registrar_log(f'Encontrar_diretorio_instantclient')
   # Obtém o diretório do script atual
   diretorio_atual = os.path.dirname(os.path.abspath(__file__))
 
@@ -105,7 +120,7 @@ def encontrar_diretorio_instantclient(nome_pasta="instantclient-basiclite-window
   if os.path.exists(caminho_instantclient):
     return caminho_instantclient
   else:
-    registrar_log(f"A pasta '{nome_pasta}' não foi encontrada na raiz do aplicativo.")
+    registrar_log(f"encontrar diretorio instantclient()\nA pasta '{nome_pasta}' não foi encontrada na raiz do aplicativo.")
     return None
 
 def obter_pacientes_atendimentos():
@@ -141,6 +156,7 @@ def obter_pacientes_atendimentos():
                             APV.CD_PESSOA_FISICA
                         ORDER BY 
                             APV.CD_SETOR_ATENDIMENTO
+                        FETCH FIRST 2 ROWS ONLY
                     """
                 #####################################################################################
                 
@@ -148,21 +164,24 @@ def obter_pacientes_atendimentos():
                 cursor.execute(sql)
                 
                 # Imprimir os resultados da consulta para verificar
-                registrar_log(f'results = cursor.fetchall()\n')
+                #registrar_log(f'results = cursor.fetchall()\n')
                 results = cursor.fetchall()
-                
-                registrar_log(f'df = pd.DataFrame(results, columns=[desc[0] for desc in cursor.description])')
+        
+                #registrar_log(f'df = pd.DataFrame(results, columns=[desc[0] for desc in cursor.description])')
                 df = pd.DataFrame(results, columns=[desc[0] for desc in cursor.description])
                 
                 # Visualizar os primeiros 5 registros
-                registrar_log(f'data_frame:\n{df.head()}')
-                registrar_log(f'\ndata_frame:\n{df.shape}')
-                registrar_log("DataFrame salvo com sucesso!")
+                registrar_log(f'Atendimentos: {df.sample()}')
+                time.sleep(2)
+                registrar_log(f'Atendimentos data frame:{df.shape}')
+                time.sleep(2)
+                registrar_log("Atendimentos obtido com sucesso!")
+                time.sleep(5)
 
     except Exception as erro:
-        registrar_log(f"Erro Inesperado:\n{erro}")
+        registrar_log(f"obter_pacientes_atendimentos() Erro Inesperado:\n{erro}")
     
-    registrar_log(f'return df:{df.head}')
+    #registrar_log(f'return df:{df.head}')
     return df
 
 def Geracao_Pdf_Prescricao(df_):
@@ -170,68 +189,70 @@ def Geracao_Pdf_Prescricao(df_):
     global diretorio_atual_prescricoes
     global lista_nr_atendimento
     global lb_contador
+    global tarefa_executada
+    global tarefa_executada_erro
     # ============================== Geracao_Pdf_Prescricao ==============================
-    registrar_log('\n\n============================== Geracao_Pdf_Prescricao ==============================')
+    registrar_log('Geracao de Pdf ()')
     df_filtrado = df_
-    registrar_log(f'\ndf_filtrado:\n{df_filtrado}')
+    registrar_log(f'\ndf_filtrado:\n{df_filtrado.head(1)}')
     
     lb_contador = 0
     contador = 0
     contador_linhas_df = len(df_filtrado)
-    registrar_log(f'contador:{contador} - contador_linhas_df: {contador_linhas_df}')
+    registrar_log(f'contador:{contador}\ncontador_linhas_df: {contador_linhas_df}')
+    registrar_log_contador(str(contador))
     
     #=================================== REPETICAO #=================================== 
     try:
-        registrar_log('=================================== INICIO REPETICAO =================================== ')
+        registrar_log('Inicio da repetição')
         for index, row in df_filtrado.iterrows():
             linha = row[0]
             linha = str(linha)
             lista_nr_atendimento.append(linha)
-            registrar_log(f'============================== Repeticao for index, row in df_filtrado.iterrows():')
+            registrar_log(f'Repeticao for index iterrows()')
             registrar_log(f"Adicionando a lista o nr_atendimento:{linha}")
-            lb_contador = linha
-            registrar_log(f"lb_contador:{lb_contador} - linha:{linha}")
+            registrar_log(f"Geracao Pdf Prescricao - contador:{lb_contador}")
             
             try:
-                registrar_log('============================== try:')                
+                registrar_log('Geracao_Pdf_Prescricao() - try:')                
                 #tela toda:
                 driver = webdriver.Chrome()
                 options = Options()
                 options.add_argument("--start-maximized")
                 driver = webdriver.Chrome(options=options)
                 driver.get("http://aplicacao.hsf.local:7070/#/login")
-                registrar_log('driver.get("http://aplicacao.hsf.local:7070/#/login")')
+                registrar_log('http://aplicacao.hsf.local:7070/#/login')
                 title = driver.title
                 driver.implicitly_wait(TEMPO_ESPERA)
                 
                 # box de usuario:
                 box_usuario = driver.find_element(By.XPATH, value='//*[@id="loginUsername"]')
                 box_usuario.send_keys('pvplima')
-                registrar_log('box_usuario')
+                registrar_log('usuario')
                 time.sleep(TEMPO_ESPERA/5)
                 
                 # box de senha:
                 box_senha = driver.find_element(By.XPATH, value='//*[@id="loginPassword"]')
                 box_senha.send_keys('hsf@2024')
-                registrar_log('box_senha')
+                registrar_log('senha')
                 time.sleep(TEMPO_ESPERA/5)
                 
                 # botao de login:
                 bt_login = driver.find_element(By.XPATH, value='//*[@id="loginForm"]/input[3]')
                 bt_login.click()
-                registrar_log('bt_login')
+                registrar_log('login')
                 driver.implicitly_wait(TEMPO_ESPERA)
                 time.sleep(TEMPO_ESPERA/2)
                 
                 #click objeto invalido
                 pyautogui.click(1107,702)
-                registrar_log("click objeto invalido\npyautogui.click(1107,702)")
+                registrar_log("click objeto invalido\nclick(1107,702)")
                 time.sleep(TEMPO_ESPERA/5)
         
                 #clicar no icone do CPOE:
                 bt_CPOE = driver.find_element(By.XPATH, value='//*[@id="app-view"]/tasy-corsisf1/div/w-mainlayout/div/div/w-launcher/div/div/div[1]/w-apps/div/div[1]/ul/li[2]/w-feature-app/a/img')
                 bt_CPOE.click()
-                registrar_log('clicar no icone do CPOE:')
+                registrar_log('clicar no CPOE')
                 driver.implicitly_wait(TEMPO_ESPERA)
                 time.sleep(TEMPO_ESPERA/2)
                                 
@@ -256,7 +277,7 @@ def Geracao_Pdf_Prescricao(df_):
                 
                 #click atendimento fechado
                 pyautogui.click(1100,709)
-                registrar_log("click atendimento fechado")
+                registrar_log("click atendimento fechado click(1107,709)")
                 driver.implicitly_wait(TEMPO_ESPERA/7.5)
                 time.sleep(TEMPO_ESPERA/7.5)
                 
@@ -265,37 +286,75 @@ def Geracao_Pdf_Prescricao(df_):
                 bt_cpoe_relatorios.click()
                 registrar_log("bt_cpoe_relatorios.click()")
                 driver.implicitly_wait(TEMPO_ESPERA/10)
-                time.sleep(TEMPO_ESPERA/5)
+                time.sleep(TEMPO_ESPERA/10)
                 
                 #botao visualizar
                 bt_cpoe_visualizar = driver.find_element(By.XPATH, value='//*[@id="popupViewPort"]/li[5]/div[3]')
                 bt_cpoe_visualizar.click()
-                registrar_log("bt_cpoe_visualizar")
-                driver.implicitly_wait(TEMPO_ESPERA/3)
-                time.sleep(TEMPO_ESPERA/5)
+                registrar_log("visualizar.click()")
+                driver.implicitly_wait(TEMPO_ESPERA/2)
+                time.sleep(TEMPO_ESPERA/2)
                 
                 #click no baixar
                 registrar_log(f'click no baixar')
                 pyautogui.click(1817,165)
-                registrar_log(f'pyautogui.click(1817,165)')
+                registrar_log(f'baixar.click(1817,165)')
                 time.sleep(TEMPO_ESPERA/5)
                 
                 #Pressionar enter:
                 pyautogui.press('enter')
-                registrar_log("Pressionar Item\npyautogui.press('enter')")
+                registrar_log("Pressionar('enter')")
+                time.sleep(TEMPO_ESPERA/5)
+                
+                """Clica no botão 'btn_manter.png' na tela."""
+                registrar_log("tentando clicar no btn_manter()")
+                try:
+                
+                    # 1. `pyautogui.locateOnScreen()`:
+                    # Encontra a localização da imagem do botão na tela
+                    localizacao = pyautogui.locateOnScreen('btn_manter.png', confidence=0.95)
+                    
+                    # 2. `pyautogui.center()`:
+                    # Encontra o centro da localização:
+                    ponto_central = pyautogui.center(localizacao)
+                    
+                    # 3. `pyautogui.click()`:
+                    # Move o mouse para o centro da imagem e clica
+                    registrar_log(f"localizacao:{localizacao}\nponto_central:{ponto_central}")
+                    pyautogui.click(ponto_central)
+                    time.sleep(TEMPO_ESPERA/8)
+                    registrar_log(f"btn_manter.png click(ponto_central)")
+                    
+                    
+                except pyautogui.ImageNotFoundException:
+                    registrar_log("Imagem 'btn_manter.png' não encontrada na tela.")
+                except Exception as e:
+                    registrar_log(f"Houve um erro em clicar_btn_manter: \n{e}")
+                time.sleep(TEMPO_ESPERA/8)    
+                            
+                #click no manter
+                registrar_log(f'btn_manter')
+                pyautogui.click(1755,106)
+                registrar_log(f'manter.click(1755,106)')
                 time.sleep(TEMPO_ESPERA/5)
                 
                 #click no manter
                 registrar_log(f'btn_manter')
                 pyautogui.click(1755,106)
-                registrar_log(f'pyautogui.click(1755,106)')
+                registrar_log(f'manter.click(1751,112)')
+                time.sleep(TEMPO_ESPERA/5)
+                
+                #click no manter
+                registrar_log(f'btn_manter')
+                pyautogui.click(1755,106)
+                registrar_log(f'manter.click(1755,106)')
                 time.sleep(TEMPO_ESPERA/5)
                 
                 #driver.quit()
                 driver.quit()
                 registrar_log(f'\ndriver.quit()\n')
                 
-                registrar_log(f'\ncontador = {contador} - de contador_linhas_df:{contador_linhas_df}')
+                #registrar_log(f'contador = {contador} - de contador_linhas_df:{contador_linhas_df}')
                 
                 #acessando pasta download:
                 downloads_path = os.path.join(os.path.expanduser("~"), "Downloads")
@@ -309,11 +368,10 @@ def Geracao_Pdf_Prescricao(df_):
                 
                 #ultimo arquivo
                 ultimo_arquivo = os.path.join(downloads_path, files[0])
-                registrar_log(f"\n*****Ultimo arquivo antes de renomear: {ultimo_arquivo}")
+                registrar_log(f"Ultimo arquivo antes de renomear: {ultimo_arquivo}")
                 time.sleep(TEMPO_ESPERA/5)
                 
                 # Caminho da pasta Prescricoes
-                #data_hora = agora_limpo()
                 pasta_prescricoes = "Prescricoes"
                 registrar_log(f"pasta_prescricoes: {pasta_prescricoes}")
                 time.sleep(TEMPO_ESPERA/5)
@@ -324,7 +382,7 @@ def Geracao_Pdf_Prescricao(df_):
                 
                 # Cria a pasta da data se não existir
                 os.makedirs(pasta_data, exist_ok=True)
-                registrar_log(f"***********os.makedirs: {pasta_data}")
+                registrar_log(f"Cria a pasta da data se não existir: {pasta_data}")
                 time.sleep(TEMPO_ESPERA/5)
                 
                 #renomeia e move os arquivos
@@ -332,8 +390,8 @@ def Geracao_Pdf_Prescricao(df_):
                 caminho_antigo = os.path.join(downloads_path, ultimo_arquivo)
                 registrar_log(f"caminho antigo: {caminho_antigo}")
                 nr_atendimento = linha
-                caminho_novo = os.path.join(pasta_data, f"{nr_atendimento} - {agora()}.pdf")
-                registrar_log(f'caminho_novo = {caminho_novo},\narquivo:{agora()}.pdf)')
+                caminho_novo = os.path.join(pasta_data, f"{nr_atendimento} - {agora().replace(':', '-')}.pdf")
+                registrar_log(f'caminho_novo = {caminho_novo},\narquivo:{agora().replace(':', '-')}.pdf)')
             
                 try:
                     time.sleep(TEMPO_ESPERA/5)
@@ -342,80 +400,86 @@ def Geracao_Pdf_Prescricao(df_):
                     registrar_log(f"Arquivo:{caminho_novo} \n*****Renomeado e movido com sucesso.")
                 except shutil.Error as e:
                     registrar_log(f"Erro ao mover o arquivo: {e}")
+                    tarefa_executada_erro = True
                     
                 time.sleep(TEMPO_ESPERA/5)
                 #FIM
                 contador += 1
+                lb_contador = contador
+                registrar_log(f'Contador: {contador}')
+                registrar_log_contador(str(contador))
                 #se rodar tudo ok, retirar o número de atendimento da lista_nr_atendimento
                 lista_nr_atendimento.remove(linha)
-                registrar_log(f'lista_nr_atendimento.remove({linha})')
-                registrar_log(f'Retirando da lista o nr_atendimento: {linha}')
-                registrar_log(f'lista_nr_atendimento:\n{lista_nr_atendimento}\n')
-                registrar_log(f'\ncontador = {contador} - de contador_linhas_df:{contador_linhas_df}')
-                registrar_log(f'\n********************FIM********************\n')
+                #registrar_log(f'lista_nr_atendimento.remove({linha})')
+                #registrar_log(f'Retirando da lista o nr_atendimento: {linha}')
+                #registrar_log(f'lista_nr_atendimento:\n{lista_nr_atendimento}')
+                #registrar_log(f'\ncontador = {contador} - de contador_linhas_df:{contador_linhas_df}')
+                registrar_log(f'******************** FIM ********************')
                 
                 # pausa dramática:
                 time.sleep(TEMPO_ESPERA/5)
-                #driver.quit()
                 
             except Exception as erro:
                     registrar_log(f'=========== \nERROR:\nexcept do try de dento do for linha in df_filtrado')
                     registrar_log(f'\nlista_nr_atendimento:{lista_nr_atendimento}\ncontador: {contador} \n{erro}')
-                    
+    
     except Exception as erro:
         #ao terminar extoura um exception e cai nesse bloco
         registrar_log(f"=========== \nERROR:\n except: for linha in df_filtrado:\nlista_nr_atendimento:{lista_nr_atendimento}\ncontador: {contador} \n{erro}")                    
-             
+    finally:
+         #se ocorrer um erro na execução, definimos que a variavel tarefa_executada sera False para que a tarefa possa ser executada novamente:
+         if not tarefa_executada_erro:
+            tarefa_executada = True
+
     registrar_log(f'Lista com nr_atendimentos com erro\nlista_nr_atendimento: {lista_nr_atendimento}')
     #montar data frame com lista de itens que tiveram erro e não foram deletados:
     df_lista_nr_atendimento = pd.DataFrame(lista_nr_atendimento)
     lista_nr_atendimento = []
     registrar_log(f'Lista com nr_atendimentos com erro APAGADA!\nlista_nr_atendimento: {lista_nr_atendimento}')
-    registrar_log(f'df_lista_nr_atendimento: \n{df_lista_nr_atendimento}')
+    #registrar_log(f'df_lista_nr_atendimento: {df_lista_nr_atendimento}')
     
     #ação para o caso do df_lista_nr_atendimento for vazio ou não:
     if df_lista_nr_atendimento.empty:
         registrar_log(f'\nTodos os atendimentos foram gerados com sucesso!')
-        registrar_log(f'\n=========== FIM Geracao_Pdf_Prescricao()\n\n\n\n\n')
+        #registrar_log(f'FIM Geracao_Pdf_Prescricao()')
         df_lista_nr_atendimento = None
         df = df_lista_nr_atendimento
-        registrar_log(f'if df_lista_nr_atendimento.empty:\ndf_lista_nr_atendimento:{df_lista_nr_atendimento}\ndf:{df}')
+        #registrar_log(f'if df_lista_nr_atendimento.empty:{df_lista_nr_atendimento}\ndf:{df}')
     else:
         registrar_log(f'df_lista_nr_atendimento nao esta em branco\nglobal df recebera df_lista_nr_atendimento!!!!')
-        registrar_log(f'\ndf = df_lista_nr_atendimento: \n{df_lista_nr_atendimento}')
+        #registrar_log(f'\ndf = df_lista_nr_atendimento: \n{df_lista_nr_atendimento}')
         df = df_lista_nr_atendimento
         df_lista_nr_atendimento = None
-        registrar_log(f'df_lista_nr_atendimento.clear(){df_lista_nr_atendimento}\n')
-        registrar_log(f'df = df: \n{df}')
+        #registrar_log(f'df_lista_nr_atendimento.clear(){df_lista_nr_atendimento.sample()}')
+        #registrar_log(f'df = df: \n{df.sample()}')
         registrar_log_atend_erros(df)
-        registrar_log(f"Executara novamente a Geracao_Pdf_Prescricao() com o global df apenas com os nr_atendimento que tiveram erros:\n{df}")
+        registrar_log(f"Executara novamente a Geracao_Pdf_Prescricao() com o global df apenas com os nr_atendimento que tiveram erros:")
         Geracao_Pdf_Prescricao(df)
         
     #copiar_arquivos:
-    registrar_log(f'def Geracao_PDF_Prescricao() bloco com funcao copiar_arquivos()')
+    registrar_log(f'def Geracao_PDF_Prescricao() \nbloco com funcao copiar_arquivos()')
     copiar_arquivos()
 
          
     #FIM:
     #statusMultiprocessing = False
     df_ = []
-    registrar_log(f'\n============================== df_: \n{df_}')
+    registrar_log(f'df_: \n{df_}')
     #registrar_log(f'\n============================== #FIM Geracao_Pdf_Prescricao(df_)\nstatusMultiprocessing = {statusMultiprocessing}')
-    registrar_log(f'\n============================== #FIM Geracao_Pdf_Prescricao(df_)\n')
-    registrar_log(f'\n\n\n')
+    registrar_log(f'FIM Geracao_Pdf_Prescricao(df_)\n')
 
 def cronometro_tarefa_agendada():
-    registrar_log(f'"============================== cronometro_tarefa_agendada() "==============================')
+    registrar_log(f'cronometro_tarefa_agendada()')
     
     #agendamentos:
     schedule.every().day.at("00:00:01").do(main)
-    registrar_log(f'schedule.every().day.at("00:00:01").do(execucao)')
+    registrar_log(f'schedule every day ("00:00:01") do(execucao)')
     
     #inserindo o schedule
     while True:
         schedule.run_pending()
         time.sleep(1)
-        registrar_log_cronometro(f'schedule.every().day.at("00:00:01").do(execucao)')
+        registrar_log(f'schedule every day ("00:00:01") do(execucao)')
 
 def copiar_arquivos():
     origem = "C:\\Pietro\\Projetos\\RPA_PRESCR_EM_PDF\\Prescricoes"
@@ -426,34 +490,39 @@ def copiar_arquivos():
       origem: Caminho completo da pasta de origem.
       destino: Caminho completo da pasta de destino.
     """
-    registrar_log(f'============================== def copiar_arquivos() ==============================')
+    registrar_log(f'def copiar_arquivos()')
     try:
-        registrar_log(f'"============================== copiar_arquivos() Try:\nshutil.copytree(origem, destino, dirs_exist_ok=True)')
+        registrar_log(f'"copiar_arquivos()')
         shutil.copytree(origem, destino, dirs_exist_ok=True)
-        registrar_log(f"\n*****Arquivos copiados com sucesso \nde: {origem} \npara {destino}\n============================== FIM copiar_arquivos()")
+        registrar_log(f"Arquivos copiados com sucesso de: {origem} para {destino}")
     except FileExistsError:
-        registrar_log(f"\n*****A pasta de destino {destino} ja existe. Verifique se deseja sobrescrever.\n============================== FileExistsError copiar_arquivos()")
+        registrar_log(f"A pasta de destino {destino} ja existe. Verifique se deseja sobrescrever.\nFileExistsError copiar_arquivos()")
     except Exception as e:
-        registrar_log(f"\n*****Ocorreu um erro durante a cópia: {str(e)}\n============================== Exception copiar_arquivos()")
+        registrar_log(f"Ocorreu um erro durante a cópia: {str(e)}\nException copiar_arquivos()")
 
 def main():
     #global statusMultiprocessing
     global df
     global lb_contador
     global df_filtrado
+    global tarefa_executada
     
-    registrar_log("============================== execucao() ========================")
+    registrar_log(" main()")
     excluir_arquivos_past_downloads()
     encontrar_diretorio_instantclient()
     df_filtrado  = obter_pacientes_atendimentos()
     Geracao_Pdf_Prescricao(df_filtrado)
-    registrar_log("\n============================== FIM execucao() ========================")
-    
-    
+    tarefa_executada = True
+    registrar_log_contador(0)
+    registrar_log("Prescrições geradas!")
+
+
 def interface_grafica():
-    registrar_log("============================== interface_grafica() ==============================")
     global lb_contador
     global statusMultiprocessing
+    global tarefa_agendada_iniciada
+    global tarefa_executada
+    global tarefa_executada_erro
     
     def ao_fechar():
         resultado = messagebox.askyesno("Confirmação", "Tem certeza de que deseja fechar o aplicativo?")
@@ -467,24 +536,39 @@ def interface_grafica():
     def iniciar():
         global df_filtrado
         global df
-        registrar_log("============================== def iniciar()")
-        registrar_log(f"Botao Iniciar clicado!")
-        processo = multiprocessing.Process(target=cronometro_tarefa_agendada)
-        processo.start()
-        registrar_log(f'processo = multiprocessing.Process(target=cronometro_tarefa_agendada)\nprocesso.start()')
-        label_status['text'] = "Tarefa Agendada Inicializada!"  
-        registrar_log(f'label_status["text"] = "Tarefa Agendada Inicializada!"')  
-            
+        global tarefa_agendada_iniciada
+        if not tarefa_agendada_iniciada:
+           registrar_log(f"Botao Iniciar clicado!")
+           processo = multiprocessing.Process(target=cronometro_tarefa_agendada)
+           processo.start()
+           processo.join()
+           registrar_log(f'processo = multiprocessing.Process(target=cronometro_tarefa_agendada)\nprocesso.start()')
+           label_status['text'] = "Tarefa Agendada Inicializada!"  
+           registrar_log(f'label_status["text"] = "Tarefa Agendada Inicializada!"')
+           tarefa_agendada_iniciada = True
+           bt_Planejar.config(state="disabled") # desabilitando o botão de planejar a tarefa
+        else:
+            registrar_log('Tarefa planejada ja inicializada')
+            label_status['text'] = "Tarefa Agendada Já Inicializada!" 
+           
     def executar():
         global df_filtrado
         global df
         global lb_contador
-        registrar_log("============================== def executar()")
-        registrar_log(f"Botao executar clicado!")
-        registrar_log('==================================== def iniciar() ====================================')            
-        processo = multiprocessing.Process(target=main)
-        processo.start()
-        
+        global tarefa_executada
+        global tarefa_executada_erro
+        registrar_log(f"Botao executar clicado! - tarefa_executada: {tarefa_executada}, tarefa_executada_erro:{tarefa_executada_erro}")
+        if not tarefa_executada or tarefa_executada_erro :
+            registrar_log("Executando Tarefa")
+            tarefa_executada = True
+            tarefa_executada_erro = False
+            processo = multiprocessing.Process(target=main)
+            processo.start()
+            
+            bt_executar.config(state="disabled")  # desabilita o botão
+        else:
+           label_status['text'] = "Tarefa ja executada ou planejada não inicializada!" 
+    
     def atualizar_log():
         global lb_contador
         """Atualiza o rótulo do log com a última linha do arquivo log.txt."""
@@ -495,15 +579,30 @@ def interface_grafica():
                     ultima_linha = linhas[-1].strip() #pega a última linha, e remove os espaços
                     label_log['text'] = ultima_linha # Atualiza o texto do label do log
                     if "lb_contador" in ultima_linha:
-                         lb_contador = ultima_linha.split("lb_contador:")[1].split(" - linha:")[0] #extraindo o lb_contador do texto
-                         label_status_lb_contador['text'] = str(lb_contador).strip()
+                         lb_contador = ultima_linha.split("lb_contador:")[1].split(" - linha:")[0].strip() #extraindo o lb_contador do texto
+                         label_status_lb_contador['text'] = str(lb_contador)
         except FileNotFoundError:
             label_log['text'] = "Arquivo de log não encontrado."
         except Exception as e:
               label_log['text'] = f"Erro ao ler o log: {e}"
         finally:
             janela.after(2000, atualizar_log) # agendar para rodar daqui 2 segundos;
-
+            
+    def atualizar_contador():
+        global lb_contador
+        """Atualiza o rótulo do contador com a última linha do arquivo log_contador.txt."""
+        try:
+            with open('log_contador.txt', 'r') as arquivo:
+                linhas_contador = arquivo.readlines()
+                if linhas_contador:
+                    ultimo_contador = linhas_contador[-1].strip()
+                    label_status_lb_contador['text'] = f'Contador: {ultimo_contador}'  # Atualiza o texto do label com o contador
+        except FileNotFoundError:
+            label_status_lb_contador['text'] = "Arquivo do contador não encontrado."
+        except Exception as e:
+            label_status_lb_contador['text'] = f"Erro ao ler o contador: {e}"
+        finally:
+            janela.after(2000, atualizar_contador)
     #INTERFACE GRAFICA:
     janela = tk.Tk()
     janela.maxsize(600,400)
@@ -524,21 +623,18 @@ def interface_grafica():
     titulo_label.place(x=135, y=33.5)
     
     # Rótulo para mostrar o status
-    label_status = tk.Label(janela, text="Escolha uma das opções abaixo:")
-    label_status.place(x=206 , y=175)
-
+    label_status = tk.Label(janela, text="...")
+    label_status.place(relx=0.5, rely=0.45, anchor='center') #centralizando na vertical
     
     bt_Planejar = tk.Button(janela, width=18, text="Planejar Tarefa",command=lambda: [
                                                                                         iniciar(),
-                                                                                        label_status.config(text="Tarefa planejada inicializada!"),
-                                                                                        label_status.place(x=200 , y=175)
+                                                                                        label_status.place(relx=0.5, rely=0.45, anchor='center')
                                                                                         ])
     bt_Planejar.place(x=80 , y=275)
 
     bt_executar = tk.Button(janela, width=18, text="Executar Tarefa", command=lambda: [
                                                                                         executar(),
-                                                                                        label_status.config(text="Tarefa executada inicializada!"),
-                                                                                        label_status.place(x=200 , y=175)
+                                                                                        label_status.place(relx=0.5, rely=0.45, anchor='center')
                                                                                         ])
     bt_executar.place(x=350 , y=275)
     
@@ -549,26 +645,26 @@ def interface_grafica():
     label_log = tk.Label(janela, text="", wraplength=550, justify="left") #justify para alinhar a esquerda
     label_log.place(x=25, y=80)
     
-    # Rótulo para exibir lb_contador
-    label_status_lb_contador = tk.Label(janela, text=str(lb_contador), font=('Arial', 10), width=10)
-    label_status_lb_contador.place(x=260 , y=120)
+    # Rótulo para exibir lb_contador no rodapé
+    label_status_lb_contador = tk.Label(janela, text=f"Contador: {str(lb_contador)}", font=('Arial', 8))
+    label_status_lb_contador.place(x=260, y=370)  # Posiciona no rodapé
     
     # Executar a função para atualizar o log
     atualizar_log()
     
-    janela.mainloop()
-
+    # Iniciar a atualização do contador
+    atualizar_contador()
     
+    janela.mainloop()
     
 if __name__ == "__main__":
     try:
-        registrar_log(f'\n\n\n\n\n\n\n\n')
-        registrar_log(f'================================ __name__ == "__main__" ================================\n')
-                
+        registrar_log(f'{agora()}\n__name__ == "__main__" \n')
+        
         #deletando todos os arquivos da pasta download
         pasta_downloads = os.path.join(os.path.expanduser("~"), "Downloads")
-        registrar_log(f'deletando todos os arquivos da pasta download\npasta_downloads = os.path.join(os.path.expanduser("~"), "Downloads")\n')
+        #registrar_log(f'deletando todos os arquivos da pasta download\npasta_downloads = os.path.join(os.path.expanduser("~"), "Downloads")\n')
         interface_grafica() 
             
     except Exception as erro:
-        registrar_log(f'================================ __name__ == "__main__"\nException Error: \n{erro}')
+        registrar_log(f'"__main__"\nException Error: \n{erro}')
