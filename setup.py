@@ -24,7 +24,8 @@ build_exe_options = {"packages": ["os"], "includes": [
                                                         "schedule",
                                                         "multiprocessing",
                                                         "oracledb",
-                                                        "sys"
+                                                        "sys",
+                                                        "threading"
                                                     ]
                     }
 #bibliotecas a serem incluidas
