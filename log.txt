@@ -1,0 +1,249 @@
+2025-01-17 08:45:21 - 2025-01-17 08:45:21
+__name__ == "__main__" 
+
+2025-01-17 08:45:21 - ****registrar_log_tarefa_executada() tarefa_executada = False
+2025-01-17 08:45:21 -  Inicio() 
+2025-01-17 08:45:22 -  def executar()
+2025-01-17 08:45:22 - Botao executar clicado! - tarefa_executada: False, tarefa_executada_erro:False
+2025-01-17 08:45:22 - Executando Tarefa
+2025-01-17 08:45:22 - processo = multiprocessing.Process(target=main)
+processo.start()
+2025-01-17 08:45:22 - label_status["text"] = "Tarefa executada inicializada!"
+
+2025-01-17 08:45:23 - Execucao
+2025-01-17 08:45:23 - ****ler_tarefa_executada: False
+2025-01-17 08:45:23 - ****registrar_log_tarefa_executada() tarefa_executada = True
+2025-01-17 08:45:23 - temp_tarefa_executada: False
+2025-01-17 08:45:23 - Excluir_arquivos_past_downloads()
+2025-01-17 08:45:23 - Caminho da pasta downloads: C:\Users\pvplima.C19NOT76\Downloads
+2025-01-17 08:45:23 - Encontrar_diretorio_instantclient
+2025-01-17 08:45:23 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-01-17 08:45:23 - caminho instantclient:
+C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6
+2025-01-17 08:45:23 - Encontrar_diretorio_instantclient
+2025-01-17 08:45:23 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-01-17 08:45:23 - caminho instantclient:
+C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6
+2025-01-17 08:46:53 - 2025-01-17 08:46:53
+__name__ == "__main__" 
+
+2025-01-17 08:46:53 - ****registrar_log_tarefa_executada() tarefa_executada = False
+2025-01-17 08:46:53 -  Inicio() 
+2025-01-17 08:46:57 -  def executar()
+2025-01-17 08:46:57 - Botao executar clicado! - tarefa_executada: False, tarefa_executada_erro:False
+2025-01-17 08:46:57 - Executando Tarefa
+2025-01-17 08:46:57 - processo = multiprocessing.Process(target=main)
+processo.start()
+2025-01-17 08:46:57 - label_status["text"] = "Tarefa executada inicializada!"
+
+2025-01-17 08:46:57 - Execucao
+2025-01-17 08:46:57 - ****ler_tarefa_executada: False
+2025-01-17 08:46:57 - ****registrar_log_tarefa_executada() tarefa_executada = True
+2025-01-17 08:46:57 - temp_tarefa_executada: False
+2025-01-17 08:46:57 - Excluir_arquivos_past_downloads()
+2025-01-17 08:46:57 - Caminho da pasta downloads: C:\Users\pvplima.C19NOT76\Downloads
+2025-01-17 08:46:57 - Encontrar_diretorio_instantclient
+2025-01-17 08:46:57 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-01-17 08:46:57 - caminho instantclient:
+C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6
+2025-01-17 08:46:57 - Encontrar_diretorio_instantclient
+2025-01-17 08:46:57 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-01-17 08:46:57 - caminho instantclient:
+C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6
+2025-01-17 08:47:06 - Atendimentos:     NR_ATENDIMENTO
+74          629270
+2025-01-17 08:47:08 - Atendimentos data frame:(184, 1)
+2025-01-17 08:47:10 - Atendimentos obtido com sucesso!
+2025-01-17 08:47:44 - 2025-01-17 08:47:44
+__name__ == "__main__" 
+
+2025-01-17 08:47:44 - ****registrar_log_tarefa_executada() tarefa_executada = False
+2025-01-17 08:47:44 -  Inicio() 
+2025-01-17 08:48:08 - statusMultiprocessing:False
+2025-01-17 08:48:08 - O aplicativo foi fechado no botao X
+
+2025-01-17 08:48:17 - 2025-01-17 08:48:17
+__name__ == "__main__" 
+
+2025-01-17 08:48:17 - ****registrar_log_tarefa_executada() tarefa_executada = False
+2025-01-17 08:48:17 -  Inicio() 
+2025-01-17 08:48:18 - statusMultiprocessing:False
+2025-01-17 08:48:18 - O aplicativo foi fechado no botao X
+
+2025-01-17 08:48:53 - 2025-01-17 08:48:53
+__name__ == "__main__" 
+
+2025-01-17 08:48:53 - ****registrar_log_tarefa_executada() tarefa_executada = False
+2025-01-17 08:48:53 -  Inicio() 
+2025-01-17 08:48:55 - statusMultiprocessing:False
+2025-01-17 08:48:55 - O aplicativo foi fechado no botao X
+
+2025-01-17 08:51:19 - 2025-01-17 08:51:19
+__name__ == "__main__" 
+
+2025-01-17 08:51:19 - ****registrar_log_tarefa_executada() tarefa_executada = False
+2025-01-17 08:51:19 -  Inicio() 
+2025-01-17 08:51:22 -  def executar()
+2025-01-17 08:51:22 - Botao executar clicado! - tarefa_executada: False, tarefa_executada_erro:False
+2025-01-17 08:51:22 - Executando Tarefa
+2025-01-17 08:51:22 - processo = multiprocessing.Process(target=main)
+processo.start()
+2025-01-17 08:51:22 - label_status["text"] = "Tarefa executada inicializada!"
+
+2025-01-17 08:51:22 - Execucao
+2025-01-17 08:51:22 - ****ler_tarefa_executada: False
+2025-01-17 08:51:22 - ****registrar_log_tarefa_executada() tarefa_executada = True
+2025-01-17 08:51:22 - temp_tarefa_executada: False
+2025-01-17 08:51:22 - Excluir_arquivos_past_downloads()
+2025-01-17 08:51:22 - Caminho da pasta downloads: C:\Users\pvplima.C19NOT76\Downloads
+2025-01-17 08:51:22 - Encontrar_diretorio_instantclient
+2025-01-17 08:51:22 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-01-17 08:51:22 - caminho instantclient:
+C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6
+2025-01-17 08:51:22 - Encontrar_diretorio_instantclient
+2025-01-17 08:51:22 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-01-17 08:51:22 - caminho instantclient:
+C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6
+2025-01-17 08:52:10 - 2025-01-17 08:52:10
+__name__ == "__main__" 
+
+2025-01-17 08:52:10 - ****registrar_log_tarefa_executada() tarefa_executada = False
+2025-01-17 08:52:10 -  Inicio() 
+2025-01-17 08:52:11 -  def executar()
+2025-01-17 08:52:11 - Botao executar clicado! - tarefa_executada: False, tarefa_executada_erro:False
+2025-01-17 08:52:11 - Executando Tarefa
+2025-01-17 08:52:12 - processo = multiprocessing.Process(target=main)
+processo.start()
+2025-01-17 08:52:12 - label_status["text"] = "Tarefa executada inicializada!"
+
+2025-01-17 08:52:12 - Execucao
+2025-01-17 08:52:12 - ****ler_tarefa_executada: False
+2025-01-17 08:52:12 - ****registrar_log_tarefa_executada() tarefa_executada = True
+2025-01-17 08:52:12 - temp_tarefa_executada: False
+2025-01-17 08:52:12 - Excluir_arquivos_past_downloads()
+2025-01-17 08:52:12 - Caminho da pasta downloads: C:\Users\pvplima.C19NOT76\Downloads
+2025-01-17 08:52:12 - Encontrar_diretorio_instantclient
+2025-01-17 08:52:12 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-01-17 08:52:12 - caminho instantclient:
+C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6
+2025-01-17 08:52:12 - Encontrar_diretorio_instantclient
+2025-01-17 08:52:12 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-01-17 08:52:12 - caminho instantclient:
+C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6
+2025-01-17 08:54:04 - 2025-01-17 08:54:04
+__name__ == "__main__" 
+
+2025-01-17 08:54:04 - ****registrar_log_tarefa_executada() tarefa_executada = False
+2025-01-17 08:54:04 -  Inicio() 
+2025-01-17 08:54:10 -  def executar()
+2025-01-17 08:54:10 - Botao executar clicado! - tarefa_executada: False, tarefa_executada_erro:False
+2025-01-17 08:54:10 - Executando Tarefa
+2025-01-17 08:54:10 - processo = multiprocessing.Process(target=main)
+processo.start()
+2025-01-17 08:54:10 - label_status["text"] = "Tarefa executada inicializada!"
+
+2025-01-17 08:54:11 - Execucao
+2025-01-17 08:54:11 - ****ler_tarefa_executada: False
+2025-01-17 08:54:11 - ****registrar_log_tarefa_executada() tarefa_executada = True
+2025-01-17 08:54:11 - temp_tarefa_executada: False
+2025-01-17 08:54:11 - Excluir_arquivos_past_downloads()
+2025-01-17 08:54:11 - Caminho da pasta downloads: C:\Users\pvplima.C19NOT76\Downloads
+2025-01-17 08:54:11 - Encontrar_diretorio_instantclient
+2025-01-17 08:54:11 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-01-17 08:54:11 - caminho instantclient:
+C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6
+2025-01-17 08:54:11 - Encontrar_diretorio_instantclient
+2025-01-17 08:54:11 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-01-17 08:54:11 - caminho instantclient:
+C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6
+2025-01-17 08:54:18 - Atendimentos:      NR_ATENDIMENTO
+156          665722
+2025-01-17 08:56:52 - 2025-01-17 08:56:52
+__name__ == "__main__" 
+
+2025-01-17 08:56:52 - ****registrar_log_tarefa_executada() tarefa_executada = False
+2025-01-17 08:56:52 -  Inicio() 
+2025-01-17 08:56:57 -  def executar()
+2025-01-17 08:56:57 - Botao executar clicado! - tarefa_executada: False, tarefa_executada_erro:False
+2025-01-17 08:56:57 - Executando Tarefa
+2025-01-17 08:56:57 - processo = multiprocessing.Process(target=main)
+processo.start()
+2025-01-17 08:56:57 - label_status["text"] = "Tarefa executada inicializada!"
+
+2025-01-17 08:56:58 - Execucao
+2025-01-17 08:56:58 - ****ler_tarefa_executada: False
+2025-01-17 08:56:58 - ****registrar_log_tarefa_executada() tarefa_executada = True
+2025-01-17 08:56:58 - temp_tarefa_executada: False
+2025-01-17 08:56:58 - Excluir_arquivos_past_downloads()
+2025-01-17 08:56:58 - Caminho da pasta downloads: C:\Users\pvplima.C19NOT76\Downloads
+2025-01-17 08:56:58 - Encontrar_diretorio_instantclient
+2025-01-17 08:56:58 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-01-17 08:56:58 - caminho instantclient:
+C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6
+2025-01-17 08:56:58 - Encontrar_diretorio_instantclient
+2025-01-17 08:56:58 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-01-17 08:56:58 - caminho instantclient:
+C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6
+2025-01-17 09:42:44 - 2025-01-17 09:42:44
+__name__ == "__main__" 
+
+2025-01-17 09:42:44 - ****registrar_log_tarefa_executada() tarefa_executada = False
+2025-01-17 09:42:44 -  Inicio() 
+2025-01-17 09:44:54 - 2025-01-17 09:44:54
+__name__ == "__main__" 
+
+2025-01-17 09:44:54 - ****registrar_log_tarefa_executada() tarefa_executada = False
+2025-01-17 09:44:54 -  Inicio() 
+2025-01-17 09:45:10 - statusMultiprocessing:False
+2025-01-17 09:45:10 - O aplicativo foi fechado no botao X
+
+2025-01-17 09:45:30 - 2025-01-17 09:45:30
+__name__ == "__main__" 
+
+2025-01-17 09:45:30 - ****registrar_log_tarefa_executada() tarefa_executada = False
+2025-01-17 09:45:30 -  Inicio() 
+2025-01-17 09:45:55 - 2025-01-17 09:45:55
+__name__ == "__main__" 
+
+2025-01-17 09:45:55 - ****registrar_log_tarefa_executada() tarefa_executada = False
+2025-01-17 09:45:55 -  Inicio() 
+2025-01-17 09:46:17 - 2025-01-17 09:46:17
+__name__ == "__main__" 
+
+2025-01-17 09:46:17 - ****registrar_log_tarefa_executada() tarefa_executada = False
+2025-01-17 09:46:17 -  Inicio() 
+2025-01-17 09:46:49 - 2025-01-17 09:46:49
+__name__ == "__main__" 
+
+2025-01-17 09:46:49 - ****registrar_log_tarefa_executada() tarefa_executada = False
+2025-01-17 09:46:49 -  Inicio() 
+2025-01-17 09:47:06 - 2025-01-17 09:47:06
+__name__ == "__main__" 
+
+2025-01-17 09:47:06 - ****registrar_log_tarefa_executada() tarefa_executada = False
+2025-01-17 09:47:06 -  Inicio() 
+2025-01-17 09:47:08 -  def executar()
+2025-01-17 09:47:08 - Botao executar clicado! - tarefa_executada: False, tarefa_executada_erro:False
+2025-01-17 09:47:08 - Executando Tarefa
+2025-01-17 09:47:08 - processo = multiprocessing.Process(target=main)
+processo.start()
+2025-01-17 09:47:08 - label_status["text"] = "Tarefa executada inicializada!"
+
+2025-01-17 09:47:09 - Execucao
+2025-01-17 09:47:09 - ****ler_tarefa_executada: False
+2025-01-17 09:47:09 - ****registrar_log_tarefa_executada() tarefa_executada = True
+2025-01-17 09:47:09 - temp_tarefa_executada: False
+2025-01-17 09:47:09 - Excluir_arquivos_past_downloads()
+2025-01-17 09:47:09 - Caminho da pasta downloads: C:\Users\pvplima.C19NOT76\Downloads
+2025-01-17 09:47:09 - Encontrar_diretorio_instantclient
+2025-01-17 09:47:09 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-01-17 09:47:09 - caminho instantclient:
+C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6
+2025-01-17 09:47:09 - Encontrar_diretorio_instantclient
+2025-01-17 09:47:09 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-01-17 09:47:09 - caminho instantclient:
+C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6
+2025-01-17 09:47:20 - Atendimentos:      NR_ATENDIMENTO
+110          663445
+2025-01-17 09:47:22 - Atendimentos data frame:(186, 1)
+2025-01-17 09:47:24 - Atendimentos obtido com sucesso!

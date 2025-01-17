@@ -582,7 +582,7 @@ def main():
         registrar_log(f'Tarefa de execução já inicializada!')
         resultado = messagebox.showwarning("Tarefa em execução!", "Em execução!")
 
-
+"""
 def interface_grafica():
     registrar_log(" interface_grafica() ")
     global lb_contador
@@ -596,7 +596,7 @@ def interface_grafica():
         if resultado:
             # Feche o aplicativo
             janela.destroy()
-        """Função chamada quando o usuário clica no botao 'X' para fechar a janela."""
+        #Função chamada quando o usuário clica no botao 'X' para fechar a janela.
         registrar_log(f'statusMultiprocessing:{statusMultiprocessing}')
         registrar_log("O aplicativo foi fechado no botao X\n")
         
@@ -646,7 +646,7 @@ def interface_grafica():
     
     def atualizar_log():
         global lb_contador
-        """Atualiza o rótulo do log com a última linha do arquivo log.txt."""
+        #Atualiza o rótulo do log com a última linha do arquivo log.txt.
         try:
             with open('log.txt', 'r') as arquivo:
                 linhas = arquivo.readlines()
@@ -665,7 +665,7 @@ def interface_grafica():
             
     def atualizar_contador():
         global lb_contador
-        """Atualiza o rótulo do contador com a última linha do arquivo log_contador.txt."""
+        #Atualiza o rótulo do contador com a última linha do arquivo log_contador.txt.
         try:
             with open('log_contador.txt', 'r') as arquivo:
                 linhas_contador = arquivo.readlines()
@@ -734,16 +734,18 @@ def interface_grafica():
     atualizar_contador()
     
     janela.mainloop()
-
+"""
 
 def ao_fechar():
     #resultado = messagebox.askyesno("Confirmação", "Tem certeza de que deseja fechar o aplicativo?")
     #if resultado:
     #    # Feche o aplicativo
     #    janela.destroy()
-    """Função chamada quando o usuário clica no botao 'X' para fechar a janela."""
+    #Função chamada quando o usuário clica no botao 'X' para fechar a janela.
     registrar_log(f'statusMultiprocessing:{statusMultiprocessing}')
     registrar_log("O aplicativo foi fechado no botao X\n")
+    janela.destroy()
+    time.sleep(0.5)
     sys.exit()
     
 def iniciar():
@@ -797,14 +799,15 @@ def atualizar_log():
             linhas = arquivo.readlines()
             if linhas:
                 ultima_linha = linhas[-1].strip() #pega a última linha, e remove os espaços
-                label_log['text'] = ultima_linha # Atualiza o texto do label do log
+                label_status['text'] = ultima_linha
+                label_status.update_idletasks()
                 if "lb_contador" in ultima_linha:
-                    lb_contador = ultima_linha.split("lb_contador:")[1].split(" - linha:")[0].strip() #extraindo o lb_contador do texto
-                    label_status_lb_contador['text'] = str(lb_contador)
+                     lb_contador = ultima_linha.split("lb_contador:")[1].split(" - linha:")[0].strip() #extraindo o lb_contador do texto
+                     label_status_lb_contador['text'] = str(lb_contador)
     except FileNotFoundError:
         label_log['text'] = "Arquivo de log não encontrado."
     except Exception as e:
-        label_log['text'] = f"Erro ao ler o log: {e}"
+          label_log['text'] = f"Erro ao ler o log: {e}"
     finally:
         janela.after(2000, atualizar_log) # agendar para rodar daqui 2 segundos;
         
@@ -832,7 +835,6 @@ if __name__ == "__main__":
         pasta_downloads = os.path.join(os.path.expanduser("~"), "Downloads")
         #registrar_log(f'deletando todos os arquivos da pasta download\npasta_downloads = os.path.join(os.path.expanduser("~"), "Downloads")\n')
         registrar_log_tarefa_executada('False')
-        interface_grafica() 
 
         registrar_log(" Inicio() ")
         
@@ -855,23 +857,30 @@ if __name__ == "__main__":
         titulo_label = tk.Label(janela, text='APP GERADOR DE PRESCRIÇÕES POR SETOR', font=('Arial',12))
         titulo_label.place(x=135, y=33.5)
         
-        # Rótulo para mostrar o status
-        label_status = tk.Label(janela, text="")
-        label_status.place(relx=0.5, rely=0.45, anchor='center') #centralizando na vertical
+        # Criando um frame para centralizar o conteúdo
+        frame_central = tk.Frame(janela)
+        frame_central.place(relx=0.5, rely=0.5, anchor='center')
         
-        bt_Planejar = tk.Button(janela, width=18, text="Planejar Tarefa",command=lambda: [
+        # Rótulo para mostrar o status
+        label_status = tk.Label(frame_central, text="...", wraplength=550, justify="center")
+        label_status.pack(expand=True, fill='both') # Usando pack para centralizar horizontalmente
+        
+        # Criar um frame para colocar os botoes lado a lado
+        frame_botoes = tk.Frame(frame_central)
+        frame_botoes.pack()
+        
+        bt_Planejar = tk.Button(frame_botoes, width=18, text="Planejar Tarefa",command=lambda: [
                                                                                             iniciar(),
                                                                                             label_status.config(text="Tarefa planejada inicializada!"),
-                                                                                            label_status.place(relx=0.5, rely=0.45, anchor='center')
+                                                                                            
                                                                                             ])
-        bt_Planejar.place(x=80 , y=275)
+        bt_Planejar.pack(side=tk.LEFT, padx=40 , pady = 40)
 
-        bt_executar = tk.Button(janela, width=18, text="Executar Tarefa", command=lambda: [
+        bt_executar = tk.Button(frame_botoes, width=18, text="Executar Tarefa", command=lambda: [
                                                                                             executar(),
                                                                                             label_status.config(text="Tarefa executada inicializada!"),
-                                                                                            label_status.place(relx=0.5, rely=0.45, anchor='center')
                                                                                             ])
-        bt_executar.place(x=350 , y=275)
+        bt_executar.pack(side=tk.LEFT, padx=40, pady = 40)
         
         PLima_label = tk.Label(janela, text='@PLima', font=('Arial',4))
         PLima_label.place(x=565, y=387)
