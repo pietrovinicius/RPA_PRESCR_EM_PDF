@@ -122,7 +122,6 @@ def ler_tarefa_executada():
         ultimo_tarefa_executada = False
         return ultimo_tarefa_executada
     	
-
 def excluir_arquivos_past_downloads():
     registrar_log(f'Excluir_arquivos_past_downloads()')
     #acessando pasta download:
@@ -137,13 +136,14 @@ def excluir_arquivos_past_downloads():
             registrar_log(f"Não foi possível remover o arquivo {f}\nErro: {e}\n")          
 
 def encontrar_diretorio_instantclient(nome_pasta="instantclient-basiclite-windows.x64-23.6.0.24.10\\instantclient_23_6"):
-  #registrar_log(f'Encontrar_diretorio_instantclient')
-  # Obtém o diretório do script atual
-  diretorio_atual = os.path.dirname(os.path.abspath(__file__))
+  registrar_log(f'Encontrar_diretorio_instantclient')
+  # Obtém o diretório base do executável
+  base_dir = getattr(sys, '_MEIPASS', os.path.abspath("."))
+  registrar_log(f"Caminho base do executavel: {base_dir}")
 
   # Constrói o caminho completo para a pasta do Instant Client
-  caminho_instantclient = os.path.join(diretorio_atual, nome_pasta)
-
+  caminho_instantclient = os.path.join(base_dir, nome_pasta)
+  registrar_log(f'caminho instantclient:\n{caminho_instantclient}')
   # Verifica se a pasta existe
   if os.path.exists(caminho_instantclient):
     return caminho_instantclient
@@ -184,7 +184,7 @@ def obter_pacientes_atendimentos():
                             APV.CD_PESSOA_FISICA
                         ORDER BY 
                             APV.CD_SETOR_ATENDIMENTO
-                        FETCH FIRST 1 ROWS ONLY
+                        --FETCH FIRST 1 ROWS ONLY
                     """
                 #####################################################################################
                 
@@ -515,7 +515,7 @@ def cronometro_tarefa_agendada():
     while True:
         schedule.run_pending()
         time.sleep(1)
-        registrar_log_cronometro(f'Planejada execução todos os dia as 00:00 e 12:00')
+        registrar_log_cronometro(f'Planejada execucao todos os dia as 00:00 e 12:00')
 
 def copiar_arquivos():
     """Copia todos os arquivos e subdiretórios de uma pasta para outra."""
@@ -582,10 +582,13 @@ def main():
         registrar_log(f'Tarefa de execução já inicializada!')
         resultado = messagebox.showwarning("Tarefa em execução!", "Em execução!")
 
+
 def interface_grafica():
+    registrar_log(" interface_grafica() ")
     global lb_contador
     global statusMultiprocessing
     global tarefa_agendada_iniciada
+    global tarefa_executada
     global tarefa_executada_erro
     
     def ao_fechar():
@@ -597,20 +600,21 @@ def interface_grafica():
         registrar_log(f'statusMultiprocessing:{statusMultiprocessing}')
         registrar_log("O aplicativo foi fechado no botao X\n")
         
-    def Planejar():
+    def iniciar():
         global df_filtrado
         global df
-        global tarefa_executada_erro
-
-        if not tarefa_executada_erro:
-           registrar_log(f"Botao Planejar clicado!")
+        global tarefa_agendada_iniciada
+        registrar_log(" def iniciar()")
+        if not tarefa_agendada_iniciada:
+           registrar_log(f"Botao Iniciar clicado!")
            processo = multiprocessing.Process(target=cronometro_tarefa_agendada)
            processo.start()
+           processo.join()
+           registrar_log(f'processo = multiprocessing.Process(target=cronometro_tarefa_agendada)\nprocesso.start()')
+           label_status['text'] = "Tarefa Agendada Inicializada!"  
+           registrar_log(f'label_status["text"] = "Tarefa Agendada Inicializada!"')
+           tarefa_agendada_iniciada = True
            bt_Planejar.config(state="disabled") # desabilitando o botão de planejar a tarefa
-           registrar_log(f'Planejar processo start()')
-           registrar_log(f"Botao executar apos start()\nTarefa_executada_erro:{tarefa_executada_erro}")  
-           #registrar_log(f'label_status["text"] = "Tarefa Agendada Inicializada!"')
-           
         else:
             registrar_log('Tarefa planejada ja inicializada')
             label_status['text'] = "Tarefa Agendada Já Inicializada!" 
@@ -619,21 +623,26 @@ def interface_grafica():
         global df_filtrado
         global df
         global lb_contador
+        global tarefa_executada
         global tarefa_executada_erro
-
-        
-        if not tarefa_executada_erro :
+        registrar_log(" def executar()")
+        registrar_log(f"Botao executar clicado! - tarefa_executada: {tarefa_executada}, tarefa_executada_erro:{tarefa_executada_erro}")
+        if not tarefa_executada or tarefa_executada_erro :
             registrar_log("Executando Tarefa")
+            tarefa_executada = True
             tarefa_executada_erro = False
-            processo = multiprocessing.Process(target=main)
-            processo.start()
-            bt_executar.config(state="disabled")
-            registrar_log(f'Executar processo start()') 
-            registrar_log(f"Botao executar apos start()\nTarefa_executada_erro:{tarefa_executada_erro}")   
+            #processo = multiprocessing.Process(target=main)
+            #processo.start()
             
+            label_status['text'] = "Tarefa executada inicializada!"
+            registrar_log(f'processo = multiprocessing.Process(target=main)\nprocesso.start()')    
+            registrar_log(f'label_status["text"] = "Tarefa executada inicializada!"\n')
+            main()
+            bt_executar.config(state="disabled")  # desabilita o botão
         else:
-           label_status['text'] = "Tarefa ja em execução!" 
-           registrar_log(f'Tarefa ja em execução!')
+           registrar_log("Tarefa ja executada ou planejada não inicializada. Ignorando clique.")
+           label_status['text'] = "Tarefa ja executada ou planejada não inicializada!" 
+           registrar_log(f'label_status["text"] = "Tarefa ja executada ou planejada não inicializada!"')
     
     def atualizar_log():
         global lb_contador
@@ -643,8 +652,7 @@ def interface_grafica():
                 linhas = arquivo.readlines()
                 if linhas:
                     ultima_linha = linhas[-1].strip() #pega a última linha, e remove os espaços
-                    label_status['text'] = ultima_linha
-                    label_status.update_idletasks()
+                    label_log['text'] = ultima_linha # Atualiza o texto do label do log
                     if "lb_contador" in ultima_linha:
                          lb_contador = ultima_linha.split("lb_contador:")[1].split(" - linha:")[0].strip() #extraindo o lb_contador do texto
                          label_status_lb_contador['text'] = str(lb_contador)
@@ -671,22 +679,6 @@ def interface_grafica():
         finally:
             janela.after(2000, atualizar_contador)
 
-    def atualizar_tarefa_executada():
-        """Atualiza o rótulo do contador com a última linha do arquivo log_contador.txt."""
-        try:
-            with open('log_tarefa_executada.txt', 'r') as arquivo:
-                linhas_tarefa_executada = arquivo.readlines()
-                if linhas_tarefa_executada:
-                    ultimo_tarefa_executada = linhas_tarefa_executada[-1].strip()
-                    registrar_log(f'Ultima tarefa executada: {ultimo_tarefa_executada}')
-                    return ultimo_tarefa_executada
-        except FileNotFoundError:
-            registrar_log('atualizar_tarefa_executada - except FileNotFoundError')
-        except Exception as e:
-            registrar_log(f"atualizar_tarefa_executada - Erro ao ler o contador: \n{e}")
-        finally:
-            janela.after(4000, atualizar_tarefa_executada)
-
     #INTERFACE GRAFICA:
     janela = tk.Tk()
     janela.maxsize(600,400)
@@ -707,11 +699,11 @@ def interface_grafica():
     titulo_label.place(x=135, y=33.5)
     
     # Rótulo para mostrar o status
-    label_status = tk.Label(janela, text="", wraplength=550, justify="center")
+    label_status = tk.Label(janela, text="")
     label_status.place(relx=0.5, rely=0.45, anchor='center') #centralizando na vertical
     
     bt_Planejar = tk.Button(janela, width=18, text="Planejar Tarefa",command=lambda: [
-                                                                                        Planejar(),
+                                                                                        iniciar(),
                                                                                         label_status.config(text="Tarefa planejada inicializada!"),
                                                                                         label_status.place(relx=0.5, rely=0.45, anchor='center')
                                                                                         ])
@@ -743,6 +735,95 @@ def interface_grafica():
     
     janela.mainloop()
 
+
+def ao_fechar():
+    #resultado = messagebox.askyesno("Confirmação", "Tem certeza de que deseja fechar o aplicativo?")
+    #if resultado:
+    #    # Feche o aplicativo
+    #    janela.destroy()
+    """Função chamada quando o usuário clica no botao 'X' para fechar a janela."""
+    registrar_log(f'statusMultiprocessing:{statusMultiprocessing}')
+    registrar_log("O aplicativo foi fechado no botao X\n")
+    sys.exit()
+    
+def iniciar():
+    global df_filtrado
+    global df
+    global tarefa_agendada_iniciada
+    registrar_log(" def iniciar()")
+    if not tarefa_agendada_iniciada:
+        registrar_log(f"Botao Iniciar clicado!")
+        processo = multiprocessing.Process(target=cronometro_tarefa_agendada)
+        processo.start()
+        processo.join()
+        registrar_log(f'processo = multiprocessing.Process(target=cronometro_tarefa_agendada)\nprocesso.start()')
+        label_status['text'] = "Tarefa Agendada Inicializada!"  
+        registrar_log(f'label_status["text"] = "Tarefa Agendada Inicializada!"')
+        tarefa_agendada_iniciada = True
+        bt_Planejar.config(state="disabled") # desabilitando o botão de planejar a tarefa
+    else:
+        registrar_log('Tarefa planejada ja inicializada')
+        label_status['text'] = "Tarefa Agendada Já Inicializada!" 
+    
+def executar():
+    global df_filtrado
+    global df
+    global lb_contador
+    global tarefa_executada
+    global tarefa_executada_erro
+    registrar_log(" def executar()")
+    registrar_log(f"Botao executar clicado! - tarefa_executada: {tarefa_executada}, tarefa_executada_erro:{tarefa_executada_erro}")
+    if not tarefa_executada or tarefa_executada_erro :
+        registrar_log("Executando Tarefa")
+        tarefa_executada = True
+        tarefa_executada_erro = False
+        processo = multiprocessing.Process(target=main)
+        processo.start()
+        
+        label_status['text'] = "Tarefa executada inicializada!"
+        registrar_log(f'processo = multiprocessing.Process(target=main)\nprocesso.start()')    
+        registrar_log(f'label_status["text"] = "Tarefa executada inicializada!"\n')
+        bt_executar.config(state="disabled")  # desabilita o botão
+    else:
+        registrar_log("Tarefa ja executada ou planejada não inicializada. Ignorando clique.")
+        label_status['text'] = "Tarefa ja executada ou planejada não inicializada!" 
+        registrar_log(f'label_status["text"] = "Tarefa ja executada ou planejada não inicializada!"')
+
+def atualizar_log():
+    global lb_contador
+    """Atualiza o rótulo do log com a última linha do arquivo log.txt."""
+    try:
+        with open('log.txt', 'r') as arquivo:
+            linhas = arquivo.readlines()
+            if linhas:
+                ultima_linha = linhas[-1].strip() #pega a última linha, e remove os espaços
+                label_log['text'] = ultima_linha # Atualiza o texto do label do log
+                if "lb_contador" in ultima_linha:
+                    lb_contador = ultima_linha.split("lb_contador:")[1].split(" - linha:")[0].strip() #extraindo o lb_contador do texto
+                    label_status_lb_contador['text'] = str(lb_contador)
+    except FileNotFoundError:
+        label_log['text'] = "Arquivo de log não encontrado."
+    except Exception as e:
+        label_log['text'] = f"Erro ao ler o log: {e}"
+    finally:
+        janela.after(2000, atualizar_log) # agendar para rodar daqui 2 segundos;
+        
+def atualizar_contador():
+    global lb_contador
+    """Atualiza o rótulo do contador com a última linha do arquivo log_contador.txt."""
+    try:
+        with open('log_contador.txt', 'r') as arquivo:
+            linhas_contador = arquivo.readlines()
+            if linhas_contador:
+                ultimo_contador = linhas_contador[-1].strip()
+                label_status_lb_contador['text'] = f'Contador: {ultimo_contador}'  # Atualiza o texto do label com o contador
+    except FileNotFoundError:
+        label_status_lb_contador['text'] = "Arquivo do contador não encontrado."
+    except Exception as e:
+        label_status_lb_contador['text'] = f"Erro ao ler o contador: {e}"
+    finally:
+        janela.after(2000, atualizar_contador)
+
 if __name__ == "__main__":
     try:
         registrar_log(f'{agora()}\n__name__ == "__main__" \n')
@@ -752,6 +833,64 @@ if __name__ == "__main__":
         #registrar_log(f'deletando todos os arquivos da pasta download\npasta_downloads = os.path.join(os.path.expanduser("~"), "Downloads")\n')
         registrar_log_tarefa_executada('False')
         interface_grafica() 
+
+        registrar_log(" Inicio() ")
+        
+        #INTERFACE GRAFICA:
+        janela = tk.Tk()
+        janela.maxsize(600,400)
+        janela.geometry('600x400')
+        
+        #titulo do app
+        janela.title("PDD")
+        
+        # Associa a função ao_fechar ao evento de fechamento da janela
+        janela.protocol("WM_DELETE_WINDOW", ao_fechar)
+        
+        #imagem do HSF em 60x77
+        imagem = tk.PhotoImage(file='HSF_LOGO_-_60x77_001.png', height=60, width=77)
+        lb_imagem = tk.Label(janela, image=imagem)
+        lb_imagem.place(x=20, y=10)
+        
+        titulo_label = tk.Label(janela, text='APP GERADOR DE PRESCRIÇÕES POR SETOR', font=('Arial',12))
+        titulo_label.place(x=135, y=33.5)
+        
+        # Rótulo para mostrar o status
+        label_status = tk.Label(janela, text="")
+        label_status.place(relx=0.5, rely=0.45, anchor='center') #centralizando na vertical
+        
+        bt_Planejar = tk.Button(janela, width=18, text="Planejar Tarefa",command=lambda: [
+                                                                                            iniciar(),
+                                                                                            label_status.config(text="Tarefa planejada inicializada!"),
+                                                                                            label_status.place(relx=0.5, rely=0.45, anchor='center')
+                                                                                            ])
+        bt_Planejar.place(x=80 , y=275)
+
+        bt_executar = tk.Button(janela, width=18, text="Executar Tarefa", command=lambda: [
+                                                                                            executar(),
+                                                                                            label_status.config(text="Tarefa executada inicializada!"),
+                                                                                            label_status.place(relx=0.5, rely=0.45, anchor='center')
+                                                                                            ])
+        bt_executar.place(x=350 , y=275)
+        
+        PLima_label = tk.Label(janela, text='@PLima', font=('Arial',4))
+        PLima_label.place(x=565, y=387)
+        
+        # Rótulo para exibir a última linha do log
+        label_log = tk.Label(janela, text="", wraplength=550, justify="left") #justify para alinhar a esquerda
+        label_log.place(x=25, y=80)
+        
+        # Rótulo para exibir lb_contador no rodapé
+        label_status_lb_contador = tk.Label(janela, text=f"Contador: {str(lb_contador)}", font=('Arial', 8))
+        label_status_lb_contador.place(x=260, y=370)  # Posiciona no rodapé
+        
+        # Executar a função para atualizar o log
+        atualizar_log()
+        
+        # Iniciar a atualização do contador
+        atualizar_contador()
+        
+        janela.mainloop()
             
     except Exception as erro:
         registrar_log(f'"__main__"\nException Error: \n{erro}')
