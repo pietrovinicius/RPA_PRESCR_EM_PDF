@@ -247,3 +247,300 @@ C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\instantclient-basiclite-windows.x64-23.6.0.
 110          663445
 2025-01-17 09:47:22 - Atendimentos data frame:(186, 1)
 2025-01-17 09:47:24 - Atendimentos obtido com sucesso!
+2025-01-17 09:56:17 - 2025-01-17 09:56:17
+__name__ == "__main__" 
+
+2025-01-17 09:56:17 - ****registrar_log_tarefa_executada() tarefa_executada = False
+2025-01-17 09:56:17 -  Inicio() 
+2025-01-17 09:56:18 -  def executar()
+2025-01-17 09:56:18 - Botao executar clicado! - tarefa_executada: False, tarefa_executada_erro:False
+2025-01-17 09:56:18 - Executando Tarefa
+2025-01-17 09:56:18 - processo = multiprocessing.Process(target=main)
+processo.start()
+2025-01-17 09:56:18 - label_status["text"] = "Tarefa executada inicializada!"
+
+2025-01-17 09:56:19 - Execucao
+2025-01-17 09:56:19 - ****ler_tarefa_executada: False
+2025-01-17 09:56:19 - ****registrar_log_tarefa_executada() tarefa_executada = True
+2025-01-17 09:56:19 - temp_tarefa_executada: False
+2025-01-17 09:56:19 - Excluir_arquivos_past_downloads()
+2025-01-17 09:56:19 - Caminho da pasta downloads: C:\Users\pvplima.C19NOT76\Downloads
+2025-01-17 09:56:19 - Encontrar_diretorio_instantclient
+2025-01-17 09:56:19 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-01-17 09:56:19 - caminho instantclient:
+C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6
+2025-01-17 09:56:19 - Encontrar_diretorio_instantclient
+2025-01-17 09:56:19 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-01-17 09:56:19 - caminho instantclient:
+C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6
+2025-01-17 09:56:26 - Atendimentos:      NR_ATENDIMENTO
+110          663445
+2025-01-17 10:07:20 - 2025-01-17 10:07:20
+__name__ == "__main__" 
+
+2025-01-17 10:07:20 - ****registrar_log_tarefa_executada() tarefa_executada = False
+2025-01-17 10:07:20 -  Inicio() 
+2025-01-17 10:07:21 - ============================== def executar()
+2025-01-17 10:07:21 - Botao executar clicado! - tarefa_executada: False, tarefa_executada_erro:False
+2025-01-17 10:07:21 - Tarefa ja executada ou planejada não inicializada. Ignorando clique.
+2025-01-17 10:07:21 - label_status["text"] = "Tarefa ja executada ou planejada não inicializada!"
+2025-01-17 10:07:33 -  def iniciar()
+2025-01-17 10:07:33 - Botao Iniciar clicado!
+2025-01-17 10:07:33 - processo = multiprocessing.Process(target=cronometro_tarefa_agendada)
+processo.start()
+2025-01-17 10:07:33 - label_status["text"] = "Tarefa Agendada Inicializada!"
+2025-01-17 10:07:34 - cronometro_tarefa_agendada()
+2025-01-17 10:07:34 - Planejada execução todos os dia as 00:00 e 12:00
+2025-01-17 10:07:37 - ============================== def executar()
+2025-01-17 10:07:37 - Botao executar clicado! - tarefa_executada: False, tarefa_executada_erro:False
+2025-01-17 10:07:37 - Executando Tarefa
+2025-01-17 10:07:37 - processo = multiprocessing.Process(target=main)
+processo.start()
+2025-01-17 10:07:37 - label_status["text"] = "Tarefa executada inicializada!"
+
+2025-01-17 10:07:38 - ============================== execucao() ========================
+2025-01-17 10:07:38 - Excluir_arquivos_past_downloads()
+2025-01-17 10:07:38 - Caminho da pasta downloads: C:\Users\pvplima.C19NOT76\Downloads
+2025-01-17 10:07:38 - Encontrar_diretorio_instantclient
+2025-01-17 10:07:38 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-01-17 10:07:38 - caminho instantclient:
+C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6
+2025-01-17 10:07:38 - Encontrar_diretorio_instantclient
+2025-01-17 10:07:38 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-01-17 10:07:38 - caminho instantclient:
+C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6
+2025-01-17 10:07:46 - Atendimentos:     NR_ATENDIMENTO
+51          648468
+2025-01-17 10:07:48 - Atendimentos data frame:(186, 1)
+2025-01-17 10:09:48 - 2025-01-17 10:09:48
+__name__ == "__main__" 
+
+2025-01-17 10:09:48 - ****registrar_log_tarefa_executada() tarefa_executada = False
+2025-01-17 10:09:48 -  interface_grafica() 
+2025-01-17 10:09:51 -  def executar()
+2025-01-17 10:09:51 - Botao executar clicado! - tarefa_executada: False, tarefa_executada_erro:False
+2025-01-17 10:09:51 - Executando Tarefa
+2025-01-17 10:09:51 - processo = multiprocessing.Process(target=main)
+processo.start()
+2025-01-17 10:09:51 - label_status["text"] = "Tarefa executada inicializada!"
+
+2025-01-17 10:09:51 - Execucao
+2025-01-17 10:09:51 - ****ler_tarefa_executada: False
+2025-01-17 10:09:51 - ****registrar_log_tarefa_executada() tarefa_executada = True
+2025-01-17 10:09:51 - temp_tarefa_executada: False
+2025-01-17 10:09:51 - Excluir_arquivos_past_downloads()
+2025-01-17 10:09:51 - Caminho da pasta downloads: C:\Users\pvplima.C19NOT76\Downloads
+2025-01-17 10:10:00 - Atendimentos:    NR_ATENDIMENTO
+0          664053
+2025-01-17 10:10:02 - Atendimentos data frame:(1, 1)
+2025-01-17 10:10:04 - Atendimentos obtido com sucesso!
+2025-01-17 10:10:09 - Geracao de Pdf ()
+2025-01-17 10:10:09 - 
+df_filtrado:
+   NR_ATENDIMENTO
+0          664053
+2025-01-17 10:10:09 - contador:0
+contador_linhas_df: 1
+2025-01-17 10:10:09 - Inicio da repetição
+2025-01-17 10:10:09 - Repeticao for index iterrows()
+2025-01-17 10:10:09 - Adicionando a lista o nr_atendimento:664053
+2025-01-17 10:10:09 - Geracao Pdf Prescricao - contador:0
+2025-01-17 10:10:09 - Geracao_Pdf_Prescricao() - try:
+2025-01-17 10:13:26 - 2025-01-17 10:13:26
+__name__ == "__main__" 
+
+2025-01-17 10:13:26 - ****registrar_log_tarefa_executada() tarefa_executada = False
+2025-01-17 10:13:26 -  Inicio() 
+2025-01-17 10:13:27 -  def iniciar()
+2025-01-17 10:13:27 - Botao Iniciar clicado!
+2025-01-17 10:13:27 - processo = multiprocessing.Process(target=cronometro_tarefa_agendada)
+processo.start()
+2025-01-17 10:13:27 - label_status["text"] = "Tarefa Agendada Inicializada!"
+2025-01-17 10:13:28 - cronometro_tarefa_agendada()
+2025-01-17 10:13:28 - Planejada execução todos os dia as 00:00 e 12:00
+2025-01-17 10:13:40 - 2025-01-17 10:13:40
+__name__ == "__main__" 
+
+2025-01-17 10:13:40 - ****registrar_log_tarefa_executada() tarefa_executada = False
+2025-01-17 10:13:40 -  Inicio() 
+2025-01-17 10:13:41 - ============================== def executar()
+2025-01-17 10:13:41 - Botao executar clicado! - tarefa_executada: False, tarefa_executada_erro:False
+2025-01-17 10:13:41 - Tarefa ja executada ou planejada não inicializada. Ignorando clique.
+2025-01-17 10:13:41 - label_status["text"] = "Tarefa ja executada ou planejada não inicializada!"
+2025-01-17 10:13:46 - ============================== def executar()
+2025-01-17 10:13:46 - Botao executar clicado! - tarefa_executada: False, tarefa_executada_erro:False
+2025-01-17 10:13:46 - Tarefa ja executada ou planejada não inicializada. Ignorando clique.
+2025-01-17 10:13:46 - label_status["text"] = "Tarefa ja executada ou planejada não inicializada!"
+2025-01-17 10:13:49 - ============================== def executar()
+2025-01-17 10:13:49 - Botao executar clicado! - tarefa_executada: False, tarefa_executada_erro:False
+2025-01-17 10:13:49 - Tarefa ja executada ou planejada não inicializada. Ignorando clique.
+2025-01-17 10:13:49 - label_status["text"] = "Tarefa ja executada ou planejada não inicializada!"
+2025-01-17 10:13:51 - ============================== def executar()
+2025-01-17 10:13:51 - Botao executar clicado! - tarefa_executada: False, tarefa_executada_erro:False
+2025-01-17 10:13:51 - Tarefa ja executada ou planejada não inicializada. Ignorando clique.
+2025-01-17 10:13:51 - label_status["text"] = "Tarefa ja executada ou planejada não inicializada!"
+2025-01-17 10:13:52 - ============================== def executar()
+2025-01-17 10:13:52 - Botao executar clicado! - tarefa_executada: False, tarefa_executada_erro:False
+2025-01-17 10:13:52 - Tarefa ja executada ou planejada não inicializada. Ignorando clique.
+2025-01-17 10:13:52 - label_status["text"] = "Tarefa ja executada ou planejada não inicializada!"
+2025-01-17 10:13:54 - ============================== def executar()
+2025-01-17 10:13:54 - Botao executar clicado! - tarefa_executada: False, tarefa_executada_erro:False
+2025-01-17 10:13:54 - Tarefa ja executada ou planejada não inicializada. Ignorando clique.
+2025-01-17 10:13:54 - label_status["text"] = "Tarefa ja executada ou planejada não inicializada!"
+2025-01-17 10:14:11 - ============================== def executar()
+2025-01-17 10:14:11 - Botao executar clicado! - tarefa_executada: False, tarefa_executada_erro:False
+2025-01-17 10:14:11 - Tarefa ja executada ou planejada não inicializada. Ignorando clique.
+2025-01-17 10:14:11 - label_status["text"] = "Tarefa ja executada ou planejada não inicializada!"
+2025-02-04 13:54:53 - 2025-02-04 13:54:53
+__name__ == "__main__" 
+
+2025-02-04 13:54:53 - ****registrar_log_tarefa_executada() tarefa_executada = False
+2025-02-04 13:54:53 -  Inicio() 
+2025-02-04 13:54:56 - Botao executar clicado! - tarefa executada: False, tarefa_executada_erro:False
+2025-02-04 13:54:56 - Tarefa inicializada! 
+bt_executar desativado!
+2025-02-04 13:54:56 - Main()
+2025-02-04 13:54:56 - Excluir_arquivos_past_downloads()
+2025-02-04 13:54:56 - Caminho da pasta downloads: C:\Users\pvplima.C19NOT76\Downloads
+2025-02-04 13:54:56 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\4.csv removido com sucesso.
+2025-02-04 13:54:56 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\bolo de chocolate.png removido com sucesso.
+2025-02-04 13:54:56 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\PE_DIAGNOSTICO.csv removido com sucesso.
+2025-02-04 13:54:56 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\Sopa.png removido com sucesso.
+2025-02-04 13:54:56 - Arquivo C:\Users\pvplima.C19NOT76\Downloads\suco verde.png removido com sucesso.
+2025-02-04 13:54:56 - Não foi possível remover o arquivo C:\Users\pvplima.C19NOT76\Downloads\Telegram Desktop
+Erro: [WinError 5] Acesso negado: 'C:\\Users\\pvplima.C19NOT76\\Downloads\\Telegram Desktop'
+
+2025-02-04 13:54:56 - Encontrar_diretorio_instantclient
+2025-02-04 13:54:56 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-02-04 13:54:56 - caminho instantclient:
+C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6
+2025-02-04 13:54:56 - Encontrar_diretorio_instantclient
+2025-02-04 13:54:56 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-02-04 13:54:56 - caminho instantclient:
+C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6
+2025-02-04 13:55:12 - Atendimentos:      NR_ATENDIMENTO
+120          664596
+2025-02-04 13:55:14 - Atendimentos data frame:(173, 1)
+2025-02-04 13:55:16 - Atendimentos obtido com sucesso!
+2025-02-04 13:55:21 - Geracao de Pdf ()
+2025-02-04 13:55:21 - 
+df_filtrado:
+   NR_ATENDIMENTO
+0          671598
+2025-02-04 13:55:21 - contador:0
+contador_linhas_df: 173
+2025-02-04 13:55:21 - Inicio da repetição
+2025-02-04 13:55:21 - Repeticao for index iterrows()
+2025-02-04 13:55:21 - Adicionando a lista o nr_atendimento:671598
+2025-02-04 13:55:21 - Geracao Pdf Prescricao - contador:0
+2025-02-04 13:55:21 - Geracao_Pdf_Prescricao() - try:
+2025-02-04 13:55:30 - http://aplicacao.hsf.local:7070/#/login
+2025-02-04 13:55:30 - usuario
+2025-02-04 13:55:32 - senha
+2025-02-04 13:55:35 - login
+2025-02-04 13:55:45 - click objeto invalido
+click(1107,702)
+2025-02-04 13:55:47 - clicar no CPOE
+2025-02-04 13:55:59 - nr_atendimento: 671598
+2025-02-04 13:56:19 - 1 - enter
+2025-02-04 13:56:24 - 2 - enter
+2025-02-04 13:56:30 - click atendimento fechado click(1107,709)
+2025-02-04 13:56:33 - =========== 
+ERROR:
+except do try de dento do for linha in df_filtrado
+2025-02-04 13:56:33 - 
+lista_nr_atendimento:['671598']
+contador: 0 
+Message: element not interactable
+  (Session info: chrome=128.0.6613.120)
+Stacktrace:
+	GetHandleVerifier [0x00007FF74D2F9412+29090]
+	(No symbol) [0x00007FF74D26E239]
+	(No symbol) [0x00007FF74D12B009]
+	(No symbol) [0x00007FF74D180442]
+	(No symbol) [0x00007FF74D172D81]
+	(No symbol) [0x00007FF74D1A66EA]
+	(No symbol) [0x00007FF74D1726C6]
+	(No symbol) [0x00007FF74D1A6900]
+	(No symbol) [0x00007FF74D1C65A2]
+	(No symbol) [0x00007FF74D1A6493]
+	(No symbol) [0x00007FF74D1709D1]
+	(No symbol) [0x00007FF74D171B31]
+	GetHandleVerifier [0x00007FF74D61871D+3302573]
+	GetHandleVerifier [0x00007FF74D664243+3612627]
+	GetHandleVerifier [0x00007FF74D65A417+3572135]
+	GetHandleVerifier [0x00007FF74D3B5EB6+801862]
+	(No symbol) [0x00007FF74D27945F]
+	(No symbol) [0x00007FF74D274FB4]
+	(No symbol) [0x00007FF74D275140]
+	(No symbol) [0x00007FF74D26461F]
+	BaseThreadInitThunk [0x00007FFDE2A1257D+29]
+	RtlUserThreadStart [0x00007FFDE3FEAA58+40]
+
+2025-02-04 13:56:33 - Repeticao for index iterrows()
+2025-02-04 13:56:33 - Adicionando a lista o nr_atendimento:671659
+2025-02-04 13:56:33 - Geracao Pdf Prescricao - contador:0
+2025-02-04 13:56:33 - Geracao_Pdf_Prescricao() - try:
+2025-02-04 13:59:33 - 2025-02-04 13:59:33
+__name__ == "__main__" 
+
+2025-02-04 13:59:33 - ****registrar_log_tarefa_executada() tarefa_executada = False
+2025-02-04 13:59:33 -  Inicio() 
+2025-02-04 13:59:35 - Botao executar clicado! - tarefa executada: False, tarefa_executada_erro:False
+2025-02-04 13:59:35 - Tarefa inicializada! 
+bt_executar desativado!
+2025-02-04 13:59:35 - Main()
+2025-02-04 13:59:35 - Excluir_arquivos_past_downloads()
+2025-02-04 13:59:35 - Caminho da pasta downloads: C:\Users\pvplima.C19NOT76\Downloads
+2025-02-04 13:59:35 - Não foi possível remover o arquivo C:\Users\pvplima.C19NOT76\Downloads\Telegram Desktop
+Erro: [WinError 5] Acesso negado: 'C:\\Users\\pvplima.C19NOT76\\Downloads\\Telegram Desktop'
+
+2025-02-04 13:59:35 - Encontrar_diretorio_instantclient
+2025-02-04 13:59:35 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-02-04 13:59:35 - caminho instantclient:
+C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6
+2025-02-04 13:59:35 - Encontrar_diretorio_instantclient
+2025-02-04 13:59:35 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-02-04 13:59:35 - caminho instantclient:
+C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6
+2025-02-04 13:59:43 - Atendimentos:      NR_ATENDIMENTO
+146          634515
+2025-02-04 13:59:45 - Atendimentos data frame:(173, 1)
+2025-02-04 13:59:47 - Atendimentos obtido com sucesso!
+2025-02-04 13:59:52 - Geracao de Pdf ()
+2025-02-04 13:59:52 - 
+df_filtrado:
+   NR_ATENDIMENTO
+0          671598
+2025-02-04 13:59:52 - contador:0
+contador_linhas_df: 173
+2025-02-04 13:59:52 - Inicio da repetição
+2025-02-04 13:59:52 - Repeticao for index iterrows()
+2025-02-04 13:59:52 - Adicionando a lista o nr_atendimento:671598
+2025-02-04 13:59:52 - Geracao Pdf Prescricao - contador:0
+2025-02-04 13:59:52 - Geracao_Pdf_Prescricao() - try:
+2025-02-04 14:00:00 - http://aplicacao.hsf.local:7070/#/login
+2025-02-04 14:00:00 - usuario
+2025-02-04 14:00:02 - senha
+2025-02-04 14:00:05 - login
+2025-02-04 14:00:15 - click objeto invalido
+click(1107,702)
+2025-02-04 14:00:17 - clicar no CPOE
+2025-02-04 14:00:41 - nr_atendimento: 671598
+2025-02-04 14:01:02 - 1 - enter
+2025-02-04 14:01:06 - 2 - enter
+2025-02-04 14:01:12 - click atendimento fechado click(1107,709)
+2025-02-04 14:01:13 - bt_cpoe_relatorios.click()
+2025-02-04 14:01:15 - visualizar.click()
+2025-02-04 14:01:27 - tentando clicar no btn_manter()
+2025-02-04 14:01:27 - Houve um erro em clicar_btn_manter: 
+PyAutoGUI was unable to import pyscreeze. (This is likely because you're running a version of Python that Pillow (which pyscreeze depends on) doesn't support currently.) Please install this module to enable the function you tried to call.
+2025-02-04 14:01:28 - click no baixar
+2025-02-04 14:01:28 - baixar.click(1817,165)
+2025-02-04 14:01:31 - Pressionar('enter')
+2025-02-04 14:01:33 - btn_manter
+2025-02-04 14:01:33 - manter.click(1755,106)
+2025-02-04 14:01:36 - btn_manter
+2025-02-04 14:01:36 - manter.click(1751,112)
+2025-02-04 14:01:38 - btn_manter
+2025-02-04 14:01:38 - manter.click(1755,106)

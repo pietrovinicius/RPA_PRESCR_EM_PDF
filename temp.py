@@ -22,7 +22,6 @@ import schedule
 import multiprocessing
 import oracledb
 import sys
-import threading
 
 #inicialização de variaveis globais:
 diretorio_atual = ""
@@ -42,7 +41,7 @@ tarefa_executada = False
 tarefa_executada_erro = False
 
 # Constante para tempo de espera:
-TEMPO_ESPERA = 12
+TEMPO_ESPERA = 10
 
 def agora_limpo():
     agora_limpo = datetime.datetime.now()
@@ -137,14 +136,13 @@ def excluir_arquivos_past_downloads():
             registrar_log(f"Não foi possível remover o arquivo {f}\nErro: {e}\n")          
 
 def encontrar_diretorio_instantclient(nome_pasta="instantclient-basiclite-windows.x64-23.6.0.24.10\\instantclient_23_6"):
-  registrar_log(f'Encontrar_diretorio_instantclient')
-  # Obtém o diretório base do executável
-  base_dir = getattr(sys, '_MEIPASS', os.path.abspath("."))
-  registrar_log(f"Caminho base do executavel: {base_dir}")
+  #registrar_log(f'Encontrar_diretorio_instantclient')
+  # Obtém o diretório do script atual
+  diretorio_atual = os.path.dirname(os.path.abspath(__file__))
 
   # Constrói o caminho completo para a pasta do Instant Client
-  caminho_instantclient = os.path.join(base_dir, nome_pasta)
-  registrar_log(f'caminho instantclient:\n{caminho_instantclient}')
+  caminho_instantclient = os.path.join(diretorio_atual, nome_pasta)
+
   # Verifica se a pasta existe
   if os.path.exists(caminho_instantclient):
     return caminho_instantclient
@@ -185,7 +183,7 @@ def obter_pacientes_atendimentos():
                             APV.CD_PESSOA_FISICA
                         ORDER BY 
                             APV.CD_SETOR_ATENDIMENTO
-                        --FETCH FIRST 1 ROWS ONLY
+                        FETCH FIRST 1 ROWS ONLY
                     """
                 #####################################################################################
                 
@@ -271,27 +269,27 @@ def Geracao_Pdf_Prescricao(df_):
                 bt_login = driver.find_element(By.XPATH, value='//*[@id="loginForm"]/input[3]')
                 bt_login.click()
                 registrar_log('login')
-                driver.implicitly_wait(TEMPO_ESPERA/1.2)
-                time.sleep(TEMPO_ESPERA/1.2)
+                driver.implicitly_wait(TEMPO_ESPERA)
+                time.sleep(TEMPO_ESPERA/2)
                 
                 #click objeto invalido
                 pyautogui.click(1107,702)
                 registrar_log("click objeto invalido\nclick(1107,702)")
-                driver.implicitly_wait(TEMPO_ESPERA/5)
                 time.sleep(TEMPO_ESPERA/5)
         
                 #clicar no icone do CPOE:
                 bt_CPOE = driver.find_element(By.XPATH, value='//*[@id="app-view"]/tasy-corsisf1/div/w-mainlayout/div/div/w-launcher/div/div/div[1]/w-apps/div/div[1]/ul/li[2]/w-feature-app/a/img')
                 bt_CPOE.click()
                 registrar_log('clicar no CPOE')
-                driver.implicitly_wait(TEMPO_ESPERA*2)
-                time.sleep(TEMPO_ESPERA*2)
+                driver.implicitly_wait(TEMPO_ESPERA)
+                time.sleep(TEMPO_ESPERA/2)
                                 
                 #nr_atendimento
+                driver.implicitly_wait(TEMPO_ESPERA/7.5)
                 pyautogui.write(linha)
                 registrar_log(f'nr_atendimento: {linha}')
-                driver.implicitly_wait(TEMPO_ESPERA+8)
-                time.sleep(TEMPO_ESPERA+8)
+                driver.implicitly_wait(TEMPO_ESPERA/3)
+                time.sleep(TEMPO_ESPERA/3)
                 
                 #enter
                 pyautogui.press('enter')
@@ -322,27 +320,9 @@ def Geracao_Pdf_Prescricao(df_):
                 bt_cpoe_visualizar = driver.find_element(By.XPATH, value='//*[@id="popupViewPort"]/li[5]/div[3]')
                 bt_cpoe_visualizar.click()
                 registrar_log("visualizar.click()")
-                driver.implicitly_wait(TEMPO_ESPERA)
-                time.sleep(TEMPO_ESPERA)
-
-                """Clica no botão 'btn_manter.png' na tela."""
-                registrar_log("tentando clicar no btn_manter()")
-                try:
-                    # Encontra a localização da imagem do botão na tela
-                    localizacao = pyautogui.locateOnScreen('btn_manter.png', confidence=0.95)
-                    # Encontra o centro da localização:
-                    ponto_central = pyautogui.center(localizacao)
-                    # Move o mouse para o centro da imagem e clica
-                    registrar_log(f"localizacao:{localizacao}\nponto_central:{ponto_central}")
-                    pyautogui.click(ponto_central)
-                    time.sleep(TEMPO_ESPERA/8)
-                    registrar_log(f"btn_manter.png click(ponto_central)")
-                except pyautogui.ImageNotFoundException:
-                    registrar_log("Imagem 'btn_manter.png' não encontrada na tela.")
-                except Exception as e:
-                    registrar_log(f"Houve um erro em clicar_btn_manter: \n{e}")
-                time.sleep(TEMPO_ESPERA/8)  
-
+                driver.implicitly_wait(TEMPO_ESPERA/2)
+                time.sleep(TEMPO_ESPERA/2)
+                
                 #click no baixar
                 registrar_log(f'click no baixar')
                 pyautogui.click(1817,165)
@@ -352,7 +332,33 @@ def Geracao_Pdf_Prescricao(df_):
                 #Pressionar enter:
                 pyautogui.press('enter')
                 registrar_log("Pressionar('enter')")
-                time.sleep(TEMPO_ESPERA/5)  
+                time.sleep(TEMPO_ESPERA/5)
+                
+                """Clica no botão 'btn_manter.png' na tela."""
+                registrar_log("tentando clicar no btn_manter()")
+                try:
+                
+                    # 1. `pyautogui.locateOnScreen()`:
+                    # Encontra a localização da imagem do botão na tela
+                    localizacao = pyautogui.locateOnScreen('btn_manter.png', confidence=0.95)
+                    
+                    # 2. `pyautogui.center()`:
+                    # Encontra o centro da localização:
+                    ponto_central = pyautogui.center(localizacao)
+                    
+                    # 3. `pyautogui.click()`:
+                    # Move o mouse para o centro da imagem e clica
+                    registrar_log(f"localizacao:{localizacao}\nponto_central:{ponto_central}")
+                    pyautogui.click(ponto_central)
+                    time.sleep(TEMPO_ESPERA/8)
+                    registrar_log(f"btn_manter.png click(ponto_central)")
+                    
+                    
+                except pyautogui.ImageNotFoundException:
+                    registrar_log("Imagem 'btn_manter.png' não encontrada na tela.")
+                except Exception as e:
+                    registrar_log(f"Houve um erro em clicar_btn_manter: \n{e}")
+                time.sleep(TEMPO_ESPERA/8)    
                             
                 #click no manter
                 registrar_log(f'btn_manter')
@@ -476,11 +482,6 @@ def Geracao_Pdf_Prescricao(df_):
         #registrar_log(f'df = df: \n{df.sample()}')
         #registrar_log_atend_erros(df)
         registrar_log(f"Executara novamente a Geracao_Pdf_Prescricao() com o global df apenas com os nr_atendimento que tiveram erros:")
-        
-        #TODO: ALT + F4
-        pyautogui.press("alt","f4")
-        registrar_log('pyautogui.press("alt","f4")')
-
         Geracao_Pdf_Prescricao(df)
         
     #copiar_arquivos:
@@ -539,17 +540,252 @@ def copiar_arquivos():
     except Exception as e:
         registrar_log(f"\nOcorreu um erro durante a cópia: {str(e)}\nException copiar_arquivos()\n{e}")
 
+def main():
+    #global statusMultiprocessing
+    global df
+    global lb_contador
+    global df_filtrado
+    global tarefa_executada
+    global tarefa_executada_erro
+    global janela 
+    global contador
+    
+    registrar_log("Execucao")
+    
+    #verificação do tarefa_executada:
+
+    #ler arquivo de tarefa executada
+    temp_tarefa_executada = ler_tarefa_executada()
+    if temp_tarefa_executada == 'False':
+        registrar_log_tarefa_executada('True')
+        registrar_log(f'temp_tarefa_executada: {temp_tarefa_executada}')
+        #tarefa_executada = True
+
+        excluir_arquivos_past_downloads()
+        encontrar_diretorio_instantclient()
+        df_filtrado  = obter_pacientes_atendimentos()
+        Geracao_Pdf_Prescricao(df_filtrado)
+
+        registrar_log(f"MAIN\nANTES:\nTarefa_executada: {tarefa_executada}\nTarefa_executada_erro:{tarefa_executada_erro}")
+
+        tarefa_executada = False
+
+        registrar_log(f"MAIN\nDEPOIS:\nTarefa_executada: {tarefa_executada}\nTarefa_executada_erro:{tarefa_executada_erro}")
+
+        if not tarefa_executada_erro:
+            registrar_log(f" {contador} gerada(s)!")
+            #Zerando o contador no txt:
+            registrar_log_contador(str(0))
+        #registrar_log("FIM execucao")
+    elif temp_tarefa_executada == 'True':
+        registrar_log(f'Tarefa de execução já inicializada!')
+        resultado = messagebox.showwarning("Tarefa em execução!", "Em execução!")
+
+
+def interface_grafica():
+    registrar_log(" interface_grafica() ")
+    global lb_contador
+    global statusMultiprocessing
+    global tarefa_agendada_iniciada
+    global tarefa_executada
+    global tarefa_executada_erro
+    
+    def ao_fechar():
+        resultado = messagebox.askyesno("Confirmação", "Tem certeza de que deseja fechar o aplicativo?")
+        if resultado:
+            # Feche o aplicativo
+            janela.destroy()
+        """Função chamada quando o usuário clica no botao 'X' para fechar a janela."""
+        registrar_log(f'statusMultiprocessing:{statusMultiprocessing}')
+        registrar_log("O aplicativo foi fechado no botao X\n")
+        
+    def iniciar():
+        global df_filtrado
+        global df
+        global tarefa_agendada_iniciada
+        registrar_log(" def iniciar()")
+        if not tarefa_agendada_iniciada:
+           registrar_log(f"Botao Iniciar clicado!")
+           processo = multiprocessing.Process(target=cronometro_tarefa_agendada)
+           processo.start()
+           processo.join()
+           registrar_log(f'processo = multiprocessing.Process(target=cronometro_tarefa_agendada)\nprocesso.start()')
+           label_status['text'] = "Tarefa Agendada Inicializada!"  
+           registrar_log(f'label_status["text"] = "Tarefa Agendada Inicializada!"')
+           tarefa_agendada_iniciada = True
+           bt_Planejar.config(state="disabled") # desabilitando o botão de planejar a tarefa
+        else:
+            registrar_log('Tarefa planejada ja inicializada')
+            label_status['text'] = "Tarefa Agendada Já Inicializada!" 
+           
+    def executar():
+        global df_filtrado
+        global df
+        global lb_contador
+        global tarefa_executada
+        global tarefa_executada_erro
+        registrar_log(" def executar()")
+        registrar_log(f"Botao executar clicado! - tarefa_executada: {tarefa_executada}, tarefa_executada_erro:{tarefa_executada_erro}")
+        if not tarefa_executada or tarefa_executada_erro :
+            registrar_log("Executando Tarefa")
+            tarefa_executada = True
+            tarefa_executada_erro = False
+            #processo = multiprocessing.Process(target=main)
+            #processo.start()
+            
+            label_status['text'] = "Tarefa executada inicializada!"
+            registrar_log(f'processo = multiprocessing.Process(target=main)\nprocesso.start()')    
+            registrar_log(f'label_status["text"] = "Tarefa executada inicializada!"\n')
+            main()
+            bt_executar.config(state="disabled")  # desabilita o botão
+        else:
+           registrar_log("Tarefa ja executada ou planejada não inicializada. Ignorando clique.")
+           label_status['text'] = "Tarefa ja executada ou planejada não inicializada!" 
+           registrar_log(f'label_status["text"] = "Tarefa ja executada ou planejada não inicializada!"')
+    
+    def atualizar_log():
+        global lb_contador
+        """Atualiza o rótulo do log com a última linha do arquivo log.txt."""
+        try:
+            with open('log.txt', 'r') as arquivo:
+                linhas = arquivo.readlines()
+                if linhas:
+                    ultima_linha = linhas[-1].strip() #pega a última linha, e remove os espaços
+                    label_log['text'] = ultima_linha # Atualiza o texto do label do log
+                    if "lb_contador" in ultima_linha:
+                         lb_contador = ultima_linha.split("lb_contador:")[1].split(" - linha:")[0].strip() #extraindo o lb_contador do texto
+                         label_status_lb_contador['text'] = str(lb_contador)
+        except FileNotFoundError:
+            label_log['text'] = "Arquivo de log não encontrado."
+        except Exception as e:
+              label_log['text'] = f"Erro ao ler o log: {e}"
+        finally:
+            janela.after(2000, atualizar_log) # agendar para rodar daqui 2 segundos;
+            
+    def atualizar_contador():
+        global lb_contador
+        """Atualiza o rótulo do contador com a última linha do arquivo log_contador.txt."""
+        try:
+            with open('log_contador.txt', 'r') as arquivo:
+                linhas_contador = arquivo.readlines()
+                if linhas_contador:
+                    ultimo_contador = linhas_contador[-1].strip()
+                    label_status_lb_contador['text'] = f'Contador: {ultimo_contador}'  # Atualiza o texto do label com o contador
+        except FileNotFoundError:
+            label_status_lb_contador['text'] = "Arquivo do contador não encontrado."
+        except Exception as e:
+            label_status_lb_contador['text'] = f"Erro ao ler o contador: {e}"
+        finally:
+            janela.after(2000, atualizar_contador)
+
+    #INTERFACE GRAFICA:
+    janela = tk.Tk()
+    janela.maxsize(600,400)
+    janela.geometry('600x400')
+    
+    #titulo do app
+    janela.title("PDD")
+    
+    # Associa a função ao_fechar ao evento de fechamento da janela
+    janela.protocol("WM_DELETE_WINDOW", ao_fechar)
+    
+    #imagem do HSF em 60x77
+    imagem = tk.PhotoImage(file='HSF_LOGO_-_60x77_001.png', height=60, width=77)
+    lb_imagem = tk.Label(janela, image=imagem)
+    lb_imagem.place(x=20, y=10)
+    
+    titulo_label = tk.Label(janela, text='APP GERADOR DE PRESCRIÇÕES POR SETOR', font=('Arial',12))
+    titulo_label.place(x=135, y=33.5)
+    
+    # Rótulo para mostrar o status
+    label_status = tk.Label(janela, text="")
+    label_status.place(relx=0.5, rely=0.45, anchor='center') #centralizando na vertical
+    
+    bt_Planejar = tk.Button(janela, width=18, text="Planejar Tarefa",command=lambda: [
+                                                                                        iniciar(),
+                                                                                        label_status.config(text="Tarefa planejada inicializada!"),
+                                                                                        label_status.place(relx=0.5, rely=0.45, anchor='center')
+                                                                                        ])
+    bt_Planejar.place(x=80 , y=275)
+
+    bt_executar = tk.Button(janela, width=18, text="Executar Tarefa", command=lambda: [
+                                                                                        executar(),
+                                                                                        label_status.config(text="Tarefa executada inicializada!"),
+                                                                                        label_status.place(relx=0.5, rely=0.45, anchor='center')
+                                                                                        ])
+    bt_executar.place(x=350 , y=275)
+    
+    PLima_label = tk.Label(janela, text='@PLima', font=('Arial',4))
+    PLima_label.place(x=565, y=387)
+    
+    # Rótulo para exibir a última linha do log
+    label_log = tk.Label(janela, text="", wraplength=550, justify="left") #justify para alinhar a esquerda
+    label_log.place(x=25, y=80)
+    
+    # Rótulo para exibir lb_contador no rodapé
+    label_status_lb_contador = tk.Label(janela, text=f"Contador: {str(lb_contador)}", font=('Arial', 8))
+    label_status_lb_contador.place(x=260, y=370)  # Posiciona no rodapé
+    
+    # Executar a função para atualizar o log
+    atualizar_log()
+    
+    # Iniciar a atualização do contador
+    atualizar_contador()
+    
+    janela.mainloop()
+
+
 def ao_fechar():
-    #resultado = messagebox.askyesno("Confirmação", "Tem certeza de que deseja fechar o aplicativo?")
-    #if resultado:
-    #    # Feche o aplicativo
-    #    janela.destroy()
-    #Função chamada quando o usuário clica no botao 'X' para fechar a janela.
+    resultado = messagebox.askyesno("Confirmação", "Tem certeza de que deseja fechar o aplicativo?")
+    if resultado:
+        # Feche o aplicativo
+        janela.destroy()
+    """Função chamada quando o usuário clica no botao 'X' para fechar a janela."""
     registrar_log(f'statusMultiprocessing:{statusMultiprocessing}')
     registrar_log("O aplicativo foi fechado no botao X\n")
-    janela.destroy()
-    time.sleep(0.5)
-    sys.exit()
+    
+def iniciar():
+    global df_filtrado
+    global df
+    global tarefa_agendada_iniciada
+    registrar_log(" def iniciar()")
+    if not tarefa_agendada_iniciada:
+        registrar_log(f"Botao Iniciar clicado!")
+        processo = multiprocessing.Process(target=cronometro_tarefa_agendada)
+        processo.start()
+        processo.join()
+        registrar_log(f'processo = multiprocessing.Process(target=cronometro_tarefa_agendada)\nprocesso.start()')
+        label_status['text'] = "Tarefa Agendada Inicializada!"  
+        registrar_log(f'label_status["text"] = "Tarefa Agendada Inicializada!"')
+        tarefa_agendada_iniciada = True
+        bt_Planejar.config(state="disabled") # desabilitando o botão de planejar a tarefa
+    else:
+        registrar_log('Tarefa planejada ja inicializada')
+        label_status['text'] = "Tarefa Agendada Já Inicializada!" 
+    
+def executar():
+    global df_filtrado
+    global df
+    global lb_contador
+    global tarefa_executada
+    global tarefa_executada_erro
+    registrar_log(" def executar()")
+    registrar_log(f"Botao executar clicado! - tarefa_executada: {tarefa_executada}, tarefa_executada_erro:{tarefa_executada_erro}")
+    if not tarefa_executada or tarefa_executada_erro :
+        registrar_log("Executando Tarefa")
+        tarefa_executada = True
+        tarefa_executada_erro = False
+        processo = multiprocessing.Process(target=main)
+        processo.start()
+        
+        label_status['text'] = "Tarefa executada inicializada!"
+        registrar_log(f'processo = multiprocessing.Process(target=main)\nprocesso.start()')    
+        registrar_log(f'label_status["text"] = "Tarefa executada inicializada!"\n')
+        bt_executar.config(state="disabled")  # desabilita o botão
+    else:
+        registrar_log("Tarefa ja executada ou planejada não inicializada. Ignorando clique.")
+        label_status['text'] = "Tarefa ja executada ou planejada não inicializada!" 
+        registrar_log(f'label_status["text"] = "Tarefa ja executada ou planejada não inicializada!"')
 
 def atualizar_log():
     global lb_contador
@@ -559,18 +795,17 @@ def atualizar_log():
             linhas = arquivo.readlines()
             if linhas:
                 ultima_linha = linhas[-1].strip() #pega a última linha, e remove os espaços
-                label_status['text'] = ultima_linha
-                label_status.update_idletasks()
+                label_log['text'] = ultima_linha # Atualiza o texto do label do log
                 if "lb_contador" in ultima_linha:
-                     lb_contador = ultima_linha.split("lb_contador:")[1].split(" - linha:")[0].strip() #extraindo o lb_contador do texto
-                     label_status_lb_contador['text'] = str(lb_contador)
+                    lb_contador = ultima_linha.split("lb_contador:")[1].split(" - linha:")[0].strip() #extraindo o lb_contador do texto
+                    label_status_lb_contador['text'] = str(lb_contador)
     except FileNotFoundError:
         label_log['text'] = "Arquivo de log não encontrado."
     except Exception as e:
-          label_log['text'] = f"Erro ao ler o log: {e}"
+        label_log['text'] = f"Erro ao ler o log: {e}"
     finally:
         janela.after(2000, atualizar_log) # agendar para rodar daqui 2 segundos;
-
+        
 def atualizar_contador():
     global lb_contador
     """Atualiza o rótulo do contador com a última linha do arquivo log_contador.txt."""
@@ -586,65 +821,6 @@ def atualizar_contador():
         label_status_lb_contador['text'] = f"Erro ao ler o contador: {e}"
     finally:
         janela.after(2000, atualizar_contador)
-    
-def main():
-    #global statusMultiprocessing
-    global df
-    global lb_contador
-    global df_filtrado
-    global tarefa_executada
-    global tarefa_executada_erro
-    global janela # adicionei global janela
-    global bt_executar
-    
-    registrar_log("Main()")
-    excluir_arquivos_past_downloads()
-    encontrar_diretorio_instantclient()
-    df_filtrado  = obter_pacientes_atendimentos()
-    Geracao_Pdf_Prescricao(df_filtrado)
-    
-    if not tarefa_executada_erro:
-         registrar_log("Prescrições geradas!")
-         label_status['text'] = "Prescrições geradas!" # Alterar a label para informar que a tarefa foi finalizada
-         bt_executar.config(state="normal") # Reabilita o botão
-         registrar_log_tarefa_executada('True')
-    else:
-         tarefa_executada_erro = False
-    registrar_log("FIM DA EXECUÇÃO")
-
-def planejar():
-    global df_filtrado
-    global df
-    global tarefa_agendada_iniciada
-    registrar_log(" def planejar()")
-    if not tarefa_agendada_iniciada:
-        registrar_log(f"Botao Iniciar clicado!")
-        label_status['text'] = "Tarefa Agendada Inicializada!"  
-        tarefa_agendada_iniciada = True
-        bt_Planejar.config(state="disabled") # desabilitando o botão de planejar a tarefa
-        threadExecutar = threading.Thread(target=cronometro_tarefa_agendada).start()
-    else:
-        registrar_log('Tarefa planejada ja inicializada')
-        label_status['text'] = "Tarefa Agendada Já Inicializada!" 
-
-def executar():
-    global df_filtrado
-    global df
-    global lb_contador
-    global tarefa_executada
-    global tarefa_executada_erro
-    registrar_log(f"Botao executar clicado! - tarefa executada: {tarefa_executada}, tarefa_executada_erro:{tarefa_executada_erro}")
-    if not tarefa_executada:
-        tarefa_executada = True
-        tarefa_executada_erro = False
-        label_status['text'] = "Tarefa inicializada!"
-        registrar_log(f'Tarefa inicializada! \nbt_executar desativado!')    
-        bt_executar.config(state="disabled")  # desabilita o botão
-        threadExecutar = threading.Thread(target=main).start()
-    else:
-        registrar_log("Tarefa já executada ou planejada não inicializada. Ignorando clique.")
-        label_status['text'] = "Tarefa ja executada ou planejada não inicializada!" 
-
 
 if __name__ == "__main__":
     try:
@@ -654,6 +830,7 @@ if __name__ == "__main__":
         pasta_downloads = os.path.join(os.path.expanduser("~"), "Downloads")
         #registrar_log(f'deletando todos os arquivos da pasta download\npasta_downloads = os.path.join(os.path.expanduser("~"), "Downloads")\n')
         registrar_log_tarefa_executada('False')
+        interface_grafica() 
 
         registrar_log(" Inicio() ")
         
@@ -676,30 +853,23 @@ if __name__ == "__main__":
         titulo_label = tk.Label(janela, text='APP GERADOR DE PRESCRIÇÕES POR SETOR', font=('Arial',12))
         titulo_label.place(x=135, y=33.5)
         
-        # Criando um frame para centralizar o conteúdo
-        frame_central = tk.Frame(janela)
-        frame_central.place(relx=0.5, rely=0.5, anchor='center')
-        
         # Rótulo para mostrar o status
-        label_status = tk.Label(frame_central, text="...", wraplength=550, justify="center")
-        label_status.pack(expand=True, fill='both') # Usando pack para centralizar horizontalmente
+        label_status = tk.Label(janela, text="")
+        label_status.place(relx=0.5, rely=0.45, anchor='center') #centralizando na vertical
         
-        # Criar um frame para colocar os botoes lado a lado
-        frame_botoes = tk.Frame(frame_central)
-        frame_botoes.pack()
-        
-        bt_Planejar = tk.Button(frame_botoes, width=18, text="Planejar Tarefa",command=lambda: [
-                                                                                            planejar(),
+        bt_Planejar = tk.Button(janela, width=18, text="Planejar Tarefa",command=lambda: [
+                                                                                            iniciar(),
                                                                                             label_status.config(text="Tarefa planejada inicializada!"),
-                                                                                            
+                                                                                            label_status.place(relx=0.5, rely=0.45, anchor='center')
                                                                                             ])
-        bt_Planejar.pack(side=tk.LEFT, padx=40 , pady = 40)
+        bt_Planejar.place(x=80 , y=275)
 
-        bt_executar = tk.Button(frame_botoes, width=18, text="Executar Tarefa", command=lambda: [
+        bt_executar = tk.Button(janela, width=18, text="Executar Tarefa", command=lambda: [
                                                                                             executar(),
                                                                                             label_status.config(text="Tarefa executada inicializada!"),
+                                                                                            label_status.place(relx=0.5, rely=0.45, anchor='center')
                                                                                             ])
-        bt_executar.pack(side=tk.LEFT, padx=40, pady = 40)
+        bt_executar.place(x=350 , y=275)
         
         PLima_label = tk.Label(janela, text='@PLima', font=('Arial',4))
         PLima_label.place(x=565, y=387)
