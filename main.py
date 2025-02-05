@@ -42,7 +42,7 @@ tarefa_executada = False
 tarefa_executada_erro = False
 
 # Constante para tempo de espera:
-TEMPO_ESPERA = 12
+TEMPO_ESPERA = 10
 
 def agora_limpo():
     agora_limpo = datetime.datetime.now()
@@ -185,7 +185,7 @@ def obter_pacientes_atendimentos():
                             APV.CD_PESSOA_FISICA
                         ORDER BY 
                             APV.CD_SETOR_ATENDIMENTO
-                        --FETCH FIRST 1 ROWS ONLY
+                        FETCH FIRST 1 ROWS ONLY
                     """
                 #####################################################################################
                 
@@ -286,30 +286,32 @@ def Geracao_Pdf_Prescricao(df_):
                 registrar_log('clicar no CPOE')
                 driver.implicitly_wait(TEMPO_ESPERA*2)
                 time.sleep(TEMPO_ESPERA*2)
-                                
-                #nr_atendimento
-                pyautogui.write(linha)
-                registrar_log(f'nr_atendimento: {linha}')
-                driver.implicitly_wait(TEMPO_ESPERA+8)
-                time.sleep(TEMPO_ESPERA+8)
+                try:                
+                    #nr_atendimento
+                    pyautogui.write(linha)
+                    registrar_log(f'nr_atendimento: {linha}')
+                    driver.implicitly_wait(TEMPO_ESPERA/8)
+                    time.sleep(TEMPO_ESPERA/8)
+                except Exception as e:
+                    registrar_log(f"Houve um erro em nr_atendimento: \n{e}")
                 
                 #enter
                 pyautogui.press('enter')
                 registrar_log('1 - enter')
-                driver.implicitly_wait(TEMPO_ESPERA/3)
-                time.sleep(TEMPO_ESPERA/3)
+                driver.implicitly_wait(TEMPO_ESPERA/2.5)
+                time.sleep(TEMPO_ESPERA/2.5)
                 
                 #enter
                 pyautogui.press('enter')
                 registrar_log('2 - enter')
-                driver.implicitly_wait(TEMPO_ESPERA)
+                driver.implicitly_wait(TEMPO_ESPERA/2)
                 time.sleep(TEMPO_ESPERA/2)
                 
                 #click atendimento fechado
                 pyautogui.click(1100,709)
                 registrar_log("click atendimento fechado click(1107,709)")
-                driver.implicitly_wait(TEMPO_ESPERA/7.5)
-                time.sleep(TEMPO_ESPERA/7.5)
+                driver.implicitly_wait(TEMPO_ESPERA/8)
+                time.sleep(TEMPO_ESPERA/8)
                 
                 #botao visualizar
                 bt_cpoe_relatorios = driver.find_element(By.XPATH, value='//*[@id="handlebar-40"]')
