@@ -185,7 +185,7 @@ def obter_pacientes_atendimentos():
                             APV.CD_PESSOA_FISICA
                         ORDER BY 
                             APV.CD_SETOR_ATENDIMENTO
-                        FETCH FIRST 1 ROWS ONLY
+                        --FETCH FIRST 1 ROWS ONLY
                     """
                 #####################################################################################
                 
