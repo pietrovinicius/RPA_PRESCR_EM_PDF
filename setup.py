@@ -38,7 +38,7 @@ if sys.platform == "win32":
 # Configuração da sua aplicação
 setup(
     name="PDD",  # Nome do seu aplicativo
-    version="1.3",  # Versão do aplicativo
+    version="1.5",  # Versão do aplicativo
     description="App Gerador de Prescrições em pdf",  # Descrição do aplicativo
     options={
              "build_exe": build_exe_options},

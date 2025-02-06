@@ -185,10 +185,10 @@ def obter_pacientes_atendimentos():
                             APV.CD_PESSOA_FISICA
                         ORDER BY 
                             APV.CD_SETOR_ATENDIMENTO
-                        --FETCH FIRST 1 ROWS ONLY
+                        FETCH FIRST 1 ROWS ONLY
                     """
                 #####################################################################################
-                
+
                 #Executando a query:
                 cursor.execute(sql)
                 
@@ -200,7 +200,7 @@ def obter_pacientes_atendimentos():
                 df = pd.DataFrame(results, columns=[desc[0] for desc in cursor.description])
                 
                 # Visualizar os primeiros 5 registros
-                registrar_log(f'Atendimentos: {df.sample()}')
+                registrar_log(f'Atendimentos sample: {df.sample()}')
                 time.sleep(2)
                 registrar_log(f'Atendimentos data frame:{df.shape}')
                 time.sleep(2)
@@ -418,8 +418,9 @@ def Geracao_Pdf_Prescricao(df_):
                 registrar_log(f'caminho_novo = {caminho_novo},arquivo:{agora().replace(':', '-')}.pdf)')
             
                 try:
+                    registrar_log(f'try: shutil.move(\n time.sleep(TEMPO_ESPERA/5)')
                     time.sleep(TEMPO_ESPERA/5)
-                    registrar_log(f'try: shutil.move(\ncaminho_antigo:{caminho_antigo}, \ncaminho_novo{caminho_novo})')
+                    registrar_log(f'caminho_antigo:{caminho_antigo}, \ncaminho_novo{caminho_novo})')
                     shutil.move(caminho_antigo, caminho_novo)
                     registrar_log(f"Arquivo:{caminho_novo} Renomeado e movido com sucesso.")
                 except shutil.Error as e:
@@ -434,18 +435,15 @@ def Geracao_Pdf_Prescricao(df_):
                 registrar_log_contador(str(contador))
                 #se rodar tudo ok, retirar o número de atendimento da lista_nr_atendimento
                 lista_nr_atendimento.remove(linha)
-                #registrar_log(f'lista_nr_atendimento.remove({linha})')
-                #registrar_log(f'Retirando da lista o nr_atendimento: {linha}')
-                #registrar_log(f'lista_nr_atendimento:\n{lista_nr_atendimento}')
-                #registrar_log(f'\ncontador = {contador} - de contador_linhas_df:{contador_linhas_df}')
-                #registrar_log(f'******************** FIM ********************')
+                registrar_log(f'lista_nr_atendimento.remove({linha})')
+                registrar_log(f'******************** FIM do {linha} ********************')
                 
                 # pausa dramática:
                 time.sleep(TEMPO_ESPERA/5)
                 
             except Exception as erro:
-                    registrar_log(f'=========== \nERROR:\nexcept do try de dento do for linha in df_filtrado')
-                    registrar_log(f'\nlista_nr_atendimento:{lista_nr_atendimento}\ncontador: {contador} \n{erro}')
+                    registrar_log(f'except do try de dento do for linha in df_filtrado')
+                    registrar_log(f'\nlista_nr_atendimento:{lista_nr_atendimento}\ncontador: {contador} \n=========== ERROR:\n{erro}')
     
     except Exception as erro:
         #ao terminar extoura um exception e cai nesse bloco
@@ -454,54 +452,50 @@ def Geracao_Pdf_Prescricao(df_):
          #se ocorrer um erro na execução, definimos que a variavel tarefa_executada sera False para que a tarefa possa ser executada novamente:
          if not tarefa_executada_erro:
             tarefa_executada = True
-
-    #registrar_log(f'Lista com nr_atendimentos com erro\nlista_nr_atendimento: {lista_nr_atendimento}')
-    #montar data frame com lista de itens que tiveram erro e não foram deletados:
-    df_lista_nr_atendimento = pd.DataFrame(lista_nr_atendimento)
-    lista_nr_atendimento = []
-    #registrar_log(f'Lista com nr_atendimentos com erro APAGADA!\nlista_nr_atendimento: {lista_nr_atendimento}')
-    #registrar_log(f'df_lista_nr_atendimento: {df_lista_nr_atendimento}')
-    
-    #ação para o caso do df_lista_nr_atendimento for vazio ou não:
-    if df_lista_nr_atendimento.empty:
-        registrar_log(f'\nTodos os atendimentos foram gerados com sucesso!')
-        #registrar_log(f'FIM Geracao_Pdf_Prescricao()')
-        df_lista_nr_atendimento = None
-        df = df_lista_nr_atendimento
-        #registrar_log(f'if df_lista_nr_atendimento.empty:{df_lista_nr_atendimento}\ndf:{df}')
-    else:
-        #registrar_log(f'df_lista_nr_atendimento nao esta em branco\nglobal df recebera df_lista_nr_atendimento!!!!')
-        #registrar_log(f'\ndf = df_lista_nr_atendimento: \n{df_lista_nr_atendimento}')
-        df = df_lista_nr_atendimento
-        df_lista_nr_atendimento = None
-        #registrar_log(f'df_lista_nr_atendimento.clear(){df_lista_nr_atendimento.sample()}')
-        #registrar_log(f'df = df: \n{df.sample()}')
-        #registrar_log_atend_erros(df)
-        registrar_log(f"Executara novamente a Geracao_Pdf_Prescricao() com o global df apenas com os nr_atendimento que tiveram erros:")
+    try:
+        #registrar_log(f'Lista com nr_atendimentos com erro\nlista_nr_atendimento: {lista_nr_atendimento}')
+        #montar data frame com lista de itens que tiveram erro e não foram deletados:
+        df_lista_nr_atendimento = pd.DataFrame(lista_nr_atendimento)
+        lista_nr_atendimento = []
+        #registrar_log(f'Lista com nr_atendimentos com erro APAGADA!\nlista_nr_atendimento: {lista_nr_atendimento}')
+        #registrar_log(f'df_lista_nr_atendimento: {df_lista_nr_atendimento}')
         
-        #TODO: ALT + F4
-        pyautogui.press("alt","f4")
-        registrar_log('pyautogui.press("alt","f4")')
+        #ação para o caso do df_lista_nr_atendimento for vazio ou não:
+        if df_lista_nr_atendimento.empty:
+            registrar_log(f'\nTodos os atendimentos foram gerados com sucesso!')
+            #registrar_log(f'FIM Geracao_Pdf_Prescricao()')
+            df_lista_nr_atendimento = None
+            df_renovo = df_lista_nr_atendimento
+            #registrar_log(f'if df_lista_nr_atendimento.empty:{df_lista_nr_atendimento}\ndf:{df}')
+        else:
+            registrar_log(f'df_lista_nr_atendimento nao esta em branco\nglobal df recebera df_lista_nr_atendimento!!!!')
+            registrar_log(f'\ndf = df_lista_nr_atendimento: \n{df_lista_nr_atendimento}')
+            df_renovo = df_lista_nr_atendimento
+            registrar_log_atend_erros(df_lista_nr_atendimento)
+            df_lista_nr_atendimento = None
+            registrar_log(f'df atendimentos com erro df_renovo.shape: {df_renovo.shape}')
+            registrar_log(f"Executara novamente a Geracao_Pdf_Prescricao() com o global df apenas com os nr_atendimento que tiveram erros:")
+            Geracao_Pdf_Prescricao(df_renovo)
+            
+        #copiar_arquivos:
+        registrar_log(f'def Geracao_PDF_Prescricao() \nbloco com funcao copiar_arquivos()')
+        copiar_arquivos()
 
-        Geracao_Pdf_Prescricao(df)
-        
-    #copiar_arquivos:
-    registrar_log(f'def Geracao_PDF_Prescricao() \nbloco com funcao copiar_arquivos()')
-    copiar_arquivos()
+            
+        #FIM:
+        #statusMultiprocessing = False
+        df_ = []
+        registrar_log(f'df_: \n{df_}')
+        #registrar_log(f'\n #FIM Geracao_Pdf_Prescricao(df_)\nstatusMultiprocessing = {statusMultiprocessing}')
 
-         
-    #FIM:
-    #statusMultiprocessing = False
-    df_ = []
-    registrar_log(f'df_: \n{df_}')
-    #registrar_log(f'\n #FIM Geracao_Pdf_Prescricao(df_)\nstatusMultiprocessing = {statusMultiprocessing}')
+        registrar_log(f"Geracao Pdf Prescricao\nANTES:\nTarefa_executada: {tarefa_executada}\nTarefa_executada_erro:{tarefa_executada_erro}")
 
-    registrar_log(f"Geracao Pdf Prescricao\nANTES:\nTarefa_executada: {tarefa_executada}\nTarefa_executada_erro:{tarefa_executada_erro}")
+        tarefa_executada = False
 
-    tarefa_executada = False
+        registrar_log(f"Geracao Pdf Prescricao\nDEPOIS:\nTarefa_executada: {tarefa_executada}\nTarefa_executada_erro:{tarefa_executada_erro}")
+    except Exception as erro:
+        registrar_log(f"ERROR:\n except: {erro}") 
 
-    registrar_log(f"Geracao Pdf Prescricao\nDEPOIS:\nTarefa_executada: {tarefa_executada}\nTarefa_executada_erro:{tarefa_executada_erro}")
-    
     registrar_log(f'FIM Geracao_Pdf_Prescricao(df_)\n')
 
 def cronometro_tarefa_agendada():
@@ -603,6 +597,8 @@ def main():
     excluir_arquivos_past_downloads()
     encontrar_diretorio_instantclient()
     df_filtrado  = obter_pacientes_atendimentos()
+    registrar_log(f"Main() df_filtrado tamanho: {df_filtrado.shape}")
+    registrar_log(f'Geracao_Pdf_Prescricao({df_filtrado.shape})')
     Geracao_Pdf_Prescricao(df_filtrado)
     
     if not tarefa_executada_erro:

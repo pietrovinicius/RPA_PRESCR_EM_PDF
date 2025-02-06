@@ -1,110 +1,522 @@
-2025-02-05 08:14:38 - 2025-02-05 08:14:38
+2025-02-05 17:38:45 - 2025-02-05 17:38:45
 __name__ == "__main__" 
 
-2025-02-05 08:14:38 - ****registrar_log_tarefa_executada() tarefa_executada = False
-2025-02-05 08:14:38 -  Inicio() 
-2025-02-05 08:14:40 - Botao executar clicado! - tarefa executada: False, tarefa_executada_erro:False
-2025-02-05 08:14:40 - Tarefa inicializada! 
+2025-02-05 17:38:45 - ****registrar_log_tarefa_executada() tarefa_executada = False
+2025-02-05 17:38:45 -  Inicio() 
+2025-02-05 17:38:52 - Botao executar clicado! - tarefa executada: False, tarefa_executada_erro:False
+2025-02-05 17:38:52 - Tarefa inicializada! 
 bt_executar desativado!
-2025-02-05 08:14:40 - Main()
-2025-02-05 08:14:40 - Excluir_arquivos_past_downloads()
-2025-02-05 08:14:40 - Caminho da pasta downloads: C:\Users\pvplima.C19NOT76\Downloads
-2025-02-05 08:14:40 - Não foi possível remover o arquivo C:\Users\pvplima.C19NOT76\Downloads\Telegram Desktop
+2025-02-05 17:38:52 - Main()
+2025-02-05 17:38:52 - Excluir_arquivos_past_downloads()
+2025-02-05 17:38:52 - Caminho da pasta downloads: C:\Users\pvplima.C19NOT76\Downloads
+2025-02-05 17:38:52 - Não foi possível remover o arquivo C:\Users\pvplima.C19NOT76\Downloads\green-hand-drawn-brainstorming-with-doodle-art-design
+Erro: [WinError 5] Acesso negado: 'C:\\Users\\pvplima.C19NOT76\\Downloads\\green-hand-drawn-brainstorming-with-doodle-art-design'
+
+2025-02-05 17:38:52 - Não foi possível remover o arquivo C:\Users\pvplima.C19NOT76\Downloads\icon-design-concept-illustration
+Erro: [WinError 5] Acesso negado: 'C:\\Users\\pvplima.C19NOT76\\Downloads\\icon-design-concept-illustration'
+
+2025-02-05 17:38:52 - Não foi possível remover o arquivo C:\Users\pvplima.C19NOT76\Downloads\illustration-space-ship
+Erro: [WinError 5] Acesso negado: 'C:\\Users\\pvplima.C19NOT76\\Downloads\\illustration-space-ship'
+
+2025-02-05 17:38:52 - Não foi possível remover o arquivo C:\Users\pvplima.C19NOT76\Downloads\project-bolt-sb1-rw5zltw6 (1)2
+Erro: [WinError 5] Acesso negado: 'C:\\Users\\pvplima.C19NOT76\\Downloads\\project-bolt-sb1-rw5zltw6 (1)2'
+
+2025-02-05 17:38:52 - Não foi possível remover o arquivo C:\Users\pvplima.C19NOT76\Downloads\red-dart-arrow-hitting-target-center-dartboard
+Erro: [WinError 5] Acesso negado: 'C:\\Users\\pvplima.C19NOT76\\Downloads\\red-dart-arrow-hitting-target-center-dartboard'
+
+2025-02-05 17:38:52 - Não foi possível remover o arquivo C:\Users\pvplima.C19NOT76\Downloads\steps-concept-illustration
+Erro: [WinError 5] Acesso negado: 'C:\\Users\\pvplima.C19NOT76\\Downloads\\steps-concept-illustration'
+
+2025-02-05 17:38:52 - Não foi possível remover o arquivo C:\Users\pvplima.C19NOT76\Downloads\Telegram Desktop
 Erro: [WinError 5] Acesso negado: 'C:\\Users\\pvplima.C19NOT76\\Downloads\\Telegram Desktop'
 
-2025-02-05 08:14:40 - Encontrar_diretorio_instantclient
-2025-02-05 08:14:40 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
-2025-02-05 08:14:40 - caminho instantclient:
+2025-02-05 17:38:52 - Encontrar_diretorio_instantclient
+2025-02-05 17:38:52 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-02-05 17:38:52 - caminho instantclient:
 C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6
-2025-02-05 08:14:40 - Encontrar_diretorio_instantclient
-2025-02-05 08:14:40 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
-2025-02-05 08:14:40 - caminho instantclient:
+2025-02-05 17:38:52 - Encontrar_diretorio_instantclient
+2025-02-05 17:38:52 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-02-05 17:38:52 - caminho instantclient:
 C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6
-2025-02-05 08:14:51 - Atendimentos:    NR_ATENDIMENTO
-0          671033
-2025-02-05 08:14:53 - Atendimentos data frame:(1, 1)
-2025-02-05 08:14:55 - Atendimentos obtido com sucesso!
-2025-02-05 08:15:00 - Geracao de Pdf ()
-2025-02-05 08:15:00 - 
+2025-02-05 17:39:01 - Atendimentos:    NR_ATENDIMENTO
+1          672270
+2025-02-05 17:39:03 - Atendimentos data frame:(2, 1)
+2025-02-05 17:39:05 - Atendimentos obtido com sucesso!
+2025-02-05 17:39:10 - Geracao de Pdf ()
+2025-02-05 17:39:10 - 
 df_filtrado:
    NR_ATENDIMENTO
-0          671033
-2025-02-05 08:15:00 - contador:0
-contador_linhas_df: 1
-2025-02-05 08:15:00 - Inicio da repetição
-2025-02-05 08:15:00 - Repeticao for index iterrows()
-2025-02-05 08:15:00 - Adicionando a lista o nr_atendimento:671033
-2025-02-05 08:15:00 - Geracao Pdf Prescricao - contador:0
-2025-02-05 08:15:00 - Geracao_Pdf_Prescricao() - try:
-2025-02-05 08:15:08 - http://aplicacao.hsf.local:7070/#/login
-2025-02-05 08:15:08 - usuario
-2025-02-05 08:15:10 - senha
-2025-02-05 08:15:12 - login
-2025-02-05 08:15:20 - click objeto invalido
+0          670604
+2025-02-05 17:39:10 - contador:0
+contador_linhas_df: 2
+2025-02-05 17:39:10 - Inicio da repetição
+2025-02-05 17:39:10 - Repeticao for index iterrows()
+2025-02-05 17:39:10 - Adicionando a lista o nr_atendimento:670604
+2025-02-05 17:39:10 - Geracao Pdf Prescricao - contador:0
+2025-02-05 17:39:10 - Geracao_Pdf_Prescricao() - try:
+2025-02-05 17:39:19 - http://aplicacao.hsf.local:7070/#/login
+2025-02-05 17:39:19 - usuario
+2025-02-05 17:39:21 - senha
+2025-02-05 17:39:23 - login
+2025-02-05 17:39:32 - click objeto invalido
 click(1107,702)
-2025-02-05 08:15:22 - clicar no CPOE
-2025-02-05 08:15:42 - nr_atendimento: 671033
-2025-02-05 08:15:44 - 1 - enter
-2025-02-05 08:15:48 - 2 - enter
-2025-02-05 08:15:53 - click atendimento fechado click(1107,709)
-2025-02-05 08:15:54 - bt_cpoe_relatorios.click()
-2025-02-05 08:15:56 - visualizar.click()
-2025-02-05 08:16:06 - tentando clicar no btn_manter()
-2025-02-05 08:16:06 - Houve um erro em clicar_btn_manter: 
+2025-02-05 17:39:34 - clicar no CPOE
+2025-02-05 17:39:54 - nr_atendimento: 670604
+2025-02-05 17:39:55 - 1 - enter
+2025-02-05 17:39:59 - 2 - enter
+2025-02-05 17:40:04 - click atendimento fechado click(1107,709)
+2025-02-05 17:40:06 - bt_cpoe_relatorios.click()
+2025-02-05 17:40:07 - visualizar.click()
+2025-02-05 17:40:17 - tentando clicar no btn_manter()
+2025-02-05 17:40:17 - Houve um erro em clicar_btn_manter: 
 PyAutoGUI was unable to import pyscreeze. (This is likely because you're running a version of Python that Pillow (which pyscreeze depends on) doesn't support currently.) Please install this module to enable the function you tried to call.
-2025-02-05 08:16:07 - click no baixar
-2025-02-05 08:16:07 - baixar.click(1817,165)
-2025-02-05 08:16:09 - Pressionar('enter')
-2025-02-05 08:16:11 - btn_manter
-2025-02-05 08:16:11 - manter.click(1755,106)
-2025-02-05 08:16:13 - btn_manter
-2025-02-05 08:16:13 - manter.click(1751,112)
-2025-02-05 08:16:15 - btn_manter
-2025-02-05 08:16:15 - manter.click(1755,106)
-2025-02-05 08:16:20 - 
+2025-02-05 17:40:18 - click no baixar
+2025-02-05 17:40:18 - baixar.click(1817,165)
+2025-02-05 17:40:20 - Pressionar('enter')
+2025-02-05 17:40:22 - btn_manter
+2025-02-05 17:40:22 - manter.click(1755,106)
+2025-02-05 17:40:24 - btn_manter
+2025-02-05 17:40:24 - manter.click(1751,112)
+2025-02-05 17:40:26 - btn_manter
+2025-02-05 17:40:27 - manter.click(1755,106)
+2025-02-05 17:40:31 - 
 driver.quit()
 
-2025-02-05 08:16:20 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
-2025-02-05 08:16:22 - Arquivos:
-['b989ea51-765e-427d-b444-e8e346fe5ada.pdf']
-2025-02-05 08:16:24 - Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\b989ea51-765e-427d-b444-e8e346fe5ada.pdf
-2025-02-05 08:16:26 - pasta_prescricoes: Prescricoes
-2025-02-05 08:16:28 - pasta_data: Prescricoes\2025_02_05
-2025-02-05 08:16:30 - Cria a pasta da data se não existir: Prescricoes\2025_02_05
-2025-02-05 08:16:32 - Data_hora: 2025-02-05 08:16:32
-2025-02-05 08:16:32 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\b989ea51-765e-427d-b444-e8e346fe5ada.pdf
-2025-02-05 08:16:32 - caminho_novo = Prescricoes\2025_02_05\671033 - 2025-02-05 08-16-32.pdf,arquivo:2025-02-05 08-16-32.pdf)
-2025-02-05 08:16:34 - try: shutil.move(
-caminho_antigo:C:\Users\pvplima.C19NOT76\Downloads\b989ea51-765e-427d-b444-e8e346fe5ada.pdf, 
-caminho_novoPrescricoes\2025_02_05\671033 - 2025-02-05 08-16-32.pdf)
-2025-02-05 08:16:34 - Arquivo:Prescricoes\2025_02_05\671033 - 2025-02-05 08-16-32.pdf Renomeado e movido com sucesso.
-2025-02-05 08:16:36 - Contador: 1
-2025-02-05 08:16:38 - 
+2025-02-05 17:40:31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2025-02-05 17:40:33 - Arquivos:
+['8e1d8281-57ef-4461-8ca6-6ec90ec6d4a6.pdf']
+2025-02-05 17:40:35 - Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\8e1d8281-57ef-4461-8ca6-6ec90ec6d4a6.pdf
+2025-02-05 17:40:37 - pasta_prescricoes: Prescricoes
+2025-02-05 17:40:39 - pasta_data: Prescricoes\2025_02_05
+2025-02-05 17:40:41 - Cria a pasta da data se não existir: Prescricoes\2025_02_05
+2025-02-05 17:40:43 - Data_hora: 2025-02-05 17:40:43
+2025-02-05 17:40:43 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\8e1d8281-57ef-4461-8ca6-6ec90ec6d4a6.pdf
+2025-02-05 17:40:43 - caminho_novo = Prescricoes\2025_02_05\670604 - 2025-02-05 17-40-43.pdf,arquivo:2025-02-05 17-40-43.pdf)
+2025-02-05 17:40:45 - try: shutil.move(
+caminho_antigo:C:\Users\pvplima.C19NOT76\Downloads\8e1d8281-57ef-4461-8ca6-6ec90ec6d4a6.pdf, 
+caminho_novoPrescricoes\2025_02_05\670604 - 2025-02-05 17-40-43.pdf)
+2025-02-05 17:40:45 - Arquivo:Prescricoes\2025_02_05\670604 - 2025-02-05 17-40-43.pdf Renomeado e movido com sucesso.
+2025-02-05 17:40:47 - Contador: 1
+2025-02-05 17:40:49 - Repeticao for index iterrows()
+2025-02-05 17:40:49 - Adicionando a lista o nr_atendimento:672270
+2025-02-05 17:40:49 - Geracao Pdf Prescricao - contador:1
+2025-02-05 17:40:49 - Geracao_Pdf_Prescricao() - try:
+2025-02-05 17:40:57 - http://aplicacao.hsf.local:7070/#/login
+2025-02-05 17:40:57 - usuario
+2025-02-05 17:40:59 - senha
+2025-02-05 17:41:01 - login
+2025-02-05 17:41:10 - click objeto invalido
+click(1107,702)
+2025-02-05 17:41:12 - clicar no CPOE
+2025-02-05 17:41:32 - nr_atendimento: 672270
+2025-02-05 17:41:33 - 1 - enter
+2025-02-05 17:41:37 - 2 - enter
+2025-02-05 17:41:42 - click atendimento fechado click(1107,709)
+2025-02-05 17:41:44 - =========== 
+ERROR:
+except do try de dento do for linha in df_filtrado
+2025-02-05 17:41:44 - 
+lista_nr_atendimento:['672270']
+contador: 1 
+Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=128.0.6613.120)
+Stacktrace:
+	GetHandleVerifier [0x00007FF687B19412+29090]
+	(No symbol) [0x00007FF687A8E239]
+	(No symbol) [0x00007FF68794B1DA]
+	(No symbol) [0x00007FF68791FAF5]
+	(No symbol) [0x00007FF6879CE2C7]
+	(No symbol) [0x00007FF6879E5EB1]
+	(No symbol) [0x00007FF6879C6493]
+	(No symbol) [0x00007FF6879909D1]
+	(No symbol) [0x00007FF687991B31]
+	GetHandleVerifier [0x00007FF687E3871D+3302573]
+	GetHandleVerifier [0x00007FF687E84243+3612627]
+	GetHandleVerifier [0x00007FF687E7A417+3572135]
+	GetHandleVerifier [0x00007FF687BD5EB6+801862]
+	(No symbol) [0x00007FF687A9945F]
+	(No symbol) [0x00007FF687A94FB4]
+	(No symbol) [0x00007FF687A95140]
+	(No symbol) [0x00007FF687A8461F]
+	BaseThreadInitThunk [0x00007FFDE2A1257D+29]
+	RtlUserThreadStart [0x00007FFDE3FEAA58+40]
+
+2025-02-05 17:41:44 - df_lista_nr_atendimento nao esta em branco
+global df recebera df_lista_nr_atendimento!!!!
+2025-02-05 17:41:44 - 
+df = df_lista_nr_atendimento: 
+        0
+0  672270
+2025-02-05 17:41:44 - df atendimentos com erro: (1, 1)
+2025-02-05 17:41:44 - Executara novamente a Geracao_Pdf_Prescricao() com o global df apenas com os nr_atendimento que tiveram erros:
+2025-02-05 17:41:44 - pyautogui.press(alt,f4)
+2025-02-05 17:41:44 - pyautogui.press(alt,f4) - Feito
+2025-02-05 17:41:44 - Geracao_Pdf_Prescricao() - Geracao_Pdf_Prescricao(df: (1, 1))
+2025-02-05 17:41:44 - Geracao de Pdf ()
+2025-02-05 17:41:44 - 
+df_filtrado:
+        0
+0  672270
+2025-02-05 17:41:44 - contador:0
+contador_linhas_df: 1
+2025-02-05 17:41:44 - Inicio da repetição
+2025-02-05 17:41:44 - Repeticao for index iterrows()
+2025-02-05 17:41:44 - Adicionando a lista o nr_atendimento:672270
+2025-02-05 17:41:44 - Geracao Pdf Prescricao - contador:0
+2025-02-05 17:41:44 - Geracao_Pdf_Prescricao() - try:
+2025-02-05 17:41:52 - http://aplicacao.hsf.local:7070/#/login
+2025-02-05 17:41:52 - usuario
+2025-02-05 17:41:54 - senha
+2025-02-05 17:41:56 - login
+2025-02-05 17:42:04 - click objeto invalido
+click(1107,702)
+2025-02-05 17:42:07 - clicar no CPOE
+2025-02-05 17:42:27 - nr_atendimento: 672270
+2025-02-05 17:42:28 - 1 - enter
+2025-02-05 17:42:32 - 2 - enter
+2025-02-05 17:42:37 - click atendimento fechado click(1107,709)
+2025-02-05 17:42:39 - bt_cpoe_relatorios.click()
+2025-02-05 17:42:40 - visualizar.click()
+2025-02-05 17:42:50 - tentando clicar no btn_manter()
+2025-02-05 17:42:50 - Houve um erro em clicar_btn_manter: 
+PyAutoGUI was unable to import pyscreeze. (This is likely because you're running a version of Python that Pillow (which pyscreeze depends on) doesn't support currently.) Please install this module to enable the function you tried to call.
+2025-02-05 17:42:51 - click no baixar
+2025-02-05 17:42:51 - baixar.click(1817,165)
+2025-02-05 17:42:53 - Pressionar('enter')
+2025-02-05 17:42:55 - btn_manter
+2025-02-05 17:42:55 - manter.click(1755,106)
+2025-02-05 17:42:57 - btn_manter
+2025-02-05 17:42:57 - manter.click(1751,112)
+2025-02-05 17:42:59 - btn_manter
+2025-02-05 17:42:59 - manter.click(1755,106)
+2025-02-05 17:43:04 - 
+driver.quit()
+
+2025-02-05 17:43:04 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2025-02-05 17:43:06 - Arquivos:
+['09acdc6f-c73d-4575-aa95-5b7ec2c970a0.pdf']
+2025-02-05 17:43:08 - Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\09acdc6f-c73d-4575-aa95-5b7ec2c970a0.pdf
+2025-02-05 17:43:10 - pasta_prescricoes: Prescricoes
+2025-02-05 17:43:12 - pasta_data: Prescricoes\2025_02_05
+2025-02-05 17:43:14 - Cria a pasta da data se não existir: Prescricoes\2025_02_05
+2025-02-05 17:43:16 - Data_hora: 2025-02-05 17:43:16
+2025-02-05 17:43:16 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\09acdc6f-c73d-4575-aa95-5b7ec2c970a0.pdf
+2025-02-05 17:43:16 - caminho_novo = Prescricoes\2025_02_05\672270 - 2025-02-05 17-43-16.pdf,arquivo:2025-02-05 17-43-16.pdf)
+2025-02-05 17:43:18 - try: shutil.move(
+caminho_antigo:C:\Users\pvplima.C19NOT76\Downloads\09acdc6f-c73d-4575-aa95-5b7ec2c970a0.pdf, 
+caminho_novoPrescricoes\2025_02_05\672270 - 2025-02-05 17-43-16.pdf)
+2025-02-05 17:43:18 - Arquivo:Prescricoes\2025_02_05\672270 - 2025-02-05 17-43-16.pdf Renomeado e movido com sucesso.
+2025-02-05 17:43:20 - Contador: 1
+2025-02-05 17:43:22 - 
 Todos os atendimentos foram gerados com sucesso!
-2025-02-05 08:16:38 - def Geracao_PDF_Prescricao() 
+2025-02-05 17:43:22 - def Geracao_PDF_Prescricao() 
 bloco com funcao copiar_arquivos()
-2025-02-05 08:16:38 - def copiar_arquivos()
-2025-02-05 08:16:38 - base_dir: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
-2025-02-05 08:16:38 - Caminho de origem: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Prescricoes
-2025-02-05 08:16:38 - Caminho de destino: \\192.168.103.252\contingencia_hsf$\Impressos\Prescricoes
-2025-02-05 08:16:38 - shutil.copytree(origem, destino, dirs_exist_ok=True)
-2025-02-05 08:16:39 - 
+2025-02-05 17:43:22 - def copiar_arquivos()
+2025-02-05 17:43:22 - base_dir: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-02-05 17:43:22 - Caminho de origem: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Prescricoes
+2025-02-05 17:43:22 - Caminho de destino: \\192.168.103.252\contingencia_hsf$\Impressos\Prescricoes
+2025-02-05 17:43:22 - shutil.copytree(origem, destino, dirs_exist_ok=True)
+2025-02-05 17:43:23 - 
 Arquivos copiados com sucesso 
 de: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Prescricoes 
 para \\192.168.103.252\contingencia_hsf$\Impressos\Prescricoes
 FIM copiar_arquivos()
-2025-02-05 08:16:39 - df_: 
+2025-02-05 17:43:23 - df_: 
 []
-2025-02-05 08:16:39 - Geracao Pdf Prescricao
+2025-02-05 17:43:23 - Geracao Pdf Prescricao
 ANTES:
 Tarefa_executada: True
 Tarefa_executada_erro:False
-2025-02-05 08:16:39 - Geracao Pdf Prescricao
+2025-02-05 17:43:23 - Geracao Pdf Prescricao
 DEPOIS:
 Tarefa_executada: False
 Tarefa_executada_erro:False
-2025-02-05 08:16:39 - FIM Geracao_Pdf_Prescricao(df_)
+2025-02-05 17:43:23 - FIM Geracao_Pdf_Prescricao(df_)
 
-2025-02-05 08:16:43 - Prescrições geradas!
-2025-02-05 08:16:43 - ****registrar_log_tarefa_executada() tarefa_executada = True
-2025-02-05 08:16:43 - FIM DA EXECUÇÃO
+2025-02-05 17:43:27 - def Geracao_PDF_Prescricao() 
+bloco com funcao copiar_arquivos()
+2025-02-05 17:43:27 - def copiar_arquivos()
+2025-02-05 17:43:27 - base_dir: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-02-05 17:43:27 - Caminho de origem: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Prescricoes
+2025-02-05 17:43:27 - Caminho de destino: \\192.168.103.252\contingencia_hsf$\Impressos\Prescricoes
+2025-02-05 17:43:27 - shutil.copytree(origem, destino, dirs_exist_ok=True)
+2025-02-05 17:43:28 - 
+Arquivos copiados com sucesso 
+de: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Prescricoes 
+para \\192.168.103.252\contingencia_hsf$\Impressos\Prescricoes
+FIM copiar_arquivos()
+2025-02-05 17:43:28 - df_: 
+[]
+2025-02-05 17:43:28 - Geracao Pdf Prescricao
+ANTES:
+Tarefa_executada: False
+Tarefa_executada_erro:False
+2025-02-05 17:43:28 - Geracao Pdf Prescricao
+DEPOIS:
+Tarefa_executada: False
+Tarefa_executada_erro:False
+2025-02-05 17:43:28 - FIM Geracao_Pdf_Prescricao(df_)
+
+2025-02-05 17:43:34 - Prescrições geradas!
+2025-02-05 17:43:34 - ****registrar_log_tarefa_executada() tarefa_executada = True
+2025-02-05 17:43:34 - FIM DA EXECUÇÃO
+2025-02-05 17:48:27 - 2025-02-05 17:48:27
+__name__ == "__main__" 
+
+2025-02-05 17:48:27 - ****registrar_log_tarefa_executada() tarefa_executada = False
+2025-02-05 17:48:27 -  Inicio() 
+2025-02-05 17:48:37 - Botao executar clicado! - tarefa executada: False, tarefa_executada_erro:False
+2025-02-05 17:48:37 - Tarefa inicializada! 
+bt_executar desativado!
+2025-02-05 17:48:37 - Main()
+2025-02-05 17:48:37 - Excluir_arquivos_past_downloads()
+2025-02-05 17:48:37 - Caminho da pasta downloads: C:\Users\pvplima.C19NOT76\Downloads
+2025-02-05 17:48:37 - Não foi possível remover o arquivo C:\Users\pvplima.C19NOT76\Downloads\green-hand-drawn-brainstorming-with-doodle-art-design
+Erro: [WinError 5] Acesso negado: 'C:\\Users\\pvplima.C19NOT76\\Downloads\\green-hand-drawn-brainstorming-with-doodle-art-design'
+
+2025-02-05 17:48:37 - Não foi possível remover o arquivo C:\Users\pvplima.C19NOT76\Downloads\icon-design-concept-illustration
+Erro: [WinError 5] Acesso negado: 'C:\\Users\\pvplima.C19NOT76\\Downloads\\icon-design-concept-illustration'
+
+2025-02-05 17:48:37 - Não foi possível remover o arquivo C:\Users\pvplima.C19NOT76\Downloads\illustration-space-ship
+Erro: [WinError 5] Acesso negado: 'C:\\Users\\pvplima.C19NOT76\\Downloads\\illustration-space-ship'
+
+2025-02-05 17:48:37 - Não foi possível remover o arquivo C:\Users\pvplima.C19NOT76\Downloads\project-bolt-sb1-rw5zltw6 (1)2
+Erro: [WinError 5] Acesso negado: 'C:\\Users\\pvplima.C19NOT76\\Downloads\\project-bolt-sb1-rw5zltw6 (1)2'
+
+2025-02-05 17:48:37 - Não foi possível remover o arquivo C:\Users\pvplima.C19NOT76\Downloads\red-dart-arrow-hitting-target-center-dartboard
+Erro: [WinError 5] Acesso negado: 'C:\\Users\\pvplima.C19NOT76\\Downloads\\red-dart-arrow-hitting-target-center-dartboard'
+
+2025-02-05 17:48:37 - Não foi possível remover o arquivo C:\Users\pvplima.C19NOT76\Downloads\steps-concept-illustration
+Erro: [WinError 5] Acesso negado: 'C:\\Users\\pvplima.C19NOT76\\Downloads\\steps-concept-illustration'
+
+2025-02-05 17:48:37 - Não foi possível remover o arquivo C:\Users\pvplima.C19NOT76\Downloads\Telegram Desktop
+Erro: [WinError 5] Acesso negado: 'C:\\Users\\pvplima.C19NOT76\\Downloads\\Telegram Desktop'
+
+2025-02-05 17:48:37 - Encontrar_diretorio_instantclient
+2025-02-05 17:48:37 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-02-05 17:48:37 - caminho instantclient:
+C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6
+2025-02-05 17:48:37 - Encontrar_diretorio_instantclient
+2025-02-05 17:48:37 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-02-05 17:48:37 - caminho instantclient:
+C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6
+2025-02-05 17:48:44 - Atendimentos:    NR_ATENDIMENTO
+1          672270
+2025-02-05 17:48:46 - Atendimentos data frame:(2, 1)
+2025-02-05 17:48:48 - Atendimentos obtido com sucesso!
+2025-02-05 17:48:54 - Geracao de Pdf ()
+2025-02-05 17:48:54 - 
+df_filtrado:
+   NR_ATENDIMENTO
+0          670604
+2025-02-05 17:48:54 - contador:0
+contador_linhas_df: 2
+2025-02-05 17:48:54 - Inicio da repetição
+2025-02-05 17:48:54 - Repeticao for index iterrows()
+2025-02-05 17:48:54 - Adicionando a lista o nr_atendimento:670604
+2025-02-05 17:48:54 - Geracao Pdf Prescricao - contador:0
+2025-02-05 17:48:54 - Geracao_Pdf_Prescricao() - try:
+2025-02-05 17:49:02 - http://aplicacao.hsf.local:7070/#/login
+2025-02-05 17:49:02 - usuario
+2025-02-05 17:49:05 - senha
+2025-02-05 17:49:07 - login
+2025-02-05 17:49:15 - click objeto invalido
+click(1107,702)
+2025-02-05 17:49:17 - =========== 
+ERROR:
+except do try de dento do for linha in df_filtrado
+2025-02-05 17:49:17 - 
+lista_nr_atendimento:['670604']
+contador: 0 
+Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=128.0.6613.120)
+Stacktrace:
+	GetHandleVerifier [0x00007FF687B19412+29090]
+	(No symbol) [0x00007FF687A8E239]
+	(No symbol) [0x00007FF68794B1DA]
+	(No symbol) [0x00007FF68791FAF5]
+	(No symbol) [0x00007FF6879CE2C7]
+	(No symbol) [0x00007FF6879E5EB1]
+	(No symbol) [0x00007FF6879C6493]
+	(No symbol) [0x00007FF6879909D1]
+	(No symbol) [0x00007FF687991B31]
+	GetHandleVerifier [0x00007FF687E3871D+3302573]
+	GetHandleVerifier [0x00007FF687E84243+3612627]
+	GetHandleVerifier [0x00007FF687E7A417+3572135]
+	GetHandleVerifier [0x00007FF687BD5EB6+801862]
+	(No symbol) [0x00007FF687A9945F]
+	(No symbol) [0x00007FF687A94FB4]
+	(No symbol) [0x00007FF687A95140]
+	(No symbol) [0x00007FF687A8461F]
+	BaseThreadInitThunk [0x00007FFDE2A1257D+29]
+	RtlUserThreadStart [0x00007FFDE3FEAA58+40]
+
+2025-02-05 17:49:17 - Repeticao for index iterrows()
+2025-02-05 17:49:17 - Adicionando a lista o nr_atendimento:672270
+2025-02-05 17:49:17 - Geracao Pdf Prescricao - contador:0
+2025-02-05 17:49:17 - Geracao_Pdf_Prescricao() - try:
+2025-02-05 17:49:25 - http://aplicacao.hsf.local:7070/#/login
+2025-02-05 17:49:25 - usuario
+2025-02-05 17:49:27 - senha
+2025-02-05 17:49:31 - login
+2025-02-05 17:49:40 - click objeto invalido
+click(1107,702)
+2025-02-05 17:49:42 - clicar no CPOE
+2025-02-05 17:50:02 - nr_atendimento: 672270
+2025-02-05 17:50:03 - 1 - enter
+2025-02-05 17:50:07 - 2 - enter
+2025-02-05 17:50:12 - click atendimento fechado click(1107,709)
+2025-02-05 17:50:14 - bt_cpoe_relatorios.click()
+2025-02-05 17:50:15 - visualizar.click()
+2025-02-05 17:50:25 - tentando clicar no btn_manter()
+2025-02-05 17:50:25 - Houve um erro em clicar_btn_manter: 
+PyAutoGUI was unable to import pyscreeze. (This is likely because you're running a version of Python that Pillow (which pyscreeze depends on) doesn't support currently.) Please install this module to enable the function you tried to call.
+2025-02-05 17:50:26 - click no baixar
+2025-02-05 17:50:26 - baixar.click(1817,165)
+2025-02-05 17:50:28 - Pressionar('enter')
+2025-02-05 17:50:30 - btn_manter
+2025-02-05 17:50:31 - manter.click(1755,106)
+2025-02-05 17:50:33 - btn_manter
+2025-02-05 17:50:33 - manter.click(1751,112)
+2025-02-05 17:50:35 - btn_manter
+2025-02-05 17:50:35 - manter.click(1755,106)
+2025-02-05 17:50:39 - 
+driver.quit()
+
+2025-02-05 17:50:39 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2025-02-05 17:50:41 - Arquivos:
+['7ef395ff-5b80-4bee-ac69-af29397404fb.pdf']
+2025-02-05 17:50:43 - Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\7ef395ff-5b80-4bee-ac69-af29397404fb.pdf
+2025-02-05 17:50:45 - pasta_prescricoes: Prescricoes
+2025-02-05 17:50:47 - pasta_data: Prescricoes\2025_02_05
+2025-02-05 17:50:49 - Cria a pasta da data se não existir: Prescricoes\2025_02_05
+2025-02-05 17:50:51 - Data_hora: 2025-02-05 17:50:51
+2025-02-05 17:50:51 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\7ef395ff-5b80-4bee-ac69-af29397404fb.pdf
+2025-02-05 17:50:51 - caminho_novo = Prescricoes\2025_02_05\672270 - 2025-02-05 17-50-51.pdf,arquivo:2025-02-05 17-50-51.pdf)
+2025-02-05 17:50:53 - try: shutil.move(
+caminho_antigo:C:\Users\pvplima.C19NOT76\Downloads\7ef395ff-5b80-4bee-ac69-af29397404fb.pdf, 
+caminho_novoPrescricoes\2025_02_05\672270 - 2025-02-05 17-50-51.pdf)
+2025-02-05 17:50:53 - Arquivo:Prescricoes\2025_02_05\672270 - 2025-02-05 17-50-51.pdf Renomeado e movido com sucesso.
+2025-02-05 17:50:55 - Contador: 1
+2025-02-05 17:50:57 - df_lista_nr_atendimento nao esta em branco
+global df recebera df_lista_nr_atendimento!!!!
+2025-02-05 17:50:57 - 
+df = df_lista_nr_atendimento: 
+        0
+0  670604
+2025-02-05 17:50:57 - df atendimentos com erro: (1, 1)
+2025-02-05 17:50:57 - Executara novamente a Geracao_Pdf_Prescricao() com o global df apenas com os nr_atendimento que tiveram erros:
+2025-02-05 17:50:57 - pyautogui.press(alt,f4)
+2025-02-05 17:50:57 - statusMultiprocessing:False
+2025-02-05 17:50:57 - O aplicativo foi fechado no botao X
+
+2025-02-05 17:50:57 - pyautogui.press(alt,f4) - Feito
+2025-02-05 17:50:57 - Geracao_Pdf_Prescricao() - Geracao_Pdf_Prescricao(df: (1, 1))
+2025-02-05 17:50:57 - Geracao de Pdf ()
+2025-02-05 17:50:57 - 
+df_filtrado:
+        0
+0  670604
+2025-02-05 17:50:57 - contador:0
+contador_linhas_df: 1
+2025-02-05 17:50:57 - Inicio da repetição
+2025-02-05 17:50:57 - Repeticao for index iterrows()
+2025-02-05 17:50:57 - Adicionando a lista o nr_atendimento:670604
+2025-02-05 17:50:57 - Geracao Pdf Prescricao - contador:0
+2025-02-05 17:50:57 - Geracao_Pdf_Prescricao() - try:
+2025-02-05 17:51:05 - http://aplicacao.hsf.local:7070/#/login
+2025-02-05 17:51:05 - usuario
+2025-02-05 17:51:07 - senha
+2025-02-05 17:51:09 - login
+2025-02-05 17:51:18 - click objeto invalido
+click(1107,702)
+2025-02-05 17:51:20 - clicar no CPOE
+2025-02-05 17:51:40 - nr_atendimento: 670604
+2025-02-05 17:51:41 - 1 - enter
+2025-02-05 17:51:45 - 2 - enter
+2025-02-05 17:51:50 - click atendimento fechado click(1107,709)
+2025-02-05 17:51:52 - bt_cpoe_relatorios.click()
+2025-02-05 17:51:53 - visualizar.click()
+2025-02-05 17:52:03 - tentando clicar no btn_manter()
+2025-02-05 17:52:03 - Houve um erro em clicar_btn_manter: 
+PyAutoGUI was unable to import pyscreeze. (This is likely because you're running a version of Python that Pillow (which pyscreeze depends on) doesn't support currently.) Please install this module to enable the function you tried to call.
+2025-02-05 17:52:04 - click no baixar
+2025-02-05 17:52:04 - baixar.click(1817,165)
+2025-02-05 17:52:06 - Pressionar('enter')
+2025-02-05 17:52:08 - btn_manter
+2025-02-05 17:52:08 - manter.click(1755,106)
+2025-02-05 17:52:10 - btn_manter
+2025-02-05 17:52:10 - manter.click(1751,112)
+2025-02-05 17:52:12 - btn_manter
+2025-02-05 17:52:13 - manter.click(1755,106)
+2025-02-05 17:52:17 - 
+driver.quit()
+
+2025-02-05 17:52:17 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2025-02-05 17:52:19 - Arquivos:
+['ef934f13-d454-4bf3-a007-7dd3282151d4.pdf']
+2025-02-05 17:52:21 - Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\ef934f13-d454-4bf3-a007-7dd3282151d4.pdf
+2025-02-05 17:52:23 - pasta_prescricoes: Prescricoes
+2025-02-05 17:52:25 - pasta_data: Prescricoes\2025_02_05
+2025-02-05 17:52:27 - Cria a pasta da data se não existir: Prescricoes\2025_02_05
+2025-02-05 17:52:29 - Data_hora: 2025-02-05 17:52:29
+2025-02-05 17:52:29 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\ef934f13-d454-4bf3-a007-7dd3282151d4.pdf
+2025-02-05 17:52:29 - caminho_novo = Prescricoes\2025_02_05\670604 - 2025-02-05 17-52-29.pdf,arquivo:2025-02-05 17-52-29.pdf)
+2025-02-05 17:52:31 - try: shutil.move(
+caminho_antigo:C:\Users\pvplima.C19NOT76\Downloads\ef934f13-d454-4bf3-a007-7dd3282151d4.pdf, 
+caminho_novoPrescricoes\2025_02_05\670604 - 2025-02-05 17-52-29.pdf)
+2025-02-05 17:52:31 - Arquivo:Prescricoes\2025_02_05\670604 - 2025-02-05 17-52-29.pdf Renomeado e movido com sucesso.
+2025-02-05 17:52:33 - Contador: 1
+2025-02-05 17:52:35 - 
+Todos os atendimentos foram gerados com sucesso!
+2025-02-05 17:52:35 - def Geracao_PDF_Prescricao() 
+bloco com funcao copiar_arquivos()
+2025-02-05 17:52:35 - def copiar_arquivos()
+2025-02-05 17:52:35 - base_dir: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-02-05 17:52:35 - Caminho de origem: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Prescricoes
+2025-02-05 17:52:35 - Caminho de destino: \\192.168.103.252\contingencia_hsf$\Impressos\Prescricoes
+2025-02-05 17:52:35 - shutil.copytree(origem, destino, dirs_exist_ok=True)
+2025-02-05 17:52:36 - 
+Arquivos copiados com sucesso 
+de: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Prescricoes 
+para \\192.168.103.252\contingencia_hsf$\Impressos\Prescricoes
+FIM copiar_arquivos()
+2025-02-05 17:52:36 - df_: 
+[]
+2025-02-05 17:52:36 - Geracao Pdf Prescricao
+ANTES:
+Tarefa_executada: True
+Tarefa_executada_erro:False
+2025-02-05 17:52:36 - Geracao Pdf Prescricao
+DEPOIS:
+Tarefa_executada: False
+Tarefa_executada_erro:False
+2025-02-05 17:52:36 - FIM Geracao_Pdf_Prescricao(df_)
+
+2025-02-05 17:52:40 - def Geracao_PDF_Prescricao() 
+bloco com funcao copiar_arquivos()
+2025-02-05 17:52:40 - def copiar_arquivos()
+2025-02-05 17:52:40 - base_dir: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-02-05 17:52:40 - Caminho de origem: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Prescricoes
+2025-02-05 17:52:40 - Caminho de destino: \\192.168.103.252\contingencia_hsf$\Impressos\Prescricoes
+2025-02-05 17:52:40 - shutil.copytree(origem, destino, dirs_exist_ok=True)
+2025-02-05 17:52:41 - 
+Arquivos copiados com sucesso 
+de: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Prescricoes 
+para \\192.168.103.252\contingencia_hsf$\Impressos\Prescricoes
+FIM copiar_arquivos()
+2025-02-05 17:52:41 - df_: 
+[]
+2025-02-05 17:52:41 - Geracao Pdf Prescricao
+ANTES:
+Tarefa_executada: False
+Tarefa_executada_erro:False
+2025-02-05 17:52:41 - Geracao Pdf Prescricao
+DEPOIS:
+Tarefa_executada: False
+Tarefa_executada_erro:False
+2025-02-05 17:52:41 - FIM Geracao_Pdf_Prescricao(df_)
+
+2025-02-05 17:52:46 - Prescrições geradas!
