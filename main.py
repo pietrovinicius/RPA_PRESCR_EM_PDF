@@ -41,6 +41,9 @@ tarefa_agendada_iniciada = False
 tarefa_executada = False
 tarefa_executada_erro = False
 
+# Flag global para controle da thread
+thread_ativa = True
+
 # Constante para tempo de espera:
 TEMPO_ESPERA = 10
 
@@ -506,17 +509,21 @@ def Geracao_Pdf_Prescricao(df_):
     registrar_log(f'FIM Geracao_Pdf_Prescricao(df_)\n')
 
 def cronometro_tarefa_agendada():
+    """Executa a tarefa agendada periodicamente"""
+    global thread_ativa
     registrar_log(f'cronometro_tarefa_agendada()')
-    
-    #agendamentos:
+
+    # Agendamentos:
     schedule.every().day.at("00:00:01").do(main)
     schedule.every().day.at("12:00:01").do(main)
-    registrar_log(f'Planejada execução todos os dia as 00:00 e 12:00')
-    #inserindo o schedule
-    while True:
+    registrar_log(f'Planejada execução todos os dias às 00:00 e 12:00')
+
+    while thread_ativa:
         schedule.run_pending()
         time.sleep(1)
-        registrar_log_cronometro(f'Planejada execucao todos os dia as 00:00 e 12:00')
+        registrar_log_cronometro(f'Execução agendada para todos os dias às 00:00 e 12:00')
+
+    registrar_log("Thread de agendamento finalizada!")
 
 def copiar_arquivos():
     """Copia todos os arquivos e subdiretórios de uma pasta para outra."""
@@ -552,6 +559,25 @@ def ao_fechar():
     registrar_log("O aplicativo foi fechado no botao X\n")
     janela.destroy()
     time.sleep(0.5)
+    sys.exit()
+
+def ao_fechar():
+    """Finaliza corretamente a aplicação e todas as threads"""
+    global thread_ativa
+    registrar_log(f"thread_ativa: {thread_ativa}")
+    registrar_log("Fechando aplicação...")
+
+    # Para a execução da thread
+    thread_ativa = False
+
+    # Aguarda a thread terminar
+    if 'threadExecutar' in globals() and threadExecutar.is_alive():
+        threadExecutar.join(timeout=2)
+
+    # Fecha a janela do Tkinter
+    janela.destroy()
+
+    # Finaliza o processo completamente
     sys.exit()
 
 def atualizar_log():
@@ -618,19 +644,20 @@ def main():
     registrar_log("FIM DA EXECUÇÃO")
 
 def planejar():
-    global df_filtrado
-    global df
-    global tarefa_agendada_iniciada
-    registrar_log(" def planejar()")
+    """Inicia a execução da tarefa agendada em uma nova thread"""
+    global tarefa_agendada_iniciada, threadExecutar
+    registrar_log("def planejar()")
+
     if not tarefa_agendada_iniciada:
-        registrar_log(f"Botao Iniciar clicado!")
+        registrar_log(f"Botão Planejar clicado!")
         label_status['text'] = "Tarefa Agendada Inicializada!"  
         tarefa_agendada_iniciada = True
-        bt_Planejar.config(state="disabled") # desabilitando o botão de planejar a tarefa
-        threadExecutar = threading.Thread(target=cronometro_tarefa_agendada).start()
+        bt_Planejar.config(state="disabled")  # Desabilita o botão de planejamento
+        threadExecutar = threading.Thread(target=cronometro_tarefa_agendada, daemon=True)
+        threadExecutar.start()
     else:
-        registrar_log('Tarefa planejada ja inicializada')
-        label_status['text'] = "Tarefa Agendada Já Inicializada!" 
+        registrar_log('Tarefa planejada já inicializada')
+        label_status['text'] = "Tarefa Agendada Já Inicializada!"
 
 def executar():
     global df_filtrado
