@@ -58,6 +58,32 @@ def agora():
     agora = agora.strftime("%Y-%m-%d %H:%M:%S")
     return str(agora)
 
+def obter_credenciais_login():
+    """ Lê as credenciais de login do arquivo login.txt."""
+    """Se o arquivo não existir, ele será criado com um login e senha padrão.
+    Retorna o usuário e a senha como uma tupla (usuario, senha).
+    """
+    global diretorio_atual
+    diretorio_atual = os.getcwd()
+    caminho_arquivo_login = os.path.join(diretorio_atual, 'login.txt')
+    registrar_log(f'Obter_credenciais_login()')
+    
+    if not os.path.exists(caminho_arquivo_login):
+        registrar_log(f'Arquivo login.txt não encontrado. Criando arquivo com login e senha padrão.')
+        with open(caminho_arquivo_login, 'w') as arquivo_login:
+            arquivo_login.write('usuario=pvplima\n')
+            arquivo_login.write('senha=HSF@20244\n')
+
+    with open(caminho_arquivo_login, 'r') as arquivo_login:
+        credenciais = {}
+        for linha in arquivo_login:
+            chave, valor = linha.strip().split('=')
+            credenciais[chave.lower()] = valor
+
+
+    return credenciais.get('usuario'), credenciais.get('senha')
+
+
 def registrar_log(texto):
     global diretorio_atual
     #Função para registrar um texto em um arquivo de log.
@@ -257,18 +283,18 @@ def Geracao_Pdf_Prescricao(df_):
                 registrar_log('http://aplicacao.hsf.local:7070/#/login')
                 title = driver.title
                 driver.implicitly_wait(TEMPO_ESPERA)
-                
-                # box de usuario:
-                box_usuario = driver.find_element(By.XPATH, value='//*[@id="loginUsername"]')
-                box_usuario.send_keys('pvplima')
-                registrar_log('usuario')
-                time.sleep(TEMPO_ESPERA/5)
-                
-                # box de senha:
-                box_senha = driver.find_element(By.XPATH, value='//*[@id="loginPassword"]')
-                box_senha.send_keys('hsf@2024')
-                registrar_log('senha')
-                time.sleep(TEMPO_ESPERA/5)
+
+                # Obter credenciais
+                usuario, senha = obter_credenciais_login()
+
+                # box de usuario e senha:
+                driver.find_element(By.XPATH, value='//*[@id="loginUsername"]').send_keys(usuario)
+                registrar_log(f'usuario: {usuario}')
+                time.sleep(TEMPO_ESPERA / 5)
+
+                driver.find_element(By.XPATH, value='//*[@id="loginPassword"]').send_keys(senha)
+                registrar_log(f'senha: {senha}')
+                time.sleep(TEMPO_ESPERA / 5)
                 
                 # botao de login:
                 bt_login = driver.find_element(By.XPATH, value='//*[@id="loginForm"]/input[3]')
