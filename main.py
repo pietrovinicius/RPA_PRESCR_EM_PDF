@@ -2,7 +2,7 @@
 24/10/2024
 @PLima
 
-Automação PDID - Extrai em pdf todas as prescrições dos pacientes Internados
+Automação PDD - Extrai em pdf todas as prescrições dos pacientes Internados
 """
 import tkinter as tk
 import os
@@ -19,7 +19,6 @@ import os
 import glob
 import shutil
 import schedule
-import multiprocessing
 import oracledb
 import sys
 import threading
@@ -42,7 +41,8 @@ tarefa_executada = False
 tarefa_executada_erro = False
 
 # Flag global para controle da thread
-thread_ativa = True
+thread_ativa = True 
+threadExecutar = None # adicionei
 
 # Constante para tempo de espera:
 TEMPO_ESPERA = 10
@@ -82,7 +82,6 @@ def obter_credenciais_login():
 
 
     return credenciais.get('usuario'), credenciais.get('senha')
-
 
 def registrar_log(texto):
     global diretorio_atual
@@ -152,6 +151,38 @@ def ler_tarefa_executada():
         ultimo_tarefa_executada = False
         return ultimo_tarefa_executada
     	
+def ler_thread_ativa():
+    """Lê o arquivo thread_ativa.txt e retorna True ou False."""
+    global diretorio_atual
+    diretorio_atual = os.getcwd()
+    caminho_arquivo = os.path.join(diretorio_atual, 'thread_ativa.txt')
+    try:
+        with open(caminho_arquivo, 'r') as arquivo:
+            conteudo = arquivo.read().strip().upper()
+            if conteudo == "TRUE":
+                return True
+            else:
+                return False
+    except FileNotFoundError:
+        registrar_log("Arquivo thread_ativa.txt não encontrado. Criando com TRUE.")
+        escrever_thread_ativa(True)
+        return True
+    except Exception as erro:
+        registrar_log(f"Erro ao ler thread_ativa.txt: {erro}")
+        return False
+    
+def escrever_thread_ativa(valor):
+    """Escreve TRUE ou FALSE no arquivo thread_ativa.txt."""
+    global diretorio_atual
+    diretorio_atual = os.getcwd()
+    caminho_arquivo = os.path.join(diretorio_atual, 'thread_ativa.txt')
+    try:
+        with open(caminho_arquivo, 'w') as arquivo:
+            arquivo.write(str(valor).upper())
+        registrar_log(f"thread_ativa.txt atualizado para {valor}")
+    except Exception as erro:
+        registrar_log(f"Erro ao escrever em thread_ativa.txt: {erro}")
+
 def excluir_arquivos_past_downloads():
     registrar_log(f'Excluir_arquivos_past_downloads()')
     #acessando pasta download:
@@ -214,7 +245,7 @@ def obter_pacientes_atendimentos():
                             APV.CD_PESSOA_FISICA
                         ORDER BY 
                             APV.CD_SETOR_ATENDIMENTO
-                        --FETCH FIRST 1 ROWS ONLY
+                        --FETCH FIRST 2 ROWS ONLY
                     """
                 #####################################################################################
 
@@ -265,6 +296,9 @@ def Geracao_Pdf_Prescricao(df_):
     try:
         registrar_log('Inicio da repetição')
         for index, row in df_filtrado.iterrows():
+            if not ler_thread_ativa():
+                registrar_log("thread_ativa.txt está como FALSE. Interrompendo o loop.")
+                break 
             linha = row[0]
             linha = str(linha)
             lista_nr_atendimento.append(linha)
@@ -275,7 +309,6 @@ def Geracao_Pdf_Prescricao(df_):
             try:
                 registrar_log('Geracao_Pdf_Prescricao() - try:')                
                 #tela toda:
-                driver = webdriver.Chrome()
                 options = Options()
                 options.add_argument("--start-maximized")
                 driver = webdriver.Chrome(options=options)
@@ -576,28 +609,19 @@ def copiar_arquivos():
         registrar_log(f"\nOcorreu um erro durante a cópia: {str(e)}\nException copiar_arquivos()\n{e}")
 
 def ao_fechar():
-    #resultado = messagebox.askyesno("Confirmação", "Tem certeza de que deseja fechar o aplicativo?")
-    #if resultado:
-    #    # Feche o aplicativo
-    #    janela.destroy()
-    #Função chamada quando o usuário clica no botao 'X' para fechar a janela.
-    registrar_log(f'statusMultiprocessing:{statusMultiprocessing}')
-    registrar_log("O aplicativo foi fechado no botao X\n")
-    janela.destroy()
-    time.sleep(0.5)
-    sys.exit()
-
-def ao_fechar():
     """Finaliza corretamente a aplicação e todas as threads"""
-    global thread_ativa
+    global thread_ativa, threadExecutar
     registrar_log(f"thread_ativa: {thread_ativa}")
     registrar_log("Fechando aplicação...")
+
+    # Escreve FALSE no arquivo thread_ativa.txt
+    escrever_thread_ativa(False)
 
     # Para a execução da thread
     thread_ativa = False
 
     # Aguarda a thread terminar
-    if 'threadExecutar' in globals() and threadExecutar.is_alive():
+    if threadExecutar is not None and threadExecutar.is_alive():
         threadExecutar.join(timeout=2)
 
     # Fecha a janela do Tkinter
@@ -679,6 +703,7 @@ def planejar():
         label_status['text'] = "Tarefa Agendada Inicializada!"  
         tarefa_agendada_iniciada = True
         bt_Planejar.config(state="disabled")  # Desabilita o botão de planejamento
+        #adicionado o daemon=True
         threadExecutar = threading.Thread(target=cronometro_tarefa_agendada, daemon=True)
         threadExecutar.start()
     else:
@@ -703,7 +728,6 @@ def executar():
         registrar_log("Tarefa já executada ou planejada não inicializada. Ignorando clique.")
         label_status['text'] = "Tarefa ja executada ou planejada não inicializada!" 
 
-
 if __name__ == "__main__":
     try:
         registrar_log(f'{agora()}\n__name__ == "__main__" \n')
@@ -714,6 +738,9 @@ if __name__ == "__main__":
         registrar_log_tarefa_executada('False')
 
         registrar_log(" Inicio() ")
+
+        #cria o arquivo thread_ativa.txt
+        escrever_thread_ativa(True)
         
         #INTERFACE GRAFICA:
         janela = tk.Tk()
