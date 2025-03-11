@@ -583,6 +583,7 @@ def cronometro_tarefa_agendada():
         registrar_log_cronometro(f'Execução agendada para todos os dias às 00:00 e 12:00')
 
     registrar_log("Thread de agendamento finalizada!")
+    registrar_log("FIM DA EXECUÇÃO!")
 
 def copiar_arquivos():
     """Copia todos os arquivos e subdiretórios de uma pasta para outra."""
