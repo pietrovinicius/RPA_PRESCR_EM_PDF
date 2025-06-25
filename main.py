@@ -69,7 +69,6 @@ def obter_configuracao(secao, chave):
     
     try:
         config.read(caminho_arquivo_config)
-        registrar_log(f"Chave '{chave}' não encontrada na seção '{secao}' em '{caminho_arquivo_config}'.")
         return config[secao][chave]
     except KeyError:
         registrar_log(f"Erro: Chave '{chave}' não encontrada na seção '{secao}' em '{caminho_arquivo_config}'.")
@@ -431,8 +430,8 @@ def Geracao_Pdf_Prescricao(df_):
                     bt_cpoe_visualizar = driver.find_element(By.XPATH, value='//*[@id="popupViewPort"]/li[5]/div[3]')
                     bt_cpoe_visualizar.click()
                     registrar_log("visualizar.click()")
-                    driver.implicitly_wait(TEMPO_ESPERA/8)
-                    time.sleep(TEMPO_ESPERA/8)
+                    #driver.implicitly_wait(TEMPO_ESPERA/8)
+                    time.sleep(TEMPO_ESPERA/2)
                 except Exception as e:
                     registrar_log(f"Houve um erro em botao visualizar: \n{e}")
                 
@@ -473,27 +472,34 @@ def Geracao_Pdf_Prescricao(df_):
                 #    # Considere adicionar uma lógica alternativa aqui se necessário.
                 #except Exception as e:
                 #    registrar_log(f"Erro inesperado ao clicar no botão 'Baixar': {e}")
+                
+                # Obter coordenadas do botão "manter" do config.ini
+                try:
+                    manter_x_str = obter_configuracao('UI_COORDINATES', 'manter_x')
+                    manter_y_str = obter_configuracao('UI_COORDINATES', 'manter_y')
+                    manter_x = int(manter_x_str)
+                    manter_y = int(manter_y_str)
+                    registrar_log(f"Coordenadas do botão 'Manter' lidas do config.ini: ({manter_x}, {manter_y})")
+                except (ValueError, TypeError):
+                    registrar_log("Erro ao ler/converter coordenadas do config.ini. Usando valores padrão (1755, 106).")
+                    manter_x, manter_y = 1755, 106
+
+                #registrar_log('click no manter')
+                #pyautogui.click(manter_x, manter_y)
+                #registrar_log(f'manter.click({manter_x}, {manter_y})')
+                #time.sleep(TEMPO_ESPERA/5)
                 #
-                ## Com as configurações de download automático, os comandos pyautogui.press('enter')
-                ## e pyautogui.click() para "manter" não devem ser mais necessários.
-                ## Eles foram removidos para evitar interações desnecessárias com a UI.
-                
-                registrar_log('click no manter')
-                pyautogui.click(1755,106)
-                registrar_log(f'manter.click(1755,106)')
-                time.sleep(TEMPO_ESPERA/5)
-                
-                #click no manter
-                registrar_log(f'btn_manter')
-                pyautogui.click(1755,106)
-                registrar_log(f'manter.click(1751,112)')
-                time.sleep(TEMPO_ESPERA/5)
-                
-                #click no manter
-                registrar_log(f'btn_manter')
-                pyautogui.click(1755,106)
-                registrar_log(f'manter.click(1755,106)')
-                time.sleep(TEMPO_ESPERA/5)
+                ##click no manter
+                #registrar_log(f'btn_manter')
+                #pyautogui.click(manter_x, manter_y)
+                #registrar_log(f'manter.click({manter_x}, {manter_y})')
+                #time.sleep(TEMPO_ESPERA/5)
+                #
+                ##click no manter
+                #registrar_log(f'btn_manter')
+                #pyautogui.click(manter_x, manter_y)
+                #registrar_log(f'manter.click({manter_x}, {manter_y})')
+                #time.sleep(TEMPO_ESPERA/5)
 
 
                 registrar_log(f'\ndriver.quit()\n')
