@@ -21,6 +21,7 @@ import shutil
 import schedule
 import oracledb
 import sys
+import configparser
 import threading
 
 #inicialização de variaveis globais:
@@ -58,30 +59,33 @@ def agora():
     agora = agora.strftime("%Y-%m-%d %H:%M:%S")
     return str(agora)
 
-def obter_credenciais_login():
-    """ Lê as credenciais de login do arquivo login.txt."""
-    """Se o arquivo não existir, ele será criado com um login e senha padrão.
-    Retorna o usuário e a senha como uma tupla (usuario, senha).
-    """
+def obter_configuracao(secao, chave):
+    """    Lê uma configuração de um arquivo config.ini.    """
     global diretorio_atual
-    diretorio_atual = os.getcwd()
-    caminho_arquivo_login = os.path.join(diretorio_atual, 'login.txt')
-    registrar_log(f'Obter_credenciais_login()')
+    config = configparser.ConfigParser()
+    caminho_arquivo_config = os.path.join(diretorio_atual, 'config.ini')
     
-    if not os.path.exists(caminho_arquivo_login):
-        registrar_log(f'Arquivo login.txt não encontrado. Criando arquivo com login e senha padrão.')
-        with open(caminho_arquivo_login, 'w') as arquivo_login:
-            arquivo_login.write('usuario=pvplima\n')
-            arquivo_login.write('senha=HSF@20244\n')
+    try:
+        config.read(caminho_arquivo_config)
+        registrar_log(f"Chave '{chave}' não encontrada na seção '{secao}' em '{caminho_arquivo_config}'.")
+        return config[secao][chave]
+    except KeyError:
+        registrar_log(f"Erro: Chave '{chave}' não encontrada na seção '{secao}' em '{caminho_arquivo_config}'.")
+        return None
 
-    with open(caminho_arquivo_login, 'r') as arquivo_login:
-        credenciais = {}
-        for linha in arquivo_login:
-            chave, valor = linha.strip().split('=')
-            credenciais[chave.lower()] = valor
-
-
-    return credenciais.get('usuario'), credenciais.get('senha')
+def obter_credenciais_login():
+    """Lê as credenciais de login do arquivo config.ini.Retorna o usuário e a senha como uma tupla (usuario, senha).    """
+    registrar_log('Obter_credenciais_login() - lendo do config.ini')
+    # Certifique-se de que 'obter_configuracao' está definida e funcional antes desta chamada.
+    # Ela deve ser capaz de ler a seção 'CREDENTIALS' e as chaves 'username' e 'password'.
+    usuario = obter_configuracao('CREDENTIALS', 'username')
+    senha = obter_configuracao('CREDENTIALS', 'password')
+    
+    if usuario is None or senha is None:
+        registrar_log("Erro: Credenciais não encontradas no config.ini. Verifique a seção [CREDENTIALS].")
+        return None, None
+    
+    return usuario, senha
 
 def registrar_log(texto):
     global diretorio_atual
@@ -183,18 +187,19 @@ def escrever_thread_ativa(valor):
     except Exception as erro:
         registrar_log(f"Erro ao escrever em thread_ativa.txt: {erro}")
 
-def excluir_arquivos_past_downloads():
-    registrar_log(f'Excluir_arquivos_past_downloads()')
-    #acessando pasta download:
-    downloads_path = os.path.join(os.path.expanduser("~"), "Downloads")
-    registrar_log(f'Caminho da pasta downloads: {downloads_path}')    
-    files = glob.glob(os.path.join(downloads_path, '*'))
-    for f in files:
-        try:
-            os.remove(f)
-            registrar_log(f"Arquivo {f} removido com sucesso.")
-        except Exception as e:
-            registrar_log(f"Não foi possível remover o arquivo {f}\nErro: {e}\n")          
+def ler_query_sql(nome_arquivo):
+    """Lê o conteúdo de um arquivo SQL localizado na mesma pasta do script. """
+    global diretorio_atual
+    caminho_arquivo = os.path.join(diretorio_atual, nome_arquivo)
+    try:
+        with open(caminho_arquivo, 'r', encoding='utf-8') as f:
+            return f.read()
+    except FileNotFoundError:
+        registrar_log(f"Erro: Arquivo de query '{nome_arquivo}' não encontrado em {caminho_arquivo}.")
+        return None
+    except Exception as e:
+        registrar_log(f"Erro ao ler o arquivo de query '{nome_arquivo}': {e}")
+        return None
 
 def encontrar_diretorio_instantclient(nome_pasta="instantclient-basiclite-windows.x64-23.6.0.24.10\\instantclient_23_6"):
   registrar_log(f'Encontrar_diretorio_instantclient')
@@ -221,35 +226,20 @@ def obter_pacientes_atendimentos():
         if caminho_instantclient:
             oracledb.init_oracle_client(lib_dir=caminho_instantclient)
         else:
-            print("Erro ao localizar o Instant Client. Verifique o nome da pasta e o caminho.")
+            registrar_log("Erro ao localizar o Instant Client. Verifique o nome da pasta e o caminho.")
         
         connection = oracledb.connect( user="PIETRO", password="ATxjWPm", dsn="192.168.5.9:1521/TASYPRD")
         
         with connection:
             with connection.cursor() as cursor:
-                #####################################################################################
-                #QUERY:
-                sql = """ 
-                        SELECT 
-                            APV.NR_ATENDIMENTO
-                        FROM ATENDIMENTO_PACIENTE_V APV
-                        LEFT JOIN prescr_medica PM ON (  PM.NR_ATENDIMENTO = APV.NR_ATENDIMENTO )
-                        LEFT JOIN prescr_mat_hor PH ON ( PH.NR_PRESCRICAO = PM.NR_PRESCRICAO)
-                        WHERE APV.DT_ALTA IS NULL
-                        --AND APV.IE_STATUS_ATENDIMENTO = 'E'
-                        And	PH.dt_horario between SYSDATE -1 and SYSDATE
-                        and APV.CD_SETOR_ATENDIMENTO not in (  171 )
-                        GROUP BY 
-                            APV.NR_ATENDIMENTO,
-                            APV.CD_SETOR_ATENDIMENTO,
-                            APV.CD_PESSOA_FISICA
-                        ORDER BY 
-                            APV.CD_SETOR_ATENDIMENTO
-                        --FETCH FIRST 2 ROWS ONLY
-                    """
-                #####################################################################################
+                # Carrega a query SQL do arquivo
+                sql = ler_query_sql('query_obter_pacientes.sql')
+                if sql is None:
+                    registrar_log("Não foi possível carregar a query SQL. Retornando DataFrame vazio.")
+                    return pd.DataFrame() # Retorna um DataFrame vazio para evitar erros
 
                 #Executando a query:
+                registrar_log('Executando a query')
                 cursor.execute(sql)
                 
                 # Imprimir os resultados da consulta para verificar
@@ -261,11 +251,11 @@ def obter_pacientes_atendimentos():
                 
                 # Visualizar os primeiros 5 registros
                 registrar_log(f'Atendimentos sample: {df.sample()}')
-                time.sleep(2)
+                time.sleep(1)
                 registrar_log(f'Atendimentos data frame:{df.shape}')
-                time.sleep(2)
+                time.sleep(1)
                 registrar_log("Atendimentos obtido com sucesso!")
-                time.sleep(5)
+                time.sleep(2)
 
     except Exception as erro:
         registrar_log(f"obter_pacientes_atendimentos() Erro Inesperado:\n{erro}")
@@ -312,42 +302,75 @@ def Geracao_Pdf_Prescricao(df_):
                 options = Options()
                 options.add_argument("--start-maximized")
                 driver = webdriver.Chrome(options=options)
-                driver.get("http://aplicacao.hsf.local:7070/#/login")
-                registrar_log('http://aplicacao.hsf.local:7070/#/login')
+
+                cpoe_url = obter_configuracao('CPOE', 'url')
+                driver.get(cpoe_url)
+                registrar_log(f'cpoe_url: {cpoe_url}')
                 title = driver.title
                 driver.implicitly_wait(TEMPO_ESPERA)
 
                 # Obter credenciais
+                registrar_log(f'Obter credenciais: {obter_credenciais_login()}')
                 usuario, senha = obter_credenciais_login()
 
-                # box de usuario e senha:
-                driver.find_element(By.XPATH, value='//*[@id="loginUsername"]').send_keys(usuario)
-                registrar_log(f'usuario: {usuario}')
-                time.sleep(TEMPO_ESPERA / 5)
+                try:
+                    # box de usuario e senha:
+                    registrar_log('box de usuario')
+                    driver.find_element(By.XPATH, value='//*[@id="loginUsername"]').send_keys(usuario)
+                    registrar_log(f'usuario: {usuario}')
+                    time.sleep(TEMPO_ESPERA / 5)
+                except Exception as e:
+                    registrar_log(f"Houve um erro em box de usuario e senha: \n{e}")
 
-                driver.find_element(By.XPATH, value='//*[@id="loginPassword"]').send_keys(senha)
-                registrar_log(f'senha: {senha}')
-                time.sleep(TEMPO_ESPERA / 5)
+                try:
+                    registrar_log('box de senha')
+                    driver.find_element(By.XPATH, value='//*[@id="loginPassword"]').send_keys(senha)
+                    registrar_log(f'senha: {senha}')
+                    time.sleep(TEMPO_ESPERA / 5)
+                except Exception as e:
+                    registrar_log(f"Houve um erro em box de senha: \n{e}")
                 
-                # botao de login:
-                bt_login = driver.find_element(By.XPATH, value='//*[@id="loginForm"]/input[3]')
-                bt_login.click()
-                registrar_log('login')
-                driver.implicitly_wait(TEMPO_ESPERA/1.2)
-                time.sleep(TEMPO_ESPERA/1.2)
+                try:
+                    # botao de login:
+                    registrar_log('botao de login')
+                    bt_login = driver.find_element(By.XPATH, value='//*[@id="loginForm"]/input[3]')
+                    bt_login.click()
+                    registrar_log('login')
+                    driver.implicitly_wait(TEMPO_ESPERA/1.2)
+                    time.sleep(TEMPO_ESPERA/1.2)
+                except Exception as e:
+                    registrar_log(f"Houve um erro em botao de login: \n{e}")
+
+                try:
+                    #click objeto invalido
+                    registrar_log('click objeto invalido')
+                    pyautogui.click(1107,702)
+                    registrar_log("click objeto invalido\nclick(1107,702)")
+                    driver.implicitly_wait(TEMPO_ESPERA/5)
+                    time.sleep(TEMPO_ESPERA/5)
+                except Exception as e:
+                    registrar_log(f"Houve um erro em click objeto invalido")
+                    time.sleep(TEMPO_ESPERA/1.2)
+                    
+                try:
+                    time.sleep(TEMPO_ESPERA/5)
+                    pyautogui.press('enter')
+                    registrar_log('1x enter')
+                except Exception as e:
+                    registrar_log(f"Houve um erro em 1x enter: \n{e}")
                 
-                #click objeto invalido
-                pyautogui.click(1107,702)
-                registrar_log("click objeto invalido\nclick(1107,702)")
-                driver.implicitly_wait(TEMPO_ESPERA/5)
-                time.sleep(TEMPO_ESPERA/5)
-        
-                #clicar no icone do CPOE:
-                bt_CPOE = driver.find_element(By.XPATH, value='//*[@id="app-view"]/tasy-corsisf1/div/w-mainlayout/div/div/w-launcher/div/div/div[1]/w-apps/div/div[1]/ul/li[2]/w-feature-app/a/img')
-                bt_CPOE.click()
-                registrar_log('clicar no CPOE')
-                driver.implicitly_wait(TEMPO_ESPERA*2)
-                time.sleep(TEMPO_ESPERA*2)
+                try:
+                    #clicar no icone do CPOE:
+                    registrar_log('clicar no icone do CPOE:')
+                    time.sleep(TEMPO_ESPERA/5)
+                    bt_CPOE = driver.find_element(By.XPATH, value='//*[@id="app-view"]/tasy-corsisf1/div/w-mainlayout/div/div/w-launcher/div/div/div[1]/w-apps/div/div[1]/ul/li[2]/w-feature-app/a/img')
+                    bt_CPOE.click()
+                    registrar_log('clicar no CPOE')
+                    driver.implicitly_wait(TEMPO_ESPERA*2)
+                    time.sleep(TEMPO_ESPERA*2)
+                except Exception as e:
+                    registrar_log(f"Houve um erro em clicar no CPOE: \n{e}")
+
                 try:                
                     #nr_atendimento
                     pyautogui.write(linha)
@@ -375,24 +398,32 @@ def Geracao_Pdf_Prescricao(df_):
                 driver.implicitly_wait(TEMPO_ESPERA/8)
                 time.sleep(TEMPO_ESPERA/8)
                 
-                #botao visualizar
-                bt_cpoe_relatorios = driver.find_element(By.XPATH, value='//*[@id="handlebar-40"]')
-                bt_cpoe_relatorios.click()
-                registrar_log("bt_cpoe_relatorios.click()")
-                driver.implicitly_wait(TEMPO_ESPERA/10)
-                time.sleep(TEMPO_ESPERA/10)
+                try:
+                    registrar_log('botao visualizar')
+                    #botao visualizar
+                    bt_cpoe_relatorios = driver.find_element(By.XPATH, value='//*[@id="handlebar-40"]')
+                    bt_cpoe_relatorios.click()
+                    registrar_log("bt_cpoe_relatorios.click()")
+                    driver.implicitly_wait(TEMPO_ESPERA/10)
+                    time.sleep(TEMPO_ESPERA/10)
+                except Exception as e:
+                    registrar_log(f"Houve um erro em botao visualizar: \n{e}")
                 
-                #botao visualizar
-                bt_cpoe_visualizar = driver.find_element(By.XPATH, value='//*[@id="popupViewPort"]/li[5]/div[3]')
-                bt_cpoe_visualizar.click()
-                registrar_log("visualizar.click()")
-                driver.implicitly_wait(TEMPO_ESPERA)
-                time.sleep(TEMPO_ESPERA)
+                try:
+                    registrar_log('botao visualizar')
+                    #botao visualizar
+                    bt_cpoe_visualizar = driver.find_element(By.XPATH, value='//*[@id="popupViewPort"]/li[5]/div[3]')
+                    bt_cpoe_visualizar.click()
+                    registrar_log("visualizar.click()")
+                    driver.implicitly_wait(TEMPO_ESPERA)
+                    time.sleep(TEMPO_ESPERA)
+                except Exception as e:
+                    registrar_log(f"Houve um erro em botao visualizar: \n{e}")
 
                 """Clica no botão 'btn_manter.png' na tela."""
-                registrar_log("tentando clicar no btn_manter()")
                 try:
                     # Encontra a localização da imagem do botão na tela
+                    registrar_log("tentando clicar no btn_manter()")
                     localizacao = pyautogui.locateOnScreen('btn_manter.png', confidence=0.95)
                     # Encontra o centro da localização:
                     ponto_central = pyautogui.center(localizacao)
@@ -440,44 +471,68 @@ def Geracao_Pdf_Prescricao(df_):
                 driver.quit()
                 registrar_log(f'\ndriver.quit()\n')
                 
-                #registrar_log(f'contador = {contador} - de contador_linhas_df:{contador_linhas_df}')
+                try:
+                    registrar_log('acessando pasta download:')
+                    #acessando pasta download:
+                    downloads_path = os.path.join(os.path.expanduser("~"), "Downloads")
+                    registrar_log(f'Caminho da pasta download: {downloads_path}')
+                    time.sleep(TEMPO_ESPERA/5)
+                except Exception as e:
+                    registrar_log(f"Houve um erro em acessar pasta download: \n{e}")
+                    time.sleep(TEMPO_ESPERA/5)
                 
-                #acessando pasta download:
-                downloads_path = os.path.join(os.path.expanduser("~"), "Downloads")
-                registrar_log(f'Caminho da pasta download: {downloads_path}')
-                time.sleep(TEMPO_ESPERA/5)
+                try:
+                    registrar_log('verificando arquivos da pasta download:')
+                    #verificando arquivos da pasta download
+                    files = [f for f in os.listdir(downloads_path) if f.endswith('.pdf')]
+                    registrar_log(f"Arquivos:\n{files}")
+                    time.sleep(TEMPO_ESPERA/5)
+                except Exception as e:
+                    registrar_log(f"Houve um erro em verificar arquivos da pasta download: \n{e}")  
                 
-                #verificando arquivos da pasta download
-                files = [f for f in os.listdir(downloads_path) if f.endswith('.pdf')]
-                registrar_log(f"Arquivos:\n{files}")
-                time.sleep(TEMPO_ESPERA/5)
+                try:
+                    registrar_log('ultimo arquivo antes de renomear:')
+                    #ultimo arquivo
+                    ultimo_arquivo = os.path.join(downloads_path, files[0])
+                    registrar_log(f"Ultimo arquivo antes de renomear: {ultimo_arquivo}")
+                    time.sleep(TEMPO_ESPERA/5)
+                except Exception as e:
+                    registrar_log(f"Houve um erro em ultimo")
                 
-                #ultimo arquivo
-                ultimo_arquivo = os.path.join(downloads_path, files[0])
-                registrar_log(f"Ultimo arquivo antes de renomear: {ultimo_arquivo}")
-                time.sleep(TEMPO_ESPERA/5)
+                try:
+                    # Caminho da pasta Prescricoes
+                    pasta_prescricoes = "Prescricoes"
+                    registrar_log(f"pasta_prescricoes: {pasta_prescricoes}")
+                    time.sleep(TEMPO_ESPERA/5)
+                except Exception as e:
+                    registrar_log(f"Houve um erro em pasta_prescricoes")
+               
+                try:
+                    # Cria a pasta da data se não existir                                    
+                    pasta_data = os.path.join(pasta_prescricoes, agora_limpo())
+                    registrar_log(f"pasta_data: {pasta_data}")
+                    time.sleep(TEMPO_ESPERA/5)
+                except Exception as e:
+                    registrar_log(f"Houve um erro em pasta_data")
                 
-                # Caminho da pasta Prescricoes
-                pasta_prescricoes = "Prescricoes"
-                registrar_log(f"pasta_prescricoes: {pasta_prescricoes}")
-                time.sleep(TEMPO_ESPERA/5)
+                try:                    
+                    # Cria a pasta da data se não existir
+                    os.makedirs(pasta_data, exist_ok=True)
+                    registrar_log(f"Cria a pasta da data se não existir: {pasta_data}")
+                    time.sleep(TEMPO_ESPERA/5)
+                except Exception as e:
+                    registrar_log(f"Houve um erro em criar a pasta da data se não existir")
                 
-                pasta_data = os.path.join(pasta_prescricoes, agora_limpo())
-                registrar_log(f"pasta_data: {pasta_data}")
-                time.sleep(TEMPO_ESPERA/5)
-                
-                # Cria a pasta da data se não existir
-                os.makedirs(pasta_data, exist_ok=True)
-                registrar_log(f"Cria a pasta da data se não existir: {pasta_data}")
-                time.sleep(TEMPO_ESPERA/5)
-                
-                #renomeia e move os arquivos
-                registrar_log(f"Data_hora: {agora()}")
-                caminho_antigo = os.path.join(downloads_path, ultimo_arquivo)
-                registrar_log(f"caminho antigo: {caminho_antigo}")
-                nr_atendimento = linha
-                caminho_novo = os.path.join(pasta_data, f"{nr_atendimento} - {agora().replace(':', '-')}.pdf")
-                registrar_log(f'caminho_novo = {caminho_novo},arquivo:{agora().replace(':', '-')}.pdf)')
+                try:
+                    registrar_log('renomeia e move os arquivos')
+                    registrar_log(f"Data_hora: {agora()}")
+                    caminho_antigo = os.path.join(downloads_path, ultimo_arquivo)
+                    registrar_log(f"caminho antigo: {caminho_antigo}")
+                    nr_atendimento = linha
+                    caminho_novo = os.path.join(pasta_data, f"{nr_atendimento} - {agora().replace(':', '-')}.pdf")
+                    registrar_log(f'caminho_novo = {caminho_novo},arquivo:{agora().replace(':', '-')}.pdf)')
+                except Exception as e:
+                    registrar_log(f"Houve um erro em renomeia e move os arquivos: \n{e}")
             
                 try:
                     registrar_log(f'try: shutil.move(\n time.sleep(TEMPO_ESPERA/5)')
@@ -501,7 +556,7 @@ def Geracao_Pdf_Prescricao(df_):
                 registrar_log(f'******************** FIM do {linha} ********************')
                 
                 # pausa dramática:
-                time.sleep(TEMPO_ESPERA/5)
+                time.sleep(TEMPO_ESPERA/8)
                 
             except Exception as erro:
                     registrar_log(f'except do try de dento do for linha in df_filtrado')
@@ -678,7 +733,6 @@ def main():
     global bt_executar
     
     registrar_log("Main()")
-    excluir_arquivos_past_downloads()
     encontrar_diretorio_instantclient()
     df_filtrado  = obter_pacientes_atendimentos()
     registrar_log(f"Main() df_filtrado tamanho: {df_filtrado.shape}")

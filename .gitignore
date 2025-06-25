@@ -2,3 +2,7 @@
 *.txt
 /build
 /build/exe.win-amd64-3.12
+/venv
+log.txt
+log_atend_erros.txt
+log_cronometro.txt

@@ -9,7 +9,7 @@ import sys
 from cx_Freeze import setup, Executable
 
 # Lista de arquivos/pastas que devem ser incluídos no pacote .exe
-includefiles = ["HSF_LOGO_-_60x77_001.png", '.', 'instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6', 'btn_manter.png', 'icone.ico']
+includefiles = ["HSF_LOGO_-_60x77_001.png", '.', 'instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6', 'btn_manter.png', 'icone.ico', 'config.ini']
 
 build_exe_options = {
     "includes": [
