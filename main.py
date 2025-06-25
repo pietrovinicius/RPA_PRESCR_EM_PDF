@@ -3,6 +3,20 @@
 @PLima
 
 Automação PDD - Extrai em pdf todas as prescrições dos pacientes Internados
+
+cd c:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+
+python -m venv venv
+
+.\venv\Scripts\activate
+
+Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
+
+pip freeze > requirements.txt
+
+pip install -r requirements.txt
+
+
 """
 import tkinter as tk
 import os
@@ -475,6 +489,8 @@ def Geracao_Pdf_Prescricao(df_):
                 #    registrar_log(f"Erro inesperado ao clicar no botão 'Baixar': {e}")
                 
                 # Obter coordenadas do botão "manter" do config.ini
+                registrar_log('time.sleep(1)')
+                time.sleep(1)
                 try:
                     manter_x_str = obter_configuracao('UI_COORDINATES', 'manter_x')
                     manter_y_str = obter_configuracao('UI_COORDINATES', 'manter_y')
@@ -505,7 +521,7 @@ def Geracao_Pdf_Prescricao(df_):
                 #time.sleep(TEMPO_ESPERA/5)
                 
                 registrar_log('time.sleep(TEMPO_ESPERA)')
-                time.sleep(TEMPO_ESPERA/3)
+                time.sleep(TEMPO_ESPERA/2)
                 
                 registrar_log(f'\ndriver.quit()\n')
                 driver.quit()
@@ -688,9 +704,8 @@ def copiar_arquivos():
     base_dir = getattr(sys, '_MEIPASS', os.path.abspath("."))
     registrar_log(f'base_dir: {base_dir}')
     
-    origem = os.path.join(base_dir,"Prescricoes") # A pasta Prescricoes esta na raiz do projeto
-    #destino = "\\\\192.168.103.252\\tihsf$\\PIETRO\\Projetos\\RPA_PRESCR_EM_PDF\\Prescricoes"
-    destino = "\\\\192.168.103.252\\contingencia_hsf$\\Impressos\\Prescricoes"
+    origem = os.path.join(base_dir, "Prescricoes") # A pasta Prescricoes esta na raiz do projeto
+    destino = obter_configuracao('SETTINGS', 'remote_copy_path')
     
     registrar_log(f'Caminho de origem: {origem}')
     registrar_log(f'Caminho de destino: {destino}')
