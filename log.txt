@@ -1,0 +1,461 @@
+2025-06-25 17:45:55 - 2025-06-25 17:45:55
+__name__ == "__main__" 
+
+2025-06-25 17:45:55 - ****registrar_log_tarefa_executada() tarefa_executada = False
+2025-06-25 17:45:55 -  Inicio() 
+2025-06-25 17:45:55 - thread_ativa.txt atualizado para True
+2025-06-25 17:46:14 - Botao executar clicado! - tarefa executada: False, tarefa_executada_erro:False
+2025-06-25 17:46:14 - Tarefa inicializada! 
+bt_executar desativado!
+2025-06-25 17:46:14 - Main()
+2025-06-25 17:46:14 - Encontrar_diretorio_instantclient
+2025-06-25 17:46:14 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-06-25 17:46:14 - caminho instantclient:
+C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6
+2025-06-25 17:46:14 - Encontrar_diretorio_instantclient
+2025-06-25 17:46:14 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-06-25 17:46:14 - caminho instantclient:
+C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6
+2025-06-25 17:46:14 - Executando a query
+2025-06-25 17:46:23 - Atendimentos sample:    NR_ATENDIMENTO
+0          723110
+2025-06-25 17:46:24 - Atendimentos data frame:(1, 1)
+2025-06-25 17:46:25 - Atendimentos obtido com sucesso!
+2025-06-25 17:46:27 - Main() df_filtrado tamanho: (1, 1)
+2025-06-25 17:46:27 - Geracao_Pdf_Prescricao((1, 1))
+2025-06-25 17:46:27 - Geracao de Pdf ()
+2025-06-25 17:46:27 - 
+df_filtrado:
+   NR_ATENDIMENTO
+0          723110
+2025-06-25 17:46:27 - contador:0
+contador_linhas_df: 1
+2025-06-25 17:46:27 - Inicio da repetição
+2025-06-25 17:46:27 - Repeticao for index iterrows()
+2025-06-25 17:46:27 - Adicionando a lista o nr_atendimento:723110
+2025-06-25 17:46:27 - Geracao Pdf Prescricao - contador:0
+2025-06-25 17:46:27 - Geracao_Pdf_Prescricao() - try:
+2025-06-25 17:46:27 - options = Options() # Inicializa as opções do Chrome 
+2025-06-25 17:46:27 - Configurações para download automático de PDF
+2025-06-25 17:46:27 - options.add_experimental_option("prefs", prefs)
+2025-06-25 17:46:27 - Maximiza a janela
+2025-06-25 17:46:32 - cpoe_url: http://aplicacao.hsf.local:7070/#/login
+2025-06-25 17:46:32 - Obter_credenciais_login() - lendo do config.ini
+2025-06-25 17:46:32 - Obter credenciais: ('pvplima', 'HSF@20244')
+2025-06-25 17:46:32 - Obter_credenciais_login() - lendo do config.ini
+2025-06-25 17:46:32 - box de usuario
+2025-06-25 17:46:32 - usuario: pvplima
+2025-06-25 17:46:34 - box de senha
+2025-06-25 17:46:34 - senha: HSF@20244
+2025-06-25 17:46:36 - botao de login
+2025-06-25 17:46:36 - login
+2025-06-25 17:46:47 - 1x enter
+2025-06-25 17:46:47 - clicar no icone do CPOE:
+2025-06-25 17:46:49 - clicar no CPOE
+2025-06-25 17:47:09 - nr_atendimento: 723110
+2025-06-25 17:47:11 - 1 - enter
+2025-06-25 17:47:15 - 2 - enter
+2025-06-25 17:47:20 - click atendimento fechado click(1107,709)
+2025-06-25 17:47:21 - botao visualizar
+2025-06-25 17:47:21 - bt_cpoe_relatorios.click()
+2025-06-25 17:47:22 - botao visualizar
+2025-06-25 17:47:23 - visualizar.click()
+2025-06-25 17:47:28 - Coordenadas do botão 'Manter' lidas do config.ini: (1755, 106)
+2025-06-25 17:47:28 - 
+driver.quit()
+
+2025-06-25 17:47:30 - acessando pasta download:
+2025-06-25 17:47:30 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2025-06-25 17:47:32 - verificando arquivos da pasta download:
+2025-06-25 17:47:32 - Arquivos:
+[]
+2025-06-25 17:47:34 - ultimo arquivo antes de renomear:
+2025-06-25 17:47:34 - Houve um erro em ultimo
+2025-06-25 17:47:34 - pasta_prescricoes: Prescricoes
+2025-06-25 17:47:36 - pasta_data: Prescricoes\2025_06_25
+2025-06-25 17:47:38 - Cria a pasta da data se não existir: Prescricoes\2025_06_25
+2025-06-25 17:47:40 - renomeia e move os arquivos
+2025-06-25 17:47:40 - Data_hora: 2025-06-25 17:47:40
+2025-06-25 17:47:40 - Houve um erro em renomeia e move os arquivos: 
+cannot access local variable 'ultimo_arquivo' where it is not associated with a value
+2025-06-25 17:47:40 - try: shutil.move(
+ time.sleep(TEMPO_ESPERA/5)
+2025-06-25 17:47:42 - except do try de dento do for linha in df_filtrado
+2025-06-25 17:47:47 - thread_ativa: True
+2025-06-25 17:47:47 - Fechando aplicação...
+2025-06-25 17:47:47 - thread_ativa.txt atualizado para False
+2025-06-25 17:49:08 - 2025-06-25 17:49:08
+__name__ == "__main__" 
+
+2025-06-25 17:49:08 - ****registrar_log_tarefa_executada() tarefa_executada = False
+2025-06-25 17:49:08 -  Inicio() 
+2025-06-25 17:49:08 - thread_ativa.txt atualizado para True
+2025-06-25 17:49:13 - Botao executar clicado! - tarefa executada: False, tarefa_executada_erro:False
+2025-06-25 17:49:13 - Tarefa inicializada! 
+bt_executar desativado!
+2025-06-25 17:49:13 - Main()
+2025-06-25 17:49:13 - Encontrar_diretorio_instantclient
+2025-06-25 17:49:13 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-06-25 17:49:13 - caminho instantclient:
+C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6
+2025-06-25 17:49:13 - Encontrar_diretorio_instantclient
+2025-06-25 17:49:13 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-06-25 17:49:13 - caminho instantclient:
+C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6
+2025-06-25 17:49:13 - Executando a query
+2025-06-25 17:49:21 - Atendimentos sample:    NR_ATENDIMENTO
+0          723110
+2025-06-25 17:49:22 - Atendimentos data frame:(1, 1)
+2025-06-25 17:49:23 - Atendimentos obtido com sucesso!
+2025-06-25 17:49:25 - Main() df_filtrado tamanho: (1, 1)
+2025-06-25 17:49:25 - Geracao_Pdf_Prescricao((1, 1))
+2025-06-25 17:49:25 - Geracao de Pdf ()
+2025-06-25 17:49:25 - 
+df_filtrado:
+   NR_ATENDIMENTO
+0          723110
+2025-06-25 17:49:25 - contador:0
+contador_linhas_df: 1
+2025-06-25 17:49:25 - Inicio da repetição
+2025-06-25 17:49:25 - Repeticao for index iterrows()
+2025-06-25 17:49:25 - Adicionando a lista o nr_atendimento:723110
+2025-06-25 17:49:25 - Geracao Pdf Prescricao - contador:0
+2025-06-25 17:49:25 - Geracao_Pdf_Prescricao() - try:
+2025-06-25 17:49:25 - options = Options() # Inicializa as opções do Chrome 
+2025-06-25 17:49:25 - Configurações para download automático de PDF
+2025-06-25 17:49:25 - options.add_experimental_option("prefs", prefs)
+2025-06-25 17:49:25 - Maximiza a janela
+2025-06-25 17:49:31 - cpoe_url: http://aplicacao.hsf.local:7070/#/login
+2025-06-25 17:49:31 - Obter_credenciais_login() - lendo do config.ini
+2025-06-25 17:49:31 - Obter credenciais: ('pvplima', 'HSF@20244')
+2025-06-25 17:49:31 - Obter_credenciais_login() - lendo do config.ini
+2025-06-25 17:49:31 - box de usuario
+2025-06-25 17:49:31 - usuario: pvplima
+2025-06-25 17:49:33 - box de senha
+2025-06-25 17:49:33 - senha: HSF@20244
+2025-06-25 17:49:35 - botao de login
+2025-06-25 17:49:35 - login
+2025-06-25 17:49:45 - 1x enter
+2025-06-25 17:49:45 - clicar no icone do CPOE:
+2025-06-25 17:49:48 - clicar no CPOE
+2025-06-25 17:50:08 - nr_atendimento: 723110
+2025-06-25 17:50:10 - 1 - enter
+2025-06-25 17:50:14 - 2 - enter
+2025-06-25 17:50:19 - click atendimento fechado click(1107,709)
+2025-06-25 17:50:20 - botao visualizar
+2025-06-25 17:50:20 - bt_cpoe_relatorios.click()
+2025-06-25 17:50:21 - botao visualizar
+2025-06-25 17:50:21 - visualizar.click()
+2025-06-25 17:50:26 - Coordenadas do botão 'Manter' lidas do config.ini: (1755, 106)
+2025-06-25 17:50:26 - time.sleep(TEMPO_ESPERA)
+2025-06-25 17:50:36 - 
+driver.quit()
+
+2025-06-25 17:50:38 - acessando pasta download:
+2025-06-25 17:50:38 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2025-06-25 17:50:39 - thread_ativa: True
+2025-06-25 17:50:39 - Fechando aplicação...
+2025-06-25 17:50:39 - thread_ativa.txt atualizado para False
+2025-06-25 17:50:40 - verificando arquivos da pasta download:
+2025-06-25 17:50:40 - Arquivos:
+[]
+2025-06-25 17:50:42 - ultimo arquivo antes de renomear:
+2025-06-25 17:50:42 - Houve um erro em ultimo
+2025-06-25 17:50:42 - pasta_prescricoes: Prescricoes
+2025-06-25 17:50:44 - pasta_data: Prescricoes\2025_06_25
+2025-06-25 17:50:46 - Cria a pasta da data se não existir: Prescricoes\2025_06_25
+2025-06-25 17:50:48 - renomeia e move os arquivos
+2025-06-25 17:50:48 - Data_hora: 2025-06-25 17:50:48
+2025-06-25 17:50:48 - Houve um erro em renomeia e move os arquivos: 
+cannot access local variable 'ultimo_arquivo' where it is not associated with a value
+2025-06-25 17:50:48 - try: shutil.move(
+ time.sleep(TEMPO_ESPERA/5)
+2025-06-25 17:50:50 - except do try de dento do for linha in df_filtrado
+2025-06-25 17:51:36 - 2025-06-25 17:51:36
+__name__ == "__main__" 
+
+2025-06-25 17:51:36 - ****registrar_log_tarefa_executada() tarefa_executada = False
+2025-06-25 17:51:36 -  Inicio() 
+2025-06-25 17:51:36 - thread_ativa.txt atualizado para True
+2025-06-25 17:51:44 - Botao executar clicado! - tarefa executada: False, tarefa_executada_erro:False
+2025-06-25 17:51:44 - Tarefa inicializada! 
+bt_executar desativado!
+2025-06-25 17:51:44 - Main()
+2025-06-25 17:51:44 - Encontrar_diretorio_instantclient
+2025-06-25 17:51:44 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-06-25 17:51:44 - caminho instantclient:
+C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6
+2025-06-25 17:51:44 - Encontrar_diretorio_instantclient
+2025-06-25 17:51:44 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-06-25 17:51:44 - caminho instantclient:
+C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6
+2025-06-25 17:51:44 - Executando a query
+2025-06-25 17:51:52 - Atendimentos sample:    NR_ATENDIMENTO
+0          723110
+2025-06-25 17:51:53 - Atendimentos data frame:(1, 1)
+2025-06-25 17:51:54 - Atendimentos obtido com sucesso!
+2025-06-25 17:51:56 - Main() df_filtrado tamanho: (1, 1)
+2025-06-25 17:51:56 - Geracao_Pdf_Prescricao((1, 1))
+2025-06-25 17:51:56 - Geracao de Pdf ()
+2025-06-25 17:51:56 - 
+df_filtrado:
+   NR_ATENDIMENTO
+0          723110
+2025-06-25 17:51:56 - contador:0
+contador_linhas_df: 1
+2025-06-25 17:51:56 - Inicio da repetição
+2025-06-25 17:51:56 - Repeticao for index iterrows()
+2025-06-25 17:51:56 - Adicionando a lista o nr_atendimento:723110
+2025-06-25 17:51:56 - Geracao Pdf Prescricao - contador:0
+2025-06-25 17:51:56 - Geracao_Pdf_Prescricao() - try:
+2025-06-25 17:51:56 - options = Options() # Inicializa as opções do Chrome 
+2025-06-25 17:51:56 - Configurações para download automático de PDF
+2025-06-25 17:51:56 - options.add_experimental_option("prefs", prefs)
+2025-06-25 17:51:56 - Maximiza a janela
+2025-06-25 17:52:01 - cpoe_url: http://aplicacao.hsf.local:7070/#/login
+2025-06-25 17:52:01 - Obter_credenciais_login() - lendo do config.ini
+2025-06-25 17:52:01 - Obter credenciais: ('pvplima', 'HSF@20244')
+2025-06-25 17:52:01 - Obter_credenciais_login() - lendo do config.ini
+2025-06-25 17:52:01 - box de usuario
+2025-06-25 17:52:01 - usuario: pvplima
+2025-06-25 17:52:03 - box de senha
+2025-06-25 17:52:03 - senha: HSF@20244
+2025-06-25 17:52:05 - botao de login
+2025-06-25 17:52:06 - login
+2025-06-25 17:52:16 - 1x enter
+2025-06-25 17:52:16 - clicar no icone do CPOE:
+2025-06-25 17:52:18 - clicar no CPOE
+2025-06-25 17:52:39 - nr_atendimento: 723110
+2025-06-25 17:52:40 - 1 - enter
+2025-06-25 17:52:44 - 2 - enter
+2025-06-25 17:52:49 - click atendimento fechado click(1107,709)
+2025-06-25 17:52:50 - botao visualizar
+2025-06-25 17:52:50 - bt_cpoe_relatorios.click()
+2025-06-25 17:52:51 - botao visualizar
+2025-06-25 17:52:52 - visualizar.click()
+2025-06-25 17:52:57 - Coordenadas do botão 'Manter' lidas do config.ini: (1755, 106)
+2025-06-25 17:52:57 - time.sleep(TEMPO_ESPERA)
+2025-06-25 17:53:00 - 
+driver.quit()
+
+2025-06-25 17:53:02 - acessando pasta download:
+2025-06-25 17:53:02 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2025-06-25 17:53:04 - verificando arquivos da pasta download:
+2025-06-25 17:53:04 - Arquivos:
+[]
+2025-06-25 17:53:06 - ultimo arquivo antes de renomear:
+2025-06-25 17:53:06 - Houve um erro em ultimo
+2025-06-25 17:53:06 - pasta_prescricoes: Prescricoes
+2025-06-25 17:53:08 - pasta_data: Prescricoes\2025_06_25
+2025-06-25 17:53:10 - Cria a pasta da data se não existir: Prescricoes\2025_06_25
+2025-06-25 17:53:12 - renomeia e move os arquivos
+2025-06-25 17:53:12 - Data_hora: 2025-06-25 17:53:12
+2025-06-25 17:53:12 - Houve um erro em renomeia e move os arquivos: 
+cannot access local variable 'ultimo_arquivo' where it is not associated with a value
+2025-06-25 17:53:12 - try: shutil.move(
+ time.sleep(TEMPO_ESPERA/5)
+2025-06-25 17:53:14 - except do try de dento do for linha in df_filtrado
+2025-06-25 17:53:35 - 
+driver.quit()
+
+2025-06-25 17:53:35 - 
+lista_nr_atendimento:['723110']
+contador: 0 
+=========== ERROR:
+cannot access local variable 'caminho_antigo' where it is not associated with a value
+2025-06-25 17:53:35 - tarefa_executada: True
+2025-06-25 17:53:35 - tarefa_executada_erro: False
+2025-06-25 17:53:35 - se ocorrer um erro na execução
+definimos que a variavel tarefa_executada sera False
+ para que a tarefa possa ser executada novamente:
+2025-06-25 17:53:35 - ===== try:
+Lista com nr_atendimentos com erro
+2025-06-25 17:53:35 - ação para o caso do df_lista_nr_atendimento não for vazio
+df_lista_nr_atendimento nao esta em branco
+
+2025-06-25 17:53:35 - global df recebera df_lista_nr_atendimento!!!!
+2025-06-25 17:53:35 - df = df_lista_nr_atendimento:
+        0
+0  723110
+2025-06-25 17:53:35 - df atendimentos com erro df_renovo.shape: (1, 1)
+2025-06-25 17:53:35 - Executara novamente a Geracao_Pdf_Prescricao() com o global df apenas com os nr_atendimento que tiveram erros:
+2025-06-25 17:53:35 - Geracao de Pdf ()
+2025-06-25 17:53:35 - 
+df_filtrado:
+        0
+0  723110
+2025-06-25 17:53:35 - contador:0
+contador_linhas_df: 1
+2025-06-25 17:53:35 - Inicio da repetição
+2025-06-25 17:53:35 - Repeticao for index iterrows()
+2025-06-25 17:53:35 - Adicionando a lista o nr_atendimento:723110
+2025-06-25 17:53:35 - Geracao Pdf Prescricao - contador:0
+2025-06-25 17:53:35 - Geracao_Pdf_Prescricao() - try:
+2025-06-25 17:53:35 - options = Options() # Inicializa as opções do Chrome 
+2025-06-25 17:53:35 - Configurações para download automático de PDF
+2025-06-25 17:53:35 - options.add_experimental_option("prefs", prefs)
+2025-06-25 17:53:35 - Maximiza a janela
+2025-06-25 17:53:40 - cpoe_url: http://aplicacao.hsf.local:7070/#/login
+2025-06-25 17:53:40 - Obter_credenciais_login() - lendo do config.ini
+2025-06-25 17:53:40 - Obter credenciais: ('pvplima', 'HSF@20244')
+2025-06-25 17:53:40 - Obter_credenciais_login() - lendo do config.ini
+2025-06-25 17:53:40 - box de usuario
+2025-06-25 17:53:40 - usuario: pvplima
+2025-06-25 17:53:42 - box de senha
+2025-06-25 17:53:42 - senha: HSF@20244
+2025-06-25 17:53:44 - botao de login
+2025-06-25 17:53:44 - login
+2025-06-25 17:53:55 - 1x enter
+2025-06-25 17:53:55 - clicar no icone do CPOE:
+2025-06-25 17:53:57 - clicar no CPOE
+2025-06-25 17:54:17 - nr_atendimento: 723110
+2025-06-25 17:54:19 - 1 - enter
+2025-06-25 17:54:23 - 2 - enter
+2025-06-25 17:54:28 - click atendimento fechado click(1107,709)
+2025-06-25 17:54:29 - botao visualizar
+2025-06-25 17:54:29 - bt_cpoe_relatorios.click()
+2025-06-25 17:54:30 - botao visualizar
+2025-06-25 17:54:31 - visualizar.click()
+2025-06-25 17:54:36 - Coordenadas do botão 'Manter' lidas do config.ini: (1755, 106)
+2025-06-25 17:54:36 - time.sleep(TEMPO_ESPERA)
+2025-06-25 17:54:39 - 
+driver.quit()
+
+2025-06-25 17:54:41 - acessando pasta download:
+2025-06-25 17:54:41 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2025-06-25 17:54:43 - verificando arquivos da pasta download:
+2025-06-25 17:54:43 - Arquivos:
+[]
+2025-06-25 17:54:45 - ultimo arquivo antes de renomear:
+2025-06-25 17:54:45 - Houve um erro em ultimo
+2025-06-25 17:54:45 - pasta_prescricoes: Prescricoes
+2025-06-25 17:57:11 - 2025-06-25 17:57:11
+__name__ == "__main__" 
+
+2025-06-25 17:57:11 - ****registrar_log_tarefa_executada() tarefa_executada = False
+2025-06-25 17:57:11 -  Inicio() 
+2025-06-25 17:57:11 - thread_ativa.txt atualizado para True
+2025-06-25 17:57:13 - Botao executar clicado! - tarefa executada: False, tarefa_executada_erro:False
+2025-06-25 17:57:13 - Tarefa inicializada! 
+bt_executar desativado!
+2025-06-25 17:57:13 - Main()
+2025-06-25 17:57:13 - Encontrar_diretorio_instantclient
+2025-06-25 17:57:13 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-06-25 17:57:13 - caminho instantclient:
+C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6
+2025-06-25 17:57:13 - Encontrar_diretorio_instantclient
+2025-06-25 17:57:13 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-06-25 17:57:13 - caminho instantclient:
+C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6
+2025-06-25 17:57:13 - Executando a query
+2025-06-25 17:57:21 - Atendimentos sample:    NR_ATENDIMENTO
+0          723110
+2025-06-25 17:57:22 - Atendimentos data frame:(1, 1)
+2025-06-25 17:57:23 - Atendimentos obtido com sucesso!
+2025-06-25 17:57:25 - Main() df_filtrado tamanho: (1, 1)
+2025-06-25 17:57:25 - Geracao_Pdf_Prescricao((1, 1))
+2025-06-25 17:57:25 - Geracao de Pdf ()
+2025-06-25 17:57:25 - 
+df_filtrado:
+   NR_ATENDIMENTO
+0          723110
+2025-06-25 17:57:25 - contador:0
+contador_linhas_df: 1
+2025-06-25 17:57:25 - Inicio da repetição
+2025-06-25 17:57:25 - Repeticao for index iterrows()
+2025-06-25 17:57:25 - Adicionando a lista o nr_atendimento:723110
+2025-06-25 17:57:25 - Geracao Pdf Prescricao - contador:0
+2025-06-25 17:57:25 - Geracao_Pdf_Prescricao() - try:
+2025-06-25 17:57:25 - options = Options() # Inicializa as opções do Chrome 
+2025-06-25 17:57:25 - Configurações para download automático de PDF
+2025-06-25 17:57:25 - options.add_experimental_option("prefs", prefs)
+2025-06-25 17:57:25 - Maximiza a janela
+2025-06-25 17:57:31 - cpoe_url: http://aplicacao.hsf.local:7070/#/login
+2025-06-25 17:57:31 - Obter_credenciais_login() - lendo do config.ini
+2025-06-25 17:57:31 - Obter credenciais: ('pvplima', 'HSF@20244')
+2025-06-25 17:57:31 - Obter_credenciais_login() - lendo do config.ini
+2025-06-25 17:57:31 - box de usuario
+2025-06-25 17:57:31 - usuario: pvplima
+2025-06-25 17:57:33 - box de senha
+2025-06-25 17:57:33 - senha: HSF@20244
+2025-06-25 17:57:35 - botao de login
+2025-06-25 17:57:35 - login
+2025-06-25 17:57:46 - 1x enter
+2025-06-25 17:57:46 - clicar no icone do CPOE:
+2025-06-25 17:57:49 - clicar no CPOE
+2025-06-25 17:58:09 - nr_atendimento: 723110
+2025-06-25 17:58:10 - 1 - enter
+2025-06-25 17:58:14 - 2 - enter
+2025-06-25 17:58:19 - click atendimento fechado click(1107,709)
+2025-06-25 17:58:21 - botao visualizar
+2025-06-25 17:58:21 - bt_cpoe_relatorios.click()
+2025-06-25 17:58:22 - botao visualizar
+2025-06-25 17:58:22 - visualizar.click()
+2025-06-25 17:58:22 - time.sleep(TEMPO_ESPERA/3)
+2025-06-25 17:58:25 - Coordenadas do botão 'Manter' lidas do config.ini: (1751, 108)
+2025-06-25 17:58:25 - click no manter
+2025-06-25 17:58:25 - time.sleep(TEMPO_ESPERA)
+2025-06-25 17:58:29 - 
+driver.quit()
+
+2025-06-25 17:58:31 - acessando pasta download:
+2025-06-25 17:58:31 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
+2025-06-25 17:58:33 - verificando arquivos da pasta download:
+2025-06-25 17:58:33 - Arquivos:
+['ab6fa8e5-1456-4bb0-a3d7-84c31cd9cb83.pdf']
+2025-06-25 17:58:35 - ultimo arquivo antes de renomear:
+2025-06-25 17:58:35 - Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\ab6fa8e5-1456-4bb0-a3d7-84c31cd9cb83.pdf
+2025-06-25 17:58:37 - pasta_prescricoes: Prescricoes
+2025-06-25 17:58:39 - pasta_data: Prescricoes\2025_06_25
+2025-06-25 17:58:41 - Cria a pasta da data se não existir: Prescricoes\2025_06_25
+2025-06-25 17:58:43 - renomeia e move os arquivos
+2025-06-25 17:58:43 - Data_hora: 2025-06-25 17:58:43
+2025-06-25 17:58:43 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\ab6fa8e5-1456-4bb0-a3d7-84c31cd9cb83.pdf
+2025-06-25 17:58:43 - caminho_novo = Prescricoes\2025_06_25\723110 - 2025-06-25 17-58-43.pdf,arquivo:2025-06-25 17-58-43.pdf)
+2025-06-25 17:58:43 - try: shutil.move(
+ time.sleep(TEMPO_ESPERA/5)
+2025-06-25 17:58:45 - caminho_antigo:C:\Users\pvplima.C19NOT76\Downloads\ab6fa8e5-1456-4bb0-a3d7-84c31cd9cb83.pdf, 
+caminho_novoPrescricoes\2025_06_25\723110 - 2025-06-25 17-58-43.pdf)
+2025-06-25 17:58:45 - Arquivo:Prescricoes\2025_06_25\723110 - 2025-06-25 17-58-43.pdf Renomeado e movido com sucesso.
+2025-06-25 17:58:47 - Contador: 1
+2025-06-25 17:58:47 - lista_nr_atendimento.remove(723110)
+2025-06-25 17:58:47 - ******************** FIM do 723110 ********************
+2025-06-25 17:58:48 - tarefa_executada: True
+2025-06-25 17:58:48 - tarefa_executada_erro: False
+2025-06-25 17:58:48 - se ocorrer um erro na execução
+definimos que a variavel tarefa_executada sera False
+ para que a tarefa possa ser executada novamente:
+2025-06-25 17:58:48 - ===== try:
+Lista com nr_atendimentos com erro
+2025-06-25 17:58:48 - 
+Todos os atendimentos foram gerados com sucesso!
+2025-06-25 17:58:48 - def Geracao_PDF_Prescricao() 
+bloco com funcao copiar_arquivos()
+2025-06-25 17:58:48 - def copiar_arquivos()
+2025-06-25 17:58:48 - base_dir: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-06-25 17:58:48 - Caminho de origem: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Prescricoes
+2025-06-25 17:58:48 - Caminho de destino: \\192.168.103.252\contingencia_hsf$\Impressos\Prescricoes
+2025-06-25 17:58:48 - shutil.copytree(origem, destino, dirs_exist_ok=True)
+2025-06-25 17:58:49 - 
+Arquivos copiados com sucesso 
+de: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Prescricoes 
+para \\192.168.103.252\contingencia_hsf$\Impressos\Prescricoes
+FIM copiar_arquivos()
+2025-06-25 17:58:49 - df_: 
+[]
+2025-06-25 17:58:49 - Geracao Pdf Prescricao
+ANTES:
+Tarefa_executada: True
+Tarefa_executada_erro:False
+2025-06-25 17:58:49 - Geracao Pdf Prescricao
+DEPOIS:
+Tarefa_executada: False
+Tarefa_executada_erro:False
+2025-06-25 17:58:49 - FIM Geracao_Pdf_Prescricao(df_)
+
+2025-06-25 17:58:49 - Prescrições geradas!
+2025-06-25 17:58:49 - ****registrar_log_tarefa_executada() tarefa_executada = True
+2025-06-25 17:58:49 - FIM DA EXECUÇÃO
+2025-06-25 17:58:54 - thread_ativa: True
+2025-06-25 17:58:54 - Fechando aplicação...
+2025-06-25 17:58:54 - thread_ativa.txt atualizado para False

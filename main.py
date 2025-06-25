@@ -431,7 +431,8 @@ def Geracao_Pdf_Prescricao(df_):
                     bt_cpoe_visualizar.click()
                     registrar_log("visualizar.click()")
                     #driver.implicitly_wait(TEMPO_ESPERA/8)
-                    time.sleep(TEMPO_ESPERA/2)
+                    registrar_log('time.sleep(TEMPO_ESPERA/3)')
+                    time.sleep(TEMPO_ESPERA/3)
                 except Exception as e:
                     registrar_log(f"Houve um erro em botao visualizar: \n{e}")
                 
@@ -480,12 +481,14 @@ def Geracao_Pdf_Prescricao(df_):
                     manter_x = int(manter_x_str)
                     manter_y = int(manter_y_str)
                     registrar_log(f"Coordenadas do botão 'Manter' lidas do config.ini: ({manter_x}, {manter_y})")
+                    registrar_log('click no manter')
+                    pyautogui.click(manter_x, manter_y)
+
                 except (ValueError, TypeError):
                     registrar_log("Erro ao ler/converter coordenadas do config.ini. Usando valores padrão (1755, 106).")
                     manter_x, manter_y = 1755, 106
 
-                #registrar_log('click no manter')
-                #pyautogui.click(manter_x, manter_y)
+                
                 #registrar_log(f'manter.click({manter_x}, {manter_y})')
                 #time.sleep(TEMPO_ESPERA/5)
                 #
@@ -500,8 +503,10 @@ def Geracao_Pdf_Prescricao(df_):
                 #pyautogui.click(manter_x, manter_y)
                 #registrar_log(f'manter.click({manter_x}, {manter_y})')
                 #time.sleep(TEMPO_ESPERA/5)
-
-
+                
+                registrar_log('time.sleep(TEMPO_ESPERA)')
+                time.sleep(TEMPO_ESPERA/3)
+                
                 registrar_log(f'\ndriver.quit()\n')
                 driver.quit()
 
