@@ -1,0 +1,7 @@
+2025-06-25 14:20:06 - df_lista_nr_atendimento.shape: (1, 1)
+2025-06-25 14:20:13 - df_lista_nr_atendimento.shape: (1, 1)
+2025-06-25 14:20:18 - df_lista_nr_atendimento.shape: (1, 1)
+2025-06-25 14:21:35 - df_lista_nr_atendimento.shape: (1, 1)
+2025-06-25 14:25:32 - df_lista_nr_atendimento.shape: (1, 1)
+2025-06-25 14:26:58 - df_lista_nr_atendimento.shape: (1, 1)
+2025-06-25 15:45:22 - df_lista_nr_atendimento.shape: (1, 1)

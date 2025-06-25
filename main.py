@@ -11,6 +11,8 @@ from tkinter import messagebox
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 import time
 import pyautogui
 import os
@@ -298,8 +300,22 @@ def Geracao_Pdf_Prescricao(df_):
             
             try:
                 registrar_log('Geracao_Pdf_Prescricao() - try:')                
-                #tela toda:
-                options = Options()
+                registrar_log('options = Options() # Inicializa as opções do Chrome ')
+                options = Options() # Inicializa as opções do Chrome
+
+                registrar_log('Configurações para download automático de PDF')
+                # Configurações para download automático de PDF
+                prefs = {
+                    "download.default_directory": os.path.join(os.path.expanduser("~"), "Downloads"),
+                    "download.prompt_for_download": False,
+                    "download.directory_upgrade": True,
+                    "plugins.always_open_pdf_externally": True # Importante para baixar PDFs diretamente
+                }
+                registrar_log('options.add_experimental_option("prefs", prefs)')
+                options.add_experimental_option("prefs", prefs)
+
+                registrar_log('Maximiza a janela')
+                # Maximiza a janela
                 options.add_argument("--start-maximized")
                 driver = webdriver.Chrome(options=options)
 
@@ -341,16 +357,16 @@ def Geracao_Pdf_Prescricao(df_):
                 except Exception as e:
                     registrar_log(f"Houve um erro em botao de login: \n{e}")
 
-                try:
-                    #click objeto invalido
-                    registrar_log('click objeto invalido')
-                    pyautogui.click(1107,702)
-                    registrar_log("click objeto invalido\nclick(1107,702)")
-                    driver.implicitly_wait(TEMPO_ESPERA/5)
-                    time.sleep(TEMPO_ESPERA/5)
-                except Exception as e:
-                    registrar_log(f"Houve um erro em click objeto invalido")
-                    time.sleep(TEMPO_ESPERA/1.2)
+                #try:
+                #    #click objeto invalido
+                #    registrar_log('click objeto invalido')
+                #    pyautogui.click(1107,702)
+                #    registrar_log("click objeto invalido\nclick(1107,702)")
+                #    driver.implicitly_wait(TEMPO_ESPERA/5)
+                #    time.sleep(TEMPO_ESPERA/5)
+                #except Exception as e:
+                #    registrar_log(f"Houve um erro em click objeto invalido")
+                #    time.sleep(TEMPO_ESPERA/1.2)
                     
                 try:
                     time.sleep(TEMPO_ESPERA/5)
@@ -415,42 +431,54 @@ def Geracao_Pdf_Prescricao(df_):
                     bt_cpoe_visualizar = driver.find_element(By.XPATH, value='//*[@id="popupViewPort"]/li[5]/div[3]')
                     bt_cpoe_visualizar.click()
                     registrar_log("visualizar.click()")
-                    driver.implicitly_wait(TEMPO_ESPERA)
-                    time.sleep(TEMPO_ESPERA)
+                    driver.implicitly_wait(TEMPO_ESPERA/8)
+                    time.sleep(TEMPO_ESPERA/8)
                 except Exception as e:
                     registrar_log(f"Houve um erro em botao visualizar: \n{e}")
-
-                """Clica no botão 'btn_manter.png' na tela."""
-                try:
-                    # Encontra a localização da imagem do botão na tela
-                    registrar_log("tentando clicar no btn_manter()")
-                    localizacao = pyautogui.locateOnScreen('btn_manter.png', confidence=0.95)
-                    # Encontra o centro da localização:
-                    ponto_central = pyautogui.center(localizacao)
-                    # Move o mouse para o centro da imagem e clica
-                    registrar_log(f"localizacao:{localizacao}\nponto_central:{ponto_central}")
-                    pyautogui.click(ponto_central)
-                    time.sleep(TEMPO_ESPERA/8)
-                    registrar_log(f"btn_manter.png click(ponto_central)")
-                except pyautogui.ImageNotFoundException:
-                    registrar_log("Imagem 'btn_manter.png' não encontrada na tela.")
-                except Exception as e:
-                    registrar_log(f"Houve um erro em clicar_btn_manter: \n{e}")
-                time.sleep(TEMPO_ESPERA/8)  
-
-                #click no baixar
-                registrar_log(f'click no baixar')
-                pyautogui.click(1817,165)
-                registrar_log(f'baixar.click(1817,165)')
-                time.sleep(TEMPO_ESPERA/5)
                 
-                #Pressionar enter:
-                pyautogui.press('enter')
-                registrar_log("Pressionar('enter')")
-                time.sleep(TEMPO_ESPERA/5)  
-                            
-                #click no manter
-                registrar_log(f'btn_manter')
+                #"""Clica no botão 'btn_manter.png' na tela."""
+                #try:
+                #    # Encontra a localização da imagem do botão na tela
+                #    registrar_log("tentando clicar no btn_manter()")
+                #    localizacao = pyautogui.locateOnScreen('btn_manter.png', confidence=0.95)
+                #    # Encontra o centro da localização:
+                #    ponto_central = pyautogui.center(localizacao)
+                #    # Move o mouse para o centro da imagem e clica
+                #    registrar_log(f"localizacao:{localizacao}\nponto_central:{ponto_central}")
+                #    pyautogui.click(ponto_central)
+                #    time.sleep(TEMPO_ESPERA/8)
+                #    registrar_log(f"btn_manter.png click(ponto_central)")
+                #except pyautogui.ImageNotFoundException:
+                #    registrar_log("Imagem 'btn_manter.png' não encontrada na tela.")
+                #except Exception as e:
+                #    registrar_log(f"Houve um erro em clicar_btn_manter: \n{e}")
+                #time.sleep(TEMPO_ESPERA/8)  
+                #
+                #registrar_log('click no baixar')
+
+                ## Clicar no botão de download usando Selenium com By.ID
+                #try:
+                #    registrar_log(f'Tentando clicar no botão "Baixar" (ID: download)')
+                #    # Espera explícita para o botão de download ficar clicável
+                #    download_button = WebDriverWait(driver, TEMPO_ESPERA).until(
+                #        EC.element_to_be_clickable((By.ID, "download"))
+                #    )
+                #    download_button.click()
+                #    registrar_log(f'Botão "Baixar" clicado via Selenium.')
+                #    time.sleep(TEMPO_ESPERA/5) # Pequena pausa para o download iniciar
+                #except TimeoutException: # type: ignore
+                #    registrar_log("Erro: Botão 'Baixar' (ID: download) não encontrado ou não clicável após o tempo de espera.")
+                #    # Se o botão não for encontrado, pode ser que o PDF já tenha sido baixado automaticamente
+                #    # ou que o elemento tenha mudado.
+                #    # Considere adicionar uma lógica alternativa aqui se necessário.
+                #except Exception as e:
+                #    registrar_log(f"Erro inesperado ao clicar no botão 'Baixar': {e}")
+                #
+                ## Com as configurações de download automático, os comandos pyautogui.press('enter')
+                ## e pyautogui.click() para "manter" não devem ser mais necessários.
+                ## Eles foram removidos para evitar interações desnecessárias com a UI.
+                
+                registrar_log('click no manter')
                 pyautogui.click(1755,106)
                 registrar_log(f'manter.click(1755,106)')
                 time.sleep(TEMPO_ESPERA/5)
@@ -466,10 +494,11 @@ def Geracao_Pdf_Prescricao(df_):
                 pyautogui.click(1755,106)
                 registrar_log(f'manter.click(1755,106)')
                 time.sleep(TEMPO_ESPERA/5)
-                
-                #driver.quit()
-                driver.quit()
+
+
                 registrar_log(f'\ndriver.quit()\n')
+                driver.quit()
+
                 
                 try:
                     registrar_log('acessando pasta download:')
