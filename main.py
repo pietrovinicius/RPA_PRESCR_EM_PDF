@@ -833,7 +833,9 @@ def executar():
         label_status['text'] = "Tarefa inicializada!"
         registrar_log(f'Tarefa inicializada! \nbt_executar desativado!')    
         bt_executar.config(state="disabled")  # desabilita o botão
-        threadExecutar = threading.Thread(target=main).start()
+        # Corrigindo a inicialização da thread
+        threadExecutar = threading.Thread(target=main)
+        threadExecutar.start()
     else:
         registrar_log("Tarefa já executada ou planejada não inicializada. Ignorando clique.")
         label_status['text'] = "Tarefa ja executada ou planejada não inicializada!" 
