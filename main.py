@@ -61,8 +61,11 @@ tarefa_executada_erro = False
 thread_ativa = True 
 threadExecutar = None # adicionei
 
-# Constante para tempo de espera:
-TEMPO_ESPERA = 10
+# --- Início da Correção ---
+# Define o diretório de trabalho e carrega as configurações globais aqui.
+# Isso garante que as variáveis estarão disponíveis para todas as funções.
+diretorio_atual = os.getcwd()
+
 
 def agora_limpo():
     agora_limpo = datetime.datetime.now()
@@ -75,6 +78,16 @@ def agora():
     agora = agora.strftime("%Y-%m-%d %H:%M:%S")
     return str(agora)
 
+# Carrega a configuração de tempo de espera globalmente
+config = configparser.ConfigParser()
+config.read(os.path.join(diretorio_atual, 'config.ini'))
+try:
+    TEMPO_ESPERA = int(config.get('SETTINGS', 'tempo_espera'))
+except (configparser.NoSectionError, configparser.NoOptionError, ValueError):
+    print(f"{agora()} - Aviso: 'tempo_espera' não encontrado ou inválido no config.ini. Usando valor padrão de 10.")
+    TEMPO_ESPERA = 15
+# --- Fim da Correção ---
+
 def obter_configuracao(secao, chave):
     """    Lê uma configuração de um arquivo config.ini.    """
     global diretorio_atual
@@ -85,7 +98,7 @@ def obter_configuracao(secao, chave):
         config.read(caminho_arquivo_config)
         return config[secao][chave]
     except KeyError:
-        registrar_log(f"Erro: Chave '{chave}' não encontrada na seção '{secao}' em '{caminho_arquivo_config}'.")
+        print(f"Erro: Chave '{chave}' não encontrada na seção '{secao}' em '{caminho_arquivo_config}'.")
         return None
 
 def obter_credenciais_login():
@@ -105,7 +118,6 @@ def obter_credenciais_login():
 def registrar_log(texto):
     global diretorio_atual
     #Função para registrar um texto em um arquivo de log.
-    diretorio_atual = os.getcwd()
     caminho_arquivo = os.path.join(diretorio_atual, 'log.txt')
     print(f"{agora()} - {texto}\n")
 
@@ -113,6 +125,15 @@ def registrar_log(texto):
     with open(caminho_arquivo, 'a') as arquivo:
         arquivo.write(f"{agora()} - {texto}\n")
     
+    # Constante para tempo de espera, carregada do config.ini
+    try:
+        TEMPO_ESPERA = int(obter_configuracao('SETTINGS', 'tempo_espera'))
+    except (ValueError, TypeError):
+        # Se a chave não existir ou for inválida, usa um valor padrão.
+        # O log é registrado dentro de obter_configuracao se a chave não for encontrada.
+        registrar_log("Aviso: 'tempo_espera' com valor inválido no config.ini. Usando valor padrão de 10.")
+        TEMPO_ESPERA = 10
+
 def registrar_log_cronometro(texto):
     global diretorio_atual
     #Função para registrar um texto em um arquivo de log.

@@ -1292,3 +1292,2665 @@ Tarefa_executada_erro:False
 2025-06-26 16:03:04 - Prescrições geradas!
 2025-06-26 16:03:04 - ****registrar_log_tarefa_executada() tarefa_executada = True
 2025-06-26 16:03:04 - FIM DA EXECUÇÃO
+2025-06-27 08:08:54 - 2025-06-27 08:08:54
+__name__ == "__main__" 
+
+2025-06-27 08:08:54 - ****registrar_log_tarefa_executada() tarefa_executada = False
+2025-06-27 08:08:54 -  Inicio() 
+2025-06-27 08:08:54 - thread_ativa.txt atualizado para True
+2025-06-27 08:08:58 - Botao executar clicado! - tarefa executada: False, tarefa_executada_erro:False
+2025-06-27 08:08:58 - Tarefa inicializada! 
+bt_executar desativado!
+2025-06-27 08:08:58 - Main()
+2025-06-27 08:08:58 - Encontrar_diretorio_instantclient
+2025-06-27 08:08:58 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-06-27 08:08:58 - caminho instantclient:
+C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6
+2025-06-27 08:08:58 - Encontrar_diretorio_instantclient
+2025-06-27 08:08:58 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-06-27 08:08:58 - caminho instantclient:
+C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6
+2025-06-27 08:08:58 - Executando a query
+2025-06-27 08:09:11 - Atendimentos sample:    NR_ATENDIMENTO
+0          432934
+2025-06-27 08:09:12 - Atendimentos data frame:(1, 1)
+2025-06-27 08:09:13 - Atendimentos obtido com sucesso!
+2025-06-27 08:09:15 - Main() df_filtrado tamanho: (1, 1)
+2025-06-27 08:09:15 - Geracao_Pdf_Prescricao((1, 1))
+2025-06-27 08:09:15 - Geracao de Pdf ()
+2025-06-27 08:09:15 - 
+df_filtrado:
+   NR_ATENDIMENTO
+0          432934
+2025-06-27 08:09:15 - contador:0
+contador_linhas_df: 1
+2025-06-27 08:09:15 - Inicio da repetição
+2025-06-27 08:09:15 - Repeticao for index iterrows()
+2025-06-27 08:09:15 - Adicionando a lista o nr_atendimento:432934
+2025-06-27 08:09:15 - Geracao Pdf Prescricao - contador:0
+2025-06-27 08:09:15 - Geracao_Pdf_Prescricao() - try:
+2025-06-27 08:09:15 - options = Options() # Inicializa as opções do Chrome 
+2025-06-27 08:09:15 - Configurações para download automático de PDF
+2025-06-27 08:09:15 - options.add_experimental_option("prefs", prefs)
+2025-06-27 08:09:15 - Maximiza a janela
+2025-06-27 08:09:21 - cpoe_url: http://aplicacao.hsf.local:7070/#/login
+2025-06-27 08:09:21 - except do try de dento do for linha in df_filtrado
+2025-06-27 08:09:24 - 
+driver.quit()
+
+2025-06-27 08:09:24 - 
+lista_nr_atendimento:['432934']
+contador: 0 
+=========== ERROR:
+name 'TEMPO_ESPERA' is not defined
+2025-06-27 08:09:24 - tarefa_executada: True
+2025-06-27 08:09:24 - tarefa_executada_erro: False
+2025-06-27 08:09:24 - se ocorrer um erro na execução
+definimos que a variavel tarefa_executada sera False
+ para que a tarefa possa ser executada novamente:
+2025-06-27 08:09:24 - ===== try:
+Lista com nr_atendimentos com erro
+2025-06-27 08:09:24 - ação para o caso do df_lista_nr_atendimento não for vazio
+df_lista_nr_atendimento nao esta em branco
+
+2025-06-27 08:09:24 - global df recebera df_lista_nr_atendimento!!!!
+2025-06-27 08:09:24 - df = df_lista_nr_atendimento:
+        0
+0  432934
+2025-06-27 08:09:24 - df atendimentos com erro df_renovo.shape: (1, 1)
+2025-06-27 08:09:24 - Executara novamente a Geracao_Pdf_Prescricao() com o global df apenas com os nr_atendimento que tiveram erros:
+2025-06-27 08:09:24 - Geracao de Pdf ()
+2025-06-27 08:09:24 - 
+df_filtrado:
+        0
+0  432934
+2025-06-27 08:09:24 - contador:0
+contador_linhas_df: 1
+2025-06-27 08:09:24 - Inicio da repetição
+2025-06-27 08:09:24 - Repeticao for index iterrows()
+2025-06-27 08:09:24 - Adicionando a lista o nr_atendimento:432934
+2025-06-27 08:09:24 - Geracao Pdf Prescricao - contador:0
+2025-06-27 08:09:24 - Geracao_Pdf_Prescricao() - try:
+2025-06-27 08:09:24 - options = Options() # Inicializa as opções do Chrome 
+2025-06-27 08:09:24 - Configurações para download automático de PDF
+2025-06-27 08:09:24 - options.add_experimental_option("prefs", prefs)
+2025-06-27 08:09:24 - Maximiza a janela
+2025-06-27 08:09:30 - cpoe_url: http://aplicacao.hsf.local:7070/#/login
+2025-06-27 08:09:30 - except do try de dento do for linha in df_filtrado
+2025-06-27 08:09:32 - 
+driver.quit()
+
+2025-06-27 08:09:32 - 
+lista_nr_atendimento:['432934']
+contador: 0 
+=========== ERROR:
+name 'TEMPO_ESPERA' is not defined
+2025-06-27 08:09:32 - tarefa_executada: True
+2025-06-27 08:09:32 - tarefa_executada_erro: False
+2025-06-27 08:09:32 - se ocorrer um erro na execução
+definimos que a variavel tarefa_executada sera False
+ para que a tarefa possa ser executada novamente:
+2025-06-27 08:09:32 - ===== try:
+Lista com nr_atendimentos com erro
+2025-06-27 08:09:32 - ação para o caso do df_lista_nr_atendimento não for vazio
+df_lista_nr_atendimento nao esta em branco
+
+2025-06-27 08:09:32 - global df recebera df_lista_nr_atendimento!!!!
+2025-06-27 08:09:32 - df = df_lista_nr_atendimento:
+        0
+0  432934
+2025-06-27 08:09:32 - df atendimentos com erro df_renovo.shape: (1, 1)
+2025-06-27 08:09:32 - Executara novamente a Geracao_Pdf_Prescricao() com o global df apenas com os nr_atendimento que tiveram erros:
+2025-06-27 08:09:32 - Geracao de Pdf ()
+2025-06-27 08:09:32 - 
+df_filtrado:
+        0
+0  432934
+2025-06-27 08:09:32 - contador:0
+contador_linhas_df: 1
+2025-06-27 08:09:32 - Inicio da repetição
+2025-06-27 08:09:32 - Repeticao for index iterrows()
+2025-06-27 08:09:32 - Adicionando a lista o nr_atendimento:432934
+2025-06-27 08:09:32 - Geracao Pdf Prescricao - contador:0
+2025-06-27 08:09:32 - Geracao_Pdf_Prescricao() - try:
+2025-06-27 08:09:32 - options = Options() # Inicializa as opções do Chrome 
+2025-06-27 08:09:32 - Configurações para download automático de PDF
+2025-06-27 08:09:32 - options.add_experimental_option("prefs", prefs)
+2025-06-27 08:09:32 - Maximiza a janela
+2025-06-27 08:09:39 - cpoe_url: http://aplicacao.hsf.local:7070/#/login
+2025-06-27 08:09:39 - except do try de dento do for linha in df_filtrado
+2025-06-27 08:09:41 - 
+driver.quit()
+
+2025-06-27 08:09:41 - 
+lista_nr_atendimento:['432934']
+contador: 0 
+=========== ERROR:
+name 'TEMPO_ESPERA' is not defined
+2025-06-27 08:09:41 - tarefa_executada: True
+2025-06-27 08:09:41 - tarefa_executada_erro: False
+2025-06-27 08:09:41 - se ocorrer um erro na execução
+definimos que a variavel tarefa_executada sera False
+ para que a tarefa possa ser executada novamente:
+2025-06-27 08:09:41 - ===== try:
+Lista com nr_atendimentos com erro
+2025-06-27 08:09:41 - ação para o caso do df_lista_nr_atendimento não for vazio
+df_lista_nr_atendimento nao esta em branco
+
+2025-06-27 08:09:41 - global df recebera df_lista_nr_atendimento!!!!
+2025-06-27 08:09:41 - df = df_lista_nr_atendimento:
+        0
+0  432934
+2025-06-27 08:09:41 - df atendimentos com erro df_renovo.shape: (1, 1)
+2025-06-27 08:09:41 - Executara novamente a Geracao_Pdf_Prescricao() com o global df apenas com os nr_atendimento que tiveram erros:
+2025-06-27 08:09:41 - Geracao de Pdf ()
+2025-06-27 08:09:41 - 
+df_filtrado:
+        0
+0  432934
+2025-06-27 08:09:41 - contador:0
+contador_linhas_df: 1
+2025-06-27 08:09:41 - Inicio da repetição
+2025-06-27 08:09:41 - Repeticao for index iterrows()
+2025-06-27 08:09:41 - Adicionando a lista o nr_atendimento:432934
+2025-06-27 08:09:41 - Geracao Pdf Prescricao - contador:0
+2025-06-27 08:09:41 - Geracao_Pdf_Prescricao() - try:
+2025-06-27 08:09:41 - options = Options() # Inicializa as opções do Chrome 
+2025-06-27 08:09:41 - Configurações para download automático de PDF
+2025-06-27 08:09:41 - options.add_experimental_option("prefs", prefs)
+2025-06-27 08:09:41 - Maximiza a janela
+2025-06-27 08:09:47 - cpoe_url: http://aplicacao.hsf.local:7070/#/login
+2025-06-27 08:09:47 - except do try de dento do for linha in df_filtrado
+2025-06-27 08:09:50 - 
+driver.quit()
+
+2025-06-27 08:09:50 - 
+lista_nr_atendimento:['432934']
+contador: 0 
+=========== ERROR:
+name 'TEMPO_ESPERA' is not defined
+2025-06-27 08:09:50 - tarefa_executada: True
+2025-06-27 08:09:50 - tarefa_executada_erro: False
+2025-06-27 08:09:50 - se ocorrer um erro na execução
+definimos que a variavel tarefa_executada sera False
+ para que a tarefa possa ser executada novamente:
+2025-06-27 08:09:50 - ===== try:
+Lista com nr_atendimentos com erro
+2025-06-27 08:09:50 - ação para o caso do df_lista_nr_atendimento não for vazio
+df_lista_nr_atendimento nao esta em branco
+
+2025-06-27 08:09:50 - global df recebera df_lista_nr_atendimento!!!!
+2025-06-27 08:09:50 - df = df_lista_nr_atendimento:
+        0
+0  432934
+2025-06-27 08:09:50 - df atendimentos com erro df_renovo.shape: (1, 1)
+2025-06-27 08:09:50 - Executara novamente a Geracao_Pdf_Prescricao() com o global df apenas com os nr_atendimento que tiveram erros:
+2025-06-27 08:09:50 - Geracao de Pdf ()
+2025-06-27 08:09:50 - 
+df_filtrado:
+        0
+0  432934
+2025-06-27 08:09:50 - contador:0
+contador_linhas_df: 1
+2025-06-27 08:09:50 - Inicio da repetição
+2025-06-27 08:09:50 - Repeticao for index iterrows()
+2025-06-27 08:09:50 - Adicionando a lista o nr_atendimento:432934
+2025-06-27 08:09:50 - Geracao Pdf Prescricao - contador:0
+2025-06-27 08:09:50 - Geracao_Pdf_Prescricao() - try:
+2025-06-27 08:09:50 - options = Options() # Inicializa as opções do Chrome 
+2025-06-27 08:09:50 - Configurações para download automático de PDF
+2025-06-27 08:09:50 - options.add_experimental_option("prefs", prefs)
+2025-06-27 08:09:50 - Maximiza a janela
+2025-06-27 08:09:53 - cpoe_url: http://aplicacao.hsf.local:7070/#/login
+2025-06-27 08:09:53 - except do try de dento do for linha in df_filtrado
+2025-06-27 08:09:55 - 
+driver.quit()
+
+2025-06-27 08:09:55 - 
+lista_nr_atendimento:['432934']
+contador: 0 
+=========== ERROR:
+Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=84.0.4147.89)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x016587E3+2852835]
+	Ordinal0 [0x01545BB1+1727409]
+	Ordinal0 [0x0141E4B9+517305]
+	Ordinal0 [0x0140F6F3+456435]
+	Ordinal0 [0x013CC07C+180348]
+	Ordinal0 [0x013D475C+214876]
+	Ordinal0 [0x013CB70B+177931]
+	Ordinal0 [0x013B2584+75140]
+	Ordinal0 [0x013B3650+79440]
+	Ordinal0 [0x013B35E9+79337]
+	Ordinal0 [0x0155AD5C+1813852]
+	GetHandleVerifier [0x0177C616+1075574]
+	GetHandleVerifier [0x0177C367+1074887]
+	GetHandleVerifier [0x01787497+1120247]
+	GetHandleVerifier [0x0177CC16+1077110]
+	Ordinal0 [0x01553206+1782278]
+	Ordinal0 [0x0155C3BB+1819579]
+	Ordinal0 [0x0155C523+1819939]
+	Ordinal0 [0x01572B45+1911621]
+	BaseThreadInitThunk [0x777C8654+36]
+	RtlGetAppContainerNamedObjectPath [0x779B4A77+311]
+	RtlGetAppContainerNamedObjectPath [0x779B4A47+263]
+
+2025-06-27 08:09:55 - tarefa_executada: True
+2025-06-27 08:09:55 - tarefa_executada_erro: False
+2025-06-27 08:09:55 - se ocorrer um erro na execução
+definimos que a variavel tarefa_executada sera False
+ para que a tarefa possa ser executada novamente:
+2025-06-27 08:09:55 - ===== try:
+Lista com nr_atendimentos com erro
+2025-06-27 08:09:55 - ação para o caso do df_lista_nr_atendimento não for vazio
+df_lista_nr_atendimento nao esta em branco
+
+2025-06-27 08:09:55 - global df recebera df_lista_nr_atendimento!!!!
+2025-06-27 08:09:55 - df = df_lista_nr_atendimento:
+        0
+0  432934
+2025-06-27 08:09:55 - df atendimentos com erro df_renovo.shape: (1, 1)
+2025-06-27 08:09:55 - Executara novamente a Geracao_Pdf_Prescricao() com o global df apenas com os nr_atendimento que tiveram erros:
+2025-06-27 08:09:55 - Geracao de Pdf ()
+2025-06-27 08:09:55 - 
+df_filtrado:
+        0
+0  432934
+2025-06-27 08:09:55 - contador:0
+contador_linhas_df: 1
+2025-06-27 08:09:55 - Inicio da repetição
+2025-06-27 08:09:55 - Repeticao for index iterrows()
+2025-06-27 08:09:55 - Adicionando a lista o nr_atendimento:432934
+2025-06-27 08:09:55 - Geracao Pdf Prescricao - contador:0
+2025-06-27 08:09:55 - Geracao_Pdf_Prescricao() - try:
+2025-06-27 08:09:55 - options = Options() # Inicializa as opções do Chrome 
+2025-06-27 08:09:55 - Configurações para download automático de PDF
+2025-06-27 08:09:55 - options.add_experimental_option("prefs", prefs)
+2025-06-27 08:09:55 - Maximiza a janela
+2025-06-27 08:11:58 - 2025-06-27 08:11:58
+__name__ == "__main__" 
+
+2025-06-27 08:11:58 - ****registrar_log_tarefa_executada() tarefa_executada = False
+2025-06-27 08:11:58 -  Inicio() 
+2025-06-27 08:11:58 - thread_ativa.txt atualizado para True
+2025-06-27 08:12:03 - Botao executar clicado! - tarefa executada: False, tarefa_executada_erro:False
+2025-06-27 08:12:03 - Tarefa inicializada! 
+bt_executar desativado!
+2025-06-27 08:12:03 - Main()
+2025-06-27 08:12:03 - Encontrar_diretorio_instantclient
+2025-06-27 08:12:03 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-06-27 08:12:03 - caminho instantclient:
+C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6
+2025-06-27 08:12:03 - Encontrar_diretorio_instantclient
+2025-06-27 08:12:03 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-06-27 08:12:03 - caminho instantclient:
+C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6
+2025-06-27 08:12:03 - Executando a query
+2025-06-27 08:12:12 - Atendimentos sample:    NR_ATENDIMENTO
+0          432934
+2025-06-27 08:12:13 - Atendimentos data frame:(1, 1)
+2025-06-27 08:12:14 - Atendimentos obtido com sucesso!
+2025-06-27 08:12:16 - Main() df_filtrado tamanho: (1, 1)
+2025-06-27 08:12:16 - Geracao_Pdf_Prescricao((1, 1))
+2025-06-27 08:12:16 - Geracao de Pdf ()
+2025-06-27 08:12:16 - 
+df_filtrado:
+   NR_ATENDIMENTO
+0          432934
+2025-06-27 08:12:16 - contador:0
+contador_linhas_df: 1
+2025-06-27 08:12:16 - Inicio da repetição
+2025-06-27 08:12:16 - Repeticao for index iterrows()
+2025-06-27 08:12:16 - Adicionando a lista o nr_atendimento:432934
+2025-06-27 08:12:16 - Geracao Pdf Prescricao - contador:0
+2025-06-27 08:12:16 - Geracao_Pdf_Prescricao() - try:
+2025-06-27 08:12:16 - options = Options() # Inicializa as opções do Chrome 
+2025-06-27 08:12:16 - Configurações para download automático de PDF
+2025-06-27 08:12:16 - options.add_experimental_option("prefs", prefs)
+2025-06-27 08:12:16 - Maximiza a janela
+2025-06-27 08:12:25 - cpoe_url: http://aplicacao.hsf.local:7070/#/login
+2025-06-27 08:12:25 - except do try de dento do for linha in df_filtrado
+2025-06-27 08:12:28 - 
+driver.quit()
+
+2025-06-27 08:12:28 - 
+lista_nr_atendimento:['432934']
+contador: 0 
+=========== ERROR:
+name 'TEMPO_ESPERA' is not defined
+2025-06-27 08:12:28 - tarefa_executada: True
+2025-06-27 08:12:28 - tarefa_executada_erro: False
+2025-06-27 08:12:28 - se ocorrer um erro na execução
+definimos que a variavel tarefa_executada sera False
+ para que a tarefa possa ser executada novamente:
+2025-06-27 08:12:28 - ===== try:
+Lista com nr_atendimentos com erro
+2025-06-27 08:12:28 - ação para o caso do df_lista_nr_atendimento não for vazio
+df_lista_nr_atendimento nao esta em branco
+
+2025-06-27 08:12:28 - global df recebera df_lista_nr_atendimento!!!!
+2025-06-27 08:12:28 - df = df_lista_nr_atendimento:
+        0
+0  432934
+2025-06-27 08:12:28 - df atendimentos com erro df_renovo.shape: (1, 1)
+2025-06-27 08:12:28 - Executara novamente a Geracao_Pdf_Prescricao() com o global df apenas com os nr_atendimento que tiveram erros:
+2025-06-27 08:12:28 - Geracao de Pdf ()
+2025-06-27 08:12:28 - 
+df_filtrado:
+        0
+0  432934
+2025-06-27 08:12:28 - contador:0
+contador_linhas_df: 1
+2025-06-27 08:12:28 - Inicio da repetição
+2025-06-27 08:12:28 - Repeticao for index iterrows()
+2025-06-27 08:12:28 - Adicionando a lista o nr_atendimento:432934
+2025-06-27 08:12:28 - Geracao Pdf Prescricao - contador:0
+2025-06-27 08:12:28 - Geracao_Pdf_Prescricao() - try:
+2025-06-27 08:12:28 - options = Options() # Inicializa as opções do Chrome 
+2025-06-27 08:12:28 - Configurações para download automático de PDF
+2025-06-27 08:12:28 - options.add_experimental_option("prefs", prefs)
+2025-06-27 08:12:28 - Maximiza a janela
+2025-06-27 08:12:28 - thread_ativa: True
+2025-06-27 08:12:28 - Fechando aplicação...
+2025-06-27 08:12:28 - thread_ativa.txt atualizado para False
+2025-06-27 08:12:31 - cpoe_url: http://aplicacao.hsf.local:7070/#/login
+2025-06-27 08:12:31 - except do try de dento do for linha in df_filtrado
+2025-06-27 08:12:33 - 
+driver.quit()
+
+2025-06-27 08:12:33 - 
+lista_nr_atendimento:['432934']
+contador: 0 
+=========== ERROR:
+Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=84.0.4147.89)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x016587E3+2852835]
+	Ordinal0 [0x01545BB1+1727409]
+	Ordinal0 [0x0141E4B9+517305]
+	Ordinal0 [0x0140F6F3+456435]
+	Ordinal0 [0x013CC07C+180348]
+	Ordinal0 [0x013D475C+214876]
+	Ordinal0 [0x013CB70B+177931]
+	Ordinal0 [0x013B2584+75140]
+	Ordinal0 [0x013B3650+79440]
+	Ordinal0 [0x013B35E9+79337]
+	Ordinal0 [0x0155AD5C+1813852]
+	GetHandleVerifier [0x0177C616+1075574]
+	GetHandleVerifier [0x0177C367+1074887]
+	GetHandleVerifier [0x01787497+1120247]
+	GetHandleVerifier [0x0177CC16+1077110]
+	Ordinal0 [0x01553206+1782278]
+	Ordinal0 [0x0155C3BB+1819579]
+	Ordinal0 [0x0155C523+1819939]
+	Ordinal0 [0x01572B45+1911621]
+	BaseThreadInitThunk [0x777C8654+36]
+	RtlGetAppContainerNamedObjectPath [0x779B4A77+311]
+	RtlGetAppContainerNamedObjectPath [0x779B4A47+263]
+
+2025-06-27 08:12:33 - tarefa_executada: True
+2025-06-27 08:12:33 - tarefa_executada_erro: False
+2025-06-27 08:12:33 - se ocorrer um erro na execução
+definimos que a variavel tarefa_executada sera False
+ para que a tarefa possa ser executada novamente:
+2025-06-27 08:12:33 - ===== try:
+Lista com nr_atendimentos com erro
+2025-06-27 08:12:33 - ação para o caso do df_lista_nr_atendimento não for vazio
+df_lista_nr_atendimento nao esta em branco
+
+2025-06-27 08:12:33 - global df recebera df_lista_nr_atendimento!!!!
+2025-06-27 08:12:33 - df = df_lista_nr_atendimento:
+        0
+0  432934
+2025-06-27 08:12:33 - df atendimentos com erro df_renovo.shape: (1, 1)
+2025-06-27 08:12:33 - Executara novamente a Geracao_Pdf_Prescricao() com o global df apenas com os nr_atendimento que tiveram erros:
+2025-06-27 08:12:33 - Geracao de Pdf ()
+2025-06-27 08:12:33 - 
+df_filtrado:
+        0
+0  432934
+2025-06-27 08:12:33 - contador:0
+contador_linhas_df: 1
+2025-06-27 08:12:33 - Inicio da repetição
+2025-06-27 08:12:33 - thread_ativa.txt está como FALSE. Interrompendo o loop.
+2025-06-27 08:12:33 - tarefa_executada: True
+2025-06-27 08:12:33 - tarefa_executada_erro: False
+2025-06-27 08:12:33 - se ocorrer um erro na execução
+definimos que a variavel tarefa_executada sera False
+ para que a tarefa possa ser executada novamente:
+2025-06-27 08:12:33 - ===== try:
+Lista com nr_atendimentos com erro
+2025-06-27 08:12:33 - 
+Todos os atendimentos foram gerados com sucesso!
+2025-06-27 08:12:33 - def Geracao_PDF_Prescricao() 
+bloco com funcao copiar_arquivos()
+2025-06-27 08:12:33 - def copiar_arquivos()
+2025-06-27 08:12:33 - base_dir: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-06-27 08:12:33 - Caminho de origem: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Prescricoes
+2025-06-27 08:12:33 - Caminho de destino: \\192.168.103.252\\contingencia_hsf$\\Impressos\\Prescricoes
+2025-06-27 08:12:33 - shutil.copytree(origem, destino, dirs_exist_ok=True)
+2025-06-27 08:12:34 - 
+Arquivos copiados com sucesso 
+de: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Prescricoes 
+para \\192.168.103.252\\contingencia_hsf$\\Impressos\\Prescricoes
+FIM copiar_arquivos()
+2025-06-27 08:12:34 - df_: 
+[]
+2025-06-27 08:12:34 - Geracao Pdf Prescricao
+ANTES:
+Tarefa_executada: True
+Tarefa_executada_erro:False
+2025-06-27 08:12:34 - Geracao Pdf Prescricao
+DEPOIS:
+Tarefa_executada: False
+Tarefa_executada_erro:False
+2025-06-27 08:12:34 - FIM Geracao_Pdf_Prescricao(df_)
+
+2025-06-27 08:12:34 - def Geracao_PDF_Prescricao() 
+bloco com funcao copiar_arquivos()
+2025-06-27 08:12:34 - def copiar_arquivos()
+2025-06-27 08:12:34 - base_dir: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-06-27 08:12:34 - Caminho de origem: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Prescricoes
+2025-06-27 08:12:34 - Caminho de destino: \\192.168.103.252\\contingencia_hsf$\\Impressos\\Prescricoes
+2025-06-27 08:12:34 - shutil.copytree(origem, destino, dirs_exist_ok=True)
+2025-06-27 08:12:34 - 
+Arquivos copiados com sucesso 
+de: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Prescricoes 
+para \\192.168.103.252\\contingencia_hsf$\\Impressos\\Prescricoes
+FIM copiar_arquivos()
+2025-06-27 08:12:34 - df_: 
+[]
+2025-06-27 08:12:34 - Geracao Pdf Prescricao
+ANTES:
+Tarefa_executada: False
+Tarefa_executada_erro:False
+2025-06-27 08:12:34 - Geracao Pdf Prescricao
+DEPOIS:
+Tarefa_executada: False
+Tarefa_executada_erro:False
+2025-06-27 08:12:34 - FIM Geracao_Pdf_Prescricao(df_)
+
+2025-06-27 08:12:34 - def Geracao_PDF_Prescricao() 
+bloco com funcao copiar_arquivos()
+2025-06-27 08:12:34 - def copiar_arquivos()
+2025-06-27 08:12:34 - base_dir: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-06-27 08:12:34 - Caminho de origem: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Prescricoes
+2025-06-27 08:12:34 - Caminho de destino: \\192.168.103.252\\contingencia_hsf$\\Impressos\\Prescricoes
+2025-06-27 08:12:34 - shutil.copytree(origem, destino, dirs_exist_ok=True)
+2025-06-27 08:12:34 - 
+Arquivos copiados com sucesso 
+de: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Prescricoes 
+para \\192.168.103.252\\contingencia_hsf$\\Impressos\\Prescricoes
+FIM copiar_arquivos()
+2025-06-27 08:12:34 - df_: 
+[]
+2025-06-27 08:12:34 - Geracao Pdf Prescricao
+ANTES:
+Tarefa_executada: False
+Tarefa_executada_erro:False
+2025-06-27 08:12:34 - Geracao Pdf Prescricao
+DEPOIS:
+Tarefa_executada: False
+Tarefa_executada_erro:False
+2025-06-27 08:12:34 - FIM Geracao_Pdf_Prescricao(df_)
+
+2025-06-27 08:12:34 - Prescrições geradas!
+2025-06-27 08:18:11 - 2025-06-27 08:18:11
+__name__ == "__main__" 
+
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - "__main__"
+Exception Error: 
+maximum recursion depth exceeded
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:11 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:12 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - 2025-06-27 08:18:27
+__name__ == "__main__" 
+
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:27 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - "__main__"
+Exception Error: 
+maximum recursion depth exceeded
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:18:28 - Obter_configuracao() - INICIO
+2025-06-27 08:24:24 - 2025-06-27 08:24:24
+__name__ == "__main__" 
+
+2025-06-27 08:24:24 - ****registrar_log_tarefa_executada() tarefa_executada = False
+2025-06-27 08:24:24 -  Inicio() 
+2025-06-27 08:24:24 - thread_ativa.txt atualizado para True
+2025-06-27 08:24:53 - Botao executar clicado! - tarefa executada: False, tarefa_executada_erro:False
+2025-06-27 08:24:53 - Tarefa inicializada! 
+bt_executar desativado!
+2025-06-27 08:24:53 - Main()
+2025-06-27 08:24:53 - Encontrar_diretorio_instantclient
+2025-06-27 08:24:53 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-06-27 08:24:53 - caminho instantclient:
+C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6
+2025-06-27 08:24:53 - Encontrar_diretorio_instantclient
+2025-06-27 08:24:53 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-06-27 08:24:53 - caminho instantclient:
+C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6
+2025-06-27 08:24:53 - Executando a query
+2025-06-27 08:26:08 - 2025-06-27 08:26:08
+__name__ == "__main__" 
+
+2025-06-27 08:26:08 - ****registrar_log_tarefa_executada() tarefa_executada = False
+2025-06-27 08:26:08 -  Inicio() 
+2025-06-27 08:26:08 - thread_ativa.txt atualizado para True
+2025-06-27 08:26:16 - Botao executar clicado! - tarefa executada: False, tarefa_executada_erro:False
+2025-06-27 08:26:16 - Tarefa inicializada! 
+bt_executar desativado!
+2025-06-27 08:26:16 - Main()
+2025-06-27 08:26:16 - Encontrar_diretorio_instantclient
+2025-06-27 08:26:16 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-06-27 08:26:16 - caminho instantclient:
+C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6
+2025-06-27 08:26:16 - Encontrar_diretorio_instantclient
+2025-06-27 08:26:16 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-06-27 08:26:16 - caminho instantclient:
+C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6
+2025-06-27 08:26:16 - Executando a query
+2025-06-27 08:26:25 - Atendimentos sample:    NR_ATENDIMENTO
+0          723242
+2025-06-27 08:26:26 - Atendimentos data frame:(1, 1)
+2025-06-27 08:26:27 - Atendimentos obtido com sucesso!
+2025-06-27 08:26:29 - Main() df_filtrado tamanho: (1, 1)
+2025-06-27 08:26:29 - Geracao_Pdf_Prescricao((1, 1))
+2025-06-27 08:26:29 - Geracao de Pdf ()
+2025-06-27 08:26:29 - 
+df_filtrado:
+   NR_ATENDIMENTO
+0          723242
+2025-06-27 08:26:29 - contador:0
+contador_linhas_df: 1
+2025-06-27 08:26:29 - Inicio da repetição
+2025-06-27 08:26:29 - Repeticao for index iterrows()
+2025-06-27 08:26:29 - Adicionando a lista o nr_atendimento:723242
+2025-06-27 08:26:29 - Geracao Pdf Prescricao - contador:0
+2025-06-27 08:26:29 - Geracao_Pdf_Prescricao() - try:
+2025-06-27 08:26:29 - options = Options() # Inicializa as opções do Chrome 
+2025-06-27 08:26:29 - Configurações para download automático de PDF
+2025-06-27 08:26:29 - options.add_experimental_option("prefs", prefs)
+2025-06-27 08:26:29 - Maximiza a janela
+2025-06-27 08:26:36 - cpoe_url: http://aplicacao.hsf.local:7070/#/login
+2025-06-27 08:26:36 - Obter_credenciais_login() - lendo do config.ini
+2025-06-27 08:26:36 - Obter credenciais: ('pvplima', 'HSF@20244')
+2025-06-27 08:26:36 - Obter_credenciais_login() - lendo do config.ini
+2025-06-27 08:26:36 - box de usuario
+2025-06-27 08:26:36 - usuario: pvplima
+2025-06-27 08:26:39 - box de senha
+2025-06-27 08:26:39 - senha: HSF@20244
+2025-06-27 08:26:41 - botao de login
+2025-06-27 08:26:41 - login
+2025-06-27 08:26:54 - 1x enter
+2025-06-27 08:26:54 - clicar no icone do CPOE:
+2025-06-27 08:26:57 - clicar no CPOE
+2025-06-27 08:27:21 - nr_atendimento: 723242
+2025-06-27 08:27:23 - 1 - enter
+2025-06-27 08:27:28 - 2 - enter
+2025-06-27 08:27:34 - click atendimento fechado click(1107,709)
+2025-06-27 08:27:35 - botao visualizar
+2025-06-27 08:27:41 - bt_cpoe_relatorios.click()
+2025-06-27 08:27:42 - botao visualizar
+2025-06-27 08:27:42 - visualizar.click()
+2025-06-27 08:27:42 - time.sleep(TEMPO_ESPERA/3)
+2025-06-27 08:27:46 - time.sleep(1)
+2025-06-27 08:27:47 - Coordenadas do botão 'Manter' lidas do config.ini: (1751, 108)
+2025-06-27 08:27:47 - click no manter
+2025-06-27 08:27:47 - time.sleep(TEMPO_ESPERA)
+2025-06-27 08:27:53 - 
+driver.quit()
+
+2025-06-27 08:27:56 - acessando pasta download:
+2025-06-27 08:27:56 - Caminho da pasta download: C:\Users\suporte\Downloads
+2025-06-27 08:27:58 - verificando arquivos da pasta download:
+2025-06-27 08:27:58 - Arquivos:
+['672287d8-b16e-4936-b547-779922403c55.pdf']
+2025-06-27 08:28:00 - ultimo arquivo antes de renomear:
+2025-06-27 08:28:00 - Ultimo arquivo antes de renomear: C:\Users\suporte\Downloads\672287d8-b16e-4936-b547-779922403c55.pdf
+2025-06-27 08:28:03 - pasta_prescricoes: Prescricoes
+2025-06-27 08:28:05 - pasta_data: Prescricoes\2025_06_27
+2025-06-27 08:28:08 - Cria a pasta da data se não existir: Prescricoes\2025_06_27
+2025-06-27 08:28:10 - renomeia e move os arquivos
+2025-06-27 08:28:10 - Data_hora: 2025-06-27 08:28:10
+2025-06-27 08:28:10 - caminho antigo: C:\Users\suporte\Downloads\672287d8-b16e-4936-b547-779922403c55.pdf
+2025-06-27 08:28:10 - caminho_novo = Prescricoes\2025_06_27\723242 - 2025-06-27 08-28-10.pdf,arquivo:2025-06-27 08-28-10.pdf)
+2025-06-27 08:28:10 - try: shutil.move(
+ time.sleep(TEMPO_ESPERA/5)
+2025-06-27 08:28:12 - caminho_antigo:C:\Users\suporte\Downloads\672287d8-b16e-4936-b547-779922403c55.pdf, 
+caminho_novoPrescricoes\2025_06_27\723242 - 2025-06-27 08-28-10.pdf)
+2025-06-27 08:28:12 - Arquivo:Prescricoes\2025_06_27\723242 - 2025-06-27 08-28-10.pdf Renomeado e movido com sucesso.
+2025-06-27 08:28:15 - Contador: 1
+2025-06-27 08:28:15 - lista_nr_atendimento.remove(723242)
+2025-06-27 08:28:15 - ******************** FIM do 723242 ********************
+2025-06-27 08:28:16 - tarefa_executada: True
+2025-06-27 08:28:16 - tarefa_executada_erro: False
+2025-06-27 08:28:16 - se ocorrer um erro na execução
+definimos que a variavel tarefa_executada sera False
+ para que a tarefa possa ser executada novamente:
+2025-06-27 08:28:16 - ===== try:
+Lista com nr_atendimentos com erro
+2025-06-27 08:28:16 - 
+Todos os atendimentos foram gerados com sucesso!
+2025-06-27 08:28:16 - def Geracao_PDF_Prescricao() 
+bloco com funcao copiar_arquivos()
+2025-06-27 08:28:16 - def copiar_arquivos()
+2025-06-27 08:28:16 - base_dir: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-06-27 08:28:16 - Caminho de origem: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Prescricoes
+2025-06-27 08:28:16 - Caminho de destino: \\192.168.103.252\\contingencia_hsf$\\Impressos\\Prescricoes
+2025-06-27 08:28:16 - shutil.copytree(origem, destino, dirs_exist_ok=True)
+2025-06-27 08:28:17 - 
+Arquivos copiados com sucesso 
+de: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Prescricoes 
+para \\192.168.103.252\\contingencia_hsf$\\Impressos\\Prescricoes
+FIM copiar_arquivos()
+2025-06-27 08:28:17 - df_: 
+[]
+2025-06-27 08:28:17 - Geracao Pdf Prescricao
+ANTES:
+Tarefa_executada: True
+Tarefa_executada_erro:False
+2025-06-27 08:28:17 - Geracao Pdf Prescricao
+DEPOIS:
+Tarefa_executada: False
+Tarefa_executada_erro:False
+2025-06-27 08:28:17 - FIM Geracao_Pdf_Prescricao(df_)
+
+2025-06-27 08:28:17 - Prescrições geradas!
+2025-06-27 08:28:17 - ****registrar_log_tarefa_executada() tarefa_executada = True
+2025-06-27 08:28:17 - FIM DA EXECUÇÃO
+2025-06-27 08:28:29 - thread_ativa: True
+2025-06-27 08:28:29 - Fechando aplicação...
+2025-06-27 08:28:29 - thread_ativa.txt atualizado para False
