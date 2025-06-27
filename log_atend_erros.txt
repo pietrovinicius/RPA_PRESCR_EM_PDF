@@ -17,3 +17,4 @@
 2025-06-27 08:12:33 - df_lista_nr_atendimento.shape: (1, 1)
 2025-06-27 11:11:16 - df_lista_nr_atendimento.shape: (1, 1)
 2025-06-27 11:30:54 - df_lista_nr_atendimento.shape: (1, 1)
+2025-06-27 12:02:56 - df_lista_nr_atendimento.shape: (1, 1)

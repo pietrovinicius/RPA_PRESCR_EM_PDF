@@ -57,7 +57,7 @@ base = "Win32GUI" if sys.platform == "win32" else None
 # Configuração da sua aplicação
 setup(
     name="ExtratorPrescricoesHSF",  # Nome mais descritivo do aplicativo
-    version="1.7.0",  # Versão do aplicativo (esquema major.minor.patch)
+    version="1.9.1",  # Versão do aplicativo (esquema major.minor.patch)
     description="Aplicativo para automatizar a extração e o download de prescrições médicas em formato PDF do sistema HSF.",  # Descrição detalhada
     options={"build_exe": build_exe_options},
     executables=[Executable("main.py", icon="icone.ico", base=base)]

@@ -53,6 +53,7 @@ diretorio_atual_prescricoes = ""
 lista_nr_atendimento = []
 
 lb_contador = 0
+label_meta = None
 
 #variáveis de controle:
 tarefa_agendada_iniciada = False
@@ -161,6 +162,16 @@ def registrar_log_contador(texto):
     #Função para registrar um texto em um arquivo de log.
     diretorio_atual = os.getcwd()
     caminho_arquivo = os.path.join(diretorio_atual, 'log_contador.txt')
+    # Abre o arquivo em modo de append (adiciona texto ao final)
+    with open(caminho_arquivo, 'w') as arquivo:
+        print(f"{texto}")
+        arquivo.write(texto)
+
+def registrar_log_meta(texto):
+    global diretorio_atual
+    #Função para registrar um texto em um arquivo de log.
+    diretorio_atual = os.getcwd()
+    caminho_arquivo = os.path.join(diretorio_atual, 'log_meta.txt')
     # Abre o arquivo em modo de append (adiciona texto ao final)
     with open(caminho_arquivo, 'w') as arquivo:
         print(f"{texto}")
@@ -292,6 +303,9 @@ def obter_pacientes_atendimentos():
                 time.sleep(1)
                 registrar_log(f'Atendimentos data frame:{df.shape}')
                 time.sleep(1)
+                # Escreve o total de atendimentos (meta) no arquivo de log da meta.
+                total_atendimentos = len(df)
+                registrar_log_meta(str(total_atendimentos))
                 registrar_log("Atendimentos obtido com sucesso!")
                 time.sleep(2)
 
@@ -308,6 +322,8 @@ def Geracao_Pdf_Prescricao(df_):
     global lb_contador
     global tarefa_executada
     global tarefa_executada_erro
+    global janela # Adicionado para acessar a janela principal da UI
+    global label_meta # Adicionado para acessar o label da meta
     global contador
     #  Geracao_Pdf_Prescricao 
     registrar_log('Geracao de Pdf ()')
@@ -774,9 +790,9 @@ def atualizar_log():
                      lb_contador = ultima_linha.split("lb_contador:")[1].split(" - linha:")[0].strip() #extraindo o lb_contador do texto
                      label_status_lb_contador['text'] = str(lb_contador)
     except FileNotFoundError:
-        label_log['text'] = "Arquivo de log não encontrado."
+            label_log['text'] = "Arquivo de log não encontrado."
     except Exception as e:
-          label_log['text'] = f"Erro ao ler o log: {e}"
+            label_log['text'] = f"Erro ao ler o log: {e}"
     finally:
         janela.after(2000, atualizar_log) # agendar para rodar daqui 2 segundos;
 
@@ -795,6 +811,24 @@ def atualizar_contador():
         label_status_lb_contador['text'] = f"Erro ao ler o contador: {e}"
     finally:
         janela.after(2000, atualizar_contador)
+
+def atualizar_meta():
+    """Atualiza o rótulo da meta com o valor do arquivo log_meta.txt."""
+    global label_meta, janela
+    try:
+        with open('log_meta.txt', 'r') as arquivo:
+            linhas_meta = arquivo.readlines()
+            if linhas_meta:
+                ultima_meta = linhas_meta[-1].strip()
+                if label_meta: # Verifica se o label já foi criado
+                    label_meta.config(text=f'Meta de {ultima_meta} Atendimento(s)')
+    except FileNotFoundError:
+        # Não é um erro se o arquivo ainda não existe.
+        pass
+    except Exception as e:
+        registrar_log(f"Erro ao ler o log_meta.txt: {e}")
+    finally:
+        janela.after(2000, atualizar_meta)
     
 def main():
     #global statusMultiprocessing
@@ -843,6 +877,7 @@ def executar():
     global df_filtrado
     global df
     global lb_contador
+    global label_meta
     global tarefa_executada
     global tarefa_executada_erro
     registrar_log(f"Botao executar clicado! - tarefa executada: {tarefa_executada}, tarefa_executada_erro:{tarefa_executada_erro}")
@@ -859,82 +894,54 @@ def executar():
         registrar_log("Tarefa já executada ou planejada não inicializada. Ignorando clique.")
         label_status['text'] = "Tarefa ja executada ou planejada não inicializada!" 
 
+def interface_grafica():
+    """Cria e gerencia a interface gráfica principal do aplicativo."""
+    global janela, label_status, bt_Planejar, bt_executar, label_status_lb_contador, label_meta
+
+    # ... (código da interface gráfica que você já tem) ...
+    #INTERFACE GRAFICA:
+    janela = tk.Tk()
+    janela.maxsize(600,400)
+    janela.geometry('600x400')
+    janela.title("PDD")
+    janela.protocol("WM_DELETE_WINDOW", ao_fechar)
+    imagem = tk.PhotoImage(file='HSF_LOGO_-_60x77_001.png', height=60, width=77)
+    lb_imagem = tk.Label(janela, image=imagem)
+    lb_imagem.place(x=20, y=10)
+    titulo_label = tk.Label(janela, text='APP GERADOR DE PRESCRIÇÕES POR SETOR', font=('Arial',12))
+    titulo_label.place(x=135, y=33.5)
+    frame_central = tk.Frame(janela)
+    frame_central.place(relx=0.5, rely=0.5, anchor='center')
+    label_status = tk.Label(frame_central, text="Aguardando comando...", wraplength=550, justify="center")
+    label_status.pack(expand=True, fill='both')
+    frame_botoes = tk.Frame(frame_central)
+    frame_botoes.pack()
+    bt_Planejar = tk.Button(frame_botoes, width=18, text="Planejar Tarefa", command=planejar)
+    bt_Planejar.pack(side=tk.LEFT, padx=40 , pady = 40)
+    bt_executar = tk.Button(frame_botoes, width=18, text="Executar Tarefa", command=executar)
+    bt_executar.pack(side=tk.LEFT, padx=40, pady = 40)
+    PLima_label = tk.Label(janela, text='@PLima', font=('Arial',4))
+    PLima_label.place(x=565, y=387)
+
+    # Label para a meta de atendimentos, com texto inicial informativo
+    label_meta = tk.Label(janela, text=" ", font=('Arial', 8))
+    label_meta.place(x=230, y=350)
+
+    label_status_lb_contador = tk.Label(janela, text=f"Contador: {str(lb_contador)}", font=('Arial', 8))
+    label_status_lb_contador.place(x=260, y=370)
+    
+    # Inicia os atualizadores de log, contador e meta
+    atualizar_log()
+    atualizar_contador()
+    atualizar_meta()
+    
+    janela.mainloop()
+
 if __name__ == "__main__":
     try:
-        registrar_log(f'{agora()} - def __name__ == "__main__" ')
-        
-        #deletando todos os arquivos da pasta download
-        pasta_downloads = os.path.join(os.path.expanduser("~"), "Downloads")
-        #registrar_log(f'deletando todos os arquivos da pasta download\npasta_downloads = os.path.join(os.path.expanduser("~"), "Downloads")\n')
+        registrar_log(f'{agora()} - Iniciando aplicação...')
         registrar_log_tarefa_executada('False')
-
-        registrar_log(" Inicio() ")
-
-        #cria o arquivo thread_ativa.txt
         escrever_thread_ativa(True)
-        
-        #INTERFACE GRAFICA:
-        janela = tk.Tk()
-        janela.maxsize(600,400)
-        janela.geometry('600x400')
-        
-        #titulo do app
-        janela.title("PDD")
-        
-        # Associa a função ao_fechar ao evento de fechamento da janela
-        janela.protocol("WM_DELETE_WINDOW", ao_fechar)
-        
-        #imagem do HSF em 60x77
-        imagem = tk.PhotoImage(file='HSF_LOGO_-_60x77_001.png', height=60, width=77)
-        lb_imagem = tk.Label(janela, image=imagem)
-        lb_imagem.place(x=20, y=10)
-        
-        titulo_label = tk.Label(janela, text='APP GERADOR DE PRESCRIÇÕES POR SETOR', font=('Arial',12))
-        titulo_label.place(x=135, y=33.5)
-        
-        # Criando um frame para centralizar o conteúdo
-        frame_central = tk.Frame(janela)
-        frame_central.place(relx=0.5, rely=0.5, anchor='center')
-        
-        # Rótulo para mostrar o status
-        label_status = tk.Label(frame_central, text="...", wraplength=550, justify="center")
-        label_status.pack(expand=True, fill='both') # Usando pack para centralizar horizontalmente
-        
-        # Criar um frame para colocar os botoes lado a lado
-        frame_botoes = tk.Frame(frame_central)
-        frame_botoes.pack()
-        
-        bt_Planejar = tk.Button(frame_botoes, width=18, text="Planejar Tarefa",command=lambda: [
-                                                                                            planejar(),
-                                                                                            label_status.config(text="Tarefa planejada inicializada!"),
-                                                                                            
-                                                                                            ])
-        bt_Planejar.pack(side=tk.LEFT, padx=40 , pady = 40)
-
-        bt_executar = tk.Button(frame_botoes, width=18, text="Executar Tarefa", command=lambda: [
-                                                                                            executar(),
-                                                                                            label_status.config(text="Tarefa executada inicializada!"),
-                                                                                            ])
-        bt_executar.pack(side=tk.LEFT, padx=40, pady = 40)
-        
-        PLima_label = tk.Label(janela, text='@PLima', font=('Arial',4))
-        PLima_label.place(x=565, y=387)
-        
-        # Rótulo para exibir a última linha do log
-        label_log = tk.Label(janela, text="", wraplength=550, justify="left") #justify para alinhar a esquerda
-        label_log.place(x=25, y=80)
-        
-        # Rótulo para exibir lb_contador no rodapé
-        label_status_lb_contador = tk.Label(janela, text=f"Contador: {str(lb_contador)}", font=('Arial', 8))
-        label_status_lb_contador.place(x=260, y=370)  # Posiciona no rodapé
-        
-        # Executar a função para atualizar o log
-        atualizar_log()
-        
-        # Iniciar a atualização do contador
-        atualizar_contador()
-        
-        janela.mainloop()
-            
+        interface_grafica() # Chama a função que constrói e roda a UI
     except Exception as erro:
         registrar_log(f'"__main__"\nException Error: \n{erro}')
