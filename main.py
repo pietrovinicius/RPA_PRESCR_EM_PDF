@@ -27,6 +27,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.keys import Keys
+from selenium.common.exceptions import TimeoutException, StaleElementReferenceException
 import time
 import pyautogui
 import os
@@ -335,216 +337,212 @@ def Geracao_Pdf_Prescricao(df_):
             try:
                 registrar_log('Geracao_Pdf_Prescricao() - try:')                
                 registrar_log('options = Options() # Inicializa as opções do Chrome ')
-                options = Options() # Inicializa as opções do Chrome
+                options = Options()
 
-                registrar_log('Configurações para download automático de PDF')
-                # Configurações para download automático de PDF
+                # --- Configurações robustas para download automático e para evitar o pop-up "Manter" ---
+                registrar_log('Configurando opções do Chrome para download automático.')
+                pasta_downloads = os.path.join(os.path.expanduser("~"), "Downloads")
                 prefs = {
-                    "download.default_directory": os.path.join(os.path.expanduser("~"), "Downloads"),
+                    "download.default_directory": pasta_downloads,
                     "download.prompt_for_download": False,
                     "download.directory_upgrade": True,
-                    "plugins.always_open_pdf_externally": True # Importante para baixar PDFs diretamente
+                    "plugins.always_open_pdf_externally": True,
+                    "profile.default_content_setting_values.automatic_downloads": 1,
+                    "safebrowsing.disable_download_protection": True
                 }
-                registrar_log('options.add_experimental_option("prefs", prefs)')
                 options.add_experimental_option("prefs", prefs)
 
-                registrar_log('Maximiza a janela')
                 # Maximiza a janela
                 options.add_argument("--start-maximized")
+                # Argumento adicional para reforçar a desativação da proteção de download
+                options.add_argument("--safebrowsing-disable-download-protection")
+                # --- Fim das configurações de download ---
                 driver = webdriver.Chrome(options=options)
-
+ 
                 cpoe_url = obter_configuracao('CPOE', 'url')
                 driver.get(cpoe_url)
                 registrar_log(f'cpoe_url: {cpoe_url}')
-                title = driver.title
-                driver.implicitly_wait(TEMPO_ESPERA)
-
+ 
                 # Obter credenciais
-                registrar_log(f'Obter credenciais: {obter_credenciais_login()}')
+                registrar_log('Obtendo credenciais do config.ini...')
                 usuario, senha = obter_credenciais_login()
+                if not usuario or not senha:
+                    registrar_log("ERRO CRÍTICO: Usuário ou senha não encontrados no config.ini. Abortando a execução para este atendimento.")
+                    driver.quit()
+                    continue # Pula para o próximo atendimento
 
                 try:
-                    # box de usuario e senha:
-                    registrar_log('box de usuario')
-                    driver.find_element(By.XPATH, value='//*[@id="loginUsername"]').send_keys(usuario)
-                    registrar_log(f'usuario: {usuario}')
-                    time.sleep(TEMPO_ESPERA / 5)
-                except Exception as e:
-                    registrar_log(f"Houve um erro em box de usuario e senha: \n{e}")
+                    wait = WebDriverWait(driver, TEMPO_ESPERA)
 
-                try:
-                    registrar_log('box de senha')
+                    # 1. Espera o campo de usuário ficar visível e o preenche
+                    registrar_log('Aguardando campo de usuário...')
+                    box_usuario = wait.until(
+                        EC.visibility_of_element_located((By.XPATH, '//*[@id="loginUsername"]'))
+                    )
+                    box_usuario.send_keys(usuario)
+                    registrar_log('Campo de usuário preenchido.')
+
+                    # 2. Preenche o campo de senha
                     driver.find_element(By.XPATH, value='//*[@id="loginPassword"]').send_keys(senha)
-                    registrar_log(f'senha: {senha}')
-                    time.sleep(TEMPO_ESPERA / 5)
-                except Exception as e:
-                    registrar_log(f"Houve um erro em box de senha: \n{e}")
-                
-                try:
-                    # botao de login:
-                    registrar_log('botao de login')
-                    bt_login = driver.find_element(By.XPATH, value='//*[@id="loginForm"]/input[3]')
+                    registrar_log('Campo de senha preenchido.')
+
+                    # 3. Espera o botão de login ficar clicável e então clica
+                    registrar_log('Aguardando botão de login...')
+                    bt_login = wait.until(
+                        EC.element_to_be_clickable((By.XPATH, '//*[@id="loginForm"]/input[3]'))
+                    )
                     bt_login.click()
-                    registrar_log('login')
-                    driver.implicitly_wait(TEMPO_ESPERA/1.2)
-                    time.sleep(TEMPO_ESPERA/1.2)
+                    registrar_log('Login realizado com sucesso.')
                 except Exception as e:
-                    registrar_log(f"Houve um erro em botao de login: \n{e}")
+                    registrar_log(f"ERRO: Falha durante o processo de login. \nDetalhes: {e}")
+                    driver.quit()
+                    continue # Pula para o próximo atendimento
 
-                #try:
-                #    #click objeto invalido
-                #    registrar_log('click objeto invalido')
-                #    pyautogui.click(1107,702)
-                #    registrar_log("click objeto invalido\nclick(1107,702)")
-                #    driver.implicitly_wait(TEMPO_ESPERA/5)
-                #    time.sleep(TEMPO_ESPERA/5)
-                #except Exception as e:
-                #    registrar_log(f"Houve um erro em click objeto invalido")
-                #    time.sleep(TEMPO_ESPERA/1.2)
+
+                registrar_log('Lógica para tratar pop-up de "Ok" opcional')
+                try:
+                    # Espera por no máximo 5 segundos. Se o botão não aparecer, continua.
+                    short_wait = WebDriverWait(driver, 5)
+                    registrar_log("Verificando se há um pop-up de 'Ok' após o login...")
                     
+                    # Usa um XPath robusto para encontrar o botão pelo texto e classe
+                    ok_button = short_wait.until(
+                        EC.element_to_be_clickable((By.XPATH, "//button[text()='Ok' and contains(@class, 'dialog_ok_button')]"))
+                    )
+                    
+                    registrar_log("Pop-up de 'Ok' encontrado. Clicando no botão para prosseguir.")
+                    ok_button.click()
+                except TimeoutException:
+                    # Isso é esperado se o pop-up não aparecer. O robô continua normalmente.
+                    registrar_log("Nenhum pop-up de 'Ok' encontrado. Prosseguindo...")
+
                 try:
-                    time.sleep(TEMPO_ESPERA/5)
-                    pyautogui.press('enter')
-                    registrar_log('1x enter')
-                except Exception as e:
-                    registrar_log(f"Houve um erro em 1x enter: \n{e}")
-                
-                try:
-                    #clicar no icone do CPOE:
-                    registrar_log('clicar no icone do CPOE:')
-                    time.sleep(TEMPO_ESPERA/5)
-                    bt_CPOE = driver.find_element(By.XPATH, value='//*[@id="app-view"]/tasy-corsisf1/div/w-mainlayout/div/div/w-launcher/div/div/div[1]/w-apps/div/div[1]/ul/li[2]/w-feature-app/a/img')
+                    # Reutilizamos a mesma ideia de espera explícita do login
+                    wait = WebDriverWait(driver, TEMPO_ESPERA)
+                    registrar_log("Aguardando o ícone do CPOE ficar clicável...")
+                    
+                    bt_CPOE = wait.until(
+                        EC.element_to_be_clickable((By.XPATH, '//*[@id="app-view"]/tasy-corsisf1/div/w-mainlayout/div/div/w-launcher/div/div/div[1]/w-apps/div/div[1]/ul/li[2]/w-feature-app/a/img'))
+                    )
                     bt_CPOE.click()
-                    registrar_log('clicar no CPOE')
-                    driver.implicitly_wait(TEMPO_ESPERA*2)
-                    time.sleep(TEMPO_ESPERA*2)
+                    registrar_log("Ícone do CPOE clicado com sucesso.")
                 except Exception as e:
-                    registrar_log(f"Houve um erro em clicar no CPOE: \n{e}")
-
-                try:                
-                    #nr_atendimento
-                    pyautogui.write(linha)
-                    registrar_log(f'nr_atendimento: {linha}')
-                    driver.implicitly_wait(TEMPO_ESPERA/8)
-                    time.sleep(TEMPO_ESPERA/8)
-                except Exception as e:
-                    registrar_log(f"Houve um erro em nr_atendimento: \n{e}")
-                
-                #enter
-                pyautogui.press('enter')
-                registrar_log('1 - enter')
-                driver.implicitly_wait(TEMPO_ESPERA/2.5)
-                time.sleep(TEMPO_ESPERA/2.5)
-                
-                #enter
-                pyautogui.press('enter')
-                registrar_log('2 - enter')
-                driver.implicitly_wait(TEMPO_ESPERA/2)
-                time.sleep(TEMPO_ESPERA/2)
-                
-                #click atendimento fechado
-                pyautogui.click(1100,709)
-                registrar_log("click atendimento fechado click(1107,709)")
-                driver.implicitly_wait(TEMPO_ESPERA/8)
-                time.sleep(TEMPO_ESPERA/8)
+                    # Se o ícone não for encontrado, o robô não pode continuar com este atendimento.
+                    registrar_log(f"ERRO CRÍTICO: Não foi possível encontrar ou clicar no ícone do CPOE. \nDetalhes: {e}")
+                    driver.quit()
+                    continue # Pula para o próximo atendimento
                 
                 try:
-                    registrar_log('botao visualizar')
-                    #botao visualizar
-                    bt_cpoe_relatorios = driver.find_element(By.XPATH, value='//*[@id="handlebar-40"]')
+                    wait = WebDriverWait(driver, TEMPO_ESPERA)
+                    registrar_log("Aguardando o campo de número de atendimento...")
+                    
+                    # Usamos By.NAME para localizar o elemento, que é mais robusto que o XPath completo
+                    # se o layout da página mudar ligeiramente.
+                    nr_atendimento_input = wait.until(
+                        EC.visibility_of_element_located((By.NAME, 'NR_ATENDIMENTO'))
+                    )
+                    nr_atendimento_input.send_keys(linha)
+                    registrar_log(f'Número de atendimento preenchido: {linha}')
+
+                    # Pressiona Enter para submeter o atendimento (substitui o primeiro pyautogui.press)
+                    nr_atendimento_input.send_keys(Keys.RETURN)
+                    registrar_log('Enter pressionado no campo de atendimento para submeter.')
+
+                except Exception as e:
+                    registrar_log(f"ERRO: Falha ao preencher ou submeter o número de atendimento. \nDetalhes: {e}")
+                    driver.quit()
+                    continue # Pula para o próximo atendimento
+
+                try:
+                    # Espera por no máximo 5 segundos. Se o botão não aparecer, continua.
+                    short_wait = WebDriverWait(driver, 5)
+                    registrar_log("Aguardando botão 'Ok' após submeter o atendimento...")
+                    
+                    # XPath robusto baseado no HTML fornecido.
+                    # Procura pelo botão com o 'code' específico e o texto 'Ok' dentro de um span.
+                    OK_apos_Nr_Atend = short_wait.until(
+                        EC.element_to_be_clickable((By.XPATH, "//button[@code='452235' and span[text()='Ok']]"))
+                    )
+                    
+                    registrar_log("Botão 'Ok' encontrado. Clicando para prosseguir.")
+                    OK_apos_Nr_Atend.click()
+                except TimeoutException:
+                    # Isso é esperado se o pop-up não aparecer. O robô continua normalmente.
+                    registrar_log("Nenhum botão 'Ok' encontrado após o atendimento. Prosseguindo...")
+
+                # --- Lógica para tratar pop-up opcional de "Fechar" (atendimento fechado) ---
+                try:
+                    # Espera por no máximo 5 segundos.
+                    short_wait = WebDriverWait(driver, 5)
+                    registrar_log("Verificando se há um pop-up de 'Fechar' (atendimento fechado)...")
+
+                    # XPath para o botão "Fechar" baseado no HTML fornecido
+                    fechar_button = short_wait.until(
+                        EC.element_to_be_clickable((By.XPATH, "//button[text()='Fechar']"))
+                    )
+
+                    registrar_log("Pop-up de 'Fechar' encontrado. Clicando no botão.")
+                    fechar_button.click()
+                except (TimeoutException, StaleElementReferenceException):
+                    # Se o botão não for encontrado (Timeout) ou a página recarregar (StaleElement),
+                    # consideramos que o pop-up não estava presente e continuamos.
+                    registrar_log("Nenhum pop-up de 'Fechar' encontrado ou a página já navegou. Prosseguindo...")
+                # --- Fim da lógica do pop-up de Fechar ---
+
+                try:
+                    wait = WebDriverWait(driver, TEMPO_ESPERA)
+                    registrar_log('Aguardando o botão "Relatórios" (handlebar-40) ficar clicável...')
+                    bt_cpoe_relatorios = wait.until(
+                        EC.element_to_be_clickable((By.XPATH, '//*[@id="handlebar-40"]'))
+                    )
                     bt_cpoe_relatorios.click()
-                    registrar_log("bt_cpoe_relatorios.click()")
-                    driver.implicitly_wait(TEMPO_ESPERA/10)
-                    time.sleep(TEMPO_ESPERA/10)
+                    registrar_log("Botão 'Relatórios' clicado com sucesso.")
                 except Exception as e:
-                    registrar_log(f"Houve um erro em botao visualizar: \n{e}")
-                
-                try:
-                    registrar_log('botao visualizar')
-                    #botao visualizar
-                    bt_cpoe_visualizar = driver.find_element(By.XPATH, value='//*[@id="popupViewPort"]/li[5]/div[3]')
-                    bt_cpoe_visualizar.click()
-                    registrar_log("visualizar.click()")
-                    #driver.implicitly_wait(TEMPO_ESPERA/8)
-                    registrar_log('time.sleep(TEMPO_ESPERA/3)')
-                    time.sleep(TEMPO_ESPERA/3)
-                except Exception as e:
-                    registrar_log(f"Houve um erro em botao visualizar: \n{e}")
-                
-                #"""Clica no botão 'btn_manter.png' na tela."""
-                #try:
-                #    # Encontra a localização da imagem do botão na tela
-                #    registrar_log("tentando clicar no btn_manter()")
-                #    localizacao = pyautogui.locateOnScreen('btn_manter.png', confidence=0.95)
-                #    # Encontra o centro da localização:
-                #    ponto_central = pyautogui.center(localizacao)
-                #    # Move o mouse para o centro da imagem e clica
-                #    registrar_log(f"localizacao:{localizacao}\nponto_central:{ponto_central}")
-                #    pyautogui.click(ponto_central)
-                #    time.sleep(TEMPO_ESPERA/8)
-                #    registrar_log(f"btn_manter.png click(ponto_central)")
-                #except pyautogui.ImageNotFoundException:
-                #    registrar_log("Imagem 'btn_manter.png' não encontrada na tela.")
-                #except Exception as e:
-                #    registrar_log(f"Houve um erro em clicar_btn_manter: \n{e}")
-                #time.sleep(TEMPO_ESPERA/8)  
-                #
-                #registrar_log('click no baixar')
+                    registrar_log(f"ERRO: Falha ao clicar no botão 'Relatórios'. \nDetalhes: {e}")
+                    driver.quit()
+                    continue # Pula para o próximo atendimento
 
-                ## Clicar no botão de download usando Selenium com By.ID
-                #try:
-                #    registrar_log(f'Tentando clicar no botão "Baixar" (ID: download)')
-                #    # Espera explícita para o botão de download ficar clicável
-                #    download_button = WebDriverWait(driver, TEMPO_ESPERA).until(
-                #        EC.element_to_be_clickable((By.ID, "download"))
-                #    )
-                #    download_button.click()
-                #    registrar_log(f'Botão "Baixar" clicado via Selenium.')
-                #    time.sleep(TEMPO_ESPERA/5) # Pequena pausa para o download iniciar
-                #except TimeoutException: # type: ignore
-                #    registrar_log("Erro: Botão 'Baixar' (ID: download) não encontrado ou não clicável após o tempo de espera.")
-                #    # Se o botão não for encontrado, pode ser que o PDF já tenha sido baixado automaticamente
-                #    # ou que o elemento tenha mudado.
-                #    # Considere adicionar uma lógica alternativa aqui se necessário.
-                #except Exception as e:
-                #    registrar_log(f"Erro inesperado ao clicar no botão 'Baixar': {e}")
-                
+                try:
+                    wait = WebDriverWait(driver, TEMPO_ESPERA)
+                    registrar_log('Aguardando o botão "Visualizar" (popupViewPort) ficar clicável...')
+                    bt_cpoe_visualizar = wait.until(
+                        EC.element_to_be_clickable((By.XPATH, '//*[@id="popupViewPort"]/li[5]/div[3]'))
+                    )
+                    bt_cpoe_visualizar.click()
+                    registrar_log("Botão 'Visualizar' clicado com sucesso.")
+                except Exception as e:
+                    registrar_log(f"ERRO: Falha ao clicar no botão 'Visualizar'. \nDetalhes: {e}")
+                    driver.quit()
+                    continue # Pula para o próximo atendimento
+                                                        
                 # Obter coordenadas do botão "manter" do config.ini
-                registrar_log('time.sleep(1)')
-                time.sleep(1)
+                registrar_log('Obter coordenadas do botão "manter" do config.ini')
+                registrar_log('time.sleep(2)')
+                time.sleep(2)
                 try:
                     manter_x_str = obter_configuracao('UI_COORDINATES', 'manter_x')
                     manter_y_str = obter_configuracao('UI_COORDINATES', 'manter_y')
                     manter_x = int(manter_x_str)
                     manter_y = int(manter_y_str)
-                    registrar_log(f"Coordenadas do botão 'Manter' lidas do config.ini: ({manter_x}, {manter_y})")
-                    registrar_log('click no manter')
+                    registrar_log(f'click no manter - {manter_x}, {manter_y}')                    
                     pyautogui.click(manter_x, manter_y)
-
+                    registrar_log('time.sleep(2)')
+                    time.sleep(2)
+                    registrar_log(f'click no manter - {manter_x}, {manter_y}')                    
+                    pyautogui.click(manter_x, manter_y)                
                 except (ValueError, TypeError):
                     registrar_log("Erro ao ler/converter coordenadas do config.ini. Usando valores padrão (1755, 106).")
                     manter_x, manter_y = 1755, 106
+               
 
+                #MARCADOR
+                #print('time.sleep(TEMPO_ESPERA*5000)')
+                #time.sleep(TEMPO_ESPERA*5000) 
                 
-                #registrar_log(f'manter.click({manter_x}, {manter_y})')
-                #time.sleep(TEMPO_ESPERA/5)
-                #
-                ##click no manter
-                #registrar_log(f'btn_manter')
-                #pyautogui.click(manter_x, manter_y)
-                #registrar_log(f'manter.click({manter_x}, {manter_y})')
-                #time.sleep(TEMPO_ESPERA/5)
-                #
-                ##click no manter
-                #registrar_log(f'btn_manter')
-                #pyautogui.click(manter_x, manter_y)
-                #registrar_log(f'manter.click({manter_x}, {manter_y})')
-                #time.sleep(TEMPO_ESPERA/5)
-                
-                registrar_log('time.sleep(TEMPO_ESPERA)')
+                registrar_log(f'time.sleep({TEMPO_ESPERA/2})')
                 time.sleep(TEMPO_ESPERA/2)
                 
-                registrar_log(f'\ndriver.quit()\n')
+                registrar_log(f'driver.quit()\n')
                 driver.quit()
 
                 
@@ -863,7 +861,7 @@ def executar():
 
 if __name__ == "__main__":
     try:
-        registrar_log(f'{agora()}\n__name__ == "__main__" \n')
+        registrar_log(f'{agora()} - def __name__ == "__main__" ')
         
         #deletando todos os arquivos da pasta download
         pasta_downloads = os.path.join(os.path.expanduser("~"), "Downloads")
