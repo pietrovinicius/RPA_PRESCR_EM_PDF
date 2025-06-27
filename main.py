@@ -436,7 +436,10 @@ def Geracao_Pdf_Prescricao(df_):
                     # Reutilizamos a mesma ideia de espera explícita do login
                     wait = WebDriverWait(driver, TEMPO_ESPERA)
                     registrar_log("Aguardando o ícone do CPOE ficar clicável...")
-                    
+
+                    registrar_log(f'time.sleep({TEMPO_ESPERA})')
+                    time.sleep(TEMPO_ESPERA)
+
                     bt_CPOE = wait.until(
                         EC.element_to_be_clickable((By.XPATH, '//*[@id="app-view"]/tasy-corsisf1/div/w-mainlayout/div/div/w-launcher/div/div/div[1]/w-apps/div/div[1]/ul/li[2]/w-feature-app/a/img'))
                     )
@@ -523,7 +526,7 @@ def Geracao_Pdf_Prescricao(df_):
                     registrar_log('Aguardando o botão "Visualizar" (popupViewPort) ficar clicável...')
                     bt_cpoe_visualizar = wait.until(
                         EC.element_to_be_clickable((By.XPATH, '//*[@id="popupViewPort"]/li[5]/div[3]'))
-                    )
+                    )                    
                     bt_cpoe_visualizar.click()
                     registrar_log("Botão 'Visualizar' clicado com sucesso.")
                 except Exception as e:
@@ -555,8 +558,8 @@ def Geracao_Pdf_Prescricao(df_):
                 #print('time.sleep(TEMPO_ESPERA*5000)')
                 #time.sleep(TEMPO_ESPERA*5000) 
                 
-                registrar_log(f'time.sleep({TEMPO_ESPERA/2})')
-                time.sleep(TEMPO_ESPERA/2)
+                registrar_log(f'time.sleep({TEMPO_ESPERA})')
+                time.sleep(TEMPO_ESPERA)
                 
                 registrar_log(f'driver.quit()\n')
                 driver.quit()
