@@ -1,132 +1,391 @@
-2025-06-27 12:28:05 - 2025-06-27 12:28:05 - Iniciando aplicação...
-2025-06-27 12:28:05 - ****registrar_log_tarefa_executada() tarefa_executada = False
-2025-06-27 12:28:05 - thread_ativa.txt atualizado para True
-2025-06-27 12:28:09 - Botao executar clicado! - tarefa executada: False, tarefa_executada_erro:False
-2025-06-27 12:28:09 - Tarefa inicializada! 
+2025-06-27 15:08:16 - 2025-06-27 15:08:16 - Iniciando aplicação...
+2025-06-27 15:08:16 - ****registrar_log_tarefa_executada() tarefa_executada = False
+2025-06-27 15:08:16 - thread_ativa.txt atualizado para True
+2025-06-27 15:08:17 - Botao executar clicado! - tarefa executada: False, tarefa_executada_erro:False
+2025-06-27 15:08:17 - Tarefa inicializada! 
 bt_executar desativado!
-2025-06-27 12:28:10 - Main()
-2025-06-27 12:28:10 - Encontrar_diretorio_instantclient
-2025-06-27 12:28:10 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
-2025-06-27 12:28:10 - caminho instantclient:
+2025-06-27 15:08:17 - Main()
+2025-06-27 15:08:17 - Encontrar_diretorio_instantclient
+2025-06-27 15:08:17 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-06-27 15:08:17 - caminho instantclient:
 C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6
-2025-06-27 12:28:10 - Encontrar_diretorio_instantclient
-2025-06-27 12:28:10 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
-2025-06-27 12:28:10 - caminho instantclient:
+2025-06-27 15:08:17 - Encontrar_diretorio_instantclient
+2025-06-27 15:08:17 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-06-27 15:08:17 - caminho instantclient:
 C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6
-2025-06-27 12:28:10 - Executando a query
-2025-06-27 12:28:11 - Atendimentos sample:    NR_ATENDIMENTO
-0          723873
-2025-06-27 12:28:12 - Atendimentos data frame:(1, 1)
-2025-06-27 12:28:13 - Atendimentos obtido com sucesso!
-2025-06-27 12:28:15 - Main() df_filtrado tamanho: (1, 1)
-2025-06-27 12:28:15 - Geracao_Pdf_Prescricao((1, 1))
-2025-06-27 12:28:15 - Geracao de Pdf ()
-2025-06-27 12:28:15 - 
+2025-06-27 15:08:17 - Executando a query
+2025-06-27 15:08:23 - Atendimentos sample:    NR_ATENDIMENTO
+0          432934
+2025-06-27 15:08:24 - Atendimentos data frame:(1, 1)
+2025-06-27 15:08:25 - Atendimentos obtido com sucesso!
+2025-06-27 15:08:27 - Main() df_filtrado tamanho: (1, 1)
+2025-06-27 15:08:27 - Geracao_Pdf_Prescricao((1, 1))
+2025-06-27 15:08:27 - Geracao de Pdf ()
+2025-06-27 15:08:27 - 
 df_filtrado:
    NR_ATENDIMENTO
-0          723873
-2025-06-27 12:28:15 - contador:0
+0          432934
+2025-06-27 15:08:27 - contador:0
 contador_linhas_df: 1
-2025-06-27 12:28:15 - Inicio da repetição
-2025-06-27 12:28:15 - Repeticao for index iterrows()
-2025-06-27 12:28:15 - Adicionando a lista o nr_atendimento:723873
-2025-06-27 12:28:15 - Geracao Pdf Prescricao - contador:0
-2025-06-27 12:28:15 - Geracao_Pdf_Prescricao() - try:
-2025-06-27 12:28:15 - options = Options() # Inicializa as opções do Chrome 
-2025-06-27 12:28:15 - Configurando opções do Chrome para download automático.
-2025-06-27 12:28:20 - cpoe_url: http://aplicacao.hsf.local:7070/#/login
-2025-06-27 12:28:20 - Obtendo credenciais do config.ini...
-2025-06-27 12:28:20 - Obter_credenciais_login() - lendo do config.ini
-2025-06-27 12:28:20 - Aguardando campo de usuário...
-2025-06-27 12:28:20 - Campo de usuário preenchido.
-2025-06-27 12:28:20 - Campo de senha preenchido.
-2025-06-27 12:28:20 - Aguardando botão de login...
-2025-06-27 12:28:21 - Login realizado com sucesso.
-2025-06-27 12:28:21 - Lógica para tratar pop-up de "Ok" opcional
-2025-06-27 12:28:21 - Verificando se há um pop-up de 'Ok' após o login...
-2025-06-27 12:28:23 - Pop-up de 'Ok' encontrado. Clicando no botão para prosseguir.
-2025-06-27 12:28:23 - Aguardando o ícone do CPOE ficar clicável...
-2025-06-27 12:28:25 - Ícone do CPOE clicado com sucesso.
-2025-06-27 12:28:25 - Aguardando o campo de número de atendimento...
-2025-06-27 12:28:30 - Número de atendimento preenchido: 723873
-2025-06-27 12:28:31 - Enter pressionado no campo de atendimento para submeter.
-2025-06-27 12:28:31 - Aguardando botão 'Ok' após submeter o atendimento...
-2025-06-27 12:28:32 - Botão 'Ok' encontrado. Clicando para prosseguir.
-2025-06-27 12:28:32 - Verificando se há um pop-up de 'Fechar' (atendimento fechado)...
-2025-06-27 12:28:37 - Nenhum pop-up de 'Fechar' encontrado ou a página já navegou. Prosseguindo...
-2025-06-27 12:28:37 - Aguardando o botão "Relatórios" (handlebar-40) ficar clicável...
-2025-06-27 12:28:37 - Botão 'Relatórios' clicado com sucesso.
-2025-06-27 12:28:37 - Aguardando o botão "Visualizar" (popupViewPort) ficar clicável...
-2025-06-27 12:28:37 - Botão 'Visualizar' clicado com sucesso.
-2025-06-27 12:28:37 - Obter coordenadas do botão "manter" do config.ini
-2025-06-27 12:28:37 - time.sleep(2)
-2025-06-27 12:28:39 - click no manter - 1751, 108
-2025-06-27 12:28:39 - time.sleep(2)
-2025-06-27 12:28:41 - click no manter - 1751, 108
-2025-06-27 12:28:41 - time.sleep(6.0)
-2025-06-27 12:28:47 - driver.quit()
+2025-06-27 15:08:27 - Inicio da repetição
+2025-06-27 15:08:27 - Repeticao for index iterrows()
+2025-06-27 15:08:27 - Adicionando a lista o nr_atendimento:432934
+2025-06-27 15:08:27 - Geracao Pdf Prescricao - contador:0
+2025-06-27 15:08:27 - Geracao_Pdf_Prescricao() - try:
+2025-06-27 15:08:27 - options = Options() # Inicializa as opções do Chrome 
+2025-06-27 15:08:27 - Configurando opções do Chrome para download automático.
+2025-06-27 15:08:35 - cpoe_url: http://aplicacao.hsf.local:7070/#/login
+2025-06-27 15:08:35 - Obtendo credenciais do config.ini...
+2025-06-27 15:08:35 - Obter_credenciais_login() - lendo do config.ini
+2025-06-27 15:08:35 - Aguardando campo de usuário...
+2025-06-27 15:08:36 - Campo de usuário preenchido.
+2025-06-27 15:08:36 - Campo de senha preenchido.
+2025-06-27 15:08:36 - Aguardando botão de login...
+2025-06-27 15:08:36 - Login realizado com sucesso.
+2025-06-27 15:08:36 - Lógica para tratar pop-up de "Ok" opcional
+2025-06-27 15:08:36 - Verificando se há um pop-up de 'Ok' após o login...
+2025-06-27 15:08:39 - Pop-up de 'Ok' encontrado. Clicando no botão para prosseguir.
+2025-06-27 15:08:39 - Aguardando o ícone do CPOE ficar clicável...
+2025-06-27 15:08:42 - Ícone do CPOE clicado com sucesso.
+2025-06-27 15:08:42 - Aguardando o campo de número de atendimento...
+2025-06-27 15:08:55 - ERRO: Falha ao preencher ou submeter o número de atendimento. 
+Detalhes: Message: 
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x012B87E3+2852835]
+	Ordinal0 [0x011A5BB1+1727409]
+	Ordinal0 [0x0107E4B9+517305]
+	Ordinal0 [0x01019D0B+105739]
+	Ordinal0 [0x01036210+221712]
+	Ordinal0 [0x0102B890+178320]
+	Ordinal0 [0x01034B9C+215964]
+	Ordinal0 [0x0102B70B+177931]
+	Ordinal0 [0x01012584+75140]
+	Ordinal0 [0x01013650+79440]
+	Ordinal0 [0x010135E9+79337]
+	Ordinal0 [0x011BAD5C+1813852]
+	GetHandleVerifier [0x013DC616+1075574]
+	GetHandleVerifier [0x013DC367+1074887]
+	GetHandleVerifier [0x013E7497+1120247]
+	GetHandleVerifier [0x013DCC16+1077110]
+	Ordinal0 [0x011B3206+1782278]
+	Ordinal0 [0x011BC3BB+1819579]
+	Ordinal0 [0x011BC523+1819939]
+	Ordinal0 [0x011D2B45+1911621]
+	BaseThreadInitThunk [0x749B8654+36]
+	RtlGetAppContainerNamedObjectPath [0x77C54A77+311]
+	RtlGetAppContainerNamedObjectPath [0x77C54A47+263]
 
-2025-06-27 12:28:50 - acessando pasta download:
-2025-06-27 12:28:50 - Caminho da pasta download: C:\Users\pvplima.C19NOT76\Downloads
-2025-06-27 12:28:52 - verificando arquivos da pasta download:
-2025-06-27 12:28:52 - Arquivos:
-['1dedef11-171b-443a-8966-c1b456e2c590.pdf']
-2025-06-27 12:28:54 - ultimo arquivo antes de renomear:
-2025-06-27 12:28:54 - Ultimo arquivo antes de renomear: C:\Users\pvplima.C19NOT76\Downloads\1dedef11-171b-443a-8966-c1b456e2c590.pdf
-2025-06-27 12:28:57 - pasta_prescricoes: Prescricoes
-2025-06-27 12:28:59 - pasta_data: Prescricoes\2025_06_27
-2025-06-27 12:29:02 - Cria a pasta da data se não existir: Prescricoes\2025_06_27
-2025-06-27 12:29:04 - renomeia e move os arquivos
-2025-06-27 12:29:04 - Data_hora: 2025-06-27 12:29:04
-2025-06-27 12:29:04 - caminho antigo: C:\Users\pvplima.C19NOT76\Downloads\1dedef11-171b-443a-8966-c1b456e2c590.pdf
-2025-06-27 12:29:04 - caminho_novo = Prescricoes\2025_06_27\723873 - 2025-06-27 12-29-04.pdf,arquivo:2025-06-27 12-29-04.pdf)
-2025-06-27 12:29:04 - try: shutil.move(
- time.sleep(TEMPO_ESPERA/5)
-2025-06-27 12:29:06 - caminho_antigo:C:\Users\pvplima.C19NOT76\Downloads\1dedef11-171b-443a-8966-c1b456e2c590.pdf, 
-caminho_novoPrescricoes\2025_06_27\723873 - 2025-06-27 12-29-04.pdf)
-2025-06-27 12:29:06 - Arquivo:Prescricoes\2025_06_27\723873 - 2025-06-27 12-29-04.pdf Renomeado e movido com sucesso.
-2025-06-27 12:29:09 - Contador: 1
-2025-06-27 12:29:09 - lista_nr_atendimento.remove(723873)
-2025-06-27 12:29:09 - ******************** FIM do 723873 ********************
-2025-06-27 12:29:10 - tarefa_executada: True
-2025-06-27 12:29:10 - tarefa_executada_erro: False
-2025-06-27 12:29:10 - se ocorrer um erro na execução
+2025-06-27 15:08:57 - tarefa_executada: True
+2025-06-27 15:08:57 - tarefa_executada_erro: False
+2025-06-27 15:08:57 - se ocorrer um erro na execução
 definimos que a variavel tarefa_executada sera False
  para que a tarefa possa ser executada novamente:
-2025-06-27 12:29:10 - ===== try:
+2025-06-27 15:08:57 - ===== try:
 Lista com nr_atendimentos com erro
-2025-06-27 12:29:10 - 
+2025-06-27 15:08:57 - ação para o caso do df_lista_nr_atendimento não for vazio
+df_lista_nr_atendimento nao esta em branco
+
+2025-06-27 15:08:57 - global df recebera df_lista_nr_atendimento!!!!
+2025-06-27 15:08:57 - df = df_lista_nr_atendimento:
+        0
+0  432934
+2025-06-27 15:08:57 - df atendimentos com erro df_renovo.shape: (1, 1)
+2025-06-27 15:08:57 - Executara novamente a Geracao_Pdf_Prescricao() com o global df apenas com os nr_atendimento que tiveram erros:
+2025-06-27 15:08:57 - Geracao de Pdf ()
+2025-06-27 15:08:57 - 
+df_filtrado:
+        0
+0  432934
+2025-06-27 15:08:57 - contador:0
+contador_linhas_df: 1
+2025-06-27 15:08:57 - Inicio da repetição
+2025-06-27 15:08:57 - Repeticao for index iterrows()
+2025-06-27 15:08:57 - Adicionando a lista o nr_atendimento:432934
+2025-06-27 15:08:57 - Geracao Pdf Prescricao - contador:0
+2025-06-27 15:08:57 - Geracao_Pdf_Prescricao() - try:
+2025-06-27 15:08:57 - options = Options() # Inicializa as opções do Chrome 
+2025-06-27 15:08:57 - Configurando opções do Chrome para download automático.
+2025-06-27 15:09:03 - cpoe_url: http://aplicacao.hsf.local:7070/#/login
+2025-06-27 15:09:03 - Obtendo credenciais do config.ini...
+2025-06-27 15:09:03 - Obter_credenciais_login() - lendo do config.ini
+2025-06-27 15:09:03 - Aguardando campo de usuário...
+2025-06-27 15:09:04 - Campo de usuário preenchido.
+2025-06-27 15:09:04 - Campo de senha preenchido.
+2025-06-27 15:09:04 - Aguardando botão de login...
+2025-06-27 15:09:04 - Login realizado com sucesso.
+2025-06-27 15:09:04 - Lógica para tratar pop-up de "Ok" opcional
+2025-06-27 15:09:04 - Verificando se há um pop-up de 'Ok' após o login...
+2025-06-27 15:09:08 - Pop-up de 'Ok' encontrado. Clicando no botão para prosseguir.
+2025-06-27 15:09:08 - Aguardando o ícone do CPOE ficar clicável...
+2025-06-27 15:09:12 - Ícone do CPOE clicado com sucesso.
+2025-06-27 15:09:12 - Aguardando o campo de número de atendimento...
+2025-06-27 15:09:24 - ERRO: Falha ao preencher ou submeter o número de atendimento. 
+Detalhes: Message: 
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x012B87E3+2852835]
+	Ordinal0 [0x011A5BB1+1727409]
+	Ordinal0 [0x0107E4B9+517305]
+	Ordinal0 [0x01019D0B+105739]
+	Ordinal0 [0x01036210+221712]
+	Ordinal0 [0x0102B890+178320]
+	Ordinal0 [0x01034B9C+215964]
+	Ordinal0 [0x0102B70B+177931]
+	Ordinal0 [0x01012584+75140]
+	Ordinal0 [0x01013650+79440]
+	Ordinal0 [0x010135E9+79337]
+	Ordinal0 [0x011BAD5C+1813852]
+	GetHandleVerifier [0x013DC616+1075574]
+	GetHandleVerifier [0x013DC367+1074887]
+	GetHandleVerifier [0x013E7497+1120247]
+	GetHandleVerifier [0x013DCC16+1077110]
+	Ordinal0 [0x011B3206+1782278]
+	Ordinal0 [0x011BC3BB+1819579]
+	Ordinal0 [0x011BC523+1819939]
+	Ordinal0 [0x011D2B45+1911621]
+	BaseThreadInitThunk [0x749B8654+36]
+	RtlGetAppContainerNamedObjectPath [0x77C54A77+311]
+	RtlGetAppContainerNamedObjectPath [0x77C54A47+263]
+
+2025-06-27 15:09:26 - thread_ativa: True
+2025-06-27 15:09:26 - Fechando aplicação...
+2025-06-27 15:09:26 - thread_ativa.txt atualizado para False
+2025-06-27 15:09:26 - tarefa_executada: True
+2025-06-27 15:09:26 - tarefa_executada_erro: False
+2025-06-27 15:09:26 - se ocorrer um erro na execução
+definimos que a variavel tarefa_executada sera False
+ para que a tarefa possa ser executada novamente:
+2025-06-27 15:09:26 - ===== try:
+Lista com nr_atendimentos com erro
+2025-06-27 15:09:26 - ação para o caso do df_lista_nr_atendimento não for vazio
+df_lista_nr_atendimento nao esta em branco
+
+2025-06-27 15:09:26 - global df recebera df_lista_nr_atendimento!!!!
+2025-06-27 15:09:26 - df = df_lista_nr_atendimento:
+        0
+0  432934
+2025-06-27 15:09:26 - df atendimentos com erro df_renovo.shape: (1, 1)
+2025-06-27 15:09:26 - Executara novamente a Geracao_Pdf_Prescricao() com o global df apenas com os nr_atendimento que tiveram erros:
+2025-06-27 15:09:26 - Geracao de Pdf ()
+2025-06-27 15:09:26 - 
+df_filtrado:
+        0
+0  432934
+2025-06-27 15:09:26 - contador:0
+contador_linhas_df: 1
+2025-06-27 15:09:26 - Inicio da repetição
+2025-06-27 15:09:26 - thread_ativa.txt está como FALSE. Interrompendo o loop.
+2025-06-27 15:09:26 - tarefa_executada: True
+2025-06-27 15:09:26 - tarefa_executada_erro: False
+2025-06-27 15:09:26 - se ocorrer um erro na execução
+definimos que a variavel tarefa_executada sera False
+ para que a tarefa possa ser executada novamente:
+2025-06-27 15:09:26 - ===== try:
+Lista com nr_atendimentos com erro
+2025-06-27 15:09:26 - 
 Todos os atendimentos foram gerados com sucesso!
-2025-06-27 12:29:10 - def Geracao_PDF_Prescricao() 
+2025-06-27 15:09:26 - def Geracao_PDF_Prescricao() 
 bloco com funcao copiar_arquivos()
-2025-06-27 12:29:10 - def copiar_arquivos()
-2025-06-27 12:29:10 - base_dir: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
-2025-06-27 12:29:10 - Caminho de origem: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Prescricoes
-2025-06-27 12:29:10 - Caminho de destino: \\192.168.103.252\\contingencia_hsf$\\Impressos\\Prescricoes
-2025-06-27 12:29:10 - shutil.copytree(origem, destino, dirs_exist_ok=True)
-2025-06-27 12:29:11 - 
+2025-06-27 15:09:26 - def copiar_arquivos()
+2025-06-27 15:09:26 - base_dir: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-06-27 15:09:26 - Caminho de origem: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Prescricoes
+2025-06-27 15:09:26 - Caminho de destino: \\192.168.103.252\\contingencia_hsf$\\Impressos\\Prescricoes
+2025-06-27 15:09:26 - shutil.copytree(origem, destino, dirs_exist_ok=True)
+2025-06-27 15:09:26 - 
 Arquivos copiados com sucesso 
 de: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Prescricoes 
 para \\192.168.103.252\\contingencia_hsf$\\Impressos\\Prescricoes
 FIM copiar_arquivos()
-2025-06-27 12:29:11 - df_: 
+2025-06-27 15:09:26 - df_: 
 []
-2025-06-27 12:29:11 - Geracao Pdf Prescricao
+2025-06-27 15:09:26 - Geracao Pdf Prescricao
 ANTES:
 Tarefa_executada: True
 Tarefa_executada_erro:False
-2025-06-27 12:29:11 - Geracao Pdf Prescricao
+2025-06-27 15:09:26 - Geracao Pdf Prescricao
 DEPOIS:
 Tarefa_executada: False
 Tarefa_executada_erro:False
-2025-06-27 12:29:11 - FIM Geracao_Pdf_Prescricao(df_)
+2025-06-27 15:09:26 - FIM Geracao_Pdf_Prescricao(df_)
 
-2025-06-27 12:29:11 - Prescrições geradas!
-2025-06-27 12:29:11 - ****registrar_log_tarefa_executada() tarefa_executada = True
-2025-06-27 12:29:11 - FIM DA EXECUÇÃO
-2025-06-27 12:30:15 - 2025-06-27 12:30:15 - Iniciando aplicação...
-2025-06-27 12:30:15 - ****registrar_log_tarefa_executada() tarefa_executada = False
-2025-06-27 12:30:15 - thread_ativa.txt atualizado para True
-2025-06-27 12:30:20 - thread_ativa: True
-2025-06-27 12:30:20 - Fechando aplicação...
-2025-06-27 12:30:20 - thread_ativa.txt atualizado para False
+2025-06-27 15:09:26 - def Geracao_PDF_Prescricao() 
+bloco com funcao copiar_arquivos()
+2025-06-27 15:09:26 - def copiar_arquivos()
+2025-06-27 15:09:26 - base_dir: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-06-27 15:09:26 - Caminho de origem: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Prescricoes
+2025-06-27 15:09:26 - Caminho de destino: \\192.168.103.252\\contingencia_hsf$\\Impressos\\Prescricoes
+2025-06-27 15:09:26 - shutil.copytree(origem, destino, dirs_exist_ok=True)
+2025-06-27 15:09:27 - 
+Arquivos copiados com sucesso 
+de: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Prescricoes 
+para \\192.168.103.252\\contingencia_hsf$\\Impressos\\Prescricoes
+FIM copiar_arquivos()
+2025-06-27 15:09:27 - df_: 
+[]
+2025-06-27 15:09:27 - Geracao Pdf Prescricao
+ANTES:
+Tarefa_executada: False
+Tarefa_executada_erro:False
+2025-06-27 15:09:27 - Geracao Pdf Prescricao
+DEPOIS:
+Tarefa_executada: False
+Tarefa_executada_erro:False
+2025-06-27 15:09:27 - FIM Geracao_Pdf_Prescricao(df_)
+
+2025-06-27 15:09:27 - def Geracao_PDF_Prescricao() 
+bloco com funcao copiar_arquivos()
+2025-06-27 15:09:27 - def copiar_arquivos()
+2025-06-27 15:09:27 - base_dir: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-06-27 15:09:27 - Caminho de origem: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Prescricoes
+2025-06-27 15:09:27 - Caminho de destino: \\192.168.103.252\\contingencia_hsf$\\Impressos\\Prescricoes
+2025-06-27 15:09:27 - shutil.copytree(origem, destino, dirs_exist_ok=True)
+2025-06-27 15:09:27 - 
+Arquivos copiados com sucesso 
+de: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Prescricoes 
+para \\192.168.103.252\\contingencia_hsf$\\Impressos\\Prescricoes
+FIM copiar_arquivos()
+2025-06-27 15:09:27 - df_: 
+[]
+2025-06-27 15:09:27 - Geracao Pdf Prescricao
+ANTES:
+Tarefa_executada: False
+Tarefa_executada_erro:False
+2025-06-27 15:09:27 - Geracao Pdf Prescricao
+DEPOIS:
+Tarefa_executada: False
+Tarefa_executada_erro:False
+2025-06-27 15:09:27 - FIM Geracao_Pdf_Prescricao(df_)
+
+2025-06-27 15:09:27 - Prescrições geradas!
+2025-06-27 15:10:22 - 2025-06-27 15:10:22 - Iniciando aplicação...
+2025-06-27 15:10:22 - ****registrar_log_tarefa_executada() tarefa_executada = False
+2025-06-27 15:10:22 - thread_ativa.txt atualizado para True
+2025-06-27 15:10:24 - Botao executar clicado! - tarefa executada: False, tarefa_executada_erro:False
+2025-06-27 15:10:24 - Tarefa inicializada! 
+bt_executar desativado!
+2025-06-27 15:10:24 - Main()
+2025-06-27 15:10:24 - Encontrar_diretorio_instantclient
+2025-06-27 15:10:24 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-06-27 15:10:24 - caminho instantclient:
+C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6
+2025-06-27 15:10:24 - Encontrar_diretorio_instantclient
+2025-06-27 15:10:24 - Caminho base do executavel: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-06-27 15:10:24 - caminho instantclient:
+C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\instantclient-basiclite-windows.x64-23.6.0.24.10\instantclient_23_6
+2025-06-27 15:10:24 - Executando a query
+2025-06-27 15:10:25 - Atendimentos sample:    NR_ATENDIMENTO
+0          432934
+2025-06-27 15:10:26 - Atendimentos data frame:(1, 1)
+2025-06-27 15:10:27 - Atendimentos obtido com sucesso!
+2025-06-27 15:10:29 - Main() df_filtrado tamanho: (1, 1)
+2025-06-27 15:10:29 - Geracao_Pdf_Prescricao((1, 1))
+2025-06-27 15:10:29 - Geracao de Pdf ()
+2025-06-27 15:10:29 - 
+df_filtrado:
+   NR_ATENDIMENTO
+0          432934
+2025-06-27 15:10:29 - contador:0
+contador_linhas_df: 1
+2025-06-27 15:10:29 - Inicio da repetição
+2025-06-27 15:10:29 - Repeticao for index iterrows()
+2025-06-27 15:10:29 - Adicionando a lista o nr_atendimento:432934
+2025-06-27 15:10:29 - Geracao Pdf Prescricao - contador:0
+2025-06-27 15:10:29 - Geracao_Pdf_Prescricao() - try:
+2025-06-27 15:10:29 - options = Options() # Inicializa as opções do Chrome 
+2025-06-27 15:10:29 - Configurando opções do Chrome para download automático.
+2025-06-27 15:10:36 - cpoe_url: http://aplicacao.hsf.local:7070/#/login
+2025-06-27 15:10:36 - Obtendo credenciais do config.ini...
+2025-06-27 15:10:36 - Obter_credenciais_login() - lendo do config.ini
+2025-06-27 15:10:36 - Aguardando campo de usuário...
+2025-06-27 15:10:36 - Campo de usuário preenchido.
+2025-06-27 15:10:36 - Campo de senha preenchido.
+2025-06-27 15:10:36 - Aguardando botão de login...
+2025-06-27 15:10:36 - Login realizado com sucesso.
+2025-06-27 15:10:36 - Lógica para tratar pop-up de "Ok" opcional
+2025-06-27 15:10:36 - Verificando se há um pop-up de 'Ok' após o login...
+2025-06-27 15:10:39 - Pop-up de 'Ok' encontrado. Clicando no botão para prosseguir.
+2025-06-27 15:10:39 - Aguardando o ícone do CPOE ficar clicável...
+2025-06-27 15:10:42 - Ícone do CPOE clicado com sucesso.
+2025-06-27 15:10:42 - Pauda para que a CPOE Realmente termine de carregar
+2025-06-27 15:10:42 - time.sleep(16)
+2025-06-27 15:10:58 - Aguardando o campo de número de atendimento...
+2025-06-27 15:10:58 - Número de atendimento preenchido: 432934
+2025-06-27 15:10:58 - Enter pressionado no campo de atendimento para submeter.
+2025-06-27 15:10:58 - Aguardando botão 'Ok' após submeter o atendimento...
+2025-06-27 15:10:59 - Botão 'Ok' encontrado. Clicando para prosseguir.
+2025-06-27 15:10:59 - Verificando se há um pop-up de 'Fechar' (atendimento fechado)...
+2025-06-27 15:11:07 - Nenhum pop-up de 'Fechar' encontrado ou a página já navegou. Prosseguindo...
+2025-06-27 15:11:07 - Aguardando o botão "Relatórios" (handlebar-40) ficar clicável...
+2025-06-27 15:11:14 - Botão 'Relatórios' clicado com sucesso.
+2025-06-27 15:11:14 - Aguardando o botão "Visualizar" (popupViewPort) ficar clicável...
+2025-06-27 15:11:15 - Botão 'Visualizar' clicado com sucesso.
+2025-06-27 15:11:15 - Obter coordenadas do botão "manter" do config.ini
+2025-06-27 15:11:15 - time.sleep(2)
+2025-06-27 15:11:17 - click no manter - 1751, 108
+2025-06-27 15:11:17 - time.sleep(2)
+2025-06-27 15:11:19 - click no manter - 1751, 108
+2025-06-27 15:11:19 - time.sleep(12)
+2025-06-27 15:11:31 - driver.quit()
+
+2025-06-27 15:11:33 - acessando pasta download:
+2025-06-27 15:11:33 - Caminho da pasta download: C:\Users\suporte\Downloads
+2025-06-27 15:11:36 - verificando arquivos da pasta download:
+2025-06-27 15:11:36 - Arquivos:
+['bc279a19-742d-4639-8898-b68668ee2548.pdf']
+2025-06-27 15:11:38 - ultimo arquivo antes de renomear:
+2025-06-27 15:11:38 - Ultimo arquivo antes de renomear: C:\Users\suporte\Downloads\bc279a19-742d-4639-8898-b68668ee2548.pdf
+2025-06-27 15:11:40 - pasta_prescricoes: Prescricoes
+2025-06-27 15:11:43 - pasta_data: Prescricoes\2025_06_27
+2025-06-27 15:11:45 - Cria a pasta da data se não existir: Prescricoes\2025_06_27
+2025-06-27 15:11:48 - renomeia e move os arquivos
+2025-06-27 15:11:48 - Data_hora: 2025-06-27 15:11:48
+2025-06-27 15:11:48 - caminho antigo: C:\Users\suporte\Downloads\bc279a19-742d-4639-8898-b68668ee2548.pdf
+2025-06-27 15:11:48 - caminho_novo = Prescricoes\2025_06_27\432934 - 2025-06-27 15-11-48.pdf,arquivo:2025-06-27 15-11-48.pdf)
+2025-06-27 15:11:48 - try: shutil.move(
+ time.sleep(TEMPO_ESPERA/5)
+2025-06-27 15:11:50 - caminho_antigo:C:\Users\suporte\Downloads\bc279a19-742d-4639-8898-b68668ee2548.pdf, 
+caminho_novoPrescricoes\2025_06_27\432934 - 2025-06-27 15-11-48.pdf)
+2025-06-27 15:11:50 - Arquivo:Prescricoes\2025_06_27\432934 - 2025-06-27 15-11-48.pdf Renomeado e movido com sucesso.
+2025-06-27 15:11:53 - Contador: 1
+2025-06-27 15:11:53 - lista_nr_atendimento.remove(432934)
+2025-06-27 15:11:53 - ******************** FIM do 432934 ********************
+2025-06-27 15:11:54 - tarefa_executada: True
+2025-06-27 15:11:54 - tarefa_executada_erro: False
+2025-06-27 15:11:54 - se ocorrer um erro na execução
+definimos que a variavel tarefa_executada sera False
+ para que a tarefa possa ser executada novamente:
+2025-06-27 15:11:54 - ===== try:
+Lista com nr_atendimentos com erro
+2025-06-27 15:11:54 - 
+Todos os atendimentos foram gerados com sucesso!
+2025-06-27 15:11:54 - def Geracao_PDF_Prescricao() 
+bloco com funcao copiar_arquivos()
+2025-06-27 15:11:54 - def copiar_arquivos()
+2025-06-27 15:11:54 - base_dir: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+2025-06-27 15:11:54 - Caminho de origem: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Prescricoes
+2025-06-27 15:11:54 - Caminho de destino: \\192.168.103.252\\contingencia_hsf$\\Impressos\\Prescricoes
+2025-06-27 15:11:54 - shutil.copytree(origem, destino, dirs_exist_ok=True)
+2025-06-27 15:11:54 - 
+Arquivos copiados com sucesso 
+de: C:\Pietro\Projetos\RPA_PRESCR_EM_PDF\Prescricoes 
+para \\192.168.103.252\\contingencia_hsf$\\Impressos\\Prescricoes
+FIM copiar_arquivos()
+2025-06-27 15:11:54 - df_: 
+[]
+2025-06-27 15:11:54 - Geracao Pdf Prescricao
+ANTES:
+Tarefa_executada: True
+Tarefa_executada_erro:False
+2025-06-27 15:11:54 - Geracao Pdf Prescricao
+DEPOIS:
+Tarefa_executada: False
+Tarefa_executada_erro:False
+2025-06-27 15:11:54 - FIM Geracao_Pdf_Prescricao(df_)
+
+2025-06-27 15:11:54 - Prescrições geradas!
+2025-06-27 15:11:54 - ****registrar_log_tarefa_executada() tarefa_executada = True
+2025-06-27 15:11:54 - FIM DA EXECUÇÃO
+2025-06-27 15:13:33 - thread_ativa: True
+2025-06-27 15:13:33 - Fechando aplicação...
+2025-06-27 15:13:33 - thread_ativa.txt atualizado para False

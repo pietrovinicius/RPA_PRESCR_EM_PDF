@@ -435,16 +435,18 @@ def Geracao_Pdf_Prescricao(df_):
                 try:
                     # Reutilizamos a mesma ideia de espera explícita do login
                     wait = WebDriverWait(driver, TEMPO_ESPERA)
-                    registrar_log("Aguardando o ícone do CPOE ficar clicável...")
-
-                    registrar_log(f'time.sleep({TEMPO_ESPERA})')
-                    time.sleep(TEMPO_ESPERA)
+                    registrar_log("Aguardando o ícone do CPOE ficar clicável...")                   
 
                     bt_CPOE = wait.until(
                         EC.element_to_be_clickable((By.XPATH, '//*[@id="app-view"]/tasy-corsisf1/div/w-mainlayout/div/div/w-launcher/div/div/div[1]/w-apps/div/div[1]/ul/li[2]/w-feature-app/a/img'))
                     )
                     bt_CPOE.click()
                     registrar_log("Ícone do CPOE clicado com sucesso.")
+                    
+                    registrar_log('Pauda para que a CPOE Realmente termine de carregar')
+                    registrar_log(f'time.sleep({TEMPO_ESPERA+4})')
+                    time.sleep(TEMPO_ESPERA+4)
+
                 except Exception as e:
                     # Se o ícone não for encontrado, o robô não pode continuar com este atendimento.
                     registrar_log(f"ERRO CRÍTICO: Não foi possível encontrar ou clicar no ícone do CPOE. \nDetalhes: {e}")
@@ -458,8 +460,12 @@ def Geracao_Pdf_Prescricao(df_):
                     # Usamos By.NAME para localizar o elemento, que é mais robusto que o XPath completo
                     # se o layout da página mudar ligeiramente.
                     nr_atendimento_input = wait.until(
-                        EC.visibility_of_element_located((By.NAME, 'NR_ATENDIMENTO'))
+                        EC.element_to_be_clickable((By.NAME, 'NR_ATENDIMENTO'))
                     )
+
+                    # Adicional: Espera o JavaScript da página terminar de carregar
+                    wait.until(lambda driver: driver.execute_script('return document.readyState') == 'complete')
+
                     nr_atendimento_input.send_keys(linha)
                     registrar_log(f'Número de atendimento preenchido: {linha}')
 
