@@ -516,6 +516,14 @@ def Geracao_Pdf_Prescricao(df_):
 
                 try:
                     wait = WebDriverWait(driver, TEMPO_ESPERA)
+
+                    # --- NOVA LÓGICA DE ESPERA ---
+                    # Espera o overlay de carregamento, identificado no log de erro, desaparecer.
+                    registrar_log("Aguardando o overlay de carregamento ('w-loader') desaparecer...")
+                    wait.until(
+                        EC.invisibility_of_element_located((By.CLASS_NAME, "whoudini__w-loader"))
+                    )
+
                     registrar_log('Aguardando o botão "Relatórios" (handlebar-40) ficar clicável...')
                     bt_cpoe_relatorios = wait.until(
                         EC.element_to_be_clickable((By.XPATH, '//*[@id="handlebar-40"]'))
