@@ -498,14 +498,18 @@ def Geracao_Pdf_Prescricao(df_):
                 # --- Lógica para tratar pop-up opcional de "Fechar" (atendimento fechado) ---
                 try:
                     # Espera por no máximo 5 segundos.
-                    short_wait = WebDriverWait(driver, 5)
+                    short_wait = WebDriverWait(driver, 15)
                     registrar_log("Verificando se há um pop-up de 'Fechar' (atendimento fechado)...")
+                    #TODO: corrigir aqui pois determinados momentos da erro e nao e possivel clicar no botao fechar e a aplicaçao fica presa num looping infito
+                    #opcao 1: ignorqr o atendimento em questo e avancar pro proximo
+                    #opcao 2: click na altura certinha do botao fechar
+
+                    #time.sleep(9000)
 
                     # XPath para o botão "Fechar" baseado no HTML fornecido
                     fechar_button = short_wait.until(
                         EC.element_to_be_clickable((By.XPATH, "//button[text()='Fechar']"))
                     )
-
                     registrar_log("Pop-up de 'Fechar' encontrado. Clicando no botão.")
                     fechar_button.click()
                 except (TimeoutException, StaleElementReferenceException):
