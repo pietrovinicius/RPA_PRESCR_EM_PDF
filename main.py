@@ -42,6 +42,17 @@ import sys
 import configparser
 import threading
 
+"""
+:: 1. Navega para a pasta do projeto
+cd c:\Pietro\Projetos\RPA_PRESCR_EM_PDF
+
+:: 2. Ativa o ambiente virtual
+.\venv\Scripts\activate
+
+:: 3. Executa a aplicação
+python main.py
+"""
+
 #inicialização de variaveis globais:
 diretorio_atual = ""
 statusMultiprocessing = False
